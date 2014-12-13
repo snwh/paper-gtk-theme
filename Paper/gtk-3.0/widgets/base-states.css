@@ -1,0 +1,120 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/***************
+ * Base States *
+ ***************/
+.background {
+    color: @foreground;
+    background-color: @background;
+    text-shadow: none;
+    icon-shadow: none;
+}
+
+.background:backdrop {
+    /* I want everything nice and flat in the backdrop window */
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+    text-shadow: none;
+    icon-shadow: none;
+}
+
+.background:insensitive {
+    /* I want everything nice and flat in the backdrop window */
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+    text-shadow: none;
+    icon-shadow: none;
+}
+
+/* FIXME: why do we still need this? */
+GtkClutterOffscreen {
+    background-color: @background;
+    color: @foreground;
+}
+
+*:selected,
+*:selected:focus {
+    background-color: @selection;
+    color: @selected_foreground;
+}
+
+*:selected:backdrop {
+    /* I would like to remove colors from the backdrop state, next release*/
+    background-color: @backdrop_selected_background;
+    color: @backdrop_selected_foreground;
+}
+
+*:insensitive {
+    background-color: @insensitive_background;
+    color: @insensitive_foreground;
+    border-color: @insensitive_border;
+}
+
+*:insensitive:backdrop {
+    /* I want everything nice and flat in the backdrop window */
+    text-shadow: none;
+    icon-shadow: none;
+    color: @backdrop_insensitive_foreground;
+}
+
+/* Apply effects to insensitive and prelit images */
+*:insensitive {
+    -gtk-image-effect: dim;
+}
+
+*:hover {
+    -gtk-image-effect: none;
+}
+
+.gtkstyle-fallback {
+    background-color: @background;
+    color: @foreground;
+}
+
+.gtkstyle-fallback:prelight {
+    background-color: shade(@background, 1.10);
+    color: @foreground;
+}
+
+.gtkstyle-fallback:active {
+    background-color: shade(@background, 0.90);
+    color: @foreground;
+}
+
+.gtkstyle-fallback:insensitive {
+    background-color: @insensitive_background;
+    color: @insensitive_foreground;
+}
+
+.gtkstyle-fallback:selected {
+    background-color: @selection;
+    color: @selected_foreground;
+}
+
+GtkImage,
+GtkImage:insensitive,
+GtkLabel,
+GtkLabel:insensitive,
+GtkBox,
+GtkBox:insensitive,
+GtkGrid,
+GtkGrid:insensitive {
+    background-color: transparent;
+}

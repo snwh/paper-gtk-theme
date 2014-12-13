@@ -1,0 +1,267 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/**********
+ * Birdie *
+ *********/
+
+BirdieWidgetsTweetList * {
+    background-image: none;
+    background-color: transparent;
+}
+
+/********
+ * Gala *
+ *******/
+
+.gala-workspaces-background {
+    border-top: 1px solid alpha(#fff, 0.15);
+    background-color: #444;
+    
+    background-image: linear-gradient(to bottom,
+                                  alpha(#000, 0.30),
+                                  transparent 6px
+                                  );
+}
+
+.gala-workspace-selected {
+
+    border: 1px solid alpha(#000, 0.15);
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_background, 1.25),
+                                  shade (@selected_background, 0.98)
+                                  );
+}
+
+.gala-notification {
+    border-width: 0;
+    border-radius: 9px;
+    color: white;
+    background-color: alpha(@panel, 0.98);
+}
+
+.gala-notification .title, .gala-notification .label {
+    color: white;
+}
+
+/**********
+ * Notify *
+ *********/
+
+.notify {
+    /*-notify-shadow: 0px 2px 18px alpha(#000, 0.60);*/
+
+    border-radius: 5px;
+    border: 1px solid alpha(#000, 0.30);
+
+    background-color: alpha(#f8f8f8, 0.95);
+}
+
+.notify .low {
+}
+
+.notify .critical {
+}
+
+/********
+* Files *
+********/
+.pathbar:focus {
+    padding: 0px;
+    box-shadow: inset 0 -2px 0 0 @header_text;
+}
+
+.pathbar:active {
+    padding: 0px;
+    box-shadow: inset 0 -2px 0 0 @header_text;
+}
+
+/********
+* Geary *
+********/
+
+ConversationListView {
+    -GtkWidget-focus-line-width: 1px;
+    -GtkTreeView-grid-line-width: 0;
+}
+ 
+ConversationListView.view.cell {
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: alpha(#000, 0.2);
+}
+ 
+ConversationListView.view.cell:selected {
+    color: @base;
+    border: 0px solid shade(@selection, 0.8);
+}
+
+/**********
+ * Noise *
+ *********/
+
+NoiseWidgetsTileView {
+    background-color: @base;
+    color: @foreground;
+}
+
+.tile-view {
+    background-color: @base;
+    color: @foreground;
+}
+
+/***************
+ * SwitchBoard *
+ ***************/
+
+.category-label {
+    font-weight: bold;
+    font-size: 1.04em;
+    color: @foreground;
+}
+
+/**********
+ * Notify *
+ *********/
+
+.notify {
+    /*-notify-shadow: 0px 2px 18px alpha(#000, 0.60);*/
+
+    border-radius: 5px;
+    border: 1px solid alpha(#000, 0.30);
+
+    background-color: alpha(#f7f7f7, 0.95);
+}
+
+.notify .low {
+}
+
+.notify .critical {
+}
+
+
+/*************
+ * Slingshot *
+ ************/
+
+.button.app {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background-image: none;
+}
+
+.app:hover {
+    border-radius: 8px;
+    border: none;
+    background: alpha(@selection, 0.7);
+    color: white;
+}
+
+.app:focus {
+    background-color: alpha(#000, 0.20);
+}
+ 
+.search-item {
+    border-radius: 0;
+    border: none;
+    color: @foreground;
+    background: transparent;
+}
+
+.search-item:hover,
+.search-item:focus {
+    border-radius: 0;
+    background: alpha(@selection, 0.7);
+    color: @selected_foreground;
+}
+  
+
+.search-entry-large,
+.search-entry-large:focus {
+    border: none;
+    font: 18;
+    font-weight: 300;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+ 
+.search-category-header {
+    font-weight: bold;
+    color: @foreground;
+}
+
+/*********
+ * Panel *
+ ********/
+
+.panel {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
+
+.panel .menu  {
+    border:none;
+}
+.panel .menu .menuitem {
+    font-weight: normal;
+}
+
+.panel-shadow {
+    background-image: none;
+    background-color: transparent;
+}
+
+.panel-app-button {
+    -GtkMenuItem-horizontal-padding: 6px;
+}
+
+.composited-indicator {
+    background-color: transparent;
+    color: #fff;
+    padding: 0 2px;
+}
+
+.composited-indicator.menuitem:active,
+.composited-indicator.menuitem:prelight {
+    border-style: none;
+    background-image: none;
+    box-shadow: none;
+}
+
+/*********
+ * Tweet *
+ ********/
+
+.tweet {
+    padding: 0;
+    box-shadow: none;
+}
+
+/************
+ * Terminal *
+ ***********/
+
+PantheonTerminalPantheonTerminalWindow.background {
+   background-color: transparent;
+}

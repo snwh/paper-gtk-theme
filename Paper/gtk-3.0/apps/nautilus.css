@@ -1,0 +1,172 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*@define-color nautilus #8B8B8B;*/
+
+/************
+ * Colours *
+ ************
+
+
+NautilusWindow .header-bar,
+NautilusWindow .header-bar.toolbar {
+    background-color: @nautilus;
+    color: 
+}
+
+NautilusWindow .maximized .header-bar {
+    background-color: @nautilus;
+}
+
+NautilusWindow .header-bar > GtkBox > .separator.vertical {
+    background-color: @nautilus;
+}
+
+NautilusWindow .header-bar .separator,
+NautilusWindow .header-bar .button .separator,
+NautilusWindow .header-bar .button.separator {
+    background-color: @nautilus;
+    color: @nautilus;
+}
+
+NautilusWindow .header-bar .button GtkImage:active,
+NautilusWindow .header-bar .button GtkImage:active:hover {
+    color: @nautilus;
+}
+
+NautilusWindow .header-bar GtkSwitch.trough:active {
+    background-color: @nautilus;
+}
+
+NautilusWindow GtkSwitch.trough:active {
+    border: 1px solid shade(@nautilus, 0.8);
+    background-color: @nautilus;
+}
+
+NautilusWindow GtkSwitch.slider:active {
+    border: 1px solid shade(@nautilus, 0.8);
+} */
+
+/***********
+ * Widgets *
+ ***********/
+
+.nautilus-canvas-item {
+    border-radius: 5px;
+}
+
+.nautilus-desktop.nautilus-canvas-item {
+    color: @selected_foreground;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active {
+    color: @foreground;
+}
+
+.nautilus-desktop.nautilus-canvas-item:backdrop {
+    color: white;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+    color: @selected_foreground;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:selected {
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected:backdrop {
+    color: @backdrop_selected_foreground;
+}
+
+NautilusWindow .frame {
+    border-width: 0 0 1px 0;
+}
+
+NautilusWindow GtkScrolledWindow.frame {
+    border-width: 0;
+}
+
+NautilusWindow .sidebar .frame {
+    border-width: 0px;
+}
+
+NautilusWindow .notebook {
+    border-width: 1px 0 0 0;
+}
+
+NautilusWindow > GtkGrid > .pane-separator,
+NautilusWindow > GtkGrid > .pane-separator:hover {
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: @border;
+    background-color: @background;
+    color: @border;
+}
+
+NautilusWindow > GtkGrid > .pane-separator:backdrop,
+NautilusWindow > GtkGrid > .pane-separator:hover:backdrop {
+    border-color: @backdrop_border;
+    background-color: @backdrop_background;
+}
+
+NautilusNotebook .notebook {
+    border-width: 0 0 0 0;
+}
+
+NautilusNotebook .frame {
+    border-width: 0;
+}
+
+
+NautilusQueryEditor .primary-toolbar.toolbar {
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+NautilusQueryEditor .toolbar {
+    padding-top: 3px;
+    padding-bottom: 2px;
+
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    
+    border-color: @background;
+    
+}
+
+NautilusQueryEditor .toolbar:nth-child(2) {
+    border-color: @border;
+}
+
+NautilusQueryEditor .toolbar:last-child,
+NautilusQueryEditor .primary-toolbar.toolbar:only-child {
+    border-top-width: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: @border;
+}
+
+NautilusQueryEditor .toolbar:backdrop {
+    background-color: @backdrop_background;
+    border-color: @backdrop_background;
+}
+
+NautilusQueryEditor .toolbar:backdrop:nth-child(2) {
+    border-color: @backdrop_border;
+}

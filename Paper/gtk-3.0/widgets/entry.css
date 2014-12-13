@@ -1,0 +1,125 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*********
+ * Entry *
+ *********/
+
+.entry {
+    background-color: transparent;
+    color: @text;
+    padding: 6px;
+    border-radius: 6px;
+    icon-shadow:none;
+    border: 1px solid @border;
+}
+
+.entry:active,
+.entry:focus {
+    background-color: @base;
+    color: @text;
+}
+
+.entry:insensitive {
+    background: @insensitive_background;
+    color: @insensitive_text;
+    box-shadow:none;
+}
+
+.entry:selected {
+    color: @text;
+    background-color: @base;
+}
+
+.entry:backdrop {
+    background: @backdrop_background;
+    color: @backdrop_text;
+    box-shadow: none;
+}
+
+.entry:insensitive:backdrop {
+    color: @backdrop_text;
+    box-shadow: none;
+    background-color: @backdrop_insensitive_background;
+    box-shadow: none;
+}
+
+.entry:selected:backdrop {
+    color: @backdrop_selected_foreground;
+    background-color: @backdrop_selected_background;
+    box-shadow: none;
+}
+
+.entry.image {
+    color: @insensitive_text;
+    icon-shadow:none;
+}
+
+.entry.image.left {
+    padding-right: 6px;
+    color: @text;
+    icon-shadow:none;
+}
+
+
+/*********************
+ * Entry Progressbar *
+ *********************/
+
+.entry.progressbar,
+.entry.progressbar:focus {
+    margin: 0 2px 0 2px;
+    border-image: none;
+    border-style: none;
+    background-color: transparent;
+    background-image: linear-gradient(to top, 
+                                      transparent 2px,
+                                      @base 2px,
+                                      @base 3px,
+                                      shade(@selection, 0.9) 3px,
+                                      shade(@selection, 0.9) 5px,
+                                      transparent 5px);
+    background-size: auto;
+    box-shadow: none;
+}
+
+.entry.progressbar.pulse,
+.entry.progressbar.pulse:focus {
+    background-image: linear-gradient(to top, 
+                                      transparent 2px,
+                                      @base 2px,
+                                      @base 3px,
+                                      @border 3px,
+                                      @border 5px,
+                                      transparent 5px);
+}
+
+.entry.progressbar:backdrop {
+    margin: 0 2px 0 2px;
+    border-image: none;
+    border-style: none;
+    background-color: @selection;
+    background-image: linear-gradient(to top, 
+                                      transparent 2px,
+                                      @base 2px,
+                                      @base 3px,
+                                      @backdrop_selected_background 3px,
+                                      @backdrop_selected_background 5px,
+                                      transparent 5px);
+    box-shadow: none;
+}

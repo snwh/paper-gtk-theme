@@ -1,0 +1,175 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+@define-color settings #2c6b89;
+@define-color backdrop_settings shade(@settings, 0.9);
+
+/**********
+ * Colors *
+ **********/
+
+CcWindow.background {
+    background-color: @base;
+    color: @settings;
+}
+
+CcWindow .titlebar {
+    background-color: @settings;
+    color: @base;
+}
+
+CcWindow.background:backdrop {
+    background-color: @base;
+    color: alpha(@settings, 0.5);
+}
+
+CcWindow .titlebar:backdrop {
+    background-color: shade(@settings, 0.9);
+    color: alpha(@base, 0.5);
+}
+
+CcWindow .button.text-button,
+CcWindow .button.image-button,
+CcWindow .button {
+    color: @settings;
+}
+
+CcWindow GtkComboBox,
+CcWindow GtkComboBox * {
+    color: @settings;
+}
+
+CcWindow GtkComboBox:focus,
+CcWindow GtkComboBox *:focus,
+CcWindow .button.text-button:focus,
+CcWindow .button.image-button:focus,
+CcWindow .button:focus {
+    color: @settings;
+}
+
+CcWindow GtkComboBox:active,
+CcWindow GtkComboBox *:active,
+CcWindow .button.text-button:active,
+CcWindow .button.image-button:active,
+CcWindow .button:active,
+CcWindow GtkComboBox:active:hover,
+CcWindow GtkComboBox *:active:hover,
+CcWindow .button.text-button:active:hover,
+CcWindow .button.image-button:active:hover,
+CcWindow .button:active:hover {
+    color: @settings;
+}
+
+CcWindow GtkComboBox:backdrop,
+CcWindow GtkComboBox *:backdrop,
+CcWindow .button.text-button:backdrop,
+CcWindow .button.image-button:backdrop,
+CcWindow .button:backdrop {
+    color: alpha(@settings, 0.7);
+}
+
+CcWindow GtkComboBox:hover,
+CcWindow GtkComboBox *:hover,
+CcWindow .button.text-button:hover,
+CcWindow .button.image-button:hover,
+CcWindow .button:hover {
+    background-color: @settings;
+}
+
+CcWindow .primary-toolbar .button .menu .menuitem:hover,
+CcWindow .toolbar .menu .menuitem:hover,
+CcWindow .toolbar .primary-toolbar .menu .menuitem:hover,
+CcWindow .header-bar .menu .menuitem:hover,
+CcWindow .header-bar .primary-toolbar .menu .menuitem:hover,
+CcWindow .menu  .menuitem:hover {
+    background-color: @settings;
+}
+
+/* Header Bar */
+
+CcWindow .header-bar,
+CcWindow .header-bar.toolbar {
+    background-color: @settings;
+}
+
+CcWindow .maximized .header-bar {
+    background-color: @settings;
+}
+
+CcWindow .header-bar > GtkBox > .separator.vertical {
+    background-color: @settings;
+}
+
+CcWindow .header-bar .separator,
+CcWindow .header-bar .button .separator,
+CcWindow .header-bar .button.separator {
+    background-color: @settings;
+    color: @settings;
+}
+
+CcWindow .header-bar .button GtkImage:active,
+CcWindow .header-bar .button GtkImage:active:hover {
+    color: @settings;
+}
+
+CcWindow .header-bar GtkSwitch.trough:active {
+    background-color: @settings;
+}
+
+/* Switch */
+
+CcWindow GtkSwitch.trough:active {
+    border: 1px solid shade(@settings, 0.8);
+    background-color: @settings;
+}
+
+CcWindow GtkSwitch.slider:active {
+    border: 1px solid shade(@settings, 0.8);
+}
+
+CcWindow .header-bar GtkSwitch.slider:active:backdrop,
+CcWindow .header-bar GtkSwitch.slider:backdrop {
+    background-color: shade(@settings, 0.9);
+}
+
+/* List Row Button */
+CcWindow .button.list-row {
+}
+
+CcWindow .button.list-row:hover  {
+    background-color: alpha(@settings, 0.2);
+    color: @settings;
+}
+
+CcWindow .button.list-row:active,
+CcWindow .button.list-row:selected {
+    background-color: alpha(@settings, 0.4);
+    color: @settings;
+}
+
+CcWindow .button.list-row:active:selected,
+CcWindow .button.list-row:active:selected:hover {
+    background-color: alpha(@settings, 0.2);
+    color: @settings;
+}
+
+CcWindow .button.list-row:hover:selected {
+    background-color: alpha(@settings, 0.2);
+    color: @settings;
+}

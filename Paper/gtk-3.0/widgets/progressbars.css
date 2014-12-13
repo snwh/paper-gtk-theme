@@ -1,0 +1,141 @@
+
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/****************
+ * Progress bar *
+ ****************/
+
+GtkProgressBar {
+    padding: 0;
+    border-radius: 0px;
+}
+
+GtkProgressBar.progressbar {
+    color: @selected_foreground;
+    background: @selection;
+}
+
+GtkProgressBar.progressbar:backdrop {
+    color: @selected_foreground;
+    background-color: shade(@backdrop_background, 0.95);
+}
+
+GtkProgressBar.trough {
+    border: 1px solid @trough_background;
+    background: @trough_background;
+}
+
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focus,
+.progressbar.vertical row,
+.progressbar.vertical row:hover,
+.progressbar.vertical row:selected,
+.progressbar.vertical row:selected:focus {
+    color: @selected_foreground;
+    background: @selection;
+}
+
+.progressbar row:insensitive,
+.progressbar row:hover:insensitive,
+.progressbar row:selected:insensitive,
+.progressbar row:selected:focus:insensitive,
+.progressbar.vertical row:insensitive,
+.progressbar.vertical row:hover:insensitive,
+.progressbar.vertical row:selected:insensitive,
+.progressbar.vertical row:selected:focus:insensitive {
+    color: @selected_foreground;
+    background-color: @selection;
+}
+
+.progressbar row:backdrop,
+.progressbar row:hover:backdrop,
+.progressbar row:selected:backdrop,
+.progressbar row:selected:focus:backdrop,
+.progressbar.vertical row:backdrop,
+.progressbar.vertical row:hover:backdrop,
+.progressbar.vertical row:selected:backdrop,
+.progressbar.vertical row:selected:focus:backdrop {
+    color: @selected_foreground;
+    background: @backdrop_progressbar_background;
+}
+
+
+/***********
+ * Troughs *
+ ***********/
+.trough row,
+.trough row:hover,
+.trough row:selected,
+.trough row:selected:focus {
+
+    padding: 0;
+
+    border: 1px solid;
+
+    background-image: linear-gradient(to bottom,
+                                  @trough_background,
+                                  shade(@trough_background, 1.05)
+                                  );
+
+    border-image: linear-gradient(to bottom,
+                                  @border,
+                                  shade(@border, 0.95)
+                                  ) 1 1 1 1;
+}
+
+.trough.vertical row,
+.trough.vertical row:selected,
+.trough.vertical row:selected:focus {
+    background-color: @base;
+}
+
+.trough:insensitive,
+.trough.vertical:insensitive {
+
+    padding: 0;
+
+    border: 1px solid;
+
+    background-image:none;
+    background-color:@insensitive_base;
+
+    border-image: linear-gradient(to bottom,
+                                  @border,
+                                  shade(@border, 0.95)
+                                  ) 1 1 1 1;
+}
+
+.trough:backdrop,
+.trough.vertical:backdrop {
+
+    padding: 0;
+
+    border: 1px solid;
+
+    background-image:none;
+
+    border-image: linear-gradient(to bottom,
+                                  @border,
+                                  shade(@border, 0.95)
+                                  ) 1 1 1 1;
+    background-color: @backdrop_background;
+}

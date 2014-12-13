@@ -1,0 +1,105 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/***************
+ * Menu Button *
+ ***************/
+
+.menu.button {
+    background-image: none;
+    background-color: @base;
+    border: 1px solid @selection;
+}
+
+.menu.button.separator {
+    border-style: none;
+    color: shade(@foreground, 3.2);
+    -GtkMenuItem-horizontal-padding: 0;
+    -GtkWidget-separator-height: 1;
+}
+
+.menu.button:hover {
+    background-image: none;
+    background-color: @base;
+    color: @foreground;
+    border-style: none;
+}
+
+.menu.button:insensitive {
+    background-color: @base;
+    color: lighter(@internal_element);
+    border-style: none;
+}
+
+.menu.button:hover,
+.menu.button:active,
+.menu.button:active:insensitive,
+.menu.button:insensitive,
+.menu.button {
+    border-width: 0;
+    background-color: shade(@foreground, 1.05);
+    background-image: none;
+}
+
+
+.toolbar GtkMenuButton.button:active,
+.toolbar GtkMenuButton.button.raised:active,
+GtkMenuButton.button:active,
+.linked GtkMenuButton.button:active,
+.toolbar .linked.raised GtkMenuButton.button:active,
+.toolbar GtkMenuButton.button.linked.raised:active {
+    color: @foreground;
+}
+
+GtkMenuButton.button *:active,
+.linked GtkMenuButton.button *:active,
+.toolbar .linked.raised GtkMenuButton.button *:active,
+.toolbar GtkMenuButton.button.linked.raised *:active {
+}
+
+.linked GtkMenuButton.button:active:last-child,
+.toolbar .linked.raised GtkMenuButton.button:active:last-child,
+.toolbar GtkMenuButton.button.linked.raised:active:last-child {
+    border-top-left-radius: 0;
+}
+
+.linked GtkMenuButton.button:active:first-child,
+.toolbar .linked.raised GtkMenuButton.button:active:first-child,
+.toolbar GtkMenuButton.button.linked.raised:active:first-child {
+    border-top-right-radius: 0;
+}
+
+.button.menuitem.menubar:active {
+    background-image: none;
+    background-color: @background;
+
+    border: 1px solid @background;
+    border-radius: 0 0;
+    border-image: none;
+    border-bottom-width: 0px;
+}
+
+.button.menuitem.menubar *:active,
+GtkMenuButton.button *:active,
+.toolbar GtkMenuButton.button *:active {
+    color: @foreground;
+}
+
+GtkMenuButton .menu {
+    text-shadow: none;
+}

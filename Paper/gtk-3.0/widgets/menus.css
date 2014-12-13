@@ -1,0 +1,250 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/********
+ * Menu *
+ ********/
+ 
+.menu {
+    border-image: none;
+}
+
+.menubar .menu {
+    border-image: none;
+}
+
+GtkTreeMenu.menu,
+GtkMenuButton .menu,
+GtkMenuToolButton.menu,
+GtkComboBox .menu {
+    border:none;
+    background-color: @base;
+}
+
+.primary-toolbar .button .menu,
+.toolbar .menu,
+.toolbar .primary-toolbar .menu,
+.header-bar .menu,
+.header-bar .primary-toolbar .menu,
+.menu {
+    padding: 0;
+    border: none;
+    background-color: @base;
+    color: @foreground;
+}
+
+/*Context Menu*/
+
+.context-menu {
+    font: initial;
+    text-shadow: none;
+}
+
+.content-view .menu {
+    padding: 0 1px;
+
+    background-color: @background;
+    background-image: none;
+
+}
+
+
+.content-view .menu .menuitem:active,
+.content-view .menu .menuitem:hover {
+    background-color: @selection;
+    color: @base;
+}
+
+/*************
+ * Menu Item *
+ *************/
+
+
+GtkTreeMenu .menuitem {
+    padding: 6px;
+    color: @base;
+}
+
+GtkTreeMenu .menuitem,
+.menu .menuitem {
+    padding: 6px;
+    border:none;
+    color: @base;
+
+    -GtkMenuItem-arrow-scaling: 0.5;
+}
+
+GtkTreeMenu .menuitem GtkLabel,
+GtkTreeMenu .menuitem GtkImage,
+.menu .menuitem GtkLabel,
+.menu .menuitem GtkImage  {
+    padding: 0 3px 0 3px;
+    color: @text;
+    -gtk-icon-style: symbolic;
+}
+
+GtkTreeMenu .menuitem:hover,
+.menu .menuitem:hover,
+GtkTreeMenu .menuitem GtkLabel:hover,
+GtkTreeMenu .menuitem GtkImage:hover,
+.menu .menuitem GtkLabel:hover,
+.menu .menuitem GtkImage:hover  {
+    color: @base;
+    -gtk-icon-style: symbolic;
+}
+
+GtkTreeMenu .menuitem:active:hover,
+.menu .menuitem:active:hover,
+GtkTreeMenu .menuitem GtkLabel:active:hover,
+GtkTreeMenu .menuitem GtkImage:active:hover,
+.menu .menuitem GtkLabel:active:hover,
+.menu .menuitem GtkImage:active:hover  {
+    color: @base;
+    -gtk-icon-style: symbolic;
+}
+
+.menu .menuitem:active,
+.menu .menuitem:hover {
+    border: none;
+    background-color: @selection;
+    color: @base;
+}
+
+.menu .menuitem:insensitive,
+.menu .menuitem *:insensitive {
+    box-shadow: none;
+    border: none;
+    color: @insensitive_text;
+}
+
+
+/* Arrow color */
+.menuitem.arrow {
+    background-color: @base;
+    color: @foreground;
+    border: none;
+}
+
+/* Separator color */
+.menuitem.separator {
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+    background-color: @base;
+    color: @menu_separator;
+    -GtkMenuItem-horizontal-padding: 0;
+    -GtkWidget-separator-height: 1;
+}
+
+.menuitem .entry {
+    border: none;
+    background-color: @base;
+    background-image: none;
+    color: @foreground;
+}
+
+.menuitem .entry:active,
+.menuitem .entry:focus {
+    border: none;
+    color: white;
+}
+
+/* Accelerators */
+.menuitem .accelerator,
+.menuitem .accelerator:insensitive {
+    color: alpha(@foreground, 0.7);
+}
+
+.menuitem .accelerator:hover,
+.menuitem .accelerator:active {
+    color: alpha (@foreground, 0.3);
+}
+
+/***********
+ * Menubar *
+ ***********/
+.menubar {
+    -GtkWidget-window-dragging: true;
+
+    border: none;
+    background-color: @background;
+    background-image: none;
+    color: @foreground;
+}
+.menubar:backdrop {
+    background-color: @backdrop_background;
+}
+
+.menubar.menuitem,
+.menubar .menuitem {
+    padding: 2px 6px;
+    border: none;
+    background-color: transparent;
+    color: @foreground;
+}
+
+.menubar.menuitem:hover,
+.menubar .menuitem:hover {
+    border: none;
+    background-color: @selection;
+    color: @base;
+}
+
+/* Separator */
+.menubar .menuitem.separator,
+.menubar.menuitem.separator {
+    -GtkMenuItem-horizontal-padding: 0;
+    -GtkWidget-separator-height: 1;
+    border: none;
+    color: @menu_separator;
+}
+
+/*******************
+ * Checks & Radios *
+ *******************/
+
+.menuitem.check,
+.menuitem.radio {
+    background: none;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.menuitem.check,
+.menuitem.check:active,
+.menuitem.check:active:hover,
+.menuitem.check:active:insensitive,
+.menuitem.check:hover,
+.menuitem.check:inconsistent,
+.menuitem.check:inconsistent:hover,
+.menuitem.check:inconsistent:insensitive,
+.menuitem.check:insensitive,
+.menuitem.radio,
+.menuitem.radio:active,
+.menuitem.radio:active:hover,
+.menuitem.radio:active:insensitive,
+.menuitem.radio:hover,
+.menuitem.radio:inconsistent,
+.menuitem.radio:inconsistent:hover ,
+.menuitem.radio:inconsistent:insensitive,
+.menuitem.radio:insensitive {
+    background-size: 16px;
+    background-color: transparent;
+    box-shadow: none;
+}

@@ -1,0 +1,78 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/*************
+ * GtkSwitch *
+ *************/
+
+GtkSwitch {
+    border-radius: 1em;
+    font: condensed;
+}
+
+/* Trough */
+GtkSwitch.trough {
+    border-radius: 1em;
+    border: 1px solid @border;
+    background-color: @base;
+    color: alpha(@text, 0.5);
+}
+
+GtkSwitch.trough:active {
+    border: 1px solid shade(@selection, 0.8);
+    background-color: @selection;
+    color: @selection_foreground;
+}
+
+GtkSwitch.trough:backdrop,
+GtkSwitch.trough:active:backdrop {
+    background: transparent;
+    border: 1px solid @backdrop_border;
+    color: @backdrop_text;
+}
+
+GtkSwitch.trough:insensitive,
+GtkSwitch.trough:active:insensitive {
+    border: 1px solid @insensitive_border;
+    color: @insensitive_text;
+}
+
+/* Slider */
+
+GtkSwitch.slider {
+    border: 1px solid @border;
+    background-color: @base;
+}
+
+GtkSwitch.slider:active {
+    border: 1px solid shade(@selection, 0.8);
+    background-color: @base;
+}
+
+GtkSwitch.slider:active:insensitive,
+GtkSwitch.slider:insensitive {
+    border: 1px solid @insensitive_border;
+    background-color: @insensitive_base;
+}
+
+GtkSwitch.slider:active:backdrop,
+GtkSwitch.slider:backdrop {
+    border: 1px solid @backdrop_border;
+    background-color: @backdrop_background;
+}

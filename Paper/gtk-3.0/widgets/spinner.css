@@ -1,0 +1,8 @@
+/***********
+ * Spinner *
+ ***********/
+
+.menu.spinner,
+.primary-toolbar .spinner {
+    color: @selection;
+}

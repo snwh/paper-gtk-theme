@@ -1,0 +1,31 @@
+# ==============================================================================
+# CHROME/-UIM SPECIFIC SETTINGS
+# ==============================================================================
+
+style "chrome-gtk-frame"
+{
+	ChromeGtkFrame::frame-color = @selected_bg_color
+	ChromeGtkFrame::inactive-frame-color = @selected_bg_color
+
+	ChromeGtkFrame::frame-gradient-size = 16
+	ChromeGtkFrame::frame-gradient-color = shade(1.07, @selected_bg_color)
+
+	ChromeGtkFrame::incognito-frame-color = shade(0.85, @selected_bg_color)
+	ChromeGtkFrame::incognito-inactive-frame-color = @selected_bg_color
+
+	ChromeGtkFrame::incognito-frame-gradient-color = @selected_bg_color
+
+	ChromeGtkFrame::scrollbar-trough-color = shade(0.912, @selected_bg_color)
+	ChromeGtkFrame::scrollbar-slider-prelight-color = shade(1.04, @selected_bg_color)
+	ChromeGtkFrame::scrollbar-slider-normal-color = @selected_bg_color
+}
+
+style "chrome_menu_item"
+{
+        bg[SELECTED] = @selected_bg_color
+}
+
+class "ChromeGtkFrame" 			             			style "chrome-gtk-frame"
+widget_class "*Chrom*Button*"		             		style "button"
+widget_class "*<GtkCustomMenu>*<GtkCustomMenuItem>*" 	style "chrome_menu_item"
+widget_class "<GtkEntry>"                            	style "standalone_entry"

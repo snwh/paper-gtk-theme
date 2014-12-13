@@ -1,0 +1,168 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color calculator #9F347D;/* Calc color */
+
+/**************
+ * Calculator *
+ **************/
+
+MathWindow.background {
+    background-color: @base;
+    color: @calculator;
+}
+
+MathWindow .titlebar {
+    background-color: @calculator;
+    color: @base;
+    border: none;
+}
+
+MathWindow.background:backdrop {
+    background-color: @base;
+    color: alpha(@calculator, 0.5);
+}
+
+MathWindow .titlebar:backdrop {
+    background-color: shade(@calculator, 0.9);
+    color: alpha(@base, 0.5);
+    border: none;
+}
+
+MathWindow .button.text-button,
+MathWindow .button.image-button,
+MathWindow .button {
+    border: none;
+    color: @calculator;
+    font: Bold;
+}
+
+MathWindow .titlebar .button.text-button,
+MathWindow .titlebar .button.image-button,
+MathWindow .titlebar .button {
+    border: none;
+    color: @header_text;
+    font: Bold;
+}
+
+MathWindow .titlebar .button.text-button:backdrop,
+MathWindow .titlebar .button.image-button:backdrop,
+MathWindow .titlebar .button:backdrop {
+    border: none;
+    color: @backdrop_header_text;
+    font: Bold;
+}
+
+MathWindow GtkComboBox,
+MathWindow GtkComboBox * {
+    border: none;
+    color: @calculator;
+    font: Bold;
+}
+
+MathWindow GtkComboBox:focus,
+MathWindow GtkComboBox *:focus,
+MathWindow .button.text-button:focus,
+MathWindow .button.image-button:focus,
+MathWindow .button:focus {
+    background-color: @base;
+    color: @calculator;
+    border: none;
+}
+
+MathWindow GtkComboBox:active,
+MathWindow GtkComboBox *:active,
+MathWindow .button.text-button:active,
+MathWindow .button.image-button:active,
+MathWindow .button:active,
+MathWindow GtkComboBox:active:hover,
+MathWindow GtkComboBox *:active:hover,
+MathWindow .button.text-button:active:hover,
+MathWindow .button.image-button:active:hover,
+MathWindow .button:active:hover {
+    background-color: @base;
+    color: @calculator;
+    border: none;
+}
+
+MathWindow GtkComboBox:backdrop,
+MathWindow GtkComboBox *:backdrop,
+MathWindow .button.text-button:backdrop,
+MathWindow .button.image-button:backdrop,
+MathWindow .button:backdrop {
+    background-color: transparent;
+    color: alpha(@calculator, 0.7);
+    border: none;
+}
+
+MathWindow GtkComboBox:hover,
+MathWindow GtkComboBox *:hover,
+MathWindow .button.text-button:hover,
+MathWindow .button.image-button:hover,
+MathWindow .button:hover {
+    background-color: @calculator;
+    color: @base;
+    border: none;
+}
+
+/*MathWindow .primary-toolbar .button .menu .menuitem:hover,
+MathWindow .toolbar .menu .menuitem:hover,
+MathWindow .toolbar .primary-toolbar .menu .menuitem:hover,
+MathWindow .header-bar .menu .menuitem:hover,
+MathWindow .header-bar .primary-toolbar .menu .menuitem:hover,
+MathWindow .menu  .menuitem:hover {
+    border: none;
+    background-color: @calculator;
+    color: @base;
+}
+
+*/
+MathWindow *:hover {
+    border: none;
+    background-color: @calculator;
+    color: @base;
+}
+
+
+ 
+/* Header Bar */
+MathWindow .header-bar,
+MathWindow .header-bar.toolbar {
+    background-color: @calculator;
+}
+
+MathWindow .maximized .header-bar {
+    background-color: @calculator;
+}
+
+MathWindow .header-bar > GtkBox > .separator.vertical {
+    background-color: @calculator;
+}
+
+/* Separator */
+MathWindow .header-bar .separator,
+MathWindow .header-bar .button .separator,
+MathWindow .header-bar .button.separator {
+    background-color: @calculator;
+    color: @calculator;
+}
+
+MathWindow .header-bar .button GtkImage:active,
+MathWindow .header-bar .button GtkImage:active:hover {
+    color: @calculator;
+}

@@ -1,0 +1,197 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/**********************
+ * Common Definitions *
+ **********************/
+
+/* Insensitive colors */
+@define-color insensitive_base shade(@base, 0.95);
+@define-color insensitive_background alpha(@background, 0.0);
+@define-color insensitive_foreground alpha(@foreground, 0.5);
+@define-color insensitive_border shade(@border, 1.1);
+@define-color insensitive_button @insensitive_background;
+@define-color insensitive_separator shade(@separator, 1.05);
+@define-color insensitive_text @insensitive_foreground;
+@define-color insensitive_selection shade(@selection, 1.05);
+
+/* Backdrop colors */
+@define-color backdrop_base shade(@base, 0.9);
+@define-color backdrop_background shade(@background, 0.98);
+@define-color backdrop_foreground shade(@foreground, 1.2);
+@define-color backdrop_border shade(@border, 1.02);
+@define-color backdrop_separator shade(@separator, 0.99);
+@define-color backdrop_text alpha(@text, 0.6);
+@define-color backdrop_selection shade(@selection, 1.3);
+
+/* Backdrop-insensitive colors */
+@define-color backdrop_insensitive_border mix(@backdrop_background, @backdrop_border, 0.5);
+@define-color backdrop_insensitive_foreground mix(@backdrop_background, @backdrop_foreground, 0.5);
+@define-color backdrop_insensitive_background mix(@backdrop_background, @backdrop_base, 0.5);
+@define-color backdrop_insensitive_text alpha(@foreground, 0.4);
+
+/* Backdrop-selected colors */
+@define-color backdrop_selected_background shade(@selection, 1.3);
+@define-color backdrop_selected_foreground @foreground;
+
+/* Hover colors */
+@define-color hover_base shade(@base, 1.02);
+@define-color hover_background rgba(255,255,255,0.2);
+@define-color hover_foreground shade(@foreground, 1.02);
+@define-color hover_border shade(@border, 1.02);
+@define-color hover_text shade(@foreground, 1.02);
+@define-color hover_selection shade(@selection, 1.3);
+
+/* Active colors */
+@define-color active_text shade(@foreground, 1.3);
+
+/* Selected color */
+@define-color selected_background @selection;
+@define-color selected_border shade(@selection, 0.8);
+@define-color selected_foreground #ffffff;
+@define-color selection_foreground @selected_foreground;
+
+/****************
+ * Theme colors *
+  ***************/
+
+@define-color theme_base @base;
+@define-color theme_base_color @base;
+
+@define-color theme_bg_color @background;
+@define-color theme_background @background;
+@define-color bg_color @background;
+@define-color fg_color @foreground;
+@define-color theme_foreground @foreground;
+
+@define-color theme_selected_background @selected_background;
+@define-color selected_bg_color @selected_background;
+@define-color theme_selected_foreground @selected_foreground;
+
+@define-color theme_text @foreground;
+@define-color theme_text_color @foreground;
+
+@define-color panel_bg_color @panel;
+@define-color panel_fg_color @panel_text;
+
+/**************
+ * Scrollbars *
+ **************/
+@define-color scrollbar_slider shade(@foreground,1.2);
+@define-color scrollbar_slider_backdrop shade(@scrollbar_slider,0.95);
+@define-color scrollbar_slider_insensitive shade(@scrollbar_slider,1.05);
+
+@define-color scrollbar_trough shade(@background,0.8);
+@define-color scrollbar_trough_insensitive shade(@insensitive_background,0.95);
+@define-color scrollbar_trough_backdrop shade(@backdrop_background,0.95);
+
+/****************
+ * Progressbars *
+ ****************/
+
+@define-color progressbar_background shade(@selected_background, 1.1);
+@define-color backdrop_progressbar_background_a shade(@backdrop_background, 0.85);
+@define-color backdrop_progressbar_background_b shade(@backdrop_background, 0.85);
+
+
+/***********
+ * Troughs *
+ ***********/
+@define-color trough_active @selected_background;
+@define-color trough_background shade(@base,0.95);
+@define-color insensitive_trough_background shade(@background, 0.9);
+@define-color backdrop_trough_background @backdrop_background;
+
+/*********************
+ * Internal elements *
+ *********************/
+@define-color internal_element @base;
+@define-color internal_element_prelight @selection;
+
+@define-color inset_light alpha(white, 0.45);
+@define-color inset_dark alpha(#000, 0.07);
+
+/*****************
+ * Miscellaneous *
+ *****************/
+@define-color placeholder_text_color shade(@foreground, 2.0);
+@define-color view_symbolic shade(@internal_element, 0.50);
+
+/* GNOME Apps */
+@define-color entry_tag_background #3465a4;
+
+/***********
+ * Popover *
+ ***********/
+@define-color osd_popover_background alpha(@panel, 0.90);
+
+/******************
+ * Infobar colors *
+ ******************/
+
+@define-color infobar_background @selection;
+@define-color infobar_foreground white;
+
+@define-color link @selection;
+@define-color question #60ade8;
+@define-color warning #f49f25;
+@define-color error #e50e0e;
+@define-color success #36c1d4;
+@define-color info #f5f697;
+
+/* Info colors */
+@define-color info_foreground #333333;
+@define-color info_text_shadow alpha(white, 0.2);
+@define-color info_background @info;
+@define-color info_border shade(@info_background, 0.9);
+
+/* Warning colors */
+@define-color warning_foreground #333333;
+@define-color warning_text_shadow alpha(white, 0.2);
+@define-color warning_background @warning;
+@define-color warning_border shade(@warning_background, 0.9);
+
+/* Question colors */
+@define-color question_foreground white;
+@define-color question_text_shadow alpha(#000, 0.2);
+@define-color question_background @question;
+@define-color question_border shade(@question_background, 0.9);
+
+/* Error colors */
+@define-color error_foreground white;
+@define-color error_text_shadow alpha(#000, 0.5);
+@define-color error_background @error;
+@define-color error_border shade(@error_background, 0.9);
+
+
+/***********
+ * Imports *
+ ***********/
+
+/* Import App-Specific CSS */
+@import url("apps/budgie.css");
+@import url("apps/calculator.css");
+@import url("apps/fallback.css");
+@import url("apps/gnome.css");
+@import url("apps/gnome-software.css");
+/*@import url("apps/gnome-music.css");*/
+@import url("apps/nautilus.css");
+@import url("apps/pantheon.css");
+@import url("apps/settings.css");
+@import url("apps/unity.css");
+@import url("apps/xfce.css");

@@ -1,0 +1,335 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/*********************
+ * Header Bar Colors *
+ *********************/
+
+@define-color backdrop_header shade(@header, 0.9);
+@define-color backdrop_header_text alpha(@header_text, 0.5);
+@define-color insensitive_header_text alpha(@header_text, 0.7);
+
+/**************
+ * Header Bar *
+ **************/
+
+.header-bar,
+.header-bar.toolbar {
+    padding: 6px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: @header;
+    color: @header_text;
+    box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.7);
+}
+
+.maximized .header-bar {
+    padding: 6px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: @header;
+    color: @header_text;
+    box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.7);
+}
+
+.header-bar:backdrop,
+.header-bar.toolbar:backdrop {
+    background-color: @backdrop_header;
+    color: @backdrop_header_text;
+    box-shadow: none;
+}
+
+/* Title */
+.header-bar .title {
+    font: Bold 11;
+    color: @header_text;
+}
+
+.header-bar .title:backdrop {
+    color: @backdrop_header_text;
+}
+
+/* Subtitle */
+.header-bar .subtitle {
+    font: 9;
+}
+
+/* Buttons */
+.header-bar GtkComboBox,
+.header-bar .button,
+.header-bar .button .flat,
+.header-bar .linked .button {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 0px;
+    background: none;
+    border: none;
+    color: @header_text;
+}
+
+.header-bar .button.text-button {
+    border-radius: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.header-bar GtkComboBox:active,
+.header-bar .button:active {
+    background: none;
+    border: none;
+    background: alpha(#000, 0.2);
+    color: @header_text;
+    box-shadow: inset 0 -2px 0 0 @header_text;
+}
+
+/*Image button*/
+.header-bar .button.image-button {
+    border-radius: 0px;
+    background: none;
+    border: none;
+    color: @header_text;
+    padding: 13px;
+}
+
+.header-bar .button.image-button:active {
+    padding: 13px;
+    background: none;
+    border: none;
+    color: @header_text;
+    box-shadow: none;
+    box-shadow: inset 0 -2px 0 0 @header_text;
+}
+
+.header-bar .button.image-button:backdrop {
+    background: none;
+    border: none;
+    color: @backdrop_header_text;
+}
+
+.header-bar .button.image-button:insensitive {
+    background: none;
+    border: none;
+    color: @insensitive_header_text;
+}
+
+.header-bar .button.image-button:hover {
+    border: none;
+    background: alpha(#000, 0.1);
+}
+
+/*Text button*/
+.header-bar .button.text-button:active {
+}
+
+.header-bar GtkComboBox:active:hover,
+.header-bar .button:active:hover {
+    box-shadow: inset 0 -2px 0 0 @header_text;
+}
+
+.header-bar GtkComboBox:active:hover,
+.header-bar .button:active:hover,
+.header-bar GtkComboBox:hover,
+.header-bar .button:hover {
+    background: alpha(#000, 0.1);
+    border: none;
+    color: @header_text;
+}
+
+.header-bar GtkComboBox:backdrop,
+.header-bar .button:backdrop {
+    background: none;
+    border: none;
+    color: @backdrop_header_text;
+}
+
+.header-bar GtkComboBox:active:backdrop,
+.header-bar .button:active:backdrop {
+    background: none;
+    border: none;
+    color: @backdrop_header_text;
+    box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
+}
+
+.header-bar .button:backdrop:hover {
+}
+
+.header-bar GtkComboBox:insensitive,
+.header-bar .button:insensitive {
+    background: none;
+    border: none;
+    color: @insensitive_header_text;
+    box-shadow: none;
+}
+
+.header-bar .button GtkImage:insensitive {
+    color: @insensitive_header_text;
+}
+
+
+/*************************
+ * Header bar separator  *
+ *************************/
+
+.header-bar > GtkBox > .separator.vertical {
+    -GtkWidget-wide-separators: 1;
+    -GtkWidget-separator-width: 0;
+    background-color: @header;
+    background: transparent;
+    border:none;
+}
+
+/* Separator */
+.header-bar .separator,
+.header-bar .button .separator,
+.header-bar .button.separator {
+    background-color: @header;
+    color: @header;
+    border:none;
+}
+
+/* Close button */
+.header-bar .button GtkImage {
+    border: none;
+    color: @header_text;
+    border: 1px solid transparent;
+    icon-shadow:none;
+    box-shadow: none;
+}
+
+.header-bar .button GtkImage:hover {
+    color: @header_text;
+    border:none;
+}
+
+.header-bar .button GtkImage:active,
+.header-bar .button GtkImage:active:hover {
+    background-color: @base;
+    color:  @selection;
+    icon-shadow: none;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.header-bar .button GtkImage:backdrop {
+    color: @backdrop_header_text;
+    icon-shadow: none;
+}
+
+.header-bar .button GtkImage:backdrop:hover {
+    color: @foreground;
+}
+
+/********************
+ * Header bar entry *
+ ********************/
+
+.header-bar .entry {
+    background-color: transparent;
+    color: @header_text;
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+    icon-shadow:none;
+}
+
+.header-bar .entry:active,
+.header-bar .entry:focus {
+    background-color: transparent;
+    color: @header_text;
+    border: none;
+}
+
+.header-bar .entry:backdrop {
+    background-color: transparent;
+    color: @backdrop_header_text;
+    border: none;
+}
+
+.header-bar .entry.image {
+    color: @insensitive_base;
+    icon-shadow:none;
+}
+
+.header-bar .entry.image.left {
+    padding-right: 6px;
+    color: @header_text;
+    icon-shadow:none;
+}
+
+
+/*********************
+ * Header bar switch *
+ *********************/
+
+.header-bar GtkSwitch {
+    border-radius: 1em;
+    font: condensed;
+}
+
+/* Trough */
+.header-bar GtkSwitch.trough {
+    border-radius: 1em;
+    border: 1px solid alpha(#000, 0.5);
+    background-color: @base;
+    color: alpha(@text, 0.5);
+}
+
+.header-bar GtkSwitch.trough:active {
+    border: 1px solid alpha(#000, 0.5);
+    background-color: @selection;
+    color: @selection_foreground;
+}
+
+.header-bar GtkSwitch.trough:backdrop,
+.header-bar GtkSwitch.trough:active:backdrop {
+    border: 1px solid alpha(#000, 0.2);
+    color: @backdrop_text;
+}
+
+.header-bar GtkSwitch.trough:insensitive,
+.header-bar GtkSwitch.trough:active:insensitive {
+    border: 1px solid alpha(#000, 0.2);
+    color: @insensitive_text;
+}
+
+/* Slider */
+
+.header-bar GtkSwitch.slider {
+    border: 1px solid alpha(#000, 0.4);
+    background-color: @base;
+}
+
+.header-bar GtkSwitch.slider:active {
+    border: 1px solid alpha(#000, 0.4);
+    background-color: @base;
+}
+
+.header-bar GtkSwitch.slider:active:insensitive,
+.header-bar GtkSwitch.slider:insensitive {
+    border: 1px solid alpha(#000, 0.2);
+    background-color: @insensitive_base;
+}
+
+.header-bar GtkSwitch.slider:active:backdrop,
+.header-bar GtkSwitch.slider:backdrop {
+    border: 1px solid alpha(#000, 0.3);
+    background-color: shade(@header, 0.9);
+}

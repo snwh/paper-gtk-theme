@@ -1,0 +1,212 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color star #E6E663;/* star color */
+
+/************
+ * Software *
+ ************/
+
+ .installed-overlay-box {
+    font-size: 80%;
+    background-color: @selection;
+    border-radius: 4px;
+    color: @selected_foreground;
+    text-shadow: none;
+}
+
+.popular-installed-overlay-box {
+    font-size: 80%;
+    background-color: @selection;
+    border-radius: 0;
+    color: @selected_foreground;
+    text-shadow: none;
+}
+
+.index-title-alignment-software {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.needs-attention {
+    background-image: none;
+    background-color: shade(@selection, 1.1);
+    border-radius: 1px;
+}
+
+.screenshot-image, .screenshot-image-thumb {
+    background-image: none;
+    background-color: shade(@background, 0.9);
+}
+
+.screenshot-image { border-radius: 5px; }
+
+.screenshot-image-thumb { border-radius: 3px; }
+
+.app-tile-label {
+    font-size: 10px;
+}
+
+.view.tile {
+    border: 1px solid @border;
+    background-image: none;
+    background-color: @base;
+    padding: 0;
+    box-shadow: none;
+}
+
+.view.tile:hover {
+    background-color: @base;
+}
+
+.view.tile:active {
+    border-color: @selection;
+    box-shadow: none;
+    color: @selection;
+}
+
+.view.tile:backdrop {
+    box-shadow: none;
+    border-color: @backdrop_border;
+}
+
+/* The rest of the featured-tile CSS is loaded at runtime in gs-feature-tile.c */
+.button.featured-tile {
+    all: unset;
+    padding: 0;
+    border-radius: 0;
+    border-width: 1px;
+    border-image: none;
+    box-shadow: inset 0 0 0 1px alpha(@foreground,0.3), 0 0 1px alpha(black,0.4);
+}
+
+.application-details-infobar.info {
+    background-color: #d3d7cf;
+    color: @foreground;
+    border-color: darker(#d3d7cf);
+    border-style: solid;
+    border-width: 1px;
+    text-shadow: none;
+}
+
+.application-details-infobar.warning {
+    background-color: #fcaf3e;
+    color: @foreground;
+    border: 1px solid;
+    border-color: darker(#fcaf3e);
+    text-shadow: none;
+}
+
+.application-details-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.application-details-summary {
+}
+
+.application-details-description {
+}
+
+.error-label {
+    text-shadow: none;
+}
+
+.folder-label {
+    font-size: 9px;
+    background-color: #999999;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: white;
+}
+
+.header-label {
+    font-size: 11px;
+    padding: 6px;
+    background-image: none;
+    background-color: #babdb6;
+    border-color: #000000;
+}
+
+.image-list {
+    background-color: transparent;
+}
+
+GtkBox.star {
+    background-color: transparent;
+    background-image: none;
+}
+
+.button.star {
+    -GtkWidget-focus-padding: 0;
+    background-color: transparent;
+    background-image: none;
+    border-image: none;
+    border-radius: 0;
+    border-width: 0px;
+    padding: 0;
+    box-shadow: none;
+    outline-offset: -1px;
+}
+
+.star {
+    color: @star;
+}
+
+.star-user {
+    color: @selection;
+}
+
+.counter-label {
+    text-shadow: none;
+    color: @selected_foreground;
+    background-color: mix(@selection, @selected_foreground, 0.3);
+    font-size: smaller;
+    border-radius: 4px;
+    padding: 0px 4px;
+}
+
+.category-sidebar {
+    border-radius: 0;
+    border-bottom-width: 0;
+    border-top-width: 0;
+}
+
+.category-sidebar GtkListBox {
+    background-color: @background;
+}
+
+.category-sidebar GtkListBoxRow {
+    padding-left: 6px;
+    animation: none;
+    transition: none;
+}
+
+.category-sidebar GtkListBoxRow:dir(rtl) {
+    padding-right: 6px;
+    animation: none;
+    transition: none;
+}
+
+.category-sidebar GtkListBoxRow:hover {
+    background-color: @background;
+}
+
+.category-sidebar GtkListBoxRow:selected:hover {
+    background-color: @selection;
+}

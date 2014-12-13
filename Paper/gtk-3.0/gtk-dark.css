@@ -1,0 +1,59 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/**********
+ * Colors *
+ **********/
+
+/* Base colors */
+@define-color base #384952;/* Base color */
+@define-color background #263238;/* Background color */
+@define-color foreground #A8B5BA;/* Foreground color */
+@define-color border #1E272B;/* Borders color */
+@define-color button #1E272B;/* Button color */
+@define-color separator @border;/* Separator color */
+@define-color menu_separator @separator;/* Separator color */
+@define-color text #A8B5BA;/* Text color */
+@define-color panel #263238;/* Panel color */
+@define-color header #263238;/* Header color */
+@define-color toolbar @header;/* Toolbar color */
+@define-color header_text #A8B5BA;/* Header text color */
+@define-color selection #2D5364;/* Selection color */
+@define-color view_background #555;/* View background */
+@define-color inactive_frame @border;/* Inactive frame color */
+@define-color panel_text #A8B5BA;/* Panel text color */
+@define-color panel_text_shadow alpha(#000, 0.2);/* Panel text color */
+@define-color text_shadow alpha(white, 0.4);/* Text shadow */
+@define-color icon_shadow @text_shadow;/* Icon shadow */
+
+/* Hightlight & shadow colors */
+@define-color highlight alpha(#fff, 0.2);
+@define-color shadow alpha(#000, 0.2);
+
+/***********
+ * Imports *
+ ***********/
+
+/* Import Main CSS */
+@import url("granite-widgets.css");
+@import url("gtk-widgets.css");
+@import url("gtk-common.css");
+
+/* Import Assets CSS */
+@import url("gtk-widgets-assets-dark.css");

@@ -1,0 +1,53 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/******************************
+ * Destructive action buttons *
+ ******************************/
+@define-color destructive_action_button #DC322F;
+@define-color destructive_action_button_border shade(@destructive_action_button, 0.8);
+@define-color destructive_action_button_foreground @base;
+
+/******************************
+ * Destructive action buttons *
+ ******************************/
+ 
+.destructive-action.button {
+	border: 1px solid @destructive_action_button_border;
+    background-color: @destructive_action_button;
+    color: @destructive_action_button_foreground;
+}
+
+.destructive-action.button:hover {
+	border: 1px solid shade(@destructive_action_button_border, 1.1);
+    background-color: shade(@destructive_action_button, 1.1);
+    color: @destructive_action_button_foreground;
+}
+
+.destructive-action.button:active,
+.destructive-action.button:hover:active {
+	border: 1px solid @destructive_action_button_border;
+    background-color: @destructive_action_button;
+    color: @destructive_action_button_foreground;
+}
+
+.destructive-action.button:backdrop {
+	border: 1px solid @backdrop_border;
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+}

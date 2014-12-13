@@ -1,0 +1,63 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color suggested_action_button @selection;
+@define-color suggested_action_button_foreground #fff;
+@define-color backdrop_suggested_action_foreground alpha(#fff, 0.5);
+@define-color insensitive_suggested_action_foreground alpha(#fff, 0.7);
+
+/****************************
+ * Suggested action buttons *
+ ****************************/
+ 
+.suggested-action.button {
+    background-color: alpha(#000, 0.2);
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.button:hover {
+    background-color: shade(@suggested_action_button, 1.2);
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.button:active,
+.suggested-action.button:hover:active {
+    background-color: shade(@suggested_action_button, 1.1);
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.button GtkLabel:backdrop,
+.suggested-action.button:backdrop {
+    background-color: transparent;
+    color: @backdrop_suggested_action_foreground;
+}
+
+.suggested-action.button GtkLabel:insensitive,
+.suggested-action.button:insensitive,
+.suggested-action.button:active *:insensitive {
+    background-color: transparent;
+    color: @insensitive_suggested_action_foreground;
+}
+
+.suggested-action.button GtkLabel:backdrop:insensitive {
+    color: @insensitive_foreground;
+}
+
+.suggested-action.button:insensitive:backdrop {
+    background-color: alpha(@insensitive_background,0.7);
+}

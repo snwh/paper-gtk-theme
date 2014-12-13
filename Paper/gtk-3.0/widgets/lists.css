@@ -1,0 +1,103 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*********
+ * Lists *
+ *********/
+.list,
+.list-row {
+    background-color: @background;
+    color: @foreground;
+}
+
+.list-row:hover {
+    background-color: shade(@background, 1.1);
+    color: shade(@foreground, 1.1);
+}
+
+.list:backdrop,
+.list-row:backdrop {
+    background-color: @backdrop_background;
+}
+
+.list-row,
+.grid-child {
+    padding: 2px;
+}
+
+.list-row .button {
+    box-shadow: none;
+}
+
+.list-row .button:hover {
+    background-color: shade(@background, 1.1);
+}
+
+.list-row:selected,
+.list-row .button:selected,
+.list-row .button:selected:hover {
+}
+
+.list-row:selected:backdrop,
+.list-row .button:backdrop:selected:hover {
+}
+
+.list-row.button:selected,
+.list-row:selected {
+}
+
+.list-row.button:selected:backdrop,
+.list-row:selected:backdrop {
+}
+
+/* List Row Button */
+.button.list-row {
+    outline: none;
+    border: none;
+    border-radius: 0px;
+}
+
+.button.list-row:hover  {
+    outline: none;
+    border: none;
+    background-color: alpha(@selection, 0.2);
+    color: @selection;
+}
+
+.button.list-row:active,
+.button.list-row:selected {
+    outline: none;
+    border: none;
+    background-color: alpha(@selection, 0.4);
+    color: @selection;
+}
+
+.button.list-row:active:selected,
+.button.list-row:active:selected:hover {
+    outline: none;
+    border: none;
+    background-color: alpha(@selection, 0.2);
+    color: @selection;
+}
+
+.button.list-row:hover:selected {
+    outline: none;
+    border: none;
+    background-color: alpha(@selection, 0.2);
+    color: @selection;
+}

@@ -1,0 +1,222 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/************
+ * Combobox *
+ ************/
+
+GtkComboBox {
+    padding: 0;
+
+    -GtkComboBox-arrow-scaling: 0.5;
+    -GtkComboBox-shadow-type: none;
+    color: @foreground;
+
+}
+
+GtkCombobox *:insensitive {
+    background-color: @insensitive_background;
+    -GtkComboBox-shadow-type: none;
+    background-image: none;
+    color: @insensitive_text;
+}
+
+GtkCombobox *:active {
+    background-color: @selection;
+    border: 1px solid @selection;
+    color: @selected_foreground;
+}
+
+GtkCombobox *:selected {
+    background-color: @selection;
+    border: 1px solid @selection;
+    color: @selected_foreground;
+}
+
+GtkCombobox *:backdrop {
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+}
+
+GtkCombobox *:insensitive:backdrop {
+    color: mix(@backdrop_text, @insensitive_text, 0.2);
+}
+
+GtkCombobox *:selected:backdrop {
+    color: @backdrop_selected_foreground;
+    background-color: @backdrop_selected_background
+}
+
+GtkComboBox .separator {
+    /* always disable separators */
+    -GtkWidget-wide-separators: true;
+    -GtkWidget-horizontal-separator: 0;
+    -GtkWidget-vertical-separator: 0;
+}
+
+GtkComboBox .arrow {
+    background-color: transparent;
+    border: none;
+    color: @foreground;
+}
+
+
+/******************
+ * Combobox Entry *
+ ******************/
+
+GtkComboBox.combobox-entry .button:selected,
+GtkComboBox.combobox-entry .entry:selected {
+    background-color: @selection;
+    border: 1px solid @selection;
+    color: @selected_foreground;
+}
+
+GtkComboBox.combobox-entry .entry:insensitive,
+GtkComboBox.combobox-entry .button:insensitive {
+    background-color: @insensitive_background;
+    border: 1px solid @insensitive_border;
+    color: @insensitive_foreground;
+}
+
+GtkComboBox.combobox-entry .entry:backdrop,
+GtkComboBox.combobox-entry .button:backdrop {
+    background-color: @backdrop_background;
+    border: 1px solid @backdrop_border;
+    color: @backdrop_text;
+}
+
+GtkComboBox.combobox-entry .entry:insensitive:backdrop,
+GtkComboBox.combobox-entry .button:insensitive:backdrop {
+    background-color: @backdrop_insensitive_background;
+    border: 1px solid @backdrop_insensitive_border;
+    color: @backdrop_insensitive_text;
+}
+
+
+/******************
+ * Combobox Entry *
+ ******************/
+
+/* First child */
+GtkComboBox.combobox-entry .entry:first-child,
+GtkComboBox.combobox-entry .button:first-child {
+    border-radius: 6px 0 0 6px;
+    border: 1px solid @border;
+    border-right-width: 0;
+}
+
+GtkComboBox.combobox-entry .entry:first-child,
+GtkComboBox.combobox-entry .button:last-child {
+    border-right-width: 1px;
+}
+
+GtkComboBox.combobox-entry .button:backdrop:first-child {
+    box-shadow: none;
+    border-right-width: 1px;
+}
+
+/* Last child */
+GtkComboBox.combobox-entry .entry:last-child,
+GtkComboBox.combobox-entry .button:last-child {
+    border-radius: 0 6px 6px 0;
+    border: 1px solid @border;
+    border-left-width: 0;
+}
+
+GtkComboBox.combobox-entry .entry:last-child:selected,
+GtkComboBox.combobox-entry .button:last-child:selected {
+    border-radius: 0 6px 6px 0;
+    border: 1px solid @selection;
+    border-left-width: 0;
+}
+
+GtkComboBox.combobox-entry .entry:last-child {
+    border-left-width: 1px;
+}
+
+
+/* Button */
+GtkComboBox.combobox-entry .button:backdrop:last-child {
+    box-shadow: none;
+    border-left-width: 1px;
+}
+
+GtkComboBox.combobox-entry .button *:active,
+GtkComboBox.combobox-entry .button *:active:hover {
+    border: solid @selection;
+    background-color: @selection;
+    color: @selected_foreground;
+}
+
+GtkComboBox.combobox-entry .entry,
+GtkComboBox.combobox-entry .entry:active,
+GtkComboBox.combobox-entry .entry:focus,
+GtkComboBox.combobox-entry .entry:insensitive {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-width: 1px;
+    box-shadow: none;
+}
+
+GtkComboBox.combobox-entry .button,
+GtkComboBox.combobox-entry .button:hover,
+GtkComboBox.combobox-entry .button:active,
+GtkComboBox.combobox-entry .button:insensitive {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+GtkComboBox.combobox-entry:insensitive,
+GtkComboBox.combobox-entry .entry:insensitive {
+    color: @insensitive_text;
+}
+   
+
+GtkComboBox.combobox-entry:insensitive {
+    background-color: @insensitive_background;
+    background-image: none;
+    color: @insensitive_text;
+}
+
+GtkComboBox.combobox-entry:selected {
+    background-color: @selection;
+    border: 1px solid @selection;
+}
+
+GtkComboBox.combobox-entry:insensitive {
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+GtkComboBox.combobox-entry:backdrop {
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+    border-right-width: 0;
+    box-shadow: none;
+}
+
+GtkComboBox.combobox-entry:insensitive:backdrop {
+    color: mix(@backdrop_text, @insensitive_text, 0.2);
+}
+
+GtkComboBox.combobox-entry:selected:backdrop {
+    color: @backdrop_selected_foreground;
+    background-color: @backdrop_selected_background
+}

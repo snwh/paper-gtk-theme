@@ -1,0 +1,23 @@
+/************
+ * expander *
+ ************/
+.expander {
+	border: alpha(@foreground, 0.7);
+    color: alpha(@foreground, 0.7);
+}
+
+.expander:active,
+.expander:hover {
+	border: alpha(white, 0.7);
+    color: alpha(white, 0.7);
+}
+
+.expander:insensitive {
+	border: alpha(@insensitive_text, 0.7);
+    color: alpha(@insensitive_text, 0.7);
+}
+
+.expander:backdrop {
+	border: alpha(@backdrop_text, 0.7);
+    color: alpha(@backdrop_text, 0.7);
+}

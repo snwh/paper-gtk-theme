@@ -1,0 +1,117 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*****************
+ * Check Buttons *
+ *****************/
+
+GtkCheckButton:hover,
+GtkCheckButton:active:hover,
+GtkCheckButton:selected,
+GtkCheckButton:selected:focus {
+    background-color: transparent;
+}
+
+.check,
+.check row:selected,
+.check row:selected:focus {
+	background-color: transparent;
+    color: @foreground;
+}
+
+.check:insensitive,
+.check row:selected:insensitive,
+.check row:selected:focus:insensitive {
+    background-color: transparent;
+    color: @insensitive_text;
+}
+
+
+.check:backdrop,
+.check row:selected:backdrop,
+.check row:selected:focus:backdrop {
+    background-color: transparent;
+    color: @backdrop_text;
+}
+
+.check:insensitive:backdrop,
+.check row:selected:insensitive:backdrop,
+.check row:selected:focus:insensitive:backdrop {
+    background-color: transparent;
+    color: @backdrop_insensitive_text;
+}
+
+.check:selected {
+    color: @selected_foreground;
+}
+
+
+.check:selected:backdrop {
+    color: @backdrop_selected_foreground;
+}
+
+
+
+/*****************
+ * Radio Buttons *
+ *****************/
+
+.radio {
+    background-color: transparent;
+}
+
+.radio:insensitive {
+    color: @insensitive_text;
+}
+
+.radio:selected {
+    color: @selected_foreground;
+}
+
+.radio:backdrop {
+    color: @backdrop_text;
+}
+
+.radio:insensitive:backdrop {
+    color: @backdrop_insensitive_text;
+}
+
+.radio:selected:backdrop {
+    color: @backdrop_selected_foreground;
+}
+
+/* Symbolic */
+.menu .menuitem.radio {
+  -gtk-icon-source: -gtk-icontheme("radio-symbolic");
+  color: @text;
+  icon-shadow: none;
+}
+
+.menu .menuitem.radio:active, .menu .menuitem.radio:checked {
+    -gtk-icon-source: -gtk-icontheme("radio-checked-symbolic");
+}
+
+.menu .menuitem.radio:inconsistent {
+    -gtk-icon-source: -gtk-icontheme("radio-mixed-symbolic");
+}
+.menu .menuitem.radio:hover {
+    color: @base;
+}
+.menu .menuitem.radio:insensitive {
+    color: @insensitive_text;
+}

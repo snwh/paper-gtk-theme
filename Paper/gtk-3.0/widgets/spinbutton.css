@@ -1,0 +1,197 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/**************
+ * Spinbutton *
+ **************/
+.spinbutton {
+    border-radius: 6px;
+    border: 1px solid @border;
+    box-shadow: none;
+    color: @text;
+}
+
+.spinbutton:focus {
+    box-shadow: none;
+}
+
+.spinbutton.button,
+.spinbutton .button {
+    background: none;
+    border: none;
+    padding: 2px 4px;
+    color: @foreground;
+}
+
+.spinbutton.entry {
+    background-color: @base;
+    color: @text;
+}
+
+.spinbutton.entry:selected {
+    color: @text;
+}
+
+.spinbutton.entry:focus {
+    color: @text;
+}
+
+.spinbutton .button:first-child {
+    box-shadow: none;
+}
+
+.spinbutton .button:last-child {
+    box-shadow: none;
+}
+
+/*Button Hover*/
+.spinbutton .button:hover,
+.spinbutton .button:hover:focus {
+    color: @selection;
+    background-color: transparent;
+}
+
+.spinbutton:active,
+.spinbutton .button:active,
+.spinbutton .button:active:focus,
+.spinbutton .button:active:hover:focus {
+    color: @foreground;
+    background-image: none;
+}
+
+.spinbutton .button,
+.spinbutton .button:focus {
+    color: @foreground;
+    background-image: none;
+}
+
+.spinbutton.entry:insensitive,
+.spinbutton .button:insensitive,
+.spinbutton .button:focus:insensitive {
+    color: @insensitive_text;
+    background-image: none;
+}
+
+.spinbutton.entry:backdrop,
+.spinbutton .button:backdrop {
+    color: @backdrop_text;
+    background-color: transparent;
+    background-image: none;
+}
+
+/* Separator */
+.spinbutton .separator,
+.spinbutton.separator {
+    color: transparent;
+}
+
+.spinbutton .separator:insensitive,
+.spinbutton.separator:insensitive {
+    color: transparent;
+}
+
+/***********************
+ * Spinbutton Vertical *
+ ***********************/
+ 
+.spinbutton-vertical {
+    border-radius: 6px;
+    border: 1px solid @border;
+    box-shadow: none;
+    color: @text;
+}
+
+.spinbutton-vertical:focus {
+    box-shadow: none;
+}
+
+.spinbutton-vertical.button,
+.spinbutton-vertical .button {
+    background: none;
+    border: none;
+    padding: 2px 4px;
+    color: @foreground;
+}
+
+.spinbutton-vertical.entry {
+    background-color: @base;
+    color: @text;
+}
+
+.spinbutton-vertical.entry:selected {
+    color: @text;
+}
+
+.spinbutton-vertical.entry:focus {
+    color: @text;
+}
+
+.spinbutton-vertical .button:first-child {
+    box-shadow: none;
+}
+
+.spinbutton-vertical .button:last-child {
+    box-shadow: none;
+}
+
+/*Button Hover*/
+.spinbutton-vertical .button:hover,
+.spinbutton-vertical .button:hover:focus {
+    color: @selection;
+    background-color: transparent;
+}
+
+.spinbutton-vertical:active,
+.spinbutton-vertical .button:active,
+.spinbutton-vertical .button:active:focus,
+.spinbutton-vertical .button:active:hover:focus {
+    color: @foreground;
+    background-image: none;
+}
+
+.spinbutton-vertical .button,
+.spinbutton-vertical .button:focus {
+    color: @foreground;
+    background-image: none;
+}
+
+.spinbutton-vertical.entry:insensitive,
+.spinbutton-vertical .button:insensitive,
+.spinbutton-vertical .button:focus:insensitive {
+    color: @insensitive_text;
+    background-image: none;
+}
+
+.spinbutton-vertical.entry:backdrop,
+.spinbutton-vertical .button:backdrop {
+    color: @backdrop_text;
+    background-color: transparent;
+    background-image: none;
+}
+
+/* Separator */
+.spinbutton-vertical .separator,
+.spinbutton-vertical.separator {
+    color: transparent;
+}
+
+.spinbutton-vertical .separator:insensitive,
+.spinbutton-vertical.separator:insensitive {
+    color: transparent;
+}

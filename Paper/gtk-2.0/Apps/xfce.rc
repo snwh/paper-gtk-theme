@@ -1,0 +1,162 @@
+style "theme-panel" = "dark"
+{
+	xthickness	= 1
+	ythickness	= 1
+	
+	bg[NORMAL]	= @panel_bg_color
+	bg[ACTIVE]	= @panel_bg_color
+	bg[PRELIGHT]	= shade (0.85, @selected_bg_color)
+	bg[SELECTED]	= shade (0.65, @selected_bg_color)
+	
+	fg[NORMAL]	= shade (0.9, @base_color)
+	fg[PRELIGHT]	= @base_color
+	fg[ACTIVE]	= shade (0.9, @base_color)
+	fg[SELECTED]	= shade (0.9, @base_color)
+	
+	text[NORMAL]	= shade (0.9, @base_color)
+	text[PRELIGHT]	= @base_color
+	text[ACTIVE]	= shade (0.9, @base_color)
+	text[SELECTED]	= shade (0.9, @base_color)
+
+	engine "murrine" {
+		roundness	= 0
+		glowstyle	= 0
+		glazestyle	= 0
+		textstyle	= 1
+		text_shade	= 0.2
+	}
+}
+
+style "xfdesktop-icon-view"
+{
+	XfdesktopIconView::label-alpha = 0
+	XfdesktopIconView::selected-label-alpha = 80
+	XfdesktopIconView::shadow-x-offset = 1
+	XfdesktopIconView::shadow-y-offset = 1
+	XfdesktopIconView::selected-shadow-x-offset = 1
+	XfdesktopIconView::selected-shadow-y-offset = 1
+	XfdesktopIconView::shadow-color = @tooltip_bg_color
+	XfdesktopIconView::selected-shadow-color = @tooltip_bg_color
+	XfdesktopIconView::cell-spacing = 2
+	XfdesktopIconView::cell-padding = 6
+	XfdesktopIconView::cell-text-width-proportion = 1.9
+
+	fg[NORMAL] = shade (0.9, @selected_fg_color)
+	fg[ACTIVE] = @selected_fg_color
+
+	engine "murrine"
+	{
+	}
+}
+
+style "theme-panel-text"
+{
+	fg[NORMAL]	= @base_color
+	fg[PRELIGHT]	= "#ffffff"
+	fg[ACTIVE]	= @base_color
+	
+	text[NORMAL]	= @base_color
+	text[PRELIGHT]	= "#ffffff"
+	text[ACTIVE]	= @base_color
+
+	engine "murrine" {
+		textstyle	= 1
+		text_shade	= 0.2
+	}
+}
+
+style "panel-entry" = "dark"
+{
+	fg[NORMAL]	= @text_color
+	fg[PRELIGHT]	= @text_color
+	fg[ACTIVE]	= @text_color
+	fg[SELECTED]	= @text_color
+	fg[INSENSITIVE]	= @text_color
+
+	text[NORMAL]	= @text_color
+	text[PRELIGHT]	= @text_color
+	text[ACTIVE]	= @text_color
+	text[SELECTED]	= @text_color
+	text[INSENSITIVE]	= @text_color
+
+}
+
+style "theme-main-menu-text" = "theme-panel-text"
+{
+	fg[PRELIGHT]	= "#ffffff"
+	text[PRELIGHT]	= "#ffffff"
+}
+
+style "workspace-switcher" = "theme-panel"
+{
+	bg[SELECTED]	= shade (0.8, @selected_bg_color)
+}
+
+style "window-buttons" = "theme-panel"
+{
+	xthickness	= 3
+	ythickness	= 3
+
+	bg[ACTIVE]	= shade (0.65, @selected_bg_color)
+	bg[PRELIGHT]	= shade (0.85, @selected_bg_color)
+	bg[SELECTED]	= shade (0.85, @selected_bg_color)
+	
+	fg[NORMAL]	= shade (0.7, @base_color)
+	fg[ACTIVE]	= @base_color
+	fg[PRELIGHT]	= @base_color
+	
+	engine "murrine" {
+		contrast = 0.0
+		gradient_shades	= { 1.0, 0.9, 0.8, 0.7 }
+		roundness	= 1
+		reliefstyle	= 0
+		textstyle	= 1
+		text_shade	= 0.2
+	}
+}
+
+style "indicator" = "theme-panel"
+{
+	xthickness	= 0
+	ythickness	= 0
+}
+
+widget "*PanelWidget*"			style "theme-panel"
+widget "*PanelApplet*"			style "theme-panel"
+widget "*fast-user-switch*"		style "theme-panel"
+widget "*CPUFreq*Applet*"		style "theme-panel"
+class "PanelApp*"			style "theme-panel"
+class "PanelToplevel*"			style "theme-panel"
+widget_class "*PanelToplevel*"		style "theme-panel"
+widget_class "*notif*"			style "theme-panel"
+widget_class "*Notif*"			style "theme-panel"
+widget_class "*Tray*"			style "theme-panel" 
+widget_class "*tray*"			style "theme-panel"
+widget_class "*computertemp*"		style "theme-panel"
+widget_class "*Applet*Tomboy*"		style "theme-panel"
+widget_class "*Applet*Netstatus*"	style "theme-panel"
+
+# Fixes for tooltip text in some apps.
+widget_class "*Notif*Beagle*"		style "theme-panel"
+widget_class "*Notif*Brasero*"		style "theme-panel"
+
+# XFCE panel theming.
+widget "*Xfce*Panel*"			style "theme-panel"
+class "*Xfce*Panel*"			style "theme-panel"
+widget "*WnckPager*"			style "workspace-switcher"
+widget "*XfdesktopIconView*"	style "xfdesktop-icon-view"
+
+# Fix gtk-entries in the panel
+class "*SexyIconEntry*"			style:highest "entry"	# fixes dict-plugin
+widget "*xfce4-verve-plugin*GtkEntry"	style:highest "entry"	# fixes verve-plugin
+
+# Make sure panel text color doesn't change
+widget_class "*Panel*MenuBar*"		style "theme-main-menu-text"
+widget_class "*Panel*<GtkMenuBar>*"	style "theme-main-menu-text"
+widget "*.clock-applet-button.*"	style "theme-panel-text"
+widget "*PanelApplet*"			style "theme-panel-text"
+
+# Override general panel-style with specific plugin-styles
+widget "*indicator-applet*"		style "indicator"
+widget "*indicator-button*"		style "indicator"
+widget "*XfceTasklist*"			style "window-buttons"

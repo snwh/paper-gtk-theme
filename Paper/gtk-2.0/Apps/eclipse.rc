@@ -1,0 +1,17 @@
+# ==============================================================================
+# ECLIPSE SPECIFIC SETTINGS
+# ==============================================================================
+
+style "eclipse-tooltips"
+{
+    xthickness	= 8
+    ythickness	= 4
+
+    bg[NORMAL]	  = shade(1.05, @bg_color)
+    fg[NORMAL]	  = @text_color
+    bg[SELECTED]  = shade(1.05, @bg_color)
+}
+
+# Eclipse/SWT
+widget "gtk-tooltips*" 							style "eclipse-tooltips"
+widget "*swt-toolbar-flat"						style "null"
