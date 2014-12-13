@@ -1,9 +1,9 @@
-Paper GTK Theme
+Paper GTK3 Theme
 ================
 
-Paper is an GTK3 theme belonging to the [Paper Project](http://snwh.org/paper/).
+Paper is a modern GNOME desktop theme belonging to the [Paper Project](http://snwh.org/paper/).
 
-Paper GTK Theme is distributed under the terms the GNU GPL v.3
+Paper is distributed under the terms the GNU GPL v.3
 
 ###Preamble
 
