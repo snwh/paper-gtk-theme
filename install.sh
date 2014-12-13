@@ -86,6 +86,7 @@ esac
 function settheme {
 echo "Setting Paper as desktop GTK theme..."
 gsettings set org.gnome.desktop.interface gtk-theme "Paper"
+gsettings set org.gnome.desktop.wm.preferences theme "Paper"
 echo "Done."
 end
 }
