@@ -22,13 +22,13 @@
  * Header *
  **********/
 
-CaliforniaHostMainWindow .titlebar,
-CaliforniaHostMainWindow .header-bar {
+CaliforniaHostMainWindow .header-bar,
+CaliforniaHostMainWindow .titlebar {
     background-color: @california;
 }
 
-CaliforniaHostMainWindow .titlebar:backdrop,
-CaliforniaHostMainWindow .header-bar:backdrop {
+CaliforniaHostMainWindow .header-bar:backdrop,
+CaliforniaHostMainWindow .titlebar:backdrop {
     background-color: shade(@california,0.9);
 }
 

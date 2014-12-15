@@ -20,12 +20,10 @@
  * Unity Colors *
  ****************/
 
-@define-color unity #349F8C;
+@define-color unity #636E73;
 @define-color unity_text #fff;/* Header text color */
 
 @define-color backdrop_unity shade(@unity, 0.9);
-@define-color backdrop_header_text alpha(@unity_text, 0.5);
-@define-color insensitive_header_text alpha(@unity_text, 0.7);
 
 /*********************
  * Unity Decorations *
@@ -62,11 +60,11 @@ UnityDecoration.top {
     border: 1px solid @unity;
     border-bottom-width: 0;
     background-color: @unity;
-    color: @unity_text;
+    color: @header_text;
 }
 
 UnityDecoration.top.menuitem {
-    color: @unity_text;
+    color: @header_text;
 }
 
 UnityDecoration.top.menuitem:backdrop {
@@ -152,7 +150,7 @@ UnityPanelWidget,
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
     border: none;
-    color: @menu_separator;
+    color: @separator;
 }
 
 /* Force Quit */

@@ -510,7 +510,7 @@
     45% { background-image: url("assets/spinner-10-dark.svg"); }
     50% { background-image: url("assets/spinner-11-dark.svg"); }
     55% { background-image: url("assets/spinner-12-dark.svg"); }
-    65% { background-image: url("assets/spinner-13-dark.svg"); 
+    65% { background-image: url("assets/spinner-13-dark.svg"); }
     70% { background-image: url("assets/spinner-14-dark.svg"); }
     75% { background-image: url("assets/spinner-15-dark.svg"); }
     80% { background-image: url("assets/spinner-16-dark.svg"); }
@@ -537,7 +537,7 @@
 
 .check {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-dark.png"), url("assets/checkbox-unchecked-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .check.button.flat,
@@ -554,7 +554,7 @@ GtkCalendar.check:selected,
 
 .check:hover {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-hover-dark.png"), url("assets/checkbox-unchecked-hover-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .check:hover.button.flat,
@@ -571,7 +571,7 @@ GtkCalendar.check:hover:selected,
 
 .check:active {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-active-dark.png"), url("assets/checkbox-unchecked-active-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .check:active.button.flat,
@@ -588,7 +588,7 @@ GtkCalendar.check:active:selected,
 
 .check:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"), url("assets/checkbox-unchecked-insensitive-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .check:insensitive.button.flat,
@@ -639,7 +639,7 @@ GtkCalendar.check:backdrop:insensitive:selected,
 
 .check:inconsistent {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-dark.png"), url("assets/checkbox-mixed-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .check:inconsistent.button.flat,
@@ -656,7 +656,7 @@ GtkCalendar.check:inconsistent:selected,
 
 .check:inconsistent:hover {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-hover-dark.png"), url("assets/checkbox-mixed-hover-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .check:inconsistent:hover.button.flat,
@@ -673,7 +673,7 @@ GtkCalendar.check:inconsistent:hover:selected,
 
 .check:inconsistent:selected {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-active-dark.png"), url("assets/checkbox-mixed-active-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .check:inconsistent:selected.button.flat,
@@ -707,7 +707,7 @@ GtkCalendar.check:inconsistent:backdrop:selected,
 
 .check:inconsistent:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"), url("assets/checkbox-mixed-insensitive-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .check:inconsistent:insensitive.button.flat,
@@ -741,7 +741,7 @@ GtkCalendar.check:inconsistent:insensitive:backdrop:selected,
 
 .check:checked {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .check:checked.button.flat,
@@ -758,7 +758,7 @@ GtkCalendar.check:checked:selected,
 
 .check:checked:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark.png"), url("assets/checkbox-checked-insensitive-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .check:checked:insensitive.button.flat,
@@ -775,7 +775,7 @@ GtkCalendar.check:checked:insensitive:selected,
 
 .check:checked:hover {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-hover-dark.png"), url("assets/checkbox-checked-hover-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .check:checked:hover.button.flat,
@@ -792,7 +792,7 @@ GtkCalendar.check:checked:hover:selected,
 
 .check:checked:active {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-active-dark.png"), url("assets/checkbox-checked-active-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .check:checked:active.button.flat,
@@ -867,7 +867,7 @@ GtkCalendar.check:backdrop:checked:insensitive:selected,
 
 .radio {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-dark.png"), url("assets/radio-unchecked-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .radio.button.flat,
@@ -884,7 +884,7 @@ GtkCalendar.radio:selected,
 
 .radio:hover {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-hover-dark.png"), url("assets/radio-unchecked-hover-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .radio:hover.button.flat,
@@ -901,7 +901,7 @@ GtkCalendar.radio:hover:selected,
 
 .radio:active {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-active-dark.png"), url("assets/radio-unchecked-active-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .radio:active.button.flat,
@@ -918,7 +918,7 @@ GtkCalendar.radio:active:selected,
 
 .radio:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark.png"), url("assets/radio-unchecked-insensitive-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .radio:insensitive.button.flat,
@@ -969,7 +969,7 @@ GtkCalendar.radio:backdrop:insensitive:selected,
 
 .radio:inconsistent {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-dark.png"), url("assets/radio-mixed-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .radio:inconsistent.button.flat,
@@ -986,7 +986,7 @@ GtkCalendar.radio:inconsistent:selected,
 
 .radio:inconsistent:hover {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-hover-dark.png"), url("assets/radio-mixed-hover-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .radio:inconsistent:hover.button.flat,
@@ -1003,7 +1003,7 @@ GtkCalendar.radio:inconsistent:hover:selected,
 
 .radio:inconsistent:selected {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-active-dark.png"), url("assets/radio-mixed-active-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .radio:inconsistent:selected.button.flat,
@@ -1037,7 +1037,7 @@ GtkCalendar.radio:inconsistent:backdrop:selected,
 
 .radio:inconsistent:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-dark.png"), url("assets/radio-mixed-insensitive-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .radio:inconsistent:insensitive.button.flat,
@@ -1071,7 +1071,7 @@ GtkCalendar.radio:inconsistent:insensitive:backdrop:selected,
 
 .radio:checked {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-dark.png"), url("assets/radio-checked-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .radio:checked.button.flat,
@@ -1088,7 +1088,7 @@ GtkCalendar.radio:checked:selected,
 
 .radio:checked:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .radio:checked:insensitive.button.flat,
@@ -1105,7 +1105,7 @@ GtkCalendar.radio:checked:insensitive:selected,
 
 .radio:checked:hover {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-hover-dark.png"), url("assets/radio-checked-hover-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .radio:checked:hover.button.flat,
@@ -1122,7 +1122,7 @@ GtkCalendar.radio:checked:hover:selected,
 
 .radio:checked:active {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-active-dark.png"), url("assets/radio-checked-active-dark@2.png"));
-    icon-shadow: 0 1px 0 white;
+    icon-shadow: none;
 }
 
 .radio:checked:active.button.flat,

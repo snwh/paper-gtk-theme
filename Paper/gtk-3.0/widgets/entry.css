@@ -43,7 +43,7 @@
 
 .entry:selected {
     color: @text;
-    background-color: @base;
+    background-color: @selection;
 }
 
 .entry:backdrop {

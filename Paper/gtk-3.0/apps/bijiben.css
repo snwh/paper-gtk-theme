@@ -23,16 +23,18 @@
  **********/
 
 BjbMainToolbar,
-BjbWindowBase .titlebar,
-BjbWindowBase .header-bar {
+BjbWindowBase .header-bar,
+BjbWindowBase .titlebar {
     background-color: @bijiben;
 }
 
+
 BjbMainToolbar:backdrop,
-BjbWindowBase .titlebar:backdrop,
-BjbWindowBase .header-bar:backdrop {
+BjbWindowBase .header-bar:backdrop,
+BjbWindowBase .titlebar:backdrop {
     background-color: shade(@bijiben,0.9);
 }
+
 
 /* Switch */
 BjbWindowBase .header-bar GtkSwitch.trough:active {

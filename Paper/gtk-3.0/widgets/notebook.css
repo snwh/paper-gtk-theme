@@ -197,11 +197,11 @@
 }
 
 .notebook tab.top:active {
-    padding: 2px 8px 3px 8px;
+    padding: 2px 8px 6px 8px;
 }
 
 .notebook tab.bottom:active {
-    padding: 3px 8px 2px 8px;
+    padding: 6px 8px 4px 8px;
 }
 
 .notebook tab.left:active {

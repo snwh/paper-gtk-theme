@@ -36,18 +36,6 @@ GtkComboBox .menu {
     background-color: @base;
 }
 
-.primary-toolbar .button .menu,
-.toolbar .menu,
-.toolbar .primary-toolbar .menu,
-.header-bar .menu,
-.header-bar .primary-toolbar .menu,
-.menu {
-    padding: 0;
-    border: none;
-    background-color: @base;
-    color: @foreground;
-}
-
 /*Context Menu*/
 
 .context-menu {
@@ -57,12 +45,9 @@ GtkComboBox .menu {
 
 .content-view .menu {
     padding: 0 1px;
-
     background-color: @background;
     background-image: none;
-
 }
-
 
 .content-view .menu .menuitem:active,
 .content-view .menu .menuitem:hover {
@@ -146,7 +131,7 @@ GtkTreeMenu .menuitem GtkImage:active:hover,
     padding-right: 2px;
     border: none;
     background-color: @base;
-    color: @menu_separator;
+    color: @separator;
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
 }
@@ -179,39 +164,38 @@ GtkTreeMenu .menuitem GtkImage:active:hover,
  * Menubar *
  ***********/
 .menubar {
-    -GtkWidget-window-dragging: true;
-
-    border: none;
     background-color: @background;
-    background-image: none;
     color: @foreground;
 }
+
 .menubar:backdrop {
     background-color: @backdrop_background;
+    color: @backdrop_text;
 }
 
 .menubar.menuitem,
 .menubar .menuitem {
-    padding: 2px 6px;
-    border: none;
+    padding: 3px 8px 4px 8px;
     background-color: transparent;
     color: @foreground;
 }
 
+.menubar.menuitem:backdrop,
+.menubar .menuitem:backdrop {
+    background-color: transparent;
+    color: @backdrop_text;
+}
+
 .menubar.menuitem:hover,
 .menubar .menuitem:hover {
-    border: none;
-    background-color: @selection;
-    color: @base;
+    color: @selection;
+    box-shadow:inset 0 -3px 0 0 @selection;
 }
 
 /* Separator */
 .menubar .menuitem.separator,
 .menubar.menuitem.separator {
-    -GtkMenuItem-horizontal-padding: 0;
-    -GtkWidget-separator-height: 1;
-    border: none;
-    color: @menu_separator;
+    color: @separator;
 }
 
 /*******************

@@ -17,14 +17,6 @@
 */
 
 
-/*********************
- * Header Bar Colors *
- *********************/
-
-@define-color backdrop_header shade(@header, 0.9);
-@define-color backdrop_header_text alpha(@header_text, 0.5);
-@define-color insensitive_header_text alpha(@header_text, 0.7);
-
 /**************
  * Header Bar *
  **************/
@@ -38,19 +30,14 @@
     box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.7);
 }
 
-.maximized .header-bar {
-    padding: 6px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    background-color: @header;
-    color: @header_text;
-    box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.7);
-}
-
 .header-bar:backdrop {
     background-color: @backdrop_header;
     color: @backdrop_header_text;
     box-shadow: none;
+}
+
+.header-bar *:insensitive {
+    color: @insensitive_header_text;
 }
 
 /* Title */
@@ -89,6 +76,7 @@
 }
 
 /* Normal Button */
+.header-bar .button .default,
 .header-bar .button GtkImage,
 .header-bar .text-button,
 .header-bar .button .text-button,
@@ -105,6 +93,7 @@
 }
 
 /* Active Button */
+.header-bar .button .default:active,
 .header-bar .button GtkImage:active,
 .header-bar .text-button:active,
 .header-bar .button .text-button:active,
@@ -115,7 +104,6 @@
 .header-bar .linked .button:active,
 .header-bar GtkComboBox:active {
     border-radius: 0px;
-    background: alpha(#000, 0.2);
     font: Bold;
     border: none;
     color: @header_text;
@@ -123,6 +111,7 @@
 }
 
 /* Focus Button */
+.header-bar .button .default:focus,
 .header-bar .button GtkImage:focus,
 .header-bar .text-button:focus,
 .header-bar .button .text-button:focus,
@@ -141,6 +130,7 @@
 }
 
 /* Hover Button */
+.header-bar .button .default:hover,
 .header-bar .button GtkImage:hover,
 .header-bar .text-button:hover,
 .header-bar .button .text-button:hover,
@@ -172,7 +162,16 @@
     color: @backdrop_header_text;
 }
 
+.header-bar .button .default:backdrop {
+    border-radius: 0px;
+    background: none;
+    border: none;
+    color: @backdrop_header_text;
+    box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
+}
+
 /* Active:Backdrop Button */
+.header-bar .button .default:active:backdrop,
 .header-bar .button GtkImage:active:backdrop,
 .header-bar .button .text-button:active:backdrop,
 .header-bar .text-button:active:backdrop,
@@ -191,6 +190,7 @@
 }
 
 /* Backdrop:Hover; Button */
+.header-bar .button .default:backdrop:hover,
 .header-bar .button GtkImage:backdrop:hover,
 .header-bar .button .text-button:backdrop:hover,
 .header-bar .text-button:backdrop:hover,
@@ -204,10 +204,10 @@
     background: alpha(#000, 0.1);
     border: none;
     color: @backdrop_header_text;
-    box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
 }
 
 /* Insensitive Button */
+.header-bar .button .default:insensitive,
 .header-bar .button GtkImage:insensitive,
 .header-bar .button .text-button:insensitive,
 .header-bar .text-button:insensitive,

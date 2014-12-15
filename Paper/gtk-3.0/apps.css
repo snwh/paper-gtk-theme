@@ -27,8 +27,10 @@
 @import url("apps/california.css");
 @import url("apps/epiphany.css");
 @import url("apps/fallback.css");
+@import url("apps/geary.css");
 @import url("apps/gedit.css");
 @import url("apps/gnome-clocks.css");
+/*@import url("apps/gnome-music.css");*/
 @import url("apps/gnome-contacts.css");
 @import url("apps/gnome-disks.css");
 @import url("apps/gnome-software.css");

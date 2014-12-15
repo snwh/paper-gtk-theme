@@ -39,7 +39,7 @@
     color: @insensitive_text;
 }
 
-.frame .flat {
+.flat {
    border:none;
 }
 
@@ -116,8 +116,8 @@ GtkWindow:insensitive {
 
 .view:selected:backdrop,
 .view:selected:backdrop:focus {
-    background-color: @backdrop_background;
-    color: @backdrop_text;
+    background-color: @backdrop_selection;
+    color: @backdrop_selection_foreground;
 }
 
 .view.separator {

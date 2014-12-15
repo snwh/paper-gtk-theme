@@ -22,18 +22,14 @@
  * Header *
  **********/
 
-NautilusWindow .header-bar,
-NautilusWindow .header-bar.toolbar {
+NautilusWindow .titlebar,
+NautilusWindow .header-bar {
     background-color: @nautilus;
 }
 
-NautilusWindow .header-bar:backdrop,
-NautilusWindow .header-bar.toolbar:backdrop {
+NautilusWindow .titlebar:backdrop,
+NautilusWindow .header-bar:backdrop {
     background-color: shade(@nautilus,0.9);
-}
-
-NautilusWindow .maximized .header-bar {
-    background-color: @nautilus;
 }
 
 NautilusWindow .header-bar GtkSwitch.trough:active {

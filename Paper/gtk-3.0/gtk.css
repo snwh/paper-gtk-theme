@@ -24,16 +24,15 @@
 /* Base colors */
 @define-color base #fff;/* Base color */
 @define-color background #fff;/* Background color */
-@define-color foreground #777;/* Foreground color */
+@define-color foreground #555;/* Foreground color */
 @define-color border #ccc;/* Borders color */
 @define-color button #ccc;/* Button color */
 @define-color separator alpha(#000, 0.2);/* Separator color */
-@define-color menu_separator @separator;/* Separator color */
 @define-color text @foreground;/* Text color */
-@define-color panel #636E73;/* Panel color */
+@define-color panel #1E272B;/* Panel color */
 @define-color header #636E73;/* Header color */
 @define-color header_text #fff;/* Header text color */
-@define-color selection #ccc;/* Selection color */
+@define-color selection #9BA8AD;/* Selection color */
 @define-color view_background #ffffff;/* View background */
 @define-color inactive_frame @border;/* Inactive frame color */
 @define-color panel_text #ffffff;/* Panel text color */

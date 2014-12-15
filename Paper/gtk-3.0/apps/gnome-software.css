@@ -22,7 +22,7 @@
  * Software *
  ************/
 
- .installed-overlay-box {
+.installed-overlay-box {
     font-size: 80%;
     background-color: @selection;
     border-radius: 4px;

@@ -27,15 +27,11 @@ TerminalWindow .header-bar {
     background-color: @terminal;
 }
 
-TerminalWindow .titlebar.default-decoration,
-TerminalWindow .header-bar.default-decoration {
-    background-color: @terminal;
-}
-
 TerminalWindow .titlebar:backdrop,
-TerminalWindow .header-bar:backdrop {
+TerminalWindow .header-bar:backdrop{
     background-color: shade(@terminal,0.9);
 }
+
 
 /* Switch */
 TerminalWindow .header-bar GtkSwitch.trough:active {
