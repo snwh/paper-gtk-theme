@@ -28,7 +28,6 @@
 @define-color border #1E272B;/* Borders color */
 @define-color button #1E272B;/* Button color */
 @define-color separator @border;/* Separator color */
-@define-color menu_separator @separator;/* Separator color */
 @define-color text #A8B5BA;/* Text color */
 @define-color panel #263238;/* Panel color */
 @define-color header #263238;/* Header color */

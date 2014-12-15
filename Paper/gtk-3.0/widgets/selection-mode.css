@@ -30,6 +30,11 @@
 /******************
  * Selection Mode *
  ******************/
+.selection-mode {
+    color: @selection_mode_foreground;
+    background-color: @selection_mode_background;
+    border: none;
+}
 .selection-mode.header-bar,
 .selection-mode.toolbar {
     color: @selection_mode_foreground;

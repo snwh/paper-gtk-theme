@@ -20,9 +20,42 @@
 @define-color settings #3889B0;
 @define-color backdrop_settings shade(@settings, 0.9);
 
-/***********
- * Widgets *
- ***********/
+
+/**********
+ * Header *
+ **********/
+
+CcWindow .titlebar,
+CcWindow .header-bar {
+    background-color: @settings;
+}
+
+CcWindow .titlebar:backdrop,
+CcWindow .header-bar:backdrop {
+    background-color: shade(@settings,0.9);
+}
+
+/**********
+ * Window *
+ **********/
+
+CcWindow.background {
+    background-color: @base;
+    color: @settings;
+}
+
+CcWindow.background:backdrop {
+    background-color: @base;
+    color: alpha(@settings, 0.5);
+}
+
+CcWindow .maximized .header-bar {
+    background-color: @settings;
+}
+
+/************
+ * ItemView *
+ ************/
 
 CcShellItemView {
     border:none;
@@ -49,36 +82,6 @@ CcWindow GtkIconView.view.cell:hover {
 CcWindow GtkIconView.view.cell:selected,
 CcWindow GtkIconView.view.cell:selected:focus {
     border: 1px solid @settings;
-    background-color: @settings;
-}
-
-/**********
- * Colors *
- **********/
-
-CcWindow.background {
-    background-color: @base;
-    color: @settings;
-}
-
-CcWindow .titlebar,
-CcWindow .header-bar  {
-    background-color: @settings;
-    color: @base;
-}
-
-CcWindow.background:backdrop {
-    background-color: @base;
-    color: alpha(@settings, 0.5);
-}
-
-CcWindow .titlebar:backdrop,
-CcWindow .header-bar:backdrop {
-    background-color: shade(@settings, 0.9);
-    color: alpha(@base, 0.5);
-}
-
-CcWindow .maximized .header-bar {
     background-color: @settings;
 }
 

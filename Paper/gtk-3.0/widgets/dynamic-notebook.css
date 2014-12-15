@@ -21,7 +21,7 @@
  ***************************/
 
 .dynamic-notebook .notebook.header {
-    background-color: alpha(#000, 0.20);
+    background: none;
     border: 0 solid @border;
     border-radius: 0;
     border: none;

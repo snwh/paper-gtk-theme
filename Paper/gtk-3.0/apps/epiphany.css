@@ -27,11 +27,6 @@ EphyWindow .header-bar {
     background-color: @epiphany;
 }
 
-EphyWindow .titlebar.default-decoration,
-EphyWindow .header-bar.default-decoration {
-    background-color: @epiphany;
-}
-
 EphyWindow .titlebar:backdrop,
 EphyWindow .header-bar:backdrop {
     background-color: shade(@epiphany,0.9);

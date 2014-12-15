@@ -47,7 +47,8 @@
 
 /* Backdrop-selected colors */
 @define-color backdrop_selected_background shade(@selection, 1.3);
-@define-color backdrop_selected_foreground @foreground;
+@define-color backdrop_selection @backdrop_selected_background;
+@define-color backdrop_selected_foreground @backdrop_text;
 
 /* Hover colors */
 @define-color hover_base shade(@base, 1.02);
@@ -88,6 +89,14 @@
 
 @define-color panel_bg_color @panel;
 @define-color panel_fg_color @panel_text;
+
+/***************
+ * Header Bars *
+ ***************/
+
+@define-color backdrop_header shade(@header, 0.9);
+@define-color backdrop_header_text alpha(@header_text, 0.7);
+@define-color insensitive_header_text alpha(@header_text, 0.5);
 
 /**************
  * Scrollbars *

@@ -32,6 +32,7 @@ ContactsWindow .header-bar:backdrop {
     background-color: shade(@contacts,0.9);
 }
 
+
 /* Switch */
 ContactsWindow .header-bar GtkSwitch.trough:active {
     background-color: @contacts;

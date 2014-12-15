@@ -32,6 +32,7 @@ ClocksWindow .header-bar:backdrop {
     background-color: shade(@clocks,0.9);
 }
 
+
 /* Switch */
 ClocksWindow .header-bar GtkSwitch.trough:active {
     background-color: @clocks;

@@ -22,13 +22,13 @@
  * Header *
  **********/
 
-FrWindow .titlebar,
-FrWindow .header-bar {
+FrWindow .header-bar,
+FrWindow .titlebar {
     background-color: @archives;
 }
 
-FrWindow .titlebar:backdrop,
-FrWindow .header-bar:backdrop {
+FrWindow .header-bar:backdrop,
+FrWindow .titlebar:backdrop {
     background-color: shade(@archives,0.9);
 }
 

@@ -59,10 +59,14 @@
 
 .list-row.button:selected,
 .list-row:selected {
+    background-color: @selection;
+    color: @selection_foreground;
 }
 
 .list-row.button:selected:backdrop,
 .list-row:selected:backdrop {
+    background-color: @backdrop_selection;
+    color: @backdrop_selection_foreground;
 }
 
 /* List Row Button */

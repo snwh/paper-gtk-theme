@@ -29,10 +29,11 @@
 
 <!-- CONSTANTS -->
 <constant name="C_titlebar" value="#636E73" />
+<constant name="C_titlebar_unfocused" value="#454D50" />
 <constant name="C_border_focused" value="#636E73" />
-<constant name="C_border_unfocused" value="#999999" />
-<constant name="C_title_focused" value="#ffffff" />
-<constant name="C_title_unfocused" value="#eeeeee" />
+<constant name="C_border_unfocused" value="#454D50" />
+<constant name="C_title_focused" value="#D1D4D5" />
+<constant name="C_title_unfocused" value="#929A9D" />
 
 <!-- GEOMETRY -->
 
@@ -46,7 +47,7 @@
 	<distance name="title_vertical_pad" value="4" />
 	<aspect_ratio name="button" value="1.0" />
 	<border name="title_border" left="4" right="4" top="4" bottom="4" />
-	<border name="button_border" left="2" right="0" top="4" bottom="4" />
+	<border name="button_border" left="2" right="2" top="4" bottom="4" />
 </frame_geometry>
 
 <!-- Unfocused window -->
@@ -57,7 +58,7 @@
 	<distance name="left_titlebar_edge" value="1"/>
 	<distance name="right_titlebar_edge" value="1"/>
 	<distance name="title_vertical_pad" value="4" />
-	<border name="button_border" left="2" right="0" top="4" bottom="4" />
+	<border name="button_border" left="2" right="2" top="4" bottom="4" />
 </frame_geometry>
 
 <!-- Maximized window -->
@@ -69,7 +70,7 @@
 	<distance name="right_titlebar_edge" value="1" />
 	<distance name="title_vertical_pad" value="4" />
 	<border name="title_border" left="4" right="4" top="4" bottom="4" />
-	<border name="button_border" left="2" right="0" top="4" bottom="4" />
+	<border name="button_border" left="2" right="2" top="4" bottom="4" />
 </frame_geometry>
 
 <!-- Left tiled window -->
@@ -165,7 +166,7 @@
 </draw_ops>
 
 <draw_ops name="titlebar_fill_unfocused">
-	<rectangle color="C_titlebar" x="0" y="0" width="width" height="height" filled="true" />
+	<rectangle color="C_titlebar_unfocused" x="0" y="0" width="width" height="height" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_focused">

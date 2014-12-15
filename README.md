@@ -1,5 +1,5 @@
-Paper GTK3 Theme
-================
+Paper Theme
+===========
 
 Paper is a modern GNOME desktop theme belonging to the [Paper Project](http://snwh.org/paper/).
 
@@ -30,6 +30,7 @@ To render new assets from their source SVG files, run the following:
     ./render-gtk3-assets.py
     ./render-gtk3-assets-hidpi.py
     ./render-metacity-assets.py
+    ./render-gnome-shell-assets.py
     ./render-unity-assets.py
 
 If it's throwing an error, the script may not be executable, try:

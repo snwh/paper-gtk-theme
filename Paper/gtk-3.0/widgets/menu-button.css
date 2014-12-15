@@ -57,31 +57,9 @@
 }
 
 
-.toolbar GtkMenuButton.button:active,
-.toolbar GtkMenuButton.button.raised:active,
 GtkMenuButton.button:active,
-.linked GtkMenuButton.button:active,
-.toolbar .linked.raised GtkMenuButton.button:active,
-.toolbar GtkMenuButton.button.linked.raised:active {
+GtkMenuButton.button.raised:active {
     color: @foreground;
-}
-
-GtkMenuButton.button *:active,
-.linked GtkMenuButton.button *:active,
-.toolbar .linked.raised GtkMenuButton.button *:active,
-.toolbar GtkMenuButton.button.linked.raised *:active {
-}
-
-.linked GtkMenuButton.button:active:last-child,
-.toolbar .linked.raised GtkMenuButton.button:active:last-child,
-.toolbar GtkMenuButton.button.linked.raised:active:last-child {
-    border-top-left-radius: 0;
-}
-
-.linked GtkMenuButton.button:active:first-child,
-.toolbar .linked.raised GtkMenuButton.button:active:first-child,
-.toolbar GtkMenuButton.button.linked.raised:active:first-child {
-    border-top-right-radius: 0;
 }
 
 .button.menuitem.menubar:active {

@@ -34,6 +34,23 @@
 @define-color music_selection_button_dark_b #1c1c1c;
 @define-color music_selection_box_dark_border #3e7b05;
 
+
+/**********
+ * Header *
+ **********/
+
+/* Doesn't work despite the unique app name */
+
+gnomemusic+window+Window .titlebar, 
+gnomemusic+window+Window .header-bar {
+    background-color: @music;
+}
+
+gnomemusic+window+Window .titlebar:backdrop,
+gnomemusic+window+Window .header-bar:backdrop {
+    background-color: shade(@music,0.9);
+}
+
 /*********
  * Music *
  *********/
