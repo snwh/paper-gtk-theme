@@ -32,7 +32,6 @@
 @define-color text #A8B5BA;/* Text color */
 @define-color panel #263238;/* Panel color */
 @define-color header #263238;/* Header color */
-@define-color toolbar @header;/* Toolbar color */
 @define-color header_text #A8B5BA;/* Header text color */
 @define-color selection #2D5364;/* Selection color */
 @define-color view_background #555;/* View background */

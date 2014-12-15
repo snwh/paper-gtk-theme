@@ -255,16 +255,16 @@
 /*----- In-tab padding -----*/
 
 .dynamic-notebook tab.top {
-    padding-top: 2px;
+    padding-top: 4px;
     padding-left: 8px;
-    padding-bottom: 1px;
+    padding-bottom: 6px;
     padding-right: 8px;
 }
 
 .dynamic-notebook tab.bottom {
-    padding-top: 1px;
+    padding-top: 6px;
     padding-left: 8px;
-    padding-bottom: 2px;
+    padding-bottom: 4px;
     padding-right: 8px;
 }
 

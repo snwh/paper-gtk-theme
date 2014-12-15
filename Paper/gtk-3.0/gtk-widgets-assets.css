@@ -852,10 +852,12 @@ GtkCalendar.check:backdrop:checked:insensitive:selected,
 .menu .menuitem.check:active,
 .menu .menuitem.check:checked {
     -gtk-icon-source: -gtk-icontheme("checkbox-checked-symbolic");
+    icon-shadow: none;
 }
 
 .menu .menuitem.check:inconsistent {
     -gtk-icon-source: -gtk-icontheme("checkbox-mixed-symbolic");
+    icon-shadow: none;
 }
 
 .menu .menuitem.check:hover {

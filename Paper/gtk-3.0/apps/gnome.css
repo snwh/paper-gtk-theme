@@ -24,6 +24,31 @@ SushiFontWidget {
     padding: 6px 12px;
 }
 
+
+/**************
+ * tweak-tool *
+ **************/
+.tweak-startup {
+    border:1px solid #cccccc;
+}
+
+/**********
+ * Sudoku *
+ **********/
+SudokuView SudokuCellView {
+    border: inherit;
+    background: inherit;
+}
+
+SudokuView SudokuCellView:backdrop {
+    border: inherit;
+    background: inherit;
+}
+
+SudokuView {
+    border: none;
+}
+
 /*************
  * gucharmap *
  *************/

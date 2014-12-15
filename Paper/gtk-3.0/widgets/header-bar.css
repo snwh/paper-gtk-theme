@@ -29,8 +29,7 @@
  * Header Bar *
  **************/
 
-.header-bar,
-.header-bar.toolbar {
+.header-bar {
     padding: 6px;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -48,8 +47,7 @@
     box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.7);
 }
 
-.header-bar:backdrop,
-.header-bar.toolbar:backdrop {
+.header-bar:backdrop {
     background-color: @backdrop_header;
     color: @backdrop_header_text;
     box-shadow: none;
@@ -70,118 +68,162 @@
     font: 9;
 }
 
-/* Buttons */
-.header-bar GtkComboBox,
+
+/***********************
+ * Header bar buttons  *
+ ***********************/
+
 .header-bar .button,
+.header-bar .title .button {
+    padding: 13px;
+}
+
+.header-bar .text-button,
+.header-bar .button .text-button {
+    padding: 13px;
+}
+
+.header-bar .image-button
+.header-bar .image-button .button {
+    padding: 13px;
+}
+
+/* Normal Button */
+.header-bar .button GtkImage,
+.header-bar .text-button,
+.header-bar .button .text-button,
 .header-bar .button .flat,
-.header-bar .linked .button {
-    padding-top: 4px;
-    padding-bottom: 4px;
+.header-bar .image-button .button,
+.header-bar .image-button,
+.header-bar .button,
+.header-bar .linked .button,
+.header-bar GtkComboBox {
     border-radius: 0px;
     background: none;
     border: none;
     color: @header_text;
 }
 
-.header-bar .button.text-button {
+/* Active Button */
+.header-bar .button GtkImage:active,
+.header-bar .text-button:active,
+.header-bar .button .text-button:active,
+.header-bar .button .flat:active,
+.header-bar .image-button .button:active,
+.header-bar .image-button:active,
+.header-bar .button:active,
+.header-bar .linked .button:active,
+.header-bar GtkComboBox:active {
     border-radius: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-.header-bar GtkComboBox:active,
-.header-bar .button:active {
-    background: none;
-    border: none;
     background: alpha(#000, 0.2);
+    font: Bold;
+    border: none;
     color: @header_text;
     box-shadow: inset 0 -2px 0 0 @header_text;
 }
 
-/*Image button*/
-.header-bar .button.image-button {
+/* Focus Button */
+.header-bar .button GtkImage:focus,
+.header-bar .text-button:focus,
+.header-bar .button .text-button:focus,
+.header-bar .button .flat:focus,
+.header-bar .image-button .button:focus,
+.header-bar .image-button:focus,
+.header-bar .button:focus,
+.header-bar .linked .button:focus,
+.header-bar GtkComboBox:focus {
+    border-radius: 0px;
+    background: none;
+    font: Bold;
+    border: none;
+    color: @header_text;
+    box-shadow: inset 0 -2px 0 0 @header_text;
+}
+
+/* Hover Button */
+.header-bar .button GtkImage:hover,
+.header-bar .text-button:hover,
+.header-bar .button .text-button:hover,
+.header-bar .button .flat:hover,
+.header-bar .image-button:hover,
+.header-bar .image-button .button:hover,
+.header-bar .button:hover,
+.header-bar .linked .button:hover,
+.header-bar GtkComboBox:hover {
+    border-radius: 0px;
+    background: alpha(#000, 0.1);
+    border: none;
+    color: @header_text;
+}
+
+/* Backdrop Button */
+.header-bar .button GtkImage:backdrop,
+.header-bar .text-button:backdrop,
+.header-bar .button .text-button:backdrop,
+.header-bar .button .flat:backdrop,
+.header-bar .image-button .button:backdrop,
+.header-bar .image-button:backdrop,
+.header-bar .button:backdrop,
+.header-bar .linked .button:backdrop,
+.header-bar GtkComboBox:backdrop {
     border-radius: 0px;
     background: none;
     border: none;
-    color: @header_text;
-    padding: 13px;
-}
-
-.header-bar .button.image-button:active {
-    padding: 13px;
-    background: none;
-    border: none;
-    color: @header_text;
-    box-shadow: none;
-    box-shadow: inset 0 -2px 0 0 @header_text;
-}
-
-.header-bar .button.image-button:backdrop {
-    background: none;
-    border: none;
     color: @backdrop_header_text;
 }
 
-.header-bar .button.image-button:insensitive {
-    background: none;
-    border: none;
-    color: @insensitive_header_text;
-}
-
-.header-bar .button.image-button:hover {
-    border: none;
-    background: alpha(#000, 0.1);
-}
-
-/*Text button*/
-.header-bar .button.text-button:active {
-}
-
-.header-bar GtkComboBox:active:hover,
-.header-bar .button:active:hover {
-    box-shadow: inset 0 -2px 0 0 @header_text;
-}
-
-.header-bar GtkComboBox:active:hover,
-.header-bar .button:active:hover,
-.header-bar GtkComboBox:hover,
-.header-bar .button:hover {
-    background: alpha(#000, 0.1);
-    border: none;
-    color: @header_text;
-}
-
-.header-bar GtkComboBox:backdrop,
-.header-bar .button:backdrop {
-    background: none;
-    border: none;
-    color: @backdrop_header_text;
-}
-
-.header-bar GtkComboBox:active:backdrop,
-.header-bar .button:active:backdrop {
-    background: none;
+/* Active:Backdrop Button */
+.header-bar .button GtkImage:active:backdrop,
+.header-bar .button .text-button:active:backdrop,
+.header-bar .text-button:active:backdrop,
+.header-bar .button .flat:active:backdrop,
+.header-bar .image-button .button:active:backdrop,
+.header-bar .image-button:active:backdrop,
+.header-bar .button:active:backdrop,
+.header-bar .linked .button:active:backdrop,
+.header-bar GtkComboBox:active:backdrop {
+    border-radius: 0px;
+    background: alpha(#000, 0.2);
+    font: Bold;
     border: none;
     color: @backdrop_header_text;
     box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
 }
 
-.header-bar .button:backdrop:hover {
+/* Backdrop:Hover; Button */
+.header-bar .button GtkImage:backdrop:hover,
+.header-bar .button .text-button:backdrop:hover,
+.header-bar .text-button:backdrop:hover,
+.header-bar .button .flat:backdrop:hover,
+.header-bar .image-button .button:backdrop:hover,
+.header-bar .image-button:backdrop:hover,
+.header-bar .button:backdrop:hover,
+.header-bar .linked .button:backdrop:hover,
+.header-bar GtkComboBox:backdrop:hover {
+    border-radius: 0px;
+    background: alpha(#000, 0.1);
+    border: none;
+    color: @backdrop_header_text;
+    box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
 }
 
-.header-bar GtkComboBox:insensitive,
-.header-bar .button:insensitive {
+/* Insensitive Button */
+.header-bar .button GtkImage:insensitive,
+.header-bar .button .text-button:insensitive,
+.header-bar .text-button:insensitive,
+.header-bar .button .flat:insensitive,
+.header-bar .image-button .button:insensitive,
+.header-bar .image-button:insensitive,
+.header-bar .button:insensitive,
+.header-bar .linked .button:insensitive,
+.header-bar GtkComboBox:insensitive {
+    border-radius: 0px;
     background: none;
+    font: Bold;
     border: none;
     color: @insensitive_header_text;
-    box-shadow: none;
 }
 
-.header-bar .button GtkImage:insensitive {
-    color: @insensitive_header_text;
-}
 
 
 /*************************
@@ -191,51 +233,20 @@
 .header-bar > GtkBox > .separator.vertical {
     -GtkWidget-wide-separators: 1;
     -GtkWidget-separator-width: 0;
-    background-color: @header;
-    background: transparent;
+    background-color: @border;
+    color: @border;
     border:none;
 }
 
-/* Separator */
+/* Separator 
 .header-bar .separator,
 .header-bar .button .separator,
 .header-bar .button.separator {
-    background-color: @header;
-    color: @header;
+    background-color: @border;
+    color: transparent;
     border:none;
-}
+} */
 
-/* Close button */
-.header-bar .button GtkImage {
-    border: none;
-    color: @header_text;
-    border: 1px solid transparent;
-    icon-shadow:none;
-    box-shadow: none;
-}
-
-.header-bar .button GtkImage:hover {
-    color: @header_text;
-    border:none;
-}
-
-.header-bar .button GtkImage:active,
-.header-bar .button GtkImage:active:hover {
-    background-color: @base;
-    color:  @selection;
-    icon-shadow: none;
-    text-shadow: none;
-    box-shadow: none;
-}
-
-.header-bar .button GtkImage:backdrop {
-    color: @backdrop_header_text;
-    icon-shadow: none;
-}
-
-.header-bar .button GtkImage:backdrop:hover {
-    color: @foreground;
-}
 
 /********************
  * Header bar entry *

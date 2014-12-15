@@ -52,21 +52,6 @@ MathWindow .button {
     font: Bold;
 }
 
-MathWindow .titlebar .button.text-button,
-MathWindow .titlebar .button.image-button,
-MathWindow .titlebar .button {
-    border: none;
-    color: @header_text;
-    font: Bold;
-}
-
-MathWindow .titlebar .button.text-button:backdrop,
-MathWindow .titlebar .button.image-button:backdrop,
-MathWindow .titlebar .button:backdrop {
-    border: none;
-    color: @backdrop_header_text;
-    font: Bold;
-}
 
 MathWindow GtkComboBox,
 MathWindow GtkComboBox * {
@@ -120,18 +105,6 @@ MathWindow .button:hover {
     border: none;
 }
 
-/*MathWindow .primary-toolbar .button .menu .menuitem:hover,
-MathWindow .toolbar .menu .menuitem:hover,
-MathWindow .toolbar .primary-toolbar .menu .menuitem:hover,
-MathWindow .header-bar .menu .menuitem:hover,
-MathWindow .header-bar .primary-toolbar .menu .menuitem:hover,
-MathWindow .menu  .menuitem:hover {
-    border: none;
-    background-color: @calculator;
-    color: @base;
-}
-
-*/
 MathWindow *:hover {
     border: none;
     background-color: @calculator;
@@ -159,10 +132,5 @@ MathWindow .header-bar .separator,
 MathWindow .header-bar .button .separator,
 MathWindow .header-bar .button.separator {
     background-color: @calculator;
-    color: @calculator;
-}
-
-MathWindow .header-bar .button GtkImage:active,
-MathWindow .header-bar .button GtkImage:active:hover {
     color: @calculator;
 }

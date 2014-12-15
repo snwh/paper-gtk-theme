@@ -73,31 +73,23 @@
 }
 
 .button.list-row:hover  {
-    outline: none;
-    border: none;
     background-color: alpha(@selection, 0.2);
     color: @selection;
 }
 
 .button.list-row:active,
 .button.list-row:selected {
-    outline: none;
-    border: none;
     background-color: alpha(@selection, 0.4);
     color: @selection;
 }
 
 .button.list-row:active:selected,
 .button.list-row:active:selected:hover {
-    outline: none;
-    border: none;
     background-color: alpha(@selection, 0.2);
     color: @selection;
 }
 
 .button.list-row:hover:selected {
-    outline: none;
-    border: none;
     background-color: alpha(@selection, 0.2);
     color: @selection;
 }

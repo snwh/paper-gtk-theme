@@ -62,9 +62,6 @@
     /*color: inherit;*/
 }
 
-/* Import Common CSS */
-@import url("widgets-assets/gtk-widget-assets-common.css");
-
 /* Import Widget CSS */
 @import url("widgets/action-bar.css");
 @import url("widgets/base-states.css");

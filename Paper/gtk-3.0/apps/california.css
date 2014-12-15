@@ -1,0 +1,52 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color california #e74c3c;
+
+/**********
+ * Header *
+ **********/
+
+CaliforniaHostMainWindow .titlebar,
+CaliforniaHostMainWindow .header-bar {
+    background-color: @california;
+}
+
+CaliforniaHostMainWindow .titlebar:backdrop,
+CaliforniaHostMainWindow .header-bar:backdrop {
+    background-color: shade(@california,0.9);
+}
+
+/* Switch */
+CaliforniaHostMainWindow .header-bar GtkSwitch.trough:active {
+    background-color: @california;
+}
+
+CaliforniaHostMainWindow GtkSwitch.trough:active {
+    border: 1px solid shade(@california, 0.8);
+    background-color: @california;
+}
+
+CaliforniaHostMainWindow GtkSwitch.slider:active {
+    border: 1px solid shade(@california, 0.8);
+} 
+
+CaliforniaHostMainWindow .header-bar GtkSwitch.slider:active:backdrop,
+CaliforniaHostMainWindow .header-bar GtkSwitch.slider:backdrop {
+    background-color: shade(@california, 0.9);
+}
