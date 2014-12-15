@@ -175,16 +175,16 @@
 /*----- In-tab padding -----*/
 
 .notebook tab.top {
-    padding-top: 2px;
+    padding-top: 4px;
     padding-left: 8px;
-    padding-bottom: 3px;
+    padding-bottom: 6px;
     padding-right: 8px;
 }
 
 .notebook tab.bottom {
-    padding-top: 3px;
+    padding-top: 6px;
     padding-left: 8px;
-    padding-bottom: 2px;
+    padding-bottom: 4px;
     padding-right: 8px;
 }
 
@@ -275,26 +275,24 @@
 .notebook tab .button:active,
 .notebook tab .button:hover {
     color: @backdrop_text;
-    border-image: none;
+    border: none;
     background-image: none;
     background-color: transparent;
-    border-radius: 3px;
-    border: 1px solid transparent;
-    padding: 2px;
+    border-radius: 16px;
+    padding: 0;
     box-shadow: none;
+    icon-shadow: none;
 }
 
 .notebook tab .button:hover {
     color: @foreground;
-    border-color: alpha(#000, 0.1);
+    background: alpha(#000, 0.1);
 }
 
 .notebook tab .button:active,
 .notebook tab .button:active:hover {
-    background-color: alpha(#000, 0.08);
-    box-shadow: inset 0 1px alpha(#000, 0.05);
-    color:  @button_active_text;
-    border-color: @border;
+    color: @selection_foreground;
+    background: @selection;
 }
 
 .notebook tab .button:backdrop {

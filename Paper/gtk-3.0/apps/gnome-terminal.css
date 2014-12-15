@@ -1,0 +1,83 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color terminal #2D5364;
+
+/**********
+ * Header *
+ **********/
+
+TerminalWindow .titlebar,
+TerminalWindow .header-bar {
+    background-color: @terminal;
+}
+
+TerminalWindow .titlebar.default-decoration,
+TerminalWindow .header-bar.default-decoration {
+    background-color: @terminal;
+}
+
+TerminalWindow .titlebar:backdrop,
+TerminalWindow .header-bar:backdrop {
+    background-color: shade(@terminal,0.9);
+}
+
+/* Switch */
+TerminalWindow .header-bar GtkSwitch.trough:active {
+    background-color: @terminal;
+}
+
+TerminalWindow GtkSwitch.trough:active {
+    border: 1px solid shade(@terminal, 0.8);
+    background-color: @terminal;
+}
+
+TerminalWindow GtkSwitch.slider:active {
+    border: 1px solid shade(@terminal, 0.8);
+} 
+
+TerminalWindow .header-bar GtkSwitch.slider:active:backdrop,
+TerminalWindow .header-bar GtkSwitch.slider:backdrop {
+    background-color: shade(@terminal, 0.9);
+}
+
+
+/************
+ * Notebook *
+ ************/
+
+/* Active */
+TerminalWindow .notebook tab.top:active,
+TerminalWindow .dynamic-notebook tab.top:active {
+    box-shadow:inset 0 -3px 0 0 @terminal;
+}
+
+TerminalWindow .notebook tab.bottom:active,
+TerminalWindow .dynamic-notebook tab.bottom:active {
+    box-shadow:inset 0 3px 0 0 @terminal;
+}
+
+TerminalWindow .notebook tab.left:active,
+TerminalWindow .dynamic-notebook tab.left:active {
+    box-shadow:inset -3px 0 0 0 @terminal;
+}
+
+TerminalWindow .notebook tab.right:active,
+TerminalWindow .dynamic-notebook tab.right:active {
+    box-shadow:inset 3px 0 0 0 @terminal;
+}

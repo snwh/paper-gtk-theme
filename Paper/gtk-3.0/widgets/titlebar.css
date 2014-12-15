@@ -22,8 +22,7 @@
 
 .titlebar {
     border-width: 0px;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding: 6px;
     padding-bottom: 0px;
     padding-top: 0px;
     icon-shadow: none;
@@ -32,9 +31,13 @@
     color: @header_text;
 }
 
+.titlebar:backdrop {
+    background-color: @backdrop_header;
+    color: @backdrop_header_text;
+}
+
 .titlebar.default-decoration {
     padding: 6px;
-    padding-top: 0px;
     padding-bottom: 0px;
     padding-top: 0px;
     background-color: @header;
@@ -52,43 +55,192 @@
     color: @backdrop_header_text;
 }
 
-/* Buttons */
+/*********************
+ * Titlebar buttons  *
+ *********************/
 
 .titlebar .button {
-    border: none;
-    border-radius: 0px;
-    padding: 12px;
+    padding: 13px;
 }
 
+.titlebar .text-button,
+.titlebar .button .text-button {
+    padding: 13px;
+}
+
+.titlebar .image-button,
+.titlebar .button.image-button {
+    padding: 13px;
+}
+
+/* Normal Button */
 .titlebar .titlebutton,
-.titlebar .button.image-button GtkImage {
+.titlebar .titlebutton GtkImage,
+.titlebar .titlebutton .button,
+.titlebar .titlebutton .button GtkImage,
+.titlebar .button GtkImage,
+.titlebar .text-button,
+.titlebar .button .text-button,
+.titlebar .button .flat,
+.titlebar .button.image-button,
+.titlebar .image-button,
+.titlebar .button,
+.titlebar .linked .button,
+.titlebar GtkComboBox {
+    border-radius: 0px;
+    background: none;
     border: none;
     color: @header_text;
 }
 
-.titlebar .button:backdrop,
+/* Active Button */
+.titlebar .titlebutton:active,
+.titlebar .titlebutton GtkImage:active,
+.titlebar .titlebutton .button:active,
+.titlebar .titlebutton .button GtkImage:active,
+.titlebar .button GtkImage:active,
+.titlebar .text-button:active,
+.titlebar .button .text-button:active,
+.titlebar .button .flat:active,
+.titlebar .button.image-button:active,
+.titlebar .image-button:active,
+.titlebar .button:active,
+.titlebar .linked .button:active,
+.titlebar GtkComboBox:active {
+    border-radius: 0px;
+    background: alpha(#000, 0.2);
+    font: Bold;
+    border: none;
+    color: @header_text;
+    box-shadow: inset 0 -2px 0 0 @header_text;
+}
+
+/* Focus Button */
+.titlebar .titlebutton:focus,
+.titlebar .titlebutton GtkImage:focus,
+.titlebar .titlebutton .button:focus,
+.titlebar .titlebutton .button GtkImage:focus,
+.titlebar .button GtkImage:focus,
+.titlebar .text-button:focus,
+.titlebar .button .text-button:focus,
+.titlebar .button .flat:focus,
+.titlebar .button.image-button:focus,
+.titlebar .image-button:focus,
+.titlebar .button:focus,
+.titlebar .linked .button:active,
+.titlebar GtkComboBox:active {
+    border-radius: 0px;
+    background: none;
+    font: Bold;
+    border: none;
+    color: @header_text;
+    box-shadow: inset 0 -2px 0 0 @header_text;
+}
+
+/* Hover Button */
+.titlebar .titlebutton:hover,
+.titlebar .titlebutton GtkImage:hover,
+.titlebar .titlebutton .button:hover,
+.titlebar .titlebutton .button GtkImage:hover,
+.titlebar .button GtkImage:hover,
+.titlebar .text-button:hover,
+.titlebar .button .text-button:hover,
+.titlebar .button .flat:hover,
+.titlebar .image-button:hover,
+.titlebar .button.image-button:hover,
+.titlebar .button:hover,
+.titlebar .linked .button:hover,
+.titlebar GtkComboBox:hover {
+    border-radius: 0px;
+    background: alpha(#000, 0.1);
+    border: none;
+    color: @header_text;
+}
+
+/* Backdrop Button */
 .titlebar .titlebutton:backdrop,
-.titlebar .button.image-button GtkImage:backdrop {
+.titlebar .titlebutton GtkImage:backdrop,
+.titlebar .titlebutton .button:backdrop,
+.titlebar .titlebutton .button GtkImage:backdrop,
+.titlebar .button GtkImage:backdrop,
+.titlebar .text-button:backdrop,
+.titlebar .button .text-button:backdrop,
+.titlebar .button .flat:backdrop,
+.titlebar .button.image-button:backdrop,
+.titlebar .image-button:backdrop,
+.titlebar .button:backdrop,
+.titlebar .linked .button:backdrop,
+.titlebar GtkComboBox:backdrop {
+    border-radius: 0px;
+    background: none;
     border: none;
     color: @backdrop_header_text;
 }
 
-.titlebar .button:hover,
-.titlebar .titlebutton:hover,
-.titlebar .button.image-button GtkImage:hover {
+/* Active:Backdrop Button */
+.titlebar .titlebutton:active:backdrop,
+.titlebar .titlebutton GtkImage:active:backdrop,
+.titlebar .titlebutton .button:active:backdrop,
+.titlebar .titlebutton .button GtkImage:active:backdrop,
+.titlebar .button GtkImage:active:backdrop,
+.titlebar .button .text-button:active:backdrop,
+.titlebar .text-button:active:backdrop,
+.titlebar .button .flat:active:backdrop,
+.titlebar .button.image-button:active:backdrop,
+.titlebar .image-button:active:backdrop,
+.titlebar .button:active:backdrop,
+.titlebar .linked .button:active:backdrop,
+.titlebar GtkComboBox:active:backdrop {
+    border-radius: 0px;
+    background: alpha(#000, 0.2);
+    font: Bold;
     border: none;
-    background-color: alpha(#000, 0.1);
-    color: @header_text;
+    color: @backdrop_header_text;
+    box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
 }
 
-.titlebar .button:active,
-.titlebar .titlebutton:active,
-.titlebar .button.image-button GtkImage:active {
+/* Backdrop:Hover Button */
+.titlebar .titlebutton:backdrop:hover,
+.titlebar .titlebutton GtkImage:backdrop:hover,
+.titlebar .titlebutton .button:backdrop:hover,
+.titlebar .titlebutton .button GtkImage:backdrop:hover,
+.titlebar .button GtkImage:backdrop:hover,
+.titlebar .button .text-button:backdrop:hover,
+.titlebar .text-button:backdrop:hover,
+.titlebar .button .flat:backdrop:hover,
+.titlebar .button.image-button:backdrop:hover,
+.titlebar .image-button:backdrop:hover,
+.titlebar .button:backdrop:hover,
+.titlebar .linked .button:backdrop:hover,
+.titlebar GtkComboBox:backdrop:hover {
+    border-radius: 0px;
+    background: alpha(#000, 0.1);
     border: none;
-    background-color: alpha(#000, 0.2);
-    color: @header_text;
-    box-shadow: inset 0 -2px 0 0 @header_text;
+    color: @backdrop_header_text;
+    box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
 }
+
+/* Insensitive Button */
+.titlebar .titlebutton:insensitive,
+.titlebar .titlebutton GtkImage:insensitive,
+.titlebar .titlebutton .button:insensitive,
+.titlebar .titlebutton .button GtkImage:insensitive,
+.titlebar .button GtkImage:insensitive,
+.titlebar .button .text-button:insensitive,
+.titlebar .text-button:insensitive,
+.titlebar .button .flat:insensitive,
+.titlebar .button.image-button:insensitive,
+.titlebar .image-button:insensitive,
+.titlebar .button:insensitive,
+.titlebar .linked .button:insensitive,
+.titlebar GtkComboBox:insensitive {
+    border-radius: 0px;
+    background: none;
+    font: Bold;
+    border: none;
+    color: @insensitive_header_text;
+}
+
 
 .titlebar .right .button:first-child,
 .titlebar .right .titlebutton:first-child {
@@ -109,3 +261,4 @@
 .titlebar .left .titlebutton:first-child {
     border: none;
 }
+

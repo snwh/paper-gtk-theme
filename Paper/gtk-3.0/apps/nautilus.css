@@ -16,37 +16,24 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/*@define-color nautilus #8B8B8B;*/
+@define-color nautilus #349F8C;
 
-/************
- * Colours *
- ************
-
+/**********
+ * Header *
+ **********/
 
 NautilusWindow .header-bar,
 NautilusWindow .header-bar.toolbar {
     background-color: @nautilus;
-    color: 
+}
+
+NautilusWindow .header-bar:backdrop,
+NautilusWindow .header-bar.toolbar:backdrop {
+    background-color: shade(@nautilus,0.9);
 }
 
 NautilusWindow .maximized .header-bar {
     background-color: @nautilus;
-}
-
-NautilusWindow .header-bar > GtkBox > .separator.vertical {
-    background-color: @nautilus;
-}
-
-NautilusWindow .header-bar .separator,
-NautilusWindow .header-bar .button .separator,
-NautilusWindow .header-bar .button.separator {
-    background-color: @nautilus;
-    color: @nautilus;
-}
-
-NautilusWindow .header-bar .button GtkImage:active,
-NautilusWindow .header-bar .button GtkImage:active:hover {
-    color: @nautilus;
 }
 
 NautilusWindow .header-bar GtkSwitch.trough:active {
@@ -60,10 +47,35 @@ NautilusWindow GtkSwitch.trough:active {
 
 NautilusWindow GtkSwitch.slider:active {
     border: 1px solid shade(@nautilus, 0.8);
-} */
+} 
+
+/************
+ * Notebook *
+ ************/
+
+/* Active */
+NautilusWindow .notebook tab.top:active,
+NautilusWindow .dynamic-notebook tab.top:active {
+    box-shadow:inset 0 -3px 0 0 @nautilus;
+}
+
+NautilusWindow .notebook tab.bottom:active,
+NautilusWindow .dynamic-notebook tab.bottom:active {
+    box-shadow:inset 0 3px 0 0 @nautilus;
+}
+
+NautilusWindow .notebook tab.left:active,
+NautilusWindow .dynamic-notebook tab.left:active {
+    box-shadow:inset -3px 0 0 0 @nautilus;
+}
+
+NautilusWindow .notebook tab.right:active,
+NautilusWindow .dynamic-notebook tab.right:active {
+    box-shadow:inset 3px 0 0 0 @nautilus;
+}
 
 /***********
- * Widgets *
+ * Desktop *
  ***********/
 
 .nautilus-canvas-item {
@@ -124,14 +136,6 @@ NautilusWindow > GtkGrid > .pane-separator:backdrop,
 NautilusWindow > GtkGrid > .pane-separator:hover:backdrop {
     border-color: @backdrop_border;
     background-color: @backdrop_background;
-}
-
-NautilusNotebook .notebook {
-    border-width: 0 0 0 0;
-}
-
-NautilusNotebook .frame {
-    border-width: 0;
 }
 
 

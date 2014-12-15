@@ -272,10 +272,18 @@ GtkIconView.view {
     color: @foreground;
 }
  
+GtkIconView.view.cell:hover {
+    border: 1px solid @selection;
+    border-radius: 8px;
+    background:none;
+    background-color: alpha(@selection,0.4);
+    color: @selection;
+}
+ 
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
     border: 1px solid @selection;
-    border-radius: 4px;
+    border-radius: 8px;
     background:none;
     background-color: @selection;
     color: @selected_foreground;

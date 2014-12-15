@@ -104,7 +104,7 @@ if [ "$UID" -ne "$ROOT_UID" ]; then
 	continue
 else
 	echo
-	echo "Paper GTK Theme will be installed in '/usr/share/icons'"
+	echo "Paper GTK Theme will be installed in '/usr/share/themes'"
 	echo "It will be available to all users."
 	continue
 fi

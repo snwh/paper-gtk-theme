@@ -16,7 +16,11 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color music_topbar_selection_bg_color #f56e2c;
+
+
+@define-color music #eb8e4d;
+
+@define-color music_topbar_selection_bg_color #eb8e4d;
 
 @define-color music_selection_box_a #8e9c80;
 @define-color music_selection_box_b #4f6838;
