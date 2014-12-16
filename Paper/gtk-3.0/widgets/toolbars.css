@@ -57,8 +57,15 @@
     -gtk-image-effect: dim;
 }
 
+/* Menubar */
+.toolbar .menubar {
+    padding: 0px;
+}
+
 /* Buttons */
-.toolbar .button {
+.toolbar .button,
+.toolbar .text-button,
+.toolbar .image-button {
     border: none;
     background: none;
     color: @toolbar_text;
@@ -66,7 +73,18 @@
     padding: 13px;
 }
 
-.toolbar .button:active {
+.toolbar .button:active
+.toolbar .text-button:active,
+.toolbar .image-button:active {
+    border: none;
+    color: @foreground;
+    box-shadow: inset 0 -2px 0 0 @toolbar_text;
+    padding: 13px;
+}
+
+.toolbar .button .raised
+.toolbar .text-button .raised,
+.toolbar .image-button .raised {
     border: none;
     color: @foreground;
     box-shadow: inset 0 -2px 0 0 @toolbar_text;
@@ -75,7 +93,11 @@
 
 /* Hover */
 .toolbar .button:hover,
-.toolbar .button:active:hover {
+.toolbar .button:active:hover
+.toolbar .text-button:hover,
+.toolbar .text-button:active:hover,
+.toolbar .image-button:hover,
+.toolbar .image-button:active:hover {
     padding: 13px;
     border: none;
     background: alpha(#000, 0.1);
@@ -84,7 +106,9 @@
 }
 
 /* Insensitive */
-.toolbar .button:insensitive {
+.toolbar .button:insensitive
+.toolbar .text-button:insensitive,
+.toolbar .image-button:insensitive {
     padding: 13px;
     border: none;
     color: @insensitive_toolbar_text;
@@ -92,12 +116,49 @@
 
 /* Backdrop */
 .toolbar .button:backdrop,
-.toolbar .button:active:backdrop {
+.toolbar .button:active:backdrop
+.toolbar .text-button:backdrop,
+.toolbar .text-button:active:backdrop,
+.toolbar .image-button:backdrop,
+.toolbar .image-button:active:backdrop {
     color: @backdrop_toolbar_text;
     border: none;
     padding: 13px;
 }
 
+
+/* Entry */
+.toolbar .entry {
+    border: none;
+    border-radius: 0px;
+    background:transparent;
+    color: @toolbar_text
+}
+
+.toolbar .entry GtkImage
+.toolbar .entry GtkImage:focus; {
+    color: @toolbar_text
+}
+
+.toolbar .entry:focus {
+    color: @toolbar_text;
+    border: solid @insensitive_toolbar_text;
+    border-bottom-width: 1px;
+}
+
+.toolbar .entry:insensitive {
+    border: none;
+    color: @insensitive_toolbar_text;
+    border: solid @insensitive_toolbar_text;
+    border-bottom-width: 1px;
+}
+
+.toolbar .entry:backdrop {
+    border: none;
+    color: @backdrop_toolbar_text;
+    border: solid @backdrop_toolbar_text;
+    border-bottom-width: 1px;
+}
 
 /*******************
  * Primary Toolbar *
