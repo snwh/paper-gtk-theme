@@ -67,6 +67,7 @@
 
 .header-bar .text-button,
 .header-bar .button .text-button {
+    color: @header_text;
     padding: 13px;
 }
 

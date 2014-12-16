@@ -19,118 +19,80 @@
 @define-color calculator #9F347D;/* Calc color */
 
 /**************
- * Calculator *
+ * Header bar *
  **************/
 
-MathWindow.background {
-    background-color: @base;
-    color: @calculator;
-}
-
-MathWindow .titlebar {
+MathWindow .titlebar,
+MathWindow .header-bar {
     background-color: @calculator;
-    color: @base;
-    border: none;
 }
 
-MathWindow.background:backdrop {
-    background-color: @base;
-    color: alpha(@calculator, 0.5);
+MathWindow .titlebar:backdrop,
+MathWindow .header-bar:backdrop {
+    background-color: shade(@calculator,0.9);
 }
 
-MathWindow .titlebar:backdrop {
-    background-color: shade(@calculator, 0.9);
-    color: alpha(@base, 0.5);
-    border: none;
-}
-
-MathWindow .button.text-button,
-MathWindow .button.image-button,
-MathWindow .button {
+/***********
+ * Buttons *
+ ***********/
+MathButtons .button,
+MathButtons .button GtkImage,
+MathButtons .button.text-button,
+MathButtons .button.image-button {
     border: none;
     color: @calculator;
     font: Bold;
 }
 
 
-MathWindow GtkComboBox,
-MathWindow GtkComboBox * {
+MathButtons GtkComboBox,
+MathButtons GtkComboBox * {
     border: none;
     color: @calculator;
     font: Bold;
 }
 
-MathWindow GtkComboBox:focus,
-MathWindow GtkComboBox *:focus,
-MathWindow .button.text-button:focus,
-MathWindow .button.image-button:focus,
-MathWindow .button:focus {
-    background-color: @base;
+MathButtons GtkComboBox:focus,
+MathButtons GtkComboBox *:focus,
+MathButtons .button.text-button:focus,
+MathButtons .button.image-button:focus,
+MathButtons .button:focus {
+    background: none;
     color: @calculator;
     border: none;
 }
 
-MathWindow GtkComboBox:active,
-MathWindow GtkComboBox *:active,
-MathWindow .button.text-button:active,
-MathWindow .button.image-button:active,
-MathWindow .button:active,
-MathWindow GtkComboBox:active:hover,
-MathWindow GtkComboBox *:active:hover,
-MathWindow .button.text-button:active:hover,
-MathWindow .button.image-button:active:hover,
-MathWindow .button:active:hover {
-    background-color: @base;
+MathButtons GtkComboBox:active,
+MathButtons GtkComboBox *:active,
+MathButtons .button.text-button:active,
+MathButtons .button.image-button:active,
+MathButtons .button:active,
+MathButtons GtkComboBox:active:hover,
+MathButtons GtkComboBox *:active:hover,
+MathButtons .button.text-button:active:hover,
+MathButtons .button.image-button:active:hover,
+MathButtons .button:active:hover {
+    background: none;
     color: @calculator;
     border: none;
 }
 
-MathWindow GtkComboBox:backdrop,
-MathWindow GtkComboBox *:backdrop,
-MathWindow .button.text-button:backdrop,
-MathWindow .button.image-button:backdrop,
-MathWindow .button:backdrop {
-    background-color: transparent;
-    color: alpha(@calculator, 0.7);
+MathButtons GtkComboBox:backdrop,
+MathButtons GtkComboBox *:backdrop,
+MathButtons .button.text-button:backdrop,
+MathButtons .button.image-button:backdrop,
+MathButtons .button:backdrop {
+    background: none;
+    color: shade(@calculator, 0.9);
     border: none;
 }
 
-MathWindow GtkComboBox:hover,
-MathWindow GtkComboBox *:hover,
-MathWindow .button.text-button:hover,
-MathWindow .button.image-button:hover,
-MathWindow .button:hover {
+MathButtons GtkComboBox:hover,
+MathButtons GtkComboBox *:hover,
+MathButtons .button.text-button:hover,
+MathButtons .button.image-button:hover,
+MathButtons .button:hover {
     background-color: @calculator;
     color: @base;
     border: none;
-}
-
-MathWindow *:hover {
-    border: none;
-    background-color: @calculator;
-    color: @base;
-}
-
-
- 
-/* Header Bar */
-MathWindow .header-bar,
-MathWindow .header-bar.toolbar {
-    background-color: @calculator;
-}
-
-MathWindow .maximized .header-bar {
-    background-color: @calculator;
-}
-
-MathWindow .header-bar > GtkBox > .separator.vertical {
-    background-color: @calculator;
-}
-
-/* Separator */
-MathWindow .header-bar .separator,
-MathWindow .header-bar .button .separator,
-MathWindow .header-bar .button.separator {
-    background-color: @calculator;
-    color: @calculator;
 }

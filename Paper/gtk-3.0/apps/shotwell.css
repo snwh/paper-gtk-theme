@@ -1,0 +1,78 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color shotwell #ff766a;
+
+/**********
+ * Header *
+ **********/
+
+LibraryWindow .titlebar,
+LibraryWindow .header-bar {
+    background-color: @shotwell;
+}
+
+LibraryWindow .titlebar:backdrop,
+LibraryWindow .header-bar:backdrop {
+    background-color: shade(@shotwell,0.9);
+}
+
+/* Switch */
+LibraryWindow .header-bar GtkSwitch.trough:active {
+    background-color: @shotwell;
+}
+
+LibraryWindow GtkSwitch.trough:active {
+    border: 1px solid shade(@shotwell, 0.8);
+    background-color: @shotwell;
+}
+
+LibraryWindow GtkSwitch.slider:active {
+    border: 1px solid shade(@shotwell, 0.8);
+} 
+
+LibraryWindow .header-bar GtkSwitch.slider:active:backdrop,
+LibraryWindow .header-bar GtkSwitch.slider:backdrop {
+    background-color: shade(@shotwell, 0.9);
+}
+
+
+/************
+ * Notebook *
+ ************/
+
+/* Active */
+LibraryWindow .notebook tab.top:active,
+LibraryWindow .dynamic-notebook tab.top:active {
+    box-shadow:inset 0 -3px 0 0 @shotwell;
+}
+
+LibraryWindow .notebook tab.bottom:active,
+LibraryWindow .dynamic-notebook tab.bottom:active {
+    box-shadow:inset 0 3px 0 0 @shotwell;
+}
+
+LibraryWindow .notebook tab.left:active,
+LibraryWindow .dynamic-notebook tab.left:active {
+    box-shadow:inset -3px 0 0 0 @shotwell;
+}
+
+LibraryWindow .notebook tab.right:active,
+LibraryWindow .dynamic-notebook tab.right:active {
+    box-shadow:inset 3px 0 0 0 @shotwell;
+}
