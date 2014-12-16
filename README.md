@@ -1,7 +1,7 @@
 Paper Theme
 ===========
 
-Paper is a modern GNOME desktop theme belonging to the [Paper Project](http://snwh.org/paper/).
+[Paper](http://snwh.org/paper/) is a modern GNOME desktop theme.
 
 Paper is distributed under the terms the GNU GPL v.3
 

@@ -23,26 +23,25 @@
 GtkCalendar {
     padding: 2px;
     border-radius: 2px;
+    background: shade(@background, 0.8)
 }
 
 GtkCalendar.view {
-    border-color: @border;
     border-radius: 4px;
-    border-style: solid;
+    border: 1px solid @border;
     border-width: 1px;
-    padding: 2px;
+    color: @text;
 }
 
 GtkCalendar.header {
     border-radius: 0;
     background-color: @background;
     border-width: 0;
+    color: @text;
 }
 
 GtkCalendar.button {
-    border: none;
-    background-color: transparent;
-    color: @foreground;
+    color: @text;
 }
 
 GtkCalendar.button:insensitive,

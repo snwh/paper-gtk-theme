@@ -29,13 +29,13 @@
 @define-color button #ccc;/* Button color */
 @define-color separator alpha(#000, 0.2);/* Separator color */
 @define-color text @foreground;/* Text color */
-@define-color panel #1E272B;/* Panel color */
+@define-color panel #576165;/* Panel color */
 @define-color header #636E73;/* Header color */
 @define-color header_text #fff;/* Header text color */
 @define-color selection #9BA8AD;/* Selection color */
 @define-color view_background #ffffff;/* View background */
 @define-color inactive_frame @border;/* Inactive frame color */
-@define-color panel_text #ffffff;/* Panel text color */
+@define-color panel_text #dbdee0;/* Panel text color */
 @define-color panel_text_shadow alpha(#000, 0.2);/* Panel text color */
 @define-color text_shadow alpha(white, 0.4);/* Text shadow */
 @define-color icon_shadow @text_shadow;/* Icon shadow */

@@ -16,26 +16,28 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color disks #7c4182;
+@define-color logs #349F8C;
 
 /**********
  * Header *
  **********/
 
-GduWindow .titlebar,
-GduWindow .header-bar {
-    background-color: @disks;
+LogviewWindow .titlebar,
+LogviewWindow .header-bar {
+    background-color: @logs;
 }
 
-GduWindow .titlebar:backdrop,
-GduWindow .header-bar:backdrop {
-    background-color: shade(@disks,0.9);
+LogviewWindow .titlebar:backdrop,
+LogviewWindow .header-bar:backdrop {
+    background-color: shade(@logs,0.9);
 }
 
-GduVolumeGrid *:active,
-GduVolumeGrid *:focus,
-GduVolumeGrid *:selected {
-	background-color: @selection;
-	color: @selection_foreground;
+GlWindow .titlebar,
+GlWindow .header-bar {
+    background-color: @logs;
 }
 
+GlWindow .titlebar:backdrop,
+GlWindow .header-bar:backdrop {
+    background-color: shade(@logs,0.9);
+}

@@ -16,26 +16,17 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color disks #7c4182;
+/*@define-color geary #ebdd4d;*/
 
-/**********
- * Header *
- **********/
+/*********************
+ * Custon View *
+ *********************/
 
-GduWindow .titlebar,
-GduWindow .header-bar {
-    background-color: @disks;
+RBHeader {
+	padding: none;
+	height: 2em;
 }
 
-GduWindow .titlebar:backdrop,
-GduWindow .header-bar:backdrop {
-    background-color: shade(@disks,0.9);
+RBLibrarySource  {
+	padding: none;
 }
-
-GduVolumeGrid *:active,
-GduVolumeGrid *:focus,
-GduVolumeGrid *:selected {
-	background-color: @selection;
-	color: @selection_foreground;
-}
-

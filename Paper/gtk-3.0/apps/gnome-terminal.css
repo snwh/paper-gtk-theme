@@ -77,3 +77,65 @@ TerminalWindow .notebook tab.right:active,
 TerminalWindow .dynamic-notebook tab.right:active {
     box-shadow:inset 3px 0 0 0 @terminal;
 }
+
+/******************
+ * GNOME Terminal *
+ ******************/
+VteTerminal {
+    background-color: @panel;
+    color: @panel_text;
+}
+
+TerminalWindow GtkNotebook.notebook {
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+TerminalWindow .scrollbars-junction,
+TerminalWindow .scrollbar.trough {
+    border-width: 0;
+    border-radius: 0;
+    background-color: @panel;
+    border-color: transparent;
+}
+
+TerminalWindow .scrollbar.button,
+TerminalWindow .scrollbar.button:active,
+TerminalWindow .scrollbar.button:active:hover {
+    border-width: 0;
+    border-radius: 0;
+    background-color: transparent;
+    background-image: none;
+    color: shade(@panel, 0.6);
+}
+
+TerminalWindow .scrollbar.slider {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: shade(@panel, 0.8);
+}
+
+TerminalWindow .scrollbar.slider.vertical {
+    /* Borders are opposite what you'd expect */
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+TerminalWindow .scrollbar.slider.horizontal {
+    /* Borders are opposite what you'd expect */
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+TerminalWindow .scrollbar.slider:hover,
+TerminalWindow .scrollbar.slider.vertical:hover {
+    border: 1px solid transparent;
+    background-color: shade(@panel, 0.8);
+}
+
+TerminalWindow .scrollbar.slider:active,
+TerminalWindow .scrollbar.slider.vertical:active {
+    border: 1px solid transparent;
+    background-color: shade(@panel, 1.2);
+}

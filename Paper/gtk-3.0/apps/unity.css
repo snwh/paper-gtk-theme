@@ -20,7 +20,7 @@
  * Unity Colors *
  ****************/
 
-@define-color unity #636E73;
+@define-color unity @header;
 @define-color unity_text #fff;/* Header text color */
 
 @define-color backdrop_unity shade(@unity, 0.9);
@@ -117,6 +117,12 @@ UnityPanelWidget,
     color: @panel_text;
 }
 
+.unity-panel.menu.menubar,
+.unity-panel .menu .menubar {
+    background-color: @panel;
+    color: @panel_text;
+}
+
 .unity-panel.menubar:backdrop,
 .unity-panel .menubar *:backdrop {
     color: @backdrop_foreground;
@@ -130,19 +136,20 @@ UnityPanelWidget,
     border: none;
     background-color: transparent;
     color: @panel_text;
+    box-shadow: none;
 }
 
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem:hover {
-    border-radius: 4px 4px 0px 0px;
-    border-bottom: 0px;
-    border: 1px solid shade(@panel, 0.7);
-    background-color: shade(@panel, 0.8);
-    color: white;
+    border-radius: 0px;
+    background: shade(@unity, 0.8);
+    color: @panel_text;
+    box-shadow: none;
 }
 
 .unity-panel.menubar .menuitem *:hover {
     color: white;
+    box-shadow: none;
 }
 
 .unity-panel.menubar .menuitem.separator,

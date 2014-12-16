@@ -697,7 +697,7 @@ StScrollBar StButton#vhandle:active {
     border-image: none;
     background-image: none;
     background: rgba(44, 58, 64, 1.0);
-    color: #D1D4D5;
+    color: #D3D4D5;
     text-shadow: none;
     transition-duration: 300ms;
 }
