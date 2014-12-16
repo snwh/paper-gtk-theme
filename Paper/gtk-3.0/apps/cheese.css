@@ -16,32 +16,18 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/*****************
- * Column header *
- *****************/
- 
-column-header .button,
-column-header .button:* {
-    border-radius: 0px;
-    border: 1px solid @border;
-    border-left-width: 1px;
-    border-right-width: 0px;
-}
- 
-column-header:first-child .button,
-column-header .button:first-child {
-    border-radius: 0px;
-    border: 1px solid @border;
-    border-left-width: 1px;
-    border-right-width: 0px;
-}
- 
-column-header:last-child .button,
-column-header .button:last-child {
-    border-radius: 0px;
-    border: 1px solid @border;
-    border-left-width: 1px;
-    border-right-width: 1px;
+@define-color cheese #6d266a;
+
+/**********
+ * Header *
+ **********/
+
+CheeseWindow .titlebar,
+CheeseWindow .header-bar {
+    background-color: @cheese;
 }
 
- 
+CheeseWindow .titlebar:backdrop,
+CheeseWindow .header-bar:backdrop {
+    background-color: shade(@cheese,0.9);
+}

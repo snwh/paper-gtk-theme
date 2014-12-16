@@ -16,32 +16,27 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/*****************
- * Column header *
- *****************/
- 
-column-header .button,
-column-header .button:* {
-    border-radius: 0px;
-    border: 1px solid @border;
-    border-left-width: 1px;
-    border-right-width: 0px;
-}
- 
-column-header:first-child .button,
-column-header .button:first-child {
-    border-radius: 0px;
-    border: 1px solid @border;
-    border-left-width: 1px;
-    border-right-width: 0px;
-}
- 
-column-header:last-child .button,
-column-header .button:last-child {
-    border-radius: 0px;
-    border: 1px solid @border;
-    border-left-width: 1px;
-    border-right-width: 1px;
+@define-color snap #6d266a;
+@define-color snap_background #434343;
+
+/**********
+ * Header *
+ **********/
+
+SnapSnapWindow .titlebar,
+SnapSnapWindow .header-bar {
+    background-color: @snap;
 }
 
- 
+SnapSnapWindow .titlebar:backdrop,
+SnapSnapWindow .header-bar:backdrop {
+    background-color: shade(@snap,0.9);
+}
+
+SnapWidgetsCamera {
+	background:@snap_background;
+}
+
+SnapWidgetsCamera:backdrop {
+	background:shade(@snap_background, 0.9);
+}

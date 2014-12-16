@@ -31,8 +31,8 @@
 @define-color text #A8B5BA;/* Text color */
 @define-color panel #1e282c;/* Panel color */
 @define-color header #263238;/* Header color */
-@define-color header_text #A8B5BA;/* Header text color */
-@define-color selection #2D5364;/* Selection color */
+@define-color header_text alpha(#fff, 0.8);/* Header text color */
+@define-color selection #417790;/* Selection color */
 @define-color view_background #555;/* View background */
 @define-color inactive_frame @border;/* Inactive frame color */
 @define-color panel_text #A8B5BA;/* Panel text color */

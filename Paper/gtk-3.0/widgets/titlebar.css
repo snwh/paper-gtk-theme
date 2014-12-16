@@ -35,6 +35,7 @@
     background-color: @backdrop_header;
     color: @backdrop_header_text;
 }
+
 .titlebar:insensitive {
     color: @insensitive_header_text;
 }
@@ -66,8 +67,10 @@
     padding: 13px;
 }
 
+.titlebar .titlebutton,
 .titlebar .text-button,
 .titlebar .button .text-button {
+    color: @header_text;
     padding: 13px;
 }
 
