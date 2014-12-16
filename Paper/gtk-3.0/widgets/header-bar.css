@@ -42,6 +42,8 @@
 
 /* Title */
 .header-bar .title {
+    padding-left: 13px;
+    padding-right: 13px;
     font: Bold 11;
     color: @header_text;
 }
@@ -56,10 +58,18 @@
 }
 
 
+/* Separator */
+.header-bar .separator {
+    background: transparent;
+    color: transparent;
+}
+
+
 /***********************
  * Header bar buttons  *
  ***********************/
 
+.header-bar .flat,
 .header-bar .button,
 .header-bar .title .button {
     padding: 13px;
@@ -78,10 +88,9 @@
 
 /* Normal Button */
 .header-bar .button .default,
-.header-bar .button GtkImage,
 .header-bar .text-button,
 .header-bar .button .text-button,
-.header-bar .button .flat,
+.header-bar .flat,
 .header-bar .image-button .button,
 .header-bar .image-button,
 .header-bar .button,
@@ -95,10 +104,9 @@
 
 /* Active Button */
 .header-bar .button .default:active,
-.header-bar .button GtkImage:active,
 .header-bar .text-button:active,
 .header-bar .button .text-button:active,
-.header-bar .button .flat:active,
+.header-bar .flat:active,
 .header-bar .image-button .button:active,
 .header-bar .image-button:active,
 .header-bar .button:active,
@@ -113,10 +121,9 @@
 
 /* Focus Button */
 .header-bar .button .default:focus,
-.header-bar .button GtkImage:focus,
 .header-bar .text-button:focus,
 .header-bar .button .text-button:focus,
-.header-bar .button .flat:focus,
+.header-bar .flat:focus,
 .header-bar .image-button .button:focus,
 .header-bar .image-button:focus,
 .header-bar .button:focus,
@@ -132,10 +139,9 @@
 
 /* Hover Button */
 .header-bar .button .default:hover,
-.header-bar .button GtkImage:hover,
 .header-bar .text-button:hover,
 .header-bar .button .text-button:hover,
-.header-bar .button .flat:hover,
+.header-bar .flat:hover,
 .header-bar .image-button:hover,
 .header-bar .image-button .button:hover,
 .header-bar .button:hover,
@@ -148,15 +154,15 @@
 }
 
 /* Backdrop Button */
-.header-bar .button GtkImage:backdrop,
 .header-bar .text-button:backdrop,
 .header-bar .button .text-button:backdrop,
-.header-bar .button .flat:backdrop,
+.header-bar .flat:backdrop,
 .header-bar .image-button .button:backdrop,
 .header-bar .image-button:backdrop,
 .header-bar .button:backdrop,
 .header-bar .linked .button:backdrop,
 .header-bar GtkComboBox:backdrop {
+    padding: 13px;
     border-radius: 0px;
     background: none;
     border: none;
@@ -173,10 +179,9 @@
 
 /* Active:Backdrop Button */
 .header-bar .button .default:active:backdrop,
-.header-bar .button GtkImage:active:backdrop,
 .header-bar .button .text-button:active:backdrop,
 .header-bar .text-button:active:backdrop,
-.header-bar .button .flat:active:backdrop,
+.header-bar .flat:active:backdrop,
 .header-bar .image-button .button:active:backdrop,
 .header-bar .image-button:active:backdrop,
 .header-bar .button:active:backdrop,
@@ -192,10 +197,9 @@
 
 /* Backdrop:Hover; Button */
 .header-bar .button .default:backdrop:hover,
-.header-bar .button GtkImage:backdrop:hover,
 .header-bar .button .text-button:backdrop:hover,
 .header-bar .text-button:backdrop:hover,
-.header-bar .button .flat:backdrop:hover,
+.header-bar .flat:backdrop:hover,
 .header-bar .image-button .button:backdrop:hover,
 .header-bar .image-button:backdrop:hover,
 .header-bar .button:backdrop:hover,
@@ -209,10 +213,9 @@
 
 /* Insensitive Button */
 .header-bar .button .default:insensitive,
-.header-bar .button GtkImage:insensitive,
 .header-bar .button .text-button:insensitive,
 .header-bar .text-button:insensitive,
-.header-bar .button .flat:insensitive,
+.header-bar .flat:insensitive,
 .header-bar .image-button .button:insensitive,
 .header-bar .image-button:insensitive,
 .header-bar .button:insensitive,
@@ -225,6 +228,25 @@
     color: @insensitive_header_text;
 }
 
+/* Button Images */
+.header-bar .button GtkImage,
+.header-bar .button GtkImage:active,
+.header-bar .button GtkImage:focus,
+.header-bar .button GtkImage:hover {
+    color: @header_text;
+}
+
+.header-bar .button GtkImage:active:backdrop,
+.header-bar .button GtkImage:backdrop,
+.header-bar .button GtkImage:backdrop:hover {
+    color: @backdrop_header_text;
+    -gtk-image-effect: dim;
+}
+
+.header-bar .button GtkImage:insensitive {
+    color: @insensitive_header_text;
+    -gtk-image-effect: dim;
+}
 
 
 /*************************

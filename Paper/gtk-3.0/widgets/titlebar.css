@@ -50,6 +50,8 @@
 }
 
 .titlebar .title {
+    padding-left: 13px;
+    padding-right: 13px;
     color: @header_text;
     font: Bold 11;
     text-shadow: none;
@@ -81,13 +83,10 @@
 
 /* Normal Button */
 .titlebar .titlebutton,
-.titlebar .titlebutton GtkImage,
 .titlebar .titlebutton .button,
-.titlebar .titlebutton .button GtkImage,
-.titlebar .button GtkImage,
 .titlebar .text-button,
 .titlebar .button .text-button,
-.titlebar .button .flat,
+.titlebar .flat,
 .titlebar .button.image-button,
 .titlebar .image-button,
 .titlebar .button,
@@ -101,13 +100,10 @@
 
 /* Active Button */
 .titlebar .titlebutton:active,
-.titlebar .titlebutton GtkImage:active,
 .titlebar .titlebutton .button:active,
-.titlebar .titlebutton .button GtkImage:active,
-.titlebar .button GtkImage:active,
 .titlebar .text-button:active,
 .titlebar .button .text-button:active,
-.titlebar .button .flat:active,
+.titlebar .flat:active,
 .titlebar .button.image-button:active,
 .titlebar .image-button:active,
 .titlebar .button:active,
@@ -123,13 +119,10 @@
 
 /* Focus Button */
 .titlebar .titlebutton:focus,
-.titlebar .titlebutton GtkImage:focus,
 .titlebar .titlebutton .button:focus,
-.titlebar .titlebutton .button GtkImage:focus,
-.titlebar .button GtkImage:focus,
 .titlebar .text-button:focus,
 .titlebar .button .text-button:focus,
-.titlebar .button .flat:focus,
+.titlebar .flat:focus,
 .titlebar .button.image-button:focus,
 .titlebar .image-button:focus,
 .titlebar .button:focus,
@@ -145,13 +138,10 @@
 
 /* Hover Button */
 .titlebar .titlebutton:hover,
-.titlebar .titlebutton GtkImage:hover,
 .titlebar .titlebutton .button:hover,
-.titlebar .titlebutton .button GtkImage:hover,
-.titlebar .button GtkImage:hover,
 .titlebar .text-button:hover,
 .titlebar .button .text-button:hover,
-.titlebar .button .flat:hover,
+.titlebar .flat:hover,
 .titlebar .image-button:hover,
 .titlebar .button.image-button:hover,
 .titlebar .button:hover,
@@ -165,18 +155,16 @@
 
 /* Backdrop Button */
 .titlebar .titlebutton:backdrop,
-.titlebar .titlebutton GtkImage:backdrop,
 .titlebar .titlebutton .button:backdrop,
-.titlebar .titlebutton .button GtkImage:backdrop,
-.titlebar .button GtkImage:backdrop,
 .titlebar .text-button:backdrop,
 .titlebar .button .text-button:backdrop,
-.titlebar .button .flat:backdrop,
+.titlebar .flat:backdrop,
 .titlebar .button.image-button:backdrop,
 .titlebar .image-button:backdrop,
 .titlebar .button:backdrop,
 .titlebar .linked .button:backdrop,
 .titlebar GtkComboBox:backdrop {
+    padding: 13px;
     border-radius: 0px;
     background: none;
     border: none;
@@ -185,13 +173,10 @@
 
 /* Active:Backdrop Button */
 .titlebar .titlebutton:active:backdrop,
-.titlebar .titlebutton GtkImage:active:backdrop,
 .titlebar .titlebutton .button:active:backdrop,
-.titlebar .titlebutton .button GtkImage:active:backdrop,
-.titlebar .button GtkImage:active:backdrop,
 .titlebar .button .text-button:active:backdrop,
 .titlebar .text-button:active:backdrop,
-.titlebar .button .flat:active:backdrop,
+.titlebar .flat:active:backdrop,
 .titlebar .button.image-button:active:backdrop,
 .titlebar .image-button:active:backdrop,
 .titlebar .button:active:backdrop,
@@ -207,13 +192,10 @@
 
 /* Backdrop:Hover Button */
 .titlebar .titlebutton:backdrop:hover,
-.titlebar .titlebutton GtkImage:backdrop:hover,
 .titlebar .titlebutton .button:backdrop:hover,
-.titlebar .titlebutton .button GtkImage:backdrop:hover,
-.titlebar .button GtkImage:backdrop:hover,
 .titlebar .button .text-button:backdrop:hover,
 .titlebar .text-button:backdrop:hover,
-.titlebar .button .flat:backdrop:hover,
+.titlebar .flat:backdrop:hover,
 .titlebar .button.image-button:backdrop:hover,
 .titlebar .image-button:backdrop:hover,
 .titlebar .button:backdrop:hover,
@@ -227,13 +209,10 @@
 
 /* Insensitive Button */
 .titlebar .titlebutton:insensitive,
-.titlebar .titlebutton GtkImage:insensitive,
 .titlebar .titlebutton .button:insensitive,
-.titlebar .titlebutton .button GtkImage:insensitive,
-.titlebar .button GtkImage:insensitive,
 .titlebar .button .text-button:insensitive,
 .titlebar .text-button:insensitive,
-.titlebar .button .flat:insensitive,
+.titlebar .flat:insensitive,
 .titlebar .button.image-button:insensitive,
 .titlebar .image-button:insensitive,
 .titlebar .button:insensitive,
@@ -244,6 +223,43 @@
     font: Bold;
     border: none;
     color: @insensitive_header_text;
+}
+
+/* Button Images */
+.titlebar .button GtkImage,
+.titlebar .button GtkImage:active,
+.titlebar .button GtkImage:focus,
+.titlebar .button GtkImage:hover,
+.titlebar .titlebutton .button GtkImage,
+.titlebar .titlebutton .button GtkImage:active,
+.titlebar .titlebutton .button GtkImage:focus,
+.titlebar .titlebutton .button GtkImage:hover,
+.titlebar .titlebutton GtkImage,
+.titlebar .titlebutton GtkImage:active,
+.titlebar .titlebutton GtkImage:focus,
+.titlebar .titlebutton GtkImage:hover {
+    color: @header_text;
+}
+
+.titlebar .titlebutton .button GtkImage:active:backdrop,
+.titlebar .titlebutton .button GtkImage:backdrop,
+.titlebar .titlebutton .button GtkImage:backdrop:hover,
+.titlebar .titlebutton GtkImage:active:backdrop,
+.titlebar .titlebutton GtkImage:backdrop,
+.titlebar .titlebutton GtkImage:backdrop:hover,
+.titlebar .button GtkImage:active:backdrop,
+.titlebar .button GtkImage:backdrop,
+.titlebar .button GtkImage:backdrop:hover {
+    color: @backdrop_header_text;
+    -gtk-image-effect: dim;
+}
+
+
+.titlebar .button GtkImage:insensitive,
+.titlebar .titlebutton GtkImage:insensitive,
+.titlebar .titlebutton .button GtkImage:insensitive  {
+    color: @insensitive_header_text;
+    -gtk-image-effect: dim;
 }
 
 
