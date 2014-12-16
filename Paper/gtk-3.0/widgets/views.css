@@ -353,10 +353,8 @@ GtkIconView.content-view.check:selected {
 .content-view column-header .button {
     border-width: 0 0 1px 1px;
 
-    background-image: linear-gradient(to bottom,
-                              @button_gradient_a,
-                              @button_gradient_b
-                              );
+    background-image: none;
+    background-color:@base;;
 
     border-color: @border;
 }

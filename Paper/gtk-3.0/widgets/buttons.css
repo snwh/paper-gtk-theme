@@ -36,7 +36,7 @@
 
 .button GtkImage,
 .button .flat GtkImage,
-* .image-button {
+.button.image-button GtkImage {
     color: @text;
 }
 

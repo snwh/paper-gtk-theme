@@ -53,6 +53,14 @@ CcWindow .maximized .header-bar {
     background-color: @settings;
 }
 
+/*******
+ * Nav *
+ *******/
+
+CcShellNavBar {
+    padding:0px;
+}
+
 /************
  * ItemView *
  ************/
