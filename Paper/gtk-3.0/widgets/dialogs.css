@@ -16,10 +16,6 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/*****************
- * Dialog Colors *
- *****************/
-
 @define-color dialog_header @header;
 @define-color dialog_header_text @header_text;
 
@@ -38,7 +34,6 @@ GtkMessageDialog {
 }
 
 /* Buttons */
-
 GtkMessageDialog .button {
     border: 1px solid @selection;
 }
@@ -48,7 +43,6 @@ GtkMessageDialog .button:focus {
 }
 
 /* Titlebar */
-
 GtkDialog .titlebar,
 GtkMessageDialog .titlebar {
     border: none;

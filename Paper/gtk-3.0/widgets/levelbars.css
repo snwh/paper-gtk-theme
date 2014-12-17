@@ -16,9 +16,9 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/****************
+/*************
  * Level Bar *
- ****************/
+ *************/
 
 GtkLevelBar {
     -GtkLevelBar-min-block-width: 34;

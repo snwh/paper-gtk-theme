@@ -43,46 +43,6 @@
    border:none;
 }
 
-/*************************
- * Basic Window Elements *
- *************************/
-
-/* Some of these are deprecated but still cause theme errors. */
-GtkVBox,
-GtkDialog,
-GtkStatusbar,
-GtkEventBox,
-GtkPaned,
-GtkViewport,
-GtkScrolledWindow,
-GtkWindow {
-    color: @foreground;
-    background-color: @background;
-}
-
-GtkDialog:backdrop,
-GtkVBox:backdrop,
-GtkStatusbar:backdrop,
-GtkEventBox:backdrop,
-GtkPaned:backdrop,
-GtkViewport:backdrop,
-GtkScrolledWindow:backdrop,
-GtkWindow:backdrop {
-    color: @backdrop_text;
-    background-color: @backdrop_background;
-}
-
-GtkVBox:insensitive,
-GtkStatusbar:insensitive,
-GtkEventBox:insensitive,
-GtkPaned:insensitive,
-GtkViewport:insensitive,
-GtkScrolledWindow:insensitive,
-GtkWindow:insensitive {
-    color: @insensitive_text;
-    background-color: @insensitive_background;
-}
-
 /********
  * View *
  ********/
@@ -96,8 +56,8 @@ GtkWindow:insensitive {
 .view:insensitive,
 .view:insensitive:insensitive {
     background-color: @insensitive_background;
-    color: @insensitive_text;
     border-color: @insensitive_border;
+    color: @insensitive_text;
 }
 
 .view:backdrop,
@@ -105,18 +65,19 @@ GtkWindow:insensitive {
     background-color: @backdrop_background;
     border-color:  @backdrop_border;
     color: @backdrop_text;
-    text-shadow: none;
 }
 
 .view:selected,
 .view:selected:focus {
     background-color: @selection;
+    border-color:  @selection;
     color: @selected_foreground;
 }
 
 .view:selected:backdrop,
 .view:selected:backdrop:focus {
     background-color: @backdrop_selection;
+    border-color: @backdrop_selection;
     color: @backdrop_selection_foreground;
 }
 
@@ -132,38 +93,6 @@ GtkWindow:insensitive {
     background-color: alpha(@selection, 0.3);
 }
 
-/************
- * Viewport *
- ************/
-GtkViewport {
-    color: @foreground;
-}
-
-
-GtkViewport.frame {
-    background-color: @background;
-}
-
-/*******************
- * Scrolled Window *
- *******************/
-GtkScrolledWindow {
-    background-color: inherit;
-}
-
-GtkScrolledWindow.frame {
-    border: 1px solid @border;
-    background-color: @base;
-}
-
-/* To avoid double border when a viewport is packed into a GtkScrolledWindow */
-
-GtkScrolledWindow GtkViewport.frame,
-GtkPaned .frame,
-GraniteWidgetsPopOver .frame,
-GraniteWidgetsStaticNotebook .frame {
-    border: none;
-}
 
 /************
  * List Box *
@@ -185,19 +114,6 @@ GtkListBoxRow:selected:focus,
     background-color: @selection;
     color: @selected_foreground;
 }
-
-/* FIXME: This doesn't work with only-child
-
-GtkListBoxRow:only-child {
-    border-bottom: none;
-    box-shadow: none;
-}
-
-GtkListBoxRow:first-child {
-    border-bottom: solid 1px alpha(#fff, 0.04);
-    box-shadow: inset 0 -1px shade(@base_color, 0.85);
-}
-*/
 
 /************
  * Treeview *
@@ -265,32 +181,26 @@ GtkTextView:insensitive {
 /************
  * Iconview *
  ************/
+
 GtkIconView.view {
     background-color: @base;
     border: solid @selection;
-    border-top-width: 1px;
     color: @foreground;
 }
  
 GtkIconView.view.cell:hover {
     border: 1px solid @selection;
-    border-radius: 8px;
-    background:none;
+    border-radius: 6px;
     background-color: alpha(@selection,0.4);
     color: @selection;
 }
  
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
-    border: 1px solid @selection;
-    border-radius: 8px;
-    background:none;
+    border: 1px solid transparent;
+    border-radius: 6px;
     background-color: @selection;
     color: @selected_foreground;
-}
-
-GdMainIconView.content-view {
-    -GdMainIconView-icon-size: 64px;
 }
 
 GtkIconView.content-view.check {

@@ -43,6 +43,12 @@ GtkCombobox *:active {
     color: @selected_foreground;
 }
 
+GtkCombobox *:hover {
+    background-color: @selection;
+    border: 1px solid @selection;
+    color: @selected_foreground;
+}
+
 GtkCombobox *:selected {
     background-color: @selection;
     border: 1px solid @selection;
@@ -80,6 +86,13 @@ GtkComboBox .arrow {
 /******************
  * Combobox Entry *
  ******************/
+
+GtkComboBox.combobox-entry .button:hover,
+GtkComboBox.combobox-entry .entry:hvov {
+    background-color: @selection;
+    border: 1px solid @selection;
+    color: @selected_foreground;
+}
 
 GtkComboBox.combobox-entry .button:selected,
 GtkComboBox.combobox-entry .entry:selected {
@@ -123,7 +136,7 @@ GtkComboBox.combobox-entry .button:first-child {
 }
 
 GtkComboBox.combobox-entry .entry:first-child,
-GtkComboBox.combobox-entry .button:last-child {
+GtkComboBox.combobox-entry .button:first-child {
     border-right-width: 1px;
 }
 

@@ -64,7 +64,7 @@
 /* Selected color */
 @define-color selected_background @selection;
 @define-color selected_border shade(@selection, 0.8);
-@define-color selected_foreground #ffffff;
+@define-color selected_foreground shade(@selection, 2.2);
 @define-color selection_foreground @selected_foreground;
 
 /****************
@@ -94,7 +94,6 @@
  * Header Bars *
  ***************/
 
-@define-color backdrop_header shade(@header, 0.9);
 @define-color backdrop_header_text alpha(@header_text, 0.7);
 @define-color insensitive_header_text alpha(@header_text, 0.5);
 
@@ -105,9 +104,9 @@
 @define-color scrollbar_slider_backdrop shade(@scrollbar_slider,0.95);
 @define-color scrollbar_slider_insensitive shade(@scrollbar_slider,1.05);
 
-@define-color scrollbar_trough shade(@background,0.8);
-@define-color scrollbar_trough_insensitive shade(@insensitive_background,0.95);
-@define-color scrollbar_trough_backdrop shade(@backdrop_background,0.95);
+@define-color scrollbar_trough transparent;
+@define-color scrollbar_trough_insensitive shade(@scrollbar_trough,0.95);
+@define-color scrollbar_trough_backdrop shade(@scrollbar_trough,0.95);
 
 /****************
  * Progressbars *
@@ -140,6 +139,7 @@
  *****************/
 @define-color placeholder_text_color shade(@foreground, 2.0);
 @define-color view_symbolic shade(@internal_element, 0.50);
+@define-color menu_shadow alpha(#000, 0.2);
 
 /* GNOME Apps */
 @define-color entry_tag_background #3465a4;

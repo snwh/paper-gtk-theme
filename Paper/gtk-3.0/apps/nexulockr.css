@@ -16,28 +16,18 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/*****************
- * Column header *
- *****************/
- 
-column-header .button {
-    border-radius: 0px;
-    border: solid @border;
-    border-width: 0 0 1px 1px;
-}
- 
-column-header:first-child .button,
-column-header .button:first-child {
-    border-radius: 0px;
-    border: solid @border;
-    border-width: 0 0 1px 1px;
-}
- 
-column-header:last-child .button,
-column-header .button:last-child {
-    border-radius: 0px;
-    border: solid @border;
-    border-width: 0 0 1px 1px;
+@define-color nexulockr #01A3BA;
+
+/**********
+ * Header *
+ **********/
+
+NexulockrWindow .titlebar,
+NexulockrWindow .header-bar {
+    background-color: @nexulockr;
 }
 
- 
+NexulockrWindow .titlebar:backdrop,
+NexulockrWindow .header-bar:backdrop {
+    background-color: shade(@nexulockr,0.9);
+}

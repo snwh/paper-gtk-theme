@@ -22,18 +22,7 @@
  
 .menu {
     border-image: none;
-}
-
-.menubar .menu {
-    border-image: none;
-}
-
-GtkTreeMenu.menu,
-GtkMenuButton .menu,
-GtkMenuToolButton.menu,
-GtkComboBox .menu {
-    border:none;
-    background-color: @base;
+    box-shadow: 0 2px 3px 2px @menu_shadow;
 }
 
 /*Context Menu*/
@@ -41,12 +30,14 @@ GtkComboBox .menu {
 .context-menu {
     font: initial;
     text-shadow: none;
+    box-shadow: 0 2px 3px 2px @menu_shadow;
 }
 
 .content-view .menu {
     padding: 0 1px;
     background-color: @background;
     background-image: none;
+    color: @text;
 }
 
 .content-view .menu .menuitem:active,
@@ -60,66 +51,66 @@ GtkComboBox .menu {
  *************/
 
 
-GtkTreeMenu .menuitem {
-    padding: 6px;
-    color: @base;
-}
-
-GtkTreeMenu .menuitem,
+.menuitem,
 .menu .menuitem {
-    padding: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
     border:none;
-    color: @base;
+    color: @text;
 
     -GtkMenuItem-arrow-scaling: 0.5;
-}
-
-GtkTreeMenu .menuitem GtkLabel,
-GtkTreeMenu .menuitem GtkImage,
-.menu .menuitem GtkLabel,
-.menu .menuitem GtkImage  {
-    padding: 0 3px 0 3px;
-    color: @text;
     -gtk-icon-style: symbolic;
 }
 
-GtkTreeMenu .menuitem:hover,
-.menu .menuitem:hover,
-GtkTreeMenu .menuitem GtkLabel:hover,
-GtkTreeMenu .menuitem GtkImage:hover,
-.menu .menuitem GtkLabel:hover,
-.menu .menuitem GtkImage:hover  {
-    color: @base;
-    -gtk-icon-style: symbolic;
+/* Menu Text */
+.menuitem GtkLabel {
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
-GtkTreeMenu .menuitem:active:hover,
-.menu .menuitem:active:hover,
-GtkTreeMenu .menuitem GtkLabel:active:hover,
-GtkTreeMenu .menuitem GtkImage:active:hover,
-.menu .menuitem GtkLabel:active:hover,
-.menu .menuitem GtkImage:active:hover  {
-    color: @base;
-    -gtk-icon-style: symbolic;
+.menu .menuitem GtkLabel {
+    padding-left: 6px;
+    padding-right: 2px;
 }
 
-.menu .menuitem:active,
-.menu .menuitem:hover {
-    border: none;
+
+/* Active */
+.menuitem:active,
+.menu .menuitem:active {
     background-color: @selection;
-    color: @base;
+    color: @selection_foreground;
+
+    -gtk-icon-style: symbolic;
 }
 
-.menu .menuitem:insensitive,
-.menu .menuitem *:insensitive {
+/* Hover*/
+.menuitem:hover,
+.menu .menuitem:hover{
+    background-color: @selection;
+    color: @selection_foreground;
+
+    -gtk-icon-style: symbolic;
+}
+
+.menuitem:backdrop,
+.menu .menuitem:backdrop {
+    box-shadow: none;
+    border: none;
+    color: @backdrop_text;
+}
+
+.menuitem:insensitive,
+.menu .menuitem:insensitive {
     box-shadow: none;
     border: none;
     color: @insensitive_text;
 }
 
-
 /* Arrow color */
-.menuitem.arrow {
+.menuitem.arrow,
+.menu .menuitem.arrow {
     background-color: @base;
     color: @foreground;
     border: none;
@@ -130,7 +121,6 @@ GtkTreeMenu .menuitem GtkImage:active:hover,
     padding-left: 2px;
     padding-right: 2px;
     border: none;
-    background-color: @base;
     color: @separator;
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
@@ -146,57 +136,22 @@ GtkTreeMenu .menuitem GtkImage:active:hover,
 .menuitem .entry:active,
 .menuitem .entry:focus {
     border: none;
-    color: white;
+    color: @text;
 }
 
 /* Accelerators */
 .menuitem .accelerator,
 .menuitem .accelerator:insensitive {
+    background: none;
     color: alpha(@foreground, 0.7);
 }
 
 .menuitem .accelerator:hover,
 .menuitem .accelerator:active {
+    background: none;
     color: alpha (@foreground, 0.3);
 }
 
-/***********
- * Menubar *
- ***********/
-.menubar {
-    background-color: @background;
-    color: @foreground;
-}
-
-.menubar:backdrop {
-    background-color: @backdrop_background;
-    color: @backdrop_text;
-}
-
-.menubar.menuitem,
-.menubar .menuitem {
-    padding: 3px 8px 4px 8px;
-    background-color: transparent;
-    color: @foreground;
-}
-
-.menubar.menuitem:backdrop,
-.menubar .menuitem:backdrop {
-    background-color: transparent;
-    color: @backdrop_text;
-}
-
-.menubar.menuitem:hover,
-.menubar .menuitem:hover {
-    color: @selection;
-    box-shadow:inset 0 -3px 0 0 @selection;
-}
-
-/* Separator */
-.menubar .menuitem.separator,
-.menubar.menuitem.separator {
-    color: @separator;
-}
 
 /*******************
  * Checks & Radios *
@@ -228,7 +183,6 @@ GtkTreeMenu .menuitem GtkImage:active:hover,
 .menuitem.radio:inconsistent:hover ,
 .menuitem.radio:inconsistent:insensitive,
 .menuitem.radio:insensitive {
-    background-size: 16px;
     background-color: transparent;
     box-shadow: none;
 }

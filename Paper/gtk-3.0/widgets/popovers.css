@@ -16,17 +16,18 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color popover_shadow alpha(#000, 0.2);
 
 /*************************
  * Touch text selections *
  *************************/
+
 GtkPopover {
+    padding: 2px;
     border-radius: 6px;
     background-clip: border-box;
     background-color: @background;
     border: 1px solid alpha(#000, 0.1);
-    box-shadow: 0 2px 3px 2px @popover_shadow;
+    box-shadow: 0 2px 3px 2px @menu_shadow;
     margin: 10px;
     color: @text;
 }
@@ -34,7 +35,7 @@ GtkPopover {
 GtkPopover.osd {
     background-color: @osd_popover_background;
     border-color: @border;
-    box-shadow: 0 2px 8px 3px alpha(@popover_shadow, 0.4), inset 0 1px 0 0 @osd_popover_background;
+    box-shadow: 0 2px 8px 3px alpha(@menu_shadow, 0.4), inset 0 1px 0 0 @osd_popover_background;
     color: darker(white);
 }
 

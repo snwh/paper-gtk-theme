@@ -21,14 +21,9 @@
  ****************/
 .floating-bar {
     background-color:shade(@base, 0.99);
-    border: 1px solid @border;
-
-    color: @foreground;
-    text-shadow: 0 1px @text_shadow;
-
     border-radius: 3px;
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid @border;
+    color: @foreground;
 }
 
 .floating-bar.top {

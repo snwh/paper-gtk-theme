@@ -21,6 +21,9 @@
  * Separators *
  **************/
  
+.separator {
+    color: @separator;
+}
 .pane-separator {
     -GtkPaned-handle-size: 2px;
     background-color: @background;
