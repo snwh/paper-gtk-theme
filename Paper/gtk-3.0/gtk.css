@@ -31,6 +31,7 @@
 @define-color text @foreground;/* Text color */
 @define-color panel #576165;/* Panel color */
 @define-color header #636E73;/* Header color */
+@define-color backdrop_header #454D50; /* Header backdrop color */
 @define-color header_text #fff;/* Header text color */
 @define-color selection #9BA8AD;/* Selection color */
 @define-color view_background #ffffff;/* View background */

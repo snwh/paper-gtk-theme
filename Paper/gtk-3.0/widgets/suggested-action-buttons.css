@@ -16,7 +16,7 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color suggested_action_button @selection;
+@define-color suggested_action_button shade(@header, 0.6);
 @define-color suggested_action_button_foreground #fff;
 @define-color backdrop_suggested_action_foreground alpha(#fff, 0.5);
 @define-color insensitive_suggested_action_foreground alpha(#fff, 0.7);

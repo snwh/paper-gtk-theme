@@ -16,8 +16,8 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color search #dbdee0;
-@define-color search_text shade(#dbdee0, 0.6);
+@define-color search @base;
+@define-color search_text @text;
 
 
 /***************

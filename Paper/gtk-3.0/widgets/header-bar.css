@@ -95,7 +95,8 @@
 .header-bar .image-button,
 .header-bar .button,
 .header-bar .linked .button,
-.header-bar GtkComboBox {
+.header-bar GtkComboBox,
+.header-bar .suggested-action.button {
     border-radius: 0px;
     background: none;
     border: none;
@@ -109,9 +110,11 @@
 .header-bar .flat:active,
 .header-bar .image-button .button:active,
 .header-bar .image-button:active,
+.header-bar .button:only-child:active,
 .header-bar .button:active,
 .header-bar .linked .button:active,
-.header-bar GtkComboBox:active {
+.header-bar GtkComboBox:active,
+.header-bar .suggested-action.button:active {
     border-radius: 0px;
     font: Bold;
     border: none;
@@ -128,7 +131,8 @@
 .header-bar .image-button:focus,
 .header-bar .button:focus,
 .header-bar .linked .button:focus,
-.header-bar GtkComboBox:focus {
+.header-bar GtkComboBox:focus,
+.header-bar .suggested-action.button:focus {
     border-radius: 0px;
     background: none;
     font: Bold;
@@ -146,7 +150,8 @@
 .header-bar .image-button .button:hover,
 .header-bar .button:hover,
 .header-bar .linked .button:hover,
-.header-bar GtkComboBox:hover {
+.header-bar GtkComboBox:hover,
+.header-bar .suggested-action.button:hover {
     border-radius: 0px;
     background: alpha(#000, 0.1);
     border: none;
@@ -161,7 +166,8 @@
 .header-bar .image-button:backdrop,
 .header-bar .button:backdrop,
 .header-bar .linked .button:backdrop,
-.header-bar GtkComboBox:backdrop {
+.header-bar GtkComboBox:backdrop,
+.header-bar .suggested-action.button:backdrop {
     padding: 13px;
     border-radius: 0px;
     background: none;
@@ -186,7 +192,8 @@
 .header-bar .image-button:active:backdrop,
 .header-bar .button:active:backdrop,
 .header-bar .linked .button:active:backdrop,
-.header-bar GtkComboBox:active:backdrop {
+.header-bar GtkComboBox:active:backdrop,
+.header-bar .suggested-action.button:active:backdrop {
     border-radius: 0px;
     background: alpha(#000, 0.2);
     font: Bold;
@@ -204,7 +211,8 @@
 .header-bar .image-button:backdrop:hover,
 .header-bar .button:backdrop:hover,
 .header-bar .linked .button:backdrop:hover,
-.header-bar GtkComboBox:backdrop:hover {
+.header-bar GtkComboBox:backdrop:hover,
+.header-bar .suggested-action.button:backdrop:hover {
     border-radius: 0px;
     background: alpha(#000, 0.1);
     border: none;
@@ -220,7 +228,8 @@
 .header-bar .image-button:insensitive,
 .header-bar .button:insensitive,
 .header-bar .linked .button:insensitive,
-.header-bar GtkComboBox:insensitive {
+.header-bar GtkComboBox:insensitive,
+.header-bar .suggested-action.button:insensitive {
     border-radius: 0px;
     background: none;
     font: Bold;
@@ -256,19 +265,19 @@
 .header-bar > GtkBox > .separator.vertical {
     -GtkWidget-wide-separators: 1;
     -GtkWidget-separator-width: 0;
-    background-color: @border;
-    color: @border;
+    background-color: @separator;
+    color: @separator;
     border:none;
 }
 
-/* Separator 
+/* Separator */
 .header-bar .separator,
 .header-bar .button .separator,
 .header-bar .button.separator {
-    background-color: @border;
+    background-color: transparent;
     color: transparent;
     border:none;
-} */
+} 
 
 
 /********************

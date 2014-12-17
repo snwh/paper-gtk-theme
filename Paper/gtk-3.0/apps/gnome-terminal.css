@@ -17,6 +17,8 @@
 */
 
 @define-color terminal #2D5364;
+@define-color terminal_background #002B36;
+@define-color terminal_text #839495;
 
 /**********
  * Header *
@@ -57,22 +59,30 @@ TerminalWindow .header-bar GtkSwitch.slider:backdrop {
  * Notebook *
  ************/
 
+TerminalNotebook {
+    box-shadow: inset 0 1px 0 0 @border;
+}
+
 /* Active */
+TerminalNotebook tab.top:active,
 TerminalWindow .notebook tab.top:active,
 TerminalWindow .dynamic-notebook tab.top:active {
     box-shadow:inset 0 -3px 0 0 @terminal;
 }
 
+TerminalNotebook tab.bottom:active,
 TerminalWindow .notebook tab.bottom:active,
 TerminalWindow .dynamic-notebook tab.bottom:active {
     box-shadow:inset 0 3px 0 0 @terminal;
 }
 
+TerminalNotebook tab.left:active,
 TerminalWindow .notebook tab.left:active,
 TerminalWindow .dynamic-notebook tab.left:active {
     box-shadow:inset -3px 0 0 0 @terminal;
 }
 
+TerminalNotebook tab.right:active,
 TerminalWindow .notebook tab.right:active,
 TerminalWindow .dynamic-notebook tab.right:active {
     box-shadow:inset 3px 0 0 0 @terminal;
@@ -81,61 +91,8 @@ TerminalWindow .dynamic-notebook tab.right:active {
 /******************
  * GNOME Terminal *
  ******************/
+
 VteTerminal {
-    background-color: @panel;
-    color: @panel_text;
-}
-
-TerminalWindow GtkNotebook.notebook {
-    border-right-width: 0;
-    border-bottom-width: 0;
-    border-left-width: 0;
-}
-
-TerminalWindow .scrollbars-junction,
-TerminalWindow .scrollbar.trough {
-    border-width: 0;
-    border-radius: 0;
-    background-color: @panel;
-    border-color: transparent;
-}
-
-TerminalWindow .scrollbar.button,
-TerminalWindow .scrollbar.button:active,
-TerminalWindow .scrollbar.button:active:hover {
-    border-width: 0;
-    border-radius: 0;
-    background-color: transparent;
-    background-image: none;
-    color: shade(@panel, 0.6);
-}
-
-TerminalWindow .scrollbar.slider {
-    border: 1px solid transparent;
-    border-radius: 10px;
-    background-color: shade(@panel, 0.8);
-}
-
-TerminalWindow .scrollbar.slider.vertical {
-    /* Borders are opposite what you'd expect */
-    border-radius: 10px;
-    border: 1px solid transparent;
-}
-
-TerminalWindow .scrollbar.slider.horizontal {
-    /* Borders are opposite what you'd expect */
-    border-radius: 10px;
-    border: 1px solid transparent;
-}
-
-TerminalWindow .scrollbar.slider:hover,
-TerminalWindow .scrollbar.slider.vertical:hover {
-    border: 1px solid transparent;
-    background-color: shade(@panel, 0.8);
-}
-
-TerminalWindow .scrollbar.slider:active,
-TerminalWindow .scrollbar.slider.vertical:active {
-    border: 1px solid transparent;
-    background-color: shade(@panel, 1.2);
+    background-color: @terminal_background;
+    color: @terminal_text;
 }

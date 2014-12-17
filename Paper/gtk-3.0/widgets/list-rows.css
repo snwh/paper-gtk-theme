@@ -25,9 +25,9 @@
     color: @foreground;
 }
 
-.list-row:hover {
-    background-color: shade(@background, 1.1);
-    color: shade(@foreground, 1.1);
+.list:insensitive,
+.list-row:insensitive {
+    background-color: @insensitive_background;
 }
 
 .list:backdrop,
@@ -40,60 +40,45 @@
     padding: 2px;
 }
 
-.list-row .button {
-    box-shadow: none;
-}
-
-.list-row .button:hover {
-    background-color: shade(@background, 1.1);
-}
-
-.list-row:selected,
-.list-row .button:selected,
-.list-row .button:selected:hover {
-}
-
-.list-row:selected:backdrop,
-.list-row .button:backdrop:selected:hover {
-}
-
-.list-row.button:selected,
-.list-row:selected {
-    background-color: @selection;
-    color: @selection_foreground;
-}
-
-.list-row.button:selected:backdrop,
-.list-row:selected:backdrop {
-    background-color: @backdrop_selection;
-    color: @backdrop_selection_foreground;
-}
-
 /* List Row Button */
 .button.list-row {
     outline: none;
-    border: none;
+    border: solid transparent;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
     border-radius: 0px;
 }
 
 .button.list-row:hover  {
+    border: solid alpha(@selection, 0.2);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
     background-color: alpha(@selection, 0.2);
     color: @selection;
 }
 
 .button.list-row:active,
 .button.list-row:selected {
+    border: solid alpha(@selection, 0.4);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
     background-color: alpha(@selection, 0.4);
     color: @selection;
 }
 
 .button.list-row:active:selected,
 .button.list-row:active:selected:hover {
+    border: solid alpha(@selection, 0.2);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
     background-color: alpha(@selection, 0.2);
     color: @selection;
 }
 
 .button.list-row:hover:selected {
+    border: solid alpha(@selection, 0.2);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
     background-color: alpha(@selection, 0.2);
     color: @selection;
 }

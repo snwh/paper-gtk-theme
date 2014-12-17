@@ -35,22 +35,23 @@ CcWindow .header-bar:backdrop {
     background-color: shade(@settings,0.9);
 }
 
-/**********
- * Window *
- **********/
-
-CcWindow.background {
-    background-color: @base;
-    color: @settings;
-}
-
-CcWindow.background:backdrop {
-    background-color: @base;
-    color: alpha(@settings, 0.5);
-}
-
-CcWindow .maximized .header-bar {
+/* Switch */
+CcWindow .header-bar GtkSwitch.trough:active {
     background-color: @settings;
+}
+
+CcWindow GtkSwitch.trough:active {
+    border: 1px solid shade(@settings, 0.8);
+    background-color: @settings;
+}
+
+CcWindow GtkSwitch.slider:active {
+    border: 1px solid shade(@settings, 0.8);
+}
+
+CcWindow .header-bar GtkSwitch.slider:active:backdrop,
+CcWindow .header-bar GtkSwitch.slider:backdrop {
+    background-color: shade(@settings, 0.9);
 }
 
 /*******
@@ -135,36 +136,6 @@ CcWindow GtkComboBox * {
     color: @settings;
 }
 
-/*
-CcWindow GtkComboBox:focus,
-CcWindow GtkComboBox *:focus,
-CcWindow .button.text-button:focus,
-CcWindow .button.image-button:focus,
-CcWindow .button:focus {
-    color: @settings;
-}
-
-CcWindow GtkComboBox:active,
-CcWindow GtkComboBox *:active,
-CcWindow .button.text-button:active,
-CcWindow .button.image-button:active,
-CcWindow .button:active,
-CcWindow GtkComboBox:active:hover,
-CcWindow GtkComboBox *:active:hover,
-CcWindow .button.text-button:active:hover,
-CcWindow .button.image-button:active:hover,
-CcWindow .button:active:hover {
-    color: @settings;
-}
-
-CcWindow GtkComboBox:backdrop,
-CcWindow GtkComboBox *:backdrop,
-CcWindow .button.text-button:backdrop,
-CcWindow .button.image-button:backdrop,
-CcWindow .button:backdrop {
-    color: alpha(@settings, 0.7);
-}*/
-
 CcWindow GtkComboBox:hover,
 CcWindow GtkComboBox *:hover,
 CcWindow .button.text-button:hover,
@@ -174,26 +145,6 @@ CcWindow .button:hover {
 }
 
 
-
-/* Switch */
-
-CcWindow .header-bar GtkSwitch.trough:active {
-    background-color: @settings;
-}
-
-CcWindow GtkSwitch.trough:active {
-    border: 1px solid shade(@settings, 0.8);
-    background-color: @settings;
-}
-
-CcWindow GtkSwitch.slider:active {
-    border: 1px solid shade(@settings, 0.8);
-}
-
-CcWindow .header-bar GtkSwitch.slider:active:backdrop,
-CcWindow .header-bar GtkSwitch.slider:backdrop {
-    background-color: shade(@settings, 0.9);
-}
 
 /* List Row Button */
 CcWindow .button.list-row {

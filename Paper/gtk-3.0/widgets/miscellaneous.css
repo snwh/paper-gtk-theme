@@ -17,15 +17,17 @@
 */
 
 /*********************
- * app notifications *
+ * App notifications *
  *********************/
+
 .app-notification {
-    border: solid @border;
-    border-width: 0 1px 1px 1px;
-    border-radius: 0 0 2px 2px;
+    border: 1px solid @border;
+    border-width-top: 0px;
+    border-radius: 6px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     padding: 8px;
-    background-color: @base;
-    background-image: none;
+    background: @base;
     color: @foreground;
 }
 

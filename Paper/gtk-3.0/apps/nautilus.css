@@ -78,8 +78,9 @@ NautilusWindow .dynamic-notebook tab.right:active {
     border-radius: 5px;
 }
 
-.nautilus-desktop.nautilus-canvas-item {
-    color: @selected_foreground;
+.nautilus-desktop {
+    background: none;
+    color: @foreground;
 }
 
 .nautilus-desktop.nautilus-canvas-item:active {

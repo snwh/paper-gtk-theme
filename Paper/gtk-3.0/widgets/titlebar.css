@@ -91,7 +91,8 @@
 .titlebar .image-button,
 .titlebar .button,
 .titlebar .linked .button,
-.titlebar GtkComboBox {
+.titlebar GtkComboBox,
+.titlebar .suggested-action.button {
     border-radius: 0px;
     background: none;
     border: none;
@@ -108,7 +109,8 @@
 .titlebar .image-button:active,
 .titlebar .button:active,
 .titlebar .linked .button:active,
-.titlebar GtkComboBox:active {
+.titlebar GtkComboBox:active,
+.titlebar .suggested-action.button:active {
     border-radius: 0px;
     background: alpha(#000, 0.2);
     font: Bold;
@@ -126,8 +128,9 @@
 .titlebar .button.image-button:focus,
 .titlebar .image-button:focus,
 .titlebar .button:focus,
-.titlebar .linked .button:active,
-.titlebar GtkComboBox:active {
+.titlebar .linked .button:focus,
+.titlebar GtkComboBox:focus,
+.titlebar .suggested-action.button:focus {
     border-radius: 0px;
     background: none;
     font: Bold;
@@ -146,7 +149,8 @@
 .titlebar .button.image-button:hover,
 .titlebar .button:hover,
 .titlebar .linked .button:hover,
-.titlebar GtkComboBox:hover {
+.titlebar GtkComboBox:hover,
+.titlebar .suggested-action.button:hover {
     border-radius: 0px;
     background: alpha(#000, 0.1);
     border: none;
@@ -163,7 +167,8 @@
 .titlebar .image-button:backdrop,
 .titlebar .button:backdrop,
 .titlebar .linked .button:backdrop,
-.titlebar GtkComboBox:backdrop {
+.titlebar GtkComboBox:backdrop,
+.titlebar .suggested-action.button:backdrop {
     padding: 13px;
     border-radius: 0px;
     background: none;
@@ -181,7 +186,8 @@
 .titlebar .image-button:active:backdrop,
 .titlebar .button:active:backdrop,
 .titlebar .linked .button:active:backdrop,
-.titlebar GtkComboBox:active:backdrop {
+.titlebar GtkComboBox:active:backdrop,
+.titlebar .suggested-action.button:active:backdrop {
     border-radius: 0px;
     background: alpha(#000, 0.2);
     font: Bold;
@@ -200,7 +206,8 @@
 .titlebar .image-button:backdrop:hover,
 .titlebar .button:backdrop:hover,
 .titlebar .linked .button:backdrop:hover,
-.titlebar GtkComboBox:backdrop:hover {
+.titlebar GtkComboBox:backdrop:hover,
+.titlebar .suggested-action.button:backdrop:hover {
     border-radius: 0px;
     background: alpha(#000, 0.1);
     border: none;
@@ -217,7 +224,8 @@
 .titlebar .image-button:insensitive,
 .titlebar .button:insensitive,
 .titlebar .linked .button:insensitive,
-.titlebar GtkComboBox:insensitive {
+.titlebar GtkComboBox:insensitive,
+.titlebar .suggested-action.button:insensitive {
     border-radius: 0px;
     background: none;
     font: Bold;
