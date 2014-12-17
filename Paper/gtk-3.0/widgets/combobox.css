@@ -88,7 +88,7 @@ GtkComboBox .arrow {
  ******************/
 
 GtkComboBox.combobox-entry .button:hover,
-GtkComboBox.combobox-entry .entry:hvov {
+GtkComboBox.combobox-entry .entry:hover {
     background-color: @selection;
     border: 1px solid @selection;
     color: @selected_foreground;
