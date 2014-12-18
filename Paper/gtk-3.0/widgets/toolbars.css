@@ -163,38 +163,6 @@
     border-bottom-width: 1px;
 }
 
-
-/* Images */
-.toolbar GtkImage,
-.toolbar .button GtkImage,
-.toolbar .button GtkImage:active,
-.toolbar .button GtkImage:focus,
-.toolbar .button GtkImage:hover {
-    color: @toolbar_text;
-}
-
-.toolbar .button GtkImage:active:backdrop,
-.toolbar GtkImage:backdrop,
-.toolbar .button GtkImage:backdrop,
-.toolbar .button GtkImage:backdrop:hover {
-    color: @backdrop_toolbar_text;
-    -gtk-image-effect: dim;
-}
-
-.toolbar GtkImage:insensitive,
-.toolbar .button GtkImage:insensitive {
-    color: @insensitive_toolbar_text;
-    -gtk-image-effect: dim;
-}
-
-.toolbar GtkImage:insensitive:backdrop,
-.toolbar .button GtkImage:insensitive:backdrop {
-    color: mix(@backdrop_toolbar_text, @insensitive_toolbar_text, 0.5);
-    -gtk-image-effect: dim;
-}
-
-
-
 /* Images */
 .toolbar .button GtkImage {
     color: @toolbar_text;

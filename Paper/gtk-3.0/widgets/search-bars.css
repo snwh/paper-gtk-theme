@@ -16,9 +16,7 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color search @base;
-@define-color search_text @text;
-
+@define-color searchbar shade(@base, 0.95);
 
 /***************
  * Search bars *
@@ -26,122 +24,183 @@
 
 .search-bar.toolbar,
 .search-bar {
-    background-color: @search;
+    padding: 0px;
+    background-color: @searchbar;
     box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.5);
-    color: @search_text;
+    color: @text;
 }
+
 .search-bar.toolbar:focus,
 .search-bar:focus {
-    background-color: @search;
+    background-color: @searchbar;
     box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.5);
-    color: @search_text;
+    color: @text;
 }
 
 .search-bar.toolbar:backdrop,
 .search-bar:backdrop {
-    background-color: shade(@search, 0.9);
+    background-color: shade(@searchbar, 0.9);
     box-shadow: none;
-    color: shade(@search_text, 0.9);
+    color: shade(@text, 0.9);
 }
-
-.search-bar.toolbar:backdrop,
-.search-bar:backdrop {
-    background-color: shade(@search, 0.9);
-    box-shadow: inset 0 -1px 2px -1px alpha(#000, 0.3);
-    color: shade(@search_text, 0.9);
-}
-
-/* Entry */
-.search-bar .toolbar .entry,
-.search-bar .entry  {
-    color: @search_text;
-    border-radius: 0px;
-    border: none;
-    background-color:transparent;
-}
-.search-bar .toolbar .entry:active,
-.search-bar .entry:active {
-    color: @search_text;
-    border-radius: 0px;
-    border: none;
-    background-color:transparent;
-}
-
-.search-bar .toolbar .entry:focus,
-.search-bar .entry:focus {
-    color: @search_text;
-    border: solid @search_text;
-    border-bottom-width: 1px;
-}
-
-.search-bar .toolbar .entry:backdrop,
-.search-bar .entry:backdrop {
-    color: shade(@search_text,0.9);
-    border: solid @search_text;
-    border-bottom-width: 1px;
-}
-
 
 /***********
  * Buttons *
  ***********/
+
 .search-bar.toolbar .button,
-.search-bar .button {
+.search-bar.toolbar .text-button,
+.search-bar.toolbar .image-button {
     border: none;
-    color: @search_text;
+    background: none;
+    color: @text;
+    border-radius: 0px;
+    padding: 13px;
 }
 
-.search-bar.toolbar .button:active,
-.search-bar .button:active {
+.search-bar.toolbar .button:active
+.search-bar.toolbar .text-button:active,
+.search-bar.toolbar .image-button:active {
     border: none;
-    color: @search_text;
-    box-shadow: inset 0 -2px 0 0 @search_text;
+    color: @text;
+    box-shadow: inset 0 -2px 0 0 @text;
+    padding: 13px;
 }
 
 /* Hover */
 .search-bar.toolbar .button:hover,
-.search-bar .button:hover,
-.search-bar.toolbar .button:active:hover,
-.search-bar .button:active:hover{
+.search-bar.toolbar .button:active:hover
+.search-bar.toolbar .text-button:hover,
+.search-bar.toolbar .text-button:active:hover,
+.search-bar.toolbar .image-button:hover,
+.search-bar.toolbar .image-button:active:hover {
+    padding: 13px;
     border: none;
     background-color: alpha(#000, 0.1);
-    color: @search_text;
-    box-shadow: inset 0 -2px 0 0 @search_text;
+    color: @text;
+    box-shadow: none;
+}
+
+/* Insensitive */
+.search-bar.toolbar .button:insensitive,
+.search-bar.toolbar .text-button:insensitive,
+.search-bar.toolbar .image-button:insensitive {
+    background: none;
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+/* Backdrop */
+.search-bar.toolbar .button:backdrop,
+.search-bar.toolbar .button:active:backdrop
+.search-bar.toolbar .text-button:backdrop,
+.search-bar.toolbar .text-button:active:backdrop,
+.search-bar.toolbar .image-button:backdrop,
+.search-bar.toolbar .image-button:active:backdrop {
+    background: none;
+    color: @backdrop_text;
+    border: none;
+    padding: 13px;
+}
+
+/* Insensitive:Backdrop; */
+.search-bar.toolbar .button:insensitive:backdrop,
+.search-bar.toolbar .text-button:insensitive:backdrop,
+.search-bar.toolbar .image-button:insensitive:backdrop {
+    padding: 13px;
+    border: none;
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
+
+/* Images */
+.search-bar.toolbar .button GtkImage {
+    color: @text;
+}
+
+.search-bar.toolbar .button:active GtkImage,
+.search-bar.toolbar .button:focus GtkImage,
+.search-bar.toolbar .button:hover GtkImage {
+    color: @text;
+}
+
+.search-bar.toolbar .button:backdrop GtkImage,
+.search-bar.toolbar .button:backdrop:hover GtkImage,
+.search-bar.toolbar .button:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+.search-bar.toolbar .button:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+.search-bar.toolbar .button:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+.search-bar.toolbar .button GtkLabel {
+    color: @text;
+}
+
+.search-bar.toolbar .button:active GtkLabel,
+.search-bar.toolbar .button:focus GtkLabel,
+.search-bar.toolbar .button:hover GtkLabel {
+    color: @text;
+}
+
+.search-bar.toolbar .button:backdrop GtkLabel,
+.search-bar.toolbar .button:backdrop:hover GtkLabel,
+.search-bar.toolbar .button:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.search-bar.toolbar .button:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.search-bar.toolbar .button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
 }
 
 /********************
  * Search bar entry *
  ********************/
 
-.search-bar .entry {
+.search-bar .entry,
+.search-bar.toolbar .entry {
     background: none;
     color: @text;
-    padding: 6px;
-    border-radius: 6px;
+    border-radius: 0px;
     border: none;
-    icon-shadow:none;
 }
 
 .search-bar .entry:active,
-.search-bar .entry:focus {
+.search-bar .entry:focus,
+.search-bar.toolbar .entry:active,
+.search-bar.toolbar .entry:focus {
     background: none;
     color: @text;
     border: none;
 }
 
-.search-bar .entry:backdrop {
+.search-bar .entry:backdrop,
+.search-bar.toolbar .entry:backdrop {
     background: none;
     color: @backdrop_text;
     border: none;
 }
 
-.search-bar .entry.image {
-    color: @insensitive_text;
-    icon-shadow:none;
+.search-bar .entry.image,
+.search-bar.toolbar .entry.image {
+    color: @text;
 }
 
-.search-bar .entry.image.left {
+.search-bar .entry.image.left,
+.search-bar.toolbar .entry.image.left {
     padding-right: 6px;
     color: @text;
-    icon-shadow:none;
 }
