@@ -21,6 +21,7 @@
  ******************/
 
 .titlebar {
+    padding: 0px;
     padding-left: 6px;
     padding-right: 6px;
     border-width: 0px;

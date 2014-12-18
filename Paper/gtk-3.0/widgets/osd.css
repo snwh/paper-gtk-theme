@@ -16,6 +16,11 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
+@define-color osd_background alpha(#000, 0,7);
+@define-color osd_background_backdrop shade(@osd_background, 0,9);
+@define-color osd_foreground #fff;
+@define-color osd_button_border @osd_foreground;
+
 /*******
  * OSD *
  *******/
@@ -41,10 +46,9 @@ GtkOverlay.osd {
 .osd.button:active,
 .osd .button,
 .osd .button:active {
-    border-width: 1px;
-    border-style: solid;
-    border-image: none;
+    border: 1px solid @osd_button_border;
     border-radius: 5px;
+    color: @osd_foreground;
 }
 
 .osd .button {
@@ -59,11 +63,6 @@ GtkOverlay.osd {
 .osd .button {
     padding: 4px;
 
-    background-image: linear-gradient(to bottom,
-                                      @osd_button_background_a,
-                                      @osd_button_background_b 68%,
-                                      @osd_button_background_c
-                                      );
 
     color: @osd_button_foreground;
 
@@ -167,11 +166,6 @@ GtkOverlay.osd {
 
 .osd.button:hover,
 .osd .button:hover {
-    background-image: linear-gradient(to bottom,
-                                      @osd_button_background_hover_a,
-                                      @osd_button_background_hover_b 68%,
-                                      @osd_button_background_hover_c
-                      );
 }
 
 .osd.button:active,
@@ -179,11 +173,6 @@ GtkOverlay.osd {
 .osd .button:active,
 .osd .button:active:hover,
 .osd GtkMenuButton.button:active {
-    background-image: linear-gradient(to bottom,
-                                      @osd_button_background_active_a,
-                                      @osd_button_background_active_b 20%,
-                                      @osd_button_background_active_c
-                                      );
 }
 
 .osd GtkMenuButton.button:active {
@@ -198,17 +187,10 @@ GtkOverlay.osd {
 
 .osd.toolbar {
     color: @osd_foreground;
-    text-shadow: 0 1px @osd_text_shadow;
-
     padding: 10px;
     border-style: none;
     border-radius: 7px;
-    background-image: linear-gradient(to bottom,
-                                      @osd_toolbar_background_a,
-                                      @osd_toolbar_background_b 63%,
-                                      @osd_toolbar_background_c
-                                      );
-    background: none;
+    background-color: @osd_background;
 
     -GtkToolbar-button-relief: normal;
 }
@@ -264,19 +246,11 @@ GtkOverlay.osd {
 
 .osd .scale.trough {
     border-color: @osd_button_border;
-    background-image: linear-gradient(to bottom,
-                                      shade(@osd_button_border, 0.70),
-                                      shade(@osd_button_border, 0.90)
-                                      );
     background: none;
 }
 
 .osd .scale.trough.highlight {
     border-color: mix(@osd_button_border, @selection_color, 0.70);
-    background-image: linear-gradient(to bottom,
-                                      mix(shade(@osd_button_border, 0.55), @selection_color, 0.70),
-                                      mix(shade(@osd_button_border, 0.90), @selection_color, 0.70)
-                                      );
 }
 
 .osd .scale.trough:insensitive,

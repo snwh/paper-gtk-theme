@@ -16,7 +16,7 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color suggested_action_button shade(@header, 0.6);
+@define-color suggested_action_button shade(@selection, 0.5);
 @define-color suggested_action_button_foreground #fff;
 @define-color backdrop_suggested_action_foreground alpha(#fff, 0.5);
 @define-color insensitive_suggested_action_foreground alpha(#fff, 0.7);
@@ -24,40 +24,45 @@
 /****************************
  * Suggested action buttons *
  ****************************/
- 
-.suggested-action.button {
-    background-color: alpha(#000, 0.2);
+
+.suggested-action.button,
+.button.suggested-action {
+    border: 1px solid @suggested_action_button;
+    background-color: @suggested_action_button;
     color: @suggested_action_button_foreground;
 }
 
-.suggested-action.button:hover {
+.suggested-action.button:hover,
+.button.suggested-action:hover {
+    border: 1px solid shade(@suggested_action_button, 1.2);
     background-color: shade(@suggested_action_button, 1.2);
     color: @suggested_action_button_foreground;
 }
 
 .suggested-action.button:active,
-.suggested-action.button:hover:active {
+.button.suggested-action:active {
+    border: 1px solid shade(@suggested_action_button, 1.1);
     background-color: shade(@suggested_action_button, 1.1);
     color: @suggested_action_button_foreground;
 }
 
-.suggested-action.button GtkLabel:backdrop,
-.suggested-action.button:backdrop {
-    background: none;
-    color: @backdrop_suggested_action_foreground;
+.suggested-action.button:backdrop,
+.button.suggested-action:backdrop {
+    border: 1px solid @backdrop_border;
+    background-color: @backdrop_background;
+    color: @backdrop_text;
 }
 
-.suggested-action.button GtkLabel:insensitive,
 .suggested-action.button:insensitive,
-.suggested-action.button:active *:insensitive {
-    background: none;
-    color: @insensitive_suggested_action_foreground;
+.button.suggested-action:insensitive {
+    border: 1px solid @insensitive_border;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
 }
 
-.suggested-action.button GtkLabel:backdrop:insensitive {
-    color: @insensitive_foreground;
-}
-
-.suggested-action.button:insensitive:backdrop {
-    background-color: alpha(@insensitive_background,0.7);
+.suggested-action.button:backdrop:insensitive,
+.button.suggested-action:backdrop:insensitive {
+    border: 1px solid mix(@insensitive_border, @backdrop_border 0.5);
+    background-color: mix(@insensitive_background, @backdrop_background, 0.5);
+    color: mix(@insensitive_text, @backdrop_text, 0.5);
 }

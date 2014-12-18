@@ -90,3 +90,29 @@
     color: @backdrop_text;
     background-color: @backdrop_background;
 }
+
+
+/* Labels */
+.spinbutton GtkLabel {
+    color: @text;
+}
+
+.spinbutton:active GtkLabel,
+.spinbutton:focus GtkLabel,
+.spinbutton:hover GtkLabel {
+    color: @selected_foreground;
+}
+
+.spinbutton:backdrop GtkLabel,
+.spinbutton:backdrop:hover GtkLabel,
+.spinbutton:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.spinbutton:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.spinbutton:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
