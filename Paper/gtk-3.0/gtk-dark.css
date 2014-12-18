@@ -30,6 +30,7 @@
 @define-color text #A8B5BA;/* Text color */
 @define-color panel #1e282c;/* Panel color */
 @define-color header #263238;/* Header color */
+@define-color backdrop_header #253136;/* Header color */
 @define-color header_text alpha(#fff, 0.8);/* Header text color */
 @define-color selection #4C636E;/* Selection color */
 @define-color view_background #555;/* View background */
