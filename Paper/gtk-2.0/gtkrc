@@ -17,7 +17,7 @@
 
 # Paper GTK2 Theme
 
-gtk-color-scheme = "base_color:#FFFFFF\nfg_color:#555555\ntooltip_fg_color:#FFFFFF\nmenubar_color:#636E73\nselected_bg_color:#9FB0B9\nselected_fg_color:#FFFFFF\ntext_color:#555555\nwm_color:#636E73\nbg_color:#FFFFFF\ninsensitive_bg_color:#efefef\ntooltip_bg_color:#333333\npanel_bg_color:#333333"
+gtk-color-scheme = "base_color:#FFFFFF\nfg_color:#555555\ntooltip_fg_color:#FFFFFF\nmenubar_color:#636E73\nselected_bg_color:#9FB0B9\nselected_fg_color:#FFFFFF\ntext_color:#555555\nwm_color:#636E73\nbg_color:#EFEFEF\ninsensitive_bg_color:#efefef\ntooltip_bg_color:#333333\npanel_bg_color:#333333"
 
 gtk-auto-mnemonics              = 1
 gtk-primary-button-warps-slider = 1
@@ -2339,7 +2339,6 @@ include "Apps/apps.rc"
 include "Apps/chrome.rc"
 include "Apps/eclipse.rc"
 include "Apps/gimp.rc"
-include "Apps/firefox.rc"
 include "Apps/libreoffice.rc"
 include "Apps/terminal.rc"
 include "Apps/thunar.rc"
