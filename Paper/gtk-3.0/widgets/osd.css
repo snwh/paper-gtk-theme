@@ -16,8 +16,8 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color osd_background alpha(#000, 0,7);
-@define-color osd_background_backdrop shade(@osd_background, 0,9);
+@define-color osd_background alpha(#000, 0.7);
+@define-color osd_background_backdrop shade(@osd_background, 0.9);
 @define-color osd_foreground #fff;
 @define-color osd_button_border @osd_foreground;
 
@@ -42,134 +42,82 @@ GtkOverlay.osd {
     background-origin: border-box;
 }
 
-.osd.button,
-.osd.button:active,
-.osd .button,
+.osd .button {
+    padding: 4px;
+}
+
+.osd .button:hover {
+    padding: 4px;
+    border: 1px solid @osd_button_border;
+    border-radius: 5px;
+    color: @osd_foreground;
+}
 .osd .button:active {
+    padding: 4px;
     border: 1px solid @osd_button_border;
     border-radius: 5px;
     color: @osd_foreground;
 }
 
-.osd .button {
-    border-color: @osd_button_border;
-}
-
-.osd .button:active {
-    border-color: @osd_button_border_active;
-}
-
-.osd.button,
-.osd .button {
-    padding: 4px;
-
-
-    color: @osd_button_foreground;
-
-    text-shadow: 0 -1px @osd_button_shadow;
-    icon-shadow: 0 -1px @osd_button_shadow;
-}
-
-.osd.button {
-    padding: 8px;
-}
-
-.osd.button,
-.osd.button:active {
-    border-color: transparent;
-}
-
-.osd.button,
-.osd.button:prelight,
-.osd.button:active {
-    background-color: shade(@osd_background, 1.10);
-}
-
-.osd .button,
-.osd .button:prelight,
-.osd .button:active {
-    background: none;
-}
-
-.osd.button:insensitive,
 .osd .button:insensitive {
     background-image: none;
     background-color: @osd_button_background_insensitive;
 }
 
-.osd.button:active:insensitive,
 .osd .button:active:insensitive {
     background-image: none;
     background-color: @osd_button_background_insensitive_active;
 }
 
-.osd.button:backdrop,
 .osd .button:backdrop {
     background-image: none;
     background-color: @osd_button_background_backdrop;
 }
 
-.osd.button:backdrop:hover,
-.osd.button:backdrop:active:hover,
 .osd .button:backdrop:hover,
 .osd .button:backdrop:active:hover {
     background-image: none;
     background-color: @osd_button_background_backdrop_hover;
 }
 
-.osd.button:backdrop:active,
 .osd .button:backdrop:active {
     background-image: none;
     background-color: @osd_button_background_backdrop_active;
 }
 
-.osd.button:backdrop:insensitive,
-.osd.button:backdrop:insensitive:active,
 .osd .button:backdrop:insensitive,
 .osd .button:backdrop:insensitive:active {
     background-image: none;
     background-color: @osd_button_background_backdrop_insensitive;
 }
 
-.osd.button:hover,
 .osd .button:hover {
     color: @osd_button_foreground_hover;
 }
 
-.osd.button:active,
-.osd.button:hover:active,
 .osd .button:active,
 .osd .button:hover:active {
     color: @osd_button_foreground_active;
 }
 
-.osd.button:insensitive,
-.osd.button:active *:insensitive,
 .osd .button:insensitive,
 .osd .button:active *:insensitive {
     color: @osd_button_foreground_insensitive;
 }
 
-.osd.button:backdrop,
-.osd.button:backdrop:insensitive,
-.osd.button:backdrop:active *:insensitive,
 .osd .button:backdrop,
 .osd .button:backdrop:insensitive,
 .osd .button:backdrop:active *:insensitive {
     color: @osd_button_foreground_backdrop;
 }
 
-.osd.button:backdrop:active,
 .osd .button:backdrop:active {
     color: @osd_button_foreground_backdrop_active;
 }
 
-.osd.button:hover,
 .osd .button:hover {
 }
 
-.osd.button:active,
-.osd.button:active:hover,
 .osd .button:active,
 .osd .button:active:hover,
 .osd GtkMenuButton.button:active {
