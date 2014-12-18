@@ -42,7 +42,11 @@
     border: none;
 }
 
-.selection-mode.header-bar {
+.titlebar.selection-mode .selection-menu .arrow,
+.header-bar.selection-mode .selection-menu .arrow {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+    color: alpha(@header_text, 0.5);
+    icon-shadow: none;
 }
 
 .selection-mode.toolbar {
