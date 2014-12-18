@@ -34,9 +34,9 @@ SnapSnapWindow .header-bar:backdrop {
 }
 
 SnapWidgetsCamera {
-	background:@snap_background;
+	background-color:@snap_background;
 }
 
 SnapWidgetsCamera:backdrop {
-	background:shade(@snap_background, 0.9);
+	background-color:shade(@snap_background, 0.9);
 }

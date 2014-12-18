@@ -627,7 +627,6 @@ StScrollBar StButton#vhandle:active {
     background-color: rgba(30, 39, 43, 1.0);
     font-weight: normal;
     color: #9BA8AD;
-    text-shadow: none;
     height: 2em;
 }
 
@@ -687,7 +686,6 @@ StScrollBar StButton#vhandle:active {
 
 .panel-button:hover {
     background: rgba(44, 58, 64, 0.3);
-    text-shadow: none;
 }
 
 .panel-button:active,
@@ -698,7 +696,6 @@ StScrollBar StButton#vhandle:active {
     background-image: none;
     background: rgba(44, 58, 64, 1.0);
     color: #D3D4D5;
-    text-shadow: none;
     transition-duration: 300ms;
 }
 

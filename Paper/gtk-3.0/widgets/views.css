@@ -22,7 +22,7 @@
  *********/
 
 .frame {
-    background-color: transparent;
+    background: none;
     border: 1px solid @border;
     color: @foreground;
 }
@@ -35,7 +35,7 @@
 
 .frame:insensitive {
     border-color: @insensitive_border;
-    background-color: transparent;
+    background: none;
     color: @insensitive_text;
 }
 
@@ -50,7 +50,6 @@
 .view {
     background-color: @base;
     color: @foreground;
-    text-shadow: none;
 }
 
 .view:insensitive,
@@ -204,17 +203,17 @@ GtkIconView.view.cell:selected:focus {
 }
 
 GtkIconView.content-view.check {
-    background-color: transparent;
+    background: none;
 }
 
 GtkIconView.content-view.check:active {
-    background-color: transparent;
+    background: none;
 }
 
 GtkIconView.content-view.check:prelight,
 GtkIconView.content-view.check:insensitive,
 GtkIconView.content-view.check:selected {
-    background-color: transparent;
+    background: none;
 }
 
 
@@ -251,13 +250,13 @@ GtkIconView.content-view.check:selected {
 }
 
 .content-view.cell {
-    background-color: transparent;
+    background: none;
     background-image: none;
 }
 
 .content-view.view.check,
 .content-view.view.check:active {
-    background-color: transparent;
+    background: none;
 }
 
 .content-view column-header .button {
@@ -321,7 +320,7 @@ GtkHTML:active:backdrop,
 
 .cursor-handle.top,
 .cursor-handle.bottom {
-    background-color: transparent;
+    background: none;
     box-shadow: none;
     border-style: none;
     border-image: none;

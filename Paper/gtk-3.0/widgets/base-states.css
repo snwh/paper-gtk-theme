@@ -23,24 +23,18 @@
 .background {
     color: @foreground;
     background-color: @background;
-    text-shadow: none;
-    icon-shadow: none;
 }
 
-.background:backdrop {
+.background-color:backdrop {
     /* I want everything nice and flat in the backdrop window */
     background-color: @backdrop_background;
     color: @backdrop_text;
-    text-shadow: none;
-    icon-shadow: none;
 }
 
-.background:insensitive {
+.background-color:insensitive {
     /* I want everything nice and flat in the backdrop window */
     background-color: @insensitive_background;
     color: @insensitive_text;
-    text-shadow: none;
-    icon-shadow: none;
 }
 
 /* FIXME: why do we still need this? */
@@ -69,8 +63,6 @@ GtkClutterOffscreen {
 
 *:insensitive:backdrop {
     /* I want everything nice and flat in the backdrop window */
-    text-shadow: none;
-    icon-shadow: none;
     color: @backdrop_insensitive_foreground;
 }
 
@@ -116,5 +108,5 @@ GtkBox,
 GtkBox:insensitive,
 GtkGrid,
 GtkGrid:insensitive {
-    background-color: transparent;
+    background: none;
 }

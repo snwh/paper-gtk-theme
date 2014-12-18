@@ -134,7 +134,7 @@ UnityPanelWidget,
     border-width: 1px;
     border-style: solid;
     border: none;
-    background-color: transparent;
+    background: none;
     color: @panel_text;
     box-shadow: none;
 }
@@ -142,7 +142,7 @@ UnityPanelWidget,
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem:hover {
     border-radius: 0px;
-    background: shade(@unity, 0.8);
+    background-color: shade(@unity, 0.8);
     color: @panel_text;
     box-shadow: none;
 }

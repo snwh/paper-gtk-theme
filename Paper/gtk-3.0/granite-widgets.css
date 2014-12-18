@@ -49,13 +49,13 @@ GraniteWidgetsStaticNotebook .frame {
 
 GraniteWidgetsPopOver .sidebar.view {
     border: none;
-    background-color: transparent;
+    background: none;
 }
 
 /*Button*/
 GraniteWidgetsPopOver .button {
     background-image: none;
-    background-color: transparent;
+    background: none;
     border: none;
 }
 

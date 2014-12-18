@@ -26,7 +26,6 @@
 @define-color background #263238;/* Background color */
 @define-color foreground #A8B5BA;/* Foreground color */
 @define-color border #1E272B;/* Borders color */
-@define-color button #1E272B;/* Button color */
 @define-color separator @border;/* Separator color */
 @define-color text #A8B5BA;/* Text color */
 @define-color panel #1e282c;/* Panel color */

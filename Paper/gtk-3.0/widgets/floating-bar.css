@@ -55,6 +55,6 @@
     -GtkButton-inner-border: 0;
 
     border-style: none;
-    background-color: transparent;
+    background: none;
     background-image: none;
 }

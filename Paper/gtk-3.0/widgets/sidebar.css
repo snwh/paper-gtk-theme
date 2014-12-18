@@ -47,8 +47,6 @@ GtkDialog .sidebar GtkScrolledWindow {
 .source-list.view,
 .source-list.view:selected:backdrop,
 .source-list.view:hover:selected:backdrop {
-    text-shadow: none;
-    icon-shadow: none;
 }
 
 .sidebar,
@@ -81,7 +79,7 @@ GtkDialog .sidebar GtkScrolledWindow {
 .source-list.view:selected:focus,
 .source-list.category-expander:hover {
     color: @selection;
-    background: @base;
+    background-color: @base;
     box-shadow: none;
 }
 
@@ -95,13 +93,13 @@ GtkDialog .sidebar .view:hover:selected {
 .sidebar .view:hover:selected:backdrop,
 .source-list.view:selected:backdrop,
 .source-list.view:hover:selected:backdrop {
-    background-color: transparent;
+    background: none;
     color: alpha(@selection, 0.5);
 }
 
 GtkDialog .sidebar .view:selected:backdrop,
 GtkDialog .sidebar .view:hover:selected:backdrop {
-    background-color: transparent;
+    background: none;
     color: alpha(@selection, 0.5);
 }
 

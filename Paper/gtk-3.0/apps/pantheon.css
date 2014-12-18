@@ -23,7 +23,7 @@
 
 BirdieWidgetsTweetList * {
     background-image: none;
-    background-color: transparent;
+    background: none;
 }
 
 /********
@@ -171,7 +171,7 @@ NoiseWidgetsTileView {
 .app:hover {
     border-radius: 8px;
     border: none;
-    background: alpha(@selection, 0.7);
+    background-color: alpha(@selection, 0.7);
     color: white;
 }
 
@@ -183,13 +183,13 @@ NoiseWidgetsTileView {
     border-radius: 0;
     border: none;
     color: @foreground;
-    background: transparent;
+    background: none;
 }
 
 .search-item:hover,
 .search-item:focus {
     border-radius: 0;
-    background: alpha(@selection, 0.7);
+    background-color: alpha(@selection, 0.7);
     color: @selected_foreground;
 }
   
@@ -200,7 +200,7 @@ NoiseWidgetsTileView {
     font: 18;
     font-weight: 300;
     background-image: none;
-    background-color: transparent;
+    background: none;
     box-shadow: none;
     border-radius: 0;
 }
@@ -215,7 +215,7 @@ NoiseWidgetsTileView {
  ********/
 
 .panel {
-    background-color: transparent;
+    background: none;
     color: white;
     font-weight: bold;
 }
@@ -229,7 +229,7 @@ NoiseWidgetsTileView {
 
 .panel-shadow {
     background-image: none;
-    background-color: transparent;
+    background: none;
 }
 
 .panel-app-button {
@@ -237,7 +237,7 @@ NoiseWidgetsTileView {
 }
 
 .composited-indicator {
-    background-color: transparent;
+    background: none;
     color: #fff;
     padding: 0 2px;
 }
@@ -263,5 +263,5 @@ NoiseWidgetsTileView {
  ***********/
 
 PantheonTerminalPantheonTerminalWindow.background {
-   background-color: transparent;
+   background: none;
 }

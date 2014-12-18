@@ -79,5 +79,4 @@ GtkMenuButton.button *:active,
 }
 
 GtkMenuButton .menu {
-    text-shadow: none;
 }

@@ -537,13 +537,11 @@
 
 .check {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-dark.png"), url("assets/checkbox-unchecked-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check.button.flat,
 .header-bar .check.titlebutton.button,
 .titlebar .check.titlebutton.button {
-    icon-shadow: none;
 }
 
 .view.check:selected,
@@ -554,13 +552,11 @@ GtkCalendar.check:selected,
 
 .check:hover {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-hover-dark.png"), url("assets/checkbox-unchecked-hover-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:hover.button.flat,
 .header-bar .check.titlebutton.button:hover,
 .titlebar .check.titlebutton.button:hover {
-    icon-shadow: none;
 }
 
 .view.check:hover:selected,
@@ -571,13 +567,11 @@ GtkCalendar.check:hover:selected,
 
 .check:active {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-active-dark.png"), url("assets/checkbox-unchecked-active-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:active.button.flat,
 .header-bar .check.titlebutton.button:active,
 .titlebar .check.titlebutton.button:active {
-    icon-shadow: none;
 }
 
 .view.check:active:selected,
@@ -588,13 +582,11 @@ GtkCalendar.check:active:selected,
 
 .check:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"), url("assets/checkbox-unchecked-insensitive-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:insensitive.button.flat,
 .header-bar .check.titlebutton.button:insensitive,
 .titlebar .check.titlebutton.button:insensitive {
-    icon-shadow: none;
 }
 
 .view.check:insensitive:selected,
@@ -605,13 +597,11 @@ GtkCalendar.check:insensitive:selected,
 
 .check:backdrop {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-backdrop-dark.png"), url("assets/checkbox-unchecked-backdrop-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:backdrop.button.flat,
 .header-bar .check.titlebutton.button:backdrop,
 .titlebar .check.titlebutton.button:backdrop {
-    icon-shadow: none;
 }
 
 .view.check:backdrop:selected,
@@ -622,13 +612,11 @@ GtkCalendar.check:backdrop:selected,
 
 .check:backdrop:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-backdrop-insensitive-dark.png"), url("assets/checkbox-unchecked-backdrop-insensitive-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:backdrop:insensitive.button.flat,
 .header-bar .check.titlebutton.button:backdrop:insensitive,
 .titlebar .check.titlebutton.button:backdrop:insensitive {
-    icon-shadow: none;
 }
 
 .view.check:backdrop:insensitive:selected,
@@ -639,13 +627,11 @@ GtkCalendar.check:backdrop:insensitive:selected,
 
 .check:inconsistent {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-dark.png"), url("assets/checkbox-mixed-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:inconsistent.button.flat,
 .header-bar .check.titlebutton.button:inconsistent,
 .titlebar .check.titlebutton.button:inconsistent {
-    icon-shadow: none;
 }
 
 .view.check:inconsistent:selected,
@@ -656,13 +642,11 @@ GtkCalendar.check:inconsistent:selected,
 
 .check:inconsistent:hover {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-hover-dark.png"), url("assets/checkbox-mixed-hover-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:inconsistent:hover.button.flat,
 .header-bar .check.titlebutton.button:inconsistent:hover,
 .titlebar .check.titlebutton.button:inconsistent:hover {
-    icon-shadow: none;
 }
 
 .view.check:inconsistent:hover:selected,
@@ -673,13 +657,11 @@ GtkCalendar.check:inconsistent:hover:selected,
 
 .check:inconsistent:selected {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-active-dark.png"), url("assets/checkbox-mixed-active-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:inconsistent:selected.button.flat,
 .header-bar .check.titlebutton.button:inconsistent:selected,
 .titlebar .check.titlebutton.button:inconsistent:selected {
-    icon-shadow: none;
 }
 
 .view.check:inconsistent:selected:selected,
@@ -690,13 +672,11 @@ GtkCalendar.check:inconsistent:selected,
 
 .check:inconsistent:backdrop {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-backdrop-dark.png"), url("assets/checkbox-mixed-backdrop-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:inconsistent:backdrop.button.flat,
 .header-bar .check.titlebutton.button:inconsistent:backdrop,
 .titlebar .check.titlebutton.button:inconsistent:backdrop {
-    icon-shadow: none;
 }
 
 .view.check:inconsistent:backdrop:selected,
@@ -707,13 +687,11 @@ GtkCalendar.check:inconsistent:backdrop:selected,
 
 .check:inconsistent:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"), url("assets/checkbox-mixed-insensitive-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:inconsistent:insensitive.button.flat,
 .header-bar .check.titlebutton.button:inconsistent:insensitive,
 .titlebar .check.titlebutton.button:inconsistent:insensitive {
-    icon-shadow: none;
 }
 
 .view.check:inconsistent:insensitive:selected,
@@ -724,13 +702,11 @@ GtkCalendar.check:inconsistent:insensitive:selected,
 
 .check:inconsistent:insensitive:backdrop {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-backdrop-insensitive-dark.png"), url("assets/checkbox-mixed-backdrop-insensitive-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:inconsistent:insensitive:backdrop.button.flat,
 .header-bar .check.titlebutton.button:inconsistent:insensitive:backdrop,
 .titlebar .check.titlebutton.button:inconsistent:insensitive:backdrop {
-    icon-shadow: none;
 }
 
 .view.check:inconsistent:insensitive:backdrop:selected,
@@ -741,13 +717,11 @@ GtkCalendar.check:inconsistent:insensitive:backdrop:selected,
 
 .check:checked {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:checked.button.flat,
 .header-bar .check.titlebutton.button:checked,
 .titlebar .check.titlebutton.button:checked {
-    icon-shadow: none;
 }
 
 .view.check:checked:selected,
@@ -758,13 +732,11 @@ GtkCalendar.check:checked:selected,
 
 .check:checked:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark.png"), url("assets/checkbox-checked-insensitive-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:checked:insensitive.button.flat,
 .header-bar .check.titlebutton.button:checked:insensitive,
 .titlebar .check.titlebutton.button:checked:insensitive {
-    icon-shadow: none;
 }
 
 .view.check:checked:insensitive:selected,
@@ -775,13 +747,11 @@ GtkCalendar.check:checked:insensitive:selected,
 
 .check:checked:hover {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-hover-dark.png"), url("assets/checkbox-checked-hover-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:checked:hover.button.flat,
 .header-bar .check.titlebutton.button:checked:hover,
 .titlebar .check.titlebutton.button:checked:hover {
-    icon-shadow: none;
 }
 
 .view.check:checked:hover:selected,
@@ -792,13 +762,11 @@ GtkCalendar.check:checked:hover:selected,
 
 .check:checked:active {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-active-dark.png"), url("assets/checkbox-checked-active-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:checked:active.button.flat,
 .header-bar .check.titlebutton.button:checked:active,
 .titlebar .check.titlebutton.button:checked:active {
-    icon-shadow: none;
 }
 
 .view.check:checked:active:selected,
@@ -809,13 +777,11 @@ GtkCalendar.check:checked:active:selected,
 
 .check:backdrop:checked {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-backdrop-dark.png"), url("assets/checkbox-checked-backdrop-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:backdrop:checked.button.flat,
 .header-bar .check.titlebutton.button:backdrop:checked,
 .titlebar .check.titlebutton.button:backdrop:checked {
-    icon-shadow: none;
 }
 
 .view.check:backdrop:checked:selected,
@@ -826,13 +792,11 @@ GtkCalendar.check:backdrop:checked:selected,
 
 .check:backdrop:checked:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-backdrop-insensitive-dark.png"), url("assets/checkbox-checked-backdrop-insensitive-dark@2.png"));
-    icon-shadow: none;
 }
 
 .check:backdrop:checked:insensitive.button.flat,
 .header-bar .check.titlebutton.button:backdrop:checked:insensitive,
 .titlebar .check.titlebutton.button:backdrop:checked:insensitive {
-    icon-shadow: none;
 }
 
 .view.check:backdrop:checked:insensitive:selected,
@@ -843,18 +807,15 @@ GtkCalendar.check:backdrop:checked:insensitive:selected,
 
 .menu .menuitem.check {
     -gtk-icon-source: -gtk-icontheme("checkbox-symbolic");
-    icon-shadow: none;
 }
 
 .menu .menuitem.check:active,
 .menu .menuitem.check:checked {
     -gtk-icon-source: -gtk-icontheme("checkbox-checked-symbolic");
-    icon-shadow: none;
 }
 
 .menu .menuitem.check:inconsistent {
     -gtk-icon-source: -gtk-icontheme("checkbox-mixed-symbolic");
-    icon-shadow: none;
 }
 
 .menu .menuitem.check:hover {
@@ -867,13 +828,11 @@ GtkCalendar.check:backdrop:checked:insensitive:selected,
 
 .radio {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-dark.png"), url("assets/radio-unchecked-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio.button.flat,
 .header-bar .radio.titlebutton.button,
 .titlebar .radio.titlebutton.button {
-    icon-shadow: none;
 }
 
 .view.radio:selected,
@@ -884,13 +843,11 @@ GtkCalendar.radio:selected,
 
 .radio:hover {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-hover-dark.png"), url("assets/radio-unchecked-hover-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:hover.button.flat,
 .header-bar .radio.titlebutton.button:hover,
 .titlebar .radio.titlebutton.button:hover {
-    icon-shadow: none;
 }
 
 .view.radio:hover:selected,
@@ -901,13 +858,11 @@ GtkCalendar.radio:hover:selected,
 
 .radio:active {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-active-dark.png"), url("assets/radio-unchecked-active-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:active.button.flat,
 .header-bar .radio.titlebutton.button:active,
 .titlebar .radio.titlebutton.button:active {
-    icon-shadow: none;
 }
 
 .view.radio:active:selected,
@@ -918,13 +873,11 @@ GtkCalendar.radio:active:selected,
 
 .radio:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark.png"), url("assets/radio-unchecked-insensitive-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:insensitive.button.flat,
 .header-bar .radio.titlebutton.button:insensitive,
 .titlebar .radio.titlebutton.button:insensitive {
-    icon-shadow: none;
 }
 
 .view.radio:insensitive:selected,
@@ -935,13 +888,11 @@ GtkCalendar.radio:insensitive:selected,
 
 .radio:backdrop {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-backdrop-dark.png"), url("assets/radio-unchecked-backdrop-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:backdrop.button.flat,
 .header-bar .radio.titlebutton.button:backdrop,
 .titlebar .radio.titlebutton.button:backdrop {
-    icon-shadow: none;
 }
 
 .view.radio:backdrop:selected,
@@ -952,13 +903,11 @@ GtkCalendar.radio:backdrop:selected,
 
 .radio:backdrop:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-backdrop-insensitive-dark.png"), url("assets/radio-unchecked-backdrop-insensitive-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:backdrop:insensitive.button.flat,
 .header-bar .radio.titlebutton.button:backdrop:insensitive,
 .titlebar .radio.titlebutton.button:backdrop:insensitive {
-    icon-shadow: none;
 }
 
 .view.radio:backdrop:insensitive:selected,
@@ -969,13 +918,11 @@ GtkCalendar.radio:backdrop:insensitive:selected,
 
 .radio:inconsistent {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-dark.png"), url("assets/radio-mixed-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:inconsistent.button.flat,
 .header-bar .radio.titlebutton.button:inconsistent,
 .titlebar .radio.titlebutton.button:inconsistent {
-    icon-shadow: none;
 }
 
 .view.radio:inconsistent:selected,
@@ -986,13 +933,11 @@ GtkCalendar.radio:inconsistent:selected,
 
 .radio:inconsistent:hover {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-hover-dark.png"), url("assets/radio-mixed-hover-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:inconsistent:hover.button.flat,
 .header-bar .radio.titlebutton.button:inconsistent:hover,
 .titlebar .radio.titlebutton.button:inconsistent:hover {
-    icon-shadow: none;
 }
 
 .view.radio:inconsistent:hover:selected,
@@ -1003,13 +948,11 @@ GtkCalendar.radio:inconsistent:hover:selected,
 
 .radio:inconsistent:selected {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-active-dark.png"), url("assets/radio-mixed-active-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:inconsistent:selected.button.flat,
 .header-bar .radio.titlebutton.button:inconsistent:selected,
 .titlebar .radio.titlebutton.button:inconsistent:selected {
-    icon-shadow: none;
 }
 
 .view.radio:inconsistent:selected:selected,
@@ -1020,13 +963,11 @@ GtkCalendar.radio:inconsistent:selected,
 
 .radio:inconsistent:backdrop {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-backdrop-dark.png"), url("assets/radio-mixed-backdrop-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:inconsistent:backdrop.button.flat,
 .header-bar .radio.titlebutton.button:inconsistent:backdrop,
 .titlebar .radio.titlebutton.button:inconsistent:backdrop {
-    icon-shadow: none;
 }
 
 .view.radio:inconsistent:backdrop:selected,
@@ -1037,13 +978,11 @@ GtkCalendar.radio:inconsistent:backdrop:selected,
 
 .radio:inconsistent:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-dark.png"), url("assets/radio-mixed-insensitive-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:inconsistent:insensitive.button.flat,
 .header-bar .radio.titlebutton.button:inconsistent:insensitive,
 .titlebar .radio.titlebutton.button:inconsistent:insensitive {
-    icon-shadow: none;
 }
 
 .view.radio:inconsistent:insensitive:selected,
@@ -1054,13 +993,11 @@ GtkCalendar.radio:inconsistent:insensitive:selected,
 
 .radio:inconsistent:insensitive:backdrop {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-backdrop-insensitive-dark.png"), url("assets/radio-mixed-backdrop-insensitive-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:inconsistent:insensitive:backdrop.button.flat,
 .header-bar .radio.titlebutton.button:inconsistent:insensitive:backdrop,
 .titlebar .radio.titlebutton.button:inconsistent:insensitive:backdrop {
-    icon-shadow: none;
 }
 
 .view.radio:inconsistent:insensitive:backdrop:selected,
@@ -1071,13 +1008,11 @@ GtkCalendar.radio:inconsistent:insensitive:backdrop:selected,
 
 .radio:checked {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-dark.png"), url("assets/radio-checked-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:checked.button.flat,
 .header-bar .radio.titlebutton.button:checked,
 .titlebar .radio.titlebutton.button:checked {
-    icon-shadow: none;
 }
 
 .view.radio:checked:selected,
@@ -1088,13 +1023,11 @@ GtkCalendar.radio:checked:selected,
 
 .radio:checked:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:checked:insensitive.button.flat,
 .header-bar .radio.titlebutton.button:checked:insensitive,
 .titlebar .radio.titlebutton.button:checked:insensitive {
-    icon-shadow: none;
 }
 
 .view.radio:checked:insensitive:selected,
@@ -1105,13 +1038,11 @@ GtkCalendar.radio:checked:insensitive:selected,
 
 .radio:checked:hover {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-hover-dark.png"), url("assets/radio-checked-hover-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:checked:hover.button.flat,
 .header-bar .radio.titlebutton.button:checked:hover,
 .titlebar .radio.titlebutton.button:checked:hover {
-    icon-shadow: none;
 }
 
 .view.radio:checked:hover:selected,
@@ -1122,13 +1053,11 @@ GtkCalendar.radio:checked:hover:selected,
 
 .radio:checked:active {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-active-dark.png"), url("assets/radio-checked-active-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:checked:active.button.flat,
 .header-bar .radio.titlebutton.button:checked:active,
 .titlebar .radio.titlebutton.button:checked:active {
-    icon-shadow: none;
 }
 
 .view.radio:checked:active:selected,
@@ -1139,13 +1068,11 @@ GtkCalendar.radio:checked:active:selected,
 
 .radio:backdrop:checked {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-backdrop-dark.png"), url("assets/radio-checked-backdrop-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:backdrop:checked.button.flat,
 .header-bar .radio.titlebutton.button:backdrop:checked,
 .titlebar .radio.titlebutton.button:backdrop:checked {
-    icon-shadow: none;
 }
 
 .view.radio:backdrop:checked:selected,
@@ -1156,13 +1083,11 @@ GtkCalendar.radio:backdrop:checked:selected,
 
 .radio:backdrop:checked:insensitive {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-backdrop-insensitive-dark.png"), url("assets/radio-checked-backdrop-insensitive-dark@2.png"));
-    icon-shadow: none;
 }
 
 .radio:backdrop:checked:insensitive.button.flat,
 .header-bar .radio.titlebutton.button:backdrop:checked:insensitive,
 .titlebar .radio.titlebutton.button:backdrop:checked:insensitive {
-    icon-shadow: none;
 }
 
 .view.radio:backdrop:checked:insensitive:selected,

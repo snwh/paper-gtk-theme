@@ -69,7 +69,7 @@
 .selection-mode.header-bar .button:hover,
 .selection-mode.toolbar .button:hover,
 .selection-mode.toolbar GtkToolButton .button:hover {
-    background: alpha(#000, 0.1);
+    background-color: alpha(#000, 0.1);
 }
 
 .selection-mode.header-bar .button:active,
@@ -78,7 +78,7 @@
 .selection-mode.toolbar .button:hover:active,
 .selection-mode.toolbar GtkToolButton .button:active,
 .selection-mode.toolbar GtkToolButton .button:hover:active {
-    background: alpha(#000, 0.1);
+    background-color: alpha(#000, 0.1);
     box-shadow: inset 0 -2px 0 0 @selection_mode_foreground;
 }
 
@@ -88,7 +88,7 @@
 .selection-mode.toolbar .button:hover:active:backdrop,
 .selection-mode.toolbar GtkToolButton .button:active:backdrop,
 .selection-mode.toolbar GtkToolButton .button:hover:active:backdrop {
-    background: alpha(#000, 0.1);
+    background-color: alpha(#000, 0.1);
     box-shadow: inset 0 -2px 0 0 @selection_mode_foreground_backdrop;
     color: @selection_mode_foreground_backdrop;
 }
@@ -102,7 +102,7 @@
 .selection-mode.header-bar .button:active,
 .selection-mode.toolbar .button:active,
 .selection-mode.toolbar GtkToolButton .button:active {
-    background: alpha(#000, 0.1);
+    background-color: alpha(#000, 0.1);
     box-shadow: inset 0 -2px 0 0 @selection_mode_foreground;
 }
 
@@ -126,20 +126,20 @@
 
 .selection-mode.header-bar .selection-menu.button:active,
 .selection-mode.toolbar .selection-menu.button:active {
-    background: alpha(#000, 0.1);
+    background-color: alpha(#000, 0.1);
     box-shadow: inset 0 -2px 0 0 @selection_mode_foreground;
 }
 
 .selection-mode.header-bar .selection-menu.button:active:backdrop,
 .selection-mode.toolbar .selection-menu.button:active:backdrop {
-    background: alpha(#000, 0.1);
+    background-color: alpha(#000, 0.1);
     box-shadow: inset 0 -2px 0 0 @selection_mode_foreground_backdrop;
     color: @selection_mode_foreground_backdrop;
 }
 
 .selection-mode.header-bar .selection-menu.button:active,
 .selection-mode.toolbar .selection-menu.button:active {
-    background: alpha(#000, 0.1);
+    background-color: alpha(#000, 0.1);
     box-shadow: inset 0 -2px 0 0 @selection_mode_foreground;
     color: @selection_mode_foreground;
 }
@@ -147,49 +147,41 @@
 
 /* View Content Check */
 .view.content-view.check {
-    icon-shadow: none;
     -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked.png"), url("assets/selection-mode-checkbox-unchecked@2.png"));
-    background-color: transparent;
+    background: none;
 }
 
 .view.content-view.check:hover {
-    icon-shadow: none;
     -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked-hover.png"), url("assets/selection-mode-checkbox-unchecked-hover@2.png"));
-    background-color: transparent;
+    background: none;
 }
 
 .view.content-view.check:active {
-    icon-shadow: none;
     -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked-active.png"), url("assets/selection-mode-checkbox-unchecked-active@2.png"));
-    background-color: transparent;
+    background: none;
 }
 
 .view.content-view.check:backdrop {
-    icon-shadow: none;
     -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked-backdrop.png"), url("assets/selection-mode-checkbox-unchecked-backdrop@2.png"));
-    background-color: transparent;
+    background: none;
 }
 
 .view.content-view.check:checked {
-    icon-shadow: none;
     -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-checked.png"), url("assets/selection-mode-checkbox-checked@2.png"));
-    background-color: transparent;
+    background: none;
 }
 
 .view.content-view.check:checked:hover {
-    icon-shadow: none;
     -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-checked-hover.png"), url("assets/selection-mode-checkbox-checked-hover@2.png"));
-    background-color: transparent;
+    background: none;
 }
 
 .view.content-view.check:checked:active {
-    icon-shadow: none;
     -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-checked-active.png"), url("assets/selection-mode-checkbox-checked-active@2.png"));
-    background-color: transparent;
+    background: none;
 }
 
 .view.content-view.check:backdrop:checked {
-    icon-shadow: none;
     -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-checked-backdrop.png"), url("assets/selection-mode-checkbox-checked-backdrop@2.png"));
-    background-color: transparent;
+    background: none;
 }

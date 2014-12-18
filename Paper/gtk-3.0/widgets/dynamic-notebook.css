@@ -34,14 +34,14 @@
 }
 
 .dynamic-notebook {
-    background-color: transparent;
+    background: none;
     border:none;
 
 }
 
 .dynamic-notebook:backdrop {
     background-clip: border-box;
-    background-color: transparent;
+    background: none;
     background-image: none;
     border:none;
 }
@@ -82,7 +82,7 @@
 }
 
 .dynamic-notebook GtkLabel {
-    background-color: transparent;
+    background: none;
     color: @foreground;
 }
 
@@ -97,7 +97,7 @@
 
 .dynamic-notebook GtkLabel:insensitive,
 .dynamic-notebook .image:insensitive {
-    background-color: transparent;
+    background: none;
     color: @insensitive_background;
 }
 

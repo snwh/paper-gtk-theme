@@ -48,7 +48,7 @@ BirdieWidgetsUserbox {
 BirdieWidgetsNotebook
 BirdieWidgetsNotebook .notebook .header,
 BirdieWidgetsNotebook .dynamic-notebook .header {
-	background: @base;
+	background-color: @base;
 }
 
 /* Active */

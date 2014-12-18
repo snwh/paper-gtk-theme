@@ -111,18 +111,18 @@
  ****************/
 .scale.progressbar
 .scale.progressbar.vertical {
-    background: @selection;
+    background-color: @selection;
     border: 1px solid @selection;
 }
 
 .scale.progressbar:insensitive,
 .scale.progressbar.vertical:insensitive {
-    background: @insensitive_trough_background;
+    background-color: @insensitive_trough_background;
     border: 1px solid @insensitive_trough_background;
 }
 
 .scale.progressbar:backdrop,
 .scale.progressbar.vertical:backdrop {
-    background: @backdrop_trough_background;
+    background-color: @backdrop_trough_background;
     border: 1px solid @backdrop_trough_background;
 }

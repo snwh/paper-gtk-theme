@@ -15,7 +15,7 @@
 
 .spinner {
   background-image: none;
-  background-color: transparent;
+  background: none;
   opacity: 0;
   -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
 }

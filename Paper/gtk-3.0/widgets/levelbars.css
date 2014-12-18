@@ -105,12 +105,12 @@ GtkLevelBar.vertical {
 }
 
 .level-bar.fill-block.empty-fill-block {
-    background-color: transparent;
+    background: none;
     background-image: none;
     border-color: alpha(@foreground, 0.1);
 }
 
 .level-bar.fill-block.empty-fill-block:backdrop {
     border-color: transparent;
-    background-color: transparent;
+    background: none;
 }

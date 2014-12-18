@@ -43,14 +43,14 @@
 
 .suggested-action.button GtkLabel:backdrop,
 .suggested-action.button:backdrop {
-    background-color: transparent;
+    background: none;
     color: @backdrop_suggested_action_foreground;
 }
 
 .suggested-action.button GtkLabel:insensitive,
 .suggested-action.button:insensitive,
 .suggested-action.button:active *:insensitive {
-    background-color: transparent;
+    background: none;
     color: @insensitive_suggested_action_foreground;
 }
 

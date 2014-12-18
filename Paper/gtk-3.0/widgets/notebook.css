@@ -249,14 +249,14 @@
 /*----- Labels -----*/
 
 .notebook tab GtkLabel {
-    background-color: transparent;
+    background: none;
     color: @backdrop_text;
 }
 
 .notebook tab:active GtkLabel,
 .notebook .active-page,
 .notebook tab .active-page GtkLabel {
-    background-color: transparent;
+    background: none;
     color: @foreground;
     font-weight: bold;
     text-shadow: 0 1px alpha(@base,0.2);
@@ -264,9 +264,8 @@
 
 .notebook tab:backdrop GtkLabel,
 .notebook tab GtkLabel:backdrop {
-    background-color: transparent;
+    background: none;
     color: @backdrop_text;
-    text-shadow: none;
 }
 
 /*----- Close Button -----*/
@@ -277,27 +276,25 @@
     color: @backdrop_text;
     border: none;
     background-image: none;
-    background-color: transparent;
+    background: none;
     border-radius: 16px;
     padding: 0;
     box-shadow: none;
-    icon-shadow: none;
 }
 
 .notebook tab .button:hover {
     color: @foreground;
-    background: alpha(#000, 0.1);
+    background-color: alpha(#000, 0.1);
 }
 
 .notebook tab .button:active,
 .notebook tab .button:active:hover {
     color: @selection_foreground;
-    background: @selection;
+    background-color: @selection;
 }
 
 .notebook tab .button:backdrop {
     color: mix(@backdrop_foreground, @backdrop_base, 0.7);
-    icon-shadow: none;
 }
 
 .notebook tab .button:backdrop:hover {

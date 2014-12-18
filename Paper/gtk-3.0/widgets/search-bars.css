@@ -26,48 +26,55 @@
 
 .search-bar.toolbar,
 .search-bar {
-    background: @search;
-    border-bottom: 1px solid @border;
+    background-color: @search;
+    box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.5);
+    color: @search_text;
+}
+.search-bar.toolbar:focus,
+.search-bar:focus {
+    background-color: @search;
     box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.5);
     color: @search_text;
 }
 
 .search-bar.toolbar:backdrop,
 .search-bar:backdrop {
-    background: shade(@search, 0.9);
-    border-bottom: 1px solid @border;
+    background-color: shade(@search, 0.9);
     box-shadow: none;
     color: shade(@search_text, 0.9);
 }
 
 .search-bar.toolbar:backdrop,
 .search-bar:backdrop {
-    background: shade(@search, 0.9);
-    border-bottom: 1px solid @border;
+    background-color: shade(@search, 0.9);
     box-shadow: inset 0 -1px 2px -1px alpha(#000, 0.3);
     color: shade(@search_text, 0.9);
 }
 
 /* Entry */
-.search-bar .entry {
+.search-bar .toolbar .entry,
+.search-bar .entry  {
     color: @search_text;
     border-radius: 0px;
     border: none;
-    background:transparent;
+    background-color:transparent;
 }
+.search-bar .toolbar .entry:active,
 .search-bar .entry:active {
     color: @search_text;
     border-radius: 0px;
     border: none;
-    background:transparent;
+    background-color:transparent;
 }
 
+.search-bar .toolbar .entry:focus,
 .search-bar .entry:focus {
     color: @search_text;
     border: solid @search_text;
     border-bottom-width: 1px;
 }
 
+.search-bar .toolbar .entry:backdrop,
 .search-bar .entry:backdrop {
     color: shade(@search_text,0.9);
     border: solid @search_text;
@@ -97,7 +104,7 @@
 .search-bar.toolbar .button:active:hover,
 .search-bar .button:active:hover{
     border: none;
-    background: alpha(#000, 0.1);
+    background-color: alpha(#000, 0.1);
     color: @search_text;
     box-shadow: inset 0 -2px 0 0 @search_text;
 }
@@ -107,7 +114,7 @@
  ********************/
 
 .search-bar .entry {
-    background-color: transparent;
+    background: none;
     color: @text;
     padding: 6px;
     border-radius: 6px;
@@ -117,13 +124,13 @@
 
 .search-bar .entry:active,
 .search-bar .entry:focus {
-    background-color: transparent;
+    background: none;
     color: @text;
     border: none;
 }
 
 .search-bar .entry:backdrop {
-    background-color: transparent;
+    background: none;
     color: @backdrop_text;
     border: none;
 }

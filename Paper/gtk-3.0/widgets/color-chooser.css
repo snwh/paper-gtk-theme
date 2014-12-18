@@ -26,7 +26,7 @@ GtkColorSwatch:selected {
     border-style: solid;
     border: 1px solid alpha(#000, 0.1);
     border-radius: 1px;
-    background-color: transparent;
+    background: none;
     background-clip: border-box;
 }
 
@@ -90,7 +90,7 @@ GtkColorChooserWidget #add-color-button:hover {
     border-width: 1px;
     border-style: solid;
     border-width: 2px;
-    background-color: transparent;
+    background: none;
 }
 
 .color-active-badge.color-light,
