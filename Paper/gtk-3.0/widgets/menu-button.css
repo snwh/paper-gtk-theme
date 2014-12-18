@@ -80,3 +80,57 @@ GtkMenuButton.button *:active,
 
 GtkMenuButton .menu {
 }
+
+
+/* Images */
+.menu-button .menu .menuitem GtkImage {
+    color: @text;
+}
+
+.menu-button .menu .menuitem:active GtkImage,
+.menu-button .menu .menuitem:focus GtkImage,
+.menu-button .menu .menuitem:hover GtkImage {
+    color: @selected_foreground;
+}
+
+.menu-button .menu .menuitem:backdrop GtkImage,
+.menu-button .menu .menuitem:backdrop:hover GtkImage,
+.menu-button .menu .menuitem:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+.menu-button .menu .menuitem:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+.menu-button .menu .menuitem:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+.menu-button .menu .menuitem GtkLabel {
+    color: @text;
+}
+
+.menu-button .menu .menuitem:active GtkLabel,
+.menu-button .menu .menuitem:focus GtkLabel,
+.menu-button .menu .menuitem:hover GtkLabel {
+    color: @selected_foreground;
+}
+
+.menu-button .menu .menuitem:backdrop GtkLabel,
+.menu-button .menu .menuitem:backdrop:hover GtkLabel,
+.menu-button .menu .menuitem:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.menu-button .menu .menuitem:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.menu-button .menu .menuitem:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
