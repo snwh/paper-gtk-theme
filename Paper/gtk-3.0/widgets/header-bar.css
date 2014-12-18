@@ -60,7 +60,7 @@
 
 /* Separator */
 .header-bar .separator {
-    background: transparent;
+    background: none;
     color: transparent;
 }
 
@@ -153,8 +153,9 @@
 .header-bar GtkComboBox:hover,
 .header-bar .suggested-action.button:hover {
     border-radius: 0px;
-    background: alpha(#000, 0.1);
+    background-color: alpha(#000, 0.1);
     border: none;
+    box-shadow: inset 0 -2px 0 0 @header_text;
     color: @header_text;
 }
 
@@ -195,7 +196,7 @@
 .header-bar GtkComboBox:active:backdrop,
 .header-bar .suggested-action.button:active:backdrop {
     border-radius: 0px;
-    background: alpha(#000, 0.2);
+    background-color: alpha(#000, 0.2);
     font: Bold;
     border: none;
     color: @backdrop_header_text;
@@ -214,8 +215,9 @@
 .header-bar GtkComboBox:backdrop:hover,
 .header-bar .suggested-action.button:backdrop:hover {
     border-radius: 0px;
-    background: alpha(#000, 0.1);
+    background-color: alpha(#000, 0.1);
     border: none;
+    box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
     color: @backdrop_header_text;
 }
 
@@ -257,6 +259,36 @@
     -gtk-image-effect: dim;
 }
 
+.header-bar .button GtkImage:insensitive:backdrop {
+    color: mix(@backdrop_toolbar_text, @insensitive_toolbar_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Button Labels */
+.header-bar .button GtkLabel,
+.header-bar .button GtkLabel:active,
+.header-bar .button GtkLabel:focus,
+.header-bar .button GtkLabel:hover {
+    color: @header_text;
+}
+
+.header-bar .button GtkLabel:active:backdrop,
+.header-bar .button GtkLabel:backdrop,
+.header-bar .button GtkLabel:backdrop:hover {
+    color: @backdrop_header_text;
+    -gtk-image-effect: dim;
+}
+
+.header-bar .button GtkLabel:insensitive {
+    color: @insensitive_header_text;
+    -gtk-image-effect: dim;
+}
+
+.header-bar .button GtkLabel:insensitive:backdrop {
+    color: mix(@backdrop_toolbar_text, @insensitive_toolbar_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
 
 /*************************
  * Header bar separator  *
@@ -274,7 +306,7 @@
 .header-bar .separator,
 .header-bar .button .separator,
 .header-bar .button.separator {
-    background-color: transparent;
+    background: none;
     color: transparent;
     border:none;
 } 
@@ -285,7 +317,7 @@
  ********************/
 
 .header-bar .entry {
-    background-color: transparent;
+    background: none;
     color: @header_text;
     padding: 6px;
     border-radius: 6px;
@@ -295,13 +327,13 @@
 
 .header-bar .entry:active,
 .header-bar .entry:focus {
-    background-color: transparent;
+    background: none;
     color: @header_text;
     border: none;
 }
 
 .header-bar .entry:backdrop {
-    background-color: transparent;
+    background: none;
     color: @backdrop_header_text;
     border: none;
 }

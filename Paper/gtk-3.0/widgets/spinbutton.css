@@ -21,12 +21,13 @@
  * Spinbutton *
  **************/
 .spinbutton {
-    border-radius: 6px;
+    border-radius: 2px;
     border: 1px solid @border;
     box-shadow: none;
     color: @text;
 }
 
+.spinbutton:hover,
 .spinbutton:focus {
     box-shadow: none;
 }
@@ -43,8 +44,8 @@
     border-radius: 0px;
     background: none;
     border: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    /*border-top-right-radius: 5px;*/
+    /*border-bottom-right-radius: 5px;*/
     padding: 2px 4px;
     color: @foreground;
 }
@@ -52,17 +53,20 @@
 /* Buttons */
 
 .spinbutton .button:hover {
+    box-shadow: none;
     border: none;
     color: @selection;
-    background-color: transparent;
+    background: none;
 }
 
 .spinbutton .button:active {
+    box-shadow: none;
     background-color: @selection;
     color: @selection_foreground;
 }
 
 .spinbutton .button:insensitive {
+    box-shadow: none;
     background-color: @insensitive_background;
     color: @insensitive_text;
 }

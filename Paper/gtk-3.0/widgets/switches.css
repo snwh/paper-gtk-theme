@@ -42,7 +42,7 @@ GtkSwitch.trough:active {
 
 GtkSwitch.trough:backdrop,
 GtkSwitch.trough:active:backdrop {
-    background: transparent;
+    background: none;
     border: 1px solid @backdrop_border;
     color: @backdrop_text;
 }

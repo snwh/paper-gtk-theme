@@ -70,20 +70,20 @@
 .scrollbar.trough {
     border-radius: 10px;
     background-image: none;
-    background-color: transparent;
+    background: none;
     border-width: 0;
     border-image: none;
 }
 
 .scrollbar.trough:insensitive {
-    background-color: transparent;
+    background: none;
     border: 3px solid transparent;
 }
 
 .scrollbars-junction:backdrop,
 .scrollbar.trough:backdrop {
     background-image: none;
-    background-color: transparent;
+    background: none;
     border-width: 0;
     border-radius: 0;
     border-image: none;
@@ -91,7 +91,7 @@
 
 .scrollbar.trough:insensitive:backdrop {
     background-image: none;
-    background-color: transparent;
+    background: none;
     border-width: 0;
     border-radius: 0;
     border-image: none;

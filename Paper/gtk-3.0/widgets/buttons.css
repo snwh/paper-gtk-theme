@@ -16,30 +16,21 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
+@define-color button_background shade(@background, 0.9);/* Button background color */
+@define-color backdrop_button_background shade(@backdrop_background, 0.9);/* Button background color */
+@define-color button_border @button_background; /* Button border color */
 
 /***********
  * Buttons *
  ***********/
  
-.button,
-.button.text-button,
-.button.image-button {
-    -GtkWidget-focus-padding: 0;
-    -GtkWidget-focus-line-width: 0;
-    border-radius: 6px;
-    padding: 3px 8px;
-    background: none;
-    text-shadow: none;
-    icon-shadow: none;
-    border: 1px solid @border;
+.button {
+    border-radius: 4px;
+    padding: 4px 9px;
+    border-color: @button_background;
+    background-color: @button_background;
+    border: none;
 }
-
-.button GtkImage,
-.button .flat GtkImage,
-.button.image-button GtkImage {
-    color: @text;
-}
-
 
 .button.flat,
 .button.flat:backdrop,
@@ -67,16 +58,8 @@ GtkCalendar.button:backdrop:hover,
 .scale-popup .button:backdrop,
 .scale-popup .button:backdrop:hover,
 .scale-popup .button:backdrop:insensitive {
-    background-color: transparent;
-    background-image: none;
-    text-shadow: none;
-    icon-shadow: none;
-    padding: 4px 9px;
-}
-
-
-/* Flat Button */
-.button.flat:active {
+    background: none;
+    box-shadow: none;
 }
 
 /* Focus Button */
@@ -85,11 +68,10 @@ GtkCalendar.button:backdrop:hover,
 .button:active:focus,
 .button.text-button:focus,
 .button.image-button:focus {
-    border: 1px solid @selection;
-    background-color: @selection;
+    border-color: shade(@selection, 1.1);
+    background-color: shade(@selection, 1.1);
     color: @selected_foreground;
-    text-shadow: none;
-    icon-shadow: none;
+    /*box-shadow: 0 1px 2px 0px alpha(#000,0.2);*/
 }
 
 /* Hover Button */
@@ -98,11 +80,10 @@ GtkCalendar.button:backdrop:hover,
 .button:active:hover,
 .button.text-button:hover,
 .button.image-button:hover {
-    border: 1px solid @selection;
-    background-color: @selection;
+    border-color: shade(@selection, 1.2);
+    background-color: shade(@selection, 1.2);
     color: @selected_foreground;
-    text-shadow: none;
-    icon-shadow: none;
+    /*box-shadow: 0 1px 2px 1px alpha(#000,0.2);*/
 }
 
 /* Active/Pressed Button */
@@ -110,23 +91,11 @@ GtkCalendar.button:backdrop:hover,
 .button.default:active,
 .button.text-button:active,
 .button.image-button:active {
-    border: 1px solid @selection;
-    background: @selection;
+    border-color: shade(@selection, 1.1);
+    background-color: shade(@selection, 1.1);
     color: @selected_foreground;
-    text-shadow: none;
-    icon-shadow: none;
-}
+    /*box-shadow: 0 1px 2px 0px alpha(#000,0.2);*/
 
-/* Active/Pressed Button */
-.button:active:hover,
-.button.default:active:hover,
-.button.text-button:active:hover,
-.button.image-button:active:hover {
-    border: 1px solid shade(@selection, 1.1);
-    background: shade(@selection, 1.1);
-    color: @selected_foreground;
-    text-shadow: none;
-    icon-shadow: none;
 }
 
 /* Insensitive Button */
@@ -136,10 +105,8 @@ GtkCalendar.button:backdrop:hover,
 .button.text-button:insensitive,
 .button.image-button:insensitive {
     border: 1px solid @insensitive_border;
-    background: @insensitive_button;
+    background-color: @insensitive_button;
     color: @insensitive_text;
-    text-shadow: none;
-    icon-shadow: none;
 }
 
 /* Backdrop Button */
@@ -148,11 +115,83 @@ GtkCalendar.button:backdrop:hover,
 .button:active:backdrop,
 .button.text-button:backdrop,
 .button.image-button:backdrop {
-    border: 1px solid @backdrop_border;
-    background: @insensitive_button;
+    border-color: @backdrop_button_background;
+    background-color: @backdrop_button_background;
     color: @backdrop_text;
-    text-shadow: none;
-    icon-shadow: none;
+}
+/* Backdrop Button */
+.button:backdrop:hover,
+.button.default:backdrop:hover,
+.button:active:backdrop:hover,
+.button.text-button:backdrop:hover,
+.button.image-button:backdrop:hover {
+    background-color: shade(@backdrop_button_background, 1.1);
+    color: @backdrop_text;
+    box-shadow: none;
+}
+
+/* Insensitive Button */
+.button:insensitive:backdrop,
+.button.default:insensitive:backdrop,
+.button:active:insensitive:backdrop,
+.button.text-button:insensitive:backdrop,
+.button.image-button:insensitive:backdrop {
+    border: 1px solid @insensitive_border;
+    background-color: @insensitive_button;
+    color: @insensitive_text;
+}
+
+/* Images */
+.button GtkImage {
+    color: @text;
+}
+
+.button:active GtkImage,
+.button:focus GtkImage,
+.button:hover GtkImage {
+    color: @selected_foreground;
+}
+
+.button:backdrop GtkImage,
+.button:backdrop:hover GtkImage,
+.button:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+.button:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+.button:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+.button GtkLabel {
+    color: @text;
+}
+
+.button:active GtkLabel,
+.button:focus GtkLabel,
+.button:hover GtkLabel {
+    color: @selected_foreground;
+}
+
+.button:backdrop GtkLabel,
+.button:backdrop:hover GtkLabel,
+.button:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.button:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
 }
 
 /**************
@@ -172,7 +211,7 @@ GtkOverlay > .button:hover,
 GtkOverlay > .button:backdrop,
 GtkOverlay > .button:focus {
     background-image: none;
-    background-color: transparent;
+    background: none;
     color: #fff;
 }
 
@@ -180,7 +219,6 @@ GtkOverlay > .button:active,
 GtkOverlay > .button:hover:active {
     background-color: #fff;
     color: @foreground_color;
-    text-shadow: none;
 }
 
 GtkOverlay > .button:focus,

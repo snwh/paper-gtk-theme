@@ -149,6 +149,7 @@ NautilusQueryEditor .toolbar {
     border-style: solid;
     
     border-color: @background;
+    color: @text;
     
 }
 

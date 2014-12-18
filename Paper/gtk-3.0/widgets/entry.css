@@ -21,10 +21,10 @@
  *********/
 
 .entry {
-    background-color: transparent;
+    background: none;
     color: @text;
     padding: 6px;
-    border-radius: 6px;
+    border-radius: 2px;
     icon-shadow:none;
     border: 1px solid @border;
 }
@@ -36,7 +36,7 @@
 }
 
 .entry:insensitive {
-    background: @insensitive_background;
+    background-color: @insensitive_background;
     color: @insensitive_text;
     box-shadow:none;
 }
@@ -47,7 +47,7 @@
 }
 
 .entry:backdrop {
-    background: @backdrop_background;
+    background-color: @backdrop_background;
     color: @backdrop_text;
     box-shadow: none;
 }
@@ -76,6 +76,11 @@
     icon-shadow:none;
 }
 
+.entry .button,
+.entry .button:hover {
+    box-shadow:none;
+}
+
 
 /*********************
  * Entry Progressbar *
@@ -86,7 +91,7 @@
     margin: 0 2px 0 2px;
     border-image: none;
     border-style: none;
-    background-color: transparent;
+    background: none;
     background-image: linear-gradient(to top, 
                                       transparent 2px,
                                       @base 2px,

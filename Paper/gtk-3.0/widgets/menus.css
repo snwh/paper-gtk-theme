@@ -29,7 +29,6 @@
 
 .context-menu {
     font: initial;
-    text-shadow: none;
     box-shadow: 0 2px 3px 2px @menu_shadow;
 }
 
@@ -161,7 +160,7 @@
 .menuitem.radio {
     background: none;
     background-image: none;
-    background-color: transparent;
+    background: none;
     box-shadow: none;
 }
 
@@ -183,6 +182,6 @@
 .menuitem.radio:inconsistent:hover ,
 .menuitem.radio:inconsistent:insensitive,
 .menuitem.radio:insensitive {
-    background-color: transparent;
+    background: none;
     box-shadow: none;
 }

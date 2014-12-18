@@ -27,7 +27,7 @@
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     padding: 8px;
-    background: @base;
+    background-color: @base;
     color: @foreground;
 }
 
@@ -38,14 +38,6 @@
 .h2 { font: 18; }
 .h3 { font: 12; }
 
-/*********
- * label *
- *********/
-GtkLabel,
-GtkLabel:active,
-GtkLabel:insensitive {
-    background-color: transparent;
-}
 
 /*************
  * assistant *
@@ -78,7 +70,7 @@ GtkBubbleWindow.osd.background {
 }
 
 GtkBubbleWindow .toolbar {
-    background-color: transparent;
+    background: none;
 }
 
 
@@ -100,7 +92,7 @@ GtkBubbleWindow .toolbar {
 }
 
 .grip {
-    background-color: transparent;
+    background: none;
 }
 
 .arrow {

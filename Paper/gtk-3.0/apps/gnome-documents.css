@@ -86,7 +86,7 @@
 .documents-counter {
     background-image: url('assets/dnd-counter.svg');
     background-size: contain;
-    background-color: transparent;
+    background: none;
     color: @base;
     font: bold;
 }
@@ -116,7 +116,7 @@
 .documents-entry-tag.button:hover,
 .documents-entry-tag.button:active,
 .documents-entry-tag.button:active:hover {
-    background-color: transparent;
+    background: none;
     background-image: none;
     border-image: none;
     border-width: 0;

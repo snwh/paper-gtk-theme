@@ -44,7 +44,7 @@ GtkPopover.osd {
 GtkPopover .button,
 GtkPopover .button .image-button {
     border: none;
-    background: @base;
+    background-color: @base;
     color: @text;
 }
 
@@ -63,14 +63,14 @@ GtkPopover .button .image-button:hover {
 GtkPopover .button:active,
 GtkPopover .button .image-button:active {
     border: none;
-    background: @selection;
+    background-color: @selection;
     color: shade(@text, 0.8);
 }
 
 GtkPopover .button:active:hover,
 GtkPopover .button .image-button:active:hover {
     border: none;
-    background: shade(@selection, 1.1);
+    background-color: shade(@selection, 1.1);
     color: shade(@text, 0.8);
 }
 
@@ -91,7 +91,7 @@ GtkPopover .button .image-button:backdrop {
 GtkPopover .linked .button,
 GtkPopover .linked .button .image-button {
     border: 1px solid @border;
-    background: @base;
+    background-color: @base;
     color: @text;
 }
 
@@ -107,13 +107,13 @@ GtkPopover .linked .button .image-button:hover {
 
 GtkPopover .linked .button:active,
 GtkPopover .linked .button .image-button:active {
-    background: @selection;
+    background-color: @selection;
     color: shade(@text, 0.8);
 }
 
 GtkPopover .linked .button:active:hover,
 GtkPopover .linked .button .image-button:active:hover {
-    background: shade(@selection, 1.1);
+    background-color: shade(@selection, 1.1);
     color: shade(@text, 0.8);
 }
 
@@ -143,9 +143,7 @@ GtkPopover .separator {
     font-size: 80%;
     font-weight: bold;
     color: @border;
-    text-shadow: none;
-    background: transparent;
-    icon-shadow: none;
+    background: none;
     border: 0;
 }
 

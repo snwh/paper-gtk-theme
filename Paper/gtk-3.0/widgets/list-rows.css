@@ -82,3 +82,28 @@
     background-color: alpha(@selection, 0.2);
     color: @selection;
 }
+
+/* Labels */
+.button .list-row GtkLabel {
+    color: @text;
+}
+
+.button .list-row:active GtkLabel,
+.button .list-row:focus GtkLabel,
+.button .list-row:hover GtkLabel {
+    color: @selected_foreground;
+}
+
+.button .list-row:backdrop GtkLabel,
+.button .list-row:backdrop:hover GtkLabel,
+.button .list-row:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.button .list-row:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.button .list-row:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}

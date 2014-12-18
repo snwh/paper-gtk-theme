@@ -15,7 +15,7 @@
 }
 
 .tooltip * {
-    background-color: transparent;
+    background: none;
 }
 
 .tooltip GtkLabel,

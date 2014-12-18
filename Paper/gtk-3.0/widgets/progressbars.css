@@ -29,17 +29,17 @@ GtkProgressBar {
 
 GtkProgressBar.progressbar {
     color: @selected_foreground;
-    background: @selection;
+    background-color: @progressbar_background;
 }
 
 GtkProgressBar.progressbar:backdrop {
     color: @selected_foreground;
-    background-color: shade(@backdrop_background, 0.95);
+    background-color: @backdrop_progressbar_background;
 }
 
 GtkProgressBar.trough {
     border: 1px solid @trough_background;
-    background: @trough_background;
+    background-color: @trough_background;
 }
 
 .progressbar row,
@@ -51,7 +51,7 @@ GtkProgressBar.trough {
 .progressbar.vertical row:selected,
 .progressbar.vertical row:selected:focus {
     color: @selected_foreground;
-    background: @selection;
+    background-color: @selection;
 }
 
 .progressbar row:insensitive,
@@ -75,7 +75,7 @@ GtkProgressBar.trough {
 .progressbar.vertical row:selected:backdrop,
 .progressbar.vertical row:selected:focus:backdrop {
     color: @selected_foreground;
-    background: @backdrop_progressbar_background;
+    background-color: @backdrop_progressbar_background;
 }
 
 

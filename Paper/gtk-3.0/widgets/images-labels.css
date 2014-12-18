@@ -17,15 +17,61 @@
 */
 
 /*********
- * Image *
- *********/
+ * Images *
+ **********/
  
 GtkImage,
-GtkImage:active,
-GtkImage:insensitive {
-    background-color: transparent;
-    border:none;
+* GtkImage {
+	background: none;
+    color: @toolbar_text;
 }
+
+GtkImage:backdrop,
+* GtkImage:backdrop {
+	background: none;
+    color: @backdrop_toolbar_text;
+    -gtk-image-effect: dim;
+}
+
+GtkImage:insensitive,
+* GtkImage:insensitive {
+	background: none;
+    color: @insensitive_toolbar_text;
+    -gtk-image-effect: dim;
+}
+
+GtkImage:insensitive:backdrop,
+* GtkImage:insensitive:backdrop {
+	background: none;
+    color: mix(@backdrop_toolbar_text , @insensitive_toolbar_text , 0.5);
+    -gtk-image-effect: dim;
+}
+
+/**********
+ * Labels *
+ **********
+
+GtkLabel {
+    background: none;
+    color: @toolbar_text;
+}
+
+GtkLabel:backdrop {
+    background: none;
+    color: @backdrop_toolbar_text;
+}
+
+GtkLabel:insensitive {
+    background: none;
+    color: @insensitive_toolbar_text;
+}
+
+GtkLabel:insensitive:backdrop {
+    background: none;
+    color: mix(@backdrop_toolbar_text , @insensitive_toolbar_text , 0.5);
+}
+
+*/
 
 /*******************
  * Symbolic Images *

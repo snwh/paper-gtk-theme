@@ -32,20 +32,21 @@
 }
 
 .menubar .menuitem {
-    background-color: transparent;
+    background: none;
     color: @header_text;
 
     -gtk-icon-style: symbolic;
 }
 
+.menubar.menuitem:active,
 .menubar .menuitem:active {
-    background-color: transparent;
+    background: none;
     color: @selection;
     box-shadow:inset 0 -3px 0 0 @selection;
 }
 
 .menubar .menuitem:backdrop {
-    background-color: transparent;
+    background: none;
     color: @backdrop_header_text;
 }
 

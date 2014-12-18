@@ -102,7 +102,7 @@ GeditPanel.vertical .title {
 
 GeditPanel .toolbar {
     border-style: none;
-    background-color: transparent;
+    background: none;
 }
 
 GeditDocumentsPanel .view {

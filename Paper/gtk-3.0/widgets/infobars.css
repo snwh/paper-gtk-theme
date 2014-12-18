@@ -21,7 +21,7 @@
  **************/
  
 GtkInfoBar {
-    background: @base;
+    background-color: @base;
     color: @foreground;
     border: solid @border;
     border-bottom-width: 1px;

@@ -16,7 +16,7 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color archives #bb9e7b;
+@define-color archives #A88A67;
 
 /**********
  * Header *
@@ -27,7 +27,7 @@ FrWindow .titlebar {
     background-color: @archives;
 }
 
-FrWindow .header-bar:backdrop,
+FrWindow .header-bar:backdrop,titlebar
 FrWindow .titlebar:backdrop {
     background-color: shade(@archives,0.9);
 }

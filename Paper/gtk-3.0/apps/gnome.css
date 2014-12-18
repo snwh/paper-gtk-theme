@@ -37,12 +37,12 @@ SushiFontWidget {
  **********/
 SudokuView SudokuCellView {
     border: inherit;
-    background: inherit;
+    background-color: inherit;
 }
 
 SudokuView SudokuCellView:backdrop {
     border: inherit;
-    background: inherit;
+    background-color: inherit;
 }
 
 SudokuView {

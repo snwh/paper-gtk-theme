@@ -67,7 +67,7 @@ CcShellNavBar {
  ************/
 
 CcShellItemView {
-    background: transparent;
+    background: none;
     border:none;
 }
 

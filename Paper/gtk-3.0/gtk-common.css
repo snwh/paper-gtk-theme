@@ -27,7 +27,7 @@
 @define-color insensitive_border shade(@border, 1.1);
 @define-color insensitive_button @insensitive_background;
 @define-color insensitive_separator shade(@separator, 1.05);
-@define-color insensitive_text alpha(#000, 0.4);
+@define-color insensitive_text alpha(#000, 0.3);
 @define-color insensitive_selection shade(@selection, 1.05);
 
 /* Backdrop colors */
@@ -36,7 +36,7 @@
 @define-color backdrop_foreground shade(@foreground, 1.2);
 @define-color backdrop_border shade(@border, 1.02);
 @define-color backdrop_separator shade(@separator, 0.99);
-@define-color backdrop_text alpha(@text, 0.6);
+@define-color backdrop_text alpha(@text, 0.5);
 @define-color backdrop_selection shade(@selection, 1.3);
 
 /* Backdrop-insensitive colors */
@@ -113,8 +113,8 @@
  ****************/
 
 @define-color progressbar_background shade(@selected_background, 1.1);
-@define-color backdrop_progressbar_background_a shade(@backdrop_background, 0.85);
-@define-color backdrop_progressbar_background_b shade(@backdrop_background, 0.85);
+@define-color backdrop_progressbar_background shade(@backdrop_background, 0.85);
+@define-color insensitive_progressbar_background shade(@insensitive_background, 0.85);
 
 
 /***********
