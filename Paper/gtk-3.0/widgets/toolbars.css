@@ -101,6 +101,7 @@
 .toolbar .button:insensitive,
 .toolbar .text-button:insensitive,
 .toolbar .image-button:insensitive {
+    background: none;
     color: @insensitive_header_text;
     -gtk-image-effect: dim;
 }
@@ -113,6 +114,7 @@
 .toolbar .text-button:active:backdrop,
 .toolbar .image-button:backdrop,
 .toolbar .image-button:active:backdrop {
+    background: none;
     color: @backdrop_toolbar_text;
     border: none;
     padding: 13px;

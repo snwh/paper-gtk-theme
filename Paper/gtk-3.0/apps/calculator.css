@@ -16,7 +16,7 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color calculator #9F347D;/* Calc color */
+@define-color calculator #BA174E;/* Calc color */
 
 /**************
  * Header bar *
@@ -39,6 +39,7 @@ MathButtons .button,
 MathButtons .button GtkImage,
 MathButtons .button.text-button,
 MathButtons .button.image-button {
+    background: none;
     border: none;
     color: @calculator;
     font: Bold;
@@ -47,6 +48,7 @@ MathButtons .button.image-button {
 
 MathButtons GtkComboBox,
 MathButtons GtkComboBox * {
+    background: none;
     border: none;
     color: @calculator;
     font: Bold;
@@ -95,4 +97,48 @@ MathButtons .button:hover {
     background-color: @calculator;
     color: @base;
     border: none;
+}
+
+/* Images */
+MathButtons .button GtkImage {
+    color: @calculator;
+}
+
+MathButtons .button:active GtkImage,
+MathButtons .button:focus GtkImage,
+MathButtons .button:hover GtkImage {
+    color: @selected_foreground;
+}
+
+MathButtons .button:backdrop GtkImage,
+MathButtons .button:backdrop:hover GtkImage,
+MathButtons .button:active:backdrop GtkImage {
+    color: shade(@calculator, 0.9);
+    -gtk-image-effect: dim;
+}
+
+MathButtons .button:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+MathButtons .button GtkLabel {
+    color: @calculator;
+}
+
+MathButtons .button:active GtkLabel,
+MathButtons .button:focus GtkLabel,
+MathButtons .button:hover GtkLabel {
+    color: @selected_foreground;
+}
+
+MathButtons .button:backdrop GtkLabel,
+MathButtons .button:backdrop:hover GtkLabel,
+MathButtons .button:active:backdrop GtkLabel {
+    color: shade(@calculator, 0.9);
+}
+
+MathButtons .button:insensitive GtkLabel {
+    color: @insensitive_text;
 }

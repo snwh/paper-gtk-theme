@@ -64,77 +64,62 @@
     color: transparent;
 }
 
-
-/***********************
- * Header bar buttons  *
- ***********************/
+/**********************
+ * Header bar buttons *
+ **********************/
 
 .header-bar .flat,
 .header-bar .button,
-.header-bar .title .button {
-    padding: 13px;
-}
-
+.header-bar .title,
+.header-bar .titlebutton,
+.header-bar .linked,
 .header-bar .text-button,
-.header-bar .button .text-button {
-    color: @header_text;
-    padding: 13px;
-}
-
-.header-bar .image-button
-.header-bar .image-button .button {
+.header-bar .image-button {
+    background-color: transparent;
+    background: none;
     padding: 13px;
 }
 
 /* Normal Button */
-.header-bar .button .default,
-.header-bar .text-button,
-.header-bar .button .text-button,
-.header-bar .flat,
-.header-bar .image-button .button,
-.header-bar .image-button,
 .header-bar .button,
-.header-bar .linked .button,
-.header-bar GtkComboBox,
-.header-bar .suggested-action.button {
+.header-bar .text-button,
+.header-bar .titlebutton,
+.header-bar .linked,
+.header-bar .flat,
+.header-bar .suggested-action .button,
+.header-bar .image-button {
+    background-color: transparent;
     border-radius: 0px;
-    background: none;
     border: none;
     color: @header_text;
 }
 
 /* Active Button */
-.header-bar .button .default:active,
-.header-bar .text-button:active,
-.header-bar .button .text-button:active,
-.header-bar .flat:active,
-.header-bar .image-button .button:active,
-.header-bar .image-button:active,
-.header-bar .button:only-child:active,
 .header-bar .button:active,
-.header-bar .linked .button:active,
-.header-bar GtkComboBox:active,
-.header-bar .suggested-action.button:active {
+.header-bar .text-button:active,
+.header-bar .titlebutton:active,
+.header-bar .linked:active,
+.header-bar .flat:active,
+.header-bar .suggested-action .button:active,
+.header-bar .image-button:active {
     border-radius: 0px;
     font: Bold;
+    background-color: alpha(#000, 0.1);
     border: none;
     color: @header_text;
     box-shadow: inset 0 -2px 0 0 @header_text;
 }
 
 /* Focus Button */
-.header-bar .button .default:focus,
-.header-bar .text-button:focus,
-.header-bar .button .text-button:focus,
-.header-bar .flat:focus,
-.header-bar .image-button .button:focus,
-.header-bar .image-button:focus,
 .header-bar .button:focus,
-.header-bar .linked .button:focus,
-.header-bar GtkComboBox:focus,
-.header-bar .suggested-action.button:focus {
+.header-bar .text-button:focus,
+.header-bar .titlebutton:focus,
+.header-bar .linked:focus,
+.header-bar .flat:focus,
+.header-bar .suggested-action .button:focus,
+.header-bar .image-button:focus {
     border-radius: 0px;
-    background: none;
+    background-color: transparent;
     font: Bold;
     border: none;
     color: @header_text;
@@ -142,16 +127,13 @@
 }
 
 /* Hover Button */
-.header-bar .button .default:hover,
-.header-bar .text-button:hover,
-.header-bar .button .text-button:hover,
-.header-bar .flat:hover,
-.header-bar .image-button:hover,
-.header-bar .image-button .button:hover,
 .header-bar .button:hover,
-.header-bar .linked .button:hover,
-.header-bar GtkComboBox:hover,
-.header-bar .suggested-action.button:hover {
+.header-bar .text-button:hover,
+.header-bar .titlebutton:hover,
+.header-bar .linked:hover,
+.header-bar .flat:hover,
+.header-bar .suggested-action .button:hover,
+.header-bar .image-button:hover {
     border-radius: 0px;
     background-color: alpha(#000, 0.1);
     border: none;
@@ -160,84 +142,68 @@
 }
 
 /* Backdrop Button */
-.header-bar .text-button:backdrop,
-.header-bar .button .text-button:backdrop,
-.header-bar .flat:backdrop,
-.header-bar .image-button .button:backdrop,
-.header-bar .image-button:backdrop,
 .header-bar .button:backdrop,
-.header-bar .linked .button:backdrop,
-.header-bar GtkComboBox:backdrop,
-.header-bar .suggested-action.button:backdrop {
+.header-bar .text-button:backdrop,
+.header-bar .titlebutton:backdrop,
+.header-bar .linked:backdrop,
+.header-bar .flat:backdrop,
+.header-bar .suggested-action .button:backdrop,
+.header-bar .image-button:backdrop {
     padding: 13px;
     border-radius: 0px;
-    background: none;
+    background-color: transparent;
     border: none;
     color: @backdrop_header_text;
-}
-
-.header-bar .button .default:backdrop {
-    border-radius: 0px;
-    background: none;
-    border: none;
-    color: @backdrop_header_text;
-    box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
 }
 
 /* Active:Backdrop Button */
-.header-bar .button .default:active:backdrop,
-.header-bar .button .text-button:active:backdrop,
-.header-bar .text-button:active:backdrop,
-.header-bar .flat:active:backdrop,
-.header-bar .image-button .button:active:backdrop,
-.header-bar .image-button:active:backdrop,
 .header-bar .button:active:backdrop,
-.header-bar .linked .button:active:backdrop,
-.header-bar GtkComboBox:active:backdrop,
-.header-bar .suggested-action.button:active:backdrop {
+.header-bar .text-button:active:backdrop,
+.header-bar .titlebutton:active:backdrop,
+.header-bar .linked:active:backdrop,
+.header-bar .flat:active:backdrop,
+.header-bar .suggested-action .button:active:backdrop,
+.header-bar .image-button:active:backdrop {
     border-radius: 0px;
-    background-color: alpha(#000, 0.2);
     font: Bold;
+    background-color: transparent;
     border: none;
     color: @backdrop_header_text;
     box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
 }
 
 /* Backdrop:Hover; Button */
-.header-bar .button .default:backdrop:hover,
-.header-bar .button .text-button:backdrop:hover,
-.header-bar .text-button:backdrop:hover,
-.header-bar .flat:backdrop:hover,
-.header-bar .image-button .button:backdrop:hover,
-.header-bar .image-button:backdrop:hover,
 .header-bar .button:backdrop:hover,
-.header-bar .linked .button:backdrop:hover,
-.header-bar GtkComboBox:backdrop:hover,
-.header-bar .suggested-action.button:backdrop:hover {
+.header-bar .text-button:backdrop:hover,
+.header-bar .titlebutton:backdrop:hover,
+.header-bar .linked:backdrop:hover,
+.header-bar .flat:backdrop:hover,
+.header-bar .suggested-action .button:backdrop:hover,
+.header-bar .image-button:backdrop:hover {
+    background-color: transparent;
     border-radius: 0px;
-    background-color: alpha(#000, 0.1);
     border: none;
     box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
     color: @backdrop_header_text;
 }
 
 /* Insensitive Button */
-.header-bar .button .default:insensitive,
-.header-bar .button .text-button:insensitive,
-.header-bar .text-button:insensitive,
-.header-bar .flat:insensitive,
-.header-bar .image-button .button:insensitive,
-.header-bar .image-button:insensitive,
 .header-bar .button:insensitive,
-.header-bar .linked .button:insensitive,
-.header-bar GtkComboBox:insensitive,
-.header-bar .suggested-action.button:insensitive {
+.header-bar .text-button:insensitive,
+.header-bar .titlebutton:insensitive,
+.header-bar .linked:insensitive,
+.header-bar .flat:insensitive,
+.header-bar .suggested-action .button:insensitive,
+.header-bar .image-button:insensitive {
+    background-color: transparent;
     border-radius: 0px;
-    background: none;
     font: Bold;
     border: none;
     color: @insensitive_header_text;
 }
+
+
+
 
 /* Button Images */
 .header-bar .button GtkImage,
