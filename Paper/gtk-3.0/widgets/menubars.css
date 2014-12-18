@@ -60,3 +60,109 @@
 .menubar.menuitem.separator {
     color: @separator;
 }
+
+/* Images */
+.menubar .menuitem GtkImage {
+    color: @header_text;
+}
+
+.menubar .menuitem:active GtkImage,
+.menubar .menuitem:focus GtkImage,
+.menubar .menuitem:hover GtkImage {
+    color: @selected_foreground;
+}
+
+.menubar .menuitem:backdrop GtkImage,
+.menubar .menuitem:backdrop:hover GtkImage,
+.menubar .menuitem:active:backdrop GtkImage {
+    color: @backdrop_header_text;
+    -gtk-image-effect: dim;
+}
+
+.menubar .menuitem:insensitive GtkImage {
+    color: @insensitive_header_text;
+    -gtk-image-effect: dim;
+}
+
+.menubar .menuitem:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_header_text, @insensitive_header_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+.menubar .menuitem GtkLabel {
+    color: @header_text;
+}
+
+.menubar .menuitem:active GtkLabel,
+.menubar .menuitem:focus GtkLabel,
+.menubar .menuitem:hover GtkLabel {
+    color: @selected_foreground;
+}
+
+.menubar .menuitem:backdrop GtkLabel,
+.menubar .menuitem:backdrop:hover GtkLabel,
+.menubar .menuitem:active:backdrop GtkLabel {
+    color: @backdrop_header_text;
+}
+
+.menubar .menuitem:insensitive GtkLabel {
+    color: @insensitive_header_text;
+}
+
+.menubar .menuitem:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_header_text, @insensitive_header_text, 0.5);
+}
+
+/* Images */
+.menubar .menu .menuitem GtkImage {
+    color: @text;
+}
+
+.menubar .menu .menuitem:active GtkImage,
+.menubar .menu .menuitem:focus GtkImage,
+.menubar .menu .menuitem:hover GtkImage {
+    color: @selected_foreground;
+}
+
+.menubar .menu .menuitem:backdrop GtkImage,
+.menubar .menu .menuitem:backdrop:hover GtkImage,
+.menubar .menu .menuitem:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+.menubar .menu .menuitem:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+.menubar .menu .menuitem:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+.menubar .menu .menuitem GtkLabel {
+    color: @text;
+}
+
+.menubar .menu .menuitem:active GtkLabel,
+.menubar .menu .menuitem:focus GtkLabel,
+.menubar .menu .menuitem:hover GtkLabel {
+    color: @selected_foreground;
+}
+
+.menubar .menu .menuitem:backdrop GtkLabel,
+.menubar .menu .menuitem:backdrop:hover GtkLabel,
+.menubar .menu .menuitem:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.menubar .menu .menuitem:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.menubar .menu .menuitem:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
