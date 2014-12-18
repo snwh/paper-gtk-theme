@@ -91,6 +91,7 @@
     background-color: transparent;
     border-radius: 0px;
     border: none;
+    outline: none;
     color: @header_text;
 }
 
@@ -106,6 +107,7 @@
     font: Bold;
     background-color: alpha(#000, 0.1);
     border: none;
+    outline: none;
     color: @header_text;
     box-shadow: inset 0 -2px 0 0 @header_text;
 }
@@ -122,6 +124,7 @@
     background-color: transparent;
     font: Bold;
     border: none;
+    outline: none;
     color: @header_text;
     box-shadow: inset 0 -2px 0 0 @header_text;
 }
@@ -137,6 +140,7 @@
     border-radius: 0px;
     background-color: alpha(#000, 0.1);
     border: none;
+    outline: none;
     box-shadow: inset 0 -2px 0 0 @header_text;
     color: @header_text;
 }
@@ -153,6 +157,7 @@
     border-radius: 0px;
     background-color: transparent;
     border: none;
+    outline: none;
     color: @backdrop_header_text;
 }
 
@@ -168,11 +173,12 @@
     font: Bold;
     background-color: transparent;
     border: none;
+    outline: none;
     color: @backdrop_header_text;
     box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
 }
 
-/* Backdrop:Hover; Button */
+/* Backdrop:Hover Button */
 .header-bar .button:backdrop:hover,
 .header-bar .text-button:backdrop:hover,
 .header-bar .titlebutton:backdrop:hover,
@@ -183,6 +189,7 @@
     background-color: transparent;
     border-radius: 0px;
     border: none;
+    outline: none;
     box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
     color: @backdrop_header_text;
 }
@@ -199,6 +206,23 @@
     border-radius: 0px;
     font: Bold;
     border: none;
+    outline: none;
+    color: @insensitive_header_text;
+}
+
+/* Insensitive:Backdrop Button */
+.header-bar .button:insensitive:backdrop,
+.header-bar .text-button:insensitive:backdrop,
+.header-bar .titlebutton:insensitive:backdrop,
+.header-bar .linked:insensitive:backdrop,
+.header-bar .flat:insensitive:backdrop,
+.header-bar .suggested-action .button:insensitive:backdrop,
+.header-bar .image-button:insensitive:backdrop {
+    border-radius: 0px;
+    font: Bold;
+    background-color: transparent;
+    border: none;
+    outline: none;
     color: @insensitive_header_text;
 }
 
@@ -288,6 +312,7 @@
     padding: 6px;
     border-radius: 6px;
     border: none;
+    outline: none;
     icon-shadow:none;
 }
 
@@ -296,12 +321,14 @@
     background: none;
     color: @header_text;
     border: none;
+    outline: none;
 }
 
 .header-bar .entry:backdrop {
     background: none;
     color: @backdrop_header_text;
     border: none;
+    outline: none;
 }
 
 .header-bar .entry.image {

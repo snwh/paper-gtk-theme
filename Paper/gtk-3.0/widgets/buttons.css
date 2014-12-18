@@ -101,7 +101,6 @@ GtkCalendar.button:backdrop:hover,
 /* Insensitive Button */
 .button:insensitive,
 .button.default:insensitive,
-.button:active:insensitive,
 .button.text-button:insensitive,
 .button.image-button:insensitive {
     border: 1px solid @insensitive_border;
@@ -112,7 +111,6 @@ GtkCalendar.button:backdrop:hover,
 /* Backdrop Button */
 .button:backdrop,
 .button.default:backdrop,
-.button:active:backdrop,
 .button.text-button:backdrop,
 .button.image-button:backdrop {
     border-color: @backdrop_button_background;
@@ -122,7 +120,6 @@ GtkCalendar.button:backdrop:hover,
 /* Backdrop Button */
 .button:backdrop:hover,
 .button.default:backdrop:hover,
-.button:active:backdrop:hover,
 .button.text-button:backdrop:hover,
 .button.image-button:backdrop:hover {
     background-color: shade(@backdrop_button_background, 1.1);
@@ -133,7 +130,6 @@ GtkCalendar.button:backdrop:hover,
 /* Insensitive Button */
 .button:insensitive:backdrop,
 .button.default:insensitive:backdrop,
-.button:active:insensitive:backdrop,
 .button.text-button:insensitive:backdrop,
 .button.image-button:insensitive:backdrop {
     border: 1px solid @insensitive_border;
