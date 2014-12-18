@@ -21,9 +21,7 @@
  ****************/
 
 @define-color unity @header;
-@define-color unity_text #fff;/* Header text color */
-
-@define-color backdrop_unity shade(@unity, 0.9);
+@define-color backdrop_unity @backdrop_header;
 
 /*********************
  * Unity Decorations *
