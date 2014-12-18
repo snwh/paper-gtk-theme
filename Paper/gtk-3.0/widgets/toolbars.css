@@ -134,7 +134,7 @@
 .toolbar .entry {
     border: none;
     border-radius: 0px;
-    background-color:transparent;
+    background-color:@base;
     color: @toolbar_text
 }
 
@@ -151,6 +151,7 @@
 
 .toolbar .entry:insensitive {
     border: none;
+    background-color:@insensitive_base;
     color: @insensitive_toolbar_text;
     border: solid @insensitive_toolbar_text;
     border-bottom-width: 1px;
@@ -158,6 +159,7 @@
 
 .toolbar .entry:backdrop {
     border: none;
+    background-color:@backdrop_base;
     color: @backdrop_toolbar_text;
     border: solid @backdrop_toolbar_text;
     border-bottom-width: 1px;
