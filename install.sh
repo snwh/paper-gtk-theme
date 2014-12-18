@@ -69,7 +69,6 @@ elif [ "$UID" -ne "$ROOT_UID" ]; then
 	fi
 	cp -R ./Paper/ $HOME/.local/share/themes/
 	echo "Installation complete!"
-	set
 fi
 }
 
