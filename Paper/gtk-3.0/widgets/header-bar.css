@@ -30,6 +30,7 @@
 }
 
 .header-bar:backdrop {
+    background: none;
     background-color: @backdrop_header;
     color: @backdrop_header_text;
     box-shadow: none;
