@@ -131,8 +131,6 @@ GtkDialog .sidebar .view:hover:selected:backdrop {
     border-radius: 10px;
     padding: 0 6px;
     margin: 0 3px;
-    text-shadow: 0 1px alpha(#000, 0.1);
-    icon-shadow: 0 1px alpha(#000, 0.1);
     border-width: 0;
 }
 
@@ -146,6 +144,4 @@ GtkDialog .sidebar .view:hover:selected:backdrop {
     background-image: none;
     background-color: alpha(#000, 0.2);
     color: shade (@background, 0.95);
-    text-shadow: 0 1px alpha(#000, 0.1);
-    icon-shadow: 0 1px alpha(#000, 0.1);
 }

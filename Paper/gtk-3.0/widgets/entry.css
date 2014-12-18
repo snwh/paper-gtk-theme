@@ -25,7 +25,6 @@
     color: @text;
     padding: 6px;
     border-radius: 2px;
-    icon-shadow:none;
     border: 1px solid @border;
 }
 
@@ -67,13 +66,11 @@
 
 .entry.image {
     color: @insensitive_text;
-    icon-shadow:none;
 }
 
 .entry.image.left {
     padding-right: 6px;
     color: @text;
-    icon-shadow:none;
 }
 
 .entry .button,

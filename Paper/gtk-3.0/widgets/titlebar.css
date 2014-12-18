@@ -22,9 +22,7 @@
 
 .titlebar {
     border-width: 0px;
-    padding: 6px;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding: 0px;
     background-color: @header;
     color: @header_text;
 }
