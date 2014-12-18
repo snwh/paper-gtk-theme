@@ -10,7 +10,8 @@ style "ff-default" {
 	}
 }
 
-#widget	"MozillaGtkWidget*Toolbar*"		style	"theme-toolbar"
+#widget	"MozillaGtkWidget*Scrollbar*"		style	"scrollbar"
+#widget	"MozillaGtkWidget*Toolbar*"		style	"toolbar"
 #widget	"MozillaGtkWidget*Statusbar*"	style	"ff-statusbar"
 
 widget	"MozillaGtkWidget*"	style	"ff-default"
