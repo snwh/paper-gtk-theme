@@ -154,9 +154,62 @@
 }
 
 
-/*******************
- * Checks & Radios *
- *******************/
+
+/* Images */
+.menuitem GtkImage {
+    color: @text;
+}
+
+.menuitem:active GtkImage,
+.menuitem:focus GtkImage,
+.menuitem:hover GtkImage {
+    color: @selected_foreground;
+}
+
+.menuitem:backdrop GtkImage,
+.menuitem:backdrop:hover GtkImage,
+.menuitem:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+.menuitem:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+.menuitem:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+.menuitem GtkLabel {
+    color: @text;
+}
+
+.menuitem:active GtkLabel,
+.menuitem:focus GtkLabel,
+.menuitem:hover GtkLabel {
+    color: @selected_foreground;
+}
+
+.menuitem:backdrop GtkLabel,
+.menuitem:backdrop:hover GtkLabel,
+.menuitem:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.menuitem:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.menuitem:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
+
+/* Checks & Radios */
 
 .menuitem.check,
 .menuitem.radio {
