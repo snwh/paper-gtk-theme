@@ -22,6 +22,7 @@
 
 .dynamic-notebook .notebook.header {
     background: none;
+    background-color: @background;
     border: 0 solid @border;
     border-radius: 0;
     border: none;

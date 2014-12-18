@@ -39,8 +39,9 @@
 @import url("apps/gnome-disks.css");
 /*@import url("apps/gnome-music.css");*/
 @import url("apps/gnome-photos.css");
-@import url("apps/gnome-terminal.css");
 /*@import url("apps/gnome-software.css");*/
+@import url("apps/gnome-terminal.css");
+@import url("apps/gnome-tweak-tool.css");
 @import url("apps/gnome.css");
 @import url("apps/nautilus.css");
 @import url("apps/snap.css");

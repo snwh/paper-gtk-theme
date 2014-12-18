@@ -94,27 +94,6 @@
 
 
 /************
- * List Box *
- ************/
-
-GtkListBoxRow:selected,
-.view:selected {
-    background-color: @selection;
-    color: white;
-}
-
-GtkListBoxRow:selected:backdrop {
-    background-color: @backdrop_background;
-    color: @foreground;
-}
-
-GtkListBoxRow:selected:focus,
-.view:selected:focus {
-    background-color: @selection;
-    color: @selected_foreground;
-}
-
-/************
  * Treeview *
  ************/
 
@@ -131,6 +110,7 @@ GtkTreeView {
     -GtkTreeView-horizontal-separator: 6px;
     -GtkTreeView-expander-size: 8px;
     -GtkTreeView-grid-line-pattern: "\000\000";
+    border: 1px solid @border;
 }
 
 GtkTreeView row:nth-child(even) {

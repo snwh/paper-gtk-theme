@@ -49,6 +49,7 @@ GtkSwitch.trough:active:backdrop {
 
 GtkSwitch.trough:insensitive,
 GtkSwitch.trough:active:insensitive {
+    background: none;
     border: 1px solid @insensitive_border;
     color: @insensitive_text;
 }

@@ -24,20 +24,35 @@
 .separator {
     color: @separator;
 }
+
 .pane-separator {
     -GtkPaned-handle-size: 2px;
+    padding: 4px;
     background-color: @background;
+    border: 1px solid @separator;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    color: @base;
+}
+
+.pane-separator.vertical {
+    -GtkPaned-handle-size: 2px;
+    padding: 4px;
+    background-color: @background;
+    border: 1px solid @separator;
+    border-left-width: 0px;
+    border-right-width: 0px;
     color: @base;
 }
 
 .pane-separator:hover,
 .pane-separator:selected {
-    color: @foreground;
+    color: @selection;
 }
 
 .pane-separator:backdrop,
 .pane-separator:hover:backdrop {
-    background-color: @background;
+    background-color: @backdrop_background;
 }
 
 .notebook .pane-separator,
@@ -53,9 +68,8 @@
 .sidebar-pane-separator,
 .sidebar-pane-separator:hover,
 .sidebar-pane-separator:selected {
-    border-width: 0;
     -GtkPaned-handle-size: 2px;
     background-image: none;
-    background-color: @border;
+    background-color: @separator;
     border: 1px solid @border;
 }

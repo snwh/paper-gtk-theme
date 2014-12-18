@@ -43,7 +43,7 @@ UnityDecoration {
 
     /* Glow applied to the selected scaled window */
     -UnityDecoration-glow-size: 8px;/* Size property, size of glow */
-    -UnityDecoration-glow-color: rgb(159, 68, 173);/* Color property of the glow */
+    -UnityDecoration-glow-color: @selection;/* Color property of the glow */
 
     /* Title settings */
     -UnityDecoration-title-indent: 10px;/* Size property, left indent of the title */
