@@ -1,7 +1,7 @@
 Paper Theme
 ===========
 
-[Paper](http://snwh.org/paper/) is a modern GNOME desktop theme. Its design is mostly flat with a minimal use of shadows for depth.
+[Paper](http://snwh.org/paper/) is a modern desktop theme suite. Its design is mostly flat with a minimal use of shadows for depth.
 
 ###Preamble
 
