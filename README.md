@@ -9,6 +9,12 @@ Paper has been developed primarily for GNOME and other GTK3 desktops, legacy des
 
 Paper is distributed under the terms the GNU General Public License (GNU GPL v.3).
 
+###Installation & Usage
+
+If you download the provided archive, extract it and run the included install script.
+
+	bash install.sh
+
 ###Bugs & Issues
 
 If you find any bugs or issues with Paper or if you have a question, you can visit Paper's primary issue tracker on [GitHub](https://github.com/snwh/paper-gtk-theme/issues).
