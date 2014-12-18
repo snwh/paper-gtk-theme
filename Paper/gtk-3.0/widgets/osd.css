@@ -20,6 +20,7 @@
 @define-color osd_background_backdrop shade(@osd_background, 0.9);
 @define-color osd_foreground #fff;
 @define-color osd_button_border @osd_foreground;
+@define-color osd_button_inset @osd_button_border;
 
 /*******
  * OSD *
