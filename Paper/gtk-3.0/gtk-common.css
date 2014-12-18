@@ -156,7 +156,6 @@
 @define-color infobar_background @selection;
 @define-color infobar_foreground white;
 
-@define-color link @selection;
 @define-color question #4ab3e4;
 @define-color warning #f67d42;
 @define-color error #e74c3c;

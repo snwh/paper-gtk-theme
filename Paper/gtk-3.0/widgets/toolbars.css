@@ -134,7 +134,7 @@
 .toolbar .entry {
     border: none;
     border-radius: 0px;
-    background-color:@base;
+    background-color:@toolbar;
     color: @toolbar_text
 }
 
