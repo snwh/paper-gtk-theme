@@ -178,6 +178,14 @@
     border: none;
 }
 
+.search-bar .entry:selected,
+.search-bar.toolbar .entry:selected
+.search-bar .entry:selected:focus,
+.search-bar.toolbar .entry:selected:focus {
+    color: @base;
+    background-color: @selection;
+}
+
 .search-bar .entry:active,
 .search-bar .entry:focus,
 .search-bar.toolbar .entry:active,

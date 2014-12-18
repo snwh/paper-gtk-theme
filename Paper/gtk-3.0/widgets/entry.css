@@ -40,8 +40,9 @@
     box-shadow:none;
 }
 
-.entry:selected {
-    color: @text;
+.entry:selected,
+.entry:selected:focus {
+    color: @base;
     background-color: @selection;
 }
 

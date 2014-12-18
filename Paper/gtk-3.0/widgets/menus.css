@@ -107,14 +107,18 @@
     color: @insensitive_text;
 }
 
-/* Arrow color */
-.menuitem.arrow,
+/* Arrows */
+
 .menu .menuitem.arrow {
-    background-color: @base;
-    color: @foreground;
-    border: none;
+    color: @text;
 }
 
+.menu .menuitem.arrow {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+.menu .menuitem.arrow:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+}
 /* Separator color */
 .menuitem.separator {
     padding-left: 2px;
