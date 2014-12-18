@@ -26,28 +26,45 @@
 /******************************
  * Destructive action buttons *
  ******************************/
- 
-.destructive-action.button {
-	border: 1px solid @destructive_action_button_border;
+
+.destructive-action.button,
+.button.destructive-action {
+    border: 1px solid @destructive_action_button_border;
     background-color: @destructive_action_button;
     color: @destructive_action_button_foreground;
 }
 
-.destructive-action.button:hover {
-	border: 1px solid shade(@destructive_action_button_border, 1.1);
+.destructive-action.button:hover,
+.button.destructive-action:hover {
+    border: 1px solid shade(@destructive_action_button_border, 1.1);
     background-color: shade(@destructive_action_button, 1.1);
     color: @destructive_action_button_foreground;
 }
 
 .destructive-action.button:active,
-.destructive-action.button:hover:active {
-	border: 1px solid @destructive_action_button_border;
+.button.destructive-action:active {
+    border: 1px solid @destructive_action_button_border;
     background-color: @destructive_action_button;
     color: @destructive_action_button_foreground;
 }
 
-.destructive-action.button:backdrop {
-	border: 1px solid @backdrop_border;
+.destructive-action.button:backdrop,
+.button.destructive-action:backdrop {
+    border: 1px solid @backdrop_border;
     background-color: @backdrop_background;
     color: @backdrop_text;
+}
+
+.destructive-action.button:insensitive,
+.button.destructive-action:insensitive {
+    border: 1px solid @insensitive_border;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+.destructive-action.button:backdrop:insensitive,
+.button.destructive-action:backdrop:insensitive {
+    border: 1px solid mix(@insensitive_border, @backdrop_border 0.5);
+    background-color: mix(@insensitive_background, @backdrop_background, 0.5);
+    color: mix(@insensitive_text, @backdrop_text, 0.5);
 }
