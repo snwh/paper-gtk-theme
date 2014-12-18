@@ -1,29 +1,5 @@
-paper-gtk-theme (3.1) UNRELEASED; urgency=low
-
-  * 3.1 Release - revisions and refinements.
-
- -- Sam Hewitt <hewittsamuel@gmail.com>  Wed, 03 Sep 2014 11:00:00 -0400
-
-paper-gtk-theme (3.0) UNRELEASED; urgency=low
-
-  * 3.0 Release - major revisions and refinements.
-
- -- Sam Hewitt <hewittsamuel@gmail.com>  Fri, 25 Jul 2014 10:00:00 -0400
-
- paper-gtk-theme (2.2) UNRELEASED; urgency=low
-
-  * 2.2 Release.
-
- -- Sam Hewitt <hewittsamuel@gmail.com>  Thu, 10 Apr 2014 12:00:00 -0400
-
-paper-gtk-theme (2.0) UNRELEASED; urgency=low
-
-  * 2.0 Release.
-
- -- Sam Hewitt <hewittsamuel@gmail.com>  Fri, 21 Feb 2014 12:00:00 -0400
-
 paper-gtk-theme (1.0) UNRELEASED; urgency=low
 
   * Initial Release.
 
- -- Sam Hewitt <hewittsamuel@gmail.com>  Fri, 17 Jan 2014 19:00:00 -0400
+ -- Sam Hewitt <hewittsamuel@gmail.com>  Thu, 18 Dec 2014 12:00:00 -0400
