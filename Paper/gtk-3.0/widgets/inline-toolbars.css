@@ -30,12 +30,10 @@
 }
 
 .inline-toolbar.toolbar:backdrop {
-    padding: 4px;
-    background-color: @backdrop_background;
+    background-color: shade(@backdrop_background, 0.9);
     box-shadow: none;
     -gtk-image-effect: dim;
 }
-
 
 .inline-toolbar.toolbar:first-child {
     border-radius: 6px 6px 0px 0px;
@@ -147,4 +145,29 @@
 .inline-toolbar.toolbar .button:insensitive:backdrop GtkImage {
     color: mix(@backdrop_text, @insensitive_text, 0.5);
     -gtk-image-effect: dim;
+}
+
+/* Labels */
+.inline-toolbar.toolbar .button GtkLabel {
+    color: @text;
+}
+
+.inline-toolbar.toolbar .button:active GtkLabel,
+.inline-toolbar.toolbar .button:focus GtkLabel,
+.inline-toolbar.toolbar .button:hover GtkLabel {
+    color: @text;
+}
+
+.inline-toolbar.toolbar .button:backdrop GtkLabel,
+.inline-toolbar.toolbar .button:backdrop:hover GtkLabel,
+.inline-toolbar.toolbar .button:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.inline-toolbar.toolbar .button:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.inline-toolbar.toolbar .button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
 }

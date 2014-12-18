@@ -47,32 +47,6 @@ GtkImage:insensitive:backdrop,
     -gtk-image-effect: dim;
 }
 
-/**********
- * Labels *
- **********
-
-GtkLabel {
-    background: none;
-    color: @toolbar_text;
-}
-
-GtkLabel:backdrop {
-    background: none;
-    color: @backdrop_toolbar_text;
-}
-
-GtkLabel:insensitive {
-    background: none;
-    color: @insensitive_toolbar_text;
-}
-
-GtkLabel:insensitive:backdrop {
-    background: none;
-    color: mix(@backdrop_toolbar_text , @insensitive_toolbar_text , 0.5);
-}
-
-*/
-
 /*******************
  * Symbolic Images *
  *******************/

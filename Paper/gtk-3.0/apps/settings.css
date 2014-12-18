@@ -16,10 +16,7 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-
-@define-color settings #3889B0;
-@define-color backdrop_settings shade(@settings, 0.9);
-
+@define-color settings #5F7C8A;
 
 /**********
  * Header *

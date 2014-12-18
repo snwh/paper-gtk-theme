@@ -43,46 +43,39 @@ GtkPopover.osd {
 /* Buttons */
 GtkPopover .button,
 GtkPopover .button .image-button {
-    border: none;
     background-color: @base;
     color: @text;
 }
 
 GtkPopover .button:focus,
 GtkPopover .button .image-button:focus {
-    border: none;
     color: shade(@text, 0.8);
 }
 
 GtkPopover .button:hover,
 GtkPopover .button .image-button:hover {
-    border: none;
     color: @selection;
 }
 
 GtkPopover .button:active,
 GtkPopover .button .image-button:active {
-    border: none;
     background-color: @selection;
     color: shade(@text, 0.8);
 }
 
 GtkPopover .button:active:hover,
 GtkPopover .button .image-button:active:hover {
-    border: none;
     background-color: shade(@selection, 1.1);
-    color: shade(@text, 0.8);
+    color: @selection_foreground;
 }
 
 GtkPopover .button:insensitive,
 GtkPopover .button .image-button:insensitive {
-    border: none;
     color: @insensitive_text;
 }
 
 GtkPopover .button:backdrop,
 GtkPopover .button .image-button:backdrop {
-    border: none;
     color: @backdrop_text;
 }
 
@@ -153,3 +146,62 @@ GtkPopover.osd > .toolbar .button {
 }
 
 
+/* Images */
+GtkPopover .button:focus GtkImage,
+GtkPopover .button GtkImage {
+    color: @text;
+}
+
+GtkPopover .button:active GtkImage {
+    color: @selection_foreground;
+}
+
+GtkPopover .button:hover GtkImage,
+GtkPopover .image-button:hover GtkImage {
+    color: shade(@text, 2.0);
+}
+
+GtkPopover .button:backdrop GtkImage,
+GtkPopover .button:backdrop:hover GtkImage,
+GtkPopover .button:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+GtkPopover .button:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+GtkPopover .button:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+GtkPopover .button:focus GtkLabel,
+GtkPopover .button GtkLabel {
+    color: @text;
+}
+
+GtkPopover .button:active GtkLabel {
+    color: @selection_foreground;
+}
+
+GtkPopover .button:hover GtkLabel {
+    color: shade(@text, 2.0);
+}
+
+GtkPopover .button:backdrop GtkLabel,
+GtkPopover .button:backdrop:hover GtkLabel,
+GtkPopover .button:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+GtkPopover .button:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+GtkPopover .button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
