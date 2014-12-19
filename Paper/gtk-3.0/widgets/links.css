@@ -39,7 +39,7 @@
 
 *:selected *:link:visited,
 *:selected .button:visited {
-      color: @visited_link;
+    color: @visited_link;
 }
 
 *:link:hover,
@@ -71,5 +71,5 @@
 
 *:link:selected, .button:selected:link, .button:selected:visited, .titlebar.selection-mode .subtitle:link,
 .header-bar.selection-mode .subtitle:link, *:selected *:link, *:selected .button:link, *:selected .button:visited {
-    color: #dae8f7;
+    color: @selected;
 }

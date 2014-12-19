@@ -118,30 +118,6 @@ CcWindow .dynamic-notebook tab.right:active {
     box-shadow:inset 3px 0 0 0 @settings;
 }
 
-/***********
- * Buttons *
- ***********/
-
-CcWindow .button.text-button,
-CcWindow .button.image-button,
-CcWindow .button {
-    color: @settings;
-}
-
-CcWindow GtkComboBox,
-CcWindow GtkComboBox * {
-    color: @settings;
-}
-
-CcWindow GtkComboBox:hover,
-CcWindow GtkComboBox *:hover,
-CcWindow .button.text-button:hover,
-CcWindow .button.image-button:hover,
-CcWindow .button:hover {
-    background-color: @settings;
-}
-
-
 
 /* List Row Button */
 CcWindow .button.list-row {
