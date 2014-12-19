@@ -91,7 +91,8 @@ GtkMenuButton.button.raised:active {
 }
 
 /* Labels */
-.menu-button .menu .menuitem GtkLabel {
+.menu-button .menu .menuitem GtkLabel,
+.menu-button .menu .menuitem * GtkLabel {
     color: @text;
 }
 

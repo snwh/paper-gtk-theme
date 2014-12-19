@@ -17,20 +17,21 @@
 */
 
 @define-color button_background shade(@base, 0.95);/* Button background color */
-@define-color button_border @border;/* Button border color */
-@define-color backdrop_button_background shade(@backdrop_background, 0.9);/* Button background color */
-@define-color button_border @button_background; /* Button border color */
+@define-color button_border shade(@button_background, 0.9);/* Button border color */
+@define-color backdrop_button_background shade(@backdrop_background, 0.9);/* Backdrop button background color */
+@define-color backdrop_button_border shade(@backdrop_button_background, 0.9); /* Backdrop button border color */
 
 /***********
  * Buttons *
  ***********/
  
-.button {
+.button,
+.button.text-button,
+.button.image-button {
     border-radius: 3px;
     padding: 4px 9px;
     border: 1px solid @button_border;
     background-color: @button_background;
-    box-shadow: 0 1px 2px 0px alpha(#000,0.2);
 }
 
 .button.flat,
@@ -48,7 +49,6 @@
 .button:link:backdrop,
 .button:visited:backdrop,
 .notebook tab
-.button,
 .list-row.button,
 .list-row.button:backdrop:hover,
 GtkCalendar.button,
@@ -59,9 +59,8 @@ GtkCalendar.button:backdrop:hover,
 .scale-popup .button:backdrop,
 .scale-popup .button:backdrop:hover,
 .scale-popup .button:backdrop:insensitive {
-    border: 1px solid @button_border;
+    border: 1px solid transparent;
     background: none;
-    box-shadow: none;
 }
 
 /* Focus Button */
@@ -70,10 +69,9 @@ GtkCalendar.button:backdrop:hover,
 .button:active:focus,
 .button.text-button:focus,
 .button.image-button:focus {
-    border: 1px solid shade(@selection, 1.1);
+    border: 1px solid @selection;
     background-color: shade(@selection, 1.1);
-    color: @selected_foreground;
-    box-shadow: 0 1px 2px 0px alpha(@selection,0.4);
+    color: @selection;
 }
 
 /* Hover Button */
@@ -82,10 +80,9 @@ GtkCalendar.button:backdrop:hover,
 .button:active:hover,
 .button.text-button:hover,
 .button.image-button:hover {
-    border: 1px solid shade(@selection, 1.2);
+    border: 1px solid shade(@selection, 1.1);
     background-color: shade(@selection, 1.2);
     color: @selected_foreground;
-    box-shadow: 0 1px 2px 1px alpha(#000,0.3);
     transition: all 100ms cubic-bezier(0.3, 0.5, 0.5, 0.9);
 }
 
@@ -97,8 +94,6 @@ GtkCalendar.button:backdrop:hover,
     border: 1px solid @selection;
     background-color: @selection;
     color: @selected_foreground;
-    /*box-shadow: 0 1px 2px 0px alpha(#000,0.2);*/
-    box-shadow: none;
 
 }
 
@@ -110,7 +105,6 @@ GtkCalendar.button:backdrop:hover,
     border: 1px solid @insensitive_border;
     background-color: @insensitive_button;
     color: @insensitive_text;
-    box-shadow: none;
 }
 
 /* Backdrop Button */
@@ -121,7 +115,6 @@ GtkCalendar.button:backdrop:hover,
     border: 1px solid @backdrop_button_background;
     background-color: @backdrop_button_background;
     color: @backdrop_text;
-    box-shadow: none;
 }
 /* Backdrop Button */
 .button:backdrop:hover,
@@ -130,7 +123,6 @@ GtkCalendar.button:backdrop:hover,
 .button.image-button:backdrop:hover {
     background-color: shade(@backdrop_button_background, 1.1);
     color: @backdrop_text;
-    box-shadow: none;
 }
 
 /* Insensitive Button */
@@ -141,7 +133,6 @@ GtkCalendar.button:backdrop:hover,
     border: 1px solid @insensitive_border;
     background-color: @insensitive_button;
     color: @insensitive_text;
-    box-shadow: none;
 }
 
 /* Images */

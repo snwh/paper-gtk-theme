@@ -21,6 +21,8 @@
 ***********/
 
 .message-dialog {
+    padding: 0px;
+    border-radius: 6px;
     border: none;
     outline: none;
     box-shadow: none;
@@ -64,8 +66,8 @@
 
 
 /* Buttons */
-
 .message-dialog .dialog-action-area .button {
+    border-radius: 0;
     /*padding: 8px;*/
 }
 
@@ -209,11 +211,11 @@
 }
 
 .message-dialog.csd .dialog-action-area .button:last-child {
-    border-bottom-right-radius: 7px;
+    /*border-bottom-right-radius: 7px;*/
 }
 
 .message-dialog.csd .dialog-action-area .button:first-child {
     border-left-style: none;
-    border-bottom-left-radius: 7px;
+    /*border-bottom-left-radius: 7px;*/
 }
 
