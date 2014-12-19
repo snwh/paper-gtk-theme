@@ -20,30 +20,26 @@
  * Images *
  **********/
  
-GtkImage,
-* GtkImage {
-	background: none;
-    color: @toolbar_text;
+*:active GtkImage,
+*:focus GtkImage,
+*:hover GtkImage {
+    color: @selected_foreground;
 }
 
-GtkImage:backdrop,
-* GtkImage:backdrop {
-	background: none;
-    color: @backdrop_toolbar_text;
+*:backdrop GtkImage,
+*:backdrop:hover GtkImage,
+*:active:backdrop GtkImage {
+    color: @backdrop_text;
     -gtk-image-effect: dim;
 }
 
-GtkImage:insensitive,
-* GtkImage:insensitive {
-	background: none;
-    color: @insensitive_toolbar_text;
+*:insensitive GtkImage {
+    color: @insensitive_text;
     -gtk-image-effect: dim;
 }
 
-GtkImage:insensitive:backdrop,
-* GtkImage:insensitive:backdrop {
-	background: none;
-    color: mix(@backdrop_toolbar_text , @insensitive_toolbar_text , 0.5);
+*:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
     -gtk-image-effect: dim;
 }
 
