@@ -79,7 +79,6 @@ NautilusWindow .dynamic-notebook tab.right:active {
 }
 
 .nautilus-desktop {
-    background: none;
     color: @foreground;
 }
 
