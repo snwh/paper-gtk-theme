@@ -22,17 +22,20 @@
  ***************/
 .background {
     color: @foreground;
+    background-image: none;
     background-color: @background;
 }
 
 .background-color:backdrop {
     /* I want everything nice and flat in the backdrop window */
+    background-image: none;
     background-color: @backdrop_background;
     color: @backdrop_text;
 }
 
 .background-color:insensitive {
     /* I want everything nice and flat in the backdrop window */
+    background-image: none;
     background-color: @insensitive_background;
     color: @insensitive_text;
 }
@@ -109,4 +112,9 @@ GtkBox:insensitive,
 GtkGrid,
 GtkGrid:insensitive {
     background: none;
+}
+
+GtkImage,
+GtkLabel {
+    color: @text;
 }

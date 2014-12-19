@@ -76,7 +76,7 @@
 .header-bar .text-button,
 .header-bar .image-button {
     background-color: transparent;
-    background: none;
+    background-image: none;
     box-shadow: none;
     padding: 13px;
     transition: all 300ms cubic-bezier(0.3, 0.5, 0.5, 0.9);
@@ -91,6 +91,7 @@
 .header-bar .suggested-action .button,
 .header-bar .image-button {
     background-color: transparent;
+    background-image: none;
     border-radius: 0px;
     border: none;
     box-shadow: none;
@@ -108,6 +109,7 @@
 .header-bar .image-button:active {
     border-radius: 0px;
     background-color: alpha(#000, 0.1);
+    background-image: none;
     border: none;
     outline: none;
     color: @header_text;
@@ -127,6 +129,7 @@
 .header-bar .suggested-action .button:checked,
 .header-bar .image-button:checked {
     border-radius: 0px;
+    background-image: none;
     border: none;
     outline: none;
     color: @header_text;
@@ -147,6 +150,7 @@
 .header-bar .image-button:focus {
     border-radius: 0px;
     background-color: transparent;
+    background-image: none;
     border: none;
     outline: none;
     color: @header_text;
@@ -163,6 +167,7 @@
 .header-bar .image-button:hover {
     border-radius: 0px;
     background-color: alpha(#000, 0.1);
+    background-image: none;
     border: none;
     outline: none;
     box-shadow: inset 0 -2px 0 0 @header_text;
@@ -180,6 +185,7 @@
     padding: 13px;
     border-radius: 0px;
     background-color: transparent;
+    background-image: none;
     border: none;
     box-shadow: none;
     outline: none;
@@ -196,6 +202,7 @@
 .header-bar .image-button:active:backdrop {
     border-radius: 0px;
     background-color: transparent;
+    background-image: none;
     border: none;
     outline: none;
     color: @backdrop_header_text;
@@ -215,6 +222,7 @@
 .header-bar .suggested-action .button:backdrop:hover,
 .header-bar .image-button:backdrop:hover {
     background-color: transparent;
+    background-image: none;
     border-radius: 0px;
     border: none;
     outline: none;
@@ -231,6 +239,7 @@
 .header-bar .suggested-action .button:insensitive,
 .header-bar .image-button:insensitive {
     background-color: transparent;
+    background-image: none;
     border-radius: 0px;
     border: none;
     box-shadow: none;
@@ -248,6 +257,7 @@
 .header-bar .image-button:insensitive:backdrop {
     border-radius: 0px;
     background-color: transparent;
+    background-image: none;
     border: none;
     outline: none;
     color: @insensitive_header_text;

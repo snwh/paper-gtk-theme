@@ -25,7 +25,7 @@
 @define-color base #fff;/* Base color */
 @define-color background #fff;/* Background color */
 @define-color foreground #3F3F3F;/* Foreground color */
-@define-color border #C4C4C4;/* Borders color */
+@define-color border #D8D8D8;/* Borders color */
 @define-color separator alpha(#000, 0.2);/* Separator color */
 @define-color text @foreground;/* Text color */
 @define-color panel #576165;/* Panel color */
