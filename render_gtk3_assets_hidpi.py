@@ -7,14 +7,16 @@ import subprocess
 
 INKSCAPE = '/usr/bin/inkscape'
 OPTIPNG = '/usr/bin/optipng'
-SRC = os.path.join('.', 'src/unity')
+SRC = os.path.join('.', 'src/gtk3')
 
 inkscape_process = None
+
 
 def optimize_png(png_file):
     if os.path.exists(OPTIPNG):
         process = subprocess.Popen([OPTIPNG, '-quiet', '-o7', png_file])
         process.wait()
+
 
 def wait_for_prompt(process, command=None):
     if command is not None:
@@ -31,17 +33,26 @@ def wait_for_prompt(process, command=None):
         output += process.stdout.read(1)
         output = output[1:]
 
+
 def start_inkscape():
-    process = subprocess.Popen([INKSCAPE, '--shell'], bufsize=0, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    process = subprocess.Popen(
+        [INKSCAPE, '--shell'], bufsize=0,
+        stdin=subprocess.PIPE, stdout=subprocess.PIPE
+    )
     wait_for_prompt(process)
     return process
+
 
 def inkscape_render_rect(icon_file, rect, output_file):
     global inkscape_process
     if inkscape_process is None:
         inkscape_process = start_inkscape()
-    wait_for_prompt(inkscape_process, '%s -i %s -e %s' % (icon_file, rect, output_file))
+    wait_for_prompt(inkscape_process,
+                    '--export-dpi=180 %s -i %s -e %s'
+                    % (icon_file, rect, output_file)
+                    )
     optimize_png(output_file)
+
 
 class ContentHandler(xml.sax.ContentHandler):
     ROOT = 0
@@ -49,6 +60,7 @@ class ContentHandler(xml.sax.ContentHandler):
     LAYER = 2
     OTHER = 3
     TEXT = 4
+
     def __init__(self, path, force=False, filter=None):
         self.stack = [self.ROOT]
         self.inside = [self.ROOT]
@@ -81,20 +93,19 @@ class ContentHandler(xml.sax.ContentHandler):
             if name == "text" and ('inkscape:label' in attrs) and attrs['inkscape:label'] == 'context':
                 self.stack.append(self.TEXT)
                 self.inside.append(self.TEXT)
-                self.text='context'
+                self.text = 'context'
                 self.chars = ""
                 return
             elif name == "text" and ('inkscape:label' in attrs) and attrs['inkscape:label'] == 'icon-name':
                 self.stack.append(self.TEXT)
                 self.inside.append(self.TEXT)
-                self.text='icon-name'
+                self.text = 'icon-name'
                 self.chars = ""
                 return
             elif name == "rect":
                 self.rects.append(attrs)
 
         self.stack.append(self.OTHER)
-
 
     def endElement(self, name):
         stacked = self.stack.pop()
@@ -121,8 +132,8 @@ class ContentHandler(xml.sax.ContentHandler):
                 height = rect['height']
                 id = rect['id']
 
-                dir = os.path.join("Paper", self.context)
-                outfile = os.path.join(dir, self.icon_name+'.png')
+                dir = os.path.join("Paper", "gtk-3.0", self.context)
+                outfile = os.path.join(dir, self.icon_name+'@2'+'.png')
                 if not os.path.exists(dir):
                     os.makedirs(dir)
                 # Do a time based check!
@@ -165,5 +176,3 @@ else:
     else:
         print ("Error: No such file", file)
         sys.exit(1)
-
-
