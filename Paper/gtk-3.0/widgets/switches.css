@@ -18,11 +18,13 @@
 
 /* Slider colors */
 @define-color slider @background;
+@define-color slider_border alpha(#000, 0.4);
 @define-color backdrop_slider @backdrop_background;
 @define-color insensitive_slider @insensitive_background;
 
 /* Trough colors */
 @define-color trough shade(@base, 0.8);
+@define-color trough_border alpha(#000, 0.3);
 @define-color backdrop_trough shade(@backdrop_base, 0.8);
 @define-color insensitive_trough shade(@insensitive_base, 0.8);
 
@@ -31,14 +33,14 @@
  *************/
 
 GtkSwitch {
-    border-radius: 1em;
+    border-radius: 5px;
     font: condensed;
 }
 
 /* Trough */
 GtkSwitch.trough {
-    border-radius: 1em;
-    border: 1px solid @border;
+    border-radius: 5px;
+    border: 1px solid @trough_border;
     background-color: @trough;
     color: alpha(@text, 0.5);
 }
@@ -65,14 +67,14 @@ GtkSwitch.trough:active:insensitive {
 
 /* Slider */
 
-GtkSwitch.slider {
-    border: 1px solid @border;
-    background-color: @slider;
-}
-
+GtkSwitch.slider,
 GtkSwitch.slider:active {
-    border: 1px solid shade(@selection, 0.8);
+    border: 1px solid @slider_border;
     background-color: @slider;
+    background-image: linear-gradient(to bottom, 
+                                      @slider,
+                                      shade(@slider, 0.98)
+                                      );
 }
 
 GtkSwitch.slider:active:insensitive,

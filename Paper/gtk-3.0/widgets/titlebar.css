@@ -25,11 +25,13 @@
     padding-left: 6px;
     padding-right: 6px;
     border-width: 0px;
+    background-image: none;
     background-color: @header;
     color: @header_text;
 }
 
 .titlebar:backdrop {
+    background-image: none;
     background-color: @backdrop_header;
     color: @backdrop_header_text;
 }

@@ -16,7 +16,7 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color epiphany #3E50B4;
+@define-color epiphany #6573C3;
 
 /**********
  * Header *
@@ -75,4 +75,19 @@ EphyWindow .dynamic-notebook tab.left:active {
 EphyWindow .notebook tab.right:active,
 EphyWindow .dynamic-notebook tab.right:active {
     box-shadow:inset 3px 0 0 0 @epiphany;
+}
+
+
+/******************
+ * Incognito Mode *
+ ******************/
+
+.incognito-mode {
+    background-image:none;
+    background-color: shade(@epiphany, 0.8);
+}
+
+.incognito-mode .button {
+    background-image:none;
+
 }

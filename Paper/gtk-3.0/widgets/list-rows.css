@@ -16,136 +16,153 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/*********
-* Lists *
-*********/
-.list,
+/***********
+ * List Rows *
+ ***********/
+ 
 .list-row {
-    background-color: @background;
-    border-color: @border;
-}
-
-.list:backdrop,
-.list-row:backdrop {
-    background-color: @backdrop_background;
-    border-color: @backdrop_border;
-}
-
-.list-row,
-.grid-child {
-    padding: 2px;
-}
-
-/* List Row Button */
-.button.list-row {
-}
-
-.button.list-row:hover  {
-    background-color: alpha(@selection, 0.2);
-    color: @selection;
-}
-
-.button.list-row:active,
-.button.list-row:selected {
-    background-color: alpha(@selection, 0.4);
-    color: @selection;
-}
-
-.button.list-row:active:selected,
-.button.list-row:active:selected:hover {
-    background-color: alpha(@selection, 0.2);
-    color: @selection;
-}
-
-.button.list-row:hover:selected {
-    background-color: alpha(@selection, 0.2);
-    color: @selection;
-}
-
-
-.list-row.button,
-.header-bar .list-row.button.titlebutton,
-.titlebar .list-row.button.titlebutton {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 0px;
+    border:none;
+    background-image: none;
     background-color: transparent;
-    border-style: none;
-    border-radius: 0;
-    box-shadow: none;
+    color: @text;
 }
 
-.list-row.button:hover {
-    border-color: @selection;
+/* Focus */
+.list-row:focus,
+.list-row:active:focus {
+    border:none;
+    background-image: none;
+    background-color: shade(@selection, 1.1);
+    color: @selection;
+}
+
+/* Hover */
+.list-row:hover,
+.list-row:active:hover {
+    border:none;
+    background-image: none;
+    background-color: shade(@background, 0.9);
+    color: @selected_foreground;
+}
+
+/* Active (Pressed) */
+.list-row:active {
+    border:none;
+    background-image: none;
     background-color: @selection;
     color: @selected_foreground;
-    box-shadow: none;
 }
 
-.list-row.button:active {
-    box-shadow: none;
-}
-
-.list-row.button:selected:active {
-}
-
-.list-row.button:selected:hover {
-    border-color: shade(@selection, 1.2);
-    background-color: shade(@selection, 1.2);
-}
-
-.list-row.button:selected:backdrop {
-    background-color: @backdrop_selection;
-}
-
-.list-row:selected .button {
-    color: @button;
-    border-color: @border;
-    border-color: @selected_border;
-}
-
-.list-row:selected .button.flat,
-.list-row:selected .header-bar .titlebutton.button,
-.header-bar .list-row:selected .titlebutton.button,
-.list-row:selected .titlebar .titlebutton.button,
-.titlebar .list-row:selected .titlebutton.button {
-    border-color: transparent;
-    background-color: transparent;
+/* Selected */
+.list-row:selected {
+    border:none;
     background-image: none;
-    box-shadow: none;
-    color: @selection;
+    background-color: shade(@selection, 1.1);
+    color: @selected_foreground;
 }
 
-.list-row:selected .button:hover {
-    color: @button;
-    border-color: @border;
-    border-color: @selected_border;
-    box-shadow: none;
+/* Selected:Hover; */
+.list-row:selected:hover {
+    border:none;
+    background-image: none;
+    background-color: shade(shade(@selection, 1.1), 1.1);
+    color: @selected_foreground;
 }
 
-.list-row:selected .button:active,
-.list-row:selected .button:checked {
-    color: @button;
-    border-color: @border;
-    border-color: @selected_border;
+/* Insensitive */
+.list-row:insensitive {
+    border:none;
+    background-color: @insensitive_background;
+    background-image: none;
+    color: @insensitive_text;
 }
 
-.list-row:selected .button:backdrop,
-.list-row:selected .button.flat:backdrop,
-.list-row:selected .header-bar .titlebutton.button:backdrop,
-.header-bar .list-row:selected .titlebutton.button:backdrop,
-.list-row:selected .titlebar .titlebutton.button:backdrop,
-.titlebar .list-row:selected .titlebutton.button:backdrop {
-    color: @insensitive_background;
-    border-color: @insensitive_border;
-    border-color: @selected_border;
+/* Backdrop */
+.list-row:backdrop {
+    border:none;
+    background-image: none;
+    background-color: shade(@base, 0.95);
+    color: @backdrop_text;
 }
 
-.list-row, list-row.button,
-.header-bar list-row.button.titlebutton,
-.titlebar list-row.button.titlebutton {
-    transition: all 300ms cubic-bezier(0.3, 0.5, 0.5, 0.9);
+/* Active:Backdrop */
+.list-row:active:backdrop {
+    border:none;
+    background-image: none;
+    background-color: shade(@selection, 0.9);
+    color: @backdrop_text;
 }
 
-.list-row:hover, list-row.button:hover,
-.header-bar list-row.button.titlebutton:hover,
-.titlebar list-row.button.titlebutton:hover {
-    transition: none;
+/* Backdrop:Hover; */
+.list-row:backdrop:hover {
+    background-image: none;
+    background-color: shade(@base, 0.96);
+    color: @backdrop_text;
+}
+
+/* Insensitive:Backdrop */
+.list-row:insensitive:backdrop {
+    border:none;
+    background-color: @insensitive_background;
+    background-image: none;
+    color: @insensitive_text;
+}
+
+/* Images */
+.list-row GtkImage,
+.list-row:focus GtkImage,
+.list-row:hover GtkImage {
+    color: @text;
+}
+
+.list-row:selected GtkImage,
+.list-row:active GtkImage {
+    color: @selected_foreground;
+}
+
+.list-row:backdrop GtkImage,
+.list-row:backdrop:hover GtkImage,
+.list-row:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+.list-row:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+.list-row:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+
+.list-row GtkLabel,
+.list-row:focus GtkLabel,
+.list-row:hover GtkLabel {
+    color: @text;
+}
+
+.list-row:selected GtkLabel,
+.list-row:active GtkLabel {
+    color: @selected_foreground;
+}
+
+.list-row:backdrop GtkLabel,
+.list-row:backdrop:hover GtkLabel,
+.list-row:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.list-row:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.list-row:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
 }
