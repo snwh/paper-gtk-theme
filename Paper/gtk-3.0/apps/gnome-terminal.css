@@ -94,7 +94,7 @@ TerminalWindow .dynamic-notebook tab.right:active {
 
 TerminalScreen,
 VteTerminal {
-    -TerminalScreen-background-darkness: 0.95;
+    /*-TerminalScreen-background-darkness: 0.95;*/
     background-color: @terminal_background;
     color: @terminal_text;
 }
