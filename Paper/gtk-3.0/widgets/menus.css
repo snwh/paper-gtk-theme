@@ -26,6 +26,7 @@
 }
 
 /*Context Menu*/
+
 .context-menu {
     font: initial;
     box-shadow: 0 2px 3px 2px @menu_shadow;
@@ -44,8 +45,7 @@
     color: @base;
 }
 
-/* Menu Items */
-
+/* Menu Item */
 .menuitem,
 .menu .menuitem {
     padding-top: 4px;
@@ -57,17 +57,6 @@
 
     -GtkMenuItem-arrow-scaling: 0.5;
     -gtk-icon-style: symbolic;
-}
-
-/* Menu Text */
-.menuitem GtkLabel {
-    padding-left: 2px;
-    padding-right: 2px;
-}
-
-.menu .menuitem GtkLabel {
-    padding-left: 6px;
-    padding-right: 2px;
 }
 
 /* Active */
@@ -113,6 +102,7 @@
 .menu .menuitem.arrow:dir(rtl) {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
+
 /* Separator color */
 .menuitem.separator {
     padding-left: 2px;
@@ -150,8 +140,18 @@
 }
 
 
+/* Menu Text */
+.menuitem GtkLabel {
+    padding-left: 2px;
+    padding-right: 2px;
+}
 
-/* Images */
+.menu .menuitem GtkLabel {
+    padding-left: 6px;
+    padding-right: 2px;
+}
+
+/* Images * Labels */
 .menuitem GtkImage {
     color: @text;
 }

@@ -16,17 +16,39 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/*************
- * Statusbar *
- *************/
-GtkStatusbar {
-    padding: 0;
-    color: @foreground;
-    border-width: 0px;
+/**********
+ * Labels *
+ **********/
+
+.label,
+GtkLabel {
+	color: @text;
 }
 
-GtkStatusbar .frame {
-    padding: 0;
-    border: none;
-    background-color: @background;
+.label:active,
+.label:focus,
+.label:hover,
+*:active GtkLabel,
+*:focus GtkLabel,
+*:hover GtkLabel {
+    color: @selected_foreground;
+}
+
+.label:backdrop,
+.label:backdrop:hover,
+.label:active:backdrop,
+*:backdrop GtkLabel,
+*:backdrop:hover GtkLabel,
+*:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.label:insensitive,
+*:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.label:insensitive:backdrop,
+*:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
 }
