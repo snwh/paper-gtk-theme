@@ -17,9 +17,9 @@
 */
 
 @define-color button_background shade(@base, 0.95);/* Button background color */
-@define-color button_border shade(@button_background, 0.9);/* Button border color */
+@define-color button_border shade(@border, 1.1);/* Button border color */
 @define-color backdrop_button_background shade(@backdrop_background, 0.9);/* Backdrop button background color */
-@define-color backdrop_button_border shade(@backdrop_button_background, 0.9); /* Backdrop button border color */
+@define-color backdrop_button_border shade(@button_border, 0.9); /* Backdrop button border color */
 
 /***********
  * Buttons *
@@ -92,7 +92,7 @@ GtkCalendar.button:backdrop:hover,
 .button.text-button:active,
 .button.image-button:active {
     border: 1px solid @selection;
-    background-color: @selection;
+    background-color: shade(@selection, 1.1);
     color: @selected_foreground;
 
 }
