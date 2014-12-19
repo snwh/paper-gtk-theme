@@ -18,8 +18,8 @@
 
 @define-color button_background shade(@base, 0.98);/* Button background color */
 @define-color button_border @border;/* Button border color */
-@define-color backdrop_button_background shade(@backdrop_background, 0.9);/* Backdrop button background color */
-@define-color backdrop_button_border shade(@button_border, 0.9); /* Backdrop button border color */
+@define-color backdrop_button_background shade(@backdrop_background, 0.98);/* Backdrop button background color */
+@define-color backdrop_button_border shade(@button_border, 0.98); /* Backdrop button border color */
 
 /***********
  * Buttons *
@@ -95,7 +95,6 @@ GtkCalendar.button:backdrop:hover,
                                       shade(shade(@selection, 1.2), 0.98)
                                       );
     color: @selected_foreground;
-    transition: all 100ms cubic-bezier(0.3, 0.5, 0.5, 0.9);
 }
 
 /* Active (Pressed) Button */
@@ -105,6 +104,10 @@ GtkCalendar.button:backdrop:hover,
 .button.image-button:active {
     border: 1px solid @selection;
     background-color: shade(@selection, 1.1);
+    background-image: linear-gradient(to bottom, 
+                                      shade(shade(@selection, 1.1), 0.95),
+                                      shade(@selection, 1.1)
+                                      );
     color: @selected_foreground;
 
 }
@@ -127,10 +130,7 @@ GtkCalendar.button:backdrop:hover,
 .button.image-button:backdrop {
     border: 1px solid @backdrop_button_border;
     background-color: @backdrop_button_background;
-    background-image: linear-gradient(to bottom, 
-                                      @backdrop_button_background,
-                                      shade(@backdrop_button_background, 0.98)
-                                      );
+    background-image: none;
     color: @backdrop_text;
 }
 /* Backdrop Button */

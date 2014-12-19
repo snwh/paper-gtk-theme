@@ -68,7 +68,7 @@
 .notebook tab {
     border: none;
     border-radius: 0;
-    background: none;
+    background: @background;
     color: @foreground;
 }
 
@@ -90,13 +90,13 @@
 
 .notebook tab:backdrop {
     border: none;
-    background: none;
+    background: @backdrop_background;
     color: @backdrop_text;
 }
 
 .notebook tab:insensitive {
     border: none;
-    background: none;
+    background: @insensitive_background;
     color: @insensitive_text;
 }
 
