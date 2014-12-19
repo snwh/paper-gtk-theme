@@ -77,6 +77,7 @@
 .header-bar .image-button {
     background-color: transparent;
     background: none;
+    box-shadow: none;
     padding: 13px;
     transition: all 300ms cubic-bezier(0.3, 0.5, 0.5, 0.9);
 }
@@ -92,6 +93,7 @@
     background-color: transparent;
     border-radius: 0px;
     border: none;
+    box-shadow: none;
     outline: none;
     color: @header_text;
 }
@@ -105,12 +107,34 @@
 .header-bar .suggested-action .button:active,
 .header-bar .image-button:active {
     border-radius: 0px;
-    font: Bold;
     background-color: alpha(#000, 0.1);
     border: none;
     outline: none;
     color: @header_text;
     box-shadow: inset 0 -2px 0 0 @header_text;
+}
+
+.header-bar .text-button:active {
+    font: Bold;
+}
+
+/* Checked Button */
+.header-bar .button:checked,
+.header-bar .text-button:checked,
+.header-bar .titlebutton:checked,
+.header-bar .linked:checked,
+.header-bar .flat:checked,
+.header-bar .suggested-action .button:checked,
+.header-bar .image-button:checked {
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    color: @header_text;
+    box-shadow: inset 0 -2px 0 0 @header_text;
+}
+
+.header-bar .text-button:checked {
+    font: Bold;
 }
 
 /* Focus Button */
@@ -123,7 +147,6 @@
 .header-bar .image-button:focus {
     border-radius: 0px;
     background-color: transparent;
-    font: Bold;
     border: none;
     outline: none;
     color: @header_text;
@@ -158,6 +181,7 @@
     border-radius: 0px;
     background-color: transparent;
     border: none;
+    box-shadow: none;
     outline: none;
     color: @backdrop_header_text;
 }
@@ -171,12 +195,15 @@
 .header-bar .suggested-action .button:active:backdrop,
 .header-bar .image-button:active:backdrop {
     border-radius: 0px;
-    font: Bold;
     background-color: transparent;
     border: none;
     outline: none;
     color: @backdrop_header_text;
     box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
+}
+
+.header-bar .text-button:active:backdrop {
+    font: Bold;
 }
 
 /* Backdrop:Hover Button */
@@ -205,8 +232,8 @@
 .header-bar .image-button:insensitive {
     background-color: transparent;
     border-radius: 0px;
-    font: Bold;
     border: none;
+    box-shadow: none;
     outline: none;
     color: @insensitive_header_text;
 }
@@ -220,13 +247,11 @@
 .header-bar .suggested-action .button:insensitive:backdrop,
 .header-bar .image-button:insensitive:backdrop {
     border-radius: 0px;
-    font: Bold;
     background-color: transparent;
     border: none;
     outline: none;
     color: @insensitive_header_text;
 }
-
 
 
 

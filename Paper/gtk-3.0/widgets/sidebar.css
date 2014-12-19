@@ -79,7 +79,7 @@ GtkDialog .sidebar GtkScrolledWindow {
 .source-list.view:selected:focus,
 .source-list.category-expander:hover {
     color: @selection;
-    background-color: @base;
+    background-color: @background;
     box-shadow: none;
 }
 

@@ -253,7 +253,7 @@
     box-shadow:inset 1px 0 0 0 @insensitive_border;
 }
 
-/*----- In-tab padding -----*/
+/*----- In-tab Padding -----*/
 
 .dynamic-notebook tab.top {
     padding-top: 4px;
@@ -270,11 +270,11 @@
 }
 
 .dynamic-notebook tab.left {
-    padding: 2px 3px 2px 2px;
+    padding: 6px;
 }
 
 .dynamic-notebook tab.right {
-    padding: 2px 2px 2px 3px;
+    padding: 6px;
 }
 
 .dynamic-notebook tab.top:active {
@@ -286,11 +286,11 @@
 }
 
 .dynamic-notebook tab.left:active {
-    padding: 2px 3px 2px 2px;
+    padding: 6px;
 }
 
 .dynamic-notebook tab.right:active {
-    padding: 2px 2px 2px 3px;
+    padding: 6px;
 }
 
 

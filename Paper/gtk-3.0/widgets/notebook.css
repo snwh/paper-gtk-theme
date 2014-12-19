@@ -189,11 +189,11 @@
 }
 
 .notebook tab.left {
-    padding: 2px 3px 2px 2px;
+    padding: 8px;
 }
 
 .notebook tab.right {
-    padding: 2px 2px 2px 3px;
+    padding: 8px;
 }
 
 .notebook tab.top:active {
@@ -205,11 +205,11 @@
 }
 
 .notebook tab.left:active {
-    padding: 2px 3px 2px 2px;
+    padding: 8px;
 }
 
 .notebook tab.right:active {
-    padding: 2px 2px 2px 3px;
+    padding: 8px;
 }
 
 .notebook.header,

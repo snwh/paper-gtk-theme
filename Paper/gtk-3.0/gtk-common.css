@@ -121,7 +121,7 @@
  * Troughs *
  ***********/
 @define-color trough_active @selected_background;
-@define-color trough_background shade(@base,0.95);
+@define-color trough_background alpha(@selected_background, 0.2);
 @define-color insensitive_trough_background shade(@background, 0.9);
 @define-color backdrop_trough_background @backdrop_background;
 
