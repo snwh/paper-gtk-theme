@@ -14,6 +14,9 @@ Paper is distributed under the terms the GNU General Public License (GNU GPL v.3
 If you download the provided archive, extract it and run the included install script.
 
 	bash install.sh
+Or you could use
+
+    ./install.sh
 
 ###Bugs & Issues
 
