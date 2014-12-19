@@ -65,8 +65,6 @@ GtkCheckButton:selected:focus {
     color: @backdrop_selected_foreground;
 }
 
-
-
 /*****************
  * Radio Buttons *
  *****************/
@@ -114,4 +112,37 @@ GtkCheckButton:selected:focus {
 }
 .menu .menuitem.radio:insensitive {
     color: @insensitive_text;
+}
+
+
+/* Menuitem Checks & Radios */
+
+.menuitem.check,
+.menuitem.radio {
+    background: none;
+    background-image: none;
+    background: none;
+    box-shadow: none;
+}
+
+.menuitem.check,
+.menuitem.check:active,
+.menuitem.check:active:hover,
+.menuitem.check:active:insensitive,
+.menuitem.check:hover,
+.menuitem.check:inconsistent,
+.menuitem.check:inconsistent:hover,
+.menuitem.check:inconsistent:insensitive,
+.menuitem.check:insensitive,
+.menuitem.radio,
+.menuitem.radio:active,
+.menuitem.radio:active:hover,
+.menuitem.radio:active:insensitive,
+.menuitem.radio:hover,
+.menuitem.radio:inconsistent,
+.menuitem.radio:inconsistent:hover ,
+.menuitem.radio:inconsistent:insensitive,
+.menuitem.radio:insensitive {
+    background: none;
+    box-shadow: none;
 }

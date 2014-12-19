@@ -88,11 +88,13 @@ TerminalWindow .dynamic-notebook tab.right:active {
     box-shadow:inset 3px 0 0 0 @terminal;
 }
 
-/******************
- * GNOME Terminal *
- ******************/
+/**********
+ * Screen *
+ **********/
 
+TerminalScreen,
 VteTerminal {
+    -TerminalScreen-background-darkness: 0.95;
     background-color: @terminal_background;
     color: @terminal_text;
 }
