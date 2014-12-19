@@ -26,6 +26,7 @@
 }
 
 /*Context Menu*/
+
 .context-menu {
     font: initial;
     box-shadow: 0 2px 3px 2px @menu_shadow;
@@ -44,8 +45,7 @@
     color: @base;
 }
 
-/* Menu Items */
-
+/* Menu Item */
 .menuitem,
 .menu .menuitem {
     padding-top: 4px;
@@ -57,17 +57,6 @@
 
     -GtkMenuItem-arrow-scaling: 0.5;
     -gtk-icon-style: symbolic;
-}
-
-/* Menu Text */
-.menuitem GtkLabel {
-    padding-left: 2px;
-    padding-right: 2px;
-}
-
-.menu .menuitem GtkLabel {
-    padding-left: 6px;
-    padding-right: 2px;
 }
 
 /* Active */
@@ -113,6 +102,7 @@
 .menu .menuitem.arrow:dir(rtl) {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
+
 /* Separator color */
 .menuitem.separator {
     padding-left: 2px;
@@ -150,18 +140,51 @@
 }
 
 
+/* Menu Text */
+.menuitem GtkLabel {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.menu .menuitem GtkLabel {
+    padding-left: 6px;
+    padding-right: 2px;
+}
+
+/* Something is utterly broken where I've had to do this ugly bit of styling. */
 
 /* Images */
-.menuitem GtkImage {
+.menuitem GtkImage,
+.menu .menuitem GtkImage,
+.menu .menuitem .menu .menuitem GtkImage,
+.menu .menuitem .menu .menuitem .menu .menuitem GtkImage {
     color: @text;
 }
 
+.menu .menuitem:active GtkImage,
+.menu .menuitem .menu .menuitem:active GtkImage,
+.menu .menuitem .menu .menuitem .menu .menuitem:active GtkImage,
+.menu .menuitem:hover GtkImage,
+.menu .menuitem .menu .menuitem:hover GtkImage,
+.menu .menuitem .menu .menuitem .menu .menuitem:hover GtkImage,
+.menu .menuitem:focus GtkImage,
+.menu .menuitem .menu .menuitem:focus GtkImage,
+.menu .menuitem .menu .menuitem .menu .menuitem:focus GtkImage,
 .menuitem:active GtkImage,
 .menuitem:focus GtkImage,
 .menuitem:hover GtkImage {
     color: @selected_foreground;
 }
 
+.menu .menuitem:backdrop GtkImage,
+.menu .menuitem .menu .menuitem:backdrop GtkImage,
+.menu .menuitem .menu .menuitem .menu .menuitem:backdrop GtkImage,
+.menu .menuitem:active:backdrop GtkImage,
+.menu .menuitem .menu .menuitem:active:backdrop GtkImage,
+.menu .menuitem .menu .menuitem .menu .menuitem:active:backdrop GtkImage,
+.menu .menuitem:backdrop:hover GtkImage,
+.menu .menuitem .menu .menuitem:backdrop:hover GtkImage,
+.menu .menuitem .menu .menuitem .menu .menuitem:backdrop:hover GtkImage,
 .menuitem:backdrop GtkImage,
 .menuitem:backdrop:hover GtkImage,
 .menuitem:active:backdrop GtkImage {
@@ -169,70 +192,70 @@
     -gtk-image-effect: dim;
 }
 
+.menu .menuitem:insensitive GtkImage,
+.menu .menuitem .menu .menuitem:insensitive GtkImage,
+.menu .menuitem .menu .menuitem .menu .menuitem:insensitive GtkImage,
 .menuitem:insensitive GtkImage {
     color: @insensitive_text;
     -gtk-image-effect: dim;
 }
 
+.menu .menuitem:insensitive:backdrop GtkImage,
+.menu .menuitem .menu .menuitem:insensitive:backdrop GtkImage,
+.menu .menuitem .menu .menuitem .menu .menuitem:insensitive:backdrop GtkImage,
 .menuitem:insensitive:backdrop GtkImage {
     color: mix(@backdrop_text, @insensitive_text, 0.5);
     -gtk-image-effect: dim;
 }
 
 /* Labels */
-.menuitem GtkLabel {
+.menuitem GtkLabel,
+.menu .menuitem GtkLabel,
+.menu .menuitem .menu .menuitem GtkLabel,
+.menu .menuitem .menu .menuitem .menu .menuitem GtkLabel {
     color: @text;
 }
 
+.menu .menuitem:active GtkLabel,
+.menu .menuitem .menu .menuitem:active GtkLabel,
+.menu .menuitem .menu .menuitem .menu .menuitem:active GtkLabel,
+.menu .menuitem:hover GtkLabel,
+.menu .menuitem .menu .menuitem:hover GtkLabel,
+.menu .menuitem .menu .menuitem .menu .menuitem:hover GtkLabel,
+.menu .menuitem:focus GtkLabel,
+.menu .menuitem .menu .menuitem:focus GtkLabel,
+.menu .menuitem .menu .menuitem .menu .menuitem:focus GtkLabel,
 .menuitem:active GtkLabel,
 .menuitem:focus GtkLabel,
 .menuitem:hover GtkLabel {
     color: @selected_foreground;
 }
 
+.menu .menuitem:backdrop GtkLabel,
+.menu .menuitem .menu .menuitem:backdrop GtkLabel,
+.menu .menuitem .menu .menuitem .menu .menuitem:backdrop GtkLabel,
+.menu .menuitem:active:backdrop GtkLabel,
+.menu .menuitem .menu .menuitem:active:backdrop GtkLabel,
+.menu .menuitem .menu .menuitem .menu .menuitem:active:backdrop GtkLabel,
+.menu .menuitem:backdrop:hover GtkLabel,
+.menu .menuitem .menu .menuitem:backdrop:hover GtkLabel,
+.menu .menuitem .menu .menuitem .menu .menuitem:backdrop:hover GtkLabel,
 .menuitem:backdrop GtkLabel,
 .menuitem:backdrop:hover GtkLabel,
 .menuitem:active:backdrop GtkLabel {
     color: @backdrop_text;
 }
 
+.menu .menuitem:insensitive GtkLabel,
+.menu .menuitem .menu .menuitem:insensitive GtkLabel,
+.menu .menuitem .menu .menuitem .menu .menuitem:insensitive GtkLabel,
 .menuitem:insensitive GtkLabel {
     color: @insensitive_text;
 }
 
+.menu .menuitem:insensitive:backdrop GtkLabel,
+.menu .menuitem .menu .menuitem:insensitive:backdrop GtkLabel,
+.menu .menuitem .menu .menuitem .menu .menuitem:insensitive:backdrop GtkLabel,
 .menuitem:insensitive:backdrop GtkLabel {
     color: mix(@backdrop_text, @insensitive_text, 0.5);
-}
-
-
-/* Checks & Radios */
-
-.menuitem.check,
-.menuitem.radio {
-    background: none;
-    background-image: none;
-    background: none;
-    box-shadow: none;
-}
-
-.menuitem.check,
-.menuitem.check:active,
-.menuitem.check:active:hover,
-.menuitem.check:active:insensitive,
-.menuitem.check:hover,
-.menuitem.check:inconsistent,
-.menuitem.check:inconsistent:hover,
-.menuitem.check:inconsistent:insensitive,
-.menuitem.check:insensitive,
-.menuitem.radio,
-.menuitem.radio:active,
-.menuitem.radio:active:hover,
-.menuitem.radio:active:insensitive,
-.menuitem.radio:hover,
-.menuitem.radio:inconsistent,
-.menuitem.radio:inconsistent:hover ,
-.menuitem.radio:inconsistent:insensitive,
-.menuitem.radio:insensitive {
-    background: none;
-    box-shadow: none;
 }

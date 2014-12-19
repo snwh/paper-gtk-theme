@@ -74,12 +74,6 @@
     color: @text;
 }
 
-.entry .button,
-.entry .button:hover {
-    box-shadow:none;
-}
-
-
 /*********************
  * Entry Progressbar *
  *********************/
@@ -116,7 +110,7 @@
     margin: 0 2px 0 2px;
     border-image: none;
     border-style: none;
-    background-color: @selection;
+    background:none;
     background-image: linear-gradient(to top, 
                                       transparent 2px,
                                       @base 2px,

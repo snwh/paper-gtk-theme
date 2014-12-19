@@ -21,7 +21,8 @@
  * Separators *
  **************/
  
-.separator {
+.separator,
+.button .separator {
     color: @separator;
 }
 
