@@ -16,7 +16,7 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color button_background shade(@base, 0.9);/* Button background color */
+@define-color button_background shade(@base, 0.95);/* Button background color */
 @define-color button_border @border;/* Button border color */
 @define-color backdrop_button_background shade(@backdrop_background, 0.9);/* Button background color */
 @define-color button_border @button_background; /* Button border color */
@@ -26,7 +26,7 @@
  ***********/
  
 .button {
-    border-radius: px;
+    border-radius: 3px;
     padding: 4px 9px;
     border: 1px solid @button_border;
     background-color: @button_background;
@@ -70,11 +70,10 @@ GtkCalendar.button:backdrop:hover,
 .button:active:focus,
 .button.text-button:focus,
 .button.image-button:focus {
-    outline-color: selected_foreground;
     border: 1px solid shade(@selection, 1.1);
     background-color: shade(@selection, 1.1);
     color: @selected_foreground;
-    /*box-shadow: 0 1px 2px 0px alpha(#000,0.2);*/
+    box-shadow: 0 1px 2px 0px alpha(@selection,0.4);
 }
 
 /* Hover Button */
@@ -86,11 +85,11 @@ GtkCalendar.button:backdrop:hover,
     border: 1px solid shade(@selection, 1.2);
     background-color: shade(@selection, 1.2);
     color: @selected_foreground;
-    box-shadow: 0 1px 2px 1px alpha(#000,0.4);
-    transition: all 50ms cubic-bezier(0.3, 0.5, 0.5, 0.9);
+    box-shadow: 0 1px 2px 1px alpha(#000,0.3);
+    transition: all 100ms cubic-bezier(0.3, 0.5, 0.5, 0.9);
 }
 
-/* Active/Pressed Button */
+/* Active (Pressed) Button */
 .button:active,
 .button.default:active,
 .button.text-button:active,
@@ -98,7 +97,8 @@ GtkCalendar.button:backdrop:hover,
     border: 1px solid @selection;
     background-color: @selection;
     color: @selected_foreground;
-    box-shadow: 0 1px 2px 0px alpha(#000,0.2);
+    /*box-shadow: 0 1px 2px 0px alpha(#000,0.2);*/
+    box-shadow: none;
 
 }
 

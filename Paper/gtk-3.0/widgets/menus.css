@@ -26,7 +26,6 @@
 }
 
 /*Context Menu*/
-
 .context-menu {
     font: initial;
     box-shadow: 0 2px 3px 2px @menu_shadow;
@@ -45,10 +44,7 @@
     color: @base;
 }
 
-/*************
- * Menu Item *
- *************/
-
+/* Menu Items */
 
 .menuitem,
 .menu .menuitem {

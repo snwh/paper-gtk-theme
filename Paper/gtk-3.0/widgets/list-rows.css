@@ -36,6 +36,32 @@
     padding: 2px;
 }
 
+/* List Row Button */
+.button.list-row {
+}
+
+.button.list-row:hover  {
+    background-color: alpha(@selection, 0.2);
+    color: @selection;
+}
+
+.button.list-row:active,
+.button.list-row:selected {
+    background-color: alpha(@selection, 0.4);
+    color: @selection;
+}
+
+.button.list-row:active:selected,
+.button.list-row:active:selected:hover {
+    background-color: alpha(@selection, 0.2);
+    color: @selection;
+}
+
+.button.list-row:hover:selected {
+    background-color: alpha(@selection, 0.2);
+    color: @selection;
+}
+
 
 .list-row.button,
 .header-bar .list-row.button.titlebutton,
@@ -111,120 +137,6 @@
     border-color: @insensitive_border;
     border-color: @selected_border;
 }
-
-.list-row:selected .button:backdrop:active,
-.list-row:selected .button:backdrop:checked,
-.list-row:selected .button.flat:backdrop:active,
-.list-row:selected .header-bar .titlebutton.button:backdrop:active,
-.header-bar .list-row:selected .titlebutton.button:backdrop:active,
-.list-row:selected .titlebar .titlebutton.button:backdrop:active,
-.titlebar .list-row:selected .titlebutton.button:backdrop:active,
-.list-row:selected .button.flat:backdrop:checked,
-.list-row:selected .header-bar .titlebutton.button:backdrop:checked,
-.header-bar .list-row:selected .titlebutton.button:backdrop:checked,
-.list-row:selected .titlebar .titlebutton.button:backdrop:checked,
-.titlebar .list-row:selected .titlebutton.button:backdrop:checked {
-    color: @insensitive_background;
-    border-color: @insensitive_border;
-    border-color: @selected_border;
-}
-
-.list-row:selected .button:backdrop:insensitive,
-.list-row:selected .button.flat:backdrop:insensitive,
-.list-row:selected .header-bar .titlebutton.button:backdrop:insensitive,
-.header-bar .list-row:selected .titlebutton.button:backdrop:insensitive,
-.list-row:selected .titlebar .titlebutton.button:backdrop:insensitive,
-.titlebar .list-row:selected .titlebutton.button:backdrop:insensitive {
-    color: #c7c7c7;
-    border-color: @insensitive_border;
-    border-color: @selected_border;
-}
-
-.list-row:selected .button:backdrop:insensitive > .label,
-.list-row:selected .header-bar .button.titlebutton:backdrop:insensitive > .label,
-.list-row:selected .titlebar .button.titlebutton:backdrop:insensitive > .label,
-.list-row:selected .button.flat:backdrop:insensitive > .label,
-.list-row:selected .header-bar .titlebutton.button:backdrop:insensitive > .label,
-.header-bar .list-row:selected .titlebutton.button:backdrop:insensitive > .label,
-.list-row:selected .titlebar .titlebutton.button:backdrop:insensitive > .label,
-.titlebar .list-row:selected .titlebutton.button:backdrop:insensitive > .label {
-    color: inherit;
-}
-
-.list-row:selected .button:backdrop:insensitive:active,
-.list-row:selected .button:backdrop:insensitive:checked,
-.list-row:selected .button.flat:backdrop:insensitive:active,
-.list-row:selected .header-bar .titlebutton.button:backdrop:insensitive:active,
-.header-bar .list-row:selected .titlebutton.button:backdrop:insensitive:active,
-.list-row:selected .titlebar .titlebutton.button:backdrop:insensitive:active,
-.titlebar .list-row:selected .titlebutton.button:backdrop:insensitive:active,
-.list-row:selected .button.flat:backdrop:insensitive:checked,
-.list-row:selected .header-bar .titlebutton.button:backdrop:insensitive:checked,
-.header-bar .list-row:selected .titlebutton.button:backdrop:insensitive:checked,
-.list-row:selected .titlebar .titlebutton.button:backdrop:insensitive:checked,
-.titlebar .list-row:selected .titlebutton.button:backdrop:insensitive:checked {
-    color: #c7c7c7;
-    border-color: @insensitive_border;
-    border-color: @selected_border;
-}
-
-.list-row:selected .button:backdrop:insensitive:active > .label,
-.list-row:selected .header-bar .button.titlebutton:backdrop:insensitive:active > .label,
-.list-row:selected .titlebar .button.titlebutton:backdrop:insensitive:active > .label,
-.list-row:selected .button:backdrop:insensitive:checked > .label,
-.list-row:selected .header-bar .button.titlebutton:backdrop:insensitive:checked > .label,
-.list-row:selected .titlebar .button.titlebutton:backdrop:insensitive:checked > .label,
-.list-row:selected .button.flat:backdrop:insensitive:active > .label,
-.list-row:selected .header-bar .titlebutton.button:backdrop:insensitive:active > .label,
-.header-bar .list-row:selected .titlebutton.button:backdrop:insensitive:active > .label,
-.list-row:selected .titlebar .titlebutton.button:backdrop:insensitive:active > .label,
-.titlebar .list-row:selected .titlebutton.button:backdrop:insensitive:active > .label,
-.list-row:selected .button.flat:backdrop:insensitive:checked > .label,
-.list-row:selected .header-bar .titlebutton.button:backdrop:insensitive:checked > .label,
-.header-bar .list-row:selected .titlebutton.button:backdrop:insensitive:checked > .label,
-.list-row:selected .titlebar .titlebutton.button:backdrop:insensitive:checked > .label,
-.titlebar .list-row:selected .titlebutton.button:backdrop:insensitive:checked > .label {
-    color: inherit;
-}
-
-.list-row:selected .button.flat:backdrop,
-.list-row:selected .header-bar .titlebutton.button:backdrop,
-.header-bar .list-row:selected .titlebutton.button:backdrop,
-.list-row:selected .titlebar .titlebutton.button:backdrop,
-.titlebar .list-row:selected .titlebutton.button:backdrop {
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none;
-    color: white;
-}
-
-.list-row:selected .button:insensitive {
-    color: @insensitive_background;
-    border-color: @border;
-    border-color: @selected_border;
-}
-
-.list-row:selected .button:insensitive > .label,
-.list-row:selected .header-bar .button.titlebutton:insensitive > .label,
-.list-row:selected .titlebar .button.titlebutton:insensitive > .label {
-    color: inherit;
-}
-
-.list-row:selected .button:insensitive:active,
-.list-row:selected .button:insensitive:checked {
-    color: @insensitive_background;
-    border-color: @border;
-}
-
-.list-row:selected .button:insensitive:active > .label,
-.list-row:selected .header-bar .button.titlebutton:insensitive:active > .label,
-.list-row:selected .titlebar .button.titlebutton:insensitive:active > .label,
-.list-row:selected .button:insensitive:checked > .label,
-.list-row:selected .header-bar .button.titlebutton:insensitive:checked > .label,
-.list-row:selected .titlebar .button.titlebutton:insensitive:checked > .label {
-    color: inherit;
-}
-
 
 .list-row, list-row.button,
 .header-bar list-row.button.titlebutton,
