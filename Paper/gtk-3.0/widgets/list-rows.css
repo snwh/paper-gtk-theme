@@ -43,15 +43,18 @@
     background-color: transparent;
     border-style: none;
     border-radius: 0;
+    box-shadow: none;
 }
 
 .list-row.button:hover {
     border-color: @selection;
     background-color: @selection;
     color: @selected_foreground;
+    box-shadow: none;
 }
 
 .list-row.button:active {
+    box-shadow: none;
 }
 
 .list-row.button:selected:active {
@@ -80,6 +83,7 @@
     border-color: transparent;
     background-color: transparent;
     background-image: none;
+    box-shadow: none;
     color: @selection;
 }
 
@@ -87,6 +91,7 @@
     color: @button;
     border-color: @border;
     border-color: @selected_border;
+    box-shadow: none;
 }
 
 .list-row:selected .button:active,
