@@ -211,6 +211,31 @@ GtkCalendar.button:backdrop:hover,
     color: mix(@backdrop_text, @insensitive_text, 0.5);
 }
 
+/* Labels */
+.text-button GtkLabel {
+    color: @text;
+}
+
+.text-button:active GtkLabel,
+.text-button:focus GtkLabel,
+.text-button:hover GtkLabel {
+    color: shade(@text, 2.0);
+}
+
+.text-button:backdrop GtkLabel,
+.text-button:backdrop:hover GtkLabel,
+.text-button:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.text-button:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.text-button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
 /**************
 * Help Button *
 **************/
