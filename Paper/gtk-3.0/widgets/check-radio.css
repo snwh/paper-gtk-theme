@@ -93,37 +93,6 @@ GtkCheckButton:selected:focus {
     color: @backdrop_selected_foreground;
 }
 
-/* Labels */
-.check GtkLabel,
-.check:active GtkLabel,
-.check:focus GtkLabel,
-.check:hover GtkLabel, 
-.radio GtkLabel,
-.radio:active GtkLabel,
-.radio:focus GtkLabel,
-.radio:hover GtkLabel {
-    color: @text;
-}
-
-.check:backdrop GtkLabel,
-.check:backdrop:hover GtkLabel,
-.check:active:backdrop GtkLabel,
-.radio:backdrop GtkLabel,
-.radio:backdrop:hover GtkLabel,
-.radio:active:backdrop GtkLabel {
-    color: @backdrop_text;
-}
-
-.check:insensitive GtkLabel,
-.radio:insensitive GtkLabel {
-    color: @insensitive_text;
-}
-
-.check:insensitive:backdrop GtkLabel,
-.radio:insensitive:backdrop GtkLabel {
-    color: mix(@backdrop_text, @insensitive_text, 0.5);
-}
-
 /* Symbolic Radio */
 .menu .menuitem.radio {
   -gtk-icon-source: -gtk-icontheme("radio-symbolic");
