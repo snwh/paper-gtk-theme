@@ -44,8 +44,8 @@
 
 .message-dialog .titlebar {
     padding: 0px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     border: none;
     background-color: @background;
     color: @text;

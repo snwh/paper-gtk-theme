@@ -16,30 +16,111 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/*****************
- * Column header *
+/******************
+ * Column Headers *
  *****************/
- 
-column-header .button {
-    background: none;
-	box-shadow: none;
-    border-radius: 0px;
-    border: solid @border;
-    border-width: 0 0 1px 1px;
-}
- 
-column-header:first-child .button,
-column-header .button:first-child {
-    border-radius: 0px;
-    border: solid @border;
-    border-width: 0 0 1px 1px;
-}
- 
-column-header:last-child .button,
-column-header .button:last-child {
-    border-radius: 0px;
-    border: solid @border;
-    border-width: 0 0 1px 1px;
+
+column-header .button,
+.content-view column-header .button {
+    border-radius: 0;
+    border-width: 0px;
 }
 
- 
+column-header .button GtkImage,
+column-header .button GtkLabel {
+    padding-left: 3px;
+    color: @text;
+}
+
+column-header:nth-child(first) .button,
+column-header:nth-child(first) .button:active,
+column-header:nth-child(first) .button:backdrop,
+column-header:nth-child(first) .button:backdrop:hover,
+.content-view column-header:nth-child(first) .button {
+    border-width: 0 0 1px 0;
+}
+
+/* Normal */
+column-header .button {
+    background-image: linear-gradient(to bottom, 
+                                      @button_background,
+                                      shade(@button_background, 0.98)
+                                      );
+    border-image: linear-gradient(to bottom,
+                                      @button_border,
+                                      shade(@button_border, 0.98)
+                                  ) 0 0 1 1;
+    border-width: 0 0 1px 1px;
+    padding: 4px 2px 4px 2px;
+    color: @text;
+}
+
+/* Active */
+column-header .button:focus,
+column-header .button:active {
+    background-image: linear-gradient(to bottom, 
+                                      @button_background,
+                                      shade(@button_background, 0.98)
+                                      );
+    border-image: linear-gradient(to bottom,
+                                      @button_border,
+                                      shade(@button_border, 0.98)
+                                  ) 0 0 1 1;
+    border-width: 0 0 1px 1px;
+    padding: 4px 2px 4px 2px;
+    color: @text;
+}
+
+column-header .button:focus GtkImage,
+column-header .button:focus GtkLabel,
+column-header .button:active GtkImage,
+column-header .button:active GtkLabel {
+    color: @text;
+}
+
+/* Backdrop */
+column-header .button:backdrop {
+    background-image: none;
+    background-color: @backdrop_background;
+    border-image: none;
+    border-color: @backdrop_border;
+    border-width: 0 0 1px 1px;
+    padding: 4px 2px 4px 2px;
+    color: @backdrop_text;
+}
+
+column-header .button:backdrop GtkImage,
+column-header .button:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+/* Hover */
+column-header .button:hover {
+    background-image: linear-gradient(to bottom, 
+                                      shade(@button_background, 1.2),
+                                      shade(shade(@button_background, 1.2), 0.98)
+                                      );
+    padding: 4px 2px 4px 2px;
+    border-width: 0 0 1px 1px;
+    color: @text;
+}
+
+column-header .button:hover GtkImage,
+column-header .button:hover GtkLabel {
+    color: @text;
+}
+
+/* Hover:Backdrop; */
+column-header .button:hover:backdrop {
+    background-image: linear-gradient(to bottom, 
+                                      shade(@backdrop_button_background, 1.1),
+                                      shade(shade(@backdrop_button_background, 1.1), 0.98)
+                                      );
+    border-width: 0 0 1px 1px;
+    color: @backdrop_text;
+}
+
+column-header .button:hover:backdrop GtkImage,
+column-header .button:hover:backdrop GtkLabel {
+    color: @backdrop_text;
+}

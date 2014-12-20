@@ -133,6 +133,7 @@ GtkCalendar.button:backdrop:hover,
     background-image: none;
     color: @backdrop_text;
 }
+
 /* Backdrop Button */
 .button:backdrop:hover,
 .button.default:backdrop:hover,
