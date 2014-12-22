@@ -89,7 +89,13 @@
 .toolbar .text-button:hover,
 .toolbar .text-button:active:hover,
 .toolbar .image-button:hover,
-.toolbar .image-button:active:hover {
+.toolbar .image-button:active:hover,
+.toolbar .button:focus,
+.toolbar .button:active:focus
+.toolbar .text-button:focus,
+.toolbar .text-button:active:focus,
+.toolbar .image-button:focus,
+.toolbar .image-button:active:focus {
     padding: 13px;
     border: none;
     background-color: alpha(#000, 0.1);

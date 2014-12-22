@@ -22,7 +22,6 @@
 
 .notebook {
     background-color: @base;
-    border:none;
     box-shadow:0 0 0 1px @border;
     background-clip: border-box;
 }

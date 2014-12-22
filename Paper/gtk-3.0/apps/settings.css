@@ -38,12 +38,7 @@ CcWindow .header-bar GtkSwitch.trough:active {
 }
 
 CcWindow GtkSwitch.trough:active {
-    border: 1px solid shade(@settings, 0.8);
     background-color: @settings;
-}
-
-CcWindow GtkSwitch.slider:active {
-    border: 1px solid shade(@settings, 0.8);
 }
 
 CcWindow .header-bar GtkSwitch.slider:active:backdrop,
