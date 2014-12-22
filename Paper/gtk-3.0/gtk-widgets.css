@@ -42,12 +42,13 @@
 
     padding: 0;
 
-    outline-color: alpha(#000, 0.2);
+    /*outline-color: alpha(#000, 0.2);*/
     outline-style: dashed;
-    outline-offset: -2px;
+    outline-offset: -3px;
     outline-width: 1px;
     outline-radius: 2px;
 
+    background: inherit;
     background-color: inherit;
     color: inherit;
 }
