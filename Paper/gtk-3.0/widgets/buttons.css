@@ -28,7 +28,6 @@
 .button,
 .button.text-button,
 .button.image-button {
-    outline-color: alpha(#000, 0.2);
     border-radius: 3px;
     padding: 4px 9px;
     border: 1px solid @button_border;
@@ -69,6 +68,18 @@ GtkCalendar.button:backdrop:hover,
 }
 
 /* Focus Button */
+
+
+
+.button *:focus,
+*.button:focus {
+    outline-color: alpha(#000, 0.2);
+    outline-style: dashed;
+    outline-offset: -3px;
+    outline-width: 1px;
+    outline-radius: 2px;
+}
+
 .button:focus,
 .button.default:focus,
 .button:active:focus,
