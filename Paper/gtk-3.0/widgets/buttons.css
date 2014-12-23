@@ -28,6 +28,7 @@
 .button,
 .button.text-button,
 .button.image-button {
+    outline-color: alpha(#000, 0.2);
     border-radius: 3px;
     padding: 4px 9px;
     border: 1px solid @button_border;
