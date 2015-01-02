@@ -1,0 +1,27 @@
+# Name: Paper
+# Author: nale12
+# License: GPL-3.0+
+
+active_text_color=#FFFFFF
+inactive_text_color=#CED1D2
+button_offset=0
+button_spacing=4
+show_app_icon=false
+full_width_title=true
+maximized_offset=0
+title_horizontal_offset=2
+title_shadow_active=false
+title_shadow_inactive=false
+title_vertical_offset_active=2
+title_vertical_offset_inactive=2
+title_shadow_active=false
+title_shadow_inactive=false
+shadow_delta_height=0
+shadow_delta_width=0
+shadow_delta_x=0
+shadow_delta_y=0
+resize_opacity=100
+move_opacity=100
+popup_opacity=100
+show_frame_shadow=true
+show_popup_shadow=false
