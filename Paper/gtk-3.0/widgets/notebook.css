@@ -61,6 +61,28 @@
     border-color: @backdrop_border;
 }
 
+/* Labels */
+.notebook GtkLabel,
+.notebook:active GtkLabel,
+.notebook:focus GtkLabel,
+.notebook:hover GtkLabel {
+    color: @text;
+}
+
+.notebook:backdrop GtkLabel,
+.notebook:backdrop:hover GtkLabel,
+.notebook:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.notebook:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.notebook:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
 
 /*----- Tabs -----*/
 
