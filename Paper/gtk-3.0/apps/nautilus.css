@@ -82,8 +82,13 @@ NautilusWindow .dynamic-notebook tab.right:active {
     color: @foreground;
 }
 
+.nautilus-desktop.nautilus-canvas-item {
+    color: white;
+    text-shadow: 1px 1px alpha(#000, 0.2);
+}
+
 .nautilus-desktop.nautilus-canvas-item:active {
-    color: @foreground;
+    color: white;
 }
 
 .nautilus-desktop.nautilus-canvas-item:backdrop {
