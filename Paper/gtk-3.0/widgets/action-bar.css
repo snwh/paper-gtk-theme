@@ -25,6 +25,7 @@
 }
 
 .action-bar .subtitle {
+    color: inherit;
     font: 9;
     padding: 0px 12px 0px 12px;
 }
