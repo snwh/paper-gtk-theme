@@ -56,6 +56,11 @@
 /* Subtitle */
 .header-bar .subtitle {
     font: 9;
+    color: inherit;
+}
+
+.header-bar .subtitle:backdrop {
+    color: inherit;
 }
 
 
