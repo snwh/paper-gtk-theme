@@ -67,6 +67,7 @@ elif [ "$UID" -ne "$ROOT_UID" ]; then
 		    ;;
 		esac
 	fi
+	mkdir -p $HOME/.local/share/themes
 	cp -R ./Paper/ $HOME/.local/share/themes/
 	echo "Installation complete!"
 fi
