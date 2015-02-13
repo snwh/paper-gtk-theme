@@ -25,6 +25,14 @@
     box-shadow: 0 2px 3px 2px @menu_shadow;
 }
 
+.menu,
+.popup {
+    padding: 4px 0;
+    border-radius: 4px;
+    background-color: @background;
+    color: @text;
+}
+
 /*Context Menu*/
 
 .context-menu {
@@ -47,7 +55,8 @@
 
 /* Menu Item */
 .menuitem,
-.menu .menuitem {
+.menu .menuitem,
+.popup .menuitem {
     padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 6px;
@@ -61,7 +70,8 @@
 
 /* Active */
 .menuitem:active,
-.menu .menuitem:active {
+.menu .menuitem:active,
+.popup .menuitem:active {
     background-color: @selection;
     color: @selection_foreground;
 
@@ -70,7 +80,8 @@
 
 /* Hover*/
 .menuitem:hover,
-.menu .menuitem:hover{
+.menu .menuitem:hover,
+.popup .menuitem:hover{
     background-color: @selection;
     color: @selection_foreground;
 
@@ -146,7 +157,8 @@
     padding-right: 2px;
 }
 
-.menu .menuitem GtkLabel {
+.menu .menuitem GtkLabel,
+.popup .menuitem GtkLabel {
     padding-left: 6px;
     padding-right: 2px;
 }
@@ -156,6 +168,7 @@
 /* Images */
 .menuitem GtkImage,
 .menu .menuitem GtkImage,
+.popup .menuitem GtkImage,
 .menu .menuitem .menu .menuitem GtkImage,
 .menu .menuitem .menu .menuitem .menu .menuitem GtkImage {
     color: @text;
@@ -211,12 +224,14 @@
 /* Labels */
 .menuitem GtkLabel,
 .menu .menuitem GtkLabel,
+.popup .menuitem GtkLabel,
 .menu .menuitem .menu .menuitem GtkLabel,
 .menu .menuitem .menu .menuitem .menu .menuitem GtkLabel {
     color: @text;
 }
 
 .menu .menuitem:active GtkLabel,
+.popup .menuitem:active GtkLabel,
 .menu .menuitem .menu .menuitem:active GtkLabel,
 .menu .menuitem .menu .menuitem .menu .menuitem:active GtkLabel,
 .menu .menuitem:hover GtkLabel,
@@ -232,6 +247,7 @@
 }
 
 .menu .menuitem:backdrop GtkLabel,
+.popup .menuitem:backdrop GtkLabel,
 .menu .menuitem .menu .menuitem:backdrop GtkLabel,
 .menu .menuitem .menu .menuitem .menu .menuitem:backdrop GtkLabel,
 .menu .menuitem:active:backdrop GtkLabel,
@@ -247,6 +263,7 @@
 }
 
 .menu .menuitem:insensitive GtkLabel,
+.popup .menuitem:insensitive GtkLabel,
 .menu .menuitem .menu .menuitem:insensitive GtkLabel,
 .menu .menuitem .menu .menuitem .menu .menuitem:insensitive GtkLabel,
 .menuitem:insensitive GtkLabel {
@@ -254,6 +271,7 @@
 }
 
 .menu .menuitem:insensitive:backdrop GtkLabel,
+.popup .menuitem:insensitive:backdrop GtkLabel,
 .menu .menuitem .menu .menuitem:insensitive:backdrop GtkLabel,
 .menu .menuitem .menu .menuitem .menu .menuitem:insensitive:backdrop GtkLabel,
 .menuitem:insensitive:backdrop GtkLabel {
