@@ -61,6 +61,24 @@ BirdieWidgetsTweetList * {
     color: white;
 }
 
+.gala-button {
+    padding: 3px;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    background-image: linear-gradient(to bottom,
+                                  #7e7e7e,
+                                  #3e3e3e
+                                  );
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.02),
+                inset 0 1px 0 0 alpha (#fff, 0.07),
+                inset 0 -1px 0 0 alpha (#fff, 0.01),
+                0 0 0 1px alpha (#000, 0.40),
+                0 3px 6px alpha (#000, 0.16),
+                0 3px 6px alpha (#000, 0.23);
+    text-shadow: 0 1px 1px alpha (#000, 0.6);
+}
+
 /**********
  * Notify *
  *********/
@@ -240,6 +258,38 @@ NoiseWidgetsTileView {
     background: none;
     color: #fff;
     padding: 0 2px;
+}
+
+.composited-indicator.menuitem:active,
+.composited-indicator.menuitem:prelight {
+    border-style: none;
+    background-image: none;
+    box-shadow: none;
+}
+
+.panel .window-frame.menu.csd,
+.panel .window-frame.popup.csd {
+    box-shadow: none;
+}
+
+.panel .menu .window-frame.menu.csd,
+.panel .menu .window-frame.popup.csd {
+    box-shadow: 0 0 0 1px alpha (#000, 0.20),
+                0 10px 20px alpha (#000, 0.19),
+                0 6px 6px alpha (#000, 0.23);
+}
+
+.composited-indicator {
+    background-color: transparent;
+    color: #fff;
+}
+
+.composited-indicator > GtkWidget > GtkWidget:first-child {
+    padding: 0 2px;
+}
+
+.panel-app-button > GtkWidget > GtkWidget:first-child {
+    padding: 0 2px 0 4px;
 }
 
 .composited-indicator.menuitem:active,
