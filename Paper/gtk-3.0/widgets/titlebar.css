@@ -56,6 +56,11 @@
     font: Bold 11;
 }
 
+.titlebar .subtitle {
+    color: @header_text;
+}
+
+.titlebar .subtitle:backdrop,
 .titlebar .title:backdrop {
     color: @backdrop_header_text;
 }

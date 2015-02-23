@@ -71,7 +71,7 @@ CcShellItemView .button {
  * Iconview *
  ************/
  
-CcWindow GtkIconView.view.cell {
+/*CcWindow GtkIconView.view.cell {
     border: none;
 }
  
@@ -85,7 +85,7 @@ CcWindow GtkIconView.view.cell:selected,
 CcWindow GtkIconView.view.cell:selected:focus {
     border: 1px solid @settings;
     background-color: @settings;
-}
+}*/
 
 
 /************
@@ -138,4 +138,8 @@ CcWindow .button.list-row:active:selected:hover {
 CcWindow .button.list-row:hover:selected {
     background-color: alpha(@settings, 0.2);
     color: @settings;
+}
+
+CcNetworkPanel GtkNotebook > .frame {
+    border: none;
 }
