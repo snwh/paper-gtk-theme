@@ -276,7 +276,8 @@
 /*******************
  * Pane separators *
  *******************/
-.pane-separator {
+.pane-separator,
+.pane-separator:backdrop {
     background: url("assets/pane-separator-grip.svg");
     background-repeat: no-repeat;
     background-position: center;

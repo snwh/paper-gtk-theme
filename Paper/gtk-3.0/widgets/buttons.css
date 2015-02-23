@@ -228,10 +228,15 @@ GtkCalendar.button:backdrop:hover,
     color: @text;
 }
 
+.text-button:focus GtkLabel {
+    /*color: shade(@text, 2.0);*/
+    color: @text;
+}
+
 .text-button:active GtkLabel,
-.text-button:focus GtkLabel,
 .text-button:hover GtkLabel {
-    color: shade(@text, 2.0);
+    color: alpha(#000, 0.5);
+    /*color: @text;*/
 }
 
 .text-button:backdrop GtkLabel,
