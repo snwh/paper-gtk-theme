@@ -16,7 +16,7 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color disks #9B26AF;
+@define-color disks #7C5183;
 
 /**********
  * Header *
@@ -25,6 +25,7 @@
 GduWindow .titlebar,
 GduWindow .header-bar {
     background-color: @disks;
+    color: @text;
 }
 
 GduWindow .titlebar:backdrop,
@@ -32,10 +33,13 @@ GduWindow .header-bar:backdrop {
     background-color: shade(@disks,0.9);
 }
 
-GduVolumeGrid *:active,
-GduVolumeGrid *:focus,
-GduVolumeGrid *:selected {
-	background-color: @selection;
-	color: @selection_foreground;
+GduVolumeGrid .toolbar {
+    background-color: @disks;
+}
+
+GduVolumeGrid,
+GduVolumeGrid:*,
+GduVolumeGrid * {
+	color: @text;
 }
 
