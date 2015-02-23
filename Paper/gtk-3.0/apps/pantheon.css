@@ -54,7 +54,8 @@ BirdieWidgetsTweetList * {
     border-width: 0;
     border-radius: 9px;
     color: white;
-    background-color: alpha(@panel, 0.98);
+    border: 1px solid @panel;
+    background-color: alpha(@panel, 0.9);
 }
 
 .gala-notification .title, .gala-notification .label {
@@ -226,77 +227,6 @@ NoiseWidgetsTileView {
 .search-category-header {
     font-weight: bold;
     color: @foreground;
-}
-
-/*********
- * Panel *
- ********/
-
-.panel {
-    background: none;
-    color: white;
-    font-weight: bold;
-}
-
-.panel .menu  {
-    border:none;
-}
-.panel .menu .menuitem {
-    font-weight: normal;
-}
-
-.panel-shadow {
-    background-image: none;
-    background: none;
-}
-
-.panel-app-button {
-    -GtkMenuItem-horizontal-padding: 6px;
-}
-
-.composited-indicator {
-    background: none;
-    color: #fff;
-    padding: 0 2px;
-}
-
-.composited-indicator.menuitem:active,
-.composited-indicator.menuitem:prelight {
-    border-style: none;
-    background-image: none;
-    box-shadow: none;
-}
-
-.panel .window-frame.menu.csd,
-.panel .window-frame.popup.csd {
-    box-shadow: none;
-}
-
-.panel .menu .window-frame.menu.csd,
-.panel .menu .window-frame.popup.csd {
-    box-shadow: 0 0 0 1px alpha (#000, 0.20),
-                0 10px 20px alpha (#000, 0.19),
-                0 6px 6px alpha (#000, 0.23);
-}
-
-.composited-indicator {
-    background-color: transparent;
-    color: #fff;
-}
-
-.composited-indicator > GtkWidget > GtkWidget:first-child {
-    padding: 0 2px;
-}
-
-.panel-app-button > GtkWidget > GtkWidget:first-child {
-    padding: 0 2px 0 4px;
-}
-
-.composited-indicator.menuitem:active,
-.composited-indicator.menuitem:prelight {
-    border-style: none;
-    background-image: none;
-    box-shadow: none;
 }
 
 /*********

@@ -89,3 +89,42 @@ GraniteWidgetsWelcome .h1,
 GraniteWidgetsWelcome .h3 {
     color: alpha(@foreground, 0.8);
 }
+
+/*********
+ * Panel *
+ ********/
+
+.panel {
+    background-color: @panel;
+    color: #fff;
+    font-weight: bold;
+}
+
+.panel-shadow {
+    background-image: none;
+    background-color: transparent;
+}
+
+.panel .menu {
+    box-shadow: none;
+}
+
+.panel .menu .spinner {
+    opacity: 1;
+}
+
+.panel .menu .menuitem {
+    font-weight: normal;
+}
+
+.panel .window-frame.menu.csd,
+.panel .window-frame.popup.csd {
+    box-shadow: none;
+}
+
+.panel .menu .window-frame.menu.csd,
+.panel .menu .window-frame.popup.csd {
+    box-shadow: 0 0 0 1px alpha (#000, 0.20),
+                0 10px 20px alpha (#000, 0.19),
+                0 6px 6px alpha (#000, 0.23);
+}

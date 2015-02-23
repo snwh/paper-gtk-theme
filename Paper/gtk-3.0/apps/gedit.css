@@ -82,13 +82,10 @@ GeditWindow .dynamic-notebook tab.right:active {
  ************/
 
  
-GeditWindow .pane-separator, 
-GeditWindow .pane-separator:hover {
-    border-width: 0 1px 1px 1px;
-    border-style: solid;
-    border-color: shade(@background, 0.8);
-    background-color: shade(@background, 1.02);
-    color: shade(@background, 0.8);
+GeditWindow .gedit-headerbar-paned,
+GeditWindow .titlebar .pane-separator,
+GeditWindow .header-bar .pane-separator {
+    background-color: @gedit;
 }
 
 GeditPanel.title GtkLabel {
@@ -169,4 +166,26 @@ GeditFileBrowserWidget .primary-toolbar.toolbar  {
     border-top: none;
     background-color: @background;
     background-image: none;
+}
+
+GeditWindow .pane-separator {
+    background: url("../assets/pane-separator-grip.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+GeditWindow .pane-separator:hover {
+    background: url("../assets/pane-separator-grip-prelight.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+GeditWindow .pane-separator.vertical {
+    background: url("../assets/pane-separator-grip-vertical.svg");
+}
+
+GeditWindow .pane-separator.vertical:hover {
+    background: url("../assets/pane-separator-grip-vertical-prelight.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
