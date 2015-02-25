@@ -38,7 +38,6 @@ GduVolumeGrid .toolbar {
 }
 
 GduVolumeGrid,
-GduVolumeGrid:*,
 GduVolumeGrid * {
 	color: @text;
 }

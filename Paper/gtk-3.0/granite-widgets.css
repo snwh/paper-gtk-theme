@@ -77,7 +77,7 @@ GraniteWidgetsPopOver .button:active:hover {
  * Welcome *
  **********/
 
-GraniteWidgetsWelcome {
+GraniteWidgetsWelcome {k
     background-color: @base;
 }
 
@@ -95,7 +95,7 @@ GraniteWidgetsWelcome .h3 {
  ********/
 
 .panel {
-    background-color: @panel;
+    background-color: transparent;
     color: #fff;
     font-weight: bold;
 }
