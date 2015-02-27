@@ -201,7 +201,7 @@
 }
 
 /* Labels */
-.toolbar GtkLabel
+.toolbar GtkLabel,
 .toolbar .button GtkLabel {
     color: @toolbar_text;
 }
