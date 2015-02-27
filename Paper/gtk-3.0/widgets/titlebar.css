@@ -56,14 +56,23 @@
     font: Bold 11;
 }
 
+/* Subtitle */
 .titlebar .subtitle {
-    color: @header_text;
+    font: 9;
+}
+
+.titlebar .subtitle,
+.titlebar .subtitle GtkLabel,
+.titlebar .subtitle GtkImage {
+    color: alpha(@header_text,0.8);
 }
 
 .titlebar .subtitle:backdrop,
-.titlebar .title:backdrop {
-    color: @backdrop_header_text;
+.titlebar .subtitle:backdrop GtkLabel,
+.titlebar .subtitle:backdrop GtkImage  {
+    color: alpha(@backdrop_header_text,0.8);
 }
+
 
 
 /**********************

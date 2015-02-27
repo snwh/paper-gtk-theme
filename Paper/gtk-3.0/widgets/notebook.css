@@ -137,6 +137,20 @@
     box-shadow:inset 1px 0 0 0 @border;
 }
 
+/* Hover */
+.notebook tab.top:hover {
+    box-shadow:inset 0 -3px 0 0 @border;
+}
+.notebook tab.bottom:hover {
+    box-shadow:inset 0 3px 0 0 @border;
+}
+.notebook tab.left:hover {
+    box-shadow:inset -3px 0 0 0 @border;
+}
+.notebook tab.right:hover {
+    box-shadow:inset 3px 0 0 0 @border;
+}
+
 /* Active */
 .notebook tab.top:active {
     box-shadow:inset 0 -3px 0 0 @selection;
@@ -298,9 +312,23 @@
     border: none;
     background-image: none;
     background: none;
-    border-radius: 16px;
-    padding: 0;
+    border-radius: 4px;
+    padding: 2px;
     box-shadow: none;
+}
+
+
+.notebook tab .button GtkImage {
+    color: @backdrop_text;
+}
+
+.notebook tab .button:hover GtkImage,
+.notebook tab .button:active GtkImage {
+    color: @selection_foreground;
+}
+
+.notebook tab .button:backdrop GtkImage {
+    color: @backdrop_text;
 }
 
 .notebook tab .button:hover {

@@ -70,7 +70,7 @@
 .scrollbar.trough {
     border-radius: 10px;
     background-image: none;
-    background: none;
+    background:@background;
     border-width: 0;
     border-image: none;
 }

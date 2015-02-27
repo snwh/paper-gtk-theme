@@ -53,16 +53,23 @@
     color: @backdrop_header_text;
 }
 
+
 /* Subtitle */
 .header-bar .subtitle {
     font: 9;
-    color: inherit;
 }
 
-.header-bar .subtitle:backdrop {
-    color: inherit;
+.header-bar .subtitle,
+.header-bar .subtitle GtkLabel,
+.header-bar .subtitle GtkImage {
+    color: alpha(@header_text, 0.8);
 }
 
+.header-bar .subtitle:backdrop,
+.header-bar .subtitle:backdrop GtkLabel,
+.header-bar .subtitle:backdrop GtkImage  {
+    color: alpha(@backdrop_header_text,0.8);
+}
 
 /* Separator */
 .header-bar .separator {

@@ -33,12 +33,6 @@ GduWindow .header-bar:backdrop {
     background-color: shade(@disks,0.9);
 }
 
-GduVolumeGrid .toolbar {
+GduWindow .toolbar {
     background-color: @disks;
 }
-
-GduVolumeGrid,
-GduVolumeGrid * {
-	color: @text;
-}
-
