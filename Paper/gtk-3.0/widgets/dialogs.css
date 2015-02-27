@@ -57,8 +57,15 @@ GtkMessageDialog .titlebar:backdrop {
 }
 
 GtkDialog,
+GtkAboutDialog,
 GtkMessageDialog {
+    color: @text;
     box-shadow: none;
+}
+GtkDialog GtkLabel,
+GtkAboutDialog GtkLabel,
+GtkMessageDialog GtkLabel {
+    color: @text;
 }
 
 GtkDialog .toolbar {

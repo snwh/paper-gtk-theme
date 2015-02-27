@@ -21,6 +21,7 @@
  * Separators *
  **************/
  
+GtkSeparator,
 .separator,
 .button .separator {
     color: @separator;

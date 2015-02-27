@@ -172,6 +172,7 @@
 }
 
 /* Images */
+.toolbar GtkImage,
 .toolbar .button GtkImage {
     color: @toolbar_text;
 }
@@ -200,6 +201,7 @@
 }
 
 /* Labels */
+.toolbar GtkLabel
 .toolbar .button GtkLabel {
     color: @toolbar_text;
 }

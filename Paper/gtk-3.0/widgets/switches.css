@@ -18,13 +18,13 @@
 
 /* Slider colors */
 @define-color slider @background;
-@define-color slider_border alpha(#000, 0.4);
+@define-color slider_border alpha(#000, 0.3);
 @define-color backdrop_slider @backdrop_background;
 @define-color insensitive_slider @insensitive_background;
 
 /* Trough colors */
 @define-color trough shade(@base, 0.8);
-@define-color trough_border alpha(#000, 0.3);
+@define-color trough_border alpha(#000, 0.2);
 @define-color backdrop_trough shade(@backdrop_base, 0.8);
 @define-color insensitive_trough shade(@insensitive_base, 0.8);
 
