@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -39,6 +39,11 @@
 .index-title-alignment-software {
     font-weight: bold;
     font-size: 14px;
+    color: @text;
+}
+
+.index-title-alignment-software GtkLabel {
+    color: @text;
 }
 
 .needs-attention {

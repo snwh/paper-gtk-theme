@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -93,6 +93,7 @@
 @import url("widgets/statusbar.css");
 @import url("widgets/suggested-action-buttons.css");
 @import url("widgets/switches.css");
+@import url("widgets/tiles.css");
 @import url("widgets/titlebar.css");
 @import url("widgets/toolbars.css");
 @import url("widgets/tooltips.css");

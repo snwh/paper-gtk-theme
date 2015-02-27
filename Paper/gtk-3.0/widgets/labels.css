@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -21,8 +21,14 @@
  **********/
 
 .label,
+.label GtkLabel,
 GtkLabel {
 	color: @text;
+}
+
+.dim-label,
+.dim-label GtkLabel {
+	color: alpha(@text,0.5)
 }
 
 .label:active,

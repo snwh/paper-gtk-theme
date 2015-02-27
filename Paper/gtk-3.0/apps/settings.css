@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -30,20 +30,6 @@ CcWindow .header-bar {
 CcWindow .titlebar:backdrop,
 CcWindow .header-bar:backdrop {
     background-color: shade(@settings,0.9);
-}
-
-/* Switch */
-CcWindow .header-bar GtkSwitch.trough:active {
-    background-color: @settings;
-}
-
-CcWindow GtkSwitch.trough:active {
-    background-color: @settings;
-}
-
-CcWindow .header-bar GtkSwitch.slider:active:backdrop,
-CcWindow .header-bar GtkSwitch.slider:backdrop {
-    background-color: shade(@settings, 0.9);
 }
 
 /*******
