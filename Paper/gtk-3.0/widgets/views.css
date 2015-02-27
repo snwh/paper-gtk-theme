@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -23,7 +23,7 @@
 
 .frame {
     background: none;
-    /*border: 1px solid @border;*/
+    border: 1px solid @border;
     color: @foreground;
 }
 
@@ -48,12 +48,20 @@
  *********/
 
 GtkTable {
-    background: none;
+    background: @background;
     border: 1px solid @border;
     color: @text;
 }
 
 GtkTable GtkLabel {
+    color: @text;
+}
+
+GtkBox {
+    color: @text;
+}
+
+GtkBox GtkLabel {
     color: @text;
 }
 

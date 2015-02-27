@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -16,10 +16,10 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color suggested_action_button shade(@selection, 0.5);
+@define-color suggested_action_button shade(@selection, 0.9);
 @define-color suggested_action_button_foreground #fff;
-@define-color backdrop_suggested_action_foreground alpha(#fff, 0.5);
-@define-color insensitive_suggested_action_foreground alpha(#fff, 0.7);
+@define-color backdrop_suggested_action_foreground alpha(#fff, 0.8);
+@define-color insensitive_suggested_action_foreground alpha(#fff, 0.5);
 
 /****************************
  * Suggested action buttons *
@@ -62,6 +62,48 @@
 
 .suggested-action.button:backdrop:insensitive,
 .button.suggested-action:backdrop:insensitive {
+    border: 1px solid mix(@insensitive_border, @backdrop_border, 0.5);
+    background-color: mix(@insensitive_background, @backdrop_background, 0.5);
+    color: mix(@insensitive_text, @backdrop_text, 0.5);
+}
+
+.suggested-action.text-button,
+.text-button.suggested-action {
+    border: 1px solid @suggested_action_button;
+    background-color: @suggested_action_button;
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.text-button:hover,
+.text-button.suggested-action:hover {
+    border: 1px solid shade(@suggested_action_button, 1.2);
+    background-color: shade(@suggested_action_button, 1.2);
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.text-button:active,
+.text-button.suggested-action:active {
+    border: 1px solid shade(@suggested_action_button, 1.1);
+    background-color: shade(@suggested_action_button, 1.1);
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.text-button:backdrop,
+.text-button.suggested-action:backdrop {
+    border: 1px solid @backdrop_border;
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+}
+
+.suggested-action.text-button:insensitive,
+.text-button.suggested-action:insensitive {
+    border: 1px solid @insensitive_border;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+.suggested-action.text-button:backdrop:insensitive,
+.text-button.suggested-action:backdrop:insensitive {
     border: 1px solid mix(@insensitive_border, @backdrop_border, 0.5);
     background-color: mix(@insensitive_background, @backdrop_background, 0.5);
     color: mix(@insensitive_text, @backdrop_text, 0.5);
