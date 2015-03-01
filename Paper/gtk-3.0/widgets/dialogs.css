@@ -62,6 +62,7 @@ GtkMessageDialog {
     color: @text;
     box-shadow: none;
 }
+
 GtkDialog GtkLabel,
 GtkAboutDialog GtkLabel,
 GtkMessageDialog GtkLabel {
