@@ -223,7 +223,7 @@ GtkCalendar.button:backdrop:hover,
     color: mix(@backdrop_text, @insensitive_text, 0.5);
 }
 
-/* Labels */
+/* Text Button Labels */
 .text-button GtkLabel {
     color: @text;
 }
@@ -250,6 +250,37 @@ GtkCalendar.button:backdrop:hover,
 }
 
 .text-button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
+
+/* Image Button Images */
+.image-button GtkImage {
+    color: @text;
+}
+
+.image-button:focus GtkImage {
+    /*color: shade(@text, 2.0);*/
+    color: @text;
+}
+
+.image-button:active GtkImage,
+.image-button:hover GtkImage {
+    /*color: alpha(#000, 0.5);*/
+    color: @selected_foreground;
+}
+
+.image-button:backdrop GtkImage,
+.image-button:backdrop:hover GtkImage,
+.image-button:active:backdrop GtkImage {
+    color: @backdrop_text;
+}
+
+.image-button:insensitive GtkImage {
+    color: @insensitive_text;
+}
+
+.image-button:insensitive:backdrop GtkImage {
     color: mix(@backdrop_text, @insensitive_text, 0.5);
 }
 

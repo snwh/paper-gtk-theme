@@ -89,7 +89,7 @@
 .notebook tab {
     border: none;
     border-radius: 0;
-    background: @background;
+    background: shade(@background, 0.9);;
     color: @foreground;
 }
 
@@ -100,7 +100,7 @@
 
 .notebook tab:active {
     border: none;
-    background: @background;
+    background: shade(@background, 0.9);;
     color: @foreground;
 }
 

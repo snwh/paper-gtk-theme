@@ -109,6 +109,121 @@
     border-radius: 0px;
 }
 
+
+/* Images */
+.linked.button GtkImage {
+    color: @text;
+}
+
+.linked.button:active GtkImage,
+.linked.button:focus GtkImage,
+.linked.button:hover GtkImage {
+    color: @selected_foreground;
+}
+
+.linked.button:backdrop GtkImage,
+.linked.button:backdrop:hover GtkImage,
+.linked.button:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+.linked.button:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+.linked.button:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+.linked.button GtkLabel {
+    color: @text;
+}
+
+.linked.button:active GtkLabel,
+.linked.button:focus GtkLabel,
+.linked.button:hover GtkLabel {
+    color: @selected_foreground;
+}
+
+.linked.button:backdrop GtkLabel,
+.linked.button:backdrop:hover GtkLabel,
+.linked.button:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.linked.button:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.linked.button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
+/* Labels */
+.linked.text-button GtkLabel {
+    color: @text;
+}
+
+.linked.text-button:focus GtkLabel {
+    /*color: shade(@text, 2.0);*/
+    color: @text;
+}
+
+.linked.text-button:active GtkLabel,
+.linked.text-button:hover GtkLabel {
+    color: alpha(#000, 0.5);
+    /*color: @text;*/
+}
+
+.linked.text-button:backdrop GtkLabel,
+.linked.text-button:backdrop:hover GtkLabel,
+.linked.text-button:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.linked.text-button:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.linked.text-button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
+
+/* Images */
+.linked.image-button GtkImage {
+    color: @text;
+}
+
+.linked.image-button:focus GtkImage {
+    /*color: shade(@text, 2.0);*/
+    color: @text;
+}
+
+.linked.image-button:active GtkImage,
+.linked.image-button:hover GtkImage {
+    color: alpha(#000, 0.5);
+    /*color: @text;*/
+}
+
+.linked.image-button:backdrop GtkImage,
+.linked.image-button:backdrop:hover GtkImage,
+.linked.image-button:active:backdrop GtkImage {
+    color: @backdrop_text;
+}
+
+.linked.image-button:insensitive GtkImage {
+    color: @insensitive_text;
+}
+
+.linked.image-button:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
 /* Linked buttons on primary toolbars */
 
 /* Middle button */
