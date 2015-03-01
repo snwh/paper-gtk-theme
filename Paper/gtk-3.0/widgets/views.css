@@ -53,15 +53,11 @@ GtkTable {
     color: @text;
 }
 
+GtkBox GtkLabel,
+GtkBox,
+GtkStack GtkLabel,
+GtkStack,
 GtkTable GtkLabel {
-    color: @text;
-}
-
-GtkBox {
-    color: @text;
-}
-
-GtkBox GtkLabel {
     color: @text;
 }
 
