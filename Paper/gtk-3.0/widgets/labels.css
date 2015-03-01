@@ -37,7 +37,7 @@ GtkLabel {
 *:active GtkLabel,
 *:focus GtkLabel,
 *:hover GtkLabel {
-    color: @selected_foreground;
+    color: @foreground;
 }
 
 .label:backdrop,
