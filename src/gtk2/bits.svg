@@ -14,10 +14,22 @@
    height="480px"
    id="svg3032"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="bits.svg">
   <defs
      id="defs3034">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4641">
+      <stop
+         style="stop-color:#fafafa;stop-opacity:1;"
+         offset="0"
+         id="stop4643" />
+      <stop
+         style="stop-color:#f5f5f5;stop-opacity:1"
+         offset="1"
+         id="stop4645" />
+    </linearGradient>
     <linearGradient
        id="linearGradient4261">
       <stop
@@ -1280,30 +1292,60 @@
        y1="1.92503"
        x2="7.999999"
        y2="14.003025" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4641"
+       id="linearGradient4980"
+       gradientUnits="userSpaceOnUse"
+       x1="5"
+       y1="5"
+       x2="5"
+       y2="28" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4641"
+       id="linearGradient5192"
+       gradientUnits="userSpaceOnUse"
+       x1="15"
+       y1="5"
+       x2="15"
+       y2="30" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4641"
+       id="linearGradient5454"
+       gradientUnits="userSpaceOnUse"
+       x1="35"
+       y1="30"
+       x2="35"
+       y2="0" />
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#000000"
+     pagecolor="#efefef"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="169.1444"
-     inkscape:cy="370.91124"
+     inkscape:cx="68.80618"
+     inkscape:cy="397.92138"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="false"
      inkscape:snap-bbox="true"
      inkscape:snap-global="true"
-     inkscape:snap-nodes="false"
-     inkscape:window-width="1301"
-     inkscape:window-height="744"
-     inkscape:window-x="65"
-     inkscape:window-y="24"
+     inkscape:snap-nodes="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="711"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      showguides="false"
-     inkscape:guide-bbox="true">
+     inkscape:guide-bbox="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true">
     <inkscape:grid
        type="xygrid"
        id="grid3076"
@@ -1344,7 +1386,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1521,7 +1563,7 @@
            height="29"
            width="7"
            id="rect17861-3"
-           style="color:#000000;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:url(#linearGradient4980);fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
         <rect
            ry="2.5"
            rx="2.5000005"
@@ -1555,7 +1597,7 @@
            height="29"
            width="7"
            id="rect17861-3-0"
-           style="color:#000000;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:url(#linearGradient5192);fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
         <use
            x="0"
            y="0"
@@ -1588,7 +1630,7 @@
            height="29"
            width="7"
            id="rect17861-3-0-6"
-           style="color:#000000;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:#eeeeee;fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
         <use
            x="0"
            y="0"
@@ -1621,7 +1663,7 @@
            height="29"
            width="7"
            id="rect17861-3-0-7"
-           style="color:#000000;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:url(#linearGradient5454);fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
         <use
            x="0"
            y="0"
@@ -1718,7 +1760,7 @@
     </g>
     <g
        id="Entry_entry-border-active"
-       inkscape:label="#g4391">
+       inkscape:label="#Entry/entry-border-active">
       <use
          x="0"
          y="0"
@@ -1748,7 +1790,7 @@
     </g>
     <g
        id="Entry_entry-border"
-       inkscape:label="#g4383">
+       inkscape:label="#Entry/entry-border">
       <rect
          ry="2.5"
          rx="2.5000005"
@@ -2605,7 +2647,7 @@
            height="29"
            width="7"
            id="rect17861-8"
-           style="color:#000000;fill:#9fb0b9;stroke:#9fb0b9;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1" />
+           style="color:#000000;fill:#9fb0b9;stroke:#798c97;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1" />
       </g>
     </g>
     <g
