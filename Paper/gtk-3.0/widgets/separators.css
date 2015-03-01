@@ -23,6 +23,7 @@
  
 GtkSeparator,
 .separator,
+.pane-separator,
 .button .separator {
     color: @separator;
 }
@@ -59,7 +60,7 @@ GtkSeparator,
 
 .notebook .pane-separator,
 .notebook .pane-separator:hover {
-    background-color: @hover_background;
+    background-color: @background;
 }
 
 .notebook .pane-separator:backdrop,

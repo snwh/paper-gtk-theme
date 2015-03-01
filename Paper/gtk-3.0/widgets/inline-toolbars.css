@@ -22,7 +22,7 @@
  *******************/
 
 .inline-toolbar.toolbar {
-    background-color: shade(@background, 0.9);
+    background-color: @base;
     border: solid @border;
     border-width: 0 1px 1px 1px;
     color: @text;
@@ -30,7 +30,7 @@
 }
 
 .inline-toolbar.toolbar:backdrop {
-    background-color: shade(@backdrop_background, 0.9);
+    background-color: @backdrop_base;
     box-shadow: none;
     -gtk-image-effect: dim;
 }
