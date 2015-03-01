@@ -29,8 +29,8 @@
 .popup {
     padding: 4px 0;
     border-radius: 4px;
-    background-color: @background;
-    color: @text;
+    background-color: @base;
+    color: @foreground;
 }
 
 /*Context Menu*/
@@ -42,9 +42,9 @@
 
 .content-view .menu {
     padding: 0 1px;
-    background-color: @background;
+    background-color: @base;
     background-image: none;
-    color: @text;
+    color: @foreground;
 }
 
 .content-view .menu .menuitem:active,
@@ -62,7 +62,7 @@
     padding-left: 6px;
     padding-right: 6px;
     border:none;
-    color: @text;
+    color: @foreground;
 
     -GtkMenuItem-arrow-scaling: 0.5;
     -gtk-icon-style: symbolic;
@@ -104,7 +104,7 @@
 
 /* Arrows */
 .menu .menuitem.arrow {
-    color: @text;
+    color: @foreground;
 }
 
 .menu .menuitem.arrow {
@@ -134,7 +134,7 @@
 .menuitem .entry:active,
 .menuitem .entry:focus {
     border: none;
-    color: @text;
+    color: @foreground;
 }
 
 /* Accelerators */
@@ -171,7 +171,7 @@
 .popup .menuitem GtkImage,
 .menu .menuitem .menu .menuitem GtkImage,
 .menu .menuitem .menu .menuitem .menu .menuitem GtkImage {
-    color: @text;
+    color: @foreground;
 }
 
 .menu .menuitem:active GtkImage,
@@ -227,7 +227,7 @@
 .popup .menuitem GtkLabel,
 .menu .menuitem .menu .menuitem GtkLabel,
 .menu .menuitem .menu .menuitem .menu .menuitem GtkLabel {
-    color: @text;
+    color: @foreground;
 }
 
 .menu .menuitem:active GtkLabel,

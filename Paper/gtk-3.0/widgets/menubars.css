@@ -100,10 +100,15 @@
     color: @selected_foreground;
 }
 
+
 .menubar .menuitem:backdrop GtkLabel,
-.menubar .menuitem:backdrop:hover GtkLabel,
 .menubar .menuitem:active:backdrop GtkLabel {
     color: @backdrop_header_text;
+}
+
+.menubar .menuitem:backdrop:hover GtkLabel {
+    color: @backdrop_text;
+    /* color: alpha (#000, 0.6); */
 }
 
 .menubar .menuitem:insensitive GtkLabel {
