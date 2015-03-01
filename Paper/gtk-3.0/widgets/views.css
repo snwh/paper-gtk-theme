@@ -266,7 +266,7 @@ GtkIconView.content-view.check:selected {
     border-width: 0 0 1px 1px;
 
     background-image: none;
-    background-color:@base;;
+    background-color:@base;
 
     border-color: @border;
 }
