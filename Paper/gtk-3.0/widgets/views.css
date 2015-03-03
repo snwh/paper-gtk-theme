@@ -29,7 +29,7 @@
 
 .frame:backdrop {
     border-color: @backdrop_border;
-    background-color: @backdrop_background;
+    background-color: none;
     color: @backdrop_text;
 }
 

@@ -32,7 +32,7 @@
 
 /* Backdrop colors */
 @define-color backdrop_base shade(@base, 0.9);
-@define-color backdrop_background shade(@background, 0.98);
+@define-color backdrop_background shade(@background, 0.99);
 @define-color backdrop_foreground shade(@foreground, 1.2);
 @define-color backdrop_border shade(@border, 1.02);
 @define-color backdrop_separator shade(@separator, 0.99);
@@ -63,7 +63,7 @@
 
 /* Selected color */
 @define-color selected_background @selection;
-@define-color selected_border shade(@selection, 0.8);
+@define-color selected_border shade(@selection, 0.9);
 @define-color selected_foreground #fff;
 @define-color selection_foreground @selected_foreground;
 
@@ -121,7 +121,7 @@
  * Troughs *
  ***********/
 @define-color trough_active @selected_background;
-@define-color trough_background alpha(@selected_background, 0.2);
+@define-color trough_background @base;
 @define-color insensitive_trough_background shade(@background, 0.9);
 @define-color backdrop_trough_background @backdrop_background;
 

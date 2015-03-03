@@ -38,7 +38,7 @@ GtkProgressBar.progressbar:backdrop {
 }
 
 GtkProgressBar.trough {
-    border: 1px solid @trough_background;
+    border: 1px solid alpha(#000, 0.2);
     background-color: @trough_background;
 }
 
