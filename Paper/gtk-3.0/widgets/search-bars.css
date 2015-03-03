@@ -27,21 +27,30 @@
     padding: 0px;
     background-color: @searchbar;
     box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.5);
-    color: @text;
+    color: @foreground;
+}
+
+
+.search-bar.toolbar .entry GtkImage {
+    color: @foreground;
+}
+
+.search-bar.toolbar .entry:backdrop GtkImage {
+    color: @backdrop_foreground;
 }
 
 .search-bar.toolbar:focus,
 .search-bar:focus {
     background-color: @searchbar;
     box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.5);
-    color: @text;
+    color: @foreground;
 }
 
 .search-bar.toolbar:backdrop,
 .search-bar:backdrop {
-    background-color: shade(@searchbar, 0.9);
-    box-shadow: none;
-    color: shade(@text, 0.9);
+    background-color: shade(@searchbar, 0.99);
+    box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.1);
+    color: @backdrop_text;
 }
 
 /***********
@@ -53,7 +62,7 @@
 .search-bar.toolbar .image-button {
     border: none;
     background: none;
-    color: @text;
+    color: @foreground;
     border-radius: 0px;
     padding: 13px;
 }
@@ -62,8 +71,8 @@
 .search-bar.toolbar .text-button:active,
 .search-bar.toolbar .image-button:active {
     border: none;
-    color: @text;
-    box-shadow: inset 0 -2px 0 0 @text;
+    color: @foreground;
+    box-shadow: inset 0 -2px 0 0 @foreground;
     padding: 13px;
 }
 
@@ -77,7 +86,7 @@
     padding: 13px;
     border: none;
     background-color: alpha(#000, 0.1);
-    color: @text;
+    color: @foreground;
     box-shadow: none;
 }
 
@@ -114,16 +123,18 @@
 
 
 /* Images */
+.search-bar.toolbar GtkImage,
 .search-bar.toolbar .button GtkImage {
-    color: @text;
+    color: @foreground;
 }
 
 .search-bar.toolbar .button:active GtkImage,
 .search-bar.toolbar .button:focus GtkImage,
 .search-bar.toolbar .button:hover GtkImage {
-    color: @text;
+    color: @foreground;
 }
 
+.search-bar.toolbar:backdrop GtkImage,
 .search-bar.toolbar .button:backdrop GtkImage,
 .search-bar.toolbar .button:backdrop:hover GtkImage,
 .search-bar.toolbar .button:active:backdrop GtkImage {
@@ -131,6 +142,7 @@
     -gtk-image-effect: dim;
 }
 
+.search-bar.toolbar:insensitive GtkImage,
 .search-bar.toolbar .button:insensitive GtkImage {
     color: @insensitive_text;
     -gtk-image-effect: dim;
@@ -143,13 +155,13 @@
 
 /* Labels */
 .search-bar.toolbar .button GtkLabel {
-    color: @text;
+    color: @foreground;
 }
 
 .search-bar.toolbar .button:active GtkLabel,
 .search-bar.toolbar .button:focus GtkLabel,
 .search-bar.toolbar .button:hover GtkLabel {
-    color: @text;
+    color: @foreground;
 }
 
 .search-bar.toolbar .button:backdrop GtkLabel,
@@ -173,9 +185,10 @@
 .search-bar .entry,
 .search-bar.toolbar .entry {
     background: none;
-    color: @text;
+    color: @foreground;
     border-radius: 0px;
     border: none;
+    box-shadow: none;
 }
 
 .search-bar .entry:selected,
@@ -184,6 +197,7 @@
 .search-bar.toolbar .entry:selected:focus {
     color: @base;
     background-color: @selection;
+    box-shadow: none;
 }
 
 .search-bar .entry:active,
@@ -191,8 +205,9 @@
 .search-bar.toolbar .entry:active,
 .search-bar.toolbar .entry:focus {
     background: none;
-    color: @text;
+    color: @foreground;
     border: none;
+    box-shadow: none;
 }
 
 .search-bar .entry:backdrop,
@@ -200,15 +215,16 @@
     background: none;
     color: @backdrop_text;
     border: none;
+    box-shadow: none;
 }
 
 .search-bar .entry.image,
 .search-bar.toolbar .entry.image {
-    color: @text;
+    color: @foreground;
 }
 
 .search-bar .entry.image.left,
 .search-bar.toolbar .entry.image.left {
     padding-right: 6px;
-    color: @text;
+    color: @foreground;
 }

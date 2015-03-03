@@ -18,8 +18,8 @@
 
 @define-color button_background shade(@base, 0.98);/* Button background color */
 @define-color button_border @border;/* Button border color */
-@define-color backdrop_button_background shade(@backdrop_background, 0.98);/* Backdrop button background color */
-@define-color backdrop_button_border shade(@button_border, 0.98); /* Backdrop button border color */
+@define-color backdrop_button_background @backdrop_background;/* Backdrop button background color */
+@define-color backdrop_button_border @backdrop_border; /* Backdrop button border color */
 
 /***********
  * Buttons *
@@ -211,6 +211,7 @@ GtkCalendar.button:backdrop:hover,
 
 .button:backdrop GtkLabel,
 .button:backdrop:hover GtkLabel,
+.button:focus:backdrop GtkLabel,
 .button:active:backdrop GtkLabel {
     color: @backdrop_text;
 }

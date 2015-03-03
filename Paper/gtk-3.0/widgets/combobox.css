@@ -30,45 +30,6 @@ GtkComboBox {
 
 }
 
-GtkCombobox *:insensitive {
-    background-color: @insensitive_background;
-    -GtkComboBox-shadow-type: none;
-    background-image: none;
-    color: @insensitive_text;
-}
-
-GtkCombobox *:active {
-    background-color: @selection;
-    border: 1px solid @selection;
-    color: @selected_foreground;
-}
-
-GtkCombobox *:hover {
-    background-color: @selection;
-    border: 1px solid @selection;
-    color: @selected_foreground;
-}
-
-GtkCombobox *:selected {
-    background-color: @selection;
-    border: 1px solid @selection;
-    color: @selected_foreground;
-}
-
-GtkCombobox *:backdrop {
-    background-color: @backdrop_background;
-    color: @backdrop_text;
-}
-
-GtkCombobox *:insensitive:backdrop {
-    color: mix(@backdrop_text, @insensitive_text, 0.2);
-}
-
-GtkCombobox *:selected:backdrop {
-    color: @backdrop_selected_foreground;
-    background-color: @backdrop_selected_background
-}
-
 GtkComboBox .separator {
     /* always disable separators */
     -GtkWidget-wide-separators: true;
@@ -76,143 +37,40 @@ GtkComboBox .separator {
     -GtkWidget-vertical-separator: 0;
 }
 
-GtkComboBox .arrow {
+.arrow {
     background: none;
     border: none;
     color: @foreground;
 }
-
-
-
-
-/* Images */
-GtkCombobox:active GtkImage,
-GtkCombobox:focus GtkImage,
-GtkCombobox:hover GtkImage {
-    color: @selected_foreground;
-}
-
-GtkCombobox:backdrop GtkImage,
-GtkCombobox:backdrop:hover GtkImage,
-GtkCombobox:active:backdrop GtkImage {
-    color: @backdrop_text;
-    -gtk-image-effect: dim;
-}
-
-GtkCombobox:insensitive GtkImage {
-    color: @insensitive_text;
-    -gtk-image-effect: dim;
-}
-
-GtkCombobox:insensitive:backdrop GtkImage {
-    color: mix(@backdrop_text, @insensitive_text, 0.5);
-    -gtk-image-effect: dim;
-}
-
-/* Labels */
-GtkCombobox:active GtkLabel,
-GtkCombobox:focus GtkLabel,
-GtkCombobox:hover GtkLabel {
-    color: @selected_foreground;
-}
-
-GtkCombobox:backdrop GtkLabel,
-GtkCombobox:backdrop:hover GtkLabel,
-GtkCombobox:active:backdrop GtkLabel {
-    color: @backdrop_text;
-}
-
-GtkCombobox:insensitive GtkLabel {
-    color: @insensitive_text;
-}
-
-GtkCombobox:insensitive:backdrop GtkLabel {
-    color: mix(@backdrop_text, @insensitive_text, 0.5);
-}
-
 
 /******************
  * Combobox Entry *
  ******************/
 
 /* Button */
-GtkComboBox.combobox-entry .button {
+.combobox-entry .button {
     box-shadow: none;
 }
 
-GtkComboBox.combobox-entry .button:first-child {
+.combobox-entry .button:first-child {
     border-radius: 4px 0 0 4px;
     border-right-width: 0;
 }
 
-GtkComboBox.combobox-entry .button:last-child {
+.combobox-entry .button:last-child {
     border-radius: 0 4px 4px 0;
 }
 
 /* Entry */
-GtkComboBox.combobox-entry .entry {
+.combobox-entry .entry {
     box-shadow: none;
 }
 
-GtkComboBox.combobox-entry .entry:first-child {
+.combobox-entry .entry:first-child {
     border-radius: 4px 0 0 4px;
     border-right-width: 0;
 }
 
-GtkComboBox.combobox-entry .entry:last-child {
+.combobox-entry .entry:last-child {
     border-radius: 0 4px 4px 0;
-}
-
-
-/* Images */
-GtkCombobox GtkImage {
-    color: @text;
-}
-
-GtkCombobox:active GtkImage,
-GtkCombobox:focus GtkImage,
-GtkCombobox:hover GtkImage {
-    color: @selected_foreground;
-}
-
-GtkCombobox:backdrop GtkImage,
-GtkCombobox:backdrop:hover GtkImage,
-GtkCombobox:active:backdrop GtkImage {
-    color: @backdrop_text;
-    -gtk-image-effect: dim;
-}
-
-GtkCombobox:insensitive GtkImage {
-    color: @insensitive_text;
-    -gtk-image-effect: dim;
-}
-
-GtkCombobox:insensitive:backdrop GtkImage {
-    color: mix(@backdrop_text, @insensitive_text, 0.5);
-    -gtk-image-effect: dim;
-}
-
-/* Labels */
-GtkCombobox GtkLabel {
-    color: @text;
-}
-
-GtkCombobox:active GtkLabel,
-GtkCombobox:focus GtkLabel,
-GtkCombobox:hover GtkLabel {
-    color: @selected_foreground;
-}
-
-GtkCombobox:backdrop GtkLabel,
-GtkCombobox:backdrop:hover GtkLabel,
-GtkCombobox:active:backdrop GtkLabel {
-    color: @backdrop_text;
-}
-
-GtkCombobox:insensitive GtkLabel {
-    color: @insensitive_text;
-}
-
-GtkCombobox:insensitive:backdrop GtkLabel {
-    color: mix(@backdrop_text, @insensitive_text, 0.5);
 }

@@ -26,7 +26,7 @@
     border-radius: 0px;
     border:none;
     background-image: none;
-    background-color: @base;
+    background-color: @background;
     color: @text;
 }
 
@@ -84,7 +84,7 @@
 .list-row:backdrop {
     border:none;
     background-image: none;
-    background-color: shade(@base, 0.95);
+    background-color: @backdrop_background;
     color: @backdrop_text;
 }
 
