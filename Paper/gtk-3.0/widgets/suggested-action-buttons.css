@@ -29,6 +29,10 @@
 .button.suggested-action {
     border: 1px solid @suggested_action_button;
     background-color: @suggested_action_button;
+    background-image: linear-gradient(to bottom, 
+                                      @suggested_action_button,
+                                      shade(@suggested_action_button, 0.98)
+                                      );
     color: @suggested_action_button_foreground;
 }
 
@@ -36,6 +40,10 @@
 .button.suggested-action:hover {
     border: 1px solid shade(@suggested_action_button, 1.2);
     background-color: shade(@suggested_action_button, 1.2);
+    background-image: linear-gradient(to bottom, 
+                                      shade(@suggested_action_button, 1.1),
+                                      shade(shade(@suggested_action_button, 1.1), 0.98)
+                                      );
     color: @suggested_action_button_foreground;
 }
 
@@ -43,6 +51,10 @@
 .button.suggested-action:active {
     border: 1px solid shade(@suggested_action_button, 1.1);
     background-color: shade(@suggested_action_button, 1.1);
+    background-image: linear-gradient(to bottom, 
+                                      @suggested_action_button,
+                                      shade(@suggested_action_button, 0.98)
+                                      );
     color: @suggested_action_button_foreground;
 }
 
@@ -107,4 +119,59 @@
     border: 1px solid mix(@insensitive_border, @backdrop_border, 0.5);
     background-color: mix(@insensitive_background, @backdrop_background, 0.5);
     color: mix(@insensitive_text, @backdrop_text, 0.5);
+}
+
+
+/* Images */
+.suggested-action.button GtkImage {
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.button:active GtkImage,
+.suggested-action.button:focus GtkImage,
+.suggested-action.button:hover GtkImage {
+    color: @selected_foreground;
+}
+
+.suggested-action.button:backdrop GtkImage,
+.suggested-action.button:backdrop:hover GtkImage,
+.suggested-action.button:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+.suggested-action.button:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+.suggested-action.button:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+.suggested-action.button GtkLabel {
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.button:active GtkLabel,
+.suggested-action.button:focus GtkLabel,
+.suggested-action.button:hover GtkLabel {
+    color: @selected_foreground;
+}
+
+.suggested-action.button:backdrop GtkLabel,
+.suggested-action.button:backdrop:hover GtkLabel,
+.suggested-action.button:focus:backdrop GtkLabel,
+.suggested-action.button:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.suggested-action.button:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.suggested-action.button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
 }

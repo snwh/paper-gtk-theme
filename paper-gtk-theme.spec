@@ -43,4 +43,3 @@ cp -a Paper-Dark/ $RPM_BUILD_ROOT%{_datadir}/themes/
 %files
 %doc AUTHORS LICENSE
 %{_datadir}/themes/Paper/
-%{_datadir}/themes/Paper-Dark/

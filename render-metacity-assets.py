@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
+# Thanks to the GNOME theme nerds for the original source of this script
+
 import os
 import sys
 import xml.sax
 import subprocess
-
 
 INKSCAPE = '/usr/bin/inkscape'
 OPTIPNG = '/usr/bin/optipng'
