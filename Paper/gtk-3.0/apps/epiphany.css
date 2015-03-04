@@ -82,8 +82,9 @@ EphyWindow .dynamic-notebook tab.right:active {
  * Incognito Mode *
  ******************/
 
-.incognito-mode {
-    background-image:none;
+EphyWindow .titlebar .incognito-mode,
+EphyWindow .header-bar .incognito-mode {
+    background:none;
     background-color: shade(@epiphany, 0.8);
 }
 
