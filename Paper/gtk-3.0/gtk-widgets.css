@@ -41,9 +41,13 @@
     -GtkWindow-resize-grip-height: 0;
 
     padding: 0;
-    background: inherit;
     background-color: inherit;
     color: inherit;
+    outline-color: rgba(46, 52, 54, 0.3);
+    outline-style: dashed;
+    outline-offset: -3px;
+    outline-width: 1px;
+    outline-radius: 2px;
 }
 
 /* Import Widget CSS */

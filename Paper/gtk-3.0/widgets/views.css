@@ -27,6 +27,12 @@
     color: @foreground;
 }
 
+GtkViewPort {
+    background: none;
+    border: none;
+    color: @foreground;
+}
+
 .frame:backdrop {
     border-color: @backdrop_border;
     background: none;
@@ -41,24 +47,6 @@
 
 .flat {
    border:none;
-}
-
-/*********
- * Table *
- *********/
-
-GtkTable {
-    background: @background;
-    border: 1px solid @border;
-    color: @text;
-}
-
-GtkBox GtkLabel,
-GtkBox,
-GtkStack GtkLabel,
-GtkStack,
-GtkTable GtkLabel {
-    color: @text;
 }
 
 

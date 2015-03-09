@@ -22,10 +22,14 @@
  * Header *
  **********/
 
+GduWindow,
+GduWindow * {
+	color: #555555;
+}
+
 GduWindow .titlebar,
 GduWindow .header-bar {
     background-color: @disks;
-    color: @text;
 }
 
 GduWindow .titlebar:backdrop,
@@ -33,6 +37,7 @@ GduWindow .header-bar:backdrop {
     background-color: shade(@disks,0.9);
 }
 
+GduWindow GtkToolbar,
 GduWindow .toolbar {
     background-color: @disks;
 }
