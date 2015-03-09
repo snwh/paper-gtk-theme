@@ -1651,6 +1651,7 @@ StScrollBar StButton#vhandle:active {
 .notification-icon-button {
     border-radius: 5px;
     padding: 5px;
+    color: #fff;
 }
 
 .notification-icon-button:focus {
@@ -2509,7 +2510,7 @@ StScrollBar StButton#vhandle:active {
     font-weight: bold;
     text-align: left;
     padding-left: 15px;
-    text-shadow: black 0 4px 3px 0;
+    text-shadow: 0 1px 1px 0 rgba(0,0,0,0.4);
 }
 
 .login-dialog-prompt-layout {
@@ -2605,7 +2606,7 @@ StScrollBar StButton#vhandle:active {
     text-align: left;
     padding-left: 18px;
     color:white;
-    text-shadow: black 0 4px 3px 0;
+    text-shadow: 0 1px 1px 0 rgba(0,0,0,0.4);
 }
 
 /* Screen shield */

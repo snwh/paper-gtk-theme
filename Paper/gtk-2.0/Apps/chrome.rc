@@ -22,7 +22,7 @@ style "chrome-gtk-frame"
 
 style "chrome_menu_item"
 {
-        bg[SELECTED] = @wm_color
+    bg[SELECTED] = @wm_color
 }
 
 class "ChromeGtkFrame" 			             			style "chrome-gtk-frame"
