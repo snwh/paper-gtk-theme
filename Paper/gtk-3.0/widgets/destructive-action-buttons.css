@@ -20,8 +20,8 @@
  * Destructive action buttons *
  ******************************/
 @define-color destructive_action_button #DC322F;
-@define-color destructive_action_button_border shade(@destructive_action_button, 0.7);
-@define-color destructive_action_button_foreground @base;
+@define-color destructive_action_button_border shade(@destructive_action_button, 0.9);
+@define-color destructive_action_button_foreground #fff;
 
 /******************************
  * Destructive action buttons *
@@ -112,6 +112,7 @@
 /* Labels */
 .destructive-action.button GtkLabel {
     color: @destructive_action_button_foreground;
+    text-shadow:0 1px alpha(#000, 0.05);
 }
 
 .destructive-action.button:active GtkLabel,
@@ -125,6 +126,7 @@
 .destructive-action.button:focus:backdrop GtkLabel,
 .destructive-action.button:active:backdrop GtkLabel {
     color: @backdrop_text;
+    text-shadow:none;
 }
 
 .destructive-action.button:insensitive GtkLabel {

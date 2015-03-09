@@ -20,6 +20,7 @@
 @define-color suggested_action_button_foreground #fff;
 @define-color backdrop_suggested_action_foreground alpha(#fff, 0.8);
 @define-color insensitive_suggested_action_foreground alpha(#fff, 0.5);
+@define-color suggested_action_button_border shade(@suggested_action_button, 0.9);
 
 /****************************
  * Suggested action buttons *
@@ -27,7 +28,7 @@
 
 .suggested-action.button,
 .button.suggested-action {
-    border: 1px solid @suggested_action_button;
+    border: 1px solid @suggested_action_button_border;
     background-color: @suggested_action_button;
     background-image: linear-gradient(to bottom, 
                                       @suggested_action_button,
@@ -38,7 +39,7 @@
 
 .suggested-action.button:hover,
 .button.suggested-action:hover {
-    border: 1px solid shade(@suggested_action_button, 1.2);
+    border: 1px solid shade(@suggested_action_button_border, 1.1);
     background-color: shade(@suggested_action_button, 1.2);
     background-image: linear-gradient(to bottom, 
                                       shade(@suggested_action_button, 1.1),
@@ -81,21 +82,21 @@
 
 .suggested-action.text-button,
 .text-button.suggested-action {
-    border: 1px solid @suggested_action_button;
+    border: 1px solid @suggested_action_button_border;
     background-color: @suggested_action_button;
     color: @suggested_action_button_foreground;
 }
 
 .suggested-action.text-button:hover,
 .text-button.suggested-action:hover {
-    border: 1px solid shade(@suggested_action_button, 1.2);
+    border: 1px solid shade(@suggested_action_button_border, 1.1);
     background-color: shade(@suggested_action_button, 1.2);
     color: @suggested_action_button_foreground;
 }
 
 .suggested-action.text-button:active,
 .text-button.suggested-action:active {
-    border: 1px solid shade(@suggested_action_button, 1.1);
+    border: 1px solid shade(@suggested_action_button_border, 1.1);
     background-color: shade(@suggested_action_button, 1.1);
     color: @suggested_action_button_foreground;
 }
@@ -153,6 +154,7 @@
 /* Labels */
 .suggested-action.button GtkLabel {
     color: @suggested_action_button_foreground;
+    text-shadow:0 1px alpha(#000, 0.05);
 }
 
 .suggested-action.button:active GtkLabel,
@@ -166,6 +168,7 @@
 .suggested-action.button:focus:backdrop GtkLabel,
 .suggested-action.button:active:backdrop GtkLabel {
     color: @backdrop_text;
+    text-shadow:none;
 }
 
 .suggested-action.button:insensitive GtkLabel {

@@ -236,7 +236,7 @@ GtkCalendar.button:backdrop:hover,
 
 .text-button:active GtkLabel,
 .text-button:hover GtkLabel {
-    color: alpha(#000, 0.5);
+    color: shade(@selection, 0.85);
     /*color: @text;*/
 }
 
