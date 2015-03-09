@@ -43,11 +43,11 @@
     padding: 0;
     background-color: inherit;
     color: inherit;
-    outline-color: rgba(46, 52, 54, 0.3);
+/*    outline-color: rgba(46, 52, 54, 0.3);
     outline-style: dashed;
     outline-offset: -3px;
     outline-width: 1px;
-    outline-radius: 2px;
+    outline-radius: 2px;*/
 }
 
 /* Import Widget CSS */
