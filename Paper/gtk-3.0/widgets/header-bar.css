@@ -206,7 +206,28 @@
     color: @backdrop_header_text;
 }
 
-/* Active:Backdrop Button */
+/* *:Backdrop Button */
+.header-bar .button:hover:backdrop,
+.header-bar .text-button:hover:backdrop,
+.header-bar .titlebutton:hover:backdrop,
+.header-bar .linked:hover:backdrop,
+.header-bar .flat:hover:backdrop,
+.header-bar .suggested-action .button:hover:backdrop,
+.header-bar .image-button:hover:backdrop,
+.header-bar .button:checked:backdrop,
+.header-bar .text-button:checked:backdrop,
+.header-bar .titlebutton:checked:backdrop,
+.header-bar .linked:checked:backdrop,
+.header-bar .flat:checked:backdrop,
+.header-bar .suggested-action .button:checked:backdrop,
+.header-bar .image-button:checked:backdrop,
+.header-bar .button:focus:backdrop,
+.header-bar .text-button:focus:backdrop,
+.header-bar .titlebutton:focus:backdrop,
+.header-bar .linked:focus:backdrop,
+.header-bar .flat:focus:backdrop,
+.header-bar .suggested-action .button:focus:backdrop,
+.header-bar .image-button:focus:backdrop,
 .header-bar .button:active:backdrop,
 .header-bar .text-button:active:backdrop,
 .header-bar .titlebutton:active:backdrop,
