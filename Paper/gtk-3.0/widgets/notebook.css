@@ -87,7 +87,7 @@
 /*----- Tabs -----*/
 
 .notebook tab {
-    border: none;
+    /*border: none;*/
     border-radius: 0;
     background: @background;
     color: @foreground;
