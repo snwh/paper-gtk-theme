@@ -29,6 +29,7 @@ stage {
   padding: 4px 32px;
   color: #dbdee0;
   background-color: #2d3335;
+  background-gradient-direction: none;
   border-color: rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 1px #454d50;
   text-shadow: 0 1px black;
@@ -61,6 +62,7 @@ StEntry {
   border-width: 1px;
   color: rgba(219, 222, 224, 1.0);
   background-color: #2d3335;
+  background-gradient-direction: none;
   border-color: rgba(0, 0, 0, 0.7);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
   selection-background-color: #9FB0B9;
@@ -162,6 +164,7 @@ StScrollBar {
   .modal-dialog .run-dialog-entry {
     width: 20em;
     background-color: #dbdee0;
+    background-gradient-direction: none;
     color: #2d3335;
     margin-bottom: 6px; }
   .modal-dialog .run-dialog-error-box {
@@ -923,7 +926,8 @@ StScrollBar {
   width: 320px;
   border: 1px solid rgba(0, 0, 0, 0.4);
   color: #dbdee0;
-  background-color: #454d50 ;
+  background-color: #454d50;
+  background-gradient-direction: none;
   padding: 7px 9px;
   border-radius: 4px; }
   .search-entry:focus {
@@ -1048,6 +1052,7 @@ StScrollBar {
 .list-search-result:selected,
 .list-search-result:hover {
   background-color: rgba(238, 238, 236, 0.1);
+  background-gradient-direction: none;
   transition-duration: 200ms; }
 
 .app-well-app:active .overview-icon, .app-well-app:checked .overview-icon,
@@ -1058,6 +1063,8 @@ StScrollBar {
 .grid-search-result:active .overview-icon,
 .grid-search-result:checked .overview-icon {
   background-color: rgba(45, 51,53,0.9);
+  background-gradient-direction: none;
+  background-image: none;
   box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.7); }
 
 .app-well-app:hover .overview-icon, .app-well-app:focus .overview-icon, .app-well-app:selected .overview-icon,
@@ -1074,6 +1081,14 @@ StScrollBar {
   transition-duration: 0ms;
   border-image: none;
   background-image: none; }
+
+
+/* Running App */
+.app-well-app.running > .overview-icon {
+    border-radius: 0;
+    color:white;
+    box-shadow: inset 0 -2px 0 0 #9FB0B9;
+}
 
 .app-well-app-running-dot {
   width: 24px;
