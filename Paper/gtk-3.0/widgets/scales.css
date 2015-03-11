@@ -41,7 +41,7 @@
 .scale.highlight.bottom:insensitive,
 .menubar .menuitem .scale.highlight.left:insensitive,
 .menubar .menuitem .scale.highlight.bottom:insensitive {
-    border: 1px solid @border;
+    border: 1px solid @insensitive_base;
     background-color: @insensitive_base;
 }
 
@@ -50,7 +50,7 @@
 .scale.highlight.bottom:hover,
 .menubar .menuitem .scale.highlight.left:hover,
 .menubar .menuitem .scale.highlight.bottom:hover {
-    border: 1px solid @border;
+    border: 1px solid shade(@selection, 1.05);
     background-color: shade(@selection, 1.05);
 }
 
@@ -59,7 +59,7 @@
 .scale.vertical.highlight.bottom:backdrop,
 .menubar .menuitem.scale.highlight.left:backdrop,
 .menubar .menuitem.scale.highlight.bottom:backdrop {
-    border: 1px solid @border;
+    border: 1px solid @backdrop_selection;
     background-color: @backdrop_selection;
 }
 

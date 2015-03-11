@@ -16,75 +16,64 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/* Slider colors */
-@define-color slider @background;
-@define-color slider_border alpha(#000, 0.3);
-@define-color backdrop_slider @backdrop_background;
-@define-color insensitive_slider @insensitive_background;
-
 /* Trough colors */
-@define-color trough shade(@base, 0.8);
-@define-color trough_border alpha(#000, 0.2);
-@define-color backdrop_trough shade(@backdrop_base, 0.8);
-@define-color insensitive_trough shade(@insensitive_base, 0.8);
+@define-color trough_border shade(@text, 2.2);
+
+/* Slider colors */
+@define-color slider_border @trough_border;
+
 
 /*************
  * GtkSwitch *
  *************/
-
 GtkSwitch {
-    border-radius: 5px;
-    font: condensed;
+    border-radius: 1em;
+    font: bold;
 }
 
 /* Trough */
 GtkSwitch.trough {
-    border-radius: 5px;
+    border-radius: 1em;    
     border: 1px solid @trough_border;
-    background-color: @trough;
-    color: alpha(@text, 0.5);
+    background-color: @background;
+    color: @trough_border;
 }
 
 GtkSwitch.trough:active {
-    border: 1px solid shade(@selection, 0.8);
-    background-color: @selection;
-    color: @selection_foreground;
+    border: 1px solid @selection;
+    background-color: alpha(@selection, 0.2);
+    color: @selection;
 }
 
 GtkSwitch.trough:backdrop,
 GtkSwitch.trough:active:backdrop {
-    background: none;
-    border: 1px solid @backdrop_border;
+    border: 1px solid @backdrop_text;
+    background-color: @backdrop_background;
     color: @backdrop_text;
 }
 
 GtkSwitch.trough:insensitive,
 GtkSwitch.trough:active:insensitive {
     background: none;
-    border: 1px solid @insensitive_border;
+    border: 1px solid @insensitive_text;
     color: @insensitive_text;
 }
 
 /* Slider */
+GtkSwitch.slider {
+    background-color: @slider_border;
+}
 
-GtkSwitch.slider,
 GtkSwitch.slider:active {
-    border: 1px solid @slider_border;
-    background-color: @slider;
-    background-image: linear-gradient(to bottom, 
-                                      @slider,
-                                      shade(@slider, 0.98)
-                                      );
+    background-color: @selection;
 }
 
 GtkSwitch.slider:active:insensitive,
 GtkSwitch.slider:insensitive {
-    border: 1px solid @insensitive_border;
-    background-color: @insensitive_slider;
+    background-color: @insensitive_text;
 }
 
 GtkSwitch.slider:active:backdrop,
 GtkSwitch.slider:backdrop {
-    border: 1px solid @backdrop_border;
-    background-color: @insensitive_slider;
+    background-color: @backdrop_text;
 }
