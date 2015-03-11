@@ -927,7 +927,7 @@ StScrollBar {
   padding: 7px 9px;
   border-radius: 4px; }
   .search-entry:focus {
-    padding: 6px 8px;
+    padding: 7px 9px;
     border: 1px solid rgba(0, 0, 0, 0.4);
     background-color: #dbdee0;
     color: #2d3335; }
