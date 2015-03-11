@@ -21,13 +21,13 @@
  * Xfce *
  ********/
 
- XfceHeading,
+XfceHeading,
 .XfceHeading {
     margin: 0;
     padding: 0;
     border-width: 0;
-    background-color: @theme_base_color;
     background-image: none;
+    background-color: @theme_base_color;
     color: @theme_text_color;
 }
 

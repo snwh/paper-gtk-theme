@@ -269,8 +269,8 @@
     padding: 13px;
 }
 
-.primary-toolbar.toolbar .button:active
-.primary-toolbar.toolbar GtkToggleButton:active
+.primary-toolbar.toolbar .button:active,
+.primary-toolbar.toolbar GtkToggleButton:active,
 .primary-toolbar.toolbar .text-button:active,
 .primary-toolbar.toolbar .image-button:active {
     border: none;

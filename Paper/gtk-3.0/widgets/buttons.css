@@ -68,9 +68,6 @@ GtkCalendar.button:backdrop:hover,
 }
 
 /* Focus Button */
-
-
-
 .button *:focus,
 *.button:focus {
     outline-color: alpha(#000, 0.2);
@@ -116,9 +113,9 @@ GtkCalendar.button:backdrop:hover,
 .button.image-button:active {
     border: 1px solid @selection;
     background-color: shade(@selection, 1.1);
-    background-image: linear-gradient(to bottom, 
-                                      shade(shade(@selection, 1.1), 0.95),
-                                      shade(@selection, 1.1)
+    background-image: linear-gradient(to top, 
+                                      shade(@selection, 1.1),
+                                      shade(shade(@selection, 1.1), 0.95)
                                       );
     color: @selected_foreground;
 
@@ -288,7 +285,6 @@ GtkCalendar.button:backdrop:hover,
 /**************
 * Help Button *
 **************/
-
 .help_button {
     border-radius: 16px;
 }

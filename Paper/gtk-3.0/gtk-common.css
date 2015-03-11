@@ -112,8 +112,8 @@
  * Progressbars *
  ****************/
 
-@define-color progressbar_background shade(@selected_background, 1.1);
-@define-color backdrop_progressbar_background shade(@backdrop_background, 0.85);
+@define-color progressbar_background shade(@selected_background, 1.02);
+@define-color backdrop_progressbar_background shade(@selected_background, 0.85);
 @define-color insensitive_progressbar_background shade(@insensitive_background, 0.85);
 
 
@@ -121,9 +121,10 @@
  * Troughs *
  ***********/
 @define-color trough_active @selected_background;
+@define-color trough_active_backdrop @backdrop_selected_background;
 @define-color trough_background @base;
-@define-color insensitive_trough_background shade(@background, 0.9);
-@define-color backdrop_trough_background @backdrop_background;
+@define-color insensitive_trough_background shade(@trough_background, 0.9);
+@define-color backdrop_trough_background shade(@trough_background, 1.1);
 
 /*********************
  * Internal elements *

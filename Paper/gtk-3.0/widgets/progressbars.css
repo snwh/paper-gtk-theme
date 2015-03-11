@@ -27,7 +27,8 @@ GtkProgressBar {
     border-radius: 0px;
 }
 
-GtkProgressBar.progressbar {
+GtkProgressBar.progressbar,
+GtkProgressBar.progressbar:active {
     color: alpha(#000,0.5);
     background-color: @progressbar_background;
 }
