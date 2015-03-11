@@ -39,9 +39,8 @@ To render new assets from their source SVG files, run the following:
 
     ./render-gtk3-assets.py
     ./render-gtk3-assets-hidpi.py
-    ./render-metacity-assets.py
     ./render-gnome-shell-assets.py
-    ./render-unity-assets.py
+    ./render-wm-assets.py
 
 If it's throwing an error, the script may not be executable, try:
 	
