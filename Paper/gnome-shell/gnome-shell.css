@@ -2,7 +2,7 @@
 *
 * This file is part of the Paper theme.
 *
-* Portions adapted from Gnome-Shell default theme
+* Layout and code style adapted from the default GNOME Shell theme
 *   Copyright 2009 Red Hat, Inc.
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -66,6 +66,8 @@ StEntry {
   selection-background-color: #9FB0B9;
   selected-color: #ffffff; }
   StEntry:focus {
+    background-color: #dbdee0;
+    color: #2d3335;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
     border-color: rgba(0, 0, 0, 0.5); }
   StEntry:insensitive {
@@ -130,16 +132,14 @@ StScrollBar {
   width: 72px;
   height: 21px;
   background-size: contain; }
-
-.toggle-switch-us {
-  background-image: url("assets/toggle-off.svg"); }
-  .toggle-switch-us:checked {
+  .toggle-switch-intl, .toggle-switch-us {
+    background-image: url("assets/toggle-off.svg"); }
+  .toggle-switch:hover .toggle-switch-intl, .toggle-switch:hover .toggle-switch-us {
+    background-image: url("assets/toggle-off-hover.svg"); }
+  .toggle-switch-intl:checked, .toggle-switch-us:checked {
     background-image: url("assets/toggle-on.svg"); }
-
-.toggle-switch-intl {
-  background-image: url("assets/toggle-off.svg"); }
-  .toggle-switch-intl:checked {
-    background-image: url("assets/toggle-on.svg"); }
+  .toggle-switch:hover .toggle-switch-intl:checked, .toggle-switch:hover .toggle-switch-us:checked {
+    background-image: url("assets/toggle-on-hover.svg"); }
 
 /* links */
 .shell-link {
@@ -313,7 +313,7 @@ StScrollBar {
 /* Password or Authentication Dialog */
 .prompt-dialog {
   width: 500px;
-  border: 2px solid rgba(159, 176, 185, 0.2); }
+  border: 1px solid rgba(0, 0, 0, 0.5); }
 
 .prompt-dialog-main-layout {
   spacing: 24px;
@@ -1062,7 +1062,7 @@ StScrollBar {
 .grid-search-result:active .overview-icon,
 .grid-search-result:checked .overview-icon {
   background-color: rgba(45, 51,53,0.9);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.7); }
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.7); }
 
 .app-well-app:hover .overview-icon, .app-well-app:focus .overview-icon, .app-well-app:selected .overview-icon,
 .app-well-app.app-folder:hover .overview-icon,
@@ -1188,12 +1188,20 @@ StScrollBar {
   .notification-banner .secondary-icon {
     icon-size: 1.09em; }
   .notification-banner .notification-actions {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding-top: 2px;
+    background-color: #454d50;
+    padding-top: 0px;
     spacing: 1px; }
   .notification-banner .notification-button {
     padding: 4px 4px 5px;
-    background-color: #2d3335; }
+    background-color: #2d3335;
+    border-radius: 0;
+    border-width: 0;
+    padding: 4px 32px;
+    color: #dbdee0;
+    background-color: #2d3335;
+    border-color: rgba(0, 0, 0, 0.5);
+    border-top-width: 1px;
+    box-shadow: none}
     .notification-banner .notification-button:first-child {
       border-radius: 0 0 0 6px; }
     .notification-banner .notification-button:last-child {
@@ -1249,13 +1257,24 @@ StScrollBar {
     padding-right: 6px; }
 
 .notification-button {
-  height: 24px; }
+  height: 24px;
+  padding: 4px 4px 5px;
+  background-color: #2d3335;
+  border-radius: 0;
+  border-width: 0;
+  color: #dbdee0;
+  background-color: #2d3335;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-top-width: 1px;
+  box-shadow: none }
 
 .notification-icon-button {
   border-radius: 5px;
   padding: 5px;
   height: 24px;
-  width: 24px; }
+  width: 24px;
+  border: none;
+  box-shadow: none; }
   .notification-icon-button > StIcon {
     icons-size: 16px;
     width: 16px;

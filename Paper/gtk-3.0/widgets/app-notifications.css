@@ -22,13 +22,13 @@
 *********************/
 .app-notification,
 .app-notification.frame {
-    border: 1px solid alpha(#000, 0.1);
+    border: 1px solid @border;
     border-top-width: 0px;
     border-radius: 6px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     padding: 8px;
-    background-color: alpha(#fff, 0.9);
+    background-color: @background;
     color: @text;
 }
 

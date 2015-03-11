@@ -24,23 +24,39 @@
 
 GtkProgressBar {
     padding: 0;
-    border-radius: 0px;
+    border-radius: 4px;
 }
 
 GtkProgressBar.progressbar,
 GtkProgressBar.progressbar:active {
-    color: alpha(#000,0.5);
+    border: 1px solid alpha(#000, 0.2);
+    color: @text;
     background-color: @progressbar_background;
 }
 
-GtkProgressBar.progressbar:backdrop {
-    color: alpha(#000,0.5);
+GtkProgressBar.progressbar:backdrop,
+GtkProgressBar.progressbar:active:backdrop {
+    border: 1px solid alpha(#000, 0.15);
+    color: @backdrop_text;
     background-color: @backdrop_progressbar_background;
 }
 
 GtkProgressBar.trough {
     border: 1px solid alpha(#000, 0.2);
+    color: @text;
     background-color: @trough_background;
+}
+
+GtkProgressBar.trough:backdrop {
+    border: 1px solid alpha(#000, 0.15);
+    color: @backdrop_text;
+    background-color: @backdrop_trough_background;
+}
+
+GtkProgressBar.trough:insensitive {
+    border: 1px solid alpha(#000, 0.15);
+    color: @insensitive_text;
+    background-color: @insensitive_trough_background;
 }
 
 .progressbar row,
@@ -87,20 +103,14 @@ GtkProgressBar.trough {
 .trough row:hover,
 .trough row:selected,
 .trough row:selected:focus {
-
+    border-radius: 4px;
     padding: 0;
-
     border: 1px solid;
-
     background-image: linear-gradient(to bottom,
                                   @trough_background,
                                   shade(@trough_background, 1.05)
                                   );
-
-    border-image: linear-gradient(to bottom,
-                                  @border,
-                                  shade(@border, 0.95)
-                                  ) 1 1 1 1;
+    border: 1px solid @border;
 }
 
 .trough.vertical row,
@@ -111,32 +121,14 @@ GtkProgressBar.trough {
 
 .trough:insensitive,
 .trough.vertical:insensitive {
-
-    padding: 0;
-
-    border: 1px solid;
-
     background-image:none;
     background-color:@insensitive_base;
-
-    border-image: linear-gradient(to bottom,
-                                  @border,
-                                  shade(@border, 0.95)
-                                  ) 1 1 1 1;
+    border: 1px solid @insensitive_border;
 }
 
 .trough:backdrop,
 .trough.vertical:backdrop {
-
     padding: 0;
-
-    border: 1px solid;
-
-    background-image:none;
-
-    border-image: linear-gradient(to bottom,
-                                  @border,
-                                  shade(@border, 0.95)
-                                  ) 1 1 1 1;
+    border: 1px solid @backdrop_border;
     background-color: @backdrop_background;
 }
