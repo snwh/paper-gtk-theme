@@ -13,7 +13,7 @@
    height="20"
    id="svg10003"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="filter-selected-ltr.svg">
   <defs
      id="defs10005">
@@ -40,13 +40,13 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="7.2403636"
-     inkscape:cy="8.2036011"
+     inkscape:cx="1.2833901"
+     inkscape:cy="9.9767902"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:document-units="px"
      inkscape:grid-bbox="true"
-     inkscape:window-width="1364"
+     inkscape:window-width="1366"
      inkscape:window-height="699"
      inkscape:window-x="0"
      inkscape:window-y="27"
@@ -82,9 +82,9 @@
      inkscape:groupmode="layer"
      transform="translate(0,-44)">
     <path
-       inkscape:connector-curvature="0"
-       style="opacity:0.5;fill:#ffffff;fill-opacity:1;stroke:none"
-       d="m 7.5714261,44 c -0.464844,0 -0.855193,0.236571 -1.1160714,0.580429 l -0.044643,0 L 0.6964261,53.151857 0.116069,54 l 0.5803571,0.848286 5.7142858,8.571428 0.044643,0 C 6.7162331,63.763429 7.1065821,64 7.5714261,64 l 1.4285719,0 0,-1.428571 c 0,-0.324143 -0.130586,-0.608429 -0.3125,-0.848143 l 0.04464,0 L 8.598212,61.544714 3.6428547,54 8.598212,46.455429 8.73214,46.276857 l -0.04464,0 C 8.86941,46.037 9,45.752714 9,45.428571 L 9,44 7.5714281,44 z"
-       id="path3021" />
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:0.5"
+       d="M 0,54 8,46 8,62 Z"
+       id="path4137"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

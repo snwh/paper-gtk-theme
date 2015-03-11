@@ -13,34 +13,37 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="calendar-arrow-left.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="calendar-arrow-right.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#575757"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="-4.3872641"
-     inkscape:cy="10.41872"
+     inkscape:zoom="1"
+     inkscape:cx="7.9999979"
+     inkscape:cy="8.0000174"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      borderlayer="true"
      inkscape:showpageshadow="false"
-     inkscape:window-width="930"
-     inkscape:window-height="681"
-     inkscape:window-x="434"
-     inkscape:window-y="45"
-     inkscape:window-maximized="0">
+     inkscape:window-width="1366"
+     inkscape:window-height="699"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true">
     <inkscape:grid
        type="xygrid"
        id="grid17403"
-       empspacing="5"
+       empspacing="4"
        visible="true"
        enabled="true"
        snapvisiblegridlinesonly="true" />
@@ -53,7 +56,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -67,18 +70,18 @@
        transform="matrix(-1,0,0,1,15.999996,0)">
       <rect
          transform="scale(-1,1)"
-         style="color:#bebebe;fill:none;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
+         style="color:#bebebe;display:inline;overflow:visible;visibility:visible;fill:none;stroke:none;stroke-width:1;marker:none;enable-background:new"
          id="rect10837-5-8-1"
          y="1036.3622"
          x="-15.999998"
          height="16"
          width="16" />
-      <path
-         id="path3021"
-         transform="translate(0,1036.3622)"
-         d="M 10,1 C 9.6746092,1 9.4013649,1.1656048 9.21875,1.40625 l -0.03125,0 -4,6 L 4.78125,8 5.1875,8.59375 l 4,6 0.03125,0 C 9.4013649,14.834395 9.6746092,15 10,15 l 1,0 0,-1 c 0,-0.2269 -0.09141,-0.425949 -0.21875,-0.59375 l 0.03125,0 -0.09375,-0.125 L 7.25,8 l 3.46875,-5.28125 0.09375,-0.125 -0.03125,0 C 10.908587,2.4259487 11,2.2269003 11,2 l 0,-1 -1,0 z"
-         style="opacity:0.5;fill:#ffffff;fill-opacity:1;stroke:none"
-         inkscape:connector-curvature="0" />
     </g>
+    <path
+       style="opacity:0.75;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 9.9999962,1044.3919 -4,-4 0,8 z"
+       id="path4137"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
   </g>
 </svg>

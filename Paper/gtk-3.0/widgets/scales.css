@@ -32,7 +32,7 @@
 .scale.vertical.highlight.bottom,
 .menubar .menuitem .scale.highlight.left,
 .menubar .menuitem .scale.highlight.bottom {
-    border: 1px solid transparent;
+    border: 1px solid @selection;
     background-color: @selection;
 }
 
@@ -41,8 +41,8 @@
 .scale.highlight.bottom:insensitive,
 .menubar .menuitem .scale.highlight.left:insensitive,
 .menubar .menuitem .scale.highlight.bottom:insensitive {
-    border: 1px solid transparent;
-    background-color: @insensitive_trough_background;
+    border: 1px solid @border;
+    background-color: @insensitive_base;
 }
 
 /* Hover fill colors */
@@ -50,8 +50,8 @@
 .scale.highlight.bottom:hover,
 .menubar .menuitem .scale.highlight.left:hover,
 .menubar .menuitem .scale.highlight.bottom:hover {
-    border: 1px solid transparent;
-    background-color: @trough_background;
+    border: 1px solid @border;
+    background-color: shade(@selection, 1.05);
 }
 
 /* backdrop fill colors */
@@ -59,8 +59,8 @@
 .scale.vertical.highlight.bottom:backdrop,
 .menubar .menuitem.scale.highlight.left:backdrop,
 .menubar .menuitem.scale.highlight.bottom:backdrop {
-    border: 1px solid transparent;
-    background-color: @backdrop_trough_background;
+    border: 1px solid @border;
+    background-color: @backdrop_selection;
 }
 
 /***********
@@ -70,39 +70,39 @@
 /* Margins */
 .scale.trough {
     border-width: 1px;
-    margin: 6px 0;
+    margin: 7px 0;
 }
 
 .scale.trough.vertical {
     border-width: 1px;
-    margin: 0 6px;
+    margin: 0 7px;
 }
 
 /* Trough colors */
 .scale.trough,
 .scale.trough.vertical {
-    border: 1px solid transparent;
+    border: 1px solid @border;
     background-color: @trough_background;
 }
 
 /* Hover trough colors */
 .scale.trough:hover,
 .scale.trough.vertical:hover {
-    border: 1px solid transparent;
+    border: 1px solid @border;
     background-color: @hover_background;
 }
 
 /* Insensitive trough colors */
 .scale.trough:insensitive,
 .scale.trough.vertical:insensitive {
-    border: 1px solid transparent;
+    border: 1px solid @border;
     background-color: @insensitive_trough_background;
 }
 
 /* backdrop trough colors */
 .scale.trough:backdrop,
 .scale.trough.vertical:backdrop {
-    border: 1px solid transparent;
+    border: 1px solid @border;
     background-color: @backdrop_trough_background;
 }
 
