@@ -1124,13 +1124,13 @@ StScrollBar {
   .page-indicator .page-indicator-icon {
     width: 18px;
     height: 18px;
-    background-image: url(assets/page-indicator-inactive.svg); }
+    background-image: url("assets/page-indicator-inactive.svg"); }
   .page-indicator:hover .page-indicator-icon {
-    background-image: url(assets/page-indicator-hover.svg); }
+    background-image: url("assets/page-indicator-hover.svg"); }
   .page-indicator:active .page-indicator-icon {
-    background-image: url(assets/page-indicator-active.svg); }
+    background-image: url("assets/page-indicator-active.svg"); }
   .page-indicator:checked .page-indicator-icon, .page-indicator:checked:active {
-    background-image: url(assets/page-indicator-checked.svg); }
+    background-image: url("assets/page-indicator-checked.svg"); }
 
 .app-well-app > .overview-icon.overview-icon-with-label,
 .grid-search-result .overview-icon.overview-icon-with-label {
@@ -1174,12 +1174,12 @@ StScrollBar {
   margin: 5px;
   border-radius: 8px;
   color: #dbdee0;
-  background-color: #2d3335;
+  background-color: #454d50;
   border: 1px solid rgba(0, 0, 0, 0.2); }
   .notification-banner:hover {
-    background-color: #394043; }
+    background-color: #515a5e; }
   .notification-banner:focus {
-    background-color: #394043; }
+    background-color: #515a5e; }
   .notification-banner .notification-icon {
     padding: 5px; }
   .notification-banner .notification-content {
@@ -1207,7 +1207,7 @@ StScrollBar {
   margin: 5px;
   border-radius: 6px;
   color: #dbdee0;
-  background-color: #2d3335;
+  background-color: #454d50;
   border: 1px solid rgba(0, 0, 0, 0.2);
   spacing-rows: 4px;
   padding: 8px;
