@@ -68,6 +68,7 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
 	cp -R ./Paper/ /usr/share/themes/
 	chmod -R 755 /usr/share/themes/Paper
 	echo "Installation complete!"
+	end
 elif [ "$UID" -ne "$ROOT_UID" ]; then
 	if [ -d $HOME/.local/share/themes/Paper ]; then
 		echo
