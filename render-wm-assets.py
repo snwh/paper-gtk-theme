@@ -9,7 +9,7 @@ import subprocess
 
 INKSCAPE = '/usr/bin/inkscape'
 OPTIPNG = '/usr/bin/optipng'
-SRC = os.path.join('.', 'src/metacity')
+SRC = os.path.join('.', 'src/wm')
 
 inkscape_process = None
 
