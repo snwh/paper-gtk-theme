@@ -770,9 +770,10 @@ StScrollBar {
 .message-content {
   padding: 8px; }
 
+
 .system-switch-user-submenu-icon {
-  icon-size: 24px;
-  border: 1px solid rgba(238, 238, 236, 0.4); }
+  icon-size: 48px;
+  border: none; }
 
 #appMenu {
   spinner-image: url("assets/process-working.svg");
@@ -820,10 +821,9 @@ StScrollBar {
 
 .window-close, .notification-close {
   background-image: url("assets/close-window.svg");
-  background-size: 24px;
-  padding: 6px;
-  height: 24px;
-  width: 24px; }
+  background-size: 32px;
+  height: 32px;
+  width: 32px; }
 
 .window-close {
   -shell-close-overlap: 16px; }
@@ -909,7 +909,7 @@ StScrollBar {
 .window-clone-border {
   border: 4px solid rgba(159, 176, 185, 0.7);
   border-radius: 4px;
-  box-shadow: inset 0px 0px 0px 0px #9FB0B9; }
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5); }
 
 .window-caption {
   spacing: 25px;
@@ -920,7 +920,8 @@ StScrollBar {
   -shell-caption-spacing: 12px; }
   .window-caption:hover {
     background-color: #454d50;
-    color: #dbdee0; }
+    color: #dbdee0;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);  }
 
 .search-entry {
   width: 320px;
@@ -1700,10 +1701,10 @@ StScrollBar {
   background-color: rgba(0, 0, 0, 0.8);
   spacing: 4px;
   padding: 4px;
-  border: 2px solid grey;
+  border: 1px solid rgba(0,0,0,0.7);
   border-radius: 4px; }
   #LookingGlassDialog > #Toolbar {
-    border: 1px solid grey;
+    border: 1px solid rgba(0,0,0,0.7);
     border-radius: 4px; }
   #LookingGlassDialog .labels {
     spacing: 4px; }
