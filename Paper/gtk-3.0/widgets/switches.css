@@ -17,10 +17,12 @@
 */
 
 /* Trough colors */
-@define-color trough_border shade(@text, 2.2);
+@define-color trough_border shade(@background, 0.7);
+@define-color backdrop_trough_border shade(@trough_border, 1.1);
 
 /* Slider colors */
 @define-color slider_border @trough_border;
+@define-color backdrop_slider_border @backdrop_trough_border;
 
 
 /*************
@@ -28,7 +30,7 @@
  *************/
 GtkSwitch {
     border-radius: 1em;
-    font: bold;
+    font: condensed;
 }
 
 /* Trough */
@@ -47,9 +49,9 @@ GtkSwitch.trough:active {
 
 GtkSwitch.trough:backdrop,
 GtkSwitch.trough:active:backdrop {
-    border: 1px solid @backdrop_text;
+    border: 1px solid @backdrop_trough_border;
     background-color: @backdrop_background;
-    color: @backdrop_text;
+    color: @backdrop_trough_border;
 }
 
 GtkSwitch.trough:insensitive,
@@ -75,5 +77,5 @@ GtkSwitch.slider:insensitive {
 
 GtkSwitch.slider:active:backdrop,
 GtkSwitch.slider:backdrop {
-    background-color: @backdrop_text;
+    background-color: @backdrop_slider_border;
 }

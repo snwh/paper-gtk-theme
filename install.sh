@@ -90,12 +90,12 @@ elif [ "$UID" -ne "$ROOT_UID" ]; then
 		mkdir -p $HOME/.local/share/themes
 		cp -R ./Paper/ $HOME/.local/share/themes/
 	fi
-	# ./themes
-	if [ -d $HOME/./themes ]; then
-		cp -R ./Paper/ $HOME/./themes/
+	# .themes
+	if [ -d $HOME/.themes ]; then
+		cp -R ./Paper/ $HOME/.themes/
 	else
-		mkdir -p $HOME/./themes
-		cp -R ./Paper/ $HOME/.local/share/themes/
+		mkdir -p $HOME/.themes
+		cp -R ./Paper/ $HOME/.themes/
 	fi
 	echo "Installation complete!"
 	set

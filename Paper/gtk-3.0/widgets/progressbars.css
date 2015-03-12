@@ -29,7 +29,7 @@ GtkProgressBar {
 
 GtkProgressBar.progressbar,
 GtkProgressBar.progressbar:active {
-    border: 1px solid alpha(#000, 0.2);
+    border: 1px solid alpha(#000, 0.15);
     color: @text;
     background-color: @progressbar_background;
 }
@@ -42,7 +42,7 @@ GtkProgressBar.progressbar:active:backdrop {
 }
 
 GtkProgressBar.trough {
-    border: 1px solid alpha(#000, 0.2);
+    border: 1px solid alpha(#000, 0.15);
     color: @text;
     background-color: @trough_background;
 }
