@@ -28,7 +28,7 @@ GtkLabel {
 
 .dim-label,
 .dim-label GtkLabel {
-	color: alpha(@text,0.5)
+	color: @insensitive_text;
 }
 
 .label:active,
