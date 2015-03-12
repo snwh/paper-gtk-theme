@@ -89,7 +89,13 @@
 .destructive-action.button:active GtkImage,
 .destructive-action.button:focus GtkImage,
 .destructive-action.button:hover GtkImage {
-    color: @selected_foreground;
+    color: @suggested_action_button_foreground;
+}
+
+.destructive-action.image-button:active GtkImage,
+.destructive-action.image-button:focus GtkImage,
+.destructive-action.image-button:hover GtkImage {
+    color: @suggested_action_button_foreground;
 }
 
 .destructive-action.button:backdrop GtkImage,
@@ -118,7 +124,13 @@
 .destructive-action.button:active GtkLabel,
 .destructive-action.button:focus GtkLabel,
 .destructive-action.button:hover GtkLabel {
-    color: @selected_foreground;
+    color: @destructive_action_button_foreground;
+}
+
+.destructive-action.text-button:active GtkLabel,
+.destructive-action.text-button:focus GtkLabel,
+.destructive-action.text-button:hover GtkLabel {
+    color: @destructive_action_button_foreground;
 }
 
 .destructive-action.button:backdrop GtkLabel,

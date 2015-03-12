@@ -210,15 +210,3 @@ NautilusWindow .dynamic-notebook tab.right:active {
 .nautilus-desktop.nautilus-canvas-item:selected:backdrop {
     color: @backdrop_selected_foreground;
 }
-
-NautilusWindow .frame {
-    border-width: 0 0 1px 0;
-}
-
-NautilusWindow GtkScrolledWindow.frame {
-    border-width: 0;
-}
-
-NautilusWindow .sidebar .frame {
-    border-width: 0px;
-}

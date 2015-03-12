@@ -131,7 +131,13 @@
 .suggested-action.button:active GtkImage,
 .suggested-action.button:focus GtkImage,
 .suggested-action.button:hover GtkImage {
-    color: @selected_foreground;
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.image-button:active GtkImage,
+.suggested-action.image-button:focus GtkImage,
+.suggested-action.image-button:hover GtkImage {
+    color: @suggested_action_button_foreground;
 }
 
 .suggested-action.button:backdrop GtkImage,
@@ -160,7 +166,13 @@
 .suggested-action.button:active GtkLabel,
 .suggested-action.button:focus GtkLabel,
 .suggested-action.button:hover GtkLabel {
-    color: @selected_foreground;
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.text-button:active GtkLabel,
+.suggested-action.text-button:focus GtkLabel,
+.suggested-action.text-button:hover GtkLabel {
+    color: @suggested_action_button_foreground;
 }
 
 .suggested-action.button:backdrop GtkLabel,
