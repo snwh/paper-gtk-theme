@@ -97,6 +97,10 @@
 @define-color backdrop_header_text alpha(@header_text, 0.7);
 @define-color insensitive_header_text alpha(@header_text, 0.5);
 
+
+@define-color backdrop_header_text_dark alpha(@header_text_dark, 0.7);
+@define-color insensitive_header_text_dark alpha(@header_text_dark, 0.5);
+
 /**************
  * Scrollbars *
  **************/

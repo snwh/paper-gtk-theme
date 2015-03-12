@@ -18,6 +18,7 @@
 
 @define-color bijiben #ebdd4d;
 
+
 /**********
  * Header *
  **********/
@@ -26,6 +27,7 @@ BjbMainToolbar,
 BjbWindowBase .header-bar,
 BjbWindowBase .titlebar {
     background-color: @bijiben;
+    color: @header_text_dark;
 }
 
 
@@ -33,24 +35,5 @@ BjbMainToolbar:backdrop,
 BjbWindowBase .header-bar:backdrop,
 BjbWindowBase .titlebar:backdrop {
     background-color: shade(@bijiben,0.9);
-}
-
-
-/* Switch */
-BjbWindowBase .header-bar GtkSwitch.trough:active {
-    background-color: @bijiben;
-}
-
-BjbWindowBase GtkSwitch.trough:active {
-    border: 1px solid shade(@bijiben, 0.8);
-    background-color: @bijiben;
-}
-
-BjbWindowBase GtkSwitch.slider:active {
-    border: 1px solid shade(@bijiben, 0.8);
-} 
-
-BjbWindowBase .header-bar GtkSwitch.slider:active:backdrop,
-BjbWindowBase .header-bar GtkSwitch.slider:backdrop {
-    background-color: shade(@bijiben, 0.9);
+    color: @backdrop_header_text_dark;
 }
