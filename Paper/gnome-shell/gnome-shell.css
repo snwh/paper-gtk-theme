@@ -1241,6 +1241,7 @@ StScrollBar {
   color: #555;
   background-color: #f7f7f7;
   border: none;
+  border-width: 0px;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5); }
   .notification-banner:hover {
     background-color: #ffffff; }
@@ -1281,10 +1282,11 @@ StScrollBar {
   font-size: 11pt;
   width: 34em;
   margin: 5px;
-  border-radius: 6px;
+  border-radius: 2px;
   color: #555;
   background-color: #fff;
-  border: 1px solid rgba(0,0,0,0.2);
+  border: none;
+  border-width: 0px;
   spacing-rows: 4px;
   padding: 8px;
   spacing-columns: 10px; }
