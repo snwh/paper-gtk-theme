@@ -1331,7 +1331,7 @@ StScrollBar {
   padding: 4px 4px 5px;
   color: #555;
   background-color: #fff;
-  border-radius: 0 0 6px 6px; }
+  border-radius: 0 0 2px 2px; }
 
 .notification-icon-button {
   padding: 5px;
