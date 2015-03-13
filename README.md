@@ -5,12 +5,12 @@ Paper Theme
 
 ###Preamble
 
-Paper has been developed primarily for GNOME and other GTK3 desktops, legacy desktops will not have the same experience.
+Paper has been developed primarily with modern GTK3 (GNOME-based) desktop environments in mind, legacy-toolkit and GTK2 environments will not provide an ideal experience, as much of the visual design relies on modern GTK3+ widgets.
 
 Paper is distributed under the terms the GNU General Public License (GNU GPL v.3).
 
 ###Installation & Usage
-
+ 
 If you download the provided archive, extract it and run the included install script.
 
 	bash install.sh
@@ -42,10 +42,10 @@ To render new assets from their source SVG files, run the following:
     ./render-gnome-shell-assets.py
     ./render-wm-assets.py
 
-If it's throwing an error, the script may not be executable, try:
+If scripts are throwing errors, they may not be executable, try:
 	
 	chmod +x *
 
-This script will look in the source directories (../src/*) and render the respective icons (provided there are changes).
+Each script will look in the asset source directories (../src/*) and render the respective assets (provided there are changes) to the appropriate locations.
 
 -----------
