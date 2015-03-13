@@ -575,7 +575,8 @@ StScrollBar {
 #panel {
   background-color: #454d50;
   font-weight: bold;
-  height: 1.86em; }
+  height: 1.86em;
+  text-shadow:none;}
   #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
     background-color: transparent; }
   #panel #panelLeft, #panel #panelCenter {
@@ -608,7 +609,9 @@ StScrollBar {
       box-shadow: inset 0 -2px 0px #9FB0B9;
       background-image: none;
       background-gradient-direction: none;
-      color: white; }
+      color: white;
+      text-shadow:none;
+      icon-shadow:none; }
       #panel .panel-button:active > .system-status-icon, #panel .panel-button:overview > .system-status-icon, #panel .panel-button:focus > .system-status-icon, #panel .panel-button:checked > .system-status-icon {
         icon-shadow: black 0 2px 2px; }
     #panel .panel-button .system-status-icon {
@@ -1062,6 +1065,7 @@ StScrollBar {
 
 .app-view-control {
   padding: 4px 32px;
+  border-width: 0px;
   color: #fff; }
   .app-view-control:checked {
     color: #dbdee0;
