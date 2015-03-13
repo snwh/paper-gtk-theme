@@ -42,6 +42,7 @@ stage {
     border-color: rgba(0,0,0,0);
     border:none;
     background-color: rgba(255,255,255,0.1);
+    background-gradient-direction: none;
     box-shadow: none;
     text-shadow: none;
     icon-shadow: none; }
@@ -50,6 +51,7 @@ stage {
     border-color: rgba(0,0,0,0);
     border:none;
     background-color: rgba(255,255,255,0.1);
+    background-gradient-direction: none;
     box-shadow: none;
     text-shadow: none;
     icon-shadow: none; }
@@ -57,6 +59,7 @@ stage {
     color: rgba(255,255,255,0.3);
     border-color: rgba(0,0,0,0);
     background-color: rgba(0,0,0,0.0);
+    background-gradient-direction: none;
     box-shadow: none;
     text-shadow: none;
     icon-shadow: none; }
@@ -64,6 +67,7 @@ stage {
     color: #fff;
     border-color: rgba(0,0,0,0);
     background-color: rgba(0,0,0,0.1);
+    background-gradient-direction: none;
     box-shadow: none;
     text-shadow: none;
     icon-shadow: none; }
@@ -602,6 +606,8 @@ StScrollBar {
     #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
       background-color: rgba(0,0,0,0.01);
       box-shadow: inset 0 -2px 0px #9FB0B9;
+      background-image: none;
+      background-gradient-direction: none;
       color: white; }
       #panel .panel-button:active > .system-status-icon, #panel .panel-button:overview > .system-status-icon, #panel .panel-button:focus > .system-status-icon, #panel .panel-button:checked > .system-status-icon {
         icon-shadow: black 0 2px 2px; }
@@ -1060,6 +1066,8 @@ StScrollBar {
   .app-view-control:checked {
     color: #dbdee0;
     border-color: rgba(0,0,0,0.7);
+    border-width: 0px;
+    background-gradient-direction: none;
     background-color: #454d50;
     box-shadow: none;
     text-shadow: none;
@@ -1067,8 +1075,10 @@ StScrollBar {
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);  }
   .app-view-control:first-child {
     border-right-width: 0;
+    background-gradient-direction: none;
     border-radius: 2px; }
   .app-view-control:last-child {
+    background-gradient-direction: none;
     border-radius: 2px; }
 
 .search-provider-icon:active, .search-provider-icon:checked,
@@ -1116,6 +1126,8 @@ StScrollBar {
     border-radius: 0;
     color:white;
     box-shadow: inset 0 -2px 0 0 #9FB0B9;
+    background-image: none;
+    background-gradient-direction: none;
 }
 
 .app-well-app-running-dot {
