@@ -14,7 +14,7 @@
    height="16"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    version="1.0"
    sodipodi:docname="more-results.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
@@ -107,25 +107,28 @@
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#555555"
      bordercolor="#9a9a9a"
      borderopacity="1"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="9.5552546"
-     inkscape:cy="9.3268368"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="28.070552"
+     inkscape:cy="5.2671556"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
      inkscape:showpageshadow="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1364"
-     inkscape:window-height="701"
+     inkscape:window-width="1366"
+     inkscape:window-height="699"
      inkscape:window-x="0"
      inkscape:window-y="27"
-     inkscape:window-maximized="1">
+     inkscape:window-maximized="1"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true">
     <inkscape:grid
        type="xygrid"
        id="grid3672"
@@ -140,6 +143,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -174,17 +178,6 @@
        id="path3043"
        sodipodi:nodetypes="ccccccccccccc"
        inkscape:label="#rect2498"
-       inkscape:connector-curvature="0" />
-    <path
-       style="opacity:0.15;fill:#ffffff;fill-opacity:1;stroke:none"
-       d="M -14.15625,2.09375 A 0.8995176,0.8995176 0 0 0 -14.875,3 l 0,2.09375 -2.125,0 A 0.8995176,0.8995176 0 0 0 -17.90625,6 l 0,4 A 0.8995176,0.8995176 0 0 0 -17,10.90625 l 2.125,0 0,2.09375 a 0.8995176,0.8995176 0 0 0 0.90625,0.90625 l 4,0 A 0.8995176,0.8995176 0 0 0 -9.0625,13 l 0,-2.09375 2.0625,0 A 0.8995176,0.8995176 0 0 0 -6.09375,10 l 0,-4 A 0.8995176,0.8995176 0 0 0 -7,5.09375 l -2.0625,0 0,-2.09375 A 0.8995176,0.8995176 0 0 0 -9.96875,2.09375 l -4,0 a 0.8995176,0.8995176 0 0 0 -0.09375,0 0.8995176,0.8995176 0 0 0 -0.09375,0 z M -13.96875,3 l 4,0 0,3 L -7,6 l 0,4 -2.96875,0 0,3 -4,0 0,-3 -3.03125,0 0,-4 3.03125,0 0,-3 z"
-       id="path4558"
-       inkscape:connector-curvature="0" />
-    <path
-       style="opacity:0.3;fill:#ffffff;fill-opacity:1;stroke:none"
-       d="m -17,10 0,1 3.03125,0 0,-1 L -17,10 z m 7.03125,0 0,1 2.96875,0 0,-1 -2.96875,0 z m -4,3 0,1 4,0 0,-1 -4,0 z"
-       id="BevelHighlight"
-       inkscape:label="#path3182"
        inkscape:connector-curvature="0" />
   </g>
 </svg>
