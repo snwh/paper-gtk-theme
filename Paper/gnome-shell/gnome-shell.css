@@ -401,6 +401,7 @@ StScrollBar {
   min-width: 200px; }
   .popup-menu .popup-sub-menu {
     background-color: #394042;
+    fbackground-gradient-direction: none;
     border-width: 0px;
     box-shadow: none;}
   .popup-menu .popup-menu-content {
@@ -1066,12 +1067,19 @@ StScrollBar {
   padding-bottom: 32px; }
 
 .app-view-control {
+  background-gradient-direction: none;
+  background-color: rgba(0,0,0,0);
   padding: 4px 32px;
   border-width: 0px;
   color: #fff; }
+  .app-view-control:hover {
+    color: #dbdee0;
+    background-color: rgba(255,255,255,0.1);
+    border-color: rgba(0,0,0,0);
+    border-width: 0px; }
   .app-view-control:checked {
     color: #dbdee0;
-    border-color: rgba(0,0,0,0.7);
+    border-color: rgba(0,0,0,0);
     border-width: 0px;
     background-gradient-direction: none;
     background-color: #454d50;
