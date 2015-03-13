@@ -30,6 +30,7 @@ GtkProgressBar {
 GtkProgressBar.progressbar,
 GtkProgressBar.progressbar:active {
     border: 1px solid alpha(#000, 0.15);
+    border-radius: 4px;
     color: @text;
     background-color: @progressbar_background;
 }
@@ -37,86 +38,37 @@ GtkProgressBar.progressbar:active {
 GtkProgressBar.progressbar:backdrop,
 GtkProgressBar.progressbar:active:backdrop {
     border: 1px solid alpha(#000, 0.15);
+    border-radius: 4px;
     color: @backdrop_text;
     background-color: @backdrop_progressbar_background;
 }
 
 GtkProgressBar.trough {
     border: 1px solid alpha(#000, 0.15);
+    border-radius: 4px;
     color: @text;
     background-color: @trough_background;
 }
 
 GtkProgressBar.trough:backdrop {
     border: 1px solid alpha(#000, 0.15);
+    border-radius: 4px;
     color: @backdrop_text;
     background-color: @backdrop_trough_background;
 }
 
 GtkProgressBar.trough:insensitive {
     border: 1px solid alpha(#000, 0.15);
+    border-radius: 4px;
     color: @insensitive_text;
     background-color: @insensitive_trough_background;
 }
 
-.progressbar row,
-.progressbar row:hover,
-.progressbar row:selected,
-.progressbar row:selected:focus,
-.progressbar.vertical row,
-.progressbar.vertical row:hover,
-.progressbar.vertical row:selected,
-.progressbar.vertical row:selected:focus {
-    color: alpha(#000,0.5);
-    background-color: @selection;
-}
-
-.progressbar row:insensitive,
-.progressbar row:hover:insensitive,
-.progressbar row:selected:insensitive,
-.progressbar row:selected:focus:insensitive,
-.progressbar.vertical row:insensitive,
-.progressbar.vertical row:hover:insensitive,
-.progressbar.vertical row:selected:insensitive,
-.progressbar.vertical row:selected:focus:insensitive {
-    color: alpha(#000,0.5);
-    background-color: @selection;
-}
-
-.progressbar row:backdrop,
-.progressbar row:hover:backdrop,
-.progressbar row:selected:backdrop,
-.progressbar row:selected:focus:backdrop,
-.progressbar.vertical row:backdrop,
-.progressbar.vertical row:hover:backdrop,
-.progressbar.vertical row:selected:backdrop,
-.progressbar.vertical row:selected:focus:backdrop {
-    color: alpha(#000,0.5);
-    background-color: @backdrop_progressbar_background;
-}
-
-
-/***********
- * Troughs *
- ***********/
-.trough row,
-.trough row:hover,
-.trough row:selected,
-.trough row:selected:focus {
-    border-radius: 4px;
+.trough,
+.trough.vertical {
     padding: 0;
-    border: 1px solid;
-    background-image: linear-gradient(to bottom,
-                                  @trough_background,
-                                  shade(@trough_background, 1.05)
-                                  );
     border: 1px solid @border;
-}
-
-.trough.vertical row,
-.trough.vertical row:selected,
-.trough.vertical row:selected:focus {
-    background-color: @base;
+    background-color: @trough_background;
 }
 
 .trough:insensitive,
@@ -131,4 +83,98 @@ GtkProgressBar.trough:insensitive {
     padding: 0;
     border: 1px solid @backdrop_border;
     background-color: @backdrop_background;
+}
+
+
+/********************
+ * Row Progressbars *
+ ********************/
+
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focus,
+.progressbar.vertical row,
+.progressbar.vertical row:hover,
+.progressbar.vertical row:selected,
+.progressbar.vertical row:selected:focus {
+    border: 1px solid alpha(#000, 0.15);
+    border-radius: 0px;
+    color: alpha(#000,0.5);
+    background-color: @selection;
+}
+
+.progressbar row:insensitive,
+.progressbar row:hover:insensitive,
+.progressbar row:selected:insensitive,
+.progressbar row:selected:focus:insensitive,
+.progressbar.vertical row:insensitive,
+.progressbar.vertical row:hover:insensitive,
+.progressbar.vertical row:selected:insensitive,
+.progressbar.vertical row:selected:focus:insensitive {
+    border: 1px solid alpha(#000, 0.15);
+    border-radius: 0px;
+    color: alpha(#000,0.5);
+    background-color: @selection;
+}
+
+.progressbar row:backdrop,
+.progressbar row:hover:backdrop,
+.progressbar row:selected:backdrop,
+.progressbar row:selected:focus:backdrop,
+.progressbar.vertical row:backdrop,
+.progressbar.vertical row:hover:backdrop,
+.progressbar.vertical row:selected:backdrop,
+.progressbar.vertical row:selected:focus:backdrop {
+    border: 1px solid alpha(#000, 0.15);
+    border-radius: 0px;
+    color: alpha(#000,0.5);
+    background-color: @backdrop_progressbar_background;
+}
+
+.trough row,
+.trough row:hover,
+.trough row:selected,
+.trough row:selected:focus,
+.trough.vertical row,
+.trough.vertical row:hover,
+.trough.vertical row:selected,
+.trough.vertical row:selected:focus {
+    border: 1px solid alpha(#000, 0.2);
+    border-radius: 0px;
+    color: alpha(#000,0.5);
+    background-color: @trough_background;
+    background-image: linear-gradient(to bottom,
+                                  @trough_background,
+                                  shade(@trough_background, 1.05)
+                                  );
+}
+
+
+.trough row:insensitive,
+.trough row:hover:insensitive,
+.trough row:selected:insensitive,
+.trough row:selected:focus:insensitive,
+.trough.vertical row:insensitive,
+.trough.vertical row:hover:insensitive,
+.trough.vertical row:selected:insensitive,
+.trough.vertical row:selected:focus:insensitive {
+    border: 1px solid alpha(#000, 0.2);
+    border-radius: 0px;
+    color: alpha(#000,0.5);
+    background-color: @insensitive_trough_background;
+}
+
+.trough row:backdrop,
+.trough row:hover:backdrop,
+.trough row:selected:backdrop,
+.trough row:selected:focus:backdrop,
+.trough.vertical row:backdrop,
+.trough.vertical row:hover:backdrop,
+.trough.vertical row:selected:backdrop,
+.trough.vertical row:selected:focus:backdrop {
+    border: 1px solid alpha(#000, 0.2);
+    border-radius: 0px;
+    color: alpha(#000,0.5);
+    background-color: @backdrop_trough_background;
 }
