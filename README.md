@@ -30,7 +30,7 @@ Alternatively, you can clone the latest version its git repository:
 
 ###Using the Source
 
-There are scripts to simplify the rendering process;to run them (and edit icons) you will need:
+There are scripts to simplify the rendering process;to run them (and edit theme assets) you will need:
 
  * inkscape
  * python3
