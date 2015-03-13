@@ -54,7 +54,7 @@ stage {
     text-shadow: none;
     icon-shadow: none; }
   .button:insensitive {
-    color: rgba(0,0,0,0.5);
+    color: rgba(255,255,255,0.3);
     border-color: rgba(0,0,0,0);
     background-color: rgba(0,0,0,0.0);
     box-shadow: none;
@@ -999,10 +999,10 @@ StScrollBar {
 
 .list-search-result-title {
   font-size: 1.5em;
-  color: #e2e2df; }
+  color: #dbdee0; }
 
 .list-search-result-description {
-  color: #cacac4; }
+  color: #dbdee0; }
 
 .search-provider-icon {
   padding: 15px; }
@@ -1016,7 +1016,8 @@ StScrollBar {
 #dash {
   font-size: 9pt;
   color: #dbdee0;
-  background-color: #636E73;
+  /*background-color: #636E73; */
+  background-color: #454d50;
   padding: 4px 0;
   border: 1px solid rgba(255,255,255,0.1);
   border-left: 0px;
@@ -1054,19 +1055,21 @@ StScrollBar {
   padding-bottom: 32px; }
 
 .app-view-control {
-  padding: 4px 32px; }
+  padding: 4px 32px;
+  color: #fff; }
   .app-view-control:checked {
-    color: white;
+    color: #dbdee0;
     border-color: rgba(0,0,0,0.7);
-    background-color: #2d3335;
+    background-color: #454d50;
     box-shadow: none;
     text-shadow: none;
-    icon-shadow: none; }
+    icon-shadow: none;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);  }
   .app-view-control:first-child {
     border-right-width: 0;
-    border-radius: 3px 0 0 3px; }
+    border-radius: 2px; }
   .app-view-control:last-child {
-    border-radius: 0 3px 3px 0; }
+    border-radius: 2px; }
 
 .search-provider-icon:active, .search-provider-icon:checked,
 .list-search-result:active,
@@ -1179,7 +1182,7 @@ StScrollBar {
   padding: 8px;
   border-radius: 9px 0 0 9px;
   color: #dbdee0;
-  background-color: #636E73;
+  background-color: #454d50;
   border: 1px solid rgba(255,255,255,0.1); }
   .workspace-thumbnails:rtl {
     border-radius: 0 9px 9px 0; }
