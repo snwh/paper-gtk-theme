@@ -289,6 +289,16 @@ GtkCalendar.button:backdrop:hover,
     border-radius: 16px;
 }
 
+
+.button .circular-button {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 2px;
+    padding-left: 2px;
+    border-radius: 12px;
+}
+
+
 /*************************** 
 * Overlay Button *
 ***************************/

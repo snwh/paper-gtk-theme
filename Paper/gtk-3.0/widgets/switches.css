@@ -27,13 +27,12 @@
 
 /*************
  * GtkSwitch *
- *************/
+ *************
 GtkSwitch {
     border-radius: 1em;
     font: condensed;
 }
 
-/* Trough */
 GtkSwitch.trough {
     border-radius: 1em;    
     border: 1px solid @trough_border;
@@ -61,7 +60,6 @@ GtkSwitch.trough:active:insensitive {
     color: @insensitive_text;
 }
 
-/* Slider */
 GtkSwitch.slider {
     background-color: @slider_border;
 }
@@ -78,4 +76,19 @@ GtkSwitch.slider:insensitive {
 GtkSwitch.slider:active:backdrop,
 GtkSwitch.slider:backdrop {
     background-color: @backdrop_slider_border;
+}*/
+
+/*************
+ * GtkSwitch *
+ *************/
+
+GtkSwitch {
+    font: 1;
+    -GtkSwitch-slider-width: 46;
+}
+
+GtkSwitch.trough {
+    color: transparent;
+    border: none;
+    box-shadow: none;
 }
