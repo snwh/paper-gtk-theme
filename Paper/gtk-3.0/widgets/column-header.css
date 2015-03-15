@@ -32,16 +32,29 @@ column-header .button GtkLabel {
     color: @text;
 }
 
-column-header:nth-child(first) .button,
-column-header:nth-child(first) .button:active,
-column-header:nth-child(first) .button:backdrop,
-column-header:nth-child(first) .button:backdrop:hover,
-.content-view column-header:nth-child(first) .button {
+/*First Child*/
+column-header:first-child .button,
+column-header:first-child .button:active,
+column-header:first-child .button:hover,
+column-header:first-child .button:backdrop,
+column-header:first-child .button:backdrop:hover,
+.content-view column-header:first-child .button {
     border-width: 0 0 1px 0;
 }
 
+/*Last Child*/
+column-header:last-child .button,
+column-header:last-child .button:active,
+column-header:last-child .button:hover,
+column-header:last-child .button:backdrop,
+column-header:last-child .button:backdrop:hover,
+.content-view column-header:last-child .button {
+    border-width: 0px 1px 1px 1px;
+}
+
 /* Normal */
-column-header .button {
+column-header .button,
+.content-view column-header .button {
     background-image: linear-gradient(to bottom, 
                                       @button_background,
                                       shade(@button_background, 0.98)
@@ -57,7 +70,9 @@ column-header .button {
 
 /* Active */
 column-header .button:focus,
-column-header .button:active {
+column-header .button:active,
+.content-view column-header .button:focus,
+.content-view column-header .button:active {
     background-image: linear-gradient(to bottom, 
                                       @button_background,
                                       shade(@button_background, 0.98)

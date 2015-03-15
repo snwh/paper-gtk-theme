@@ -27,12 +27,6 @@
     color: @foreground;
 }
 
-GtkViewPort {
-    background: none;
-    border: none;
-    color: @foreground;
-}
-
 .frame:backdrop {
     border-color: @backdrop_border;
     background: none;

@@ -84,6 +84,7 @@ GtkSwitch.slider:backdrop {
 
 GtkSwitch {
     font: 1;
+    border: none;
     -GtkSwitch-slider-width: 46;
 }
 
@@ -91,4 +92,13 @@ GtkSwitch.trough {
     color: transparent;
     border: none;
     box-shadow: none;
+}
+
+GtkSwitch:backdrop,
+GtkSwitch:insensitive,
+GtkSwitch:backdrop:insensitive,
+GtkSwitch.trough:backdrop,
+GtkSwitch.trough:insensitive,
+GtkSwitch.trough:backdrop:insensitive {
+    border: none;
 }

@@ -280,7 +280,7 @@
 
 
 GtkSwitch.trough {
-    background: -gtk-scaled(url("assets/switch-off-dark.svg"),url("assets/switch-off-dark@2.svg"));
+    background: -gtk-scaled(url("assets/switch-off.svg"),url("assets/switch-off@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 }
