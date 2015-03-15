@@ -273,6 +273,54 @@
     background: url("assets/resize-grip.svg");
 }
 
+
+/*************
+ * GtkSwitch *
+ *************/
+
+
+GtkSwitch.trough {
+    background: -gtk-scaled(url("assets/switch-off-dark.svg"),url("assets/switch-off-dark@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+
+GtkSwitch.trough:active {
+    background: -gtk-scaled(url("assets/switch-on-dark.svg"),url("assets/switch-on-dark@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+
+GtkSwitch.trough:insensitive {
+    background: -gtk-scaled(url("assets/switch-off-disabled.svg"),url("assets/switch-off-disabled@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+
+GtkSwitch.trough:active:insensitive {
+    background: -gtk-scaled(url("assets/switch-on-disabled.svg"),url("assets/switch-on-disabled@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+
+GtkSwitch.slider {
+    background: -gtk-scaled(url("assets/switch-slider-dark.svg"),url("assets/switch-slider-dark@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+
+GtkSwitch.slider:focus {
+    background: -gtk-scaled(url("assets/switch-slider-focus.svg"),url("assets/switch-slider-focus@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+
+GtkSwitch.slider:insensitive {
+    background: -gtk-scaled(url("assets/switch-slider-insensitive-dark.svg"),url("assets/switch-slider-insensitive-dark@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+
 /*******************
  * Pane separators *
  *******************/

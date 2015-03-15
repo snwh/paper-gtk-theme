@@ -34,7 +34,8 @@
 
 .app-notification:backdrop,
 .app-notification.frame:backdrop {
-    background-image: none;
+  background-color: @backdrop_background;
+  border-color: @backdrop_border;
 }
 
 .app-notification .button, .app-notification .header-bar .button.titlebutton, .header-bar .app-notification .button.titlebutton,
