@@ -89,17 +89,19 @@ NautilusWindow .dynamic-notebook tab.right:active {
 }
 
 .nautilus-canvas-item.dim-label,
-.nautilus-list-dim-label {
-    color: mix (@theme_fg_color, @theme_bg_color, 0.50);
+.nautilus-list-dim-label,
+.nautilus-canvas-item.dim-label:backdrop,
+.nautilus-list-dim-label:backdrop {
+    color: mix(@insensitive_text, @backdrop_text, 0.5);
 }
 
 .nautilus-canvas-item.dim-label:selected,
 .nautilus-list-dim-label:selected {
-    color: mix (@theme_selected_fg_color, @theme_selected_bg_color, 0.20);
+    color: @selected_foreground;
 }
 
 .nautilus-desktop.nautilus-canvas-item {
-    color: @theme_selected_fg_color;
+    color: @selected_foreground;
     text-shadow: 1px 1px black;
 }
 
@@ -108,7 +110,7 @@ NautilusWindow .dynamic-notebook tab.right:active {
 }
 
 .nautilus-desktop.nautilus-canvas-item:selected {
-    color: @theme_selected_fg_color;
+    color: @selected_foreground;
 }
 
 .nautilus-desktop.nautilus-canvas-item:active,
