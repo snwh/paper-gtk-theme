@@ -966,7 +966,7 @@ StScrollBar {
   .window-caption:hover {
     background-color: #454d50;
     color: #dbdee0;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);  }
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5); }
 
 .search-entry {
   width: 320px;
