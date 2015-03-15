@@ -380,10 +380,11 @@
 .header-bar .entry {
     background: none;
     color: @header_text;
-    padding: 6px;
-    border-radius: 6px;
-    border: none;
+    padding: 13px;
+    border-radius: 0px;
+    border: 1px solid transparent;
     outline: none;
+    box-shadow: none;
 }
 
 .header-bar .entry:active,
@@ -399,6 +400,12 @@
     color: @backdrop_header_text;
     border: none;
     outline: none;
+}
+
+.header-bar .entry:selected,
+.header-bar .entry:selected:focus {
+    color: @header;
+    background-color: @header_text;
 }
 
 .header-bar .entry.image {

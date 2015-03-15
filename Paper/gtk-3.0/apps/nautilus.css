@@ -47,7 +47,12 @@ NautilusWindow GtkSwitch.trough:active {
 
 NautilusWindow GtkSwitch.slider:active {
     border: 1px solid shade(@nautilus, 0.8);
-} 
+}
+
+NautilusWindow .titlebar .entry,
+NautilusWindow .header-bar .entry {
+  box-shadow: none;
+}
 
 /************
  * Notebook *
