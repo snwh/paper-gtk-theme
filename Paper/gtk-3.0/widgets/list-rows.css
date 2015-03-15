@@ -26,7 +26,7 @@
     border-radius: 0px;
     border:none;
     background-image: none;
-    background-color: @background;
+    background-color: @base;
     color: @text;
 }
 
@@ -35,8 +35,8 @@
 .list-row:active:focus {
     border:none;
     background-image: none;
-    background-color: shade(@selection, 1.1);
-    color: @selection;
+    background-color: @background;
+    color: @text;
 }
 
 /* Hover */
@@ -44,7 +44,7 @@
 .list-row:active:hover {
     border:none;
     background-image: none;
-    background-color: shade(@background, 0.9);
+    background-color: alpha(@selection, 0.3);
     color: @selected_foreground;
 }
 
@@ -138,31 +138,4 @@
 .list-row:insensitive:backdrop GtkImage {
     color: mix(@backdrop_text, @insensitive_text, 0.5);
     -gtk-image-effect: dim;
-}
-
-/* Labels */
-
-.list-row GtkLabel,
-.list-row:focus GtkLabel,
-.list-row:hover GtkLabel {
-    color: @text;
-}
-
-.list-row:selected GtkLabel,
-.list-row:active GtkLabel {
-    color: @selected_foreground;
-}
-
-.list-row:backdrop GtkLabel,
-.list-row:backdrop:hover GtkLabel,
-.list-row:active:backdrop GtkLabel {
-    color: @backdrop_text;
-}
-
-.list-row:insensitive GtkLabel {
-    color: @insensitive_text;
-}
-
-.list-row:insensitive:backdrop GtkLabel {
-    color: mix(@backdrop_text, @insensitive_text, 0.5);
 }

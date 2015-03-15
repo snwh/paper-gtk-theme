@@ -429,50 +429,63 @@
 
 /* Trough */
 .header-bar GtkSwitch.trough {
-    border-radius: 1em;    
-    border: 0px solid @insensitive_header_text;
+    background: none;
+    border: none;
     background-color: alpha(@header_text, 0.2);
     color: @insensitive_header_text;
+    background-image: none;
 }
 
 .header-bar GtkSwitch.trough:active {
-    border: 0px solid @header_text;
+    background: none;
+    border: none;
     background-color: alpha(@header_text, 0.2);
     color: @header_text;
+    background-image: none;
 }
 
 .header-bar GtkSwitch.trough:backdrop,
 .header-bar GtkSwitch.trough:active:backdrop {
-    border: 0px solid @backdrop_header_text;
+    background: none;
+    border: none;
     background-color: alpha(@header_text, 0.1);
     color: @backdrop_header_text;
+    background-image: none;
 }
 
 .header-bar GtkSwitch.trough:insensitive,
 .header-bar GtkSwitch.trough:active:insensitive {
     background: none;
-    border: 0px solid @insensitive_header_text;
+    background: none;
+    border: none;
     color: @insensitive_header_text;
+    background-image: none;
 }
 
 /* Slider */
 .header-bar GtkSwitch.slider,
 .header-bar GtkSwitch.slider:active {
-    border: 0px solid @header_text;
+    background: none;
+    border: none;
     background-color: @header_text;
     background-image: none;
+    color: @header_text;
 }
 
 .header-bar GtkSwitch.slider:active:insensitive,
 .header-bar GtkSwitch.slider:insensitive {
-    border: 0px solid @insensitive_header_text;
+    background: none;
+    border: none;
     background-color: @insensitive_header_text;
     background-image: none;
+    color: @insensitive_header_text;
 }
 
 .header-bar GtkSwitch.slider:active:backdrop,
 .header-bar GtkSwitch.slider:backdrop {
-    border: 0px solid @backdrop_header_text;
+    background: none;
+    border: none;
     background-color: @backdrop_header_text;
     background-image: none;
+    color: @backdrop_header_text;
 }
