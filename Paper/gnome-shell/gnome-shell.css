@@ -186,7 +186,7 @@ StScrollBar {
     box-shadow: none;
     border: none;
     color: #555;
-    border-radius: 0px;
+    border-radius: 1px;
     margin-bottom: 6px; }
   .modal-dialog .run-dialog-error-box {
     padding-top: 16px;
@@ -772,7 +772,7 @@ StScrollBar {
 
 .message-list-section,
 .message-list-section-list {
-  spacing: 0.7em; }
+  spacing: 0.7em;}
 
 .message-list-section-title-box {
   spacing: 0.4em; }
@@ -792,9 +792,20 @@ StScrollBar {
 
 .message {
   background-color: #454d50;
-  border-radius: 3px; }
+  margin: 4px;
+  border-radius: 0px; }
   .message:hover, .message:focus {
-    background-color: #515a5e; }
+    background-color: #515a5e;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+    margin-bottom: 6px;
+    margin-top: 2px;
+    border-radius: 3px;
+    transition-duration: 200ms; }
+  .message:active {
+    background-color: #454d50;
+    box-shadow: none;
+    margin: 4px;
+    border-radius: 0px; }
 
 .message-icon-bin {
   padding: 8px 0px 8px 8px; }
@@ -1252,13 +1263,11 @@ StScrollBar {
   margin: 5px;
   border-radius: 2px;
   color: #555;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   border: none;
   border-width: 0px;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5); }
-  .notification-banner:hover {
-    background-color: #ffffff; }
-  .notification-banner:focus {
+  .notification-banner:hover, .notification-banner:focus {
     background-color: #ffffff; }
   .notification-banner .notification-icon {
     padding: 5px; }
@@ -1280,7 +1289,8 @@ StScrollBar {
     background-color: #fff;
     border-color: rgba(0,0,0,0.0);
     box-shadow: none;
-    border-radius: 0px;}
+    border-radius: 0px;
+    text-shadow:none;}
     .notification-banner .notification-button:first-child {
       border-radius: 0 0 0 2px; }
     .notification-banner .notification-button:not(:first-child):not(:last-child) {
@@ -1344,6 +1354,7 @@ StScrollBar {
   padding: 4px 4px 5px;
   color: #555;
   background-color: #fff;
+  text-shadow:none;
   border-radius: 0 0 2px 2px; }
 
 .notification-icon-button {
@@ -1353,13 +1364,16 @@ StScrollBar {
   border: none;
   border-top-width: 1px;
   color: #555;
-  background-color: #fff;
+  background-color: #f7f7f7;
   border-color: rgba(0,0,0,0.2);
   border-radius: 0 0 3px 3px;
   /*box-shadow: inset 0 1px rgba(255,255,255,0.1);*/
-  box-shadow: none; }
+  box-shadow: none;
+  text-shadow:none; }
+  .notification-icon-button:hover {
+    background-color: #fff; }
   .notification-icon-button > StIcon {
-    icons-size: 16px;
+    icon-size: 16px;
     width: 16px;
     height: 16px;
     padding: 2px; }
@@ -1402,30 +1416,47 @@ StScrollBar {
   font-style: italic; }
 
 .hotplug-transient-box {
-  spacing: 6px;
-  padding: 2px 72px 2px 12px; }
+  padding: 2px 12px 2px 12px; }
 
 .hotplug-notification-item {
-  padding: 2px 10px; }
+  border-radius: 0 0 2px 2px;
+  background-color: transparent;
+  border:none;
+  text-shadow:none;
+  text-align: center;
+  color: #aaa;
+  padding: 2px 10px;
+  background-image: none;
+  background-gradient-direction: none; }
   .hotplug-notification-item:focus {
-    padding: 1px 71px 1px 11px; }
+    color: #dbdee0;
+    padding: 2px 10px; }
+  .hotplug-notification-item:hover {
+    background-color: #f7f7f7;
+    color: #738c99; }
+  .hotplug-notification-item:active {
+    background-color: #eee;
+    color: #555; }
 
 .hotplug-notification-item-icon {
-  icon-size: 24px;
-  padding: 2px 5px; }
+  -st-icon-style: symbolic;
+  icon-size: 16px;
+  padding: 8px 8px 8px 2px; }
 
 .hotplug-resident-box {
-  spacing: 8px; }
+  spacing: 0px; }
 
 .hotplug-resident-mount {
-  spacing: 8px;
-  border-radius: 4px; }
+  spacing: 12px;
+  border-radius: 0 0 2px 2px; }
   .hotplug-resident-mount:hover {
-    background-color: rgba(69, 77, 80, 0.3); }
+    background-color: #515a5e;
+    color: #fff; }
 
 .hotplug-resident-mount-label {
+  text-shadow:none;
   color: inherit;
-  padding-left: 6px; }
+  padding-left: 12px; }
 
 .hotplug-resident-mount-icon {
   icon-size: 24px;
@@ -1452,7 +1483,7 @@ StScrollBar {
     border-right-width: 0; }
 
 .legacy-tray-handle StIcon {
-  icon-size: 24px; }
+  icon-size: 16px; }
 
 .legacy-tray-icon-box {
   padding: 6px;
@@ -1771,14 +1802,15 @@ StScrollBar {
     background-color: rgba(57, 64, 66, 0.5); }
 
 #LookingGlassDialog {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(57,64,66,0.95);
   spacing: 4px;
   padding: 4px;
   border: 1px solid rgba(0,0,0,0.7);
-  border-radius: 4px; }
+  border-top-width: 0px;
+  border-radius: 0 0 4px 4px; }
   #LookingGlassDialog > #Toolbar {
-    border: 1px solid rgba(0,0,0,0.7);
-    border-radius: 4px; }
+    border: none;
+    border-radius: 0px; }
   #LookingGlassDialog .labels {
     spacing: 4px; }
   #LookingGlassDialog .notebook-tab {
@@ -1791,12 +1823,12 @@ StScrollBar {
     padding-right: .3em; }
     #LookingGlassDialog .notebook-tab:hover {
       color: white;
-      text-shadow: black 0px 2px 2px; }
+      text-shadow: none; }
     #LookingGlassDialog .notebook-tab:selected {
       border-bottom-width: 2px;
       border-color: #9FB0B9;
       color: white;
-      text-shadow: black 0px 2px 2px; }
+      text-shadow: none; }
   #LookingGlassDialog StBoxLayout#EvalBox {
     padding: 4px;
     spacing: 4px; }
@@ -1819,23 +1851,25 @@ StScrollBar {
   spacing: 4px; }
 
 .lg-obj-inspector-button {
-  border: 1px solid gray;
+  border: 1px solid rgba(0,0,0,0);
   padding: 4px;
   border-radius: 4px; }
   .lg-obj-inspector-button:hover {
-    border: 1px solid #ffffff; }
+    background: rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0); }
 
 #lookingGlassExtensions {
   padding: 4px; }
 
 .lg-extensions-list {
   padding: 4px;
-  spacing: 6px; }
+  spacing: 8px; }
 
 .lg-extension {
-  border: 1px solid #6f6f6f;
-  border-radius: 4px;
-  padding: 4px; }
+  border: 1px solid rgba(0,0,0,0);
+  background: #454d50;
+  border-radius: 2px;
+  padding: 6px; }
 
 .lg-extension-name {
   font-weight: bold; }
@@ -1844,7 +1878,10 @@ StScrollBar {
   spacing: 6px; }
 
 #LookingGlassPropertyInspector {
-  background: rgba(0,0,0,0.8);
-  border: 2px solid grey;
-  border-radius: 4px;
-  padding: 6px; }
+  border-radius: 2px;
+  color: #454d50;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  padding: 8px;
+  margin: 12px }
