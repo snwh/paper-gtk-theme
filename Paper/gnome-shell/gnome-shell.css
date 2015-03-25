@@ -1038,7 +1038,7 @@ StScrollBar {
 .search-section-separator {
   -gradient-height: 1px;
   -gradient-start: rgba(255, 255, 255, 0);
-  -gradient-end: rgba(255, 255, 255, 0.05);
+  -gradient-end: rgba(255, 255, 255, 0.5);
   -margin-horizontal: 1.5em;
   height: 1px;}
 
@@ -1961,3 +1961,6 @@ StScrollBar {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
   padding: 8px;
   margin: 12px }
+
+
+@import url("gnome-legacy.css");
