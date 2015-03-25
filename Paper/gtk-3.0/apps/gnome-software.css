@@ -17,6 +17,23 @@
 */
 
 @define-color star #E6E663;/* star color */
+@define-color gnome-software #1A77C2;
+
+/**********
+ * Header *
+ **********/
+
+#window_software .titlebar,
+#window_software .header-bar {
+    background-color: @gnome-software;
+}
+
+#window_software .titlebar:backdrop,
+#window_software .header-bar:backdrop {
+    background-color: shade(@gnome-software,0.9);
+}
+
+
 
 /************
  * Software *
