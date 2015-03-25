@@ -16,6 +16,22 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
+@define-color gnome-documents #C2352A;
+
+/**********
+ * Header *
+ **********/
+
+#Documents .titlebar,
+#Documents .header-bar {
+    background-color: @gnome-documents;
+}
+
+#Documents .titlebar:backdrop,
+#Documents .header-bar:backdrop {
+    background-color: shade(@gnome-documents,0.9);
+}
+
 
 /*******************
  * GNOME Documents *
