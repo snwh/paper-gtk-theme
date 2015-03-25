@@ -457,7 +457,10 @@ StScrollBar {
   background-color: transparent;
   border-color: rgba(255,255,255,0.15);
   border-bottom-width: 1px;
-  border-bottom-style: solid; }
+  border-bottom-style: solid;
+  -gradient-height: 0px;
+  -gradient-start: rgba(255,255,255,0);
+  -gradient-end: rgba(255,255,255,0);}
 
 .background-menu {
   -boxpointer-gap: 4px;
@@ -753,9 +756,12 @@ StScrollBar {
   border-left-width: 0px; }
 
 .calendar-nonwork-day {
+  background-color: rgba(255,255,255,0);
   color: rgba(255,255,255,0.3); }
 
 .calendar-today {
+  background-image: none;
+  text-shadow:none;
   font-weight: bold;
   background-color: rgba(159, 176, 185, 0.3);
   border: 0px solid rgba(0,0,0,0.2); }
@@ -831,6 +837,12 @@ StScrollBar {
 
 .message-content {
   padding: 8px; }
+
+.messages-indicator-highlight {
+  -gradient-height: 0px;
+  -gradient-start: rgba(255, 255, 255, 0);
+  -gradient-end: rgba(255, 255, 255, 0);
+}
 
 .system-switch-user-submenu-icon {
   icon-size: 48px;
@@ -1022,6 +1034,13 @@ StScrollBar {
 
 .search-section-content {
   spacing: 32px; }
+
+.search-section-separator {
+  -gradient-height: 1px;
+  -gradient-start: rgba(255, 255, 255, 0);
+  -gradient-end: rgba(255, 255, 255, 0.05);
+  -margin-horizontal: 1.5em;
+  height: 1px;}
 
 .list-search-results {
   spacing: 3px; }
