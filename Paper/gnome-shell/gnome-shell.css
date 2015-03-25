@@ -578,7 +578,8 @@ StScrollBar {
 
 /* TOP BAR */
 #panel {
-  background-color: #454d50;
+  /*background-color: #454d50;*/
+  background-color: rgba(57, 64, 66, 0.95);
   font-weight: bold;
   height: 1.86em;
   text-shadow:none;}
@@ -588,7 +589,8 @@ StScrollBar {
     spacing: 4px; }
   #panel .panel-corner {
     -panel-corner-radius: 0px;
-    -panel-corner-background-color: #454d50;
+    /*-panel-corner-background-color: #454d50;*/
+    -panel-corner-background-color: rgba(57, 64, 66, 0.95);
     -panel-corner-border-width: 2px;
     -panel-corner-border-color: transparent; }
     #panel .panel-corner:active, #panel .panel-corner:overview, #panel .panel-corner:focus {
