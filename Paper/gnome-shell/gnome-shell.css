@@ -1963,4 +1963,95 @@ StScrollBar {
   margin: 12px }
 
 
-@import url("gnome-legacy.css");
+/********************
+ * Legacy Overrides *
+ ********************/
+
+.candidate-page-button,
+.notification-button,
+.notification-icon-button,
+.hotplug-notification-item,
+.hotplug-resident-eject-button,
+.modal-dialog-button {
+  border-radius: 2px;
+  border-width: 1px;
+  margin-top: 0.5em;
+  padding: 4px 32px;
+  color: #dbdee0;  
+  font-weight: bold;
+  background:none;
+  background-gradient-direction: none;
+  border:none;
+  border-color: rgba(0,0,0,0);
+  box-shadow: none;
+  text-shadow: none;
+  icon-shadow: none;
+  background-gradient-direction: none;
+  background-gradient-start: rgba(255, 255, 255, 0);
+  background-gradient-end: rgba(255, 255, 255, 0);}
+
+.candidate-page-button:hover,
+.notification-button:hover,
+.notification-icon-button:hover,
+.hotplug-notification-item:hover,
+.hotplug-resident-eject-button:hover,
+.modal-dialog-button:hover {
+  color: #fff;
+  border-color: rgba(0,0,0,0);
+  border:none;
+  background-color: rgba(255,255,255,0.1);
+  background-gradient-direction: none;
+  box-shadow: none;
+  text-shadow: none;
+  icon-shadow: none;
+  background-gradient-start: rgba(255, 255, 255, 0);
+  background-gradient-end: rgba(255, 255, 255, 0);}
+
+.notification-button:focus,
+.notification-icon-button:focus,
+.hotplug-notification-item:focus,
+.modal-dialog-button:focus {
+  color: #fff;
+  border-color: rgba(0,0,0,0);
+  border:none;
+  background-color: rgba(255,255,255,0.1);
+  background-gradient-direction: none;
+  box-shadow: none;
+  text-shadow: none;
+  icon-shadow: none;
+  border-width: 0px;}
+
+.candidate-page-button:active,
+.candidate-page-button:pressed,
+.notification-button:active,
+.notification-icon-button:active,
+.hotplug-notification-item:active,
+.hotplug-resident-eject-button:active,
+.modal-dialog-button:active,
+.modal-dialog-button:pressed {
+  color: #fff;
+  border-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0.1);
+  background-gradient-direction: none;
+  box-shadow: none;
+  text-shadow: none;
+  icon-shadow: none;
+  background-gradient-start: rgba(255, 255, 255, 0);
+  background-gradient-end: rgba(255, 255, 255, 0);}
+
+.candidate-page-button:insensitive,
+.notification-button:insensitive,
+.notification-icon-button:insensitive,
+.modal-dialog-button:insensitive {
+  color: rgba(255,255,255,0.3);
+  border-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0.0);
+  background-gradient-direction: none;
+  box-shadow: none;
+  text-shadow: none;
+  icon-shadow: none;}
+
+/* Menus */
+.popup-submenu-menu-item:open {
+    background-color: #454d50;
+}
