@@ -25,39 +25,31 @@ stage {
 /* Buttons */
 .button {
   border-radius: 2px;
-  border-width: 1px;
+  border: none;
   margin-top: 0.5em;
   padding: 4px 32px;
   color: #dbdee0;  
   font-weight: bold;
-  background:none;
+  background-color: rgba(255,255,255,0.0);
   background-gradient-direction: none;
-  border:none;
-  border-color: rgba(0,0,0,0);
+  background-gradient-start: rgba(255,255,255,0);
+  background-gradient-end: rgba(255,255,255,0);
   box-shadow: none;
   text-shadow: none;
   icon-shadow: none; }
-  .button:hover {
+  .button:hover, .button:focus {
     color: #fff;
-    border-color: rgba(0,0,0,0);
-    border:none;
+    border: none;
     background-color: rgba(255,255,255,0.1);
     background-gradient-direction: none;
-    box-shadow: none;
-    text-shadow: none;
-    icon-shadow: none; }
-  .button:focus {
-    color: #fff;
-    border-color: rgba(0,0,0,0);
-    border:none;
-    background-color: rgba(255,255,255,0.1);
-    background-gradient-direction: none;
+    background-gradient-start: rgba(255,255,255,0.1);
+    background-gradient-end: rgba(255,255,255,0.1);
     box-shadow: none;
     text-shadow: none;
     icon-shadow: none; }
   .button:insensitive {
     color: rgba(255,255,255,0.3);
-    border-color: rgba(0,0,0,0);
+    border: none;
     background-color: rgba(0,0,0,0.0);
     background-gradient-direction: none;
     box-shadow: none;
@@ -65,9 +57,11 @@ stage {
     icon-shadow: none; }
   .button:active {
     color: #fff;
-    border-color: rgba(0,0,0,0);
+    border: none;
     background-color: rgba(0,0,0,0.1);
     background-gradient-direction: none;
+    background-gradient-start: rgba(0,0,0,0.1);
+    background-gradient-end: rgba(0,0,0,0.1);
     box-shadow: none;
     text-shadow: none;
     icon-shadow: none; }
@@ -85,10 +79,10 @@ StEntry {
   selection-background-color: #9fb0b9;
   selected-color: #ffffff; }
   StEntry:focus {
-    background-color: #dbdee0;
+    background-color: #fff;
     color: #2d3335;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
-    border-color: rgba(0,0,0,0.5); }
+    box-shadow: none;
+    border-color: rgba(0,0,0,0); }
   StEntry:insensitive {
     color: rgba(219, 222, 224, 0.8);
     border-color: #323636;
@@ -176,7 +170,7 @@ StScrollBar {
   border-radius: 2px;
   color: #dbdee0;
   background-color: #454d50;
-  border: 1px solid rgba(0,0,0,0);
+  border: none;
   border: none;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
   padding: 24px; }
@@ -213,7 +207,7 @@ StScrollBar {
 .end-session-dialog {
   spacing: 42px;
   border-radius: 2px;
-  border: 1px solid rgba(0,0,0,0); }
+  border: none; }
 
 .end-session-dialog-list {
   padding-top: 20px; }
@@ -336,7 +330,7 @@ StScrollBar {
 .prompt-dialog {
   width: 500px;
   border-radius: 2px;
-  border: 1px solid rgba(0,0,0,0); }
+  border: none; }
 
 .prompt-dialog-main-layout {
   spacing: 24px;
@@ -563,7 +557,7 @@ StScrollBar {
   border-radius: 8px;
   padding: 12px;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
-  border: 1px solid rgba(0,0,0,0); }
+  border: none; }
 
 /* Tiled window previews */
 .tile-preview {
@@ -998,7 +992,7 @@ StScrollBar {
 
 .search-entry {
   width: 320px;
-  border: 1px solid rgba(0,0,0,0);
+  border: none;
   color: #aaa;
   caret-color: #aaa;
   caret-size: 1px;
@@ -1009,7 +1003,7 @@ StScrollBar {
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.5); }
   .search-entry:focus, .search-entry:hover {
     padding: 7px 9px;
-    border: 1px solid rgba(0,0,0,0);
+    border: none;
     background-color: #fff;
     color: #777;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
@@ -1929,12 +1923,12 @@ StScrollBar {
   spacing: 4px; }
 
 .lg-obj-inspector-button {
-  border: 1px solid rgba(0,0,0,0);
+  border: none;
   padding: 4px;
   border-radius: 4px; }
   .lg-obj-inspector-button:hover {
     background: rgba(0,0,0,0.1);
-    border: 1px solid rgba(0,0,0,0); }
+    border: none; }
 
 #lookingGlassExtensions {
   padding: 4px; }
@@ -1944,7 +1938,7 @@ StScrollBar {
   spacing: 8px; }
 
 .lg-extension {
-  border: 1px solid rgba(0,0,0,0);
+  border: none;
   background: #454d50;
   border-radius: 2px;
   padding: 6px; }
@@ -1959,7 +1953,7 @@ StScrollBar {
   border-radius: 2px;
   color: #454d50;
   background-color: #fff;
-  border: 1px solid rgba(0,0,0,0);
+  border: none;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
   padding: 8px;
   margin: 12px }
@@ -1972,7 +1966,7 @@ StScrollBar {
 .candidate-page-button,
 .modal-dialog-button {
   border-radius: 2px;
-  border: 1px solid rgba(0,0,0,0);
+  border: none;
   margin-top: 0.5em;
   padding: 4px 32px;
   color: #dbdee0;  
@@ -1980,8 +1974,6 @@ StScrollBar {
   background-gradient-direction: none;
   background-gradient-start: rgba(255,255,255,0);
   background-gradient-end: rgba(255,255,255,0);
-  background:none;
-  border:none;
   box-shadow: none;
   text-shadow: none;
   icon-shadow: none;}
@@ -1989,43 +1981,44 @@ StScrollBar {
 .modal-dialog-button:hover {
   border-radius: 2px;
   color: #fff;
-  border: 1px solid rgba(0,0,0,0);
+  border: none;
   background-color: rgba(255,255,255,0.1);
   background-gradient-direction: none;
+  background-gradient-start: rgba(255,255,255,0.1);
+  background-gradient-end: rgba(255,255,255,0.1);
   box-shadow: none;
   text-shadow: none;
-  icon-shadow: none;
-  background-gradient-start: rgba(255,255,255,0);
-  background-gradient-end: rgba(255,255,255,0);}
+  icon-shadow: none;}
 
 .modal-dialog-button:focus {
   color: #fff;
-  border: 1px solid rgba(0,0,0,0);
+  border: none;
   background-color: rgba(255,255,255,0.1);
   background-gradient-direction: none;
+  background-gradient-start: rgba(255,255,255,0.1);
+  background-gradient-end: rgba(255,255,255,0.1);
   box-shadow: none;
   text-shadow: none;
-  icon-shadow: none;
-  border-width: 0px;}
+  icon-shadow: none;}
 
 .candidate-page-button:active,
 .candidate-page-button:pressed,
 .modal-dialog-button:active,
 .modal-dialog-button:pressed {
   color: #fff;
-  border-color: rgba(0,0,0,0);
+  border: none;
   background-color: rgba(0,0,0,0.1);
   background-gradient-direction: none;
+  background-gradient-start: rgba(0,0,0,0.1);
+  background-gradient-end: rgba(0,0,0,0.1);
   box-shadow: none;
   text-shadow: none;
-  icon-shadow: none;
-  background-gradient-start: rgba(255,255,255,0);
-  background-gradient-end: rgba(255,255,255,0);}
+  icon-shadow: none;}
 
 .candidate-page-button:insensitive,
 .modal-dialog-button:insensitive {
   color: rgba(255,255,255,0.3);
-  border-color: rgba(0,0,0,0);
+  border: none;
   background-color: rgba(0,0,0,0.0);
   background-gradient-direction: none;
   box-shadow: none;
