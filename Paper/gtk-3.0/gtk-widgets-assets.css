@@ -270,7 +270,7 @@
 
 .grip {
     background-color: transparent;
-    background: url("assets/resize-grip.svg");
+    background: url("assets/scalable/resize-grip.svg");
 }
 
 /*************
@@ -279,43 +279,43 @@
 
 
 GtkSwitch.trough {
-    background: -gtk-scaled(url("assets/switch-off.svg"),url("assets/switch-off@2.svg"));
+    background: -gtk-scaled(url("assets/scalable/switch-off.svg"),url("assets/scalable/switch-off@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 }
 
 GtkSwitch.trough:active {
-    background: -gtk-scaled(url("assets/switch-on.svg"),url("assets/switch-on@2.svg"));
+    background: -gtk-scaled(url("assets/scalable/switch-on.svg"),url("assets/scalable/switch-on@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 }
 
 GtkSwitch.trough:insensitive {
-    background: -gtk-scaled(url("assets/switch-off-disabled.svg"),url("assets/switch-off-disabled@2.svg"));
+    background: -gtk-scaled(url("assets/scalable/switch-off-disabled.svg"),url("assets/scalable/switch-off-disabled@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 }
 
 GtkSwitch.trough:active:insensitive {
-    background: -gtk-scaled(url("assets/switch-on-disabled.svg"),url("assets/switch-on-disabled@2.svg"));
+    background: -gtk-scaled(url("assets/scalable/switch-on-disabled.svg"),url("assets/scalable/switch-on-disabled@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 }
 
 GtkSwitch.slider {
-    background: -gtk-scaled(url("assets/switch-slider.svg"),url("assets/switch-slider@2.svg"));
+    background: -gtk-scaled(url("assets/scalable/switch-slider.svg"),url("assets/scalable/switch-slider@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 }
 
 GtkSwitch.slider:focus {
-    background: -gtk-scaled(url("assets/switch-slider-focus.svg"),url("assets/switch-slider-focus@2.svg"));
+    background: -gtk-scaled(url("assets/scalable/switch-slider-focus.svg"),url("assets/scalable/switch-slider-focus@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 }
 
 GtkSwitch.slider:insensitive {
-    background: -gtk-scaled(url("assets/switch-slider-insensitive.svg"),url("assets/switch-slider-insensitive@2.svg"));
+    background: -gtk-scaled(url("assets/scalable/switch-slider-insensitive.svg"),url("assets/scalable/switch-slider-insensitive@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 }
@@ -325,25 +325,25 @@ GtkSwitch.slider:insensitive {
  * Pane separators *
  *******************/
 .pane-separator {
-    background: url("assets/pane-separator-grip.svg");
+    background: url("assets/scalable/pane-separator-grip.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .pane-separator:hover {
-    background: url("assets/pane-separator-grip-prelight.svg");
+    background: url("assets/scalable/pane-separator-grip-prelight.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .pane-separator.vertical {
-    background: url("assets/pane-separator-grip-vertical.svg");
+    background: url("assets/scalable/pane-separator-grip-vertical.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .pane-separator.vertical:hover {
-    background: url("assets/pane-separator-grip-vertical-prelight.svg");
+    background: url("assets/scalable/pane-separator-grip-vertical-prelight.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -546,37 +546,37 @@ GtkSwitch.slider:insensitive {
  ***********/
 
 @keyframes spinner {
-    0% { background-image: url("assets/spinner-01.svg"); }
-    5% { background-image: url("assets/spinner-02.svg"); }
-    10% { background-image: url("assets/spinner-03.svg"); }
-    15% { background-image: url("assets/spinner-04.svg"); }
-    20% { background-image: url("assets/spinner-05.svg"); }
-    25% { background-image: url("assets/spinner-06.svg"); }
-    30% { background-image: url("assets/spinner-07.svg"); }
-    35% { background-image: url("assets/spinner-08.svg"); }
-    40% { background-image: url("assets/spinner-09.svg"); }
-    45% { background-image: url("assets/spinner-10.svg"); }
-    50% { background-image: url("assets/spinner-11.svg"); }
-    55% { background-image: url("assets/spinner-12.svg"); }
-    65% { background-image: url("assets/spinner-13.svg"); }
-    70% { background-image: url("assets/spinner-14.svg"); }
-    75% { background-image: url("assets/spinner-15.svg"); }
-    80% { background-image: url("assets/spinner-16.svg"); }
-    85% { background-image: url("assets/spinner-17.svg"); }
-    90% { background-image: url("assets/spinner-18.svg"); }
-    95% { background-image: url("assets/spinner-19.svg"); }
-    100% { background-image: url("assets/spinner-20.svg"); }
+    0% { background-image: url("assets/scalable/spinner-01.svg"); }
+    5% { background-image: url("assets/scalable/spinner-02.svg"); }
+    10% { background-image: url("assets/scalable/spinner-03.svg"); }
+    15% { background-image: url("assets/scalable/spinner-04.svg"); }
+    20% { background-image: url("assets/scalable/spinner-05.svg"); }
+    25% { background-image: url("assets/scalable/spinner-06.svg"); }
+    30% { background-image: url("assets/scalable/spinner-07.svg"); }
+    35% { background-image: url("assets/scalable/spinner-08.svg"); }
+    40% { background-image: url("assets/scalable/spinner-09.svg"); }
+    45% { background-image: url("assets/scalable/spinner-10.svg"); }
+    50% { background-image: url("assets/scalable/spinner-11.svg"); }
+    55% { background-image: url("assets/scalable/spinner-12.svg"); }
+    65% { background-image: url("assets/scalable/spinner-13.svg"); }
+    70% { background-image: url("assets/scalable/spinner-14.svg"); }
+    75% { background-image: url("assets/scalable/spinner-15.svg"); }
+    80% { background-image: url("assets/scalable/spinner-16.svg"); }
+    85% { background-image: url("assets/scalable/spinner-17.svg"); }
+    90% { background-image: url("assets/scalable/spinner-18.svg"); }
+    95% { background-image: url("assets/scalable/spinner-19.svg"); }
+    100% { background-image: url("assets/scalable/spinner-20.svg"); }
 }
 
 .spinner {
     background-color: transparent;
-    background-image: url("assets/spinner-01.svg");
+    background-image: url("assets/scalable/spinner-01.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .spinner:active {
-    background-image: url("assets/spinner-01.svg");
+    background-image: url("assets/scalable/spinner-01.svg");
     animation: spinner 600ms infinite linear;
 }
 

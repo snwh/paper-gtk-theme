@@ -15,7 +15,7 @@
    id="svg2857"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="switch-on-dark@2.svg">
+   sodipodi:docname="switch-on@2.svg">
   <defs
      id="defs2859">
     <linearGradient
@@ -94,8 +94,8 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="-317.77585"
-     inkscape:cy="-4.544942"
+     inkscape:cx="15.593066"
+     inkscape:cy="20.439946"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -140,8 +140,8 @@
      id="layer1"
      transform="translate(-444.64286,-761.36218)">
     <path
-       style="opacity:1;fill:#40565f;fill-opacity:1;stroke:none;stroke-width:8;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 553.64287,773.36218 -74.00002,0 c -4.986,0 -9,4.014 -9,9 0,4.986 4.014,9 9,9 l 74.00002,0 c 4.986,0 9,-4.014 9,-9 0,-4.986 -4.014,-9 -9,-9 z"
+       style="opacity:1;fill:#9fb0b9;fill-opacity:1;stroke:none;stroke-width:8;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 553.64289,773.36218 -88.00002,0 c -4.986,0 -9,4.014 -9,9 0,4.986 4.014,9 9,9 l 88.00002,0 c 4.986,0 9,-4.014 9,-9 0,-4.986 -4.014,-9 -9,-9 z"
        id="rect4157"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="sssssss" />
