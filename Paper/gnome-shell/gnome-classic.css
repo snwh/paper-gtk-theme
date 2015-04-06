@@ -1,3 +1,20 @@
+/* Copyright 2015 Sam Hewitt.
+*
+* This file is part of the Paper theme.
+*
+* Layout and code style adapted from the default GNOME Shell theme
+*   Copyright 2009 Red Hat, Inc.
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms and conditions of the GNU General Public License,
+* version 3, as published by the Free Software Foundation.
+*
+* This program is distributed in the hope it will be useful, but WITHOUT ANY
+* WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+* FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for
+* more details.
+*/
+
 @import url("gnome-shell.css");
 
 /* FIXME:
@@ -6,38 +23,36 @@
 */
 
 #panel {
-    background-color: #e9e9e9 !important;
-    background-gradient-direction: vertical;
-    background-gradient-end: #d0d0d0;
-    border-top-color: #666; /* we don't support non-uniform border-colors and
-                               use the top border color for any border, so we
-                               need to set it even if all we want is a bottom
-                               border */
+    /*background-color: #454d50 !important;*/
+    background-color: rgba(57, 64, 66, 0.95);
+    background-gradient-direction: none;
+    background-gradient-start: rgba(57, 64, 66, 0.95);
+    background-gradient-end: rgba(57, 64, 66, 0.95);
+    border-top-color: #666; 
     border-bottom: 1px solid #666;
     app-icon-bottom-clip: 0px;
+    border:none; }
 
 /* hrm, still no multipoint gradients
     background-image: linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0)) !important;*/
-}
+
 
   #panel:overview {
-    background-color: #000 !important;
-    background-gradient-end: #000 !important;
-    border-top-color: #000;
-    border-bottom: 1px solid #000 !important;
-}
+    background-color: rgba(57, 64, 66, 0.95);
+    background-gradient-direction: none;
+    background-gradient-start: rgba(57, 64, 66, 0.95);
+    background-gradient-end: rgba(57, 64, 66, 0.95);
+    border: none; }
 
   #panel.lock-screen {
     background-color: rgba(0,0,0,0.3) !important;
     background-gradient-end: rgba(0,0,0,0.3) !important;
-    border-top-color: transparent;
-}
+    border-top-color: transparent; }
 
   #panel.unlock-screen {
     background-color: transparent !important;
     background-gradient-end: transparent !important;
-    border-top-color: transparent;
-}
+    border-top-color: transparent; }
 
 
 /* TOP BAR */
@@ -84,7 +99,7 @@
   .panel-button:active,
   .panel-button:overview,
   .panel-button:focus {
-     background-color: #4a90d9 !important; /* FIXME */
+     background-color: #9fb0b9 !important; /* FIXME */
      color: #fff !important;
      border: none !important;
      border-image: none !important;
@@ -130,7 +145,7 @@
   }
 
   .popup-menu-item:active {
-    background-color: #4a90d9 !important;
+    background-color: #9fb0b9 !important;
     color: #fff !important;
   }
 
@@ -183,7 +198,7 @@
   }
   .popup-menu StScrollBar StButton#vhandle:active,
   .popup-menu StScrollBar StButton#hhandle:active {
-    background-color: #4a90d9;
+    background-color: #9fb0b9;
   }
 
 /* CALENDAR */
@@ -198,12 +213,12 @@
   }
   .calendar-day-base:active {
     color: #fff !important;
-    background-color: #4a90d9 !important;
+    background-color: #9fb0b9 !important;
     background-image: none !important;
     border-image: none !important;
   }
   .calendar-today {
-    background-color: #4a90d9 !important;
+    background-color: #9fb0b9 !important;
     background-image: none !important;
     border-image: none !important;
   }
@@ -233,7 +248,7 @@
 .system-menu-action:focus,
 .system-menu-action:active {
     color: white;
-    background-color: #4a90d9;
+    background-color: #9fb0b9;
     border: none;
 }
 
