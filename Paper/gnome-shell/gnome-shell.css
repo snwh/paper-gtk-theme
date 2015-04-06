@@ -85,7 +85,7 @@ StEntry {
     border-color: rgba(0,0,0,0); }
   StEntry:insensitive {
     color: rgba(219, 222, 224, 0.8);
-    border-color: #323636;
+    border-color: #394042;
     box-shadow: none; }
   StEntry StIcon.capslock-warning {
     icon-size: 16px;
@@ -119,8 +119,8 @@ StScrollBar {
 .slider {
   height: 1.09em;
   -slider-height: 3px;
-  -slider-background-color: #323636;
-  -slider-border-color: #323636;
+  -slider-background-color: #394042;
+  -slider-border-color: #394042;
   -slider-active-background-color: #9fb0b9;
   -slider-active-border-color: #9fb0b9;
   -slider-border-width: 0px;
@@ -400,21 +400,23 @@ StScrollBar {
     background-color: #394042;
     background-gradient-direction: none;
     border-width: 0px;
+    box-shadow: inset 1px 2px rgba(0,0,0,0.2);
+    padding: 6px 0;
     box-shadow: none;}
   .popup-menu .popup-menu-content {
     padding: 1em 0em; }
   .popup-menu .popup-menu-item {
     spacing: 12px; }
     .popup-menu .popup-menu-item:ltr {
-      padding: .4em 1.75em .4em 0em; }
+      padding: .5em 2em .5em 0em; }
     .popup-menu .popup-menu-item:rtl {
-      padding: .4em 0em .4em 1.75em; }
+      padding: .5em 0em .5em 2em; }
     .popup-menu .popup-menu-item:checked {
       background-color: #454d50;
       box-shadow: none;
       font-weight: bold; }
     .popup-menu .popup-menu-item:hover, .popup-menu .popup-menu-item:focus {
-      background-color: rgba(255,255,255,0.1);
+      background-color: rgba(0,0,0,0.1);
       color: #dbdee0; }
     .popup-menu .popup-menu-item:active {
       background-color: #515a5e;
@@ -478,7 +480,7 @@ StScrollBar {
   .osd-window .level {
     height: 0.6em;
     border-radius: 0.3em;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0,0,0,0.2);
     color: #dbdee0; }
 
 /* App Switcher */
@@ -1346,7 +1348,7 @@ StScrollBar {
   .notification StEntry:insensitive,
   .notification-banner StEntry:insensitive  {
     color: #777;
-    border-color: #323636;
+    border-color: #394042;
     box-shadow: none; }
   .notification StEntry StIcon.capslock-warning,
   .notification-banner StEntry StIcon.capslock-warning  {
