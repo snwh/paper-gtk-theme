@@ -169,23 +169,23 @@ GeditFileBrowserWidget .primary-toolbar.toolbar  {
 }
 
 GeditWindow .pane-separator {
-    background: url("../assets/pane-separator-grip.svg");
+    background: url("../assets/scalable/pane-separator-grip.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 GeditWindow .pane-separator:hover {
-    background: url("../assets/pane-separator-grip-prelight.svg");
+    background: url("../assets/scalable/pane-separator-grip-prelight.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 GeditWindow .pane-separator.vertical {
-    background: url("../assets/pane-separator-grip-vertical.svg");
+    background: url("../assets/scalable/pane-separator-grip-vertical.svg");
 }
 
 GeditWindow .pane-separator.vertical:hover {
-    background: url("../assets/pane-separator-grip-vertical-prelight.svg");
+    background: url("../assets/scalable/pane-separator-grip-vertical-prelight.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
