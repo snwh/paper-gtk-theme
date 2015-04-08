@@ -22,7 +22,7 @@
 
 .message-dialog {
     padding: 0px;
-    border-radius: 6px;
+    border-radius: 0px;
     border: none;
     outline: none;
     box-shadow: none;

@@ -30,7 +30,7 @@
 @define-color text @foreground;/* Text color */
 @define-color panel #454D50;/* Panel color */
 @define-color header #636E73;/* Header color */
-@define-color backdrop_header #454D50; /* Header backdrop color */
+@define-color backdrop_header #5A6367; /* Header backdrop color */
 @define-color header_text #fff;/* Header text color */
 @define-color header_text_dark alpha(#000, 0.5);/* Header text color */
 @define-color menu #636E73;/* Menu color */
