@@ -58,7 +58,7 @@ UnityDecoration {
 }
 
 UnityDecoration.top {
-    padding: 0 4px 0 4px;
+    padding: 0 5px 0 5px;
     border-radius: 7px 7px 0px 0px;
     box-shadow: none;
     border: 1px solid @unity;
