@@ -8,7 +8,7 @@
     border-style: none;
     border-radius: 5px;
 
-    background-color: alpha(@panel, 0.9);
+    background-color: alpha(@panel, 0.95);
     color: white;
 
     text-shadow: 1px 1px #000;
