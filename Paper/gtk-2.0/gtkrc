@@ -17,7 +17,7 @@
 
 # Paper GTK2 Theme
 
-gtk-color-scheme = "base_color:#FFFFFF\nfg_color:#555555\ntooltip_fg_color:#FFFFFF\nmenubar_color:#636E73\nselected_bg_color:#9FB0B9\nselected_fg_color:#FFFFFF\ntext_color:#555555\nwm_color:#636E73\nunfocused_wm_color:#454D50\nbg_color:#EFEFEF\ninsensitive_bg_color:#efefef\ntooltip_bg_color:#333333\npanel_bg_color:#576165\npanel_fg_color:#efefef\nlink_color:#9FB0B9"
+gtk-color-scheme = "base_color:#FFFFFF\nfg_color:#555555\ntooltip_fg_color:#FFFFFF\nmenubar_color:#636E73\nselected_bg_color:#9FB0B9\nselected_fg_color:#FFFFFF\ntext_color:#555555\nwm_color:#636E73\nunfocused_wm_color:#5A6367\nbg_color:#EFEFEF\ninsensitive_bg_color:#efefef\ntooltip_bg_color:#333333\npanel_bg_color:#576165\npanel_fg_color:#efefef\nlink_color:#9FB0B9"
 
 gtk-auto-mnemonics              = 1
 gtk-primary-button-warps-slider = 1
