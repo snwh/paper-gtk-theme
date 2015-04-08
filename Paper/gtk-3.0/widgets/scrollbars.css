@@ -68,7 +68,7 @@
 /* Troughs */
 .scrollbars-junction, /* the small square between scrollbars!!! */
 .scrollbar.trough {
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     background-image: none;
     background:@background;
     border-width: 0;
