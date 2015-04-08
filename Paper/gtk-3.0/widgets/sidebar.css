@@ -29,10 +29,6 @@
     color: @foreground;
 }
 
-.sidebar .separator {
-    color: transparent;
-}
-
 GtkDialog .sidebar,
 GtkDialog .sidebar .view,
 GtkDialog .sidebar GtkScrolledWindow {
@@ -110,7 +106,7 @@ GtkDialog .sidebar .view:hover:selected:backdrop {
     border-width: 0;
     -GtkPaned-handle-size: 1;
     background-image: none;
-    background-color: shade (@background, 0.75);
+    /*background-color: shade (@background, 0.75);*/
 }
 
 .sidebar .scrollbar.trough,

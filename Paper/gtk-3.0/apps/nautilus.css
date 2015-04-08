@@ -100,7 +100,7 @@ NautilusWindow .dynamic-notebook tab.right:active {
 }
 
 .nautilus-desktop.nautilus-canvas-item:active {
-    color: @theme_text_color;
+    color: @text;
 }
 
 .nautilus-desktop.nautilus-canvas-item:selected {
