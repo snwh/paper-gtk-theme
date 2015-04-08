@@ -313,7 +313,8 @@
 .notebook tab .button,
 .notebook tab .button:active,
 .notebook tab .button:hover {
-    color: @backdrop_text;
+    /*color: @backdrop_text;*/
+    color: inherit;
     border: none;
     background-image: none;
     background: none;
