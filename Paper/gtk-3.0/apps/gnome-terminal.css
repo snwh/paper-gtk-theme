@@ -16,9 +16,12 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color terminal #2D5364;
+@define-color terminal #dbdee0;
 @define-color terminal_background #002B36;
 @define-color terminal_text #839495;
+@define-color terminal_window_text #dbdee0;
+@define-color backdrop_terminal_window_text  shade(@terminal_window_text, 0.8);
+@define-color insensitive_terminal_window_text  shade(@terminal_window_text, 0.95);
 
 /**********
  * Header *
@@ -85,6 +88,110 @@ TerminalNotebook tab.right:active,
 TerminalWindow .notebook tab.right:active,
 TerminalWindow .dynamic-notebook tab.right:active {
     box-shadow:inset 3px 0 0 0 @terminal;
+}
+
+/* Normal */
+TerminalWindow .notebook tab.top {
+    box-shadow:inset 0 -1px 0 0 alpha(#000, 0.2);
+}
+TerminalWindow .notebook tab.bottom {
+    box-shadow:inset 0 1px 0 0 alpha(#000, 0.2);
+}
+TerminalWindow .notebook tab.left {
+    box-shadow:inset -1px 0 0 0 alpha(#000, 0.2);
+}
+TerminalWindow .notebook tab.right {
+    box-shadow:inset 1px 0 0 0 alpha(#000, 0.2);
+}
+
+/*----- Tabs -----*/
+
+TerminalWindow .notebook tab {
+    /*border: none;*/
+    border-radius: 0;
+    background: @header;
+    color: @terminal_window_text;
+}
+
+TerminalWindow .notebook tab:active {
+    border: none;
+    background: @header;
+    color: @terminal_window_text;
+}
+
+TerminalWindow .notebook tab:hover {
+    background-color: shade(@header, 1.05);
+    color: alpha(#fff, 0.3);
+    transition: all 300ms cubic-bezier(0.3, 0.5, 0.5, 0.9);
+}
+
+TerminalWindow .notebook tab:backdrop {
+    border: none;
+    background: @backdrop_header;
+    color: @backdrop_terminal_window_text;
+}
+
+TerminalWindow .notebook tab:insensitive {
+    border: none;
+    background: @insensitive_header;
+    color: @insensitive_terminal_window_text;
+}
+
+/* Labels */
+TerminalWindow .notebook GtkLabel,
+TerminalWindow .notebook:active GtkLabel,
+TerminalWindow .notebook:focus GtkLabel,
+TerminalWindow .notebook:hover GtkLabel {
+    color: @terminal_window_text;
+}
+
+TerminalWindow .notebook:backdrop GtkLabel,
+TerminalWindow .notebook:backdrop:hover GtkLabel,
+TerminalWindow .notebook:active:backdrop GtkLabel {
+    color: @backdrop_terminal_window_text;
+}
+
+TerminalWindow .notebook:insensitive GtkLabel {
+    color: @insensitive_terminal_window_text;
+}
+
+TerminalWindow .notebook:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_terminal_window_text, @insensitive_terminal_window_text, 0.5);
+}
+
+TerminalWindow .notebook tab GtkLabel {
+    background: none;
+    color: @backdrop_terminal_window_text;
+}
+
+TerminalWindow .notebook tab:active GtkLabel,
+TerminalWindow .notebook .active-page,
+TerminalWindow .notebook tab .active-page GtkLabel {
+    background: none;
+    color: @terminal_window_text;
+    font-weight: bold;
+    text-shadow: 0 1px alpha(#000,0.2);
+}
+
+TerminalWindow .notebook tab:backdrop GtkLabel,
+TerminalWindow .notebook tab GtkLabel:backdrop {
+    background: none;
+    color: @backdrop_terminal_window_text;
+}
+
+
+
+TerminalWindow .notebook tab .button GtkImage {
+    color: @terminal_window_text;
+}
+
+TerminalWindow .notebook tab .button:hover GtkImage,
+TerminalWindow .notebook tab .button:active GtkImage {
+    color: @selection_foreground;
+}
+
+TerminalWindow .notebook tab .button:backdrop GtkImage {
+    color: @backdrop_terminal_window_text;
 }
 
 /**********
