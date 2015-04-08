@@ -28,7 +28,6 @@
 .menu,
 .popup {
     padding: 4px 0;
-    border-radius: 4px;
     background-color: @base;
     color: @foreground;
 }
