@@ -33,6 +33,8 @@
 @define-color backdrop_header #454D50; /* Header backdrop color */
 @define-color header_text #fff;/* Header text color */
 @define-color header_text_dark alpha(#000, 0.5);/* Header text color */
+@define-color menu #636E73;/* Menu color */
+@define-color menu_text #dbdee0;/* Menu color */
 @define-color selection #9FB0B9;/* Selection color */
 @define-color view_background #ffffff;/* View background */
 @define-color inactive_frame @border;/* Inactive frame color */
