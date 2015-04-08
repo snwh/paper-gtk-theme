@@ -59,7 +59,7 @@ UnityDecoration {
 
 UnityDecoration.top {
     padding: 0 4px 0 4px;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 7px 7px 0px 0px;
     box-shadow: none;
     border: 1px solid @unity;
     border-bottom-width: 0;
@@ -145,8 +145,8 @@ UnityPanelWidget,
 
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem:hover {
-    border-radius: 0px;
-    background-color: shade(@unity, 0.8);
+    border-radius: 0;
+    background-color: shade(@unity, 1.05);
     color: @unity_panel_text;
     box-shadow: none;
 }
