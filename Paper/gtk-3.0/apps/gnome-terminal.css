@@ -170,7 +170,7 @@ TerminalWindow .notebook tab .active-page GtkLabel {
     background: none;
     color: @terminal_window_text;
     font-weight: bold;
-    text-shadow: 0 1px alpha(#000,0.2);
+    text-shadow: none;
 }
 
 TerminalWindow .notebook tab:backdrop GtkLabel,
