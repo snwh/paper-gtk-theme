@@ -53,6 +53,20 @@ NautilusWindow .header-bar .entry {
   box-shadow: none;
 }
 
+/***********
+ * Sidebar *
+ ***********/
+
+NautilusWindow .sidebar {
+    box-shadow: none;
+    border-width: 0px;
+}
+
+NautilusWindow .pane-separator {
+    border-color: @border;
+    border-right-width: 1px;
+}
+
 /************
  * Notebook *
  ************/

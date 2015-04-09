@@ -328,24 +328,28 @@ GtkSwitch.slider:insensitive {
     background: url("assets/scalable/pane-separator-grip.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 2px 22px;
 }
 
 .pane-separator:hover {
     background: url("assets/scalable/pane-separator-grip-prelight.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 2px 22px;
 }
 
 .pane-separator.vertical {
     background: url("assets/scalable/pane-separator-grip-vertical.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 2px 22px;
 }
 
 .pane-separator.vertical:hover {
     background: url("assets/scalable/pane-separator-grip-vertical-prelight.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 2px 22px;
 }
 
 /*********************

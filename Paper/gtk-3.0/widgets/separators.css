@@ -33,8 +33,7 @@ GtkSeparator,
     padding: 4px;
     background-color: @background;
     border: 1px solid @separator;
-    border-left-width: 0px;
-    border-right-width: 0px;
+    border-width: 0px;
     color: @base;
 }
 

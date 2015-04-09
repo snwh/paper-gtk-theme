@@ -32,12 +32,12 @@
 <constant name="C_titlebar_unfocused" value="#5A6367" />
 <constant name="C_border_focused" value="#636E73" />
 <constant name="C_border_unfocused" value="#5A6367" />
-<constant name="C_title_focused" value="#D3D4D5" />
-<constant name="C_title_unfocused" value="#929A9D" />
+<constant name="C_title_focused" value="#dbdee0" />
+<constant name="C_title_unfocused" value="#999FA1" />
 
 <constant name="C_wm_button_background" value="#dbdee0" />
 <constant name="C_wm_button_foreground" value="#AFB2B3" />
-<constant name="C_wm_button_unfocused" value="#909598" />
+<constant name="C_wm_button_unfocused" value="#999FA1" />
 
 <constant name="C_close_button" value="#f5685d" />
 <constant name="C_maximize_button" value="#a1ce6d" />
