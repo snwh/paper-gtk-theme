@@ -13,7 +13,7 @@
    height="200.00003"
    id="svg5474"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r"
    viewBox="0 0 200.00001 200.00003"
    sodipodi:docname="launcher_icon_glow_200.svg">
   <defs
@@ -27,19 +27,6 @@
          d="m 427.33333,22.026666 0,69.333333 69.33333,0 0,-69.333333 -69.33333,0 z m 13.11917,9.013333 43.095,0 c 2.27623,0 4.10583,1.829606 4.10583,4.105834 l 0,43.094999 c 0,2.276228 -1.8296,4.105834 -4.10583,4.105834 l -43.095,0 c -2.27623,0 -4.10583,-1.829606 -4.10583,-4.105834 l 0,-43.094999 c 0,-2.276228 1.8296,-4.105834 4.10583,-4.105834 z"
          style="color:#000000;fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     </clipPath>
-    <filter
-       style="color-interpolation-filters:sRGB"
-       inkscape:collect="always"
-       id="filter5061-6"
-       x="-0.132"
-       width="1.2640001"
-       y="-0.132"
-       height="1.2640001">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="2.86"
-         id="feGaussianBlur5063-7" />
-    </filter>
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath5464">
@@ -49,26 +36,17 @@
          d="m 427.33333,22.026666 0,69.333333 69.33333,0 0,-69.333333 -69.33333,0 z m 13.11917,9.013333 43.095,0 c 2.27623,0 4.10583,1.829606 4.10583,4.105834 l 0,43.094999 c 0,2.276228 -1.8296,4.105834 -4.10583,4.105834 l -43.095,0 c -2.27623,0 -4.10583,-1.829606 -4.10583,-4.105834 l 0,-43.094999 c 0,-2.276228 1.8296,-4.105834 4.10583,-4.105834 z"
          style="color:#000000;fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     </clipPath>
-    <filter
-       style="color-interpolation-filters:sRGB"
-       inkscape:collect="always"
-       id="filter5067-0">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="1.3"
-         id="feGaussianBlur5069-2" />
-    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#383838"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-1257.8571"
-     inkscape:cy="737.14287"
+     inkscape:zoom="1"
+     inkscape:cx="100.00004"
+     inkscape:cy="100.00006"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -76,11 +54,11 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="459"
-     inkscape:window-height="375"
-     inkscape:window-x="905"
+     inkscape:window-width="1301"
+     inkscape:window-height="744"
+     inkscape:window-x="65"
      inkscape:window-y="24"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata5479">
     <rdf:RDF>
@@ -89,7 +67,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -97,5 +75,14 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-977.14287,-1069.505)" />
+     transform="translate(-977.14287,-1069.505)">
+    <rect
+       style="opacity:0.1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4141"
+       width="172"
+       height="172"
+       x="991.14288"
+       y="1083.505"
+       ry="32" />
+  </g>
 </svg>
