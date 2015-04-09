@@ -57,7 +57,7 @@ CcShellItemView .button {
  * Iconview *
  ************/
  
-/*CcWindow GtkIconView.view.cell {
+CcWindow GtkIconView.view.cell {
     border: none;
 }
  
@@ -71,7 +71,7 @@ CcWindow GtkIconView.view.cell:selected,
 CcWindow GtkIconView.view.cell:selected:focus {
     border: 1px solid @settings;
     background-color: @settings;
-}*/
+}
 
 
 /************
