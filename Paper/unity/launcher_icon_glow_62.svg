@@ -13,7 +13,7 @@
    height="62"
    id="svg9311"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r"
    viewBox="0 0 62 62.000001"
    sodipodi:docname="launcher_icon_glow_62.svg">
   <defs
@@ -27,26 +27,17 @@
          id="path5114-1"
          inkscape:connector-curvature="0" />
     </clipPath>
-    <filter
-       style="color-interpolation-filters:sRGB"
-       inkscape:collect="always"
-       id="filter4296-4">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="1.56"
-         id="feGaussianBlur4298-5" />
-    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#3f3f3f"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-1812.5715"
-     inkscape:cy="-351.85714"
+     inkscape:zoom="1"
+     inkscape:cx="59.082644"
+     inkscape:cy="41.704107"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -54,11 +45,16 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="459"
-     inkscape:window-height="375"
-     inkscape:window-x="459"
-     inkscape:window-y="364"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="1301"
+     inkscape:window-height="744"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     borderlayer="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4137" />
+  </sodipodi:namedview>
   <metadata
      id="metadata9316">
     <rdf:RDF>
@@ -67,7 +63,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -75,5 +71,14 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-1531.8572,-118.50504)" />
+     transform="translate(-1531.8572,-118.50504)">
+    <rect
+       style="opacity:0.1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4139"
+       width="48"
+       height="48"
+       x="1538.8572"
+       y="125.50504"
+       ry="8" />
+  </g>
 </svg>
