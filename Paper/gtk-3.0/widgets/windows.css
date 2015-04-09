@@ -20,16 +20,16 @@
  * Window *
  **********/
 
-@define-color window_shadow alpha(#000, 0.6);
-@define-color backdrop_window_shadow alpha(#000, 0.4);
+@define-color window_shadow alpha(#000, 0.4);
+@define-color backdrop_window_shadow alpha(#000, 0.2);
 
 .window-frame {
-	border-radius: 0px;
-    box-shadow: 0 2px 6px 3px @window_shadow;
+	border:none;
+    box-shadow: 0 2px 5px 1px @window_shadow;
     margin: 10px; /* this is used for the resize cursor area */
 }
 
 .window-frame:backdrop {
 	border-radius: 0px;
-    box-shadow: 0 2px 5px 1px @backdrop_window_shadow;
+    box-shadow: 0 2px 3px 0 @backdrop_window_shadow;
 }
