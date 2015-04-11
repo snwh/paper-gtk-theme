@@ -353,6 +353,7 @@
     border: none;
     border-radius: 0px;
     background-color:@toolbar;
+    box-shadow: none;
     color: @toolbar_text;
 }
 
@@ -369,7 +370,7 @@
 
 .primary-toolbar.toolbar .entry:insensitive {
     border: none;
-    background-color:@insensitive_base;
+    background-color:@toolbar;
     color: @insensitive_toolbar_text;
     border: solid @insensitive_toolbar_text;
     border-bottom-width: 1px;
@@ -377,7 +378,7 @@
 
 .primary-toolbar.toolbar .entry:backdrop {
     border: none;
-    background-color:@backdrop_base;
+    background-color:@toolbar;
     color: @backdrop_toolbar_text;
     border: solid @backdrop_toolbar_text;
     border-bottom-width: 1px;

@@ -24,7 +24,7 @@
 .header-bar {
     padding:0;
     border: none;
-    border-radius: 0;
+    border-radius: 2px 2px 0 0;
     background-color: @header;
     color: @header_text;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1),
@@ -53,7 +53,7 @@
 .header-bar .title {
     padding-left: 13px;
     padding-right: 13px;
-    font: Bold 11;
+    font: Bold 10;
     color: @header_text;
 }
 
@@ -103,7 +103,6 @@
     background-color: transparent;
     background-image: none;
     box-shadow: none;
-    transition: all 300ms cubic-bezier(0.3, 0.5, 0.5, 0.9);
 }
 
 /* Normal Button */
@@ -141,7 +140,7 @@
 }
 
 .header-bar .text-button:active {
-    font: Bold 11;
+    font: Bold 10;
 }
 
 /* Checked Button */
@@ -161,7 +160,7 @@
 }
 
 .header-bar .text-button:checked {
-    font: Bold 11;
+    font: Bold 10;
 }
 
 /* Focus Button */
@@ -254,7 +253,7 @@
 }
 
 .header-bar .text-button:active:backdrop {
-    font: Bold 11;
+    font: Bold 10;
 }
 
 /* Backdrop:Hover Button */
