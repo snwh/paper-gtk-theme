@@ -61,12 +61,13 @@ UnityDecoration {
 
 UnityDecoration.top {
     padding: 0 5px 0 5px;
-    border-radius: 7px 7px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
     box-shadow: none;
     border: 1px solid @unity;
     border-bottom-width: 0;
     background-color: @unity;
     color: @unity_text;
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 UnityDecoration.top.menuitem {

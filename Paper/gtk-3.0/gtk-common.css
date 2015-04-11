@@ -35,7 +35,7 @@
 @define-color backdrop_background shade(@background, 0.99);
 @define-color backdrop_foreground shade(@foreground, 1.2);
 @define-color backdrop_border shade(@border, 1.02);
-@define-color backdrop_separator shade(@separator, 0.99);
+@define-color backdrop_separator alpha(@separator, 0.9);
 @define-color backdrop_text shade(@text, 1.2);
 @define-color backdrop_selection shade(@selection, 1.3);
 

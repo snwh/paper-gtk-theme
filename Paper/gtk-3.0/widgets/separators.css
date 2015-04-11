@@ -28,6 +28,13 @@ GtkSeparator,
     color: @separator;
 }
 
+GtkSeparator:backdrop,
+.separator:backdrop,
+.pane-separator:backdrop,
+.button .separator:backdrop {
+    color: @backdrop_separator;
+}
+
 .pane-separator {
     -GtkPaned-handle-size: 2px;
     padding: 4px;
