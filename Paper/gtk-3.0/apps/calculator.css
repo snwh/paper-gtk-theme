@@ -39,7 +39,7 @@ MathButtons .button,
 MathButtons .button GtkImage,
 MathButtons .button.text-button,
 MathButtons .button.image-button {
-    background-color: none;
+    background-color: transparent;
     background-image: none;
     border: none;
     color: @calculator;
@@ -49,7 +49,7 @@ MathButtons .button.image-button {
 
 MathButtons GtkComboBox,
 MathButtons GtkComboBox * {
-    background-color: none;
+    background-color: transparent;
     background-image: none;
     border: none;
     color: @calculator;
@@ -61,7 +61,7 @@ MathButtons GtkComboBox *:focus,
 MathButtons .button.text-button:focus,
 MathButtons .button.image-button:focus,
 MathButtons .button:focus {
-    background-color: none;
+    background-color: transparent;
     background-image: none;
     color: @calculator;
     border: none;
@@ -72,7 +72,7 @@ MathButtons GtkComboBox *:hover,
 MathButtons .button.text-button:hover,
 MathButtons .button.image-button:hover,
 MathButtons .button:hover {
-    background-color: none;
+    background-color: transparent;
     background-image: none;
     color: @calculator;
     border: none;
@@ -88,7 +88,7 @@ MathButtons GtkComboBox *:active:hover,
 MathButtons .button.text-button:active:hover,
 MathButtons .button.image-button:active:hover,
 MathButtons .button:active:hover {
-    background-color: none;
+    background-color: transparent;
     background-image: none;
     color: @calculator;
     border: none;
@@ -99,7 +99,7 @@ MathButtons GtkComboBox *:backdrop,
 MathButtons .button.text-button:backdrop,
 MathButtons .button.image-button:backdrop,
 MathButtons .button:backdrop {
-    background-color: none;
+    background-color: transparent;
     background-image: none;
     color: shade(@calculator, 0.9);
     border: none;
