@@ -29,7 +29,7 @@ GtkProgressBar {
 
 GtkProgressBar.progressbar,
 GtkProgressBar.progressbar:active {
-    border: 1px solid alpha(#000, 0.15);
+    border: 1px solid shade(@progressbar_background, 0.7);
     border-radius: 4px;
     color: @text;
     background-color: @progressbar_background;
@@ -37,28 +37,28 @@ GtkProgressBar.progressbar:active {
 
 GtkProgressBar.progressbar:backdrop,
 GtkProgressBar.progressbar:active:backdrop {
-    border: 1px solid alpha(#000, 0.15);
+    border: 1px solid shade(@progressbar_background, 0.7);
     border-radius: 4px;
     color: @backdrop_text;
     background-color: @backdrop_progressbar_background;
 }
 
 GtkProgressBar.trough {
-    border: 1px solid alpha(#000, 0.15);
+    border: 1px solid @border;
     border-radius: 4px;
     color: @text;
     background-color: @trough_background;
 }
 
 GtkProgressBar.trough:backdrop {
-    border: 1px solid alpha(#000, 0.15);
+    border: 1px solid @backdrop_border;
     border-radius: 4px;
     color: @backdrop_text;
     background-color: @backdrop_trough_background;
 }
 
 GtkProgressBar.trough:insensitive {
-    border: 1px solid alpha(#000, 0.15);
+    border: 1px solid @insensitive_border;
     border-radius: 4px;
     color: @insensitive_text;
     background-color: @insensitive_trough_background;
@@ -98,7 +98,7 @@ GtkProgressBar.trough:insensitive {
 .progressbar.vertical row:hover,
 .progressbar.vertical row:selected,
 .progressbar.vertical row:selected:focus {
-    border: 1px solid alpha(#000, 0.15);
+    border: 1px solid shade(@progressbar_background, 0.7);
     border-radius: 0px;
     color: alpha(#000,0.5);
     background-color: @selection;
@@ -112,7 +112,7 @@ GtkProgressBar.trough:insensitive {
 .progressbar.vertical row:hover:insensitive,
 .progressbar.vertical row:selected:insensitive,
 .progressbar.vertical row:selected:focus:insensitive {
-    border: 1px solid alpha(#000, 0.15);
+    border: 1px solid shade(@progressbar_background, 0.7);
     border-radius: 0px;
     color: alpha(#000,0.5);
     background-color: @selection;
@@ -126,7 +126,7 @@ GtkProgressBar.trough:insensitive {
 .progressbar.vertical row:hover:backdrop,
 .progressbar.vertical row:selected:backdrop,
 .progressbar.vertical row:selected:focus:backdrop {
-    border: 1px solid alpha(#000, 0.15);
+    border: 1px solid shade(@progressbar_background, 0.7);
     border-radius: 0px;
     color: alpha(#000,0.5);
     background-color: @backdrop_progressbar_background;

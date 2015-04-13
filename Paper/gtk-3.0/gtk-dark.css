@@ -22,18 +22,21 @@
  **********/
 
 /* Base colors */
-@define-color base #384952;/* Base color */
-@define-color background #263238;/* Background color */
+@define-color base #7b888e;/* Base color */
+@define-color background #6f7b81;/* Background color */
 @define-color foreground #A8B5BA;/* Foreground color */
-@define-color border #1E272B;/* Borders color */
-@define-color separator @border;/* Separator color */
-@define-color text #A8B5BA;/* Text color */
-@define-color panel #1e282c;/* Panel color */
-@define-color header #263238;/* Header color */
-@define-color backdrop_header #253136;/* Header color */
-@define-color header_text alpha(#fff, 0.8);/* Header text color */
-@define-color selection #4C636E;/* Selection color */
-@define-color view_background #555;/* View background */
+@define-color border alpha(#000, 0.3);/* Borders color */
+@define-color separator alpha(#000, 0.2);/* Separator color */
+@define-color text @foreground;/* Text color */
+@define-color panel #454D50;/* Panel color */
+@define-color header #636E73;/* Header color */
+@define-color backdrop_header #5A6367; /* Header backdrop color */
+@define-color header_text alpha(#fff, 0.7);/* Header text color */
+@define-color header_text_dark alpha(#000, 0.3);/* Header text color */
+@define-color menu #636E73;/* Menu color */
+@define-color menu_text #A8B5BA;/* Menu color */
+@define-color selection #90a4ae;/* Selection color */
+@define-color view_background @base;/* View background */
 @define-color inactive_frame @border;/* Inactive frame color */
 @define-color panel_text #A8B5BA;/* Panel text color */
 @define-color panel_text_shadow alpha(#000, 0.2);/* Panel text color */

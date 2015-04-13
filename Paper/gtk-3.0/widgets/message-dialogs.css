@@ -103,21 +103,21 @@
     border-radius: 0;
     border: none;
     background-image: none;
-    background-color: none;
+    background-color: transparent;
     color: @text;
 }
 
 .message-dialog.csd .dialog-action-area .button:hover {
     border: none;
     background-image: none;
-    background-color: none;
+    background-color: transparent;
     color: @selection;
 }
 
 .message-dialog.csd .dialog-action-area .button:active {
     border: none;
     background-image: none;
-    background-color: none;
+    background-color: transparent;
     color: @text;
 }
 
