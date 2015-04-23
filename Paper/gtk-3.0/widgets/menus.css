@@ -21,14 +21,20 @@
  ********/
  
 .menu {
-    border-image: none;
-    box-shadow: 0 2px 3px 2px @menu_shadow;
+    box-shadow: 0 2px 3px 2px @menu_shadow,
+                inset 0 1px 0 0 rgba(255,255,255,0.1),
+                inset 0 -3px 3px -4px alpha(#000, 0.4);
 }
 
+.content-view .menu,
+.context-menu,
 .menu,
 .popup {
     padding: 4px 0;
-    background-color: @base;
+    border-radius: 2px;
+    border-image: none;
+    background-color: @background;
+    color: @text;
 }
 
 /*Context Menu*/
@@ -47,16 +53,14 @@
 .content-view .menu .menuitem:active,
 .content-view .menu .menuitem:hover {
     background-color: @selection;
+    color: @text;
 }
 
 /* Menu Item */
 .menuitem,
 .menu .menuitem,
 .popup .menuitem {
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding: 6px 4px;
     border:none;
 
     -GtkMenuItem-arrow-scaling: 0.5;
@@ -68,18 +72,19 @@
 .menu .menuitem:active,
 .popup .menuitem:active {
     background-color: @selection;
-
+    color: @selection_foreground;
     -gtk-icon-style: symbolic;
 }
 
 /* Hover*/
 .menuitem:hover,
 .menu .menuitem:hover,
-.popup .menuitem:hover{
+.popup .menuitem:hover {
     background-color: @selection;
-
+    color: @selection_foreground;
     -gtk-icon-style: symbolic;
 }
+
 
 .menuitem:backdrop,
 .menu .menuitem:backdrop {
@@ -90,11 +95,14 @@
 .menuitem:insensitive,
 .menu .menuitem:insensitive {
     box-shadow: none;
+    color: @insensitive_text;
     border: none;
 }
 
 /* Arrows */
 .menu .menuitem.arrow {
+    color: @text;
+    -GtkComboBox-arrow-scaling: 0.5;
 }
 
 .menu .menuitem.arrow {
@@ -109,6 +117,7 @@
     padding-left: 2px;
     padding-right: 2px;
     border: none;
+    color: @border;
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
 }
@@ -140,12 +149,24 @@
 .menuitem GtkLabel {
     padding-left: 2px;
     padding-right: 2px;
+    color: @text;
 }
 
 .menu .menuitem GtkLabel,
 .popup .menuitem GtkLabel {
     padding-left: 6px;
+}
+
+/* Menu Image */
+.menuitem GtkImage {
+    padding-left: 2px;
     padding-right: 2px;
+    color: @text;
+}
+
+.menu .menuitem GtkImage,
+.popup .menuitem GtkImage {
+    padding-left: 6px;
 }
 
 /* Something is utterly broken where I've had to do this ugly bit of styling. */

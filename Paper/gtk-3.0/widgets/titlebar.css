@@ -27,8 +27,7 @@
     background-color: @header;
     color: @header_text;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1),
-                inset 0 -1px 0 0 rgba(0,0,0,0.1),
-                inset 0 -3px 3px -4px alpha(#000, 0.4);
+                inset 0 -1px 0 0 rgba(0,0,0,0.1);
 }
 
 .maximized .titlebar {
@@ -96,7 +95,7 @@
     background-color: transparent;
     background-image: none;
     border: none;
-    padding: 12px 15px;
+    padding: 12px 15px 10px 15px;
 }
 
 /* Normal Button */
@@ -191,6 +190,15 @@
     color: @header_text;
 }
 
+.titlebar .linked:focus,
+.titlebar .image-button:focus
+.titlebar .linked:active,
+.titlebar .image-button:active
+.titlebar .linked:checked,
+.titlebar .image-button:checked  {    
+    box-shadow: 0 2px 0 0 @header_text;
+}
+
 /* Backdrop Button */
 .titlebar .button:backdrop,
 .titlebar .text-button:backdrop,
@@ -244,6 +252,18 @@
     outline: none;
     color: @backdrop_header_text;
     box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
+}
+
+
+.titlebar .titlebutton:focus:backdrop,
+.titlebar .image-button:focus:backdrop
+.titlebar .linked:focus:backdrop,
+.titlebar .image-button:focus:backdrop
+.titlebar .linked:active:backdrop,
+.titlebar .image-button:active:backdrop
+.titlebar .linked:checked:backdrop,
+.titlebar .image-button:checked:backdrop  {    
+    box-shadow: 0 2px 0 0 @backdrop_header_text;
 }
 
 .titlebar .text-button:active:backdrop {
