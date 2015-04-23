@@ -165,17 +165,17 @@ GtkPopover .button:backdrop GtkImage,
 GtkPopover .button:backdrop:hover GtkImage,
 GtkPopover .button:active:backdrop GtkImage {
     color: @backdrop_text;
-    -gtk-image-effect: dim;
+    /*-gtk-image-effect: dim;*/
 }
 
 GtkPopover .button:insensitive GtkImage {
     color: @insensitive_text;
-    -gtk-image-effect: dim;
+    /*-gtk-image-effect: dim;*/
 }
 
 GtkPopover .button:insensitive:backdrop GtkImage {
     color: mix(@backdrop_text, @insensitive_text, 0.5);
-    -gtk-image-effect: dim;
+    /*-gtk-image-effect: dim;*/
 }
 
 /* Labels */

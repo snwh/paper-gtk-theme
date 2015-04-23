@@ -30,7 +30,7 @@
 *:backdrop:hover GtkImage,
 *:active:backdrop GtkImage {
     color: @backdrop_text;
-    -gtk-image-effect: dim;
+    /*-gtk-image-effect: dim;*/
 }
 
 *:insensitive GtkImage {

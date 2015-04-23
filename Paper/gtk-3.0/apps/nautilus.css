@@ -27,11 +27,13 @@
 
 NautilusWindow .titlebar,
 NautilusWindow .header-bar {
+    border: none;
     background-color: @nautilus;
 }
 
 NautilusWindow .titlebar:backdrop,
 NautilusWindow .header-bar:backdrop {
+    border: none;
     background-color: shade(@nautilus,0.9);
 }
 
@@ -72,6 +74,10 @@ NautilusWindow .pane-separator {
  ************/
 
 /* Active */
+NautilusWindow .notebook .frame {
+    border: none;
+}
+
 NautilusWindow .notebook tab.top:active,
 NautilusWindow .dynamic-notebook tab.top:active {
     box-shadow:inset 0 -3px 0 0 @nautilus;

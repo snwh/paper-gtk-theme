@@ -14,7 +14,7 @@
    height="21"
    id="svg2857"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.91 r"
    sodipodi:docname="switch-slider-insensitive.svg">
   <defs
      id="defs2859">
@@ -94,15 +94,15 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="-144.374"
-     inkscape:cy="3.504314"
+     inkscape:cx="-37.40421"
+     inkscape:cy="11.749423"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1366"
-     inkscape:window-height="699"
+     inkscape:window-height="709"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="32"
      inkscape:window-maximized="1"
      borderlayer="true"
      inkscape:showpageshadow="false"
@@ -139,45 +139,14 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-444.64286,-782.36218)">
-    <g
-       transform="translate(-13.999993,1.6456299e-5)"
-       id="g4155">
-      <rect
-         transform="scale(-1,1)"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.05;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-opacity:1;marker:none;enable-background:new"
-         id="rect4158"
-         width="17"
-         height="16.999981"
-         x="-477.64285"
-         y="785.36218"
-         ry="8.3779802" />
-      <rect
-         transform="scale(-1,1)"
-         ry="8.3779802"
-         y="785.36218"
-         x="-477.64285"
-         height="16.999981"
-         width="17"
-         id="rect4218"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.05;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-opacity:1;marker:none;enable-background:new" />
-      <rect
-         transform="scale(-1,1)"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.2;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-opacity:1;marker:none;enable-background:new"
-         id="rect4216"
-         width="17"
-         height="16.999981"
-         x="-477.64285"
-         y="785.36218"
-         ry="8.3779802" />
-      <rect
-         transform="scale(-1,1)"
-         ry="8.3779802"
-         y="784.36218"
-         x="-477.64285"
-         height="16.999981"
-         width="17"
-         id="rect3872"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#f7f7f7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-opacity:1;marker:none;enable-background:new" />
-    </g>
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#f7f7f7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-opacity:1;marker:none;enable-background:new"
+       id="rect3872"
+       width="17"
+       height="16.999981"
+       x="-463.64285"
+       y="784.36218"
+       ry="8.3779802"
+       transform="scale(-1,1)" />
   </g>
 </svg>
