@@ -76,17 +76,17 @@
 .menubar .menuitem:backdrop:hover GtkImage,
 .menubar .menuitem:active:backdrop GtkImage {
     color: @backdrop_header_text;
-    -gtk-image-effect: dim;
+    /*-gtk-image-effect: dim;*/
 }
 
 .menubar .menuitem:insensitive GtkImage {
     color: @insensitive_header_text;
-    -gtk-image-effect: dim;
+    /*-gtk-image-effect: dim;*/
 }
 
 .menubar .menuitem:insensitive:backdrop GtkImage {
     color: mix(@backdrop_header_text, @insensitive_header_text, 0.5);
-    -gtk-image-effect: dim;
+    /*-gtk-image-effect: dim;*/
 }
 
 /* Labels */
@@ -134,17 +134,17 @@
 .menubar .menu .menuitem:backdrop:hover GtkImage,
 .menubar .menu .menuitem:active:backdrop GtkImage {
     color: @backdrop_text;
-    -gtk-image-effect: dim;
+    /*-gtk-image-effect: dim;*/
 }
 
 .menubar .menu .menuitem:insensitive GtkImage {
     color: @insensitive_text;
-    -gtk-image-effect: dim;
+    /*-gtk-image-effect: dim;*/
 }
 
 .menubar .menu .menuitem:insensitive:backdrop GtkImage {
     color: mix(@backdrop_text, @insensitive_text, 0.5);
-    -gtk-image-effect: dim;
+    /*-gtk-image-effect: dim;*/
 }
 
 /* Labels */

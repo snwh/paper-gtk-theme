@@ -309,7 +309,7 @@ GtkSwitch.slider {
 }
 
 GtkSwitch.slider:focus {
-    background: -gtk-scaled(url("assets/scalable/switch-slider-focus.svg"),url("assets/scalable/switch-slider-focus@2.svg"));
+    background: -gtk-scaled(url("assets/scalable/switch-slider.svg"),url("assets/scalable/switch-slider@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 }

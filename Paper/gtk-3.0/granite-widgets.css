@@ -96,7 +96,7 @@ GraniteWidgetsWelcome .h3 {
 
 .panel {
     background: @panel;
-    color: #fff;
+    color: @panel_text;
     font-weight: bold;
 }
 

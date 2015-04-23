@@ -25,19 +25,19 @@
 
 .window-frame {
 	border:none;
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: 0 2px 5px 1px @window_shadow;
     margin: 10px; /* this is used for the resize cursor area */
 }
 
 .window-frame:backdrop {
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: 0 2px 3px 0 @backdrop_window_shadow;
 }
 
 .window-frame.menu.csd,
 .window-frame.popup.csd {
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: 0 3px 6px alpha (#000, 0.16),
                 0 3px 6px alpha (#000, 0.23);
     margin: 0;
@@ -50,7 +50,7 @@
 }
 
 .window-frame.tooltip.csd {
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: none;
     margin: 0;
 }
@@ -64,7 +64,7 @@ GtkDialog.window-frame,
 GtkDialog.window-frame:backdrop,
 .window-frame.dialog,
 .window-frame.dialog:backdrop {
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: 0 10px 20px alpha (#000, 0.19),
                 0 6px 6px alpha (#000, 0.23);
 }

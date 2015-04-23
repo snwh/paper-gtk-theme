@@ -52,14 +52,14 @@ BirdieWidgetsTweetList * {
 
 .gala-notification {
     border-width: 0;
-    border-radius: 9px;
+    border-radius: 2px;
     color: white;
-    border: 1px solid @panel;
-    background-color: alpha(@panel, 0.9);
+    border: 1px solid #fff;
+    background-color: #fff;
 }
 
 .gala-notification .title, .gala-notification .label {
-    color: white;
+    color: @text;
 }
 
 .gala-button {
@@ -195,7 +195,7 @@ NoiseWidgetsTileView {
 }
 
 .app:focus {
-    background-color: alpha(#000, 0.20);
+    /*background-color: alpha(#000, 0.20);*/
 }
  
 .search-item {

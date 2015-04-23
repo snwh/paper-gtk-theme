@@ -14,7 +14,7 @@
    height="21"
    id="svg2857"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.91 r"
    sodipodi:docname="switch-slider-insensitive-dark.svg">
   <defs
      id="defs2859">
@@ -94,15 +94,15 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="-164.08937"
-     inkscape:cy="1.3118863"
+     inkscape:cx="-0.50842229"
+     inkscape:cy="12.271024"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1366"
-     inkscape:window-height="699"
+     inkscape:window-height="709"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="32"
      inkscape:window-maximized="1"
      borderlayer="true"
      inkscape:showpageshadow="false"
@@ -130,7 +130,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -140,7 +140,7 @@
      id="layer1"
      transform="translate(-444.64286,-782.36218)">
     <rect
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#1e272b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-opacity:1;marker:none;enable-background:new"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#7d8a90;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-opacity:1;marker:none;enable-background:new"
        id="rect3872"
        width="17"
        height="16.999981"
