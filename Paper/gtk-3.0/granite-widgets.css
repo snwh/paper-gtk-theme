@@ -95,7 +95,7 @@ GraniteWidgetsWelcome .h3 {
  ********/
 
 .panel {
-    background: @panel;
+    background-color: @panel;
     color: @panel_text;
     font-weight: bold;
 }
@@ -117,6 +117,10 @@ GraniteWidgetsWelcome .h3 {
     font-weight: normal;
 }
 
+.panel .menuitem {
+    padding: 2px 4px;
+}
+
 .panel .window-frame.menu.csd,
 .panel .window-frame.popup.csd {
     box-shadow: none;
@@ -126,5 +130,7 @@ GraniteWidgetsWelcome .h3 {
 .panel .menu .window-frame.popup.csd {
     box-shadow: 0 0 0 1px alpha (#000, 0.20),
                 0 10px 20px alpha (#000, 0.19),
-                0 6px 6px alpha (#000, 0.23);
+                0 6px 6px alpha (#000, 0.23),
+                inset 0 1px 0 0 rgba(255,255,255,0.1),
+                inset 0 -3px 3px -4px alpha(#000, 0.4);
 }

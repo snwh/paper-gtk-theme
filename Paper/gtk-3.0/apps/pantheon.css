@@ -102,14 +102,30 @@ BirdieWidgetsTweetList * {
 /********
 * Files *
 ********/
-.pathbar:focus {
+.pathbar .entry:focus,
+.marlin-pathbar .pathbar .entry:focus {
     padding: 0px;
-    box-shadow: inset 0 -2px 0 0 @header_text;
+    border-radius: 2px;
+    background-color: @base;
+    color: @text;
+    border: 1px solid @selection;
+    box-shadow:inset 0 1px 1px 0 alpha(#000, 0.1);
 }
 
-.pathbar:active {
+.pathbar .entry:active,
+.marlin-pathbar .pathbar .entry:active {
     padding: 0px;
-    box-shadow: inset 0 -2px 0 0 @header_text;
+    border-radius: 2px;
+    background-color: @base;
+    color: @text;
+    border: 1px solid @selection;
+    box-shadow:inset 0 1px 1px 0 alpha(#000, 0.1);
+}
+
+.marlin-pathbar,
+.marlin-pathbar .pathbar .entry .button.raised {
+    background-color: red;
+    color: red;
 }
 
 /********
