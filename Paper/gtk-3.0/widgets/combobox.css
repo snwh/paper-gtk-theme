@@ -39,6 +39,7 @@ GtkComboBox .separator {
     background: none;
     border: none;
     color: inherit;
+    -GtkComboBox-arrow-scaling: 1;
 }
 
 /******************

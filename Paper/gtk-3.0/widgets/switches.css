@@ -16,10 +16,6 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/* Trough colors */
-@define-color trough_border shade(@background, 0.7);
-@define-color backdrop_trough_border shade(@trough_border, 1.1);
-
 /* Slider colors */
 @define-color slider_border @trough_border;
 @define-color backdrop_slider_border @backdrop_trough_border;
@@ -27,9 +23,9 @@
 
 /*************
  * GtkSwitch *
- *************
-GtkSwitch {
-    border-radius: 1em;
+ *************/
+
+/*GtkSwitch {
     font: condensed;
 }
 
@@ -78,9 +74,6 @@ GtkSwitch.slider:backdrop {
     background-color: @backdrop_slider_border;
 }*/
 
-/*************
- * GtkSwitch *
- *************/
 
 GtkSwitch {
     font: 1;

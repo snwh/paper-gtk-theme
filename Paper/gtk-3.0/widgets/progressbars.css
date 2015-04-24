@@ -18,9 +18,20 @@
 */
 
 @define-color progressbar_background @progress_color;
-@define-color progressbar_border shade(@progressbar_background, 0.7);
 @define-color backdrop_progressbar_background shade(@progressbar_background, 1.2);
 @define-color insensitive_progressbar_background shade(@insensitive_background, 0.85);
+
+@define-color progressbar_border shade(@progressbar_background, 0.7);
+@define-color backdrop_progressbar_border shade(@progressbar_border, 1.3);
+@define-color insensitive_progressbar_border shade(@insensitive_border, 0.85);
+
+@define-color progressbar_trough_background @base;
+@define-color backdrop_progressbar_trough_background shade(@progressbar_trough_background, 1.2);
+@define-color insensitive_progressbar_trough_background shade(@insensitive_background, 0.85);
+
+@define-color progressbar_trough_border shade(@progressbar_trough_background, 0.8);
+@define-color backdrop_progressbar_trough_border shade(@progressbar_trough_border, 1.05);
+@define-color insensitive_progressbar_trough_border shade(@insensitive_border, 0.85);
 
 
 /****************
@@ -48,45 +59,46 @@ GtkProgressBar.progressbar:active {
 
 GtkProgressBar.progressbar:backdrop,
 GtkProgressBar.progressbar:active:backdrop {
-    border-color: @progressbar_border;
+    border-color: @backdrop_progressbar_border;
     color: @backdrop_text;
     background-color: @backdrop_progressbar_background;
+    box-shadow: none;
 }
 
 GtkProgressBar.trough {
-    border-color: @trough_border;
-    background-color: @trough_background;
+    border-color: @progressbar_trough_border;
+    background-color: @progressbar_trough_background;
 }
 
 GtkProgressBar.trough:backdrop {
-    border-color: @backdrop_trough_border;
-    background-color: @backdrop_trough_background;
+    border-color: @backdrop_progressbar_trough_border;
+    background-color: @backdrop_progressbar_trough_background;
 }
 
 GtkProgressBar.trough:insensitive {
-    border-color: @insensitive_trough_border;
-    background-color: @insensitive_trough_background;
+    border-color: @insensitive_progressbar_trough_border;
+    background-color: @insensitive_progressbar_trough_background;
 }
 
 .trough,
 .trough.vertical {
     padding: 0;
-    border: 1px solid @trough_border;
-    background-color: @trough_background;
+    border: 1px solid @progressbar_trough_border;
+    background-color: @progressbar_trough_background;
 }
 
 .trough:insensitive,
 .trough.vertical:insensitive {
     background-image:none;
-    background-color:@insensitive_trough_background;
+    background-color:@insensitive_progressbar_trough_background;
     border: 1px solid @insensitive_rough_border;
 }
 
 .trough:backdrop,
 .trough.vertical:backdrop {
     padding: 0;
-    border: 1px solid @backdrop_trough_border;
-    background-color: @backdrop_trough_background;
+    border: 1px solid @backdrop_progressbar_trough_border;
+    background-color: @backdrop_progressbar_trough_background;
 }
 
 
@@ -137,6 +149,7 @@ GtkProgressBar.trough:insensitive {
     padding: 0;
     color: alpha(#000,0.5);
     background-color: @backdrop_progressbar_background;
+    box-shadow: none;
 }
 
 .trough row,
@@ -151,7 +164,7 @@ GtkProgressBar.trough:insensitive {
     border-radius: 4px;
     padding: 0;
     color: alpha(#000,0.5);
-    background-color: @trough_background;
+    background-color: @progressbar_trough_background;
 }
 
 
@@ -167,7 +180,7 @@ GtkProgressBar.trough:insensitive {
     border-radius: 4px;
     padding: 0;
     color: alpha(#000,0.5);
-    background-color: @insensitive_trough_background;
+    background-color: @insensitive_progressbar_trough_background;
 }
 
 .trough row:backdrop,
@@ -182,5 +195,5 @@ GtkProgressBar.trough:insensitive {
     border-radius: 4px;
     padding: 0;
     color: alpha(#000,0.5);
-    background-color: @backdrop_trough_background;
+    background-color: @backdrop_progressbar_trough_background;
 }

@@ -34,15 +34,15 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="350.88113"
-     inkscape:cy="56.461941"
+     inkscape:cx="317.35554"
+     inkscape:cy="104.32826"
      inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="false"
      inkscape:window-width="1366"
-     inkscape:window-height="713"
+     inkscape:window-height="710"
      inkscape:window-x="0"
      inkscape:window-y="28"
      width="400px"
@@ -3341,9 +3341,9 @@
          inkscape:connector-curvature="0"
          id="path5218"
          d="m 335,180 -5,5 -8,0 c 0,0 -1,0 -1,-1 l 0,-8 c 0,-1 1,-1 1,-1 l 8,0 z"
-         style="display:inline;opacity:1;fill:#d8d8d8;fill-opacity:1;stroke:none;enable-background:new" />
+         style="display:inline;opacity:1;fill:#f4f4f4;fill-opacity:1;stroke:none;enable-background:new" />
       <path
-         style="display:inline;opacity:1;fill:#d8d8d8;fill-opacity:1;stroke:none;enable-background:new"
+         style="display:inline;opacity:1;fill:#f4f4f4;fill-opacity:1;stroke:none;enable-background:new"
          d="m 291,180 5,5 8,0 c 0,0 1,0 1,-1 l 0,-8 c 0,-1 -1,-1 -1,-1 l -8,0 z"
          id="path5220"
          inkscape:connector-curvature="0"
@@ -3353,9 +3353,9 @@
          inkscape:connector-curvature="0"
          id="path5222"
          d="m 268,173 -5,5 0,8 c 0,0 0,1 1,1 l 8,0 c 1,0 1,-1 1,-1 l 0,-8 z"
-         style="display:inline;opacity:1;fill:#d8d8d8;fill-opacity:1;stroke:none;enable-background:new" />
+         style="display:inline;opacity:1;fill:#f4f4f4;fill-opacity:1;stroke:none;enable-background:new" />
       <path
-         style="display:inline;opacity:1;fill:#d8d8d8;fill-opacity:1;stroke:none;enable-background:new"
+         style="display:inline;opacity:1;fill:#f4f4f4;fill-opacity:1;stroke:none;enable-background:new"
          d="m 238,187 -5,-5 0,-8 c 0,0 0,-1 1,-1 l 8,0 c 1,0 1,1 1,1 l 0,8 z"
          id="path5224"
          inkscape:connector-curvature="0"
@@ -3365,7 +3365,7 @@
          cy="182"
          cx="358"
          id="circle4829-6"
-         style="color:#bebebe;display:inline;overflow:visible;visibility:visible;fill:#d8d8d8;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;enable-background:accumulate" />
+         style="color:#bebebe;display:inline;overflow:visible;visibility:visible;fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;enable-background:accumulate" />
     </g>
     <g
        style="fill:#f3f3f3;fill-opacity:1;stroke:#cccccc;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"

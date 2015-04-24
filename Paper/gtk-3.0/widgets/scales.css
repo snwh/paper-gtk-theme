@@ -18,8 +18,8 @@
 
 @define-color scale_background @progress_color;
 @define-color scale_border shade(@scale_background, 0.7);
-@define-color backdrop_scale_background shade(@scale_background, 1.2);
-@define-color insensitive_scale_background shade(@insensitive_background, 0.8);
+@define-color backdrop_scale_background shade(@scale_background, 0.95);
+@define-color insensitive_scale_background shade(@scale_background, 1.2);
 
 /**********
  * Scales *
