@@ -22,10 +22,7 @@
 
 .message-dialog {
     padding: 0px;
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    box-shadow: none;
+    padding-top: 8px;
     background: @background;
     -GtkDialog-button-spacing: 0;
     border-bottom-left-radius: 6px;
@@ -42,6 +39,7 @@
     background: @background;
     box-shadow: 0 3px 6px alpha (#000, 0.16),
                 0 3px 6px alpha (#000, 0.23);
+    padding-top: 8px;
     margin: 0;
 }
 
@@ -100,7 +98,7 @@
 }
 
 .message-dialog.csd .dialog-action-area .button {
-    border-radius: 0;
+    border-radius: 2px;
     border: none;
     background-image: none;
     background-color: transparent;
@@ -108,37 +106,31 @@
 }
 
 .message-dialog.csd .dialog-action-area .button:hover {
-    border: none;
-    background-image: none;
-    background-color: transparent;
-    color: @selection;
+    background-color: @selection;
+    color: @selection_foreground;
 }
 
-.message-dialog.csd .dialog-action-area .button:active {
-    border: none;
-    background-image: none;
-    background-color: transparent;
+.message-dialog.csd .dialog-action-area .button:active,
+.message-dialog.csd .dialog-action-area .button:active:hover {
+    border-radius: 2px;
+    background-color: alpha(#000, 0.2);
     color: @text;
 }
 
 .message-dialog.csd .dialog-action-area .button:insensitive {
-    border: 0px solid @insensitive_border;
     background-color: @insensitive_background;
     color: @insensitive_text;
 }
 
 .message-dialog.csd .dialog-action-area .button:backdrop {
-    border: 0px solid @backdrop_border;
     background-color: @backdrop_background;
     color: @backdrop_text;
 }
 
 .message-dialog.csd .dialog-action-area .button:backdrop:insensitive {
-    border: 0px solid mix(@insensitive_border, @backdrop_border, 0.5);
     background-color: mix(@insensitive_background, @backdrop_background, 0.5);
     color: mix(@insensitive_text, @backdrop_text, 0.5);
 }
-
 
 .message-dialog.csd .dialog-action-area .button:insensitive > .label, .message-dialog.csd .dialog-action-area .header-bar .button.titlebutton:insensitive > .label,
 .message-dialog.csd .dialog-action-area .titlebar .button.titlebutton:insensitive > .label,

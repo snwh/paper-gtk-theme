@@ -97,7 +97,7 @@ GtkCalendar.button:backdrop:hover,
 .button:active:hover,
 .button.text-button:hover,
 .button.image-button:hover {
-    border: 1px solid shade(@selection, 1.1);
+    border: 1px solid @selection;
     background-color: shade(@selection, 1.2);
     background-image: linear-gradient(to bottom, 
                                       shade(@selection, 1.2),

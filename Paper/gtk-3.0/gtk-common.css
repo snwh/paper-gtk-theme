@@ -64,7 +64,7 @@
 /* Selected color */
 @define-color selected_background @selection;
 @define-color selected_border shade(@selection, 0.9);
-@define-color selected_foreground shade(@selection, 0.5);
+@define-color selected_foreground shade(@selection, 0.3);
 @define-color selection_foreground @selected_foreground;
 
 /****************
@@ -90,45 +90,19 @@
 @define-color panel_bg_color @panel;
 @define-color panel_fg_color @panel_text;
 
-/***************
- * Header Bars *
- ***************/
 
-@define-color backdrop_header_text alpha(@header_text, 0.7);
-@define-color insensitive_header_text alpha(@header_text, 0.5);
+/*****************
+ * Trough Colors *
+ *****************/
 
-
-@define-color backdrop_header_text_dark alpha(@header_text_dark, 0.7);
-@define-color insensitive_header_text_dark alpha(@header_text_dark, 0.5);
-
-/**************
- * Scrollbars *
- **************/
-@define-color scrollbar_slider shade(@foreground,1.2);
-@define-color scrollbar_slider_backdrop shade(@scrollbar_slider,0.95);
-@define-color scrollbar_slider_insensitive shade(@scrollbar_slider,1.05);
-
-@define-color scrollbar_trough transparent;
-@define-color scrollbar_trough_insensitive shade(@scrollbar_trough,0.95);
-@define-color scrollbar_trough_backdrop shade(@scrollbar_trough,0.95);
-
-/****************
- * Progressbars *
- ****************/
-
-@define-color progressbar_background @selection;
-@define-color backdrop_progressbar_background shade(@progressbar_background, 1.2);
-@define-color insensitive_progressbar_background shade(@insensitive_background, 0.85);
-
-
-/***********
- * Troughs *
- ***********/
-@define-color trough_active @selected_background;
-@define-color trough_active_backdrop @backdrop_selected_background;
 @define-color trough_background @base;
-@define-color insensitive_trough_background shade(@trough_background, 0.9);
-@define-color backdrop_trough_background shade(@trough_background, 1.1);
+@define-color backdrop_trough_background @backdrop_base;
+@define-color insensitive_trough_background @insensitive_base;
+
+@define-color trough_border shade(@border, 1.02);
+@define-color backdrop_trough_border shade(@backdrop_border, 1.2);
+@define-color insensitive_trough_border shade(@insensitive_border, 1.2);
+
 
 /*********************
  * Internal elements *
@@ -153,44 +127,6 @@
  * Popover *
  ***********/
 @define-color osd_popover_background alpha(@panel, 0.90);
-
-/******************
- * Infobar colors *
- ******************/
-
-@define-color infobar_background @selection;
-@define-color infobar_foreground white;
-
-@define-color question #4ab3e4;
-@define-color warning #f67d42;
-@define-color error #e74c3c;
-@define-color success #349F8C;
-@define-color info #f5f697;
-
-/* Info colors */
-@define-color info_foreground #333333;
-@define-color info_text_shadow alpha(white, 0.2);
-@define-color info_background @info;
-@define-color info_border shade(@info_background, 0.9);
-
-/* Warning colors */
-@define-color warning_foreground #333333;
-@define-color warning_text_shadow alpha(white, 0.2);
-@define-color warning_background @warning;
-@define-color warning_border shade(@warning_background, 0.9);
-
-/* Question colors */
-@define-color question_foreground white;
-@define-color question_text_shadow alpha(#000, 0.2);
-@define-color question_background @question;
-@define-color question_border shade(@question_background, 0.9);
-
-/* Error colors */
-@define-color error_foreground white;
-@define-color error_text_shadow alpha(#000, 0.5);
-@define-color error_background @error;
-@define-color error_border shade(@error_background, 0.9);
-
 
 /***********
  * Imports *

@@ -16,6 +16,11 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
+@define-color scale_background @progress_color;
+@define-color scale_border shade(@scale_background, 0.7);
+@define-color backdrop_scale_background shade(@scale_background, 1.2);
+@define-color insensitive_scale_background shade(@insensitive_background, 0.8);
+
 /**********
  * Scales *
  **********/
@@ -32,8 +37,8 @@
 .scale.vertical.highlight.bottom,
 .menubar .menuitem .scale.highlight.left,
 .menubar .menuitem .scale.highlight.bottom {
-    border: 1px solid @selection;
-    background-color: @selection;
+    border: 1px solid @scale_background;
+    background-color: @scale_background;
 }
 
 /* Insensitive fill colors */
@@ -41,26 +46,17 @@
 .scale.highlight.bottom:insensitive,
 .menubar .menuitem .scale.highlight.left:insensitive,
 .menubar .menuitem .scale.highlight.bottom:insensitive {
-    border: 1px solid @insensitive_base;
-    background-color: @insensitive_base;
+    border: 1px solid @insensitive_scale_background;
+    background-color: @insensitive_scale_background;
 }
 
-/* Hover fill colors */
-.scale.highlight.left:hover,
-.scale.highlight.bottom:hover,
-.menubar .menuitem .scale.highlight.left:hover,
-.menubar .menuitem .scale.highlight.bottom:hover {
-    border: 1px solid shade(@selection, 1.05);
-    background-color: shade(@selection, 1.05);
-}
-
-/* backdrop fill colors */
+/* Backdrop fill colors */
 .scale.vertical.highlight.left:backdrop,
 .scale.vertical.highlight.bottom:backdrop,
 .menubar .menuitem.scale.highlight.left:backdrop,
 .menubar .menuitem.scale.highlight.bottom:backdrop {
-    border: 1px solid @backdrop_selection;
-    background-color: @backdrop_selection;
+    border: 1px solid @backdrop_scale_background;
+    background-color: @backdrop_scale_background;
 }
 
 /***********
@@ -81,7 +77,7 @@
 /* Trough colors */
 .scale.trough,
 .scale.trough.vertical {
-    border: 1px solid @border;
+    border: 1px solid @trough_background;
     background-color: @trough_background;
 }
 
@@ -89,20 +85,20 @@
 .scale.trough:hover,
 .scale.trough.vertical:hover {
     border: 1px solid @border;
-    background-color: @hover_background;
+    background-color: @border;
 }
 
 /* Insensitive trough colors */
 .scale.trough:insensitive,
 .scale.trough.vertical:insensitive {
-    border: 1px solid @border;
+    border: 1px solid @insensitive_trough_background;
     background-color: @insensitive_trough_background;
 }
 
-/* backdrop trough colors */
+/* Backdrop trough colors */
 .scale.trough:backdrop,
 .scale.trough.vertical:backdrop {
-    border: 1px solid @border;
+    border: 1px solid @backdrop_trough_background;
     background-color: @backdrop_trough_background;
 }
 
@@ -111,8 +107,8 @@
  ****************/
 .scale.progressbar
 .scale.progressbar.vertical {
-    background-color: @selection;
-    border: 1px solid @selection;
+    background-color: @scale_background;
+    border: 1px solid @scale_background;
 }
 
 .scale.progressbar:insensitive,
