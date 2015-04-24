@@ -16,6 +16,44 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
+@define-color infobar_background @selection;
+@define-color infobar_foreground #fff;
+
+/* Success colors */
+@define-color success #4bae4f;
+@define-color success_foreground #fff;
+@define-color success_text_shadow alpha(#fff, 0.2);
+@define-color success_background @success;
+@define-color success_border shade(@info_background, 0.9);
+
+/* Info colors */
+@define-color info #2095f2;
+@define-color info_foreground #333333;
+@define-color info_text_shadow alpha(#fff, 0.2);
+@define-color info_background @info;
+@define-color info_border shade(@info_background, 0.9);
+
+/* Warning colors */
+@define-color warning #fec006;
+@define-color warning_foreground #333333;
+@define-color warning_text_shadow alpha(#fff, 0.2);
+@define-color warning_background @warning;
+@define-color warning_border shade(@warning_background, 0.9);
+
+/* Question colors */
+@define-color question #4ab3e4;
+@define-color question_foreground #fff;
+@define-color question_text_shadow alpha(#000, 0.2);
+@define-color question_background @question;
+@define-color question_border shade(@question_background, 0.9);
+
+/* Error colors */
+@define-color error #f34235;
+@define-color error_foreground #fff;
+@define-color error_text_shadow alpha(#000, 0.5);
+@define-color error_background @error;
+@define-color error_border shade(@error_background, 0.9);
+
 /**************
  * GtkInfoBar *
  **************/

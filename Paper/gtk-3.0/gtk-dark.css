@@ -16,7 +16,6 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-
 /**********
  * Colors *
  **********/
@@ -33,8 +32,6 @@
 @define-color backdrop_header #5A6367; /* Header backdrop color */
 @define-color header_text alpha(#fff, 0.7);/* Header text color */
 @define-color header_text_dark alpha(#000, 0.3);/* Header text color */
-@define-color menu #636E73;/* Menu color */
-@define-color menu_text #d3d9dc;/* Menu color */
 @define-color selection #90a4ae;/* Selection color */
 @define-color view_background @base;/* View background */
 @define-color inactive_frame @border;/* Inactive frame color */
@@ -42,6 +39,7 @@
 @define-color panel_text_shadow alpha(#000, 0.2);/* Panel text color */
 @define-color text_shadow alpha(white, 0.4);/* Text shadow */
 @define-color icon_shadow @text_shadow;/* Icon shadow */
+@define-color progress_color #90a4ae; /* Progress color */
 
 /* Hightlight & shadow colors */
 @define-color highlight alpha(#fff, 0.2);

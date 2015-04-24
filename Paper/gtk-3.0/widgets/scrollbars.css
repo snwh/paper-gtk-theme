@@ -16,6 +16,14 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
+@define-color scrollbar_slider shade(@foreground,1.2);
+@define-color scrollbar_slider_backdrop shade(@scrollbar_slider,0.95);
+@define-color scrollbar_slider_insensitive shade(@scrollbar_slider,1.05);
+
+@define-color scrollbar_trough transparent;
+@define-color scrollbar_trough_insensitive shade(@scrollbar_trough,0.95);
+@define-color scrollbar_trough_backdrop shade(@scrollbar_trough,0.95);
+
 /**************
  * Scrollbars *
  **************/
