@@ -32,14 +32,14 @@
     background-color: @base;
     color: @text;
     border: 1px solid @border;
-    box-shadow:inset 0 0 0 1px alpha(#000, 0.05),
+    box-shadow:inset 0 -1px 0 1px alpha(#000, 0.05),
                inset 0 1px 0 0 alpha(#000, 0.02);
 }
 
 .entry:focus {
     background-color: @base;
     color: @text;
-    border: 1px solid @selection;
+    border: 1px solid shade(@selection, 0.8);
     box-shadow:inset 0 0 0 1px alpha(@selection, 0.4),
                inset 0 1px 0 0 alpha(@selection, 0.1);
 }
@@ -64,6 +64,11 @@
     background-color: @selection;
 }
 
+.entry:selected:backdrop {
+    color: @base;
+    background-color: @selection;
+}
+
 .entry:backdrop {
     background-color: @backdrop_background;
     color: @backdrop_text;
@@ -74,12 +79,6 @@
     color: @backdrop_text;
     box-shadow: none;
     background-color: @backdrop_insensitive_background;
-    box-shadow: none;
-}
-
-.entry:selected:backdrop {
-    color: @backdrop_selected_foreground;
-    background-color: @backdrop_selected_background;
     box-shadow: none;
 }
 

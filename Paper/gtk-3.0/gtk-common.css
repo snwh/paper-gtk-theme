@@ -95,9 +95,9 @@
  * Trough Colors *
  *****************/
 
-@define-color trough_background @base;
-@define-color backdrop_trough_background @backdrop_base;
-@define-color insensitive_trough_background @insensitive_base;
+@define-color trough_background shade(@background, 0.9);
+@define-color backdrop_trough_background shade(@trough_background, 0.95);
+@define-color insensitive_trough_background shade(@trough_background, 1.05);
 
 @define-color trough_border shade(@border, 1.02);
 @define-color backdrop_trough_border shade(@backdrop_border, 1.2);

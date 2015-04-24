@@ -329,7 +329,8 @@
 .header-bar .button GtkArrow,
 .header-bar .button GtkArrow:active,
 .header-bar .button GtkArrow:focus,
-.header-bar .button GtkArrow:hover {
+.header-bar .button GtkArrow:hover {    
+    -GtkComboBox-arrow-scaling: 1;
     color: @header_text;
 }
 
