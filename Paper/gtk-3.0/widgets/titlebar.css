@@ -59,7 +59,7 @@
     padding-left: 13px;
     padding-right: 13px;
     color: @header_text;
-    font: Bold 9;
+    font: Bold;
 }
 
 /* Subtitle */
@@ -133,7 +133,7 @@
 }
 
 .titlebar .text-button:active {
-    font: Bold 9;
+    font: Bold;
 }
 
 /* Checked Button */
@@ -154,7 +154,7 @@
 }
 
 .titlebar .text-button:checked {
-    font: Bold 9;
+    font: Bold;
 }
 
 /* Focus Button */
@@ -247,7 +247,7 @@
 
 
 .titlebar .text-button:active:backdrop {
-    font: Bold 9;
+    font: Bold;
 }
 
 /* Backdrop:Hover; Button */
