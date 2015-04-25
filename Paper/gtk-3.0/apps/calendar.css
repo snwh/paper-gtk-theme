@@ -16,37 +16,39 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color california #F34235;
+@define-color calendar #F34235;
 
 /**********
  * Header *
  **********/
 
+MayaViewMayaToolbar .titlebar .header-bar,
 CaliforniaHostMainWindow .header-bar,
 CaliforniaHostMainWindow .titlebar {
-    background-color: @california;
+    background-color: @calendar;
 }
 
+MayaViewMayaToolbar .titlebar .header-bar:backdrop,
 CaliforniaHostMainWindow .header-bar:backdrop,
 CaliforniaHostMainWindow .titlebar:backdrop {
-    background-color: shade(@california,0.9);
+    background-color: shade(@calendar,0.9);
 }
 
 /* Switch */
 CaliforniaHostMainWindow .header-bar GtkSwitch.trough:active {
-    background-color: @california;
+    background-color: @calendar;
 }
 
 CaliforniaHostMainWindow GtkSwitch.trough:active {
-    border: 1px solid shade(@california, 0.8);
-    background-color: @california;
+    border: 1px solid shade(@calendar, 0.8);
+    background-color: @calendar;
 }
 
 CaliforniaHostMainWindow GtkSwitch.slider:active {
-    border: 1px solid shade(@california, 0.8);
+    border: 1px solid shade(@calendar, 0.8);
 } 
 
 CaliforniaHostMainWindow .header-bar GtkSwitch.slider:active:backdrop,
 CaliforniaHostMainWindow .header-bar GtkSwitch.slider:backdrop {
-    background-color: shade(@california, 0.9);
+    background-color: shade(@calendar, 0.9);
 }

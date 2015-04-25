@@ -24,20 +24,17 @@ GtkCheckButton:hover,
 GtkCheckButton:active:hover,
 GtkCheckButton:selected,
 GtkCheckButton:selected:focus {
-    background: none;
 }
 
 .check,
 .check row:selected,
 .check row:selected:focus {
-	background: none;
     color: @foreground;
 }
 
 .check:insensitive,
 .check row:selected:insensitive,
 .check row:selected:focus:insensitive {
-    background: none;
     color: @insensitive_text;
 }
 
@@ -45,14 +42,12 @@ GtkCheckButton:selected:focus {
 .check:backdrop,
 .check row:selected:backdrop,
 .check row:selected:focus:backdrop {
-    background: none;
     color: @backdrop_text;
 }
 
 .check:insensitive:backdrop,
 .check row:selected:insensitive:backdrop,
 .check row:selected:focus:insensitive:backdrop {
-    background: none;
     color: @backdrop_insensitive_text;
 }
 
