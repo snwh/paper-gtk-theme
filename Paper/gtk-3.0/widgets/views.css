@@ -70,7 +70,7 @@
 .view:selected,
 .view:selected:focus {
     background-color: @selection;
-    border-color:  @selection;
+    border-color:  shade(@selection, 0.8);
     color: @selected_foreground;
 }
 
@@ -177,7 +177,7 @@ GtkIconView.view.cell:hover {
  
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
-    border: 1px solid transparent;
+    border: 1px solid shade(@selection, 0.8);
     border-radius: 6px;
     background-color: @selection;
     color: @selected_foreground;
@@ -310,4 +310,3 @@ GtkHTML:active:backdrop,
 
     /* background-image in assets */
 }
-

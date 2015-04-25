@@ -22,11 +22,15 @@
  * Header bar *
  **************/
 
+PantheonCalculatorMainWindow .titlebar,
+PantheonCalculatorMainWindow .header-bar,
 MathWindow .titlebar,
 MathWindow .header-bar {
     background-color: @calculator;
 }
 
+PantheonCalculatorMainWindow .titlebar:backdrop,
+PantheonCalculatorMainWindow .header-bar:backdrop,
 MathWindow .titlebar:backdrop,
 MathWindow .header-bar:backdrop {
     background-color: shade(@calculator,0.9);

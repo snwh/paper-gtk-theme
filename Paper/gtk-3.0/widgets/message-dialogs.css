@@ -23,7 +23,7 @@
 .message-dialog {
     padding: 0px;
     padding-top: 8px;
-    background: @background;
+    /*background: @background;*/
     -GtkDialog-button-spacing: 0;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
@@ -35,37 +35,12 @@
 }
 
 .message-dialog.csd  {
-    border-radius: 0 0 4px 4px;
+    border-radius: 5px;
     background: @background;
     box-shadow: 0 3px 6px alpha (#000, 0.16),
                 0 3px 6px alpha (#000, 0.23);
     padding-top: 8px;
     margin: 0;
-}
-
-.message-dialog .titlebar,
-.message-dialog .header-bar {
-    padding:0;
-    border: none;
-    border-radius: 4px 4px 0 0;
-    background-color: @header;
-    color: @header_text;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1),
-                inset 0 -1px 0 0 rgba(0,0,0,0.1),
-                inset 0 -3px 3px -4px alpha(#000, 0.4);
-}
-
-
-.message-dialog .titlebar:backdrop,
-.message-dialog .header-bar:backdrop {
-    background-image: none;
-    background-color: @backdrop_header;
-    color: @backdrop_header_text;
-}
-
-.message-dialog .titlebar:insensitive,
-.message-dialog .header-bar:insensitive {
-    color: @insensitive_header_text;
 }
 
 .message-dialog.csd.background {
@@ -74,16 +49,6 @@
     background: @background;
     box-shadow: none;
 }
-
-.message-dialog .titlebar .title {
-    padding: 0px;
-    color: @header_text;
-}
-
-.message-dialog .titlebar .title:backdrop {
-    color: @backdrop_header_text;
-}
-
 
 /* Buttons */
 .message-dialog.csd .dialog-action-area {
@@ -132,13 +97,6 @@
     color: mix(@insensitive_text, @backdrop_text, 0.5);
 }
 
-.message-dialog.csd .dialog-action-area .button:insensitive > .label, .message-dialog.csd .dialog-action-area .header-bar .button.titlebutton:insensitive > .label,
-.message-dialog.csd .dialog-action-area .titlebar .button.titlebutton:insensitive > .label,
-.message-dialog.csd .dialog-action-area .button:backdrop:insensitive > .label, .message-dialog.csd .dialog-action-area .header-bar .button.titlebutton:backdrop:insensitive > .label,
-.message-dialog.csd .dialog-action-area .titlebar .button.titlebutton:backdrop:insensitive > .label {
-    color: inherit;
-}
-
 /* Suggested Action Button */
 .message-dialog.csd .dialog-action-area .button.suggested-action {
     border: 0px solid @suggested_action_button;
@@ -176,12 +134,6 @@
     color: mix(@insensitive_text, @backdrop_text, 0.5);
 }
 
-.message-dialog.csd .dialog-action-area .button.suggested-action:backdrop:insensitive > .label, .message-dialog.csd .dialog-action-area .header-bar .suggested-action.button.titlebutton:backdrop:insensitive > .label,
-.message-dialog.csd .dialog-action-area .titlebar .suggested-action.button.titlebutton:backdrop:insensitive > .label,
-.message-dialog.csd .dialog-action-area .button.suggested-action:insensitive > .label, .message-dialog.csd .dialog-action-area .header-bar .suggested-action.button.titlebutton:insensitive > .label,
-.message-dialog.csd .dialog-action-area .titlebar .suggested-action.button.titlebutton:insensitive > .label {
-    color: inherit;
-}
 
 /* Destructive Action Button */
 .message-dialog.csd .dialog-action-area .button.destructive-action {
@@ -220,14 +172,24 @@
     color: mix(@insensitive_text, @backdrop_text, 0.5);
 }
 
-.message-dialog.csd .dialog-action-area .button.destructive-action:backdrop:insensitive > .label, .message-dialog.csd .dialog-action-area .header-bar .destructive-action.button.titlebutton:backdrop:insensitive > .label,
-.message-dialog.csd .dialog-action-area .titlebar .destructive-action.button.titlebutton:backdrop:insensitive > .label,
-.message-dialog.csd .dialog-action-area .button.destructive-action:insensitive > .label, .message-dialog.csd .dialog-action-area .header-bar .destructive-action.button.titlebutton:insensitive > .label,
-.message-dialog.csd .dialog-action-area .titlebar .destructive-action.button.titlebutton:insensitive > .label {
-    color: inherit;
-}
-
-.message-dialog.csd .dialog-action-area .button, .message-dialog.csd .dialog-action-area .button:hover, .message-dialog.csd .dialog-action-area .button:active, .message-dialog.csd .dialog-action-area .button:insensitive, .message-dialog.csd .dialog-action-area .button:backdrop, .message-dialog.csd .dialog-action-area .button:backdrop:insensitive, .message-dialog.csd .dialog-action-area .button.suggested-action, .message-dialog.csd .dialog-action-area .button.suggested-action:hover, .message-dialog.csd .dialog-action-area .button.suggested-action:active, .message-dialog.csd .dialog-action-area .button.suggested-action:backdrop, .message-dialog.csd .dialog-action-area .button.suggested-action:backdrop:insensitive, .message-dialog.csd .dialog-action-area .button.suggested-action:insensitive, .message-dialog.csd .dialog-action-area .button.destructive-action, .message-dialog.csd .dialog-action-area .button.destructive-action:hover, .message-dialog.csd .dialog-action-area .button.destructive-action:active, .message-dialog.csd .dialog-action-area .button.destructive-action:backdrop, .message-dialog.csd .dialog-action-area .button.destructive-action:backdrop:insensitive, .message-dialog.csd .dialog-action-area .button.destructive-action:insensitive {
+.message-dialog.csd .dialog-action-area .button,
+.message-dialog.csd .dialog-action-area .button:hover,
+.message-dialog.csd .dialog-action-area .button:active,
+.message-dialog.csd .dialog-action-area .button:insensitive,
+.message-dialog.csd .dialog-action-area .button:backdrop,
+.message-dialog.csd .dialog-action-area .button:backdrop:insensitive,
+.message-dialog.csd .dialog-action-area .button.suggested-action,
+.message-dialog.csd .dialog-action-area .button.suggested-action:hover,
+.message-dialog.csd .dialog-action-area .button.suggested-action:active,
+.message-dialog.csd .dialog-action-area .button.suggested-action:backdrop,
+.message-dialog.csd .dialog-action-area .button.suggested-action:backdrop:insensitive,
+.message-dialog.csd .dialog-action-area .button.suggested-action:insensitive,
+.message-dialog.csd .dialog-action-area .button.destructive-action,
+.message-dialog.csd .dialog-action-area .button.destructive-action:hover,
+.message-dialog.csd .dialog-action-area .button.destructive-action:active,
+.message-dialog.csd .dialog-action-area .button.destructive-action:backdrop,
+.message-dialog.csd .dialog-action-area .button.destructive-action:backdrop:insensitive,
+.message-dialog.csd .dialog-action-area .button.destructive-action:insensitive {
     border-left-style: solid;
     border-right-style: none;
     border-bottom-style: none;
@@ -241,4 +203,3 @@
     border-left-style: none;
     /*border-bottom-left-radius: 7px;*/
 }
-

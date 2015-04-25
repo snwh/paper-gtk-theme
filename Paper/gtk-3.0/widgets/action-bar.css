@@ -19,21 +19,11 @@
 /***************
  * Action bars *
  ***************/
-.action-bar .title {
-    font: Bold 11;
-    padding: 0px 12px 0px 12px;
-}
-
-.action-bar .subtitle {
-    color: inherit;
-    font: 9;
-    padding: 0px 12px 0px 12px;
-}
 
 .action-bar {
     background-color: shade(@background, 0.9);
     border: solid @border;
-    border-width: 0 1px 1px 1px;
+    border-width: 1px 0 0 0;
     color: @text;
     box-shadow: none;
 }
@@ -43,7 +33,6 @@
     box-shadow: none;
     -gtk-image-effect: dim;
 }
-
 
 .action-bar:first-child {
     border-radius: 6px 6px 0px 0px;
