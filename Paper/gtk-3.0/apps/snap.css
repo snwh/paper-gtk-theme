@@ -33,6 +33,10 @@ SnapSnapWindow .header-bar:backdrop {
     background-color: shade(@snap,0.9);
 }
 
+SnapSnapWindow .take-button {
+	border-radius: 0;
+}
+
 SnapWidgetsCamera {
 	background-color:@snap_background;
 }

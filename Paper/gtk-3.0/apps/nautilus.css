@@ -70,9 +70,17 @@ NautilusWindow .header-bar .entry {
  * Sidebar *
  ***********/
 
-NautilusWindow .sidebar {
+NautilusWindow .sidebar,
+NautilusWindow .sidebar:backdrop {
     box-shadow: none;
     border-width: 0px;
+}
+
+NautilusWindow .sidebar .separator {
+    color: @separator
+}
+NautilusWindow .sidebar .separator:backdrop {
+    color: @backdrop_separator
 }
 
 NautilusWindow .pane-separator {
@@ -84,8 +92,8 @@ NautilusWindow .pane-separator {
  * Notebook *
  ************/
 
-/* Active */
-NautilusWindow .notebook .frame {
+NautilusWindow .notebook .frame,
+NautilusWindow .notebook .frame:backdrop {
     border: none;
 }
 
@@ -107,6 +115,52 @@ NautilusWindow .dynamic-notebook tab.left:active {
 NautilusWindow .notebook tab.right:active,
 NautilusWindow .dynamic-notebook tab.right:active {
     box-shadow:inset 3px 0 0 0 @nautilus;
+}
+
+
+.nautilus-circular-button {
+  border-radius: 20px;
+  outline-radius: 20px;
+}
+
+
+.search-bar {
+    box-shadow: none;
+}
+
+.disk-space-display {
+    border: 2px solid;
+}
+
+.disk-space-display.unknown {
+    background-color: @disk_space_unknown;
+    border-color: shade(@disk_space_unknown, 0.8);
+}
+
+.disk-space-display.used {
+    background-color: @disk_space_used;
+    border-color: shade(@disk_space_used, 0.8);
+}
+
+.disk-space-display.free {
+    background-color: @disk_space_free;
+    border-color: shade(@disk_space_free, 0.8);
+}
+
+
+/******************
+ * Desktop/Canvas *
+ ******************/
+
+NautilusCanvasView,
+NautilusCanvasView:active,
+NautilusCanvasView:focus,
+NautilusCanvasView:backdrop {
+    border: none;
+}
+
+.nautilus-desktop {
+    color: @foreground;
 }
 
 .nautilus-canvas-item {
@@ -144,74 +198,25 @@ NautilusWindow .dynamic-notebook tab.right:active {
     text-shadow: none;
 }
 
-.nautilus-desktop.nautilus-canvas-item:selected:backdrop {
-    color: @theme_unfocused_selected_fg_color;
-}
-
-.nautilus-circular-button {
-  border-radius: 20px;
-  outline-radius: 20px;
-}
-
-
-.search-bar {
-    box-shadow: none;
-}
-
-.disk-space-display {
-    border: 2px solid;
-}
-
-.disk-space-display.unknown {
-    background-color: @disk_space_unknown;
-    border-color: shade(@disk_space_unknown, 0.8);
-}
-
-.disk-space-display.used {
-    background-color: @disk_space_used;
-    border-color: shade(@disk_space_used, 0.8);
-}
-
-.disk-space-display.free {
-    background-color: @disk_space_free;
-    border-color: shade(@disk_space_free, 0.8);
-}
-
-
-/***********
- * Desktop *
- ***********/
-
-.nautilus-canvas-item {
-    border-radius: 5px;
-}
-
-.nautilus-desktop {
-    color: @foreground;
-}
 
 .nautilus-desktop.nautilus-canvas-item {
     color: #fff;
     text-shadow: 1px 1px alpha(#000, 0.2);
 }
 
-.nautilus-desktop.nautilus-canvas-item:active {
-    color: #fff;
-}
-
-.nautilus-desktop.nautilus-canvas-item:backdrop {
-    color: #fff;
-}
-
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:backdrop
 .nautilus-desktop.nautilus-canvas-item:selected {
+    background-color: @selected_background;
     color: @selected_foreground;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected:backdrop {
+    background-color: @backdrop_selected_background;
+    color: @backdrop_selected_foreground;
 }
 
 .nautilus-desktop.nautilus-canvas-item:active,
 .nautilus-desktop.nautilus-canvas-item:prelight,
 .nautilus-desktop.nautilus-canvas-item:selected {
-}
-
-.nautilus-desktop.nautilus-canvas-item:selected:backdrop {
-    color: @backdrop_selected_foreground;
 }

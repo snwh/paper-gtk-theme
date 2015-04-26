@@ -16,17 +16,10 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/*@define-color geary #ebdd4d;*/
-
-/*********************
- * Custon View *
- *********************/
-
 RBHeader {
-	padding: none;
-	height: 2em;
+	padding: 0px;
 }
 
 RBLibrarySource  {
-	padding: none;
+	padding: 0px;
 }

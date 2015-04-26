@@ -55,15 +55,22 @@
     color: @header_text;
 }
 
+.title,
 .titlebar .title {
+    padding: 0;
     padding-left: 13px;
     padding-right: 13px;
     color: @header_text;
     font: Bold;
 }
 
+.titlebar .button.flat .title {
+    padding: 0;
+}
+
 /* Subtitle */
 .titlebar .subtitle {
+    padding: 0;
     font: 9;
 }
 
@@ -81,6 +88,12 @@
 
 
 
+/* Separator */
+.titlebar .separator {
+    background: none;
+    color: @separator;
+}
+
 /**********************
  * Header bar buttons *
  **********************/
@@ -95,7 +108,7 @@
     background-color: transparent;
     background-image: none;
     border: none;
-    padding: 12px 15px 10px 15px;
+    padding: 13px 15px;
 }
 
 /* Normal Button */
@@ -438,4 +451,27 @@
     border: none;
     outline: none;
 }
+
+
+
+/*************************
+ * Header bar separator  *
+ *************************/
+
+.titlebar > GtkBox > .separator.vertical {
+    -GtkWidget-wide-separators: 1;
+    -GtkWidget-separator-width: 0;
+    background-color: @separator;
+    color: @separator;
+    border:none;
+}
+
+/* Separator */
+.titlebar .separator,
+.titlebar .button .separator,
+.titlebar .button.separator {
+    background: inherit;
+    color: @separator;
+    border:none;
+} 
 

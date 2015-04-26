@@ -262,22 +262,6 @@
     padding: 8px;
 }
 
-.notebook tab.top:active {
-    padding: 8px 8px 6px 8px;
-}
-
-.notebook tab.bottom:active {
-    padding: 6px 8px 8px 8px;
-}
-
-.notebook tab.left:active {
-    padding: 8px;
-}
-
-.notebook tab.right:active {
-    padding: 8px;
-}
-
 
 /*----- Labels -----*/
 

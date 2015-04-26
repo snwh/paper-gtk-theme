@@ -129,10 +129,8 @@
 
 /* Hover */
 .dynamic-notebook tab:hover {
-    background-image: linear-gradient(to bottom,
-                                  alpha(#fff, 0.10),
-                                  alpha(#fff, 0.20)
-                                  );
+    background-image: none;
+    background-color: alpha(@text, 0.05);
 }
 
 
@@ -183,46 +181,46 @@
 
 /* Active-Backdrop */
 .dynamic-notebook tab.top:active:backdrop {
-    box-shadow:inset 0 -3px 0 0 @backdrop_border;
+    box-shadow:inset 0 -3px 0 0 @backdrop_text;
 }
 .dynamic-notebook tab.bottom:active:backdrop {
-    box-shadow:inset 0 3px 0 0 @backdrop_border;
+    box-shadow:inset 0 3px 0 0 @backdrop_text;
 }
 .dynamic-notebook tab.left:active:backdrop {
-    box-shadow:inset -3px 0 0 0 @backdrop_border;
+    box-shadow:inset -3px 0 0 0 @backdrop_text;
 }
 .dynamic-notebook tab.right:active:backdrop {
-    box-shadow:inset 3px 0 0 0 @backdrop_border;
+    box-shadow:inset 3px 0 0 0 @backdrop_text;
 }
 
 
 /* Hover */
 .dynamic-notebook tab.top:hover {
-    box-shadow:inset 0 -3px 0 0 alpha(white, 0.4);
+    box-shadow:inset 0 -3px 0 0 alpha(@text, 0.4);
 }
 .dynamic-notebook tab.bottom:hover {
-    box-shadow:inset 0 3px 0 0 alpha(white, 0.4);
+    box-shadow:inset 0 3px 0 0 alpha(@text, 0.4);
 }
 .dynamic-notebook tab.left:hover {
-    box-shadow:inset -3px 0 0 0 alpha(white, 0.4);
+    box-shadow:inset -3px 0 0 0 alpha(@text, 0.4);
 }
 .dynamic-notebook tab.right:hover {
-    box-shadow:inset 3px 0 0 0 alpha(white, 0.4);
+    box-shadow:inset 3px 0 0 0 alpha(@text, 0.4);
 }
 
 
 /* Hover-Backdrop */
 .dynamic-notebook tab.top:hover {
-    box-shadow:inset 0 -3px 0 0 alpha(white, 0.1);
+    box-shadow:inset 0 -3px 0 0 alpha(@text, 0.1);
 }
 .dynamic-notebook tab.bottom:hover:backdrop {
-    box-shadow:inset 0 3px 0 0 alpha(white, 0.1);
+    box-shadow:inset 0 3px 0 0 alpha(@text, 0.1);
 }
 .dynamic-notebook tab.left:hover:backdrop {
-    box-shadow:inset -3px 0 0 0 alpha(white, 0.1);
+    box-shadow:inset -3px 0 0 0 alpha(@text, 0.1);
 }
 .dynamic-notebook tab.right:hover:backdrop {
-    box-shadow:inset 3px 0 0 0 alpha(white, 0.1);
+    box-shadow:inset 3px 0 0 0 alpha(@text, 0.1);
 }
 
 /* Backdrop */
@@ -253,46 +251,24 @@
     box-shadow:inset 1px 0 0 0 @insensitive_border;
 }
 
+
 /*----- In-tab Padding -----*/
 
 .dynamic-notebook tab.top {
-    padding-top: 4px;
-    padding-left: 8px;
-    padding-bottom: 6px;
-    padding-right: 8px;
+    padding: 6px 8px 8px 8px;
 }
 
 .dynamic-notebook tab.bottom {
-    padding-top: 6px;
-    padding-left: 8px;
-    padding-bottom: 4px;
-    padding-right: 8px;
+    padding: 8px 8px 6px 8px;
 }
 
 .dynamic-notebook tab.left {
-    padding: 6px;
+    padding: 8px;
 }
 
 .dynamic-notebook tab.right {
-    padding: 6px;
+    padding: 8px;
 }
-
-.dynamic-notebook tab.top:active {
-    padding: 2px 8px 3px 8px;
-}
-
-.dynamic-notebook tab.bottom:active {
-    padding: 3px 8px 2px 8px;
-}
-
-.dynamic-notebook tab.left:active {
-    padding: 6px;
-}
-
-.dynamic-notebook tab.right:active {
-    padding: 6px;
-}
-
 
 .dynamic-notebook .notebook tab > .button,
 .dynamic-notebook .notebook tab > .button:hover,

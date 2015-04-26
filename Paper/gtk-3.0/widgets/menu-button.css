@@ -25,17 +25,23 @@
 }
 
 .menu-button .menu,
-.menu-button .menu GtkLabel {
+.menu-button .menu GtkLabel,
+.menu-button.image-button .menu,
+.menu-button.image-button .menu GtkLabel {
 	color: @text;
 }
 
 .menu-button .menu:backdrop GtkLabel,
-.menu-button .menuitem:backdrop GtkLabel {
+.menu-button .menuitem:backdrop GtkLabel
+.menu-button.image-button .menu:backdrop GtkLabel,
+.menu-button.image-button .menuitem:backdrop GtkLabel {
 	color: @backdrop_text;
 }
 
 .menu-button .menu:insensitive GtkLabel,
-.menu-button .menuitem:insensitive GtkLabel {
+.menu-button .menuitem:insensitive GtkLabel,
+.menu-button.image-button .menu:insensitive GtkLabel,
+.menu-button.image-button .menuitem:insensitive GtkLabel {
 	color: @insensitive_text;
 }
 
@@ -44,7 +50,13 @@
 .menu-button .menuitem .accelerator,
 .menu-button .menuitem .accelerator:insensitive
 .menu-button .menu .menuitem .accelerator,
-.menu-button .menu .menuitem .accelerator:insensitive {
+.menu-button .menu .menuitem .accelerator:insensitive,
+.menu-button.image-button .menu .accelerator,
+.menu-button.image-button .menu .accelerator:insensitive,
+.menu-button.image-button .menuitem .accelerator,
+.menu-button.image-button .menuitem .accelerator:insensitive
+.menu-button.image-button .menu .menuitem .accelerator,
+.menu-button.image-button .menu .menuitem .accelerator:insensitive {
 	color: @insensitive_text;
 }
 
