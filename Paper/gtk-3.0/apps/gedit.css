@@ -80,23 +80,7 @@ GeditWindow .dynamic-notebook tab.right:active {
 /************
  * Etc etc. *
  ************/
-
  
-GeditWindow .gedit-headerbar-paned,
-GeditWindow .titlebar .pane-separator,
-GeditWindow .header-bar .pane-separator {
-    background-color: @gedit;
-}
-
-GeditPanel.title GtkLabel {
-    padding: 4px 0;
-}
-
-GeditPanel.vertical .title {
-    padding: 4px 0 4px 3px;
-    border-style: none;
-}
-
 GeditPanel .toolbar {
     border-style: none;
     background: none;

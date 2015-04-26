@@ -51,6 +51,15 @@ GtkDialog .sidebar GtkScrolledWindow {
     -GtkTreeView-vertical-separator: 6px;
 }
 
+.sidebar .separator,
+.source-list .separator {
+    color: @separator;
+}
+.sidebar .separator:backdrop,
+.source-list .separator:backdrop {
+    color: @backdrop_separator;
+}
+
 .sidebar:backdrop,
 .source-list:backdrop {
     border: solid @backdrop_border;
