@@ -25,6 +25,11 @@
     color: @panel_text;
 }
 
+.composited-indicator:active {
+    background-color: alpha(#fff, 0.1);
+    color: @header;
+}
+
 .composited-indicator > GtkWidget > GtkWidget:first-child {
     padding: 0 2px;
 }
@@ -33,8 +38,8 @@
     padding: 0 2px 0 4px;
 }
 
-.composited-indicator.menuitem:active,
-.composited-indicator.menuitem:prelight {
+.composited-indicator .menuitem:active,
+.composited-indicator .menuitem:prelight {
     border-style: none;
     background-image: none;
     box-shadow: none;
@@ -42,58 +47,53 @@
 
 
 /* Images */
-.composited-indicator.menuitem:focus GtkImage,
-.composited-indicator.menuitem GtkImage {
+.composited-indicator .menuitem:focus GtkImage,
+.composited-indicator .menuitem GtkImage {
     color: @text;
 }
 
-.composited-indicator.menuitem:active GtkImage {
+.composited-indicator .menuitem:prelight GtkImage,
+.composited-indicator .menuitem:active GtkImage,
+.composited-indicator .menuitem:hover GtkImage {
     color: @selection_foreground;
 }
 
-.composited-indicator.menuitem:hover GtkImage,
-.composited-indicator.menuitembutton:hover GtkImage {
-    color: shade(@text, 2.0);
-}
-
-.composited-indicator.menuitem:backdrop GtkImage,
-.composited-indicator.menuitem:backdrop:hover GtkImage,
-.composited-indicator.menuitem:active:backdrop GtkImage {
+.composited-indicator .menuitem:backdrop GtkImage,
+.composited-indicator .menuitem:backdrop:hover GtkImage,
+.composited-indicator .menuitem:active:backdrop GtkImage {
     color: @backdrop_text;
 }
 
-.composited-indicator.menuitem:insensitive GtkImage {
+.composited-indicator .menuitem:insensitive GtkImage {
     color: @insensitive_text;
 }
 
-.composited-indicator.menuitem:insensitive:backdrop GtkImage {
+.composited-indicator .menuitem:insensitive:backdrop GtkImage {
     color: mix(@backdrop_text, @insensitive_text, 0.5);
 }
 
 /* Labels */
-.composited-indicator.menuitem:focus GtkLabel,
-.composited-indicator.menuitem GtkLabel {
+.composited-indicator .menuitem:focus GtkLabel,
+.composited-indicator .menuitem GtkLabel {
     color: @text;
 }
 
-.composited-indicator.menuitem:active GtkLabel {
+.composited-indicator .menuitem:prelight GtkLabel,
+.composited-indicator .menuitem:hover GtkLabel,
+.composited-indicator .menuitem:active GtkLabel {
     color: @selection_foreground;
 }
 
-.composited-indicator.menuitem:hover GtkLabel {
-    color: shade(@text, 2.0);
-}
-
-.composited-indicator.menuitem:backdrop GtkLabel,
-.composited-indicator.menuitem:backdrop:hover GtkLabel,
-.composited-indicator.menuitem:active:backdrop GtkLabel {
+.composited-indicator .menuitem:backdrop GtkLabel,
+.composited-indicator .menuitem:backdrop:hover GtkLabel,
+.composited-indicator .menuitem:active:backdrop GtkLabel {
     color: @backdrop_text;
 }
 
-.composited-indicator.menuitem:insensitive GtkLabel {
+.composited-indicator .menuitem:insensitive GtkLabel {
     color: @insensitive_text;
 }
 
-.composited-indicator.menuitem:insensitive:backdrop GtkLabel {
+.composited-indicator .menuitem:insensitive:backdrop GtkLabel {
     color: mix(@backdrop_text, @insensitive_text, 0.5);
 }
