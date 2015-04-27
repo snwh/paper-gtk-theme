@@ -21,17 +21,16 @@
  **********/
 
 /* Base colors */
-@define-color base #7b888e;/* Base color */
-@define-color background #6f7b81;/* Background color */
+@define-color base #828B8F;/* Base color */
+@define-color background #636E73;/* Background color */
 @define-color foreground #d3d9dc;/* Foreground color */
 @define-color border shade(@background, 0.8);/* Borders color */
 @define-color separator alpha(#000, 0.1);/* Separator color */
 @define-color text @foreground;/* Text color */
-@define-color panel #454D50;/* Panel color */
-@define-color header #636E73;/* Header color */
-@define-color backdrop_header #5A6367; /* Header backdrop color */
-@define-color header_text alpha(#fff, 0.7);/* Header text color */
-@define-color header_text_dark alpha(#000, 0.3);/* Header text color */
+@define-color panel #3B4245;/* Panel color */
+@define-color header #4F585C;/* Header color */
+@define-color backdrop_header #636e73; /* Header backdrop color */
+@define-color header_text alpha(#000, 0.4);/* Header text color */
 @define-color selection #90a4ae;/* Selection color */
 @define-color view_background @base;/* View background */
 @define-color inactive_frame @border;/* Inactive frame color */

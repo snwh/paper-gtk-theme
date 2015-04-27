@@ -43,4 +43,3 @@ DirectWindow .titlebar:backdrop,
 DirectWindow .header-bar:backdrop {
     background-color: shade(@shotwell,0.9);
 }
-
