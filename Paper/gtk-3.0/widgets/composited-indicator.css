@@ -22,7 +22,7 @@
 
 .composited-indicator {
     background-color: transparent;
-    color: #fff;
+    color: @panel_text;
 }
 
 .composited-indicator > GtkWidget > GtkWidget:first-child {

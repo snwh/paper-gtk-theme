@@ -23,7 +23,8 @@
 GtkCalendar {
     padding: 2px;
     border-radius: 2px;
-    background-color: shade(@background, 0.8)
+    background-color: shade(@background, 0.8);
+    color:@text;
 }
 
 GtkCalendar.view {
