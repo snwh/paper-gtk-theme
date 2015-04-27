@@ -362,7 +362,8 @@
     color: @toolbar_text;
 }
 
-.primary-toolbar.toolbar .entry:focus {
+.primary-toolbar.toolbar .entry:focus,
+.primary-toolbar.toolbar .entry:focus:backdrop {
     color: @toolbar_text;
     border: solid @insensitive_toolbar_text;
     border-bottom-width: 1px;
@@ -381,7 +382,7 @@
     background-color:@toolbar;
     color: @backdrop_toolbar_text;
     border: solid @backdrop_toolbar_text;
-    border-bottom-width: 1px;
+    border-bottom-width: 0;
 }
 
 /* Images */
