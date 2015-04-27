@@ -64,6 +64,7 @@
     color: @header_text;
 }
 
+.header-bar .button.linked .title,
 .header-bar .button.flat .title {
     padding: 0;
 }
@@ -101,7 +102,6 @@
  **********************/
 .header-bar .flat,
 .header-bar .button,
-.header-bar .title,
 .header-bar .titlebutton,
 .header-bar .linked,
 .header-bar .text-button,
