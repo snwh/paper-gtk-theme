@@ -64,6 +64,7 @@
     font: Bold;
 }
 
+.titlebar .button.linked .title,
 .titlebar .button.flat .title {
     padding: 0;
 }
@@ -100,7 +101,6 @@
 
 .titlebar .flat,
 .titlebar .button,
-.titlebar .title,
 .titlebar .titlebutton,
 .titlebar .linked,
 .titlebar .text-button,
