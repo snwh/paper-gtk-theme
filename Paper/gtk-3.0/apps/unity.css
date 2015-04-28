@@ -24,7 +24,7 @@
 @define-color backdrop_unity #5A6367; /* Backdrop Unity window border color */
 @define-color unity_text #dbdee0; /* Unity window text color */
 @define-color backdrop_unity_text #909598; /* Backdrop Unity window text color */
-@define-color unity_panel @unity; /* Unity panel color #454D50 */
+@define-color unity_panel shade(@unity, 0.8); /* Unity panel color #454D50 */
 @define-color backdrop_unity_panel shade(@unity_panel, 1.05); /* Backdrop Unity panel color */
 @define-color unity_panel_text #dbdee0;  /* Unity panel text color */
 @define-color backdrop_unity_panel_text shade(@unity_panel_text, 0.95);  /* Backdrop Unity panel text color */

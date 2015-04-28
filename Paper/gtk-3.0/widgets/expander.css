@@ -2,7 +2,7 @@
  * expander *
  ************/
 .expander {
-	border: alpha(@foreground, 0.7);
+	border: @border;
     color: alpha(@foreground, 0.7);
 }
 

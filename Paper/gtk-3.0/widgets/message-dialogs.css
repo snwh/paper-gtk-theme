@@ -56,6 +56,7 @@
 }
 
 .message-dialog .dialog-action-area .button {
+    border: none;
     border-radius: 0;
     padding: 0;
     font: bold;
@@ -71,64 +72,80 @@
 }
 
 .message-dialog.csd .dialog-action-area .button:hover {
+    border: none;
+    background-image: none;
     background-color: @selection;
     color: @selection_foreground;
 }
 
 .message-dialog.csd .dialog-action-area .button:active,
 .message-dialog.csd .dialog-action-area .button:active:hover {
+    border: none;
     border-radius: 2px;
+    background-image: none;
     background-color: alpha(#000, 0.2);
     color: @text;
 }
 
 .message-dialog.csd .dialog-action-area .button:insensitive {
+    border: none;
+    background-image: none;
     background-color: @insensitive_background;
     color: @insensitive_text;
 }
 
 .message-dialog.csd .dialog-action-area .button:backdrop {
+    border: none;
+    background-image: none;
     background-color: @backdrop_background;
     color: @backdrop_text;
 }
 
 .message-dialog.csd .dialog-action-area .button:backdrop:insensitive {
+    border: none;
+    background-image: none;
     background-color: mix(@insensitive_background, @backdrop_background, 0.5);
     color: mix(@insensitive_text, @backdrop_text, 0.5);
 }
 
 /* Suggested Action Button */
 .message-dialog.csd .dialog-action-area .button.suggested-action {
+    background-image: none;
     border: 0px solid @suggested_action_button;
     background-color: @suggested_action_button;
     color: @suggested_action_button_foreground;
 }
 
 .message-dialog.csd .dialog-action-area .button.suggested-action:hover {
+    background-image: none;
     border: 0px solid shade(@suggested_action_button, 1.2);
     background-color: shade(@suggested_action_button, 1.2);
     color: @suggested_action_button_foreground;
 }
 
 .message-dialog.csd .dialog-action-area .button.suggested-action:active {
+    background-image: none;
     border: 0px solid shade(@suggested_action_button, 1.1);
     background-color: shade(@suggested_action_button, 1.1);
     color: @suggested_action_button_foreground;
 }
 
 .message-dialog.csd .dialog-action-area .button.suggested-action:backdrop {
+    background-image: none;
     border: 0px solid @backdrop_border;
     background-color: @backdrop_background;
     color: @backdrop_text;
 }
 
 .message-dialog.csd .dialog-action-area .button.suggested-action:insensitive {
+    background-image: none;
     border: 0px solid @insensitive_border;
     background-color: @insensitive_background;
     color: @insensitive_text;
 }
 
 .message-dialog.csd .dialog-action-area .button.suggested-action:backdrop:insensitive {
+    background-image: none;
     border: 0px solid mix(@insensitive_border, @backdrop_border, 0.5);
     background-color: mix(@insensitive_background, @backdrop_background, 0.5);
     color: mix(@insensitive_text, @backdrop_text, 0.5);
@@ -137,36 +154,42 @@
 
 /* Destructive Action Button */
 .message-dialog.csd .dialog-action-area .button.destructive-action {
+    background-image: none;
     border: 0px solid @destructive_action_button_border;
     background-color: @destructive_action_button;
     color: @destructive_action_button_foreground;
 }
 
 .message-dialog.csd .dialog-action-area .button.destructive-action:hover {
+    background-image: none;
     border: 0px solid shade(@destructive_action_button_border, 1.1);
     background-color: shade(@destructive_action_button, 1.1);
     color: @destructive_action_button_foreground;
 }
 
 .message-dialog.csd .dialog-action-area .button.destructive-action:active {
+    background-image: none;
     border: 0px solid @destructive_action_button_border;
     background-color: @destructive_action_button;
     color: @destructive_action_button_foreground;
 }
 
 .message-dialog.csd .dialog-action-area .button.destructive-action:backdrop {
+    background-image: none;
     border: 0px solid @backdrop_border;
     background-color: @backdrop_background;
     color: @backdrop_text;
 }
 
 .message-dialog.csd .dialog-action-area .button.destructive-action:insensitive {
+    background-image: none;
     border: 0px solid @insensitive_border;
     background-color: @insensitive_background;
     color: @insensitive_text;
 }
 
 .message-dialog.csd .dialog-action-area .button.destructive-action:backdrop:insensitive {
+    background-image: none;
     border: 0px solid mix(@insensitive_border, @backdrop_border, 0.5);
     background-color: mix(@insensitive_background, @backdrop_background, 0.5);
     color: mix(@insensitive_text, @backdrop_text, 0.5);
@@ -190,6 +213,7 @@
 .message-dialog.csd .dialog-action-area .button.destructive-action:backdrop,
 .message-dialog.csd .dialog-action-area .button.destructive-action:backdrop:insensitive,
 .message-dialog.csd .dialog-action-area .button.destructive-action:insensitive {
+    background-image: none;
     border-left-style: solid;
     border-right-style: none;
     border-bottom-style: none;
