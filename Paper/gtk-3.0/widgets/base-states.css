@@ -21,21 +21,19 @@
  * Base States *
  ***************/
 .background {
-    color: @foreground;
-    background-image: none;
     background-color: @background;
+    color: @foreground;
 }
 
-.background-color:backdrop {
+.background-color:backdrop,
+.background-color:active:backdrop {
     /* I want everything nice and flat in the backdrop window */
-    background-image: none;
     background-color: @backdrop_background;
     color: @backdrop_text;
 }
 
 .background-color:insensitive {
     /* I want everything nice and flat in the backdrop window */
-    background-image: none;
     background-color: @insensitive_background;
     color: @insensitive_text;
 }

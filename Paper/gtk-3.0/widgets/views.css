@@ -45,6 +45,22 @@
 
 
 /********
+ * Misc *
+ ********/
+
+GtkAlignment,
+GtkEventBox {
+    background-color: @background;
+    color: @text;
+}
+
+GtkAlignment:backdrop,
+GtkEventBox:backdrop {
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+}
+
+/********
  * View *
  ********/
 

@@ -136,6 +136,7 @@
 .menuitem .accelerator,
 .menuitem .accelerator:insensitive {
     background: none;
+    color: @insensitive_text;
 }
 
 .menuitem .accelerator:hover,
@@ -149,6 +150,11 @@
     padding-left: 2px;
     padding-right: 2px;
     color: @text;
+}
+
+/* Menu Text */
+.menuitem GtkLabel:insensitive {
+    color: @insensitive_text;
 }
 
 .menu .menuitem GtkLabel,
