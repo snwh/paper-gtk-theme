@@ -1291,6 +1291,7 @@ StScrollBar {
   background-color: #ffffff;
   border: none;
   border-width: 0px;
+  border: 1px solid rgba(0,0,0,0.1);
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.5); }
   .notification-banner:hover, .notification-banner:focus {
     margin: 5px;
