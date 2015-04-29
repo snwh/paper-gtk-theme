@@ -17,8 +17,8 @@
 */
 
 
-@define-color link @selection;
-@define-color backdrop_link @backdrop_text;
+@define-color link #009587;
+@define-color backdrop_link shade(@link, 1.1);
 @define-color visited_link shade(@link, 0.9);
 
 /*********
