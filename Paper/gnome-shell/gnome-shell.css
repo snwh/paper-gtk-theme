@@ -1165,6 +1165,7 @@ StScrollBar {
   background-color: rgba(45, 51,53,0.9);
   background-gradient-direction: none;
   background-image: none;
+  text-shadow: 0 1px rgba(0,0,0,0.2);
   box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.7); }
 
 .app-well-app:hover .overview-icon, .app-well-app:focus .overview-icon, .app-well-app:selected .overview-icon,

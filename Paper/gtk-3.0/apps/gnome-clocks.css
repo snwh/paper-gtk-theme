@@ -32,31 +32,9 @@ ClocksWindow .header-bar:backdrop {
     background-color: shade(@clocks,0.9);
 }
 
-
-/* Switch */
-ClocksWindow .header-bar GtkSwitch.trough:active {
-    background-color: @clocks;
-}
-
-ClocksWindow GtkSwitch.trough:active {
-    border: 1px solid shade(@clocks, 0.8);
-    background-color: @clocks;
-}
-
-ClocksWindow GtkSwitch.slider:active {
-    border: 1px solid shade(@clocks, 0.8);
-} 
-
-ClocksWindow .header-bar GtkSwitch.slider:active:backdrop,
-ClocksWindow .header-bar GtkSwitch.slider:backdrop {
-    background-color: shade(@clocks, 0.9);
-}
-
-
 /**********
  * Frame *
  **********/
-
 
 ClocksWindow > .frame {
     background-color: mix(@foreground, @background, 0.95);
@@ -64,7 +42,7 @@ ClocksWindow > .frame {
 }
 
 ClocksWindow > .frame:backdrop {
-    background-color: mix(@unfocused_foreground, @unfocused_background, 0.95);
+    background-color: mix(@backdrop_foreground, @backdrop_background, 0.95);
     box-shadow: none;
 }
 
@@ -73,7 +51,8 @@ ClocksWindow .clocks-tiles-view {
 }
 
 ClocksWindow .clocks-digital-renderer {
-    background-color: transparent;
+    /*background-color: transparent;*/    
+    color: @text;
 }
 
 ClocksWindow .clocks-digital-renderer.stripe {
@@ -93,31 +72,27 @@ ClocksWindow .clocks-digital-renderer.light.stripe:prelight {
 
 ClocksWindow .clocks-digital-renderer.dark.stripe {
     background-color: rgba(0, 0, 0, 0.4);
-    color: white;
+    color: @text;
 }
 
 ClocksWindow .clocks-digital-renderer.dark.stripe:prelight {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+
 /* alarms */
 
 ClocksWindow .clocks-digital-renderer.active {
-    background-color: transparent;
-    background-image: -gtk-gradient(radial,
-                                    center center, 0,
-                                    center bottom, 1.0,
-                                    from(shade(@selected_background,1.2)), to(@selected_background));
-    color: white;
+    background-color: @selection;
+    background-image: none;
+    color: @selected_foreground;
 }
 
 ClocksWindow .clocks-digital-renderer.active:prelight {
-    background-color: transparent;
-    background-image: -gtk-gradient(radial,
-                                    center center, 0,
-                                    center bottom, 1.0,
-                                    from(shade(@selected_background, 1.4)), to(@selected_background));
-    text-shadow: 0 2px 2px rgba(0,0,0,0.5)
+    background-color: @selection;
+    background-image: none;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: @selected_foreground;
 }
 
 ClocksWindow .clocks-digital-renderer.snoozing {
@@ -125,8 +100,8 @@ ClocksWindow .clocks-digital-renderer.snoozing {
     background-image: -gtk-gradient(radial,
                                     center center, 0,
                                     center bottom, 1.0,
-                                    from(@warning_color), to(shade(@warning_color,0.9)));
-    color: white;
+                                    from(@warning), to(shade(@warning,0.9)));
+    color: @text;
 }
 
 ClocksWindow .clocks-digital-renderer.snoozing:prelight {
@@ -134,8 +109,9 @@ ClocksWindow .clocks-digital-renderer.snoozing:prelight {
     background-image: -gtk-gradient(radial,
                                     center center, 0,
                                     center bottom, 1.0,
-                                    from(shade(@warning_color,1.1)), to(shade(@warning_color,0.99)));
-    text-shadow: 0 2px 2px rgba(0,0,0,0.5)
+                                    from(shade(@warning,1.1)), to(shade(@warning,0.99)));
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: @text;
 }
 
 ClocksWindow .clocks-digital-renderer.inactive {
@@ -191,6 +167,7 @@ ClocksWindow .clocks-spinbutton {
 ClocksWindow .clocks-stopwatch-label,
 ClocksWindow .clocks-timer-label {
     font-size: 48px;
+    color: @text;
 }
 
 ClocksWindow .clocks-analog-frame.trough {
@@ -211,13 +188,13 @@ ClocksWindow .clocks-laps-panel {
 
 ClocksWindow .clocks-laps-panel > .frame:dir(ltr) {
     border-image: linear-gradient(to bottom,
-                                  mix(@borders,@background,0.5))
+                                  mix(@border,@background,0.5))
                   0 0 0 1 / 20px 0px 20px 1px stretch;
 }
 
 ClocksWindow .clocks-laps-panel > .frame:dir(rtl) {
     border-image: linear-gradient(to bottom,
-                                  mix(@borders,@background,0.5))
+                                  mix(@border,@background,0.5))
                   0 1 0 0 / 20px 1px 20px 0px stretch;
 }
 
@@ -231,7 +208,7 @@ ClocksWindow .clocks-laps-panel .list-row {
     padding-right: 20px;
     font-size: 14px;
     border-image: linear-gradient(to bottom,
-                                  mix(@borders,@background,0.5))
+                                  mix(@border,@background,0.5))
                   0 0 1 0 / 0 20px 1px 20px stretch;
 }
 
@@ -248,9 +225,7 @@ ClocksWindow .clocks-laps-panel .lap-time {
 /* disguise insensitive spinbuttons as normal labels */
 ClocksWindow .spinbutton .clocks-timer-label,
 ClocksWindow .spinbutton .clocks-timer-label .button {
-    border-color: transparent;
-    background-image: none;
-    box-shadow: none;
+    color: @foreground;
 }
 
 ClocksWindow .spinbutton .clocks-timer-label,
@@ -259,7 +234,7 @@ ClocksWindow .spinbutton .clocks-timer-label GtkLabel {
 }
 
 ClocksWindow .spinbutton .clocks-timer-label .button {
-    color: transparent;
+    color: @foreground;
 }
 
 @keyframes clocks-blink {

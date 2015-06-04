@@ -29,11 +29,11 @@ BottomRoundness=0
 #The thickness (in pixels) of lines drawn.
 LineWidth=1
 #The color (RGBA) of the outer stroke.
-OuterStrokeColor=211;;212;;213;;214
+OuterStrokeColor=211;;212;;213;;200
 #The starting color (RGBA) of the fill gradient.
-FillStartColor=211;;212;;213;;214
+FillStartColor=211;;212;;213;;200
 #The ending color (RGBA) of the fill gradient.
-FillEndColor=211;;212;;213;;214
+FillEndColor=211;;212;;213;;200
 #The color (RGBA) of the inner stroke.
 InnerStrokeColor=211;;212;;213;;0
 

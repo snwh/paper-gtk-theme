@@ -27,16 +27,15 @@
 @define-color border #D8D8D8;/* Borders color */
 @define-color separator alpha(#000, 0.15);/* Separator color */
 @define-color text @foreground;/* Text color */
-@define-color panel #454D50;/* Panel color */
 @define-color header #636E73;/* Header color */
-@define-color backdrop_header #5A6367; /* Header backdrop color */
+@define-color backdrop_header shade(@header, 0.9);/* Backdrop Header color */
 @define-color header_text #fff;/* Header text color */
 @define-color header_text_dark alpha(#000, 0.3);/* Header text color */
 @define-color selection #dbdee0;/* Selection color */
 @define-color view_background @base;/* View background */
 @define-color inactive_frame @border;/* Inactive frame color */
-@define-color panel_text #dbdee0;/* Panel text color */
-@define-color panel_text_shadow alpha(#000, 0.2);/* Panel text color */
+@define-color panel shade(@header, 0.8);/* Panel color */
+@define-color panel_text #E0E2E3;/* Panel text color */
 @define-color text_shadow alpha(white, 0.4);/* Text shadow */
 @define-color icon_shadow @text_shadow;/* Icon shadow */
 @define-color progress_color #9fb0b9; /* Progressbar color */

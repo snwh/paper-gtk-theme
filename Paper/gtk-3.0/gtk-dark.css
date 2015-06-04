@@ -27,13 +27,13 @@
 @define-color border shade(@background, 0.8);/* Borders color */
 @define-color separator alpha(#000, 0.1);/* Separator color */
 @define-color text @foreground;/* Text color */
-@define-color panel shade(@header, 0.8);/* Panel color */
 @define-color header #3B4245;/* Header color */
-@define-color backdrop_header shade(@header, 0.95); /* Header backdrop color */
+@define-color backdrop_header shade(@header, 0.9); /* Header backdrop color */
 @define-color header_text alpha(#fff, 0.8);/* Header text color */
 @define-color selection #90a4ae;/* Selection color */
 @define-color view_background @base;/* View background */
 @define-color inactive_frame @border;/* Inactive frame color */
+@define-color panel shade(@header, 0.8);/* Panel color */
 @define-color panel_text #A1A8AB;/* Panel text color */
 @define-color panel_text_shadow alpha(#000, 0.2);/* Panel text color */
 @define-color text_shadow alpha(white, 0.4);/* Text shadow */
