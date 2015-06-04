@@ -16,7 +16,21 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/*@define-color geary #ebdd4d;*/
+@define-color geary #fec006;
+
+/**********
+ * Header *
+ **********/
+
+.geary-titlebar-left, .geary-titlebar-right {
+    background-color: @geary;
+}
+
+.geary-titlebar-left .separator { opacity: 0; }
+
+.geary-titlebar-left:backdrop, .geary-titlebar-right:backdrop {
+    background-color: shade(@geary, 0.9);
+}
 
 /*********************
  * Conversation View *
