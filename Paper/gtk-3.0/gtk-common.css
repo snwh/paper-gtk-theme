@@ -22,7 +22,7 @@
 
 /* Insensitive colors */
 @define-color insensitive_base shade(@base, 0.95);
-@define-color insensitive_background shade(@background, 1.01);
+@define-color insensitive_background @background;
 @define-color insensitive_foreground alpha(@foreground, 0.5);
 @define-color insensitive_border shade(@border, 1.1);
 @define-color insensitive_button @insensitive_background;
@@ -37,7 +37,7 @@
 @define-color backdrop_border shade(@border, 1.02);
 @define-color backdrop_separator alpha(@separator, 0.9);
 @define-color backdrop_text shade(@text, 1.1);
-@define-color backdrop_selection shade(@selection, 1.3);
+@define-color backdrop_selection shade(@selection, 0.95);
 
 /* Backdrop-insensitive colors */
 @define-color backdrop_insensitive_border mix(@backdrop_background, @backdrop_border, 0.5);

@@ -98,13 +98,11 @@ GtkDialog .sidebar .view:hover:selected {
 .sidebar .view:hover:selected:backdrop,
 .source-list.view:selected:backdrop,
 .source-list.view:hover:selected:backdrop {
-    background: none;
     color: alpha(@selection, 0.5);
 }
 
 GtkDialog .sidebar .view:selected:backdrop,
 GtkDialog .sidebar .view:hover:selected:backdrop {
-    background: none;
     color: alpha(@selection, 0.5);
 }
 
@@ -149,4 +147,11 @@ GtkDialog .sidebar .view:hover:selected:backdrop {
     background-image: none;
     background-color: alpha(#000, 0.2);
     color: shade (@background, 0.95);
+}
+
+.sidebar .separator {
+    color: @separator;
+}
+.sidebar .separator:backdrop {
+    color: @backdrop_separator;
 }

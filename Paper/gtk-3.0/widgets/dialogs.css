@@ -95,3 +95,7 @@ GtkFileChooserDialog .dialog-action-box {
   border-top: 1px solid @border; }
   GtkFileChooserDialog .dialog-action-box:backdrop {
     border-top-color: @backdrop_border; }
+
+GtkFileChooserDialog .sidebar.view.cell {
+  padding: 0;
+}

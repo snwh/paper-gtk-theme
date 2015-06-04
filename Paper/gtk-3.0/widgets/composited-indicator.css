@@ -42,6 +42,8 @@
 .composited-indicator .menuitem:prelight {
     border-style: none;
     background-image: none;
+    background-color: shade(@panel, 1.05);
+    color: @panel_text;
     box-shadow: none;
 }
 
