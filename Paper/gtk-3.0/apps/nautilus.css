@@ -83,6 +83,9 @@ NautilusWindow .sidebar-row {
 NautilusWindow .sidebar-row:hover {
     background-color: @border;
 }
+NautilusWindow .sidebar-row:selected GtkGrid {
+	background-color: @selection;
+}
 NautilusWindow .sidebar-icon {
     padding: 10px;
 }
