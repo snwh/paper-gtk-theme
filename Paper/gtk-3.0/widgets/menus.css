@@ -29,7 +29,6 @@
 .context-menu,
 .menu,
 .popup {
-    padding: 4px 0;
     border-radius: 2px;
     border-image: none;
     background-color: @background;
@@ -56,10 +55,17 @@
 }
 
 /* Menu Item */
+.menuitem {
+	padding: 6px 4px;
+}
+.menu .menuitem,
+.popup .menuitem {
+	padding: 4px 0px;
+}
+
 .menuitem,
 .menu .menuitem,
 .popup .menuitem {
-    padding: 6px 4px;
     border:none;
 
     -GtkMenuItem-arrow-scaling: 0.5;

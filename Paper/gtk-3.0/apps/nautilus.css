@@ -75,7 +75,20 @@ NautilusWindow .sidebar:backdrop {
     box-shadow: none;
     border-width: 0px;
 }
-
+NautilusWindow .sidebar-row {
+    background-color: @background;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+NautilusWindow .sidebar-row:hover {
+    background-color: @border;
+}
+NautilusWindow .sidebar-row:selected GtkGrid {
+	background-color: @selection;
+}
+NautilusWindow .sidebar-icon {
+    padding: 10px;
+}
 NautilusWindow .sidebar .separator {
     color: @separator
 }
