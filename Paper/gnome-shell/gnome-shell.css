@@ -601,7 +601,7 @@ StScrollBar {
   #panel .panel-button {
     -natural-hpadding: 12px;
     -minimum-hpadding: 6px;
-    min-width; 45px;
+    min-width: 45px;
     font-weight: bold;
     color: #ccc;
     transition-duration: 100ms; }
