@@ -291,7 +291,6 @@
 .notebook tab .button:active,
 .notebook tab .button:hover {
     color: @backdrop_text;
-    border: none;
     background-image: none;
     background: none;
     border-radius: 4px;
