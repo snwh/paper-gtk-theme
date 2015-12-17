@@ -1,6 +1,6 @@
 # Spec file for package paper-gtk-theme
 #
-# Copyright (c) 2014 Sam Hewitt <hewittsamuel@gmail.com>
+# Copyright (c) 2015 Sam Hewitt <sam@snwh.org>
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -13,32 +13,33 @@
 #
 
 
-Name:		paper-gtk-theme
-Version:	1.0
-Release:	0
+# GitHub Stuff
+%global commit0 40-CHARACTER-HASH-VALUE
 
-Summary:	Paper GTK Theme
+name:       paper-gtk-theme
+version:    1.0
+release:    1
+
+Summary:    Paper GTK Theme
+Group:      System/GUI/Other
 License:    GPL-3.0+
-
-Group:      System/GUI/GNOME
-Url:        http://www.mokaproject.com/paper-gtk-theme
-Source0:	%{name}-%{version}.tar.gz
-
-BuildArch:	noarch
+Url:        http://samuelhewitt.com/paper/theme
+Source0:    https://github.com/snwh/%{name}/archive/%{commit0}.tar.gz
+Requires:   gtk2-engines
+BuildArch:  noarch
 
 
 %description
-Paper GTK3 Theme
+Paper GTK Theme
 
 %prep
-%setup -q
+%setup -qn %{name}-%{commit0}
 
 %build
 
 %install
 install -dpm 0755 $RPM_BUILD_ROOT%{_datadir}/themes/
 cp -a Paper/ $RPM_BUILD_ROOT%{_datadir}/themes/
-cp -a Paper-Dark/ $RPM_BUILD_ROOT%{_datadir}/themes/
 
 %files
 %doc AUTHORS LICENSE
