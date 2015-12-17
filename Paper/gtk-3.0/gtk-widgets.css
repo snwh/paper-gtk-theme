@@ -40,7 +40,7 @@
     -GtkWindow-resize-grip-width: 0;
     -GtkWindow-resize-grip-height: 0;
 
-    padding: 0;
+    /*padding: 0;*/
     background-color: inherit;
     color: inherit;
 /*    outline-color: rgba(46, 52, 54, 0.3);
