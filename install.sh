@@ -91,14 +91,20 @@ elif [ "$UID" -ne "$ROOT_UID" ]; then
 		cp -R ./Paper/ $HOME/.local/share/themes/
 	fi
 	# .themes
-	if [ -d $HOME/.themes ]; then
-		cp -R ./Paper/ $HOME/.themes/
-	else
-		mkdir -p $HOME/.themes
-		cp -R ./Paper/ $HOME/.themes/
-	fi
-	echo "Installation complete!"
-	set
+    echo
+	show_question '\tInstall to the GTK-2.0 location too? (Y)es, (N)o : ' 
+	echo
+	read INPUT
+	case $INPUT in
+		[Yy]* )
+            install -d $HOME/.themes
+            cp -R ./Paper/ $HOME/.themes/
+            ;;
+		[Nn]* );;
+        * ) clear; show_error '\tSorry, try again.'; main;;
+    esac
+    echo "Installation complete!"
+    set
 fi
 }
 
