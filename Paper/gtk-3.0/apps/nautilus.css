@@ -189,11 +189,11 @@ NautilusCanvasView:backdrop {
 
 .nautilus-canvas-item.dim-label:selected,
 .nautilus-list-dim-label:selected {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .nautilus-desktop.nautilus-canvas-item {
-    color: @selected_foreground;
+    color: @selection_foreground;
     text-shadow: 1px 1px black;
 }
 
@@ -202,7 +202,7 @@ NautilusCanvasView:backdrop {
 }
 
 .nautilus-desktop.nautilus-canvas-item:selected {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .nautilus-desktop.nautilus-canvas-item:active,
@@ -221,12 +221,12 @@ NautilusCanvasView:backdrop {
 .nautilus-desktop.nautilus-canvas-item:backdrop
 .nautilus-desktop.nautilus-canvas-item:selected {
     background-color: @selected_background;
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .nautilus-desktop.nautilus-canvas-item:selected:backdrop {
     background-color: @backdrop_selected_background;
-    color: @backdrop_selected_foreground;
+    color: @backdrop_selection_foreground;
 }
 
 .nautilus-desktop.nautilus-canvas-item:active,

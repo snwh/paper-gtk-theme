@@ -61,7 +61,7 @@
 }
 
 *:selected *:link:active, *:selected .button:active:link, *:selected .button:active:visited {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 *:link:backdrop, .button:backdrop:link, .button:backdrop:visited, *:link:backdrop:hover, .button:backdrop:hover:link, .button:backdrop:hover:visited, *:link:backdrop:hover:selected, .button:backdrop:hover:selected:link, .button:backdrop:hover:selected:visited, .titlebar.selection-mode .subtitle:backdrop:hover:link,

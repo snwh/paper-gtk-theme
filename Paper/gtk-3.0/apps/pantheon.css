@@ -206,7 +206,7 @@ NoiseWidgetsTileView {
 .search-item:focus {
     border-radius: 0;
     background-color: alpha(@selection, 0.7);
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
   
 

@@ -49,14 +49,14 @@
 .tile:active:hover {
     border: 1px solid shade(@selection, 1.1);
     background-color: shade(@selection, 1.2);
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 /* Active (Pressed) Button */
 .tile:active {
     border: 1px solid @selection;
     background-color: shade(@selection, 1.1);
-    color: @selected_foreground;
+    color: @selection_foreground;
 
 }
 
@@ -95,7 +95,7 @@
 .tile:active GtkImage,
 .tile:focus GtkImage,
 .tile:hover GtkImage {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .tile:backdrop GtkImage,
@@ -123,7 +123,7 @@
 .tile:active GtkLabel,
 .tile:focus GtkLabel,
 .tile:hover GtkLabel {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .tile:backdrop GtkLabel,

@@ -21,121 +21,13 @@
  ***********/
  
 .list-row {
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border-radius: 0px;
-    border:none;
-    background-image: none;
-    background-color: @base;
+    padding: 5px 8px;
+    border-width: 0px;
+    background: none;
     color: @text;
 }
 
-/* Focus */
-.list-row:focus,
-.list-row:active:focus {
-    border:none;
-    background-image: none;
-    background-color: @background;
-    color: @text;
-}
-
-/* Hover */
-.list-row:hover,
-.list-row:active:hover {
-    border:none;
-    background-image: none;
-    background-color: alpha(@selection, 0.3);
-    color: @selected_foreground;
-}
-
-/* Active (Pressed) */
-.list-row:active {
-    border:none;
-    background-image: none;
-    background-color: @selection;
-    color: @selected_foreground;
-}
-
-/* Selected */
 .list-row:selected {
-    border:none;
-    background-image: none;
-    background-color: shade(@selection, 1.1);
-    color: @selected_foreground;
-}
-
-/* Selected:Hover; */
-.list-row:selected:hover {
-    border:none;
-    background-image: none;
-    background-color: shade(shade(@selection, 1.1), 1.1);
-    color: @selected_foreground;
-}
-
-/* Insensitive */
-.list-row:insensitive {
-    border:none;
-    background-color: @insensitive_background;
-    background-image: none;
-    color: @insensitive_text;
-}
-
-/* Backdrop */
-.list-row:backdrop {
-    border:none;
-    background-image: none;
-    background-color: @backdrop_background;
-    color: @backdrop_text;
-}
-
-/* Active:Backdrop */
-.list-row:active:backdrop {
-    border:none;
-    background-image: none;
-    background-color: shade(@selection, 0.9);
-    color: @backdrop_text;
-}
-
-/* Backdrop:Hover; */
-.list-row:backdrop:hover {
-    background-image: none;
-    background-color: shade(@base, 0.96);
-    color: @backdrop_text;
-}
-
-/* Insensitive:Backdrop */
-.list-row:insensitive:backdrop {
-    border:none;
-    background-color: @insensitive_background;
-    background-image: none;
-    color: @insensitive_text;
-}
-
-/* Images */
-.list-row GtkImage,
-.list-row:focus GtkImage,
-.list-row:hover GtkImage {
-    color: @text;
-}
-
-.list-row:selected GtkImage,
-.list-row:active GtkImage {
-    color: @selected_foreground;
-}
-
-.list-row:backdrop GtkImage,
-.list-row:backdrop:hover GtkImage,
-.list-row:active:backdrop GtkImage {
-    color: @backdrop_text;
-    -gtk-image-effect: dim;
-}
-
-.list-row:insensitive GtkImage {
-    color: @insensitive_text;
-    -gtk-image-effect: dim;
-}
-
-.list-row:insensitive:backdrop GtkImage {
-    color: mix(@backdrop_text, @insensitive_text, 0.5);
-    -gtk-image-effect: dim;
+    background-color: @selection;
+    color: @selection_foreground;
 }

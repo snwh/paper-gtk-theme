@@ -69,7 +69,7 @@
 .menubar .menuitem:active GtkImage,
 .menubar .menuitem:focus GtkImage,
 .menubar .menuitem:hover GtkImage {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .menubar .menuitem:backdrop GtkImage,
@@ -97,7 +97,7 @@
 .menubar .menuitem:active GtkLabel,
 .menubar .menuitem:focus GtkLabel,
 .menubar .menuitem:hover GtkLabel {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 
@@ -127,7 +127,7 @@
 .menubar .menu .menuitem:active GtkImage,
 .menubar .menu .menuitem:focus GtkImage,
 .menubar .menu .menuitem:hover GtkImage {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .menubar .menu .menuitem:backdrop GtkImage,
@@ -155,7 +155,7 @@
 .menubar .menu .menuitem:active GtkLabel,
 .menubar .menu .menuitem:focus GtkLabel,
 .menubar .menu .menuitem:hover GtkLabel {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .menubar .menu .menuitem:backdrop GtkLabel,

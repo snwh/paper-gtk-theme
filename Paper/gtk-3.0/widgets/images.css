@@ -23,7 +23,7 @@
 *:active GtkImage,
 *:focus GtkImage,
 *:hover GtkImage {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 *:backdrop GtkImage,
@@ -57,7 +57,7 @@
 
 .image:selected,
 .image:selected:hover {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .view.image:backdrop,
@@ -76,5 +76,5 @@
 
 .view.image:selected,
 .view.image:selected:hover {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }

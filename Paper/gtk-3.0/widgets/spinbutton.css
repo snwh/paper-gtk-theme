@@ -100,7 +100,7 @@
 .spinbutton:active GtkLabel,
 .spinbutton:focus GtkLabel,
 .spinbutton:hover GtkLabel {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .spinbutton:backdrop GtkLabel,

@@ -52,12 +52,12 @@ GtkCheckButton:selected:focus {
 }
 
 .check:selected {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 
 .check:selected:backdrop {
-    color: @backdrop_selected_foreground;
+    color: @backdrop_selection_foreground;
 }
 
 /*****************
@@ -73,7 +73,7 @@ GtkCheckButton:selected:focus {
 }
 
 .radio:selected {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .radio:backdrop {
@@ -85,7 +85,7 @@ GtkCheckButton:selected:focus {
 }
 
 .radio:selected:backdrop {
-    color: @backdrop_selected_foreground;
+    color: @backdrop_selection_foreground;
 }
 
 /* Symbolic Radio */

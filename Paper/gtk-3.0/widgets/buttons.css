@@ -89,7 +89,7 @@ GtkCalendar.button:backdrop:hover,
                                       shade(@selection, 1.1),
                                       shade(shade(@selection, 1.1), 0.98)
                                       );
-    color: @selection;
+    color: @selection_foreground;
 }
 
 /* Hover Button */
@@ -104,6 +104,7 @@ GtkCalendar.button:backdrop:hover,
                                       shade(@selection, 1.2),
                                       shade(shade(@selection, 1.2), 0.98)
                                       );
+    color: @selection_foreground;
 }
 
 /* Active (Pressed) Button */
@@ -117,7 +118,7 @@ GtkCalendar.button:backdrop:hover,
                                       shade(@selection, 1.1),
                                       shade(shade(@selection, 1.1), 0.95)
                                       );
-    color: @selected_foreground;
+    color: @selection_foreground;
 
 }
 
@@ -248,7 +249,7 @@ GtkOverlay > .button:focus:active {
 .button.affirmative,
 .content-view .button.affirmative {
     background-color: shade(@selected_background, 1.08);
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .button.affirmative:hover,
@@ -268,5 +269,5 @@ GtkOverlay > .button:focus:active {
 
 .button.affirmative GtkLabel,
 .button.affirmative Gtklabel:prelight {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }

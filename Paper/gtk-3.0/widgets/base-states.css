@@ -47,13 +47,13 @@ GtkClutterOffscreen {
 *:selected,
 *:selected:focus {
     background-color: @selection;
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 *:selected:backdrop {
     /* I would like to remove colors from the backdrop state, next release*/
     background-color: @backdrop_selected_background;
-    color: @backdrop_selected_foreground;
+    color: @backdrop_selection_foreground;
 }
 
 *:insensitive {
@@ -98,7 +98,7 @@ GtkClutterOffscreen {
 
 .gtkstyle-fallback:selected {
     background-color: @selection;
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 GtkImage,

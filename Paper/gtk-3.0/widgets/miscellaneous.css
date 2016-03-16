@@ -69,7 +69,7 @@ GtkBubbleWindow .toolbar {
 
 .dim-label:selected,
 .dim-label:selected:focus {
-    color: mix(@selected_foreground, @selection, 0.5);
+    color: mix(@selection_foreground, @selection, 0.5);
 }
 
 .dnd {

@@ -142,7 +142,7 @@ GeditViewFrame .gedit-search-slider .not-found {
 
 GeditViewFrame .gedit-search-slider .not-found:selected {
     background-color: @selected_background;
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 GeditFileBrowserWidget .primary-toolbar.toolbar  {

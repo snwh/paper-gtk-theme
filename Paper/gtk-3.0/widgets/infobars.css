@@ -88,12 +88,12 @@ GtkInfoBar GtkLabel:insensitive {
 GtkInfoBar .button,
 GtkInfoBar .button:focus,
 .dynamic-notebook GtkInfoBar .button {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 GtkInfoBar .button:active,
 GtkInfoBar .button:hover:active {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 GtkInfoBar .button:insensitive {

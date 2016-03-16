@@ -43,14 +43,14 @@
     font-size: 80%;
     background-color: @selection;
     border-radius: 4px;
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .popular-installed-overlay-box {
     font-size: 80%;
     background-color: @selection;
     border-radius: 0;
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 .index-title-alignment-software {
@@ -190,8 +190,8 @@ GtkBox.star {
 }
 
 .counter-label {
-    color: @selected_foreground;
-    background-color: mix(@selection, @selected_foreground, 0.3);
+    color: @selection_foreground;
+    background-color: mix(@selection, @selection_foreground, 0.3);
     font-size: smaller;
     border-radius: 4px;
     padding: 0px 4px;

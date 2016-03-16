@@ -54,7 +54,7 @@ GtkCalendar.button:insensitive:backdrop {
 .highlight,
 GtkCalendar.highlight {
     background-color: @selection;
-    color: @selected_foreground;
+    color: @selection_foreground;
     border-radius: 0;
     padding: 0;
     border-width: 0;

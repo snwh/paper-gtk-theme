@@ -85,14 +85,14 @@ ClocksWindow .clocks-digital-renderer.dark.stripe:prelight {
 ClocksWindow .clocks-digital-renderer.active {
     background-color: @selection;
     background-image: none;
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 ClocksWindow .clocks-digital-renderer.active:prelight {
     background-color: @selection;
     background-image: none;
     text-shadow: 0 2px 2px rgba(0,0,0,0.5);
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 ClocksWindow .clocks-digital-renderer.snoozing {

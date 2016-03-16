@@ -127,7 +127,7 @@ MathButtons .button GtkImage {
 MathButtons .button:active GtkImage,
 MathButtons .button:focus GtkImage,
 MathButtons .button:hover GtkImage {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 MathButtons .button:backdrop GtkImage,
@@ -150,7 +150,7 @@ MathButtons .button GtkLabel {
 MathButtons .button:active GtkLabel,
 MathButtons .button:focus GtkLabel,
 MathButtons .button:hover GtkLabel {
-    color: @selected_foreground;
+    color: @selection_foreground;
 }
 
 MathButtons .button:backdrop GtkLabel,
