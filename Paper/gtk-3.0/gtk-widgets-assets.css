@@ -273,54 +273,6 @@
     background: url("assets/scalable/resize-grip.svg");
 }
 
-/*************
- * GtkSwitch *
- *************/
-
-
-GtkSwitch.trough {
-    background: -gtk-scaled(url("assets/scalable/switch-off.svg"),url("assets/scalable/switch-off@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
-}
-
-GtkSwitch.trough:active {
-    background: -gtk-scaled(url("assets/scalable/switch-on.svg"),url("assets/scalable/switch-on@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
-}
-
-GtkSwitch.trough:insensitive {
-    background: -gtk-scaled(url("assets/scalable/switch-off-disabled.svg"),url("assets/scalable/switch-off-disabled@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
-}
-
-GtkSwitch.trough:active:insensitive {
-    background: -gtk-scaled(url("assets/scalable/switch-on-disabled.svg"),url("assets/scalable/switch-on-disabled@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
-}
-
-GtkSwitch.slider {
-    background: -gtk-scaled(url("assets/scalable/switch-slider.svg"),url("assets/scalable/switch-slider@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
-}
-
-GtkSwitch.slider:focus {
-    background: -gtk-scaled(url("assets/scalable/switch-slider.svg"),url("assets/scalable/switch-slider@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
-}
-
-GtkSwitch.slider:insensitive {
-    background: -gtk-scaled(url("assets/scalable/switch-slider-insensitive.svg"),url("assets/scalable/switch-slider-insensitive@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
-}
-
-
 /*********************
  * GtkScale's slider *
  *********************/

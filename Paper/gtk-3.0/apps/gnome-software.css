@@ -38,7 +38,7 @@
     background-color: @tag;
     background: @tag;
     border:none;
-    color: shade(@tag. 0.8);
+    color: shade(@tag, 0.8);
 }
 
 .kudo-label.label {

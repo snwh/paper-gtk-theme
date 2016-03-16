@@ -16,8 +16,10 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/* Slider colors */
-@define-color slider_border @trough_border;
+@define-color switch_trough_active #9fb0b9;
+
+@define-color switch_slider #ffffff;
+@define-color switch_slider_border @trough_border;
 @define-color backdrop_slider_border @backdrop_trough_border;
 
 
@@ -25,73 +27,52 @@
  * GtkSwitch *
  *************/
 
-/*GtkSwitch {
-    font: condensed;
+GtkSwitch {
+    font: 1;
+    /*min-height: 24px;
+    min-width: 24px; FIXME: Uncomment for 3.19 */
+    -GtkSwitch-slider-width: 20;
+    -GtkSwitch-slider-height: 20;
+    transition: all 200ms ease-in;
 }
 
 GtkSwitch.trough {
-    border-radius: 1em;    
-    border: 1px solid @trough_border;
-    background-color: @background;
-    color: @trough_border;
+    background-color: alpha (#000, 0.2);
+    border: none;
+    border-radius: 14px;
+    color: transparent;
+    padding: 2px;
 }
 
 GtkSwitch.trough:active {
-    border: 1px solid @selection;
-    background-color: alpha(@selection, 0.2);
-    color: @selection;
+    background-color: @switch_trough_active;
 }
 
-GtkSwitch.trough:backdrop,
-GtkSwitch.trough:active:backdrop {
-    border: 1px solid @backdrop_trough_border;
-    background-color: @backdrop_background;
-    color: @backdrop_trough_border;
+GtkSwitch.trough:insensitive {
+    background-color: alpha (#000, 0.2);
 }
 
-GtkSwitch.trough:insensitive,
+GtkSwitch.trough:active:backdrop,
 GtkSwitch.trough:active:insensitive {
-    background: none;
-    border: 1px solid @insensitive_text;
-    color: @insensitive_text;
+    background-color: alpha (@switch_trough_active, 0.5);
 }
 
 GtkSwitch.slider {
-    background-color: @slider_border;
+    background-color: @switch_slider;
+    border: none;
+    border-radius: 50%;
+
+    box-shadow: 0 2px 2px alpha (#000, 0.2),
+                0 1px 2px alpha (#000, 0.2);
+    padding: 2px;
 }
 
-GtkSwitch.slider:active {
-    background-color: @selection;
+GtkSwitch.slider:focus {
+    background-color: @switch_slider;
 }
 
-GtkSwitch.slider:active:insensitive,
-GtkSwitch.slider:insensitive {
-    background-color: @insensitive_text;
-}
-
-GtkSwitch.slider:active:backdrop,
+GtkSwitch.slider:insensitive,
 GtkSwitch.slider:backdrop {
-    background-color: @backdrop_slider_border;
-}*/
-
-
-GtkSwitch {
-    font: 1;
-    border: none;
-    -GtkSwitch-slider-width: 46;
-}
-
-GtkSwitch.trough {
-    color: transparent;
-    border: none;
+    background-color: @switch_slider;
     box-shadow: none;
-}
-
-GtkSwitch:backdrop,
-GtkSwitch:insensitive,
-GtkSwitch:backdrop:insensitive,
-GtkSwitch.trough:backdrop,
-GtkSwitch.trough:insensitive,
-GtkSwitch.trough:backdrop:insensitive {
-    border: none;
 }
