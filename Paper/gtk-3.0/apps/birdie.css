@@ -34,17 +34,16 @@ BirdieWidgetsUnifiedWindow .header-bar:backdrop {
 
 
 
-/**********
- * Custom *
- **********/
+BirdieWidgetsTweetList * {
+    background-image: none;
+    background: none;
+}
 
 BirdieWidgetsUserbox {
 	background-color: alpha(@birdie, 0.2)
 }
 
-/************
- * Notebook *
- ************/
+/* Notebook */
 BirdieWidgetsNotebook
 BirdieWidgetsNotebook .notebook .header,
 BirdieWidgetsNotebook .dynamic-notebook .header {

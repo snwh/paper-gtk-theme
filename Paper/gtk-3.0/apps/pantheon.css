@@ -17,15 +17,6 @@
 */
 
 
-/**********
- * Birdie *
- *********/
-
-BirdieWidgetsTweetList * {
-    background-image: none;
-    background: none;
-}
-
 /********
  * Gala *
  *******/
@@ -99,49 +90,6 @@ BirdieWidgetsTweetList * {
 .notify .critical {
 }
 
-/********
-* Files *
-********/
-.pathbar .entry:focus,
-.marlin-pathbar .pathbar .entry:focus {
-    padding: 0px;
-    border-radius: 2px;
-    background-color: @base;
-    color: @text;
-    border: 1px solid @selection;
-    box-shadow:inset 0 1px 1px 0 alpha(#000, 0.1);
-}
-
-.pathbar .entry:active,
-.marlin-pathbar .pathbar .entry:active {
-    padding: 0px;
-    border-radius: 2px;
-    background-color: @base;
-    color: @text;
-    border: 1px solid @selection;
-    box-shadow:inset 0 1px 1px 0 alpha(#000, 0.1);
-}
-
-.marlin-pathbar,
-.marlin-pathbar .pathbar .entry .button.raised {
-    background-color: red;
-    color: red;
-}
-
-
-/**********
- * Noise *
- *********/
-
-NoiseWidgetsTileView {
-    background-color: @base;
-    color: @foreground;
-}
-
-.tile-view {
-    background-color: @base;
-    color: @foreground;
-}
 
 /***************
  * SwitchBoard *
@@ -226,14 +174,6 @@ NoiseWidgetsTileView {
     color: @foreground;
 }
 
-/*********
- * Tweet *
- ********/
-
-.tweet {
-    padding: 0;
-    box-shadow: none;
-}
 
 /************
  * Terminal *
@@ -243,14 +183,6 @@ PantheonTerminalPantheonTerminalWindow.background {
    background: none;
 }
 
-/**********
- * Noise *
- **********/
-
-NoiseTopDisplay .seek-bar {
-    background-color: @header;
-    color: @header_text;
-}
 
 /*********
  * Panel *

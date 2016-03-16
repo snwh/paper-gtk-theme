@@ -16,33 +16,31 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color noise #EE6020;
-
-/**********
- * Header *
- **********/
-
-NoiseLibraryWindow .titlebar,
-NoiseLibraryWindow .header-bar {
-    background-color: @noise;
-}
-
-NoiseLibraryWindow .titlebar:backdrop,
-NoiseLibraryWindow .header-bar:backdrop {
-    background-color: shade(@noise,0.9);
-}
-
-NoiseWidgetsTileView {
+/********
+* Files *
+********/
+.pathbar .entry:focus,
+.marlin-pathbar .pathbar .entry:focus {
+    padding: 0px;
+    border-radius: 2px;
     background-color: @base;
-    color: @foreground;
+    color: @text;
+    border: 1px solid @selection;
+    box-shadow:inset 0 1px 1px 0 alpha(#000, 0.1);
 }
 
-.tile-view {
+.pathbar .entry:active,
+.marlin-pathbar .pathbar .entry:active {
+    padding: 0px;
+    border-radius: 2px;
     background-color: @base;
-    color: @foreground;
+    color: @text;
+    border: 1px solid @selection;
+    box-shadow:inset 0 1px 1px 0 alpha(#000, 0.1);
 }
 
-NoiseTopDisplay .seek-bar {
-    background-color: @header;
-    color: @header_text;
+.marlin-pathbar,
+.marlin-pathbar .pathbar .entry .button.raised {
+    background-color: red;
+    color: red;
 }
