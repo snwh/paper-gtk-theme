@@ -23,7 +23,7 @@
 
 .frame {
     background: none;
-    border: 0px solid @border;
+    border: 1px solid @border;
     color: @foreground;
 }
 

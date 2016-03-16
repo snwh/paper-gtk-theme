@@ -16,7 +16,7 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color contacts #2095F2;
+@define-color gnomeContacts #2095F2;
 
 /**********
  * Header *
@@ -24,30 +24,30 @@
 
 ContactsWindow .titlebar,
 ContactsWindow .header-bar {
-    background-color: @contacts;
+    background-color: @gnomeContacts;
 }
 
 ContactsWindow .titlebar:backdrop,
 ContactsWindow .header-bar:backdrop {
-    background-color: shade(@contacts,0.9);
+    background-color: shade(@gnomeContacts,0.9);
 }
 
 
 /* Switch */
 ContactsWindow .header-bar GtkSwitch.trough:active {
-    background-color: @contacts;
+    background-color: @gnomeContacts;
 }
 
 ContactsWindow GtkSwitch.trough:active {
-    border: 1px solid shade(@contacts, 0.8);
-    background-color: @contacts;
+    border: 1px solid shade(@gnomeContacts, 0.8);
+    background-color: @gnomeContacts;
 }
 
 ContactsWindow GtkSwitch.slider:active {
-    border: 1px solid shade(@contacts, 0.8);
+    border: 1px solid shade(@gnomeContacts, 0.8);
 } 
 
 ContactsWindow .header-bar GtkSwitch.slider:active:backdrop,
 ContactsWindow .header-bar GtkSwitch.slider:backdrop {
-    background-color: shade(@contacts, 0.9);
+    background-color: shade(@gnomeContacts, 0.9);
 }

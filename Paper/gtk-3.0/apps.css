@@ -35,12 +35,13 @@
 @import url("apps/gedit.css");
 @import url("apps/gnome.css");
 @import url("apps/gnome-clocks.css");
+@import url("apps/gnome-calendar.css");
 @import url("apps/gnome-contacts.css");
 @import url("apps/gnome-disks.css");
 @import url("apps/gnome-documents.css");
 @import url("apps/gnome-music.css");
 @import url("apps/gnome-photos.css");
-/*@import url("apps/gnome-software.css");*/
+@import url("apps/gnome-software.css");
 @import url("apps/gnome-system-monitor.css");
 @import url("apps/gnome-tweak-tool.css");
 @import url("apps/gnome-weather.css");

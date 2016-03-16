@@ -52,7 +52,7 @@
     color: @insensitive_header_text;
 }
 
-/* Title */
+/* Text */
 .title,
 .header-bar .title {
     padding: 0;
@@ -91,6 +91,12 @@
 .header-bar .subtitle:backdrop GtkLabel,
 .header-bar .subtitle:backdrop GtkImage  {
     color: alpha(@backdrop_header_text,0.8);
+}
+
+/* Counter */
+.header-bar .label.counter-label {
+    background-color: alpha(@header_text,0.5);
+    color:@header_text;
 }
 
 /*Images*/
@@ -199,7 +205,6 @@
 .header-bar .suggested-action .button:checked,
 .header-bar .button.text-button:checked,
 .header-bar .titlebutton:checked {
-    font: Bold;
     background-image: none;
     border: none;
     border-radius: 0px;

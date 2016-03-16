@@ -16,7 +16,7 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color clocks #4BAE4F;
+@define-color gnomeClocks #4BAE4F;
 
 /**********
  * Header *
@@ -24,12 +24,12 @@
 
 ClocksWindow .titlebar,
 ClocksWindow .header-bar {
-    background-color: @clocks;
+    background-color: @gnomeClocks;
 }
 
 ClocksWindow .titlebar:backdrop,
 ClocksWindow .header-bar:backdrop {
-    background-color: shade(@clocks,0.9);
+    background-color: shade(@gnomeClocks,0.9);
 }
 
 /**********
