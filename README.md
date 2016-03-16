@@ -1,7 +1,7 @@
 Paper Theme
 ===========
 
-[Paper](http://snwh.org/paper/) is a modern desktop theme suite. Its design is mostly flat with a minimal use of shadows for depth.
+Paper is a modern desktop theme suite. Its design is mostly flat with a minimal use of shadows for depth.
 
 Paper has been developed primarily with modern GTK3 (GNOME-based) desktop environments in mind, legacy-toolkit and GTK2 environments will not provide an ideal experience, as much of the visual design relies on modern GTK3+ widgets.
 
@@ -9,7 +9,7 @@ Paper is distributed under the terms the GNU General Public License (GNU GPL v.3
 
 ###Getting Paper
 
-You can download the Paper [here](https://github.com/snwh/paper-gtk-theme/archive/master.zip) or it clone from the [git repository](https://github.com/snwh/paper-gtk-theme).
+You can download the Paper [here](http://snwh.org/paper) or it clone from the [git repository](https://github.com/snwh/paper-gtk-theme).
 
 ###Building Paper
 
