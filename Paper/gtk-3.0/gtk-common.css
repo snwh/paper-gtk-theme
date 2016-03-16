@@ -64,7 +64,7 @@
 /* Selected color */
 @define-color selected_background @selection;
 @define-color selected_border shade(@selection, 0.9);
-@define-color selected_foreground shade(@selection, 0.3);
+@define-color selected_foreground alpha(#000, 0.3);
 @define-color selection_foreground @selected_foreground;
 
 /****************

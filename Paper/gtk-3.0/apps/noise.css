@@ -16,34 +16,18 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color shotwell #66416A;
+@define-color noise #FF7D2A;
 
 /**********
  * Header *
  **********/
 
-/* Library */
-LibraryWindow .titlebar,
-LibraryWindow .header-bar {
-    background-color: @shotwell;
+NoiseLibraryWindow .titlebar,
+NoiseLibraryWindow .header-bar {
+    background-color: @noise;
 }
 
-LibraryWindow .titlebar:backdrop,
-LibraryWindow .header-bar:backdrop {
-    background-color: shade(@shotwell,0.9);
-}
-
-/* Viewer */
-DirectWindow .titlebar,
-DirectWindow .header-bar {
-    background-color: @shotwell;
-}
-
-DirectWindow .titlebar:backdrop,
-DirectWindow .header-bar:backdrop {
-    background-color: shade(@shotwell,0.9);
-}
-
-.the-button-in-the-combobox {
-	background: none;
+NoiseLibraryWindow .titlebar:backdrop,
+NoiseLibraryWindow .header-bar:backdrop {
+    background-color: shade(@noise,0.9);
 }

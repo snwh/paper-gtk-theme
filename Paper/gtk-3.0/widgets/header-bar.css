@@ -106,22 +106,17 @@
 .header-bar *:backdrop GtkImage,
 .header-bar *:backdrop:hover GtkImage,
 .header-bar *:active:backdrop GtkImage {
-    color: shade(@header_text, 1.1);
-    /*-gtk-image-effect: dim;*/
+    color: @header_text;
+    -gtk-image-effect: dim;
 }
 
 .header-bar *:insensitive GtkImage
+.header-bar *:backdrop:insensitive GtkImage,
 .header-bar *:insensitive:backdrop GtkImage {
     color: @header_text;
     -gtk-image-effect: dim;
 }
 
-
-/* Separator */
-.header-bar .separator {
-    background: none;
-    color: @separator;
-}
 
 /* Buttons */
 .header-bar .button,
@@ -136,6 +131,7 @@
     border-radius: 0px;
     border: none;
     box-shadow: none;
+    text-shadow: none;
     padding: 10px 12px;
     color: @header_text;
 }
@@ -152,6 +148,7 @@
     border-radius: 0px;
     border: none;
     box-shadow: none;
+    text-shadow: none;
     background-color: alpha(#000,0.1);
     color: @header_text;
 }
@@ -169,6 +166,7 @@
     border-radius: 0px;
     border: none;
     box-shadow: none;
+    text-shadow: none;
     color: shade(@header_text, 1.1);
 }
 
@@ -185,6 +183,7 @@
     border-radius: 0px;
     border: none;
     box-shadow: none;
+    text-shadow: none;
     color: alpha(@header_text, 0.5);
 }
 
@@ -201,6 +200,7 @@
     border: none;
     border-radius: 0px;
     box-shadow: none;
+    text-shadow: none;
     background-color: alpha(#000,0.1);
     color: @header_text;
     box-shadow:inset 0 -2px 0 0 @header_text;
@@ -225,6 +225,7 @@
     border: none;
     border-radius: 0px;
     box-shadow: none;
+    text-shadow: none;
     background-color: alpha(#000,0.1);
     color: @header_text;
 }

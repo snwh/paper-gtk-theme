@@ -46,6 +46,7 @@
 @import url("apps/logs.css");
 @import url("apps/midori.css");
 @import url("apps/nautilus.css");
+@import url("apps/noise.css");
 @import url("apps/pantheon.css");
 @import url("apps/rhythmbox.css");
 @import url("apps/scratch-text-editor.css");
@@ -55,5 +56,6 @@
 @import url("apps/synaptic.css");
 @import url("apps/terminal.css");
 @import url("apps/unity.css");
+@import url("apps/vocal.css");
 @import url("apps/xfce.css");
 @import url("apps/yelp.css");
