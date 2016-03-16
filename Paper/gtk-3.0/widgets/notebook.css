@@ -1,4 +1,4 @@
-/* Copyright 2015 Sam Hewitt.
+/* Copyright 2016 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -126,6 +126,7 @@
 .notebook tab {
     /*border: none;*/
     border-radius: 0;
+    padding-top: 3px;
     background: @background;
     color: @foreground;
 }
@@ -185,30 +186,30 @@
 
 /* Active */
 .notebook tab.top:active {
-    box-shadow:inset 0 -3px 0 0 @selection;
+    box-shadow:inset 0 -2px 0 0 @text;
 }
 .notebook tab.bottom:active {
-    box-shadow:inset 0 3px 0 0 @selection;
+    box-shadow:inset 0 2px 0 0 @text;
 }
 .notebook tab.left:active {
-    box-shadow:inset -3px 0 0 0 @selection;
+    box-shadow:inset -2px 0 0 0 @text;
 }
 .notebook tab.right:active {
-    box-shadow:inset 3px 0 0 0 @selection;
+    box-shadow:inset 2px 0 0 0 @text;
 }
 
 /* Active-Backdrop */
 .notebook tab.top:active:backdrop {
-    box-shadow:inset 0 -3px 0 0 @backdrop_border;
+    box-shadow:inset 0 -2px 0 0 @backdrop_border;
 }
 .notebook tab.bottom:active:backdrop {
-    box-shadow:inset 0 3px 0 0 @backdrop_border;
+    box-shadow:inset 0 2px 0 0 @backdrop_border;
 }
 .notebook tab.left:active:backdrop {
-    box-shadow:inset -3px 0 0 0 @backdrop_border;
+    box-shadow:inset -2px 0 0 0 @backdrop_border;
 }
 .notebook tab.right:active:backdrop {
-    box-shadow:inset 3px 0 0 0 @backdrop_border;
+    box-shadow:inset 2px 0 0 0 @backdrop_border;
 }
 
 /* Backdrop */

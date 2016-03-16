@@ -1,4 +1,4 @@
-/* Copyright 2015 Sam Hewitt.
+/* Copyright 2016 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -36,6 +36,7 @@
                                       @button_background,
                                       shade(@button_background, 0.98)
                                       );
+    color: @text;
 }
 
 .button.flat,
@@ -103,7 +104,6 @@ GtkCalendar.button:backdrop:hover,
                                       shade(@selection, 1.2),
                                       shade(shade(@selection, 1.2), 0.98)
                                       );
-    color: @selected_foreground;
 }
 
 /* Active (Pressed) Button */
@@ -167,119 +167,6 @@ GtkCalendar.button:backdrop:hover,
     color: @insensitive_text;
 }
 
-/* Images */
-.button GtkImage {
-    color: @text;
-}
-
-.button:active GtkImage,
-.button:focus GtkImage,
-.button:hover GtkImage {
-    color: @selected_foreground;
-}
-
-.button:backdrop GtkImage,
-.button:backdrop:hover GtkImage,
-.button:active:backdrop GtkImage {
-    color: @backdrop_text;
-}
-
-.button:insensitive GtkImage {
-    color: @insensitive_text;
-    -gtk-image-effect: dim;
-}
-
-.button:insensitive:backdrop GtkImage {
-    color: mix(@backdrop_text, @insensitive_text, 0.5);
-    -gtk-image-effect: dim;
-}
-
-/* Labels */
-.button GtkLabel {
-    color: @text;
-}
-
-.button:active GtkLabel,
-.button:focus GtkLabel,
-.button:hover GtkLabel {
-    color: @selected_foreground;
-}
-
-.button:backdrop GtkLabel,
-.button:backdrop:hover GtkLabel,
-.button:focus:backdrop GtkLabel,
-.button:active:backdrop GtkLabel {
-    color: @backdrop_text;
-}
-
-.button:insensitive GtkLabel {
-    color: @insensitive_text;
-}
-
-.button:insensitive:backdrop GtkLabel {
-    color: mix(@backdrop_text, @insensitive_text, 0.5);
-}
-
-/* Text Button Labels */
-.text-button GtkLabel {
-    color: @text;
-}
-
-.text-button:focus GtkLabel {
-    /*color: shade(@text, 2.0);*/
-    color: @text;
-}
-
-.text-button:active GtkLabel,
-.text-button:hover GtkLabel {
-    color: shade(@selection, 0.85);
-    /*color: @text;*/
-}
-
-.text-button:backdrop GtkLabel,
-.text-button:backdrop:hover GtkLabel,
-.text-button:active:backdrop GtkLabel {
-    color: @backdrop_text;
-}
-
-.text-button:insensitive GtkLabel {
-    color: @insensitive_text;
-}
-
-.text-button:insensitive:backdrop GtkLabel {
-    color: mix(@backdrop_text, @insensitive_text, 0.5);
-}
-
-
-/* Image Button Images */
-.image-button GtkImage {
-    color: @text;
-}
-
-.image-button:focus GtkImage {
-    /*color: shade(@text, 2.0);*/
-    color: @text;
-}
-
-.image-button:active GtkImage,
-.image-button:hover GtkImage {
-    /*color: alpha(#000, 0.5);*/
-    color: @selected_foreground;
-}
-
-.image-button:backdrop GtkImage,
-.image-button:backdrop:hover GtkImage,
-.image-button:active:backdrop GtkImage {
-    color: @backdrop_text;
-}
-
-.image-button:insensitive GtkImage {
-    color: @insensitive_text;
-}
-
-.image-button:insensitive:backdrop GtkImage {
-    color: mix(@backdrop_text, @insensitive_text, 0.5);
-}
 
 /**************
 * Help Button *
