@@ -84,19 +84,11 @@ elif [ "$UID" -ne "$ROOT_UID" ]; then
 	fi
 	echo "Installing..."
 	# .local/share/themes
-	if [ -d $HOME/.local/share/themes ]; then
-		cp -R ./Paper/ $HOME/.local/share/themes/
-	else
-		mkdir -p $HOME/.local/share/themes
-		cp -R ./Paper/ $HOME/.local/share/themes/
-	fi
+	install -d $HOME/.local/share/themes
+	cp -R ./Paper/ $HOME/.local/share/themes/
 	# .themes
-	if [ -d $HOME/.themes ]; then
-		cp -R ./Paper/ $HOME/.themes/
-	else
-		mkdir -p $HOME/.themes
-		cp -R ./Paper/ $HOME/.themes/
-	fi
+	install -d $HOME/.themes
+	cp -R ./Paper/ $HOME/.themes/
 	echo "Installation complete!"
 	set
 fi
