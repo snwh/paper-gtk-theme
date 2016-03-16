@@ -20,6 +20,7 @@
  * Apps *
  ********/
 
+@import url("apps/appcenter.css");
 @import url("apps/archive-manager.css");
 @import url("apps/baobab.css");
 @import url("apps/bijiben.css");
@@ -37,7 +38,7 @@
 @import url("apps/gnome-contacts.css");
 @import url("apps/gnome-disks.css");
 @import url("apps/gnome-documents.css");
-/*@import url("apps/gnome-music.css");*/
+@import url("apps/gnome-music.css");
 @import url("apps/gnome-photos.css");
 /*@import url("apps/gnome-software.css");*/
 @import url("apps/gnome-system-monitor.css");

@@ -31,3 +31,8 @@
     background-color: @selection;
     color: @selection_foreground;
 }
+
+.list-row:hover {
+    background-color: shade(@selection, 1.1);
+    color: @selection_foreground;
+}

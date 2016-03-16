@@ -320,34 +320,6 @@ GtkSwitch.slider:insensitive {
     background-position: 0 center;
 }
 
-/*******************
- * Pane separators *
- *******************/
-.pane-separator,
-.pane-separator:backdrop {
-    background: url("assets/scalable/pane-separator-grip.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.pane-separator:hover {
-    background: url("assets/scalable/pane-separator-grip-prelight.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.pane-separator.vertical {
-    background: url("assets/scalable/pane-separator-grip-vertical.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.pane-separator.vertical:hover {
-    background: url("assets/scalable/pane-separator-grip-vertical-prelight.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 /*********************
  * GtkScale's slider *
  *********************/

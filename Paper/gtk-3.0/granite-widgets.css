@@ -89,3 +89,7 @@ GraniteWidgetsWelcome .h1,
 GraniteWidgetsWelcome .h3 {
     color: alpha(@foreground, 0.8);
 }
+
+GraniteWidgetsModeButtonItem {
+    border-radius: 0;
+}

@@ -16,40 +16,18 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
+@define-color appcenter #378BE6;
 
-/**************
- * Separators *
- **************/
- 
-GtkSeparator,
-.separator,
-.pane-separator,
-.button .separator {
-    color: @separator;
+/**********
+ * Header *
+ **********/
+
+AppCenterMainWindow .titlebar,
+AppCenterMainWindow .header-bar {
+    background-color: @appcenter;
 }
 
-GtkSeparator:backdrop,
-.separator:backdrop,
-.pane-separator:backdrop,
-.button .separator:backdrop {
-    color: @backdrop_separator;
-}
-
-.pane-separator {
-    border: 1px solid @separator;
-    border-width: 0px;
-}
-
-.pane-separator.vertical {
-    border: 1px solid @separator;
-    border-left-width: 0px;
-    border-right-width: 0px;
-}
-
-
-.sidebar-pane-separator,
-.sidebar-pane-separator:hover,
-.sidebar-pane-separator:selected {
-    background-color: @separator;
-    border: 1px solid @border;
+AppCenterMainWindow .titlebar:backdrop,
+AppCenterMainWindow .header-bar:backdrop {
+    background-color: shade(@appcenter,0.9);
 }
