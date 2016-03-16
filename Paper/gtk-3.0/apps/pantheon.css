@@ -128,25 +128,6 @@ BirdieWidgetsTweetList * {
     color: red;
 }
 
-/********
-* Geary *
-********/
-
-ConversationListView {
-    -GtkWidget-focus-line-width: 1px;
-    -GtkTreeView-grid-line-width: 0;
-}
- 
-ConversationListView.view.cell {
-    border-style: solid;
-    border-width: 0 0 1px 0;
-    border-color: alpha(#000, 0.2);
-}
- 
-ConversationListView.view.cell:selected {
-    color: @base;
-    border: 0px solid shade(@selection, 0.8);
-}
 
 /**********
  * Noise *
@@ -275,72 +256,36 @@ NoiseTopDisplay .seek-bar {
  * Panel *
  ********/
 
-.panel,
-.panel:backdrop {
-    background-color: @panel;
-    color: @panel_text;
-    font-weight: bold;
-}
-
-.panel-shadow {
-    background-image: none;
+.panel {
     background-color: transparent;
+    transition: all 100ms ease-in-out;
 }
 
-.panel .menu {
-    box-shadow: none;
+.panel.maximized {
+    background-color: #000;
 }
 
-.panel .menu .spinner {
-    opacity: 1;
+.panel.translucent {
+    background-color: alpha(#000, 0.5);
 }
 
-.panel .menubar .composited-indicator {
-    padding: 2px 4px;
-    text-shadow:0 1px 2px alpha(@panel, 0.7);
-    icon-shadow:0 1px 2px alpha(@panel, 0.7);
+.composited-indicator > revealer label,
+.composited-indicator > revealer image,
+.composited-indicator > GtkRevealer {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 2px alpha (#000, 0.3),
+                 0 1px 2px alpha (#000, 0.6);
+    icon-shadow: 0 0 2px alpha (#000, 0.3),
+                 0 1px 2px alpha (#000, 0.6);
 }
 
-.panel .menubar .composited-indicator:prelight {
-    background-color: alpha(#000, 0.1);
-    box-shadow: none;
-    color: @panel_text;
-}
-
-.panel .menubar .composited-indicator:backdrop GtkLabel,
-.panel .menubar .composited-indicator:prelight GtkLabel {
-    color: @panel_text;
-}
-
-.panel .composited-indicator .menu .menuitem {
-    padding: 4px 6px;
-    font-weight: normal;
-    text-shadow:none;
-    icon-shadow:none;
-}
-
-.panel .composited-indicator .menu .menuitem GtkImage,
-.panel .composited-indicator .menu .menuitem GtkLabel,
-.panel .composited-indicator .menu .menuitem:backdrop GtkImage,
-.panel .composited-indicator .menu .menuitem:backdrop GtkLabel {
-    color: @text;
-}
-
-.panel .composited-indicator .menu .menuitem:insensitive GtkImage,
-.panel .composited-indicator .menu .menuitem:insensitive GtkLabel {
-    color: @insensitive_text;
-}
-
-.panel .window-frame.menu.csd,
-.panel .window-frame.popup.csd {
-    box-shadow: none;
-}
-
-.panel .menu .window-frame.menu.csd,
-.panel .menu .window-frame.popup.csd {
-    box-shadow: 0 0 0 1px alpha (#000, 0.20),
-                0 10px 20px alpha (#000, 0.19),
-                0 6px 6px alpha (#000, 0.23),
-                inset 0 1px 0 0 rgba(255,255,255,0.1),
-                inset 0 -3px 3px -4px alpha(#000, 0.4);
+.panel.color-light .composited-indicator > revealer label,
+.panel.color-light .composited-indicator > revealer image,
+.panel.color-light .composited-indicator > GtkRevealer {
+    color: alpha (#000, 0.65);
+    text-shadow: 0 0 2px alpha (#fff, 0.3),
+                 0 1px 0 alpha (#fff, 0.25);
+    icon-shadow: 0 0 2px alpha (#fff, 0.3),
+                 0 1px 0 alpha (#fff, 0.25);
 }

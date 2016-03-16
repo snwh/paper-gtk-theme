@@ -87,9 +87,6 @@
 @define-color theme_text @foreground;
 @define-color theme_text_color @foreground;
 
-@define-color panel_bg_color @panel;
-@define-color panel_fg_color @panel_text;
-
 
 /*****************
  * Trough Colors *

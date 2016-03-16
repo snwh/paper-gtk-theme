@@ -33,9 +33,6 @@
 @define-color selection #90a4ae;/* Selection color */
 @define-color view_background @base;/* View background */
 @define-color inactive_frame @border;/* Inactive frame color */
-@define-color panel shade(@header, 0.8);/* Panel color */
-@define-color panel_text #A1A8AB;/* Panel text color */
-@define-color panel_text_shadow alpha(#000, 0.2);/* Panel text color */
 @define-color text_shadow alpha(white, 0.4);/* Text shadow */
 @define-color icon_shadow @text_shadow;/* Icon shadow */
 @define-color progress_color #90a4ae; /* Progress color */

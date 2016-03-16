@@ -278,7 +278,6 @@
  * GtkSwitch *
  *************/
 
-
 GtkSwitch.trough {
     background: -gtk-scaled(url("assets/scalable/switch-off.svg"),url("assets/scalable/switch-off@2.svg"));
     background-repeat: no-repeat;

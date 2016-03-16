@@ -28,9 +28,9 @@ PanelWidget,
 PanelApplet,
 PanelToplevel {
     padding: 0;
-    background-color: @panel;
+    background-color: #000;
     background-image: none;
-    color: @panel_text;
+    color: #fff;
 }
 
 PanelApplet {
@@ -39,7 +39,6 @@ PanelApplet {
 
 PanelSeparator {
     border-width: 0;
-    background-color: @panel;
     background-image: none;
     color: @base;
 }

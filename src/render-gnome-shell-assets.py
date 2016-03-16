@@ -9,7 +9,7 @@ import subprocess
 
 INKSCAPE = '/usr/bin/inkscape'
 OPTIPNG = '/usr/bin/optipng'
-MAINDIR = 'Paper'
+MAINDIR = '../Paper'
 SRC = os.path.join('.', 'gnome-shell')
 
 inkscape_process = None

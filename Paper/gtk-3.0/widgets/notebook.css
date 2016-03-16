@@ -175,17 +175,12 @@
 }
 
 /* Hover */
-.notebook tab.top:hover {
-    box-shadow:inset 0 -3px 0 0 @border;
-}
-.notebook tab.bottom:hover {
-    box-shadow:inset 0 3px 0 0 @border;
-}
-.notebook tab.left:hover {
-    box-shadow:inset -3px 0 0 0 @border;
-}
+.notebook tab.top:hover,
+.notebook tab.bottom:hover,
+.notebook tab.left:hover,
 .notebook tab.right:hover {
-    box-shadow:inset 3px 0 0 0 @border;
+    box-shadow: none;
+    background: shade(@background, 0.95);
 }
 
 /* Active */
