@@ -50,3 +50,12 @@ FrWindow .header-bar GtkSwitch.slider:active:backdrop,
 FrWindow .header-bar GtkSwitch.slider:backdrop {
     background-color: shade(@archives, 0.9);
 }
+
+
+FrWindow .toolbar.primary-toolbar {
+    background-color: @archives;
+}
+
+FrWindow .toolbar.primary-toolbar:backdrop {
+    background-color: shade(@archives,0.9);
+}

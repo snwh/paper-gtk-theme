@@ -135,40 +135,54 @@
 }
 
 
-/* Entry */
+/* Entries */
+
 .toolbar .entry {
+    background-color: alpha(#000, 0.2);
+    color: @header_text;
+    border-radius: 2px;
+    padding: 6px 4px;
     border: none;
-    border-radius: 0px;
-    background-color:@background;
-    color: @text
+    box-shadow: none;
 }
 
-.toolbar .entry GtkImage,
-.toolbar .entry GtkImage:focus {
-    color: @text
+.toolbar .entry.image {
+    color: @header_text;
 }
 
+.toolbar .entry:active,
 .toolbar .entry:focus {
+    background-color: @base;
     color: @text;
-    border: solid @insensitive_text;
-    border-bottom-width: 1px;
+    box-shadow: none;
+    border: none;
 }
 
-.toolbar .entry:insensitive {
-    border: none;
-    background-color:@insensitive_base;
-    color: @insensitive_text;
-    border: solid @insensitive_text;
-    border-bottom-width: 1px;
+.toolbar .entry:active.image,
+.toolbar .entry:focus.image {
+    padding-right: 6px;
+    color: @text;
 }
 
 .toolbar .entry:backdrop {
+    box-shadow: none;
+    color: alpha(@header_text, 0.5);
     border: none;
-    background-color:@backdrop_base;
-    color: @backdrop_text;
-    border: solid @backdrop_text;
-    border-bottom-width: 1px;
 }
+
+.toolbar .entry.image {
+    color: alpha(@header_text, 0.5);
+}
+
+
+.toolbar .entry:active:backdrop,
+.toolbar .entry:focus:backdrop {
+    background-color: alpha(@base, 0.5);
+    color: @text;
+    box-shadow: none;
+    border: none;
+}
+
 
 /* Images */
 .toolbar GtkImage,
@@ -237,7 +251,7 @@
     padding-right: 4px;
     color: @toolbar_text;
     background-color: @toolbar;
-    box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.7);
+    box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.2);
     border: none;
 }
 
@@ -348,41 +362,53 @@
 }
 
 
-/* Entry */
-.primary-toolbar.toolbar .entry {
+
+/* Entries */
+
+.primary-toolbar .entry {
+    background-color: alpha(#000, 0.2);
+    color: @header_text;
+    border-radius: 2px;
+    padding: 6px 4px;
     border: none;
-    border-radius: 0px;
-    background-color:@toolbar;
     box-shadow: none;
-    color: @toolbar_text;
 }
 
-.primary-toolbar.toolbar .entry GtkImage,
-.primary-toolbar.toolbar .entry GtkImage:focus {
-    color: @toolbar_text;
+.primary-toolbar .entry.image {
+    color: @header_text;
 }
 
-.primary-toolbar.toolbar .entry:focus,
-.primary-toolbar.toolbar .entry:focus:backdrop {
-    color: @toolbar_text;
-    border: solid @insensitive_toolbar_text;
-    border-bottom-width: 1px;
-}
-
-.primary-toolbar.toolbar .entry:insensitive {
+.primary-toolbar .entry:active,
+.primary-toolbar .entry:focus {
+    background-color: @base;
+    color: @text;
+    box-shadow: none;
     border: none;
-    background-color:@toolbar;
-    color: @insensitive_toolbar_text;
-    border: solid @insensitive_toolbar_text;
-    border-bottom-width: 1px;
 }
 
-.primary-toolbar.toolbar .entry:backdrop {
+.primary-toolbar .entry:active.image,
+.primary-toolbar .entry:focus.image {
+    padding-right: 6px;
+    color: @text;
+}
+
+.primary-toolbar .entry:backdrop {
+    box-shadow: none;
+    color: alpha(@header_text, 0.5);
     border: none;
-    background-color:@toolbar;
-    color: @backdrop_toolbar_text;
-    border: solid @backdrop_toolbar_text;
-    border-bottom-width: 0;
+}
+
+.primary-toolbar .entry.image {
+    color: alpha(@header_text, 0.5);
+}
+
+
+.primary-toolbar .entry:active:backdrop,
+.primary-toolbar .entry:focus:backdrop {
+    background-color: alpha(@base, 0.5);
+    color: @text;
+    box-shadow: none;
+    border: none;
 }
 
 /* Images */
