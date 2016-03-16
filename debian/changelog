@@ -1,5 +1,11 @@
+paper-gtk-theme (1.1) UNRELEASED; urgency=low
+
+  * Point Release.
+
+ -- Sam Hewitt <sam@snwh.org>  Wed, 16 Mar 2016 12:00:00 -0400
+
 paper-gtk-theme (1.0) UNRELEASED; urgency=low
 
   * Initial Release.
 
- -- Sam Hewitt <hewittsamuel@gmail.com>  Thu, 18 Dec 2014 12:00:00 -0400
+ -- Sam Hewitt <sam@snwh.org>  Thu, 18 Dec 2014 12:00:00 -0400

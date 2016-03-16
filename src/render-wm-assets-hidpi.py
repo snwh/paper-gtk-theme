@@ -9,7 +9,7 @@ import subprocess
 
 INKSCAPE = '/usr/bin/inkscape'
 OPTIPNG = '/usr/bin/optipng'
-SRC = os.path.join('.', 'src/wm')
+SRC = os.path.join('.', 'wm')
 
 inkscape_process = None
 
@@ -50,7 +50,7 @@ def inkscape_render_rect(icon_file, rect, output_file):
     if inkscape_process is None:
         inkscape_process = start_inkscape()
     wait_for_prompt(inkscape_process,
-                    '%s -i %s -e %s' % (icon_file, rect, output_file)
+                    '--export-dpi=180 %s -i %s -e %s' % (icon_file, rect, output_file)
                     )
     optimize_png(output_file)
 

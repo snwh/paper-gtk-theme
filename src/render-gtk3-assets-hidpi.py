@@ -9,7 +9,7 @@ import subprocess
 
 INKSCAPE = '/usr/bin/inkscape'
 OPTIPNG = '/usr/bin/optipng'
-SRC = os.path.join('.', 'src/gtk3')
+SRC = os.path.join('.', 'gtk3')
 
 inkscape_process = None
 
@@ -38,9 +38,9 @@ def wait_for_prompt(process, command=None):
 
 def start_inkscape():
     process = subprocess.Popen(
-        [INKSCAPE, '--shell'],
-        bufsize=0, stdin=subprocess.PIPE, stdout=subprocess.PIPE
-        )
+        [INKSCAPE, '--shell'], bufsize=0,
+        stdin=subprocess.PIPE, stdout=subprocess.PIPE
+    )
     wait_for_prompt(process)
     return process
 
@@ -50,8 +50,9 @@ def inkscape_render_rect(icon_file, rect, output_file):
     if inkscape_process is None:
         inkscape_process = start_inkscape()
     wait_for_prompt(inkscape_process,
-                    '%s -i %s -e %s' %
-                    (icon_file, rect, output_file))
+                    '--export-dpi=180 %s -i %s -e %s'
+                    % (icon_file, rect, output_file)
+                    )
     optimize_png(output_file)
 
 
@@ -134,7 +135,7 @@ class ContentHandler(xml.sax.ContentHandler):
                 id = rect['id']
 
                 dir = os.path.join("Paper", "gtk-3.0", self.context)
-                outfile = os.path.join(dir, self.icon_name+'.png')
+                outfile = os.path.join(dir, self.icon_name+'@2'+'.png')
                 if not os.path.exists(dir):
                     os.makedirs(dir)
                 # Do a time based check!
