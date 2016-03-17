@@ -115,7 +115,6 @@
  *****************/
 @define-color placeholder_text_color shade(@foreground, 2.0);
 @define-color view_symbolic shade(@internal_element, 0.50);
-@define-color menu_shadow alpha(#000, 0.2);
 
 /* GNOME Apps */
 @define-color entry_tag_background #3465a4;
