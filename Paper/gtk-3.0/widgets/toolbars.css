@@ -283,6 +283,10 @@
     padding: 13px;
 }
 
+.primary-toolbar .button.image-button:checked {
+    background-color: alpha(#fff, 0.1);
+}
+
 .primary-toolbar.toolbar .button:active,
 .primary-toolbar.toolbar GtkToggleButton:active,
 .primary-toolbar.toolbar .text-button:active,

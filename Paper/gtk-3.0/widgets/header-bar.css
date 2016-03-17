@@ -62,7 +62,8 @@
     color: @header_text;
 }
 
-.header-bar > GtkImage {
+.header-bar > GtkImage,
+.header-bar > GtkArrow {
     color: @header_text;
 }
 

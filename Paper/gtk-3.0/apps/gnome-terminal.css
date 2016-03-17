@@ -17,7 +17,7 @@
 */
 
 @define-color terminal #dbdee0;
-@define-color terminal_background #002B36;
+@define-color terminal_background alpha(#002B36, 0.9);
 @define-color terminal_text #839495;
 @define-color terminal_window #636E73;
 @define-color terminal_window_text #dbdee0;
@@ -36,110 +36,6 @@ TerminalWindow .header-bar {
 TerminalWindow .titlebar:backdrop,
 TerminalWindow .header-bar:backdrop{
     background-color: shade(@terminal_window,0.9);
-}
-
-/************
- * Notebook *
- ************/
-
-TerminalNotebook {
-    box-shadow: inset 0 1px 0 0 @border;
-}
-
-/* Active */
-TerminalNotebook tab.top:active,
-TerminalWindow .notebook tab.top:active,
-TerminalWindow .dynamic-notebook tab.top:active {
-    box-shadow:inset 0 -3px 0 0 @terminal;
-    text-shadow:none;
-}
-
-/* Normal */
-TerminalWindow .notebook tab.top {
-    box-shadow:inset 0 -1px 0 0 @terminal_window;
-    text-shadow:none;
-}
-
-/*----- Tabs -----*/
-
-TerminalWindow .notebook tab {
-    background: @terminal_window;
-    color: @terminal_window_text;
-    text-shadow:none;
-}
-
-TerminalWindow .notebook tab:active {
-    background: @terminal_window;
-    color: @terminal_window_text;
-    text-shadow:none;
-}
-
-TerminalWindow .notebook tab:hover {
-    background-color: shade(@terminal_window, 1.05);
-    color: alpha(#fff, 0.3);
-    text-shadow:none;
-}
-
-TerminalWindow .notebook tab:backdrop {
-    background: @backdrop_header;
-    color: @backdrop_terminal_window_text;
-    text-shadow:none;
-}
-
-TerminalWindow .notebook tab:insensitive {
-    background: @insensitive_header;
-    color: @insensitive_terminal_window_text;
-    text-shadow:none;
-}
-
-/* Labels */
-TerminalWindow .notebook GtkLabel,
-TerminalWindow .notebook:active GtkLabel,
-TerminalWindow .notebook:focus GtkLabel,
-TerminalWindow .notebook:hover GtkLabel {
-    color: @terminal_window_text;
-}
-
-TerminalWindow .notebook:backdrop GtkLabel,
-TerminalWindow .notebook:backdrop:hover GtkLabel,
-TerminalWindow .notebook:active:backdrop GtkLabel {
-    color: @backdrop_terminal_window_text;
-}
-
-TerminalWindow .notebook:insensitive GtkLabel {
-    color: @insensitive_terminal_window_text;
-}
-
-TerminalWindow .notebook:insensitive:backdrop GtkLabel {
-    color: mix(@backdrop_terminal_window_text, @insensitive_terminal_window_text, 0.5);
-}
-
-TerminalWindow .notebook tab GtkLabel {
-    color: @backdrop_terminal_window_text;
-}
-
-TerminalWindow .notebook tab:active GtkLabel,
-TerminalWindow .notebook .active-page,
-TerminalWindow .notebook tab .active-page GtkLabel {
-    color: @terminal_window_text;
-}
-
-TerminalWindow .notebook tab:backdrop GtkLabel,
-TerminalWindow .notebook tab GtkLabel:backdrop {
-    color: @backdrop_terminal_window_text;
-}
-
-TerminalWindow .notebook tab .button GtkImage {
-    color: @terminal_window_text;
-}
-
-TerminalWindow .notebook tab .button:hover GtkImage,
-TerminalWindow .notebook tab .button:active GtkImage {
-    color: @selection_foreground;
-}
-
-TerminalWindow .notebook tab .button:backdrop GtkImage {
-    color: @backdrop_terminal_window_text;
 }
 
 /**********

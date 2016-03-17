@@ -16,11 +16,21 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color midori #16b435;
+@define-color midori #7FC843;
 
 /**********
  * Header *
  **********/
+
+MidoriBrowser .titlebar,
+MidoriBrowser .header-bar {
+    background-color: @midori;
+}
+
+MidoriBrowser .titlebar:backdrop,
+MidoriBrowser .header-bar:backdrop {
+    background-color: shade(@midori,0.9);
+}
 
 MidoriBrowser .toolbar.primary-toolbar {
     background-color: @midori;
