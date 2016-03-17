@@ -20,46 +20,20 @@
  * Menu *
  ********/
  
-.menu {
-    padding: 4px 0;
-    border-radius: 4px;
-    box-shadow: 0 2px 3px 2px @shadow,
-                inset 0 1px 0 0 rgba(255,255,255,0.1);
-}
-
 .content-view .menu,
 .context-menu,
 .menu,
 .popup {
-    border-radius: 2px;
-    border-image: none;
+    padding: 4px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 alpha(#000,0.1),
+                inset 0 1px 0 0 alpha(#fff,0.1);
     background-color: @background;
     color: @text;
 }
 
-/*Context Menu*/
-
-.context-menu {
-    font: initial;
-    box-shadow: 0 2px 3px 2px @shadow;
-}
-
-.content-view .menu {
-    padding: 0 1px;
-    background-color: @base;
-    background-image: none;
-}
-
-.content-view .menu .menuitem:active,
-.content-view .menu .menuitem:hover {
-    background-color: @selection;
-    color: @selection_foreground;
-}
-
 /* Menu Item */
-.menuitem,
-.menu .menuitem,
-.popup .menuitem {
+.menuitem {
     border:none;
     padding: 8px 4px;
 
@@ -68,23 +42,18 @@
 }
 
 /* Active */
-.menuitem:active,
-.menu .menuitem:active,
-.popup .menuitem:active {
+.menuitem:active {
     background-color: @selection;
     color: @selection_foreground;
     -gtk-icon-style: symbolic;
 }
 
 /* Hover*/
-.menuitem:hover,
-.menu .menuitem:hover,
-.popup .menuitem:hover {
+.menuitem:hover {
     background-color: @selection;
     color: @selection_foreground;
     -gtk-icon-style: symbolic;
 }
-
 
 .menuitem:backdrop,
 .menu .menuitem:backdrop {
@@ -114,8 +83,6 @@
 
 /* Separator color */
 .menuitem.separator {
-    padding-left: 2px;
-    padding-right: 2px;
     border: none;
     color: @border;
     -GtkMenuItem-horizontal-padding: 0;
@@ -174,13 +141,7 @@
     color: @text;
 }
 
-.menuitem:hover GtkImage {
+.menuitem:hover GtkImage,
+.menu .menuitem:hover GtkImage {
     color: @selection_foreground;
 }
-
-.menu .menuitem GtkImage,
-.popup .menuitem GtkImage {
-    padding-left: 6px;
-}
-
-/* Something is utterly broken where I've had to do this ugly bit of styling. */
