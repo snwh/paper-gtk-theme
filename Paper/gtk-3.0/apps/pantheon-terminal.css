@@ -26,32 +26,14 @@
 @define-color insensitive_terminal_window_text  shade(@terminal_window_text, 0.95);
 
 /* CSD */
-PantheonTerminalPantheonTerminalWindow .csd {
+PantheonTerminalPantheonTerminalWindow .csd,
+PantheonTerminalPantheonTerminalWindow .dynamic-notebook .notebook.header,
+PantheonTerminalPantheonTerminalWindow .dynamic-notebook .notebook tab{
     background-color: @pantheonTerminal;
 }
 
-PantheonTerminalPantheonTerminalWindow .csd:backdrop {
-    background-color: shade(@pantheonTerminal,0.9);
-}
-
-
-/* Notebook */
-PantheonTerminalPantheonTerminalWindow .dynamic-notebook .notebook.header {
-    background-color: @pantheonTerminal;
-}
-
-
-PantheonTerminalPantheonTerminalWindow .dynamic-notebook .notebook.header:backdrop {
-    background-color: shade(@pantheonTerminal,0.9);
-}
-
-
-
-/* Notebook */
-PantheonTerminalPantheonTerminalWindow .dynamic-notebook .notebook tab {
-    background-color: @pantheonTerminal;
-}
-
-
+PantheonTerminalPantheonTerminalWindow .csd:backdrop,
+PantheonTerminalPantheonTerminalWindow .dynamic-notebook .notebook.header:backdrop,
 PantheonTerminalPantheonTerminalWindow .dynamic-notebook .notebook tab:backdrop {
     background-color: shade(@pantheonTerminal,0.9);
+}
