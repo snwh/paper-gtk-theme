@@ -270,12 +270,33 @@
 .dynamic-notebook .notebook tab > .button:hover:active,
 .notebook tab .button:hover,
 .notebook tab .button:hover:active {
-    border: none;
     background-image: none;
     background-color: alpha(#000, 0.02);
+
+    border-color: @border;
 }
 
 .dynamic-notebook .notebook tab > .button:hover:active,
 .notebook tab > .button:hover:active {
     background-color: alpha(#000, 0.10);
+}
+
+
+.dynamic-notebook .notebook .button.flat {
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;    
+}
+
+
+.dynamic-notebook .notebook .button.flat:hover {
+    background-image: none;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    background-color: alpha(#000,0.1);
 }
