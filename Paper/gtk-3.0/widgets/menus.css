@@ -51,7 +51,7 @@
 .content-view .menu .menuitem:active,
 .content-view .menu .menuitem:hover {
     background-color: @selection;
-    color: @text;
+    color: @selection_foreground;
 }
 
 /* Menu Item */
@@ -156,6 +156,10 @@
     padding-left: 2px;
     padding-right: 2px;
     color: @text;
+}
+
+.menuitem:hover GtkLabel {
+    color: @selection_foreground;
 }
 
 /* Menu Text */
