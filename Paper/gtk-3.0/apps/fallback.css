@@ -21,9 +21,7 @@
  ************/
 
 
-/***********************
- * Fallback Mode Panel *
- ***********************/
+/* Panel */
 PanelWidget,
 PanelApplet,
 PanelToplevel {
