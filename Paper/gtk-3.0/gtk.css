@@ -42,6 +42,15 @@
 @define-color highlight alpha(#fff, 0.2);
 @define-color shadow alpha(#000, 0.2);
 
+/* Fixes for 263, and partial fix for 223 (gnome-calendar)
+ * https://github.com/snwh/paper-gtk-theme/issues/223 *
+ * https://github.com/snwh/paper-gtk-theme/issues/263 */
+@define-color theme_fg_color @foreground;
+@define-color theme_bg_color @background;
+@define-color theme_text_color @text;
+@define-color theme_base_color @base;
+@define-color borders @border;
+
 
 /***********
  * Imports *
