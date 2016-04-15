@@ -5777,7 +5777,9 @@ scale.fine-tune .trough, .scale fill,
 scale fill {
   border: none;
   background-color: #ffffff;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0px 1px rgba(255, 255, 255, 0.8); }
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0px 1px rgba(255, 255, 255, 0.8);
+  padding: 0;
+  margin: 0; }
   GtkLevelBar .trough:insensitive,
   GtkLevelBar trough:insensitive,
   .level-bar .trough:insensitive,
@@ -5957,8 +5959,10 @@ GtkProgressBar progress,
 .progressbar .progressbar,
 .progressbar progress,
 progressbar .progressbar,
-progressbar progress, .scale .highlight,
+progressbar progress, .scale fill,
+.scale .highlight,
 .scale highlight,
+scale fill,
 scale .highlight,
 scale highlight, .scale.fine-tune fill,
 .scale.fine-tune .highlight,
@@ -5969,28 +5973,29 @@ scale.fine-tune highlight {
   border: 1px solid #347d9f;
   background-color: #449ac2;
   box-shadow: 0px 1px rgba(255, 255, 255, 0.8);
-  border-radius: 2px;
-  margin: 6px 0;
-  padding: 0; }
+  border-radius: 4px;
+  min-height: 8px; }
   GtkProgressBar .progressbar:insensitive,
   GtkProgressBar progress:insensitive,
   .progressbar .progressbar:insensitive,
   .progressbar progress:insensitive,
   progressbar .progressbar:insensitive,
-  progressbar progress:insensitive, .scale .highlight:insensitive,
+  progressbar progress:insensitive, .scale fill:insensitive,
+  .scale .highlight:insensitive,
   .scale highlight:insensitive,
+  scale fill:insensitive,
   scale .highlight:insensitive,
-  scale highlight:insensitive, .scale.fine-tune fill:insensitive,
-  scale.fine-tune fill:insensitive, GtkProgressBar .progressbar:disabled,
+  scale highlight:insensitive, GtkProgressBar .progressbar:disabled,
   GtkProgressBar progress:disabled,
   .progressbar .progressbar:disabled,
   .progressbar progress:disabled,
   progressbar .progressbar:disabled,
-  progressbar progress:disabled, .scale .highlight:disabled,
+  progressbar progress:disabled, .scale fill:disabled,
+  .scale .highlight:disabled,
   .scale highlight:disabled,
+  scale fill:disabled,
   scale .highlight:disabled,
-  scale highlight:disabled, .scale.fine-tune fill:disabled,
-  scale.fine-tune fill:disabled {
+  scale highlight:disabled {
     border: 1px solid #9e9e9e;
     background-color: #c4c4c4; }
   GtkProgressBar .progressbar:backdrop,
@@ -6002,11 +6007,12 @@ scale.fine-tune highlight {
   .progressbar:backdrop .progressbar,
   progressbar:backdrop .progressbar, GtkProgressBar:backdrop progress,
   .progressbar:backdrop progress,
-  progressbar:backdrop progress, .scale .highlight:backdrop,
+  progressbar:backdrop progress, .scale fill:backdrop,
+  .scale .highlight:backdrop,
   .scale highlight:backdrop,
+  scale fill:backdrop,
   scale .highlight:backdrop,
-  scale highlight:backdrop, .scale.fine-tune fill:backdrop,
-  scale.fine-tune fill:backdrop, GtkProgressBar .progressbar:active:backdrop,
+  scale highlight:backdrop, GtkProgressBar .progressbar:active:backdrop,
   GtkProgressBar progress:active:backdrop,
   .progressbar .progressbar:active:backdrop,
   .progressbar progress:active:backdrop,
@@ -6015,11 +6021,12 @@ scale.fine-tune highlight {
   .progressbar:backdrop .progressbar:active,
   progressbar:backdrop .progressbar:active, GtkProgressBar:backdrop progress:active,
   .progressbar:backdrop progress:active,
-  progressbar:backdrop progress:active, .scale .highlight:active:backdrop,
+  progressbar:backdrop progress:active, .scale fill:active:backdrop,
+  .scale .highlight:active:backdrop,
   .scale highlight:active:backdrop,
+  scale fill:active:backdrop,
   scale .highlight:active:backdrop,
-  scale highlight:active:backdrop, .scale.fine-tune fill:active:backdrop,
-  scale.fine-tune fill:active:backdrop {
+  scale highlight:active:backdrop {
     border-color: #449ac2;
     background-color: #6bafce; }
     GtkProgressBar .progressbar:backdrop:disabled,
@@ -6031,11 +6038,12 @@ scale.fine-tune highlight {
     .progressbar:backdrop .progressbar:disabled,
     progressbar:backdrop .progressbar:disabled, GtkProgressBar:backdrop progress:disabled,
     .progressbar:backdrop progress:disabled,
-    progressbar:backdrop progress:disabled, .scale .highlight:backdrop:disabled,
+    progressbar:backdrop progress:disabled, .scale fill:backdrop:disabled,
+    .scale .highlight:backdrop:disabled,
     .scale highlight:backdrop:disabled,
+    scale fill:backdrop:disabled,
     scale .highlight:backdrop:disabled,
-    scale highlight:backdrop:disabled, .scale.fine-tune fill:backdrop:disabled,
-    scale.fine-tune fill:backdrop:disabled, GtkProgressBar .progressbar:active:backdrop:disabled,
+    scale highlight:backdrop:disabled, GtkProgressBar .progressbar:active:backdrop:disabled,
     GtkProgressBar progress:active:backdrop:disabled,
     .progressbar .progressbar:active:backdrop:disabled,
     .progressbar progress:active:backdrop:disabled,
@@ -6044,11 +6052,12 @@ scale.fine-tune highlight {
     .progressbar:backdrop .progressbar:active:disabled,
     progressbar:backdrop .progressbar:active:disabled, GtkProgressBar:backdrop progress:active:disabled,
     .progressbar:backdrop progress:active:disabled,
-    progressbar:backdrop progress:active:disabled, .scale .highlight:active:backdrop:disabled,
+    progressbar:backdrop progress:active:disabled, .scale fill:active:backdrop:disabled,
+    .scale .highlight:active:backdrop:disabled,
     .scale highlight:active:backdrop:disabled,
+    scale fill:active:backdrop:disabled,
     scale .highlight:active:backdrop:disabled,
-    scale highlight:active:backdrop:disabled, .scale.fine-tune fill:active:backdrop:disabled,
-    scale.fine-tune fill:active:backdrop:disabled {
+    scale highlight:active:backdrop:disabled {
       background-color: transparent;
       border-color: transparent; }
   .list-row:selected GtkProgressBar .progressbar:disabled, GtkProgressBar .list-row:selected .progressbar:disabled,
@@ -6061,15 +6070,17 @@ scale.fine-tune highlight {
   .list-row:selected progressbar .progressbar:disabled,
   progressbar .list-row:selected .progressbar:disabled,
   .list-row:selected progressbar progress:disabled,
-  progressbar .list-row:selected progress:disabled, .list-row:selected .scale .highlight:disabled, .scale .list-row:selected .highlight:disabled,
+  progressbar .list-row:selected progress:disabled, .list-row:selected .scale fill:disabled, .scale .list-row:selected fill:disabled,
+  .list-row:selected .scale .highlight:disabled,
+  .scale .list-row:selected .highlight:disabled,
   .list-row:selected .scale highlight:disabled,
   .scale .list-row:selected highlight:disabled,
+  .list-row:selected scale fill:disabled,
+  scale .list-row:selected fill:disabled,
   .list-row:selected scale .highlight:disabled,
   scale .list-row:selected .highlight:disabled,
   .list-row:selected scale highlight:disabled,
-  scale .list-row:selected highlight:disabled, .list-row:selected .scale.fine-tune fill:disabled, .scale.fine-tune .list-row:selected fill:disabled,
-  .list-row:selected scale.fine-tune fill:disabled,
-  scale.fine-tune .list-row:selected fill:disabled, .list-row:selected GtkProgressBar .progressbar, GtkProgressBar .list-row:selected .progressbar,
+  scale .list-row:selected highlight:disabled, .list-row:selected GtkProgressBar .progressbar, GtkProgressBar .list-row:selected .progressbar,
   .list-row:selected GtkProgressBar progress,
   GtkProgressBar .list-row:selected progress,
   .list-row:selected .progressbar .progressbar,
@@ -6079,15 +6090,17 @@ scale.fine-tune highlight {
   .list-row:selected progressbar .progressbar,
   progressbar .list-row:selected .progressbar,
   .list-row:selected progressbar progress,
-  progressbar .list-row:selected progress, .list-row:selected .scale .highlight, .scale .list-row:selected .highlight,
+  progressbar .list-row:selected progress, .list-row:selected .scale fill, .scale .list-row:selected fill,
+  .list-row:selected .scale .highlight,
+  .scale .list-row:selected .highlight,
   .list-row:selected .scale highlight,
   .scale .list-row:selected highlight,
+  .list-row:selected scale fill,
+  scale .list-row:selected fill,
   .list-row:selected scale .highlight,
   scale .list-row:selected .highlight,
   .list-row:selected scale highlight,
-  scale .list-row:selected highlight, .list-row:selected .scale.fine-tune fill, .scale.fine-tune .list-row:selected fill,
-  .list-row:selected scale.fine-tune fill,
-  scale.fine-tune .list-row:selected fill {
+  scale .list-row:selected highlight {
     border-color: #347d9f; }
   row:selected GtkProgressBar .progressbar:disabled, GtkProgressBar row:selected .progressbar:disabled,
   row:selected GtkProgressBar progress:disabled,
@@ -6099,15 +6112,17 @@ scale.fine-tune highlight {
   row:selected progressbar .progressbar:disabled,
   progressbar row:selected .progressbar:disabled,
   row:selected progressbar progress:disabled,
-  progressbar row:selected progress:disabled, row:selected .scale .highlight:disabled, .scale row:selected .highlight:disabled,
+  progressbar row:selected progress:disabled, row:selected .scale fill:disabled, .scale row:selected fill:disabled,
+  row:selected .scale .highlight:disabled,
+  .scale row:selected .highlight:disabled,
   row:selected .scale highlight:disabled,
   .scale row:selected highlight:disabled,
+  row:selected scale fill:disabled,
+  scale row:selected fill:disabled,
   row:selected scale .highlight:disabled,
   scale row:selected .highlight:disabled,
   row:selected scale highlight:disabled,
-  scale row:selected highlight:disabled, row:selected .scale.fine-tune fill:disabled, .scale.fine-tune row:selected fill:disabled,
-  row:selected scale.fine-tune fill:disabled,
-  scale.fine-tune row:selected fill:disabled, row:selected GtkProgressBar .progressbar, GtkProgressBar row:selected .progressbar,
+  scale row:selected highlight:disabled, row:selected GtkProgressBar .progressbar, GtkProgressBar row:selected .progressbar,
   row:selected GtkProgressBar progress,
   GtkProgressBar row:selected progress,
   row:selected .progressbar .progressbar,
@@ -6117,15 +6132,17 @@ scale.fine-tune highlight {
   row:selected progressbar .progressbar,
   progressbar row:selected .progressbar,
   row:selected progressbar progress,
-  progressbar row:selected progress, row:selected .scale .highlight, .scale row:selected .highlight,
+  progressbar row:selected progress, row:selected .scale fill, .scale row:selected fill,
+  row:selected .scale .highlight,
+  .scale row:selected .highlight,
   row:selected .scale highlight,
   .scale row:selected highlight,
+  row:selected scale fill,
+  scale row:selected fill,
   row:selected scale .highlight,
   scale row:selected .highlight,
   row:selected scale highlight,
-  scale row:selected highlight, row:selected .scale.fine-tune fill, .scale.fine-tune row:selected fill,
-  row:selected scale.fine-tune fill,
-  scale.fine-tune row:selected fill {
+  scale row:selected highlight {
     border-color: #347d9f; }
   .osd GtkProgressBar .progressbar, GtkProgressBar .osd .progressbar,
   .osd GtkProgressBar progress,
@@ -6137,15 +6154,17 @@ scale.fine-tune highlight {
   .osd progressbar .progressbar,
   progressbar .osd .progressbar,
   .osd progressbar progress,
-  progressbar .osd progress, .osd .scale .highlight, .scale .osd .highlight,
+  progressbar .osd progress, .osd .scale fill, .scale .osd fill,
+  .osd .scale .highlight,
+  .scale .osd .highlight,
   .osd .scale highlight,
   .scale .osd highlight,
+  .osd scale fill,
+  scale .osd fill,
   .osd scale .highlight,
   scale .osd .highlight,
   .osd scale highlight,
-  scale .osd highlight, .osd .scale.fine-tune fill, .scale.fine-tune .osd fill,
-  .osd scale.fine-tune fill,
-  scale.fine-tune .osd fill {
+  scale .osd highlight {
     border-color: rgba(0, 0, 0, 0.7); }
     .osd GtkProgressBar .progressbar:disabled, GtkProgressBar .osd .progressbar:disabled,
     .osd GtkProgressBar progress:disabled,
@@ -6157,15 +6176,17 @@ scale.fine-tune highlight {
     .osd progressbar .progressbar:disabled,
     progressbar .osd .progressbar:disabled,
     .osd progressbar progress:disabled,
-    progressbar .osd progress:disabled, .osd .scale .highlight:disabled, .scale .osd .highlight:disabled,
+    progressbar .osd progress:disabled, .osd .scale fill:disabled, .scale .osd fill:disabled,
+    .osd .scale .highlight:disabled,
+    .scale .osd .highlight:disabled,
     .osd .scale highlight:disabled,
     .scale .osd highlight:disabled,
+    .osd scale fill:disabled,
+    scale .osd fill:disabled,
     .osd scale .highlight:disabled,
     scale .osd .highlight:disabled,
     .osd scale highlight:disabled,
-    scale .osd highlight:disabled, .osd .scale.fine-tune fill:disabled, .scale.fine-tune .osd fill:disabled,
-    .osd scale.fine-tune fill:disabled,
-    scale.fine-tune .osd fill:disabled {
+    scale .osd highlight:disabled {
       border-color: transparent; }
 
 .scale,
@@ -6173,7 +6194,9 @@ scale {
   -GtkScale-slider-length: 16px;
   -GtkRange-slider-width: 16px;
   -GtkRange-trough-border: 0px;
-  max-height: 8px; }
+  min-height: 10px;
+  min-width: 10px;
+  padding: 8px; }
   .scale fill,
   .scale highlight,
   scale fill,
