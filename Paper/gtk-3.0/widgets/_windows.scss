@@ -1,0 +1,104 @@
+/**********************
+ * Window Decorations *
+ *********************/
+
+.window-frame,
+decoration {
+
+  border-radius: 4px;
+  border-width: 0px;
+
+  box-shadow: 0 8px 9px 1px transparent,
+              0 8px 6px 1px transparentize(black, 0.5);
+              
+  margin: 10px;
+
+  &:backdrop {
+    box-shadow: 0 3px 9px 1px transparent,
+                0 6px 6px 0 transparentize(black, 0.7);
+    transition: $backdrop_transition;
+  }
+
+  .fullscreen &,
+  .tiled & { border-radius: 0; }
+
+  .popup & { box-shadow: none; }
+
+  // server-side decorations as used by mutter
+  .ssd & { box-shadow: 0 0 0 1px transparentize(black,0.5);}
+
+  .csd.popup & {
+    border-radius: 0;
+    box-shadow: 0 1px 2px transparentize(black, 0.8);
+  }
+
+  .tooltip.csd &,
+  tooltip.csd & {
+    border-radius: 5px;
+    box-shadow: none;
+  }
+
+  GtkMessageDialog.csd &,
+  messagedialog.csd & {
+    border-radius: 5px;
+    box-shadow: 0 3px 6px transparentize(black, 0.8),
+                0 1px 3px transparentize(black,0.7);
+  }
+
+  .solid-csd & {
+    border-radius: 0;
+    margin: 4px;
+    background-color: $backdrop_bg_color;
+    border: solid 1px $backdrop_borders_color;
+    box-shadow: none;
+  }
+}
+
+// // Window Close button
+// .button.titlebutton,
+// button.titlebutton {
+//   @extend %button_basic;
+
+//   @extend %button_basic.flat;
+
+//   @include _button_text_shadow;
+
+//   .selection-mode & {
+//     @extend %button.flat.suggested-action;
+
+//     @extend %nobg_selected_items;
+//   }
+
+//   &:backdrop { -gtk-icon-shadow: none; }
+// }
+
+// .header-bar.selection-mode button.titlebutton,
+// headerbar.selection-mode button.titlebutton,
+// .titlebar.selection-mode button.titlebutton {
+//   @include _button_text_shadow(white, $selected_bg_color);
+
+//   &:backdrop { -gtk-icon-shadow: none; }
+// }
+
+
+// catch all extend :)
+
+%selected_items {
+  background-color: $selected_bg_color;
+
+  @at-root %nobg_selected_items, & {
+    color: $selected_fg_color;
+
+    @if $variant == 'light' { outline-color: transparentize($selected_fg_color, 0.7); }
+
+    &:disabled { color: mix($selected_fg_color, $selected_bg_color, 50%); }
+
+    &:backdrop {
+      color: $backdrop_selected_fg_color;
+
+      &:disabled { color: mix($backdrop_selected_fg_color, $selected_bg_color, 30%); }
+    }
+  }
+}
+
+.monospace { font: Monospace; }

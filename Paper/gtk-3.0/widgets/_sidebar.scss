@@ -1,0 +1,90 @@
+/***********
+ * Sidebar *
+ ***********/
+.sidebar {
+  border-style: solid;
+  background-color: $bg_color;
+
+  @at-root %sidebar_left,
+  &:dir(ltr),
+  &.left,
+  &.left:dir(rtl) {
+    border-right: 1px solid $borders_color;
+    border-left-style: none;
+  }
+
+  @at-root %sidebar_right
+  &:dir(rtl),
+  &.right {
+    border-left: 1px solid $borders_color;
+    border-right-style: none;
+  }
+
+  &:backdrop {
+    background-color: $backdrop_sidebar_bg_color;
+    border-color: $backdrop_borders_color;
+    transition: $backdrop_transition;
+  }
+
+  list { background-color: transparent; }
+
+  .frame {
+    border-width:0;
+    border-right-width:1px;
+  }
+
+  .list-row,
+  row {
+    border:none;
+    padding: 5px 8px;
+
+    > GtkLabel,
+    > label {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+
+    &.needs-attention > label {
+      @extend %needs_attention;
+
+      background-size: 6px 6px, 0 0;
+    }
+  }
+
+  .separator {
+    color: $borders_color;
+  }
+
+  > .inline-toolbar {
+    border-radius: 0;
+  }
+
+  .paned &, paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
+}
+
+stacksidebar {
+  &.sidebar {
+    &:dir(ltr),
+    &.left,
+    &.left:dir(rtl) { list { @extend %sidebar_left; }}
+
+    &:dir(rtl),
+    &.right { list { @extend %sidebar_right; }}
+  }
+
+  .list-row,
+  row {
+    padding: 5px 8px;
+
+    > label {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+
+    &.needs-attention > label {
+      @extend %needs_attention;
+
+      background-size: 6px 6px, 0 0;
+    }
+  }
+}

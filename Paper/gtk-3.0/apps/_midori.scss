@@ -1,0 +1,17 @@
+/**********
+ * Midori *
+ **********/
+
+$midori: #7FC843;
+
+MidoriBrowser {
+	.titlebar,
+	.header-bar,
+	.toolbar  {
+		background-color: $midori;
+
+		&:backdrop {
+			background-color: darken($midori,10%);
+		}
+	}
+}

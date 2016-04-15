@@ -17,7 +17,7 @@
 %global commit0 40-CHARACTER-HASH-VALUE
 
 name:       paper-gtk-theme
-version:    1.1
+version:    2.0
 release:    0
 
 Summary:    Paper GTK Theme

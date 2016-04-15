@@ -7,3 +7,5 @@ install-sh
 Makefile
 Makefile.in
 missing
+.sass-cache
+.sass-cache/

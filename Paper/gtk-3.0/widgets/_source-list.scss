@@ -1,0 +1,48 @@
+/**************
+* Source List *
+***************/
+
+.source-list,
+.source-list.view {
+  -GtkTreeView-horizontal-separator: 1px;
+  -GtkTreeView-vertical-separator: 6px;
+
+  background-color: $bg_color;
+  color: $fg_color;
+  border: solid $borders_color;
+  border-right-width: 1px;
+
+  &:backdrop {}
+
+  .category-expander {
+    color: transparent;
+  }
+
+  .badge {
+    background-image: none;
+    background-color: transparentize(black, 0.6);
+    color: $bg_color;
+    border-radius: 10px;
+    padding: 0 6px;
+    margin: 0 3px;
+    border-width: 0;
+
+    &:selected:backdrop,
+    &:selected:hover:backdrop {
+      background-color: transparentize(black, 0.8);
+      color: shade ($bg_color, 0.95);
+    }
+  }
+
+  row,
+  .list-row {
+    border:none;
+    padding: 0;
+
+    > GtkLabel,
+    > label {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+/*******************
+ * Archive Manager *
+ *******************/
+
+$archive_manager: #A88A67;
+
+FrWindow {
+  .titlebar,
+  .header-bar,
+  .toolbar  {
+    background-color: $archive_manager;
+
+    &:backdrop {
+      background-color: darken($archive_manager,10%);
+    }
+  }
+}
