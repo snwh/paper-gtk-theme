@@ -1,0 +1,108 @@
+/**************
+ * GtkInfoBar *
+ **************/
+GtkInfoBar,
+infobar {
+  border-style: none;
+}
+
+%info,
+.info,
+.question,
+.warning,
+.error {
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
+  text-shadow: none;
+  border-color: darken($selected_bg_color, 10%);
+
+  .button,
+  button {
+    // FIXME: extend selection mode buttons
+    @include button(normal, $selected_bg_color, $selected_fg_color, none);
+
+    &:hover { @include button(hover, $selected_bg_color, $selected_fg_color, none); }
+
+    &:active,
+    &:checked { @include button(active, $selected_bg_color, $selected_fg_color, none); }
+
+    &:disabled { @include button(insensitive,$selected_bg_color,$selected_fg_color,none); }
+
+    &:backdrop {
+      @include button(backdrop, $selected_bg_color, $selected_fg_color, none);
+      border-color: _border_color($selected_bg_color);
+
+      &:disabled {
+        @include button(backdrop-insensitive, $selected_bg_color,
+                        $selected_fg_color, none);
+        border-color: _border_color($selected_bg_color);
+      }
+    }
+  }
+
+  label:selected { &:focus, &:hover, & { background-color: darken($selected_bg_color, 10%); }}
+
+  *:link { @extend %link_selected; }
+}
+
+
+.warning {
+  @extend %info;
+  background-color: $warning_color;
+  border-color: darken($warning_color, 10%);
+
+  .button,
+  button {
+    // FIXME: extend selection mode buttons
+    @include button(normal, $warning_color, $selected_fg_color, none);
+
+    &:hover { @include button(hover, $warning_color, $selected_fg_color, none); }
+
+    &:active,
+    &:checked { @include button(active, $warning_color, $selected_fg_color, none); }
+
+    &:disabled { @include button(insensitive,$warning_color,$selected_fg_color,none); }
+
+    &:backdrop {
+      @include button(backdrop, $warning_color, $selected_fg_color, none);
+      border-color: _border_color($warning_color);
+
+      &:disabled {
+        @include button(backdrop-insensitive, $warning_color,
+                        $selected_fg_color, none);
+        border-color: _border_color($warning_color);
+      }
+    }
+  }
+
+}
+
+.error {
+  @extend %info;
+  background-color: $error_color;
+  border-color: darken($error_color, 10%);
+
+  .button,
+  button {
+    // FIXME: extend selection mode buttons
+    @include button(normal, $error_color, $selected_fg_color, none);
+
+    &:hover { @include button(hover, $error_color, $selected_fg_color, none); }
+
+    &:active,
+    &:checked { @include button(active, $error_color, $selected_fg_color, none); }
+
+    &:disabled { @include button(insensitive,$error_color,$selected_fg_color,none); }
+
+    &:backdrop {
+      @include button(backdrop, $error_color, $selected_fg_color, none);
+      border-color: _border_color($error_color);
+
+      &:disabled {
+        @include button(backdrop-insensitive, $error_color,
+                        $selected_fg_color, none);
+        border-color: _border_color($error_color);
+      }
+    }
+  }
+}

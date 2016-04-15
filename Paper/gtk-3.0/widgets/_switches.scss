@@ -1,0 +1,117 @@
+/**********
+ * Switch *
+ **********/
+GtkSwitch,
+switch {
+  font: 1;
+  font-weight: bold;
+  outline-offset: -4px;
+  transition: all 200ms ease-in;
+
+  background-color: transparentize(black, 0.8);
+  border: none;
+  border-radius: 14px;
+  color: transparent;
+  padding: 2px;
+  box-shadow: inset 0 1px transparent(black, 0.8);
+
+  -GtkSwitch-slider-width: 20;
+  -GtkSwitch-slider-height: 20;
+
+  &:active,
+  &:checked {
+    background-color: $selected_bg_color;
+  }
+
+  &:insensitive,
+  &:disabled {
+    background-color: transparentize(black, 0.8);
+
+    .slider,
+    slider {
+      box-shadow:none;
+    }
+  }
+
+  &:backdrop {
+    color: $backdrop_fg_color;
+    border-color: $backdrop_borders_color;
+    background-image: linear-gradient(to bottom, $backdrop_dark_fill);
+    box-shadow: none;
+    text-shadow: none;
+    transition: $backdrop_transition;
+
+    &:checked {
+      @if $variant == 'light' { color: $backdrop_bg_color; }
+      border-color: if($variant == 'light', $selected_bg_color,
+                                            $selected_borders_color);
+      background-image: linear-gradient(to bottom, $selected_bg_color);
+      box-shadow: none;
+    }
+  }
+
+  .slider,
+  slider {
+    padding:2px;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 50%;
+    transition: $button_transition;
+    background-color: $base_color;
+
+    box-shadow: 0 2px 2px transparentize(black, 0.8),
+                0 1px 2px transparentize(black, 0.8);
+  }
+
+  &:hover .slider,
+  &:hover slider { 
+    box-shadow: 0 2px 4px transparentize(black, 0.8),
+                0 1px 3px transparentize(black, 0.8);
+  }
+
+  &:checked slider { border: 1px solid $selected_borders_color; }
+
+  &:backdrop {
+    .slider,
+    slider {
+      box-shadow:none;
+    }
+
+    &:checked slider { border-color: if($variant == 'light', $selected_bg_color, $selected_borders_color); }
+
+    &:disabled slider { @include button(backdrop-insensitive); }
+  }
+
+  row:selected & {
+    @if $variant == 'light' {
+      box-shadow: none;
+      border-color: $selected_borders_color;
+
+      &:backdrop { border-color: $selected_borders_color; }
+
+      &.slider:dir(rtl) { border-left-color: $borders_color; }
+      &.slider:dir(ltr) { border-right-color: $borders_color; }
+
+      &.slider { &:checked, & { border-color: $selected_borders_color; } }
+    }
+  }
+
+  // Trough
+
+  .trough {
+    background-color: transparentize(black, 0.8);
+    border: none;
+    border-radius: 14px;
+    color: transparent;
+    padding: 2px;
+
+    &:active {
+      background-color: $selected_bg_color;
+    }
+
+    &:insensitive,
+    &:disabled {
+      background-color: transparentize(black, 0.8);
+    }
+  }
+}
