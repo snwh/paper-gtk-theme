@@ -2,7 +2,7 @@
  * Sidebar *
  ***********/
 .sidebar {
-  border-style: none;
+  border-style: solid;
   background-color: $bg_color;
 
   @at-root %sidebar_left,
@@ -33,7 +33,6 @@
     border-right-width:1px;
   }
 
-
   .list-row,
   row {
     border:none;
@@ -54,6 +53,10 @@
 
   .separator {
     color: $borders_color;
+  }
+
+  > .inline-toolbar {
+    border-radius: 0;
   }
 
   .paned &, paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}

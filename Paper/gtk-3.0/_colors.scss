@@ -33,6 +33,7 @@ $scrollbar_slider_active_color: if($variant=='light', darken($selected_bg_color,
 $warning_color: #fec006;
 $error_color: #f34235;
 $info_color: #2095f2;
+$question_color: #4ab3e4;
 $success_color: if($variant == 'light', #dbdee0, darken(#dbdee0,10%));
 $destructive_color: if($variant == 'light', #DC322F, darken(#DC322F,10%));
 

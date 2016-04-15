@@ -4171,449 +4171,113 @@ window.csd > .titlebar:not(headerbar) {
 /**************
  * GtkInfoBar *
  **************/
+.info, .warning, .question, .error,
 GtkInfoBar,
 infobar {
-  border-style: none; }
-
-.warning, .error,
-.info,
-.question,
-.warning,
-.error {
-  background-color: #667f8c;
-  color: #ffffff;
   text-shadow: none;
-  border-color: #51646e; }
-  .warning .button, .error .button,
-  .warning button,
-  .error button,
-  .info .button,
+  color: #A1A8AB;
+  background-color: #4F585C;
+  border-bottom: 1px solid #373e41;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 0 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.15); }
+
+.info, .warning, .question, .error {
+  text-shadow: none;
+  color: #ffffff;
+  border: none; }
+  .info .label, .warning .label, .question .label, .error .label {
+    color: #ffffff; }
+    .info .label:backdrop, .warning .label:backdrop, .question .label:backdrop, .error .label:backdrop {
+      color: rgba(255, 255, 255, 0.5); }
+  .info .button, .warning .button, .question .button, .error .button,
   .info button,
-  .question .button,
-  .question button,
-  .warning .button,
   .warning button,
-  .error .button,
+  .question button,
   .error button {
-    color: #ffffff;
-    outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #303c42;
-    background-image: linear-gradient(to bottom, #667f8c, #5b717d);
-    text-shadow: 0 1px rgba(0, 0, 0, 0.62039);
-    -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.62039);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
-    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05); }
-    .warning .button:hover, .error .button:hover,
-    .warning button:hover,
-    .error button:hover,
-    .info .button:hover,
-    .info button:hover,
-    .question .button:hover,
-    .question button:hover,
-    .warning .button:hover,
-    .warning button:hover,
-    .error .button:hover,
-    .error button:hover {
-      color: #ffffff;
-      outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #303c42;
-      background-image: linear-gradient(to bottom, #68828f, #627986 60%, #5d7480);
-      text-shadow: 0 1px rgba(0, 0, 0, 0.57239);
-      -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.57239);
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.2); }
-    .warning .button:active, .error .button:active, .warning .button:checked, .error .button:checked,
-    .warning button:active,
-    .error button:active,
-    .warning button:checked,
-    .error button:checked,
-    .info .button:active,
-    .info .button:checked,
+    border-radius: 2px;
+    border: none;
+    background: rgba(99, 110, 115, 0.95);
+    color: #A1A8AB;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2); }
+    .info .button .label, .warning .button .label, .question .button .label, .error .button .label,
+    .info button .label,
+    .warning button .label,
+    .question button .label,
+    .error button .label {
+      color: #A1A8AB; }
+    .info .button:active, .warning .button:active, .question .button:active, .error .button:active,
     .info button:active,
-    .info button:checked,
-    .question .button:active,
-    .question .button:checked,
-    .question button:active,
-    .question button:checked,
-    .warning .button:active,
-    .warning .button:checked,
     .warning button:active,
-    .warning button:checked,
-    .error .button:active,
-    .error .button:checked,
-    .error button:active,
-    .error button:checked {
-      color: #ffffff;
-      outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #303c42;
-      background-image: linear-gradient(to bottom, #576c77, #627986);
-      text-shadow: 0 1px rgba(0, 0, 0, 0.70039);
-      -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.70039);
-      box-shadow: inset 0 2px 1px -2px rgba(0, 0, 0, 0.6);
-      box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.05); }
-    .warning .button:disabled, .error .button:disabled,
-    .warning button:disabled,
-    .error button:disabled,
-    .info .button:disabled,
-    .info button:disabled,
-    .question .button:disabled,
-    .question button:disabled,
-    .warning .button:disabled,
-    .warning button:disabled,
-    .error .button:disabled,
-    .error button:disabled {
-      border-color: #303c42;
-      background-image: none;
-      background-color: #667c88;
-      text-shadow: none;
-      box-shadow: none;
-      -gtk-icon-shadow: none; }
-      .warning .button:disabled GtkLabel, .error .button:disabled GtkLabel, .warning .button:disabled, .error .button:disabled,
-      .warning button:disabled GtkLabel,
-      .error button:disabled GtkLabel,
-      .warning button:disabled,
-      .error button:disabled,
-      .info .button:disabled GtkLabel,
-      .info .button:disabled,
-      .info button:disabled GtkLabel,
-      .info button:disabled,
-      .question .button:disabled GtkLabel,
-      .question .button:disabled,
-      .question button:disabled GtkLabel,
-      .question button:disabled,
-      .warning .button:disabled GtkLabel,
-      .warning .button:disabled,
-      .warning button:disabled GtkLabel,
-      .warning button:disabled,
-      .error .button:disabled GtkLabel,
-      .error .button:disabled,
-      .error button:disabled GtkLabel,
-      .error button:disabled {
-        color: #b3bec4; }
-      .warning .button:disabled label, .error .button:disabled label, .warning .button:disabled, .error .button:disabled,
-      .warning button:disabled label,
-      .error button:disabled label,
-      .warning button:disabled,
-      .error button:disabled,
-      .info .button:disabled label,
-      .info .button:disabled,
-      .info button:disabled label,
-      .info button:disabled,
-      .question .button:disabled label,
-      .question .button:disabled,
-      .question button:disabled label,
-      .question button:disabled,
-      .warning .button:disabled label,
-      .warning .button:disabled,
-      .warning button:disabled label,
-      .warning button:disabled,
-      .error .button:disabled label,
-      .error .button:disabled,
-      .error button:disabled label,
-      .error button:disabled {
-        color: #b3bec4; }
-    .warning .button:backdrop, .error .button:backdrop,
-    .warning button:backdrop,
-    .error button:backdrop,
-    .info .button:backdrop,
+    .question button:active,
+    .error button:active {
+      background: #636E73;
+      color: #A1A8AB;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4); }
+      .info .button:active:backdrop, .warning .button:active:backdrop, .question .button:active:backdrop, .error .button:active:backdrop,
+      .info button:active:backdrop,
+      .warning button:active:backdrop,
+      .question button:active:backdrop,
+      .error button:active:backdrop {
+        background: rgba(99, 110, 115, 0.8);
+        color: rgba(161, 168, 171, 0.5);
+        box-shadow: none; }
+    .info .button:hover, .warning .button:hover, .question .button:hover, .error .button:hover, .info .button:focus, .warning .button:focus, .question .button:focus, .error .button:focus,
+    .info button:hover,
+    .warning button:hover,
+    .question button:hover,
+    .error button:hover,
+    .info button:focus,
+    .warning button:focus,
+    .question button:focus,
+    .error button:focus {
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4); }
+    .info .button:insensitive, .warning .button:insensitive, .question .button:insensitive, .error .button:insensitive,
+    .info button:insensitive,
+    .warning button:insensitive,
+    .question button:insensitive,
+    .error button:insensitive {
+      background: rgba(99, 110, 115, 0.6);
+      color: rgba(161, 168, 171, 0.5);
+      box-shadow: none; }
+      .info .button:insensitive:backdrop, .warning .button:insensitive:backdrop, .question .button:insensitive:backdrop, .error .button:insensitive:backdrop,
+      .info button:insensitive:backdrop,
+      .warning button:insensitive:backdrop,
+      .question button:insensitive:backdrop,
+      .error button:insensitive:backdrop {
+        background: rgba(99, 110, 115, 0.5);
+        color: rgba(161, 168, 171, 0.5);
+        box-shadow: none; }
+    .info .button:backdrop, .warning .button:backdrop, .question .button:backdrop, .error .button:backdrop,
     .info button:backdrop,
-    .question .button:backdrop,
-    .question button:backdrop,
-    .warning .button:backdrop,
     .warning button:backdrop,
-    .error .button:backdrop,
+    .question button:backdrop,
     .error button:backdrop {
-      border-color: #303c42;
-      background-image: linear-gradient(to bottom, #667f8c);
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-      border-color: #303c42; }
-      .warning .button:backdrop GtkLabel, .error .button:backdrop GtkLabel, .warning .button:backdrop, .error .button:backdrop,
-      .warning button:backdrop GtkLabel,
-      .error button:backdrop GtkLabel,
-      .warning button:backdrop,
-      .error button:backdrop,
-      .info .button:backdrop GtkLabel,
-      .info .button:backdrop,
-      .info button:backdrop GtkLabel,
-      .info button:backdrop,
-      .question .button:backdrop GtkLabel,
-      .question .button:backdrop,
-      .question button:backdrop GtkLabel,
-      .question button:backdrop,
-      .warning .button:backdrop GtkLabel,
-      .warning .button:backdrop,
-      .warning button:backdrop GtkLabel,
-      .warning button:backdrop,
-      .error .button:backdrop GtkLabel,
-      .error .button:backdrop,
-      .error button:backdrop GtkLabel,
-      .error button:backdrop {
-        color: #e0e5e8; }
-      .warning .button:backdrop label, .error .button:backdrop label, .warning .button:backdrop, .error .button:backdrop,
-      .warning button:backdrop label,
-      .error button:backdrop label,
-      .warning button:backdrop,
-      .error button:backdrop,
-      .info .button:backdrop label,
-      .info .button:backdrop,
-      .info button:backdrop label,
-      .info button:backdrop,
-      .question .button:backdrop label,
-      .question .button:backdrop,
-      .question button:backdrop label,
-      .question button:backdrop,
-      .warning .button:backdrop label,
-      .warning .button:backdrop,
-      .warning button:backdrop label,
-      .warning button:backdrop,
-      .error .button:backdrop label,
-      .error .button:backdrop,
-      .error button:backdrop label,
-      .error button:backdrop {
-        color: #e0e5e8; }
-      .warning .button:backdrop:disabled, .error .button:backdrop:disabled,
-      .warning button:backdrop:disabled,
-      .error button:backdrop:disabled,
-      .info .button:backdrop:disabled,
-      .info button:backdrop:disabled,
-      .question .button:backdrop:disabled,
-      .question button:backdrop:disabled,
-      .warning .button:backdrop:disabled,
-      .warning button:backdrop:disabled,
-      .error .button:backdrop:disabled,
-      .error button:backdrop:disabled {
-        border-color: #303c42;
-        background-image: none;
-        background-color: #667c88;
-        text-shadow: none;
-        -gtk-icon-shadow: none;
-        box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-        border-color: #303c42; }
-        .warning .button:backdrop:disabled GtkLabel, .error .button:backdrop:disabled GtkLabel, .warning .button:backdrop:disabled, .error .button:backdrop:disabled,
-        .warning button:backdrop:disabled GtkLabel,
-        .error button:backdrop:disabled GtkLabel,
-        .warning button:backdrop:disabled,
-        .error button:backdrop:disabled,
-        .info .button:backdrop:disabled GtkLabel,
-        .info .button:backdrop:disabled,
-        .info button:backdrop:disabled GtkLabel,
-        .info button:backdrop:disabled,
-        .question .button:backdrop:disabled GtkLabel,
-        .question .button:backdrop:disabled,
-        .question button:backdrop:disabled GtkLabel,
-        .question button:backdrop:disabled,
-        .warning .button:backdrop:disabled GtkLabel,
-        .warning .button:backdrop:disabled,
-        .warning button:backdrop:disabled GtkLabel,
-        .warning button:backdrop:disabled,
-        .error .button:backdrop:disabled GtkLabel,
-        .error .button:backdrop:disabled,
-        .error button:backdrop:disabled GtkLabel,
-        .error button:backdrop:disabled {
-          color: #9caab2; }
-        .warning .button:backdrop:disabled label, .error .button:backdrop:disabled label, .warning .button:backdrop:disabled, .error .button:backdrop:disabled,
-        .warning button:backdrop:disabled label,
-        .error button:backdrop:disabled label,
-        .warning button:backdrop:disabled,
-        .error button:backdrop:disabled,
-        .info .button:backdrop:disabled label,
-        .info .button:backdrop:disabled,
-        .info button:backdrop:disabled label,
-        .info button:backdrop:disabled,
-        .question .button:backdrop:disabled label,
-        .question .button:backdrop:disabled,
-        .question button:backdrop:disabled label,
-        .question button:backdrop:disabled,
-        .warning .button:backdrop:disabled label,
-        .warning .button:backdrop:disabled,
-        .warning button:backdrop:disabled label,
-        .warning button:backdrop:disabled,
-        .error .button:backdrop:disabled label,
-        .error .button:backdrop:disabled,
-        .error button:backdrop:disabled label,
-        .error button:backdrop:disabled {
-          color: #9caab2; }
-  .warning label:selected:focus, .error label:selected:focus, .warning label:selected:hover, .error label:selected:hover, .warning label:selected, .error label:selected,
-  .info label:selected:focus,
-  .info label:selected:hover,
-  .info label:selected,
-  .question label:selected:focus,
-  .question label:selected:hover,
-  .question label:selected,
-  .warning label:selected:focus,
-  .warning label:selected:hover,
-  .warning label:selected,
-  .error label:selected:focus,
-  .error label:selected:hover,
-  .error label:selected {
-    background-color: #51646e; }
+      background: rgba(99, 110, 115, 0.8);
+      color: rgba(161, 168, 171, 0.5);
+      box-shadow: none; }
+
+.info {
+  background-color: #2095f2; }
+  .info:backdrop {
+    background-color: #50acf5;
+    color: rgba(255, 255, 255, 0.5); }
 
 .warning {
-  background-color: #fec006;
-  border-color: #d09c01; }
-  .warning .button,
-  .warning button {
-    color: #ffffff;
-    outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #846301;
-    background-image: linear-gradient(to bottom, #fec006, #eaaf01);
-    text-shadow: 0 1px rgba(0, 0, 0, 0.59216);
-    -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.59216);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
-    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05); }
-    .warning .button:hover,
-    .warning button:hover {
-      color: #ffffff;
-      outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #846301;
-      background-image: linear-gradient(to bottom, #fec10b, #f9bb01 60%, #efb301);
-      text-shadow: 0 1px rgba(0, 0, 0, 0.54416);
-      -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.54416);
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.2); }
-    .warning .button:active, .warning .button:checked,
-    .warning button:active,
-    .warning button:checked {
-      color: #ffffff;
-      outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #846301;
-      background-image: linear-gradient(to bottom, #dfa801, #f9bb01);
-      text-shadow: 0 1px rgba(0, 0, 0, 0.67216);
-      -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.67216);
-      box-shadow: inset 0 2px 1px -2px rgba(0, 0, 0, 0.6);
-      box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.05); }
-    .warning .button:disabled,
-    .warning button:disabled {
-      border-color: #846301;
-      background-image: none;
-      background-color: #e7b416;
-      text-shadow: none;
-      box-shadow: none;
-      -gtk-icon-shadow: none; }
-      .warning .button:disabled GtkLabel, .warning .button:disabled,
-      .warning button:disabled GtkLabel,
-      .warning button:disabled {
-        color: #f3da8b; }
-      .warning .button:disabled label, .warning .button:disabled,
-      .warning button:disabled label,
-      .warning button:disabled {
-        color: #f3da8b; }
-    .warning .button:backdrop,
-    .warning button:backdrop {
-      border-color: #846301;
-      background-image: linear-gradient(to bottom, #fec006);
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-      border-color: #846301; }
-      .warning .button:backdrop GtkLabel, .warning .button:backdrop,
-      .warning button:backdrop GtkLabel,
-      .warning button:backdrop {
-        color: #fff2cd; }
-      .warning .button:backdrop label, .warning .button:backdrop,
-      .warning button:backdrop label,
-      .warning button:backdrop {
-        color: #fff2cd; }
-      .warning .button:backdrop:disabled,
-      .warning button:backdrop:disabled {
-        border-color: #846301;
-        background-image: none;
-        background-color: #e7b416;
-        text-shadow: none;
-        -gtk-icon-shadow: none;
-        box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-        border-color: #846301; }
-        .warning .button:backdrop:disabled GtkLabel, .warning .button:backdrop:disabled,
-        .warning button:backdrop:disabled GtkLabel,
-        .warning button:backdrop:disabled {
-          color: #efce68; }
-        .warning .button:backdrop:disabled label, .warning .button:backdrop:disabled,
-        .warning button:backdrop:disabled label,
-        .warning button:backdrop:disabled {
-          color: #efce68; }
+  background-color: #fec006; }
+  .warning:backdrop {
+    background-color: #fecd39;
+    color: rgba(255, 255, 255, 0.5); }
+
+.question {
+  background-color: #4ab3e4; }
+  .question:backdrop {
+    background-color: #76c6eb;
+    color: rgba(255, 255, 255, 0.5); }
 
 .error {
-  background-color: #f34235;
-  border-color: #e71d0e; }
-  .error .button,
-  .error button {
-    color: #ffffff;
-    outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #9f1409;
-    background-image: linear-gradient(to bottom, #f34235, #f22b1d);
-    text-shadow: 0 1px rgba(0, 0, 0, 0.53569);
-    -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.53569);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
-    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05); }
-    .error .button:hover,
-    .error button:hover {
-      color: #ffffff;
-      outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #9f1409;
-      background-image: linear-gradient(to bottom, #f3473a, #f2392b 60%, #f23022);
-      text-shadow: 0 1px rgba(0, 0, 0, 0.48769);
-      -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.48769);
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.4); }
-    .error .button:active, .error .button:checked,
-    .error button:active,
-    .error button:checked {
-      color: #ffffff;
-      outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #9f1409;
-      background-image: linear-gradient(to bottom, #f12213, #f2392b);
-      text-shadow: 0 1px rgba(0, 0, 0, 0.61569);
-      -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.61569);
-      box-shadow: inset 0 2px 1px -2px rgba(0, 0, 0, 0.6);
-      box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.05); }
-    .error .button:disabled,
-    .error button:disabled {
-      border-color: #9f1409;
-      background-image: none;
-      background-color: #dd493e;
-      text-shadow: none;
-      box-shadow: none;
-      -gtk-icon-shadow: none; }
-      .error .button:disabled GtkLabel, .error .button:disabled,
-      .error button:disabled GtkLabel,
-      .error button:disabled {
-        color: #eea49f; }
-      .error .button:disabled label, .error .button:disabled,
-      .error button:disabled label,
-      .error button:disabled {
-        color: #eea49f; }
-    .error .button:backdrop,
-    .error button:backdrop {
-      border-color: #9f1409;
-      background-image: linear-gradient(to bottom, #f34235);
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-      border-color: #9f1409; }
-      .error .button:backdrop GtkLabel, .error .button:backdrop,
-      .error button:backdrop GtkLabel,
-      .error button:backdrop {
-        color: #fdd9d7; }
-      .error .button:backdrop label, .error .button:backdrop,
-      .error button:backdrop label,
-      .error button:backdrop {
-        color: #fdd9d7; }
-      .error .button:backdrop:disabled,
-      .error button:backdrop:disabled {
-        border-color: #9f1409;
-        background-image: none;
-        background-color: #dd493e;
-        text-shadow: none;
-        -gtk-icon-shadow: none;
-        box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-        border-color: #9f1409; }
-        .error .button:backdrop:disabled GtkLabel, .error .button:backdrop:disabled,
-        .error button:backdrop:disabled GtkLabel,
-        .error button:backdrop:disabled {
-          color: #e98982; }
-        .error .button:backdrop:disabled label, .error .button:backdrop:disabled,
-        .error button:backdrop:disabled label,
-        .error button:backdrop:disabled {
-          color: #e98982; }
+  background-color: #f34235; }
+  .error:backdrop {
+    background-color: #f66f65;
+    color: rgba(255, 255, 255, 0.5); }
 
 /*************
  * Level Bar *
@@ -4773,23 +4437,7 @@ button:visited,
   button:backdrop:visited,
   .button:backdrop:visited {
     color: #667f8c; }
-  .warning *:link, .error *:link, .warning button:link, .error button:link,
-  .warning .button:link,
-  .error .button:link,
-  .warning button:visited,
-  .error button:visited,
-  .warning .button:visited,
-  .error .button:visited,
-  .info *:link,
-  .info button:link,
-  .info .button:link,
-  .info button:visited,
-  .info .button:visited,
-  .question *:link,
-  .question button:link,
-  .question .button:link,
-  .question button:visited,
-  .question .button:visited, *:link:selected, .selection-mode.titlebar:not(headerbar) .subtitle:link,
+  *:link:selected, .selection-mode.titlebar:not(headerbar) .subtitle:link,
   .header-bar.selection-mode .subtitle:link,
   headerbar.selection-mode .subtitle:link, button:selected:link,
   .button:selected:link,
@@ -5121,14 +4769,25 @@ separator,
 .separator {
   color: #33393b; }
 
+/**************
+* Text Styles *
+**************/
 .h1 {
-  font: 24; }
+  font-size: 24px; }
 
 .h2 {
-  font: 18; }
+  font-weight: 300;
+  font-size: 18px; }
 
 .h3 {
-  font: 12; }
+  font-size: 11px; }
+
+.h4,
+.category-label {
+  padding: 6px;
+  color: mix #4F585C, #A1A8AB, 50%;
+  font-weight: bold;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.2); }
 
 /*************
  * Notebooks *
@@ -5413,63 +5072,67 @@ notebook,
 /*********
  * Paned *
  *********/
-.paned > separator,
-paned > separator {
-  min-width: 1px;
-  min-height: 1px;
-  -gtk-icon-source: none;
-  border-style: none;
-  background-color: transparent;
-  background-image: image(#33393b);
-  background-size: 1px 1px; }
-  .paned > separator:selected,
-  paned > separator:selected {
-    background-image: image(#667f8c); }
-  .paned > separator:backdrop,
-  paned > separator:backdrop {
-    background-image: image(#363c3e); }
-  .paned > separator.wide,
-  paned > separator.wide {
-    min-width: 5px;
-    min-height: 5px;
-    background-color: #4F585C;
-    background-image: image(#33393b), image(#33393b);
-    background-size: 1px 1px, 1px 1px; }
-    .paned > separator.wide:backdrop,
-    paned > separator.wide:backdrop {
+.paned,
+paned {
+  border: solid #33393b;
+  border-left-width: 1px; }
+  .paned > separator,
+  paned > separator {
+    min-width: 1px;
+    min-height: 1px;
+    -gtk-icon-source: none;
+    border-style: none;
+    background-color: transparent;
+    background-image: image(#33393b);
+    background-size: 1px 1px; }
+    .paned > separator:selected,
+    paned > separator:selected {
+      background-image: image(#667f8c); }
+    .paned > separator:backdrop,
+    paned > separator:backdrop {
+      background-image: image(#363c3e); }
+    .paned > separator.wide,
+    paned > separator.wide {
+      min-width: 5px;
+      min-height: 5px;
       background-color: #4F585C;
-      background-image: image(#363c3e), image(#363c3e); }
-.paned.horizontal > separator,
-paned.horizontal > separator {
-  background-repeat: repeat-y; }
-  .paned.horizontal > separator:dir(ltr),
-  paned.horizontal > separator:dir(ltr) {
-    margin: 0 -8px 0 0;
-    padding: 0 8px 0 0;
-    background-position: left; }
-  .paned.horizontal > separator:dir(rtl),
-  paned.horizontal > separator:dir(rtl) {
-    margin: 0 0 0 -8px;
-    padding: 0 0 0 8px;
-    background-position: right; }
-  .paned.horizontal > separator.wide,
-  paned.horizontal > separator.wide {
-    margin: 0;
-    padding: 0;
-    background-repeat: repeat-y, repeat-y;
-    background-position: left, right; }
-.paned.vertical > separator,
-paned.vertical > separator {
-  margin: 0 0 -8px 0;
-  padding: 0 0 8px 0;
-  background-repeat: repeat-x;
-  background-position: top; }
-  .paned.vertical > separator.wide,
-  paned.vertical > separator.wide {
-    margin: 0;
-    padding: 0;
-    background-repeat: repeat-x, repeat-x;
-    background-position: bottom, top; }
+      background-image: image(#33393b), image(#33393b);
+      background-size: 1px 1px, 1px 1px; }
+      .paned > separator.wide:backdrop,
+      paned > separator.wide:backdrop {
+        background-color: #4F585C;
+        background-image: image(#363c3e), image(#363c3e); }
+  .paned.horizontal > separator,
+  paned.horizontal > separator {
+    background-repeat: repeat-y; }
+    .paned.horizontal > separator:dir(ltr),
+    paned.horizontal > separator:dir(ltr) {
+      margin: 0 -8px 0 0;
+      padding: 0 8px 0 0;
+      background-position: left; }
+    .paned.horizontal > separator:dir(rtl),
+    paned.horizontal > separator:dir(rtl) {
+      margin: 0 0 0 -8px;
+      padding: 0 0 0 8px;
+      background-position: right; }
+    .paned.horizontal > separator.wide,
+    paned.horizontal > separator.wide {
+      margin: 0;
+      padding: 0;
+      background-repeat: repeat-y, repeat-y;
+      background-position: left, right; }
+  .paned.vertical > separator,
+  paned.vertical > separator {
+    margin: 0 0 -8px 0;
+    padding: 0 0 8px 0;
+    background-repeat: repeat-x;
+    background-position: top; }
+    .paned.vertical > separator.wide,
+    paned.vertical > separator.wide {
+      margin: 0;
+      padding: 0;
+      background-repeat: repeat-x, repeat-x;
+      background-position: bottom, top; }
 
 /************
  * Pathbars *
@@ -7344,7 +7007,7 @@ OsScrollbar {
  * Sidebar *
  ***********/
 .sidebar {
-  border-style: none;
+  border-style: solid;
   background-color: #4F585C; }
   stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:dir(ltr), .sidebar.left, .sidebar.left:dir(rtl) {
     border-right: 1px solid #33393b;
@@ -7378,6 +7041,8 @@ OsScrollbar {
       background-size: 6px 6px, 0 0; }
   .sidebar .separator {
     color: #33393b; }
+  .sidebar > .inline-toolbar {
+    border-radius: 0; }
   .paned .sidebar.left, .paned .sidebar.right, .paned .sidebar.left:dir(rtl), .paned .sidebar:dir(rtl), .paned .sidebar:dir(ltr), .paned .sidebar, paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
     border-style: none; }
 
@@ -7766,7 +7431,7 @@ switch {
   border-radius: 14px;
   color: transparent;
   padding: 2px;
-  box-shadow: inset 0 1px transparent(black, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
   -GtkSwitch-slider-width: 20;
   -GtkSwitch-slider-height: 20; }
   GtkSwitch:active, GtkSwitch:checked,
@@ -7809,17 +7474,18 @@ switch {
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     background-color: #636E73;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2); }
-  GtkSwitch:hover .slider, GtkSwitch:hover slider,
+  GtkSwitch:hover .slider,
+  GtkSwitch:hover slider,
   switch:hover .slider,
   switch:hover slider {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.2); }
   GtkSwitch:checked slider,
   switch:checked slider {
     border: 1px solid #262f33; }
-  GtkSwitch:backdrop .slider,
-  GtkSwitch:backdrop slider,
-  switch:backdrop .slider,
-  switch:backdrop slider {
+  GtkSwitch:backdrop > .slider,
+  GtkSwitch:backdrop > slider,
+  switch:backdrop > .slider,
+  switch:backdrop > slider {
     box-shadow: none; }
   GtkSwitch:backdrop:checked slider,
   switch:backdrop:checked slider {
@@ -7840,17 +7506,25 @@ switch {
     switch:backdrop:disabled slider label,
     switch:backdrop:disabled slider {
       color: #727f85; }
+  GtkSwitch trough,
   GtkSwitch .trough,
+  switch trough,
   switch .trough {
     background-color: rgba(0, 0, 0, 0.2);
     border: none;
     border-radius: 14px;
     color: transparent;
     padding: 2px; }
+    GtkSwitch trough:active,
     GtkSwitch .trough:active,
+    switch trough:active,
     switch .trough:active {
       background-color: #667f8c; }
-    GtkSwitch .trough:insensitive, GtkSwitch .trough:disabled,
+    GtkSwitch trough:insensitive, GtkSwitch trough:disabled,
+    GtkSwitch .trough:insensitive,
+    GtkSwitch .trough:disabled,
+    switch trough:insensitive,
+    switch trough:disabled,
     switch .trough:insensitive,
     switch .trough:disabled {
       background-color: rgba(0, 0, 0, 0.2); }
@@ -8004,7 +7678,7 @@ searchbar
 .search-bar, .location-bar,
 .inline-toolbar {
   -GtkWidget-window-dragging: true;
-  background-color: #434b4e;
+  background-color: #4a5357;
   color: #A1A8AB;
   border: 1px solid #33393b;
   border-top-width: 0;
@@ -8014,7 +7688,7 @@ searchbar
   searchbar
   .search-bar:backdrop, .location-bar:backdrop,
   .inline-toolbar:backdrop {
-    background-color: #3f4649; }
+    background-color: #434b4e; }
   searchbar
   .search-bar button, .location-bar button,
   searchbar .search-bar .button,

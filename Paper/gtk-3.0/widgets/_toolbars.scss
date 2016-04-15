@@ -100,7 +100,7 @@ toolbar {
 .inline-toolbar {
   -GtkWidget-window-dragging: true;
 
-  background-color: darken($bg_color, 5%);
+  background-color: darken($bg_color, 2%);
   color: $fg_color;
 
   border: 1px solid $borders_color;
@@ -112,7 +112,7 @@ toolbar {
   padding: 0px;
 
   &:backdrop {
-    background-color: darken($bg_color, 7%);
+    background-color: darken($bg_color, 5%);
   }
 
   // buttons

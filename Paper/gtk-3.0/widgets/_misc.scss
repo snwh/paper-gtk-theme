@@ -39,7 +39,27 @@ separator,
   color: $borders_color;
 }
 
-// text 
-.h1 { font: 24; }
-.h2 { font: 18; }
-.h3 { font: 12; }
+/**************
+* Text Styles *
+**************/
+
+.h1 {
+  font-size: 24px;
+}
+
+.h2 {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.h3 {
+  font-size: 11px;
+}
+
+.h4,
+.category-label {
+  padding: 6px;
+  color: mix ($bg_color, $text_color, 50%);
+  font-weight: bold;
+  text-shadow: 0 1px transparentize(white,0.8);
+}
