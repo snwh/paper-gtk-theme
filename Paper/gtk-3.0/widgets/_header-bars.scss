@@ -103,21 +103,35 @@ headerbar {
       color: $backdrop_headerbar_fg_color;
     }
 
-    .button.titlebutton,
-    button.titlebutton {
-      min-height: 26px;
-      min-width: 26px;
-      margin: 0;
-      padding: 1px;
-      border-radius:50%;
-      &:active {
-        background-color:$headerbar_fg_color;
-        color:$headerbar_bg_color;
-        box-shadow:none;
-      }
-      &:backdrop {
-        color:$backdrop_headerbar_fg_color;
-        background-color:$headerbar_fg_color;
+    .button,
+    button {
+
+      &.titlebutton {
+        min-height: 16px;
+        min-width: 16px;
+        padding: 1px;
+        border-radius:50%;
+        background-color:transparent;
+        box-shadow: none;
+        text-shadow: none;
+        -gtk-icon-shadow: none;
+
+        &:hover {
+          background-color:transparent;
+          color:lighten($headerbar_fg_color, 10%);
+        }
+
+        &:backdrop {
+          background-color:transparent;
+          color:$backdrop_headerbar_fg_color;
+        }
+
+        &:active {
+          background-color:$headerbar_fg_color;
+          color:$headerbar_bg_color;
+          border-radius:50%;
+          box-shadow:none;
+        }
       }
     }
   }
@@ -203,6 +217,7 @@ headerbar {
     text-shadow: none;
     -gtk-icon-shadow: none;
     padding: 10px;
+    margin: 0;
     color: $headerbar_fg_color;
 
     &.text-button,
@@ -222,8 +237,9 @@ headerbar {
       }
     }
 
-    .linked { 
+    &.linked { 
       border-radius: 0px;
+      margin: 0;
     }
 
     &.titlebutton {
@@ -231,13 +247,14 @@ headerbar {
       min-width: 16px;
       padding: 1px;
       border-radius:50%;
+      background-color:transparent;
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none;
 
       &:hover {
         background-color:transparent;
-        color:lighter($headerbar_fg_color, 10%);
+        color:lighten($headerbar_fg_color, 10%);
       }
 
       &:backdrop {
@@ -254,6 +271,7 @@ headerbar {
     }
 
     &:hover { 
+      background-image:none;
       background-color: transparentize(black, 0.85);
       box-shadow:none;
     }

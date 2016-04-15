@@ -12,13 +12,13 @@ progressbar {
   &.horizontal {
     trough,
     .trough,
-    progress { min-height: 2px; }
+    progress { min-height: 4px; }
   }
 
   &.vertical {
     trough,
     .trough,
-    progress { min-width: 2px; }
+    progress { min-width: 4px; }
   }
 
   &.horizontal progress { margin: 0 -1px; } // the progress node is positioned after the trough border

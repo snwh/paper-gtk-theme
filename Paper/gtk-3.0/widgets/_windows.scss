@@ -49,7 +49,7 @@ decoration {
     border-radius: 0;
     margin: 4px;
     background-color: $backdrop_bg_color;
-    border: solid 1px $backdrop_borders_color;
+    border: 0px solid $backdrop_borders_color;
     box-shadow: none;
   }
 }

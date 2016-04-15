@@ -12,13 +12,13 @@
                   (':backdrop', '-unchecked-backdrop'),
                   (':insensitive', '-unchecked-insensitive'),
                   (':insensitive:backdrop', '-unchecked-backdrop-insensitive') {
+  check#{$s},
   .check#{$s}{
-    background: if($variant == 'light', -gtk-scaled(url("assets/checkbox#{$un}.png"),url("assets/checkbox#{$un}@2.png")), -gtk-scaled(url("assets/checkbox#{$un}-dark.png"),url("assets/checkbox#{$un}-dark@2.png")));
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("assets/checkbox#{$un}.png"),url("assets/checkbox#{$un}@2.png")), -gtk-scaled(url("assets/checkbox#{$un}-dark.png"),url("assets/checkbox#{$un}-dark@2.png")));
     -gtk-icon-shadow: none;
   }
+  radio#{$s},
   .radio#{$s}{
-    background: if($variant == 'light', -gtk-scaled(url("assets/radio#{$un}.png"),url("assets/radio#{$un}@2.png")), -gtk-scaled(url("assets/radio#{$un}-dark.png"),url("assets/radio#{$un}-dark@2.png")));
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("assets/radio#{$un}.png"),url("assets/radio#{$un}@2.png")), -gtk-scaled(url("assets/radio#{$un}-dark.png"),url("assets/radio#{$un}-dark@2.png")));
     -gtk-icon-shadow: none;
   }
@@ -31,13 +31,13 @@
                   (':checked:backdrop', '-checked-backdrop'),
                   (':checked:insensitive', '-checked-insensitive'),
                   (':checked:insensitive:backdrop', '-checked-insensitive-backdrop') {
+  check#{$s},
   .check#{$s}{
-    background: if($variant == 'light', -gtk-scaled(url("assets/checkbox#{$ch}.png"),url("assets/checkbox#{$ch}@2.png")), -gtk-scaled(url("assets/checkbox#{$ch}-dark.png"),url("assets/checkbox#{$ch}-dark@2.png")));
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("assets/checkbox#{$ch}.png"),url("assets/checkbox#{$ch}@2.png")), -gtk-scaled(url("assets/checkbox#{$ch}-dark.png"),url("assets/checkbox#{$ch}-dark@2.png")));
     -gtk-icon-shadow: none;
   }
+  radio#{$s},
   .radio#{$s}{
-    background: if($variant == 'light', -gtk-scaled(url("assets/radio#{$ch}.png"),url("assets/radio#{$ch}@2.png")), -gtk-scaled(url("assets/radio#{$ch}-dark.png"),url("assets/radio#{$ch}-dark@2.png")));
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("assets/radio#{$ch}.png"),url("assets/radio#{$ch}@2.png")), -gtk-scaled(url("assets/radio#{$ch}-dark.png"),url("assets/radio#{$ch}-dark@2.png")));
     -gtk-icon-shadow: none;
   }
@@ -50,13 +50,13 @@
                   (':inconsistent:backdrop', '-mixed-backdrop'),
                   (':inconsistent:insensitive', '-mixed-insensitive'),
                   (':inconsistent:insensitive:backdrop', '-mixed-insensitive-backdrop') {
+  check#{$s},
   .check#{$s}{
-    background: if($variant == 'light', -gtk-scaled(url("assets/checkbox#{$mx}.png"),url("assets/checkbox#{$mx}@2.png")), -gtk-scaled(url("assets/checkbox#{$mx}-dark.png"),url("assets/checkbox#{$mx}-dark@2.png")));
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("assets/checkbox#{$mx}.png"),url("assets/checkbox#{$mx}@2.png")), -gtk-scaled(url("assets/checkbox#{$mx}-dark.png"),url("assets/checkbox#{$mx}-dark@2.png")));
     -gtk-icon-shadow: none;
   }
+  radio#{$s},
   .radio#{$s}{
-    background: if($variant == 'light', -gtk-scaled(url("assets/radio#{$mx}.png"),url("assets/radio#{$mx}@2.png")), -gtk-scaled(url("assets/radio#{$mx}-dark.png"),url("assets/radio#{$mx}-dark@2.png")));
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("assets/radio#{$mx}.png"),url("assets/radio#{$mx}@2.png")), -gtk-scaled(url("assets/radio#{$mx}-dark.png"),url("assets/radio#{$mx}-dark@2.png")));
     -gtk-icon-shadow: none;
   }
@@ -69,13 +69,13 @@
                   (':backdrop:selected', '-unchecked-backdrop'),
                   (':insensitive:selected', '-unchecked-insensitive'),
                   (':insensitive:backdrop:selected', '-unchecked-backdrop-insensitive') {
+  check#{$s},
   .check#{$s}{
-    background: if($variant == 'light', -gtk-scaled(url("assets/selected-checkbox#{$un}.png"),url("assets/selected-checkbox#{$un}@2.png")), -gtk-scaled(url("assets/selected-checkbox#{$un}-dark.png"),url("assets/selected-checkbox#{$un}-dark@2.png")));
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("assets/selected-checkbox#{$un}.png"),url("assets/selected-checkbox#{$un}@2.png")), -gtk-scaled(url("assets/selected-checkbox#{$un}-dark.png"),url("assets/selected-checkbox#{$un}-dark@2.png")));
     -gtk-icon-shadow: none;
   }
+  radio#{$s},
   .radio#{$s}{
-    background: if($variant == 'light', -gtk-scaled(url("assets/selected-radio#{$un}.png"),url("assets/selected-radio#{$un}@2.png")), -gtk-scaled(url("assets/selected-radio#{$un}-dark.png"),url("assets/selected-radio#{$un}-dark@2.png")));
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("assets/selected-radio#{$un}.png"),url("assets/selected-radio#{$un}@2.png")), -gtk-scaled(url("assets/selected-radio#{$un}-dark.png"),url("assets/selected-radio#{$un}-dark@2.png")));
     -gtk-icon-shadow: none;
   }
@@ -88,13 +88,13 @@
                   (':checked:backdrop:selected', '-checked-backdrop'),
                   (':checked:insensitive:selected', '-checked-insensitive'),
                   (':checked:insensitive:backdrop:selected', '-checked-insensitive-backdrop') {
+  check#{$s},
   .check#{$s}{
-    background: if($variant == 'light', -gtk-scaled(url("assets/selected-checkbox#{$ch}.png"),url("assets/selected-checkbox#{$ch}@2.png")), -gtk-scaled(url("assets/selected-checkbox#{$ch}-dark.png"),url("assets/selected-checkbox#{$ch}-dark@2.png")));
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("assets/selected-checkbox#{$ch}.png"),url("assets/selected-checkbox#{$ch}@2.png")), -gtk-scaled(url("assets/selected-checkbox#{$ch}-dark.png"),url("assets/selected-checkbox#{$ch}-dark@2.png")));
     -gtk-icon-shadow: none;
   }
+  radio#{$s},
   .radio#{$s}{
-    background: if($variant == 'light', -gtk-scaled(url("assets/selected-radio#{$ch}.png"),url("assets/selected-radio#{$ch}@2.png")), -gtk-scaled(url("assets/selected-radio#{$ch}-dark.png"),url("assets/selected-radio#{$ch}-dark@2.png")));
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("assets/selected-radio#{$ch}.png"),url("assets/selected-radio#{$ch}@2.png")), -gtk-scaled(url("assets/selected-radio#{$ch}-dark.png"),url("assets/selected-radio#{$ch}-dark@2.png")));
     -gtk-icon-shadow: none;
   }
@@ -108,13 +108,13 @@
                   (':inconsistent:backdrop:selected', '-mixed-backdrop'),
                   (':inconsistent:insensitive:selected', '-mixed-insensitive'),
                   (':inconsistent:insensitive:backdrop:selected', '-mixed-insensitive-backdrop') {
+  check#{$s},
   .check#{$s}{
-    background: if($variant == 'light', -gtk-scaled(url("assets/selected-checkbox#{$mx}.png"),url("assets/selected-checkbox#{$mx}@2.png")), -gtk-scaled(url("assets/selected-checkbox#{$mx}-dark.png"),url("assets/selected-checkbox#{$mx}-dark@2.png")));
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("assets/selected-checkbox#{$mx}.png"),url("assets/selected-checkbox#{$mx}@2.png")), -gtk-scaled(url("assets/selected-checkbox#{$mx}-dark.png"),url("assets/selected-checkbox#{$mx}-dark@2.png")));
     -gtk-icon-shadow: none;
   }
+  radio#{$s},
   .radio#{$s}{
-    background: if($variant == 'light', -gtk-scaled(url("assets/selected-radio#{$mx}.png"),url("assets/selected-radio#{$mx}@2.png")), -gtk-scaled(url("assets/selected-radio#{$mx}-dark.png"),url("assets/selected-radio#{$mx}-dark@2.png")));
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("assets/selected-radio#{$mx}.png"),url("assets/selected-radio#{$mx}@2.png")), -gtk-scaled(url("assets/selected-radio#{$mx}-dark.png"),url("assets/selected-radio#{$mx}-dark@2.png")));
     -gtk-icon-shadow: none;
   }
@@ -128,13 +128,13 @@
                   (':backdrop', '-unchecked-backdrop'),
                   (':insensitive', '-unchecked-insensitive'),
                   (':insensitive:backdrop', '-unchecked-backdrop-insensitive') {
+  .view.content-view check#{$s},
   .view.content-view.check#{$s}{
-    background: -gtk-scaled(url("assets/selection-mode-checkbox#{$un}.png"),url("assets/checkbox#{$un}@2.png"));
     -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox#{$un}.png"),url("assets/checkbox#{$un}@2.png"));
     -gtk-icon-shadow: none;
   }
+  .view.content-view radio#{$s},
   .view.content-view.radio#{$s}{
-    background: -gtk-scaled(url("assets/selection-mode-radio#{$un}.png"),url("assets/radio#{$un}@2.png"));
     -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio#{$un}.png"),url("assets/radio#{$un}@2.png"));
     -gtk-icon-shadow: none;
   }
@@ -147,17 +147,18 @@
                   (':backdrop', '-checked-backdrop'),
                   (':insensitive', '-checked-insensitive'),
                   (':insensitive:backdrop', '-checked-backdrop-insensitive') {
+  .view.content-view check#{$s},
   .view.content-view.check#{$s}{
-    background: -gtk-scaled(url("assets/selection-mode-checkbox#{$ch}.png"),url("assets/checkbox#{$ch}@2.png"));
     -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox#{$ch}.png"),url("assets/checkbox#{$ch}@2.png"));
     -gtk-icon-shadow: none;
   }
+  .view.content-view radio#{$s},
   .view.content-view.radio#{$s}{
-    background: -gtk-scaled(url("assets/selection-mode-radio#{$ch}.png"),url("assets/radio#{$ch}@2.png"));
     -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio#{$ch}.png"),url("assets/radio#{$ch}@2.png"));
     -gtk-icon-shadow: none;
   }
 }
+
 
 
 // Style
@@ -180,101 +181,11 @@ radio,
 .radio {
   margin: 0 4px;
 
-  &:only-child { margin: 0; }
-
-  min-height: 14px;
-  min-width: 14px;
-  border: 1px solid;
-
-  @include button(normal, $edge: $shadow_color);
-
-  &:hover { @include button(hover, $edge: $shadow_color); }
-  &:active { @include button(active); }
-  &:disabled { @include button(insensitive); }
-  &:backdrop {
-    @include button(backdrop);
-
-    transition: $backdrop_transition;
-
-    &:disabled { @include button(backdrop-insensitive); }
-  }
-
-  @if $variant == 'light' {
-    // the borders of the light variant versions of checks and radios are too similar in luminosity to the selected background
-    // color, hence we need special casing.
-    row:selected & { border-color: $selected_borders_color; }
-  }
-
-  .osd & {
-    @include button(osd);
-
-    &:hover { @include button(osd); }
-    &:active { @include button(osd-active); }
-    &:backdrop { @include button(osd-backdrop); }
-    &:disabled { @include button(osd-insensitive); }
-  }
-
-  .menu menuitem &,
+  .menu .menuitem &,
   menu menuitem & {
     margin: 0; // this is a workaround for a menu check/radio size allocation issue
-
-    &, &:hover, &:disabled { //FIXME use button reset mixin
-      min-height: 14px;
-      min-width: 14px;
-      background-image: none;
-      background-color: transparent;
-      box-shadow: none;
-      -gtk-icon-shadow: none;
-      color: inherit;
-      border-color: currentColor;
-      animation: none;
-    }
   }
 }
-
-%check,
-check {
-  border-radius: 3px;
-
-  &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/check-symbolic.svg")),
-                                      -gtk-recolor(url("assets/check-symbolic.symbolic.png"))); }
-
-  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/dash-symbolic.svg")),
-                                            -gtk-recolor(url("assets/dash-symbolic.symbolic.png"))); }
-}
-
-%radio,
-radio {
-  border-radius: 100%;
-
-  &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/bullet-symbolic.svg")),
-                                      -gtk-recolor(url("assets/bullet-symbolic.symbolic.png"))); }
-
-  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/dash-symbolic.svg")),
-                                            -gtk-recolor(url("assets/dash-symbolic.symbolic.png"))); }
-}
-
-// let's animate things
-@keyframes check_check {
-  from { -gtk-icon-transform: translate(6px, -3px) rotate(-45deg) scaleY(0.2) rotate(45deg) scaleX(0); }
-  to { -gtk-icon-transform: unset; }
-}
-
-@keyframes check_radio {
-  from { -gtk-icon-transform: scale(0); }
-  to { -gtk-icon-transform: unset; }
-}
-
-@keyframes check_indeterminate {
-  from { -gtk-icon-transform: scale(0, 1); }
-  to { -gtk-icon-transform: unset; }
-}
-
-check:not(:indeterminate):checked { animation: check_check 400ms; }
-
-radio:not(:indeterminate):checked { animation: check_radio 400ms; }
-
-check:indeterminate:checked, radio:indeterminate:checked { animation: check_indeterminate 400ms; }
 
 // no animations in menus
 menu menuitem {
@@ -302,5 +213,3 @@ treeview.view radio {
 
   &:backdrop { &:selected, & { color: $backdrop_fg_color; }}
 }
-
-treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a workaround

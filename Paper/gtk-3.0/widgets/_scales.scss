@@ -11,7 +11,6 @@
   &:insensitive,
   &:disabled {
     background-color: $insensitive_bg_color;
-    box-shadow: none;
   }
 
   &:backdrop {
@@ -46,11 +45,12 @@
   box-shadow: 0px 1px $bottom_highlight;
   border-radius: 2px;
   margin: 6px 0;
+  padding:0;
 
   &:insensitive,
   &:disabled {
-    background-color: transparent;
-    border-color: transparent;
+    border: 1px solid darken($borders_color, 15%);
+    background-color: darken($bg_color, 20%);
   }
 
   &:backdrop,
@@ -84,14 +84,11 @@ scale {
   $_marks_length: 6px;
   $_marks_distance: 6px;
 
-
   -GtkScale-slider-length: 16px;
   -GtkRange-slider-width: 16px;
   -GtkRange-trough-border: 0px;
 
-  min-height: 10px;
-  min-width: 10px;
-  padding: 12px;
+  max-height: 8px;
 
   // those are inside the trough node, I need them to show their own border over the trough one, so negative margin
   fill,
@@ -173,7 +170,6 @@ scale {
 
 
   // The coloured part of the Trough
-  fill,
   .highlight,
   highlight {
     @extend %scale_highlight;

@@ -272,7 +272,7 @@ popover.background.osd,
 notebook > header > tabs > arrow,
 .button,
 button {
-  min-height: 24px;
+  min-height: 20px;
   min-width: 16px;
   padding: 4px 9px;
   border: 1px solid #c4c4c4;
@@ -1866,507 +1866,555 @@ calendar {
 /*************************
  * Check and Radio Items *
  *************************/
+check,
 .check {
-  background: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked@2.png"));
   -gtk-icon-shadow: none; }
 
+radio,
 .radio {
-  background: -gtk-scaled(url("assets/radio-unchecked.png"), url("assets/radio-unchecked@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"), url("assets/radio-unchecked@2.png"));
   -gtk-icon-shadow: none; }
 
+check:hover,
 .check:hover {
-  background: -gtk-scaled(url("assets/checkbox-unchecked-hover.png"), url("assets/checkbox-unchecked-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-hover.png"), url("assets/checkbox-unchecked-hover@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:hover,
 .radio:hover {
-  background: -gtk-scaled(url("assets/radio-unchecked-hover.png"), url("assets/radio-unchecked-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-hover.png"), url("assets/radio-unchecked-hover@2.png"));
   -gtk-icon-shadow: none; }
 
+check:active,
 .check:active {
-  background: -gtk-scaled(url("assets/checkbox-unchecked-active.png"), url("assets/checkbox-unchecked-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-active.png"), url("assets/checkbox-unchecked-active@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:active,
 .radio:active {
-  background: -gtk-scaled(url("assets/radio-unchecked-active.png"), url("assets/radio-unchecked-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-active.png"), url("assets/radio-unchecked-active@2.png"));
   -gtk-icon-shadow: none; }
 
+check:backdrop,
 .check:backdrop {
-  background: -gtk-scaled(url("assets/checkbox-unchecked-backdrop.png"), url("assets/checkbox-unchecked-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-backdrop.png"), url("assets/checkbox-unchecked-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:backdrop,
 .radio:backdrop {
-  background: -gtk-scaled(url("assets/radio-unchecked-backdrop.png"), url("assets/radio-unchecked-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-backdrop.png"), url("assets/radio-unchecked-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+check:insensitive,
 .check:insensitive {
-  background: -gtk-scaled(url("assets/checkbox-unchecked-insensitive.png"), url("assets/checkbox-unchecked-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive.png"), url("assets/checkbox-unchecked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:insensitive,
 .radio:insensitive {
-  background: -gtk-scaled(url("assets/radio-unchecked-insensitive.png"), url("assets/radio-unchecked-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive.png"), url("assets/radio-unchecked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+check:insensitive:backdrop,
 .check:insensitive:backdrop {
-  background: -gtk-scaled(url("assets/checkbox-unchecked-backdrop-insensitive.png"), url("assets/checkbox-unchecked-backdrop-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-backdrop-insensitive.png"), url("assets/checkbox-unchecked-backdrop-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:insensitive:backdrop,
 .radio:insensitive:backdrop {
-  background: -gtk-scaled(url("assets/radio-unchecked-backdrop-insensitive.png"), url("assets/radio-unchecked-backdrop-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-backdrop-insensitive.png"), url("assets/radio-unchecked-backdrop-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+check:checked,
 .check:checked {
-  background: -gtk-scaled(url("assets/checkbox-checked.png"), url("assets/checkbox-checked@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png"), url("assets/checkbox-checked@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:checked,
 .radio:checked {
-  background: -gtk-scaled(url("assets/radio-checked.png"), url("assets/radio-checked@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png"), url("assets/radio-checked@2.png"));
   -gtk-icon-shadow: none; }
 
+check:checked:hover,
 .check:checked:hover {
-  background: -gtk-scaled(url("assets/checkbox-checked-hover.png"), url("assets/checkbox-checked-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-hover.png"), url("assets/checkbox-checked-hover@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:checked:hover,
 .radio:checked:hover {
-  background: -gtk-scaled(url("assets/radio-checked-hover.png"), url("assets/radio-checked-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-hover.png"), url("assets/radio-checked-hover@2.png"));
   -gtk-icon-shadow: none; }
 
+check:checked:active,
 .check:checked:active {
-  background: -gtk-scaled(url("assets/checkbox-checked-active.png"), url("assets/checkbox-checked-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-active.png"), url("assets/checkbox-checked-active@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:checked:active,
 .radio:checked:active {
-  background: -gtk-scaled(url("assets/radio-checked-active.png"), url("assets/radio-checked-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-active.png"), url("assets/radio-checked-active@2.png"));
   -gtk-icon-shadow: none; }
 
+check:checked:backdrop,
 .check:checked:backdrop {
-  background: -gtk-scaled(url("assets/checkbox-checked-backdrop.png"), url("assets/checkbox-checked-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-backdrop.png"), url("assets/checkbox-checked-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:checked:backdrop,
 .radio:checked:backdrop {
-  background: -gtk-scaled(url("assets/radio-checked-backdrop.png"), url("assets/radio-checked-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-backdrop.png"), url("assets/radio-checked-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+check:checked:insensitive,
 .check:checked:insensitive {
-  background: -gtk-scaled(url("assets/checkbox-checked-insensitive.png"), url("assets/checkbox-checked-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive.png"), url("assets/checkbox-checked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:checked:insensitive,
 .radio:checked:insensitive {
-  background: -gtk-scaled(url("assets/radio-checked-insensitive.png"), url("assets/radio-checked-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive.png"), url("assets/radio-checked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+check:checked:insensitive:backdrop,
 .check:checked:insensitive:backdrop {
-  background: -gtk-scaled(url("assets/checkbox-checked-insensitive-backdrop.png"), url("assets/checkbox-checked-insensitive-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-backdrop.png"), url("assets/checkbox-checked-insensitive-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:checked:insensitive:backdrop,
 .radio:checked:insensitive:backdrop {
-  background: -gtk-scaled(url("assets/radio-checked-insensitive-backdrop.png"), url("assets/radio-checked-insensitive-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-backdrop.png"), url("assets/radio-checked-insensitive-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+check:inconsistent,
 .check:inconsistent {
-  background: -gtk-scaled(url("assets/checkbox-mixed.png"), url("assets/checkbox-mixed@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png"), url("assets/checkbox-mixed@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:inconsistent,
 .radio:inconsistent {
-  background: -gtk-scaled(url("assets/radio-mixed.png"), url("assets/radio-mixed@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.png"), url("assets/radio-mixed@2.png"));
   -gtk-icon-shadow: none; }
 
+check:inconsistent:hover,
 .check:inconsistent:hover {
-  background: -gtk-scaled(url("assets/checkbox-mixed-hover.png"), url("assets/checkbox-mixed-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-hover.png"), url("assets/checkbox-mixed-hover@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:inconsistent:hover,
 .radio:inconsistent:hover {
-  background: -gtk-scaled(url("assets/radio-mixed-hover.png"), url("assets/radio-mixed-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-hover.png"), url("assets/radio-mixed-hover@2.png"));
   -gtk-icon-shadow: none; }
 
+check:inconsistent:active,
 .check:inconsistent:active {
-  background: -gtk-scaled(url("assets/checkbox-mixed-active.png"), url("assets/checkbox-mixed-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-active.png"), url("assets/checkbox-mixed-active@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:inconsistent:active,
 .radio:inconsistent:active {
-  background: -gtk-scaled(url("assets/radio-mixed-active.png"), url("assets/radio-mixed-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-active.png"), url("assets/radio-mixed-active@2.png"));
   -gtk-icon-shadow: none; }
 
+check:inconsistent:backdrop,
 .check:inconsistent:backdrop {
-  background: -gtk-scaled(url("assets/checkbox-mixed-backdrop.png"), url("assets/checkbox-mixed-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-backdrop.png"), url("assets/checkbox-mixed-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:inconsistent:backdrop,
 .radio:inconsistent:backdrop {
-  background: -gtk-scaled(url("assets/radio-mixed-backdrop.png"), url("assets/radio-mixed-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-backdrop.png"), url("assets/radio-mixed-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+check:inconsistent:insensitive,
 .check:inconsistent:insensitive {
-  background: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png"), url("assets/checkbox-mixed-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png"), url("assets/checkbox-mixed-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:inconsistent:insensitive,
 .radio:inconsistent:insensitive {
-  background: -gtk-scaled(url("assets/radio-mixed-insensitive.png"), url("assets/radio-mixed-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive.png"), url("assets/radio-mixed-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+check:inconsistent:insensitive:backdrop,
 .check:inconsistent:insensitive:backdrop {
-  background: -gtk-scaled(url("assets/checkbox-mixed-insensitive-backdrop.png"), url("assets/checkbox-mixed-insensitive-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-backdrop.png"), url("assets/checkbox-mixed-insensitive-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:inconsistent:insensitive:backdrop,
 .radio:inconsistent:insensitive:backdrop {
-  background: -gtk-scaled(url("assets/radio-mixed-insensitive-backdrop.png"), url("assets/radio-mixed-insensitive-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-backdrop.png"), url("assets/radio-mixed-insensitive-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+check:selected,
 .check:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-unchecked.png"), url("assets/selected-checkbox-unchecked@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-unchecked.png"), url("assets/selected-checkbox-unchecked@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:selected,
 .radio:selected {
-  background: -gtk-scaled(url("assets/selected-radio-unchecked.png"), url("assets/selected-radio-unchecked@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-unchecked.png"), url("assets/selected-radio-unchecked@2.png"));
   -gtk-icon-shadow: none; }
 
+check:hover:selected,
 .check:hover:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-unchecked-hover.png"), url("assets/selected-checkbox-unchecked-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-unchecked-hover.png"), url("assets/selected-checkbox-unchecked-hover@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:hover:selected,
 .radio:hover:selected {
-  background: -gtk-scaled(url("assets/selected-radio-unchecked-hover.png"), url("assets/selected-radio-unchecked-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-unchecked-hover.png"), url("assets/selected-radio-unchecked-hover@2.png"));
   -gtk-icon-shadow: none; }
 
+check:active:selected,
 .check:active:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-unchecked-active.png"), url("assets/selected-checkbox-unchecked-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-unchecked-active.png"), url("assets/selected-checkbox-unchecked-active@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:active:selected,
 .radio:active:selected {
-  background: -gtk-scaled(url("assets/selected-radio-unchecked-active.png"), url("assets/selected-radio-unchecked-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-unchecked-active.png"), url("assets/selected-radio-unchecked-active@2.png"));
   -gtk-icon-shadow: none; }
 
+check:backdrop:selected,
 .check:backdrop:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-unchecked-backdrop.png"), url("assets/selected-checkbox-unchecked-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-unchecked-backdrop.png"), url("assets/selected-checkbox-unchecked-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:backdrop:selected,
 .radio:backdrop:selected {
-  background: -gtk-scaled(url("assets/selected-radio-unchecked-backdrop.png"), url("assets/selected-radio-unchecked-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-unchecked-backdrop.png"), url("assets/selected-radio-unchecked-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+check:insensitive:selected,
 .check:insensitive:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-unchecked-insensitive.png"), url("assets/selected-checkbox-unchecked-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-unchecked-insensitive.png"), url("assets/selected-checkbox-unchecked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:insensitive:selected,
 .radio:insensitive:selected {
-  background: -gtk-scaled(url("assets/selected-radio-unchecked-insensitive.png"), url("assets/selected-radio-unchecked-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-unchecked-insensitive.png"), url("assets/selected-radio-unchecked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+check:insensitive:backdrop:selected,
 .check:insensitive:backdrop:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-unchecked-backdrop-insensitive.png"), url("assets/selected-checkbox-unchecked-backdrop-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-unchecked-backdrop-insensitive.png"), url("assets/selected-checkbox-unchecked-backdrop-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:insensitive:backdrop:selected,
 .radio:insensitive:backdrop:selected {
-  background: -gtk-scaled(url("assets/selected-radio-unchecked-backdrop-insensitive.png"), url("assets/selected-radio-unchecked-backdrop-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-unchecked-backdrop-insensitive.png"), url("assets/selected-radio-unchecked-backdrop-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+check:checked:selected,
 .check:checked:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-checked.png"), url("assets/selected-checkbox-checked@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-checked.png"), url("assets/selected-checkbox-checked@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:checked:selected,
 .radio:checked:selected {
-  background: -gtk-scaled(url("assets/selected-radio-checked.png"), url("assets/selected-radio-checked@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-checked.png"), url("assets/selected-radio-checked@2.png"));
   -gtk-icon-shadow: none; }
 
+check:checked:hover:selected,
 .check:checked:hover:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-checked-hover.png"), url("assets/selected-checkbox-checked-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-checked-hover.png"), url("assets/selected-checkbox-checked-hover@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:checked:hover:selected,
 .radio:checked:hover:selected {
-  background: -gtk-scaled(url("assets/selected-radio-checked-hover.png"), url("assets/selected-radio-checked-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-checked-hover.png"), url("assets/selected-radio-checked-hover@2.png"));
   -gtk-icon-shadow: none; }
 
+check:checked:active:selected,
 .check:checked:active:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-checked-active.png"), url("assets/selected-checkbox-checked-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-checked-active.png"), url("assets/selected-checkbox-checked-active@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:checked:active:selected,
 .radio:checked:active:selected {
-  background: -gtk-scaled(url("assets/selected-radio-checked-active.png"), url("assets/selected-radio-checked-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-checked-active.png"), url("assets/selected-radio-checked-active@2.png"));
   -gtk-icon-shadow: none; }
 
+check:checked:backdrop:selected,
 .check:checked:backdrop:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-checked-backdrop.png"), url("assets/selected-checkbox-checked-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-checked-backdrop.png"), url("assets/selected-checkbox-checked-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:checked:backdrop:selected,
 .radio:checked:backdrop:selected {
-  background: -gtk-scaled(url("assets/selected-radio-checked-backdrop.png"), url("assets/selected-radio-checked-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-checked-backdrop.png"), url("assets/selected-radio-checked-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+check:checked:insensitive:selected,
 .check:checked:insensitive:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-checked-insensitive.png"), url("assets/selected-checkbox-checked-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-checked-insensitive.png"), url("assets/selected-checkbox-checked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:checked:insensitive:selected,
 .radio:checked:insensitive:selected {
-  background: -gtk-scaled(url("assets/selected-radio-checked-insensitive.png"), url("assets/selected-radio-checked-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-checked-insensitive.png"), url("assets/selected-radio-checked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+check:checked:insensitive:backdrop:selected,
 .check:checked:insensitive:backdrop:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-checked-insensitive-backdrop.png"), url("assets/selected-checkbox-checked-insensitive-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-checked-insensitive-backdrop.png"), url("assets/selected-checkbox-checked-insensitive-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:checked:insensitive:backdrop:selected,
 .radio:checked:insensitive:backdrop:selected {
-  background: -gtk-scaled(url("assets/selected-radio-checked-insensitive-backdrop.png"), url("assets/selected-radio-checked-insensitive-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-checked-insensitive-backdrop.png"), url("assets/selected-radio-checked-insensitive-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+check:inconsistent:selected,
 .check:inconsistent:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-mixed.png"), url("assets/selected-checkbox-mixed@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-mixed.png"), url("assets/selected-checkbox-mixed@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:inconsistent:selected,
 .radio:inconsistent:selected {
-  background: -gtk-scaled(url("assets/selected-radio-mixed.png"), url("assets/selected-radio-mixed@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-mixed.png"), url("assets/selected-radio-mixed@2.png"));
   -gtk-icon-shadow: none; }
 
+check:inconsistent:hover:selected,
 .check:inconsistent:hover:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-mixed-hover.png"), url("assets/selected-checkbox-mixed-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-mixed-hover.png"), url("assets/selected-checkbox-mixed-hover@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:inconsistent:hover:selected,
 .radio:inconsistent:hover:selected {
-  background: -gtk-scaled(url("assets/selected-radio-mixed-hover.png"), url("assets/selected-radio-mixed-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-mixed-hover.png"), url("assets/selected-radio-mixed-hover@2.png"));
   -gtk-icon-shadow: none; }
 
+check:inconsistent:active:selected,
 .check:inconsistent:active:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-mixed-active.png"), url("assets/selected-checkbox-mixed-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-mixed-active.png"), url("assets/selected-checkbox-mixed-active@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:inconsistent:active:selected,
 .radio:inconsistent:active:selected {
-  background: -gtk-scaled(url("assets/selected-radio-mixed-active.png"), url("assets/selected-radio-mixed-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-mixed-active.png"), url("assets/selected-radio-mixed-active@2.png"));
   -gtk-icon-shadow: none; }
 
+check:inconsistent:backdrop:selected,
 .check:inconsistent:backdrop:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-mixed-backdrop.png"), url("assets/selected-checkbox-mixed-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-mixed-backdrop.png"), url("assets/selected-checkbox-mixed-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:inconsistent:backdrop:selected,
 .radio:inconsistent:backdrop:selected {
-  background: -gtk-scaled(url("assets/selected-radio-mixed-backdrop.png"), url("assets/selected-radio-mixed-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-mixed-backdrop.png"), url("assets/selected-radio-mixed-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+check:inconsistent:insensitive:selected,
 .check:inconsistent:insensitive:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-mixed-insensitive.png"), url("assets/selected-checkbox-mixed-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-mixed-insensitive.png"), url("assets/selected-checkbox-mixed-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:inconsistent:insensitive:selected,
 .radio:inconsistent:insensitive:selected {
-  background: -gtk-scaled(url("assets/selected-radio-mixed-insensitive.png"), url("assets/selected-radio-mixed-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-mixed-insensitive.png"), url("assets/selected-radio-mixed-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
+check:inconsistent:insensitive:backdrop:selected,
 .check:inconsistent:insensitive:backdrop:selected {
-  background: -gtk-scaled(url("assets/selected-checkbox-mixed-insensitive-backdrop.png"), url("assets/selected-checkbox-mixed-insensitive-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-mixed-insensitive-backdrop.png"), url("assets/selected-checkbox-mixed-insensitive-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
+radio:inconsistent:insensitive:backdrop:selected,
 .radio:inconsistent:insensitive:backdrop:selected {
-  background: -gtk-scaled(url("assets/selected-radio-mixed-insensitive-backdrop.png"), url("assets/selected-radio-mixed-insensitive-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-mixed-insensitive-backdrop.png"), url("assets/selected-radio-mixed-insensitive-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.check, GtkIconView.content-view.check,
+.view.content-view check, GtkIconView.content-view check,
+iconview.content-view check,
+.view.content-view.check,
+GtkIconView.content-view.check,
 iconview.content-view.check {
-  background: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked.png"), url("assets/checkbox-unchecked@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked.png"), url("assets/checkbox-unchecked@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.radio, GtkIconView.content-view.radio,
+.view.content-view radio, GtkIconView.content-view radio,
+iconview.content-view radio,
+.view.content-view.radio,
+GtkIconView.content-view.radio,
 iconview.content-view.radio {
-  background: -gtk-scaled(url("assets/selection-mode-radio-unchecked.png"), url("assets/radio-unchecked@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio-unchecked.png"), url("assets/radio-unchecked@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.check:hover, GtkIconView.content-view.check:hover,
+.view.content-view check:hover, GtkIconView.content-view check:hover,
+iconview.content-view check:hover,
+.view.content-view.check:hover,
+GtkIconView.content-view.check:hover,
 iconview.content-view.check:hover {
-  background: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked-hover.png"), url("assets/checkbox-unchecked-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked-hover.png"), url("assets/checkbox-unchecked-hover@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.radio:hover, GtkIconView.content-view.radio:hover,
+.view.content-view radio:hover, GtkIconView.content-view radio:hover,
+iconview.content-view radio:hover,
+.view.content-view.radio:hover,
+GtkIconView.content-view.radio:hover,
 iconview.content-view.radio:hover {
-  background: -gtk-scaled(url("assets/selection-mode-radio-unchecked-hover.png"), url("assets/radio-unchecked-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio-unchecked-hover.png"), url("assets/radio-unchecked-hover@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.check:active, GtkIconView.content-view.check:active,
+.view.content-view check:active, GtkIconView.content-view check:active,
+iconview.content-view check:active,
+.view.content-view.check:active,
+GtkIconView.content-view.check:active,
 iconview.content-view.check:active {
-  background: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked-active.png"), url("assets/checkbox-unchecked-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked-active.png"), url("assets/checkbox-unchecked-active@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.radio:active, GtkIconView.content-view.radio:active,
+.view.content-view radio:active, GtkIconView.content-view radio:active,
+iconview.content-view radio:active,
+.view.content-view.radio:active,
+GtkIconView.content-view.radio:active,
 iconview.content-view.radio:active {
-  background: -gtk-scaled(url("assets/selection-mode-radio-unchecked-active.png"), url("assets/radio-unchecked-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio-unchecked-active.png"), url("assets/radio-unchecked-active@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.check:backdrop, GtkIconView.content-view.check:backdrop,
+.view.content-view check:backdrop, GtkIconView.content-view check:backdrop,
+iconview.content-view check:backdrop,
+.view.content-view.check:backdrop,
+GtkIconView.content-view.check:backdrop,
 iconview.content-view.check:backdrop {
-  background: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked-backdrop.png"), url("assets/checkbox-unchecked-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked-backdrop.png"), url("assets/checkbox-unchecked-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.radio:backdrop, GtkIconView.content-view.radio:backdrop,
+.view.content-view radio:backdrop, GtkIconView.content-view radio:backdrop,
+iconview.content-view radio:backdrop,
+.view.content-view.radio:backdrop,
+GtkIconView.content-view.radio:backdrop,
 iconview.content-view.radio:backdrop {
-  background: -gtk-scaled(url("assets/selection-mode-radio-unchecked-backdrop.png"), url("assets/radio-unchecked-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio-unchecked-backdrop.png"), url("assets/radio-unchecked-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.check:insensitive, GtkIconView.content-view.check:insensitive,
+.view.content-view check:insensitive, GtkIconView.content-view check:insensitive,
+iconview.content-view check:insensitive,
+.view.content-view.check:insensitive,
+GtkIconView.content-view.check:insensitive,
 iconview.content-view.check:insensitive {
-  background: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked-insensitive.png"), url("assets/checkbox-unchecked-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked-insensitive.png"), url("assets/checkbox-unchecked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.radio:insensitive, GtkIconView.content-view.radio:insensitive,
+.view.content-view radio:insensitive, GtkIconView.content-view radio:insensitive,
+iconview.content-view radio:insensitive,
+.view.content-view.radio:insensitive,
+GtkIconView.content-view.radio:insensitive,
 iconview.content-view.radio:insensitive {
-  background: -gtk-scaled(url("assets/selection-mode-radio-unchecked-insensitive.png"), url("assets/radio-unchecked-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio-unchecked-insensitive.png"), url("assets/radio-unchecked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.check:insensitive:backdrop, GtkIconView.content-view.check:insensitive:backdrop,
+.view.content-view check:insensitive:backdrop, GtkIconView.content-view check:insensitive:backdrop,
+iconview.content-view check:insensitive:backdrop,
+.view.content-view.check:insensitive:backdrop,
+GtkIconView.content-view.check:insensitive:backdrop,
 iconview.content-view.check:insensitive:backdrop {
-  background: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked-backdrop-insensitive.png"), url("assets/checkbox-unchecked-backdrop-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-unchecked-backdrop-insensitive.png"), url("assets/checkbox-unchecked-backdrop-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.radio:insensitive:backdrop, GtkIconView.content-view.radio:insensitive:backdrop,
+.view.content-view radio:insensitive:backdrop, GtkIconView.content-view radio:insensitive:backdrop,
+iconview.content-view radio:insensitive:backdrop,
+.view.content-view.radio:insensitive:backdrop,
+GtkIconView.content-view.radio:insensitive:backdrop,
 iconview.content-view.radio:insensitive:backdrop {
-  background: -gtk-scaled(url("assets/selection-mode-radio-unchecked-backdrop-insensitive.png"), url("assets/radio-unchecked-backdrop-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio-unchecked-backdrop-insensitive.png"), url("assets/radio-unchecked-backdrop-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.check, GtkIconView.content-view.check,
+.view.content-view check, GtkIconView.content-view check,
+iconview.content-view check,
+.view.content-view.check,
+GtkIconView.content-view.check,
 iconview.content-view.check {
-  background: -gtk-scaled(url("assets/selection-mode-checkbox-checked.png"), url("assets/checkbox-checked@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-checked.png"), url("assets/checkbox-checked@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.radio, GtkIconView.content-view.radio,
+.view.content-view radio, GtkIconView.content-view radio,
+iconview.content-view radio,
+.view.content-view.radio,
+GtkIconView.content-view.radio,
 iconview.content-view.radio {
-  background: -gtk-scaled(url("assets/selection-mode-radio-checked.png"), url("assets/radio-checked@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio-checked.png"), url("assets/radio-checked@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.check:hover, GtkIconView.content-view.check:hover,
+.view.content-view check:hover, GtkIconView.content-view check:hover,
+iconview.content-view check:hover,
+.view.content-view.check:hover,
+GtkIconView.content-view.check:hover,
 iconview.content-view.check:hover {
-  background: -gtk-scaled(url("assets/selection-mode-checkbox-checked-hover.png"), url("assets/checkbox-checked-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-checked-hover.png"), url("assets/checkbox-checked-hover@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.radio:hover, GtkIconView.content-view.radio:hover,
+.view.content-view radio:hover, GtkIconView.content-view radio:hover,
+iconview.content-view radio:hover,
+.view.content-view.radio:hover,
+GtkIconView.content-view.radio:hover,
 iconview.content-view.radio:hover {
-  background: -gtk-scaled(url("assets/selection-mode-radio-checked-hover.png"), url("assets/radio-checked-hover@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio-checked-hover.png"), url("assets/radio-checked-hover@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.check:active, GtkIconView.content-view.check:active,
+.view.content-view check:active, GtkIconView.content-view check:active,
+iconview.content-view check:active,
+.view.content-view.check:active,
+GtkIconView.content-view.check:active,
 iconview.content-view.check:active {
-  background: -gtk-scaled(url("assets/selection-mode-checkbox-checked-active.png"), url("assets/checkbox-checked-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-checked-active.png"), url("assets/checkbox-checked-active@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.radio:active, GtkIconView.content-view.radio:active,
+.view.content-view radio:active, GtkIconView.content-view radio:active,
+iconview.content-view radio:active,
+.view.content-view.radio:active,
+GtkIconView.content-view.radio:active,
 iconview.content-view.radio:active {
-  background: -gtk-scaled(url("assets/selection-mode-radio-checked-active.png"), url("assets/radio-checked-active@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio-checked-active.png"), url("assets/radio-checked-active@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.check:backdrop, GtkIconView.content-view.check:backdrop,
+.view.content-view check:backdrop, GtkIconView.content-view check:backdrop,
+iconview.content-view check:backdrop,
+.view.content-view.check:backdrop,
+GtkIconView.content-view.check:backdrop,
 iconview.content-view.check:backdrop {
-  background: -gtk-scaled(url("assets/selection-mode-checkbox-checked-backdrop.png"), url("assets/checkbox-checked-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-checked-backdrop.png"), url("assets/checkbox-checked-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.radio:backdrop, GtkIconView.content-view.radio:backdrop,
+.view.content-view radio:backdrop, GtkIconView.content-view radio:backdrop,
+iconview.content-view radio:backdrop,
+.view.content-view.radio:backdrop,
+GtkIconView.content-view.radio:backdrop,
 iconview.content-view.radio:backdrop {
-  background: -gtk-scaled(url("assets/selection-mode-radio-checked-backdrop.png"), url("assets/radio-checked-backdrop@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio-checked-backdrop.png"), url("assets/radio-checked-backdrop@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.check:insensitive, GtkIconView.content-view.check:insensitive,
+.view.content-view check:insensitive, GtkIconView.content-view check:insensitive,
+iconview.content-view check:insensitive,
+.view.content-view.check:insensitive,
+GtkIconView.content-view.check:insensitive,
 iconview.content-view.check:insensitive {
-  background: -gtk-scaled(url("assets/selection-mode-checkbox-checked-insensitive.png"), url("assets/checkbox-checked-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-checked-insensitive.png"), url("assets/checkbox-checked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.radio:insensitive, GtkIconView.content-view.radio:insensitive,
+.view.content-view radio:insensitive, GtkIconView.content-view radio:insensitive,
+iconview.content-view radio:insensitive,
+.view.content-view.radio:insensitive,
+GtkIconView.content-view.radio:insensitive,
 iconview.content-view.radio:insensitive {
-  background: -gtk-scaled(url("assets/selection-mode-radio-checked-insensitive.png"), url("assets/radio-checked-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio-checked-insensitive.png"), url("assets/radio-checked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.check:insensitive:backdrop, GtkIconView.content-view.check:insensitive:backdrop,
+.view.content-view check:insensitive:backdrop, GtkIconView.content-view check:insensitive:backdrop,
+iconview.content-view check:insensitive:backdrop,
+.view.content-view.check:insensitive:backdrop,
+GtkIconView.content-view.check:insensitive:backdrop,
 iconview.content-view.check:insensitive:backdrop {
-  background: -gtk-scaled(url("assets/selection-mode-checkbox-checked-backdrop-insensitive.png"), url("assets/checkbox-checked-backdrop-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-checkbox-checked-backdrop-insensitive.png"), url("assets/checkbox-checked-backdrop-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
-.view.content-view.radio:insensitive:backdrop, GtkIconView.content-view.radio:insensitive:backdrop,
+.view.content-view radio:insensitive:backdrop, GtkIconView.content-view radio:insensitive:backdrop,
+iconview.content-view radio:insensitive:backdrop,
+.view.content-view.radio:insensitive:backdrop,
+GtkIconView.content-view.radio:insensitive:backdrop,
 iconview.content-view.radio:insensitive:backdrop {
-  background: -gtk-scaled(url("assets/selection-mode-radio-checked-backdrop-insensitive.png"), url("assets/radio-checked-backdrop-insensitive@2.png"));
   -gtk-icon-source: -gtk-scaled(url("assets/selection-mode-radio-checked-backdrop-insensitive.png"), url("assets/radio-checked-backdrop-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
@@ -2385,264 +2433,15 @@ check,
 .check,
 radio,
 .radio {
-  margin: 0 4px;
-  min-height: 14px;
-  min-width: 14px;
-  border: 1px solid;
-  color: #666666;
-  outline-color: rgba(102, 102, 102, 0.3);
-  border-color: #c4c4c4;
-  background-image: linear-gradient(to bottom, #f7f7f7, #eaeaea);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-  box-shadow: inset 0 1px white, 0 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8); }
-  check:only-child,
-  .check:only-child,
-  radio:only-child,
-  .radio:only-child {
-    margin: 0; }
-  check:hover,
-  .check:hover,
-  radio:hover,
-  .radio:hover {
-    color: #666666;
-    outline-color: rgba(102, 102, 102, 0.3);
-    border-color: #c4c4c4;
-    background-image: linear-gradient(to bottom, white, #f7f7f7 60%, #ededed);
-    text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-    -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-    box-shadow: inset 0 1px white, 0 1px rgba(0, 0, 0, 0.1); }
-  check:active,
-  .check:active,
-  radio:active,
-  .radio:active {
-    color: #666666;
-    outline-color: rgba(102, 102, 102, 0.3);
-    border-color: #c4c4c4;
-    background-image: linear-gradient(to bottom, #e5e5e5, #f2f2f2);
-    text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-    -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-    box-shadow: inset 0 2px 1px -2px rgba(0, 0, 0, 0.6);
-    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.8); }
-  check:disabled,
-  .check:disabled,
-  radio:disabled,
-  .radio:disabled {
-    border-color: #c4c4c4;
-    background-image: none;
-    background-color: #fafafa;
-    text-shadow: none;
-    box-shadow: none;
-    -gtk-icon-shadow: none; }
-    check:disabled GtkLabel, check:disabled,
-    .check:disabled GtkLabel,
-    .check:disabled,
-    radio:disabled GtkLabel,
-    radio:disabled,
-    .radio:disabled GtkLabel,
-    .radio:disabled {
-      color: #afafaf; }
-    check:disabled label, check:disabled,
-    .check:disabled label,
-    .check:disabled,
-    radio:disabled label,
-    radio:disabled,
-    .radio:disabled label,
-    .radio:disabled {
-      color: #afafaf; }
-  check:backdrop,
-  .check:backdrop,
-  radio:backdrop,
-  .radio:backdrop {
-    border-color: #c9c9c9;
-    background-image: linear-gradient(to bottom, #f7f7f7);
-    text-shadow: none;
-    -gtk-icon-shadow: none;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-    transition: 200ms ease-out; }
-    check:backdrop GtkLabel, check:backdrop,
-    .check:backdrop GtkLabel,
-    .check:backdrop,
-    radio:backdrop GtkLabel,
-    radio:backdrop,
-    .radio:backdrop GtkLabel,
-    .radio:backdrop {
-      color: #afafaf; }
-    check:backdrop label, check:backdrop,
-    .check:backdrop label,
-    .check:backdrop,
-    radio:backdrop label,
-    radio:backdrop,
-    .radio:backdrop label,
-    .radio:backdrop {
-      color: #afafaf; }
-    check:backdrop:disabled,
-    .check:backdrop:disabled,
-    radio:backdrop:disabled,
-    .radio:backdrop:disabled {
-      border-color: #c9c9c9;
-      background-image: none;
-      background-color: #fafafa;
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
-      check:backdrop:disabled GtkLabel, check:backdrop:disabled,
-      .check:backdrop:disabled GtkLabel,
-      .check:backdrop:disabled,
-      radio:backdrop:disabled GtkLabel,
-      radio:backdrop:disabled,
-      .radio:backdrop:disabled GtkLabel,
-      .radio:backdrop:disabled {
-        color: #d1d1d1; }
-      check:backdrop:disabled label, check:backdrop:disabled,
-      .check:backdrop:disabled label,
-      .check:backdrop:disabled,
-      radio:backdrop:disabled label,
-      radio:backdrop:disabled,
-      .radio:backdrop:disabled label,
-      .radio:backdrop:disabled {
-        color: #d1d1d1; }
-  row:selected check, row:selected
-  .check, row:selected
-  radio, row:selected
-  .radio {
-    border-color: #347d9f; }
-  .osd check, .osd
-  .check, .osd
-  radio, .osd
-  .radio {
-    color: #A1A8AB;
-    border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(32, 37, 38, 0.8));
-    background-clip: padding-box;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-    text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black;
-    outline-color: rgba(161, 168, 171, 0.3); }
-    .osd check:hover, .osd
-    .check:hover, .osd
-    radio:hover, .osd
-    .radio:hover {
-      color: #A1A8AB;
-      border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(32, 37, 38, 0.8));
-      background-clip: padding-box;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-      text-shadow: 0 1px black;
-      -gtk-icon-shadow: 0 1px black;
-      outline-color: rgba(161, 168, 171, 0.3); }
-    .osd check:active, .osd
-    .check:active, .osd
-    radio:active, .osd
-    .radio:active {
-      color: white;
-      border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7));
-      background-clip: padding-box;
-      box-shadow: none;
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-      outline-color: rgba(161, 168, 171, 0.3); }
-    .osd check:backdrop, .osd
-    .check:backdrop, .osd
-    radio:backdrop, .osd
-    .radio:backdrop {
-      color: #A1A8AB;
-      border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(32, 37, 38, 0.8));
-      background-clip: padding-box;
-      box-shadow: none;
-      text-shadow: none;
-      -gtk-icon-shadow: none; }
-    .osd check:disabled, .osd
-    .check:disabled, .osd
-    radio:disabled, .osd
-    .radio:disabled {
-      color: #616769;
-      border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(45, 50, 51, 0.5));
-      background-clip: padding-box;
-      box-shadow: none;
-      text-shadow: none;
-      -gtk-icon-shadow: none; }
-  .menu menuitem check, menu menuitem check, .menu menuitem
+  margin: 0 4px; }
+  .menu .menuitem check, menu menuitem check, .menu .menuitem
   .check, menu menuitem
-  .check, .menu menuitem
+  .check, .menu .menuitem
   radio, menu menuitem
-  radio, .menu menuitem
+  radio, .menu .menuitem
   .radio, menu menuitem
   .radio {
     margin: 0; }
-    .menu menuitem check, .menu menuitem check:hover, .menu menuitem check:disabled, menu menuitem check, menu menuitem check:hover, menu menuitem check:disabled, .menu menuitem
-    .check, .menu menuitem
-    .check:hover, .menu menuitem
-    .check:disabled, menu menuitem
-    .check, menu menuitem
-    .check:hover, menu menuitem
-    .check:disabled, .menu menuitem
-    radio, .menu menuitem
-    radio:hover, .menu menuitem
-    radio:disabled, menu menuitem
-    radio, menu menuitem
-    radio:hover, menu menuitem
-    radio:disabled, .menu menuitem
-    .radio, .menu menuitem
-    .radio:hover, .menu menuitem
-    .radio:disabled, menu menuitem
-    .radio, menu menuitem
-    .radio:hover, menu menuitem
-    .radio:disabled {
-      min-height: 14px;
-      min-width: 14px;
-      background-image: none;
-      background-color: transparent;
-      box-shadow: none;
-      -gtk-icon-shadow: none;
-      color: inherit;
-      border-color: currentColor;
-      animation: none; }
-
-check {
-  border-radius: 3px; }
-  check:checked {
-    -gtk-icon-source: image(-gtk-recolor(url("assets/check-symbolic.svg")), -gtk-recolor(url("assets/check-symbolic.symbolic.png"))); }
-  check:indeterminate {
-    -gtk-icon-source: image(-gtk-recolor(url("assets/dash-symbolic.svg")), -gtk-recolor(url("assets/dash-symbolic.symbolic.png"))); }
-
-treeview.view radio:selected:focus, treeview.view radio:selected,
-radio {
-  border-radius: 100%; }
-  treeview.view radio:checked:selected,
-  radio:checked {
-    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/bullet-symbolic.svg")), -gtk-recolor(url("assets/bullet-symbolic.symbolic.png"))); }
-  treeview.view radio:indeterminate:selected,
-  radio:indeterminate {
-    -gtk-icon-source: image(-gtk-recolor(url("assets/dash-symbolic.svg")), -gtk-recolor(url("assets/dash-symbolic.symbolic.png"))); }
-
-@keyframes check_check {
-  from {
-    -gtk-icon-transform: translate(6px, -3px) rotate(-45deg) scaleY(0.2) rotate(45deg) scaleX(0); }
-  to {
-    -gtk-icon-transform: unset; } }
-@keyframes check_radio {
-  from {
-    -gtk-icon-transform: scale(0); }
-  to {
-    -gtk-icon-transform: unset; } }
-@keyframes check_indeterminate {
-  from {
-    -gtk-icon-transform: scale(0, 1); }
-  to {
-    -gtk-icon-transform: unset; } }
-check:not(:indeterminate):checked {
-  animation: check_check 400ms; }
-
-radio:not(:indeterminate):checked {
-  animation: check_radio 400ms; }
-
-check:indeterminate:checked, radio:indeterminate:checked {
-  animation: check_indeterminate 400ms; }
 
 menu menuitem check:not(:indeterminate):checked,
 menu menuitem radio:not(:indeterminate):checked,
@@ -3843,11 +3642,30 @@ headerbar {
     .header-bar.default-decoration button.titlebutton,
     headerbar.default-decoration .button.titlebutton,
     headerbar.default-decoration button.titlebutton {
-      min-height: 26px;
-      min-width: 26px;
-      margin: 0;
+      min-height: 16px;
+      min-width: 16px;
       padding: 1px;
-      border-radius: 50%; }
+      border-radius: 50%;
+      background-color: transparent;
+      box-shadow: none;
+      text-shadow: none;
+      -gtk-icon-shadow: none; }
+      .default-decoration.titlebar:not(headerbar) .button.titlebutton:hover,
+      .default-decoration.titlebar:not(headerbar) button.titlebutton:hover,
+      .header-bar.default-decoration .button.titlebutton:hover,
+      .header-bar.default-decoration button.titlebutton:hover,
+      headerbar.default-decoration .button.titlebutton:hover,
+      headerbar.default-decoration button.titlebutton:hover {
+        background-color: transparent;
+        color: white; }
+      .default-decoration.titlebar:not(headerbar) .button.titlebutton:backdrop,
+      .default-decoration.titlebar:not(headerbar) button.titlebutton:backdrop,
+      .header-bar.default-decoration .button.titlebutton:backdrop,
+      .header-bar.default-decoration button.titlebutton:backdrop,
+      headerbar.default-decoration .button.titlebutton:backdrop,
+      headerbar.default-decoration button.titlebutton:backdrop {
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.5); }
       .default-decoration.titlebar:not(headerbar) .button.titlebutton:active,
       .default-decoration.titlebar:not(headerbar) button.titlebutton:active,
       .header-bar.default-decoration .button.titlebutton:active,
@@ -3856,15 +3674,8 @@ headerbar {
       headerbar.default-decoration button.titlebutton:active {
         background-color: #ffffff;
         color: #636E73;
+        border-radius: 50%;
         box-shadow: none; }
-      .default-decoration.titlebar:not(headerbar) .button.titlebutton:backdrop,
-      .default-decoration.titlebar:not(headerbar) button.titlebutton:backdrop,
-      .header-bar.default-decoration .button.titlebutton:backdrop,
-      .header-bar.default-decoration button.titlebutton:backdrop,
-      headerbar.default-decoration .button.titlebutton:backdrop,
-      headerbar.default-decoration button.titlebutton:backdrop {
-        color: rgba(255, 255, 255, 0.5);
-        background-color: #ffffff; }
   .titlebar:not(headerbar) .entry,
   .titlebar:not(headerbar) entry,
   .header-bar .entry,
@@ -3985,6 +3796,7 @@ headerbar {
     text-shadow: none;
     -gtk-icon-shadow: none;
     padding: 10px;
+    margin: 0;
     color: #ffffff; }
     .titlebar:not(headerbar) .button.text-button, .titlebar:not(headerbar) .button.image-button, .titlebar:not(headerbar) .button.flat,
     .titlebar:not(headerbar) button.text-button,
@@ -4027,13 +3839,14 @@ headerbar {
         background-color: transparent;
         background-image: none;
         color: rgba(255, 255, 255, 0.5); }
-    .titlebar:not(headerbar) .button .linked,
-    .titlebar:not(headerbar) button .linked,
-    .header-bar .button .linked,
-    .header-bar button .linked,
-    headerbar .button .linked,
-    headerbar button .linked {
-      border-radius: 0px; }
+    .titlebar:not(headerbar) .button.linked,
+    .titlebar:not(headerbar) button.linked,
+    .header-bar .button.linked,
+    .header-bar button.linked,
+    headerbar .button.linked,
+    headerbar button.linked {
+      border-radius: 0px;
+      margin: 0; }
     .titlebar:not(headerbar) .button.titlebutton,
     .titlebar:not(headerbar) button.titlebutton,
     .header-bar .button.titlebutton,
@@ -4044,6 +3857,7 @@ headerbar {
       min-width: 16px;
       padding: 1px;
       border-radius: 50%;
+      background-color: transparent;
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
@@ -4054,7 +3868,7 @@ headerbar {
       headerbar .button.titlebutton:hover,
       headerbar button.titlebutton:hover {
         background-color: transparent;
-        color: lighter(#ffffff, 10%); }
+        color: white; }
       .titlebar:not(headerbar) .button.titlebutton:backdrop,
       .titlebar:not(headerbar) button.titlebutton:backdrop,
       .header-bar .button.titlebutton:backdrop,
@@ -4079,6 +3893,7 @@ headerbar {
     .header-bar button:hover,
     headerbar .button:hover,
     headerbar button:hover {
+      background-image: none;
       background-color: rgba(0, 0, 0, 0.15);
       box-shadow: none; }
     .titlebar:not(headerbar) .button:active, .titlebar:not(headerbar) .button:checked,
@@ -4384,9 +4199,8 @@ levelbar {
   levelbar .fill-block,
   levelbar block {
     border-radius: 2px;
-    padding: 2px;
     min-width: 32px;
-    min-height: 8px; }
+    min-height: 2px; }
     GtkLevelBar.vertical .low.fill-block,
     GtkLevelBar.vertical block.low,
     GtkLevelBar .level-bar.vertical .low.fill-block,
@@ -5825,7 +5639,7 @@ progressbar {
   progressbar.horizontal trough,
   progressbar.horizontal .trough,
   progressbar.horizontal progress {
-    min-height: 2px; }
+    min-height: 4px; }
   GtkProgressBar.vertical trough,
   GtkProgressBar.vertical .trough,
   GtkProgressBar.vertical progress,
@@ -5835,7 +5649,7 @@ progressbar {
   progressbar.vertical trough,
   progressbar.vertical .trough,
   progressbar.vertical progress {
-    min-width: 2px; }
+    min-width: 4px; }
   GtkProgressBar.horizontal progress,
   .progressbar.horizontal progress,
   progressbar.horizontal progress {
@@ -5987,8 +5801,7 @@ scale fill {
   scale trough:disabled,
   scale .trough:disabled, .scale fill:disabled,
   scale fill:disabled {
-    background-color: #fafafa;
-    box-shadow: none; }
+    background-color: #fafafa; }
   GtkLevelBar .trough:backdrop,
   GtkLevelBar trough:backdrop,
   .level-bar .trough:backdrop,
@@ -6144,10 +5957,8 @@ GtkProgressBar progress,
 .progressbar .progressbar,
 .progressbar progress,
 progressbar .progressbar,
-progressbar progress, .scale fill,
-.scale .highlight,
+progressbar progress, .scale .highlight,
 .scale highlight,
-scale fill,
 scale .highlight,
 scale highlight, .scale.fine-tune fill,
 .scale.fine-tune .highlight,
@@ -6159,30 +5970,29 @@ scale.fine-tune highlight {
   background-color: #449ac2;
   box-shadow: 0px 1px rgba(255, 255, 255, 0.8);
   border-radius: 2px;
-  margin: 6px 0; }
+  margin: 6px 0;
+  padding: 0; }
   GtkProgressBar .progressbar:insensitive,
   GtkProgressBar progress:insensitive,
   .progressbar .progressbar:insensitive,
   .progressbar progress:insensitive,
   progressbar .progressbar:insensitive,
-  progressbar progress:insensitive, .scale fill:insensitive,
-  .scale .highlight:insensitive,
+  progressbar progress:insensitive, .scale .highlight:insensitive,
   .scale highlight:insensitive,
-  scale fill:insensitive,
   scale .highlight:insensitive,
-  scale highlight:insensitive, GtkProgressBar .progressbar:disabled,
+  scale highlight:insensitive, .scale.fine-tune fill:insensitive,
+  scale.fine-tune fill:insensitive, GtkProgressBar .progressbar:disabled,
   GtkProgressBar progress:disabled,
   .progressbar .progressbar:disabled,
   .progressbar progress:disabled,
   progressbar .progressbar:disabled,
-  progressbar progress:disabled, .scale fill:disabled,
-  .scale .highlight:disabled,
+  progressbar progress:disabled, .scale .highlight:disabled,
   .scale highlight:disabled,
-  scale fill:disabled,
   scale .highlight:disabled,
-  scale highlight:disabled {
-    background-color: transparent;
-    border-color: transparent; }
+  scale highlight:disabled, .scale.fine-tune fill:disabled,
+  scale.fine-tune fill:disabled {
+    border: 1px solid #9e9e9e;
+    background-color: #c4c4c4; }
   GtkProgressBar .progressbar:backdrop,
   GtkProgressBar progress:backdrop,
   .progressbar .progressbar:backdrop,
@@ -6192,12 +6002,11 @@ scale.fine-tune highlight {
   .progressbar:backdrop .progressbar,
   progressbar:backdrop .progressbar, GtkProgressBar:backdrop progress,
   .progressbar:backdrop progress,
-  progressbar:backdrop progress, .scale fill:backdrop,
-  .scale .highlight:backdrop,
+  progressbar:backdrop progress, .scale .highlight:backdrop,
   .scale highlight:backdrop,
-  scale fill:backdrop,
   scale .highlight:backdrop,
-  scale highlight:backdrop, GtkProgressBar .progressbar:active:backdrop,
+  scale highlight:backdrop, .scale.fine-tune fill:backdrop,
+  scale.fine-tune fill:backdrop, GtkProgressBar .progressbar:active:backdrop,
   GtkProgressBar progress:active:backdrop,
   .progressbar .progressbar:active:backdrop,
   .progressbar progress:active:backdrop,
@@ -6206,12 +6015,11 @@ scale.fine-tune highlight {
   .progressbar:backdrop .progressbar:active,
   progressbar:backdrop .progressbar:active, GtkProgressBar:backdrop progress:active,
   .progressbar:backdrop progress:active,
-  progressbar:backdrop progress:active, .scale fill:active:backdrop,
-  .scale .highlight:active:backdrop,
+  progressbar:backdrop progress:active, .scale .highlight:active:backdrop,
   .scale highlight:active:backdrop,
-  scale fill:active:backdrop,
   scale .highlight:active:backdrop,
-  scale highlight:active:backdrop {
+  scale highlight:active:backdrop, .scale.fine-tune fill:active:backdrop,
+  scale.fine-tune fill:active:backdrop {
     border-color: #449ac2;
     background-color: #6bafce; }
     GtkProgressBar .progressbar:backdrop:disabled,
@@ -6223,12 +6031,11 @@ scale.fine-tune highlight {
     .progressbar:backdrop .progressbar:disabled,
     progressbar:backdrop .progressbar:disabled, GtkProgressBar:backdrop progress:disabled,
     .progressbar:backdrop progress:disabled,
-    progressbar:backdrop progress:disabled, .scale fill:backdrop:disabled,
-    .scale .highlight:backdrop:disabled,
+    progressbar:backdrop progress:disabled, .scale .highlight:backdrop:disabled,
     .scale highlight:backdrop:disabled,
-    scale fill:backdrop:disabled,
     scale .highlight:backdrop:disabled,
-    scale highlight:backdrop:disabled, GtkProgressBar .progressbar:active:backdrop:disabled,
+    scale highlight:backdrop:disabled, .scale.fine-tune fill:backdrop:disabled,
+    scale.fine-tune fill:backdrop:disabled, GtkProgressBar .progressbar:active:backdrop:disabled,
     GtkProgressBar progress:active:backdrop:disabled,
     .progressbar .progressbar:active:backdrop:disabled,
     .progressbar progress:active:backdrop:disabled,
@@ -6237,12 +6044,11 @@ scale.fine-tune highlight {
     .progressbar:backdrop .progressbar:active:disabled,
     progressbar:backdrop .progressbar:active:disabled, GtkProgressBar:backdrop progress:active:disabled,
     .progressbar:backdrop progress:active:disabled,
-    progressbar:backdrop progress:active:disabled, .scale fill:active:backdrop:disabled,
-    .scale .highlight:active:backdrop:disabled,
+    progressbar:backdrop progress:active:disabled, .scale .highlight:active:backdrop:disabled,
     .scale highlight:active:backdrop:disabled,
-    scale fill:active:backdrop:disabled,
     scale .highlight:active:backdrop:disabled,
-    scale highlight:active:backdrop:disabled {
+    scale highlight:active:backdrop:disabled, .scale.fine-tune fill:active:backdrop:disabled,
+    scale.fine-tune fill:active:backdrop:disabled {
       background-color: transparent;
       border-color: transparent; }
   .list-row:selected GtkProgressBar .progressbar:disabled, GtkProgressBar .list-row:selected .progressbar:disabled,
@@ -6255,17 +6061,15 @@ scale.fine-tune highlight {
   .list-row:selected progressbar .progressbar:disabled,
   progressbar .list-row:selected .progressbar:disabled,
   .list-row:selected progressbar progress:disabled,
-  progressbar .list-row:selected progress:disabled, .list-row:selected .scale fill:disabled, .scale .list-row:selected fill:disabled,
-  .list-row:selected .scale .highlight:disabled,
-  .scale .list-row:selected .highlight:disabled,
+  progressbar .list-row:selected progress:disabled, .list-row:selected .scale .highlight:disabled, .scale .list-row:selected .highlight:disabled,
   .list-row:selected .scale highlight:disabled,
   .scale .list-row:selected highlight:disabled,
-  .list-row:selected scale fill:disabled,
-  scale .list-row:selected fill:disabled,
   .list-row:selected scale .highlight:disabled,
   scale .list-row:selected .highlight:disabled,
   .list-row:selected scale highlight:disabled,
-  scale .list-row:selected highlight:disabled, .list-row:selected GtkProgressBar .progressbar, GtkProgressBar .list-row:selected .progressbar,
+  scale .list-row:selected highlight:disabled, .list-row:selected .scale.fine-tune fill:disabled, .scale.fine-tune .list-row:selected fill:disabled,
+  .list-row:selected scale.fine-tune fill:disabled,
+  scale.fine-tune .list-row:selected fill:disabled, .list-row:selected GtkProgressBar .progressbar, GtkProgressBar .list-row:selected .progressbar,
   .list-row:selected GtkProgressBar progress,
   GtkProgressBar .list-row:selected progress,
   .list-row:selected .progressbar .progressbar,
@@ -6275,17 +6079,15 @@ scale.fine-tune highlight {
   .list-row:selected progressbar .progressbar,
   progressbar .list-row:selected .progressbar,
   .list-row:selected progressbar progress,
-  progressbar .list-row:selected progress, .list-row:selected .scale fill, .scale .list-row:selected fill,
-  .list-row:selected .scale .highlight,
-  .scale .list-row:selected .highlight,
+  progressbar .list-row:selected progress, .list-row:selected .scale .highlight, .scale .list-row:selected .highlight,
   .list-row:selected .scale highlight,
   .scale .list-row:selected highlight,
-  .list-row:selected scale fill,
-  scale .list-row:selected fill,
   .list-row:selected scale .highlight,
   scale .list-row:selected .highlight,
   .list-row:selected scale highlight,
-  scale .list-row:selected highlight {
+  scale .list-row:selected highlight, .list-row:selected .scale.fine-tune fill, .scale.fine-tune .list-row:selected fill,
+  .list-row:selected scale.fine-tune fill,
+  scale.fine-tune .list-row:selected fill {
     border-color: #347d9f; }
   row:selected GtkProgressBar .progressbar:disabled, GtkProgressBar row:selected .progressbar:disabled,
   row:selected GtkProgressBar progress:disabled,
@@ -6297,17 +6099,15 @@ scale.fine-tune highlight {
   row:selected progressbar .progressbar:disabled,
   progressbar row:selected .progressbar:disabled,
   row:selected progressbar progress:disabled,
-  progressbar row:selected progress:disabled, row:selected .scale fill:disabled, .scale row:selected fill:disabled,
-  row:selected .scale .highlight:disabled,
-  .scale row:selected .highlight:disabled,
+  progressbar row:selected progress:disabled, row:selected .scale .highlight:disabled, .scale row:selected .highlight:disabled,
   row:selected .scale highlight:disabled,
   .scale row:selected highlight:disabled,
-  row:selected scale fill:disabled,
-  scale row:selected fill:disabled,
   row:selected scale .highlight:disabled,
   scale row:selected .highlight:disabled,
   row:selected scale highlight:disabled,
-  scale row:selected highlight:disabled, row:selected GtkProgressBar .progressbar, GtkProgressBar row:selected .progressbar,
+  scale row:selected highlight:disabled, row:selected .scale.fine-tune fill:disabled, .scale.fine-tune row:selected fill:disabled,
+  row:selected scale.fine-tune fill:disabled,
+  scale.fine-tune row:selected fill:disabled, row:selected GtkProgressBar .progressbar, GtkProgressBar row:selected .progressbar,
   row:selected GtkProgressBar progress,
   GtkProgressBar row:selected progress,
   row:selected .progressbar .progressbar,
@@ -6317,17 +6117,15 @@ scale.fine-tune highlight {
   row:selected progressbar .progressbar,
   progressbar row:selected .progressbar,
   row:selected progressbar progress,
-  progressbar row:selected progress, row:selected .scale fill, .scale row:selected fill,
-  row:selected .scale .highlight,
-  .scale row:selected .highlight,
+  progressbar row:selected progress, row:selected .scale .highlight, .scale row:selected .highlight,
   row:selected .scale highlight,
   .scale row:selected highlight,
-  row:selected scale fill,
-  scale row:selected fill,
   row:selected scale .highlight,
   scale row:selected .highlight,
   row:selected scale highlight,
-  scale row:selected highlight {
+  scale row:selected highlight, row:selected .scale.fine-tune fill, .scale.fine-tune row:selected fill,
+  row:selected scale.fine-tune fill,
+  scale.fine-tune row:selected fill {
     border-color: #347d9f; }
   .osd GtkProgressBar .progressbar, GtkProgressBar .osd .progressbar,
   .osd GtkProgressBar progress,
@@ -6339,17 +6137,15 @@ scale.fine-tune highlight {
   .osd progressbar .progressbar,
   progressbar .osd .progressbar,
   .osd progressbar progress,
-  progressbar .osd progress, .osd .scale fill, .scale .osd fill,
-  .osd .scale .highlight,
-  .scale .osd .highlight,
+  progressbar .osd progress, .osd .scale .highlight, .scale .osd .highlight,
   .osd .scale highlight,
   .scale .osd highlight,
-  .osd scale fill,
-  scale .osd fill,
   .osd scale .highlight,
   scale .osd .highlight,
   .osd scale highlight,
-  scale .osd highlight {
+  scale .osd highlight, .osd .scale.fine-tune fill, .scale.fine-tune .osd fill,
+  .osd scale.fine-tune fill,
+  scale.fine-tune .osd fill {
     border-color: rgba(0, 0, 0, 0.7); }
     .osd GtkProgressBar .progressbar:disabled, GtkProgressBar .osd .progressbar:disabled,
     .osd GtkProgressBar progress:disabled,
@@ -6361,17 +6157,15 @@ scale.fine-tune highlight {
     .osd progressbar .progressbar:disabled,
     progressbar .osd .progressbar:disabled,
     .osd progressbar progress:disabled,
-    progressbar .osd progress:disabled, .osd .scale fill:disabled, .scale .osd fill:disabled,
-    .osd .scale .highlight:disabled,
-    .scale .osd .highlight:disabled,
+    progressbar .osd progress:disabled, .osd .scale .highlight:disabled, .scale .osd .highlight:disabled,
     .osd .scale highlight:disabled,
     .scale .osd highlight:disabled,
-    .osd scale fill:disabled,
-    scale .osd fill:disabled,
     .osd scale .highlight:disabled,
     scale .osd .highlight:disabled,
     .osd scale highlight:disabled,
-    scale .osd highlight:disabled {
+    scale .osd highlight:disabled, .osd .scale.fine-tune fill:disabled, .scale.fine-tune .osd fill:disabled,
+    .osd scale.fine-tune fill:disabled,
+    scale.fine-tune .osd fill:disabled {
       border-color: transparent; }
 
 .scale,
@@ -6379,9 +6173,7 @@ scale {
   -GtkScale-slider-length: 16px;
   -GtkRange-slider-width: 16px;
   -GtkRange-trough-border: 0px;
-  min-height: 10px;
-  min-width: 10px;
-  padding: 12px; }
+  max-height: 8px; }
   .scale fill,
   .scale highlight,
   scale fill,
@@ -7863,6 +7655,7 @@ spinbutton:not(.vertical) .entry,
 spinbutton:not(.vertical) entry {
   min-width: 28px;
   margin: 0;
+  padding: 2px;
   background: none;
   background-color: transparent;
   border: none;
@@ -7939,8 +7732,7 @@ spinbutton:not(.vertical) button {
   border-style: none none none solid;
   border-color: rgba(0, 0, 0, 0.4);
   border-radius: 0;
-  box-shadow: none;
-  -gtk-icon-shadow: 0 1px black; }
+  box-shadow: none; }
   .osd .spinbutton:not(.vertical) button:dir(rtl), .osd
   spinbutton:not(.vertical) button:dir(rtl) {
     border-style: none solid none none; }
@@ -7955,7 +7747,6 @@ spinbutton:not(.vertical) button {
     color: #A1A8AB;
     border-color: rgba(0, 0, 0, 0.5);
     background-color: rgba(161, 168, 171, 0.1);
-    -gtk-icon-shadow: 0 1px black;
     box-shadow: none; }
   .osd .spinbutton:not(.vertical) button:backdrop, .osd
   spinbutton:not(.vertical) button:backdrop {
@@ -7967,7 +7758,6 @@ spinbutton:not(.vertical) button {
     -gtk-icon-shadow: none;
     color: #A1A8AB;
     border-color: rgba(0, 0, 0, 0.5);
-    -gtk-icon-shadow: none;
     box-shadow: none; }
   .osd .spinbutton:not(.vertical) button:disabled, .osd
   spinbutton:not(.vertical) button:disabled {
@@ -7979,7 +7769,6 @@ spinbutton:not(.vertical) button {
     -gtk-icon-shadow: none;
     color: #616769;
     border-color: rgba(0, 0, 0, 0.5);
-    -gtk-icon-shadow: none;
     box-shadow: none; }
   .osd .spinbutton:not(.vertical) button:last-child, .osd
   spinbutton:not(.vertical) button:last-child {
@@ -8022,7 +7811,8 @@ spinbutton.vertical button {
   spinbutton.vertical .button:hover,
   spinbutton.vertical button:hover {
     background-color: #449ac2;
-    color: #ffffff; }
+    color: #ffffff;
+    -gtk-icon-shadow: none; }
   .spinbutton.vertical .button:active,
   .spinbutton.vertical button:active,
   spinbutton.vertical .button:active,
@@ -8151,8 +7941,8 @@ spinner {
  * Switch *
  **********/
 GtkSwitch {
-  -GtkSwitch-slider-width: 20;
-  -GtkSwitch-slider-height: 20; }
+  -GtkSwitch-slider-width: 16px;
+  -GtkSwitch-slider-height: 16px; }
 
 GtkSwitch,
 switch {
@@ -8201,8 +7991,8 @@ switch {
   switch .slider,
   switch slider {
     padding: 2px;
-    min-width: 24px;
-    min-height: 24px;
+    min-width: 16px;
+    min-height: 16px;
     border-radius: 50%;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     background-color: #ffffff;
@@ -8213,35 +8003,7 @@ switch {
     switch slider:backdrop {
       padding: 2px;
       box-shadow: none;
-      background-color: #ffffff;
-      border: 1px solid rgba(0, 0, 0, 0.2); }
-  GtkSwitch:hover .slider,
-  GtkSwitch:hover slider,
-  switch:hover .slider,
-  switch:hover slider {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.2); }
-  GtkSwitch:checked slider,
-  switch:checked slider {
-    border: 1px solid #347d9f; }
-  GtkSwitch:backdrop:checked slider,
-  switch:backdrop:checked slider {
-    border-color: #449ac2; }
-  GtkSwitch:backdrop:disabled slider,
-  switch:backdrop:disabled slider {
-    border-color: #c9c9c9;
-    background-image: none;
-    background-color: #fafafa;
-    text-shadow: none;
-    -gtk-icon-shadow: none;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
-    GtkSwitch:backdrop:disabled slider GtkLabel, GtkSwitch:backdrop:disabled slider,
-    switch:backdrop:disabled slider GtkLabel,
-    switch:backdrop:disabled slider {
-      color: #d1d1d1; }
-    GtkSwitch:backdrop:disabled slider label, GtkSwitch:backdrop:disabled slider,
-    switch:backdrop:disabled slider label,
-    switch:backdrop:disabled slider {
-      color: #d1d1d1; }
+      background-color: #ffffff; }
   row:selected GtkSwitch, row:selected
   switch {
     box-shadow: none;
@@ -9057,7 +8819,7 @@ decoration {
     border-radius: 0;
     margin: 4px;
     background-color: #f7f7f7;
-    border: solid 1px #c9c9c9;
+    border: 0px solid #c9c9c9;
     box-shadow: none; }
 
 .view:selected:focus, GtkIconView:selected:focus,

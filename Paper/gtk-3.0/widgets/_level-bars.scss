@@ -29,10 +29,8 @@ levelbar {
   block {
 
     border-radius:2px;
-    padding:2px;
-
     min-width: 32px;
-    min-height: 8px;
+    min-height: 2px;
 
     &.low,
     &.level-low {

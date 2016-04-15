@@ -15,6 +15,7 @@ spinbutton {
       min-width: 28px;
       // reset all the other props since the spinbutton node is styled here
       margin: 0;
+      padding:2px;
       background: none;
       background-color: transparent;
       border: none;
@@ -77,7 +78,6 @@ spinbutton {
       border-color: transparentize($osd_borders_color, 0.3);
       border-radius: 0;
       box-shadow: none;
-      -gtk-icon-shadow: 0 1px black;
 
       &:dir(rtl) { border-style: none solid none none; }
 
@@ -87,7 +87,6 @@ spinbutton {
         color: $osd_fg_color;
         border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
         background-color: transparentize($osd_fg_color, 0.9);
-        -gtk-icon-shadow: 0 1px black;
         box-shadow: none;
       }
 
@@ -96,7 +95,6 @@ spinbutton {
 
         color: $osd_fg_color;
         border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
-        -gtk-icon-shadow: none;
         box-shadow: none;
       }
 
@@ -105,7 +103,6 @@ spinbutton {
 
         color: $osd_insensitive_fg_color;
         border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
-        -gtk-icon-shadow: none;
         box-shadow: none;
       }
 
@@ -153,6 +150,7 @@ spinbutton {
       &:hover {
         background-color:$selected_bg_color;
         color: $selected_fg_color;
+        -gtk-icon-shadow:none;
       }
 
       &:active {

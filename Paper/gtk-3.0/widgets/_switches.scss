@@ -2,8 +2,8 @@
  * Switch *
  **********/
 GtkSwitch {
-  -GtkSwitch-slider-width: 20;
-  -GtkSwitch-slider-height: 20;
+  -GtkSwitch-slider-width: 16px;
+  -GtkSwitch-slider-height: 16px;
 }
 
 GtkSwitch,
@@ -57,8 +57,8 @@ switch {
   .slider,
   slider {
     padding:2px;
-    min-width: 24px;
-    min-height: 24px;
+    min-width: 16px;
+    min-height: 16px;
     border-radius: 50%;
     transition: $button_transition;
     background-color: $base_color;
@@ -70,23 +70,12 @@ switch {
       padding:2px;
       box-shadow:none;
       background-color:$base_color;
-      border:1px solid transparentize(black, 0.8);
     }
   }
 
-  &:hover {
-    .slider,
-    slider { 
-      box-shadow: 0 2px 4px transparentize(black, 0.8),
-                  0 1px 3px transparentize(black, 0.8);
-    }
-  }
-
-  &:checked slider { border: 1px solid $selected_borders_color; }
+  &:checked slider { }
 
   &:backdrop {
-    &:checked slider { border-color: if($variant == 'light', $selected_bg_color, $selected_borders_color); }
-    &:disabled slider { @include button(backdrop-insensitive); }
   }
 
   row:selected & {
