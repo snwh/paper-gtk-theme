@@ -4395,11 +4395,11 @@ levelbar block.empty {
 .button:link,
 button:visited,
 .button:visited {
-  color: #347D9F; }
+  color: blue; }
   *:link:visited,
   button:visited,
   .button:visited {
-    color: rgba(52, 125, 159, 0.5); }
+    color: rgba(0, 0, 255, 0.5); }
     *:selected *:link:visited, *:selected button:visited:link,
     *:selected button:visited,
     *:selected .button:visited {
@@ -4408,7 +4408,7 @@ button:visited,
   .button:hover:link,
   button:hover:visited,
   .button:hover:visited {
-    color: #449ac2; }
+    color: #3333ff; }
     *:selected *:link:hover, *:selected button:hover:link,
     *:selected .button:hover:link,
     *:selected button:hover:visited,
@@ -4418,7 +4418,7 @@ button:visited,
   .button:active:link,
   button:active:visited,
   .button:active:visited {
-    color: #347D9F; }
+    color: blue; }
     *:selected *:link:active, *:selected button:active:link,
     *:selected .button:active:link,
     *:selected button:active:visited,
@@ -5217,10 +5217,14 @@ printdialog .dialog-action-box {
 /*****************
  * Progress bars *
  *****************/
+GtkProgressBar,
 .progressbar,
 progressbar {
   font-size: smaller;
   color: rgba(161, 168, 171, 0.4); }
+  GtkProgressBar.horizontal trough,
+  GtkProgressBar.horizontal .trough,
+  GtkProgressBar.horizontal progress,
   .progressbar.horizontal trough,
   .progressbar.horizontal .trough,
   .progressbar.horizontal progress,
@@ -5228,6 +5232,9 @@ progressbar {
   progressbar.horizontal .trough,
   progressbar.horizontal progress {
     min-height: 2px; }
+  GtkProgressBar.vertical trough,
+  GtkProgressBar.vertical .trough,
+  GtkProgressBar.vertical progress,
   .progressbar.vertical trough,
   .progressbar.vertical .trough,
   .progressbar.vertical progress,
@@ -5235,50 +5242,66 @@ progressbar {
   progressbar.vertical .trough,
   progressbar.vertical progress {
     min-width: 2px; }
+  GtkProgressBar.horizontal progress,
   .progressbar.horizontal progress,
   progressbar.horizontal progress {
     margin: 0 -1px; }
+  GtkProgressBar.vertical progress,
   .progressbar.vertical progress,
   progressbar.vertical progress {
     margin: -1px 0; }
+  GtkProgressBar:backdrop,
   .progressbar:backdrop,
   progressbar:backdrop {
     box-shadow: none;
     transition: 200ms ease-out; }
+  GtkProgressBar .progressbar,
+  GtkProgressBar progress,
   .progressbar .progressbar,
   .progressbar progress,
   progressbar .progressbar,
   progressbar progress {
-    border-radius: 1.5px; }
+    border-radius: 2px; }
+    GtkProgressBar .progressbar.left,
+    GtkProgressBar progress.left,
     .progressbar .progressbar.left,
     .progressbar progress.left,
     progressbar .progressbar.left,
     progressbar progress.left {
       border-top-left-radius: 2px;
       border-bottom-left-radius: 2px; }
+    GtkProgressBar .progressbar.right,
+    GtkProgressBar progress.right,
     .progressbar .progressbar.right,
     .progressbar progress.right,
     progressbar .progressbar.right,
     progressbar progress.right {
       border-top-right-radius: 2px;
       border-bottom-right-radius: 2px; }
+    GtkProgressBar .progressbar.top,
+    GtkProgressBar progress.top,
     .progressbar .progressbar.top,
     .progressbar progress.top,
     progressbar .progressbar.top,
     progressbar progress.top {
       border-top-right-radius: 2px;
       border-top-left-radius: 2px; }
+    GtkProgressBar .progressbar.bottom,
+    GtkProgressBar progress.bottom,
     .progressbar .progressbar.bottom,
     .progressbar progress.bottom,
     progressbar .progressbar.bottom,
     progressbar progress.bottom {
       border-bottom-right-radius: 2px;
       border-bottom-left-radius: 2px; }
+  GtkProgressBar.osd,
   .progressbar.osd,
   progressbar.osd {
     min-width: 3px;
     min-height: 3px;
     background-color: transparent; }
+    GtkProgressBar.osd .trough,
+    GtkProgressBar.osd trough,
     .progressbar.osd .trough,
     .progressbar.osd trough,
     progressbar.osd .trough,
@@ -5287,20 +5310,42 @@ progressbar {
       border-radius: 0;
       background-color: transparent;
       box-shadow: none; }
+    GtkProgressBar.osd .progress,
+    GtkProgressBar.osd progress,
     .progressbar.osd .progress,
     .progressbar.osd progress,
     progressbar.osd .progress,
     progressbar.osd progress {
       border-style: none;
       border-radius: 0; }
+  GtkProgressBar row:selected,
+  GtkProgressBar .list-row:selected,
+  .progressbar row:selected,
+  .progressbar .list-row:selected,
+  progressbar row:selected,
+  progressbar .list-row:selected {
+    border: 1px solid #51646e;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #667f8c; }
+
+GtkProgressBar:active {
+  color: rgba(0, 0, 0, 0.5);
+  background-color: #667f8c;
+  border-color: #51646e; }
+  GtkProgressBar:active:backdrop {
+    background-color: #8298a3;
+    border-color: #667f8c; }
 
 /************
  * GtkScale *
  ************/
+GtkProgressBar .trough,
+GtkProgressBar trough,
 .progressbar .trough,
 .progressbar trough,
 progressbar .trough,
-progressbar trough, .scale trough,
+progressbar trough, trough,
+.trough, .scale trough,
 .scale .trough,
 scale trough,
 scale .trough, .scale.fine-tune trough,
@@ -5312,122 +5357,76 @@ scale fill {
   background-color: #454d50;
   box-shadow: 0px 1px rgba(255, 255, 255, 0.1);
   border-radius: 2px; }
-  .progressbar .trough:disabled,
-  .progressbar trough:disabled,
-  progressbar .trough:disabled,
-  progressbar trough:disabled, .scale trough:disabled,
-  .scale .trough:disabled,
-  scale trough:disabled,
-  scale .trough:disabled, .scale fill:disabled,
+  trough:disabled,
+  .trough:disabled, .scale.fine-tune trough:disabled,
+  .scale.fine-tune .trough:disabled,
+  scale.fine-tune trough:disabled,
+  scale.fine-tune .trough:disabled, .scale fill:disabled,
   scale fill:disabled {
     margin: 6px;
     background-color: #576165;
     box-shadow: none; }
-  .progressbar .trough:backdrop,
+  GtkProgressBar trough,
   .progressbar trough,
-  progressbar .trough:backdrop,
-  progressbar trough, .progressbar:backdrop .trough,
-  progressbar:backdrop .trough, .scale trough:backdrop,
-  .scale .trough:backdrop,
-  scale trough:backdrop,
-  scale .trough:backdrop, .scale fill:backdrop,
+  progressbar trough, GtkProgressBar:backdrop .trough,
+  .progressbar:backdrop .trough,
+  progressbar:backdrop .trough, trough:backdrop,
+  .trough:backdrop, .scale.fine-tune trough:backdrop,
+  .scale.fine-tune .trough:backdrop,
+  scale.fine-tune trough:backdrop,
+  scale.fine-tune .trough:backdrop, .scale fill:backdrop,
   scale fill:backdrop {
     background-color: #464e52;
     border-color: #363c3e;
     box-shadow: none;
     transition: 200ms ease-out; }
-    .progressbar .trough:backdrop:disabled,
+    GtkProgressBar trough:disabled,
     .progressbar trough:disabled,
-    progressbar .trough:backdrop:disabled,
-    progressbar trough:disabled, .progressbar:backdrop .trough:disabled,
-    progressbar:backdrop .trough:disabled, .scale trough:backdrop:disabled,
-    .scale .trough:backdrop:disabled,
-    scale trough:backdrop:disabled,
-    scale .trough:backdrop:disabled, .scale fill:backdrop:disabled,
+    progressbar trough:disabled, GtkProgressBar:backdrop .trough:disabled,
+    .progressbar:backdrop .trough:disabled,
+    progressbar:backdrop .trough:disabled, trough:backdrop:disabled,
+    .trough:backdrop:disabled, .scale fill:backdrop:disabled,
     scale fill:backdrop:disabled {
       background-color: #576165; }
-  row:selected .progressbar .trough, .progressbar row:selected .trough,
-  row:selected .progressbar trough,
-  .progressbar row:selected trough,
-  row:selected progressbar .trough,
-  progressbar row:selected .trough,
-  row:selected progressbar trough,
-  progressbar row:selected trough, row:selected .scale trough, .scale row:selected trough,
-  row:selected .scale .trough,
-  .scale row:selected .trough,
-  row:selected scale trough,
-  scale row:selected trough,
-  row:selected scale .trough,
-  scale row:selected .trough, row:selected .scale fill, .scale row:selected fill,
+  row:selected trough,
+  row:selected .trough, row:selected .scale.fine-tune trough, .scale.fine-tune row:selected trough,
+  row:selected .scale.fine-tune .trough,
+  .scale.fine-tune row:selected .trough, row:selected .scale fill, .scale row:selected fill,
   row:selected scale fill,
   scale row:selected fill {
     box-shadow: none; }
-    row:selected .progressbar .trough, .progressbar row:selected .trough,
-    row:selected .progressbar trough,
-    .progressbar row:selected trough,
-    row:selected progressbar .trough,
-    progressbar row:selected .trough,
-    row:selected progressbar trough,
-    progressbar row:selected trough, row:selected .scale trough, .scale row:selected trough,
-    row:selected .scale .trough,
-    .scale row:selected .trough,
-    row:selected scale trough,
-    scale row:selected trough,
-    row:selected scale .trough,
-    scale row:selected .trough, row:selected .scale fill, .scale row:selected fill,
+    row:selected trough,
+    row:selected .trough, row:selected .scale.fine-tune trough, .scale.fine-tune row:selected trough,
+    row:selected .scale.fine-tune .trough,
+    .scale.fine-tune row:selected .trough, row:selected .scale fill, .scale row:selected fill,
     row:selected scale fill,
-    scale row:selected fill, row:selected .progressbar .trough:disabled, .progressbar row:selected .trough:disabled,
-    row:selected .progressbar trough:disabled,
-    .progressbar row:selected trough:disabled,
-    row:selected progressbar .trough:disabled,
-    progressbar row:selected .trough:disabled,
-    row:selected progressbar trough:disabled,
-    progressbar row:selected trough:disabled, row:selected .scale trough:disabled, .scale row:selected trough:disabled,
-    row:selected .scale .trough:disabled,
-    .scale row:selected .trough:disabled,
-    row:selected scale trough:disabled,
-    scale row:selected trough:disabled,
-    row:selected scale .trough:disabled,
-    scale row:selected .trough:disabled, row:selected .scale fill:disabled, .scale row:selected fill:disabled,
+    scale row:selected fill, row:selected trough:disabled,
+    row:selected .trough:disabled, row:selected .scale fill:disabled, .scale row:selected fill:disabled,
     row:selected scale fill:disabled,
     scale row:selected fill:disabled {
       border-color: #262f33; }
-  .osd .progressbar .trough, .progressbar .osd .trough,
-  .osd .progressbar trough,
-  .progressbar .osd trough,
-  .osd progressbar .trough,
-  progressbar .osd .trough,
-  .osd progressbar trough,
-  progressbar .osd trough, .osd .scale trough, .scale .osd trough,
-  .osd .scale .trough,
-  .scale .osd .trough,
-  .osd scale trough,
-  scale .osd trough,
-  .osd scale .trough,
-  scale .osd .trough, .osd .scale fill, .scale .osd fill,
+  .osd trough,
+  .osd .trough, .osd .scale.fine-tune trough, .scale.fine-tune .osd trough,
+  .osd .scale.fine-tune .trough,
+  .scale.fine-tune .osd .trough,
+  .osd scale.fine-tune trough,
+  scale.fine-tune .osd trough,
+  .osd scale.fine-tune .trough,
+  scale.fine-tune .osd .trough, .osd .scale fill, .scale .osd fill,
   .osd scale fill,
   scale .osd fill {
     border-color: rgba(0, 0, 0, 0.7);
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: none;
     outline-color: rgba(161, 168, 171, 0.2); }
-    .osd .progressbar .trough:disabled, .progressbar .osd .trough:disabled,
-    .osd .progressbar trough:disabled,
-    .progressbar .osd trough:disabled,
-    .osd progressbar .trough:disabled,
-    progressbar .osd .trough:disabled,
-    .osd progressbar trough:disabled,
-    progressbar .osd trough:disabled, .osd .scale trough:disabled, .scale .osd trough:disabled,
-    .osd .scale .trough:disabled,
-    .scale .osd .trough:disabled,
-    .osd scale trough:disabled,
-    scale .osd trough:disabled,
-    .osd scale .trough:disabled,
-    scale .osd .trough:disabled, .osd .scale fill:disabled, .scale .osd fill:disabled,
+    .osd trough:disabled,
+    .osd .trough:disabled, .osd .scale fill:disabled, .scale .osd fill:disabled,
     .osd scale fill:disabled,
     scale .osd fill:disabled {
       background-color: rgba(45, 50, 51, 0.5); }
 
+GtkProgressBar .progressbar,
+GtkProgressBar progress,
 .progressbar .progressbar,
 .progressbar progress,
 progressbar .progressbar,
@@ -5450,6 +5449,8 @@ scale.fine-tune highlight {
   box-shadow: 0px 1px rgba(255, 255, 255, 0.1);
   border-radius: 2px;
   margin: 6px 0; }
+  GtkProgressBar .progressbar:disabled,
+  GtkProgressBar progress:disabled,
   .progressbar .progressbar:disabled,
   .progressbar progress:disabled,
   progressbar .progressbar:disabled,
@@ -5464,10 +5465,13 @@ scale.fine-tune highlight {
   scale.fine-tune slider:disabled {
     background-color: transparent;
     border-color: transparent; }
+  GtkProgressBar .progressbar:backdrop,
+  GtkProgressBar progress:backdrop,
   .progressbar .progressbar:backdrop,
   .progressbar progress:backdrop,
   progressbar .progressbar:backdrop,
-  progressbar progress:backdrop, .progressbar:backdrop progress,
+  progressbar progress:backdrop, GtkProgressBar:backdrop progress,
+  .progressbar:backdrop progress,
   progressbar:backdrop progress, .scale fill:backdrop,
   .scale .highlight:backdrop,
   .scale highlight:backdrop,
@@ -5478,10 +5482,13 @@ scale.fine-tune highlight {
   scale.fine-tune .slider:backdrop,
   scale.fine-tune slider:backdrop {
     border-color: #262f33; }
+    GtkProgressBar .progressbar:backdrop:disabled,
+    GtkProgressBar progress:backdrop:disabled,
     .progressbar .progressbar:backdrop:disabled,
     .progressbar progress:backdrop:disabled,
     progressbar .progressbar:backdrop:disabled,
-    progressbar progress:backdrop:disabled, .progressbar:backdrop progress:disabled,
+    progressbar progress:backdrop:disabled, GtkProgressBar:backdrop progress:disabled,
+    .progressbar:backdrop progress:disabled,
     progressbar:backdrop progress:disabled, .scale fill:backdrop:disabled,
     .scale .highlight:backdrop:disabled,
     .scale highlight:backdrop:disabled,
@@ -5493,7 +5500,11 @@ scale.fine-tune highlight {
     scale.fine-tune slider:backdrop:disabled {
       background-color: transparent;
       border-color: transparent; }
-  .list-row:selected .progressbar .progressbar:disabled, .progressbar .list-row:selected .progressbar:disabled,
+  .list-row:selected GtkProgressBar .progressbar:disabled, GtkProgressBar .list-row:selected .progressbar:disabled,
+  .list-row:selected GtkProgressBar progress:disabled,
+  GtkProgressBar .list-row:selected progress:disabled,
+  .list-row:selected .progressbar .progressbar:disabled,
+  .progressbar .list-row:selected .progressbar:disabled,
   .list-row:selected .progressbar progress:disabled,
   .progressbar .list-row:selected progress:disabled,
   .list-row:selected progressbar .progressbar:disabled,
@@ -5515,7 +5526,11 @@ scale.fine-tune highlight {
   .list-row:selected scale.fine-tune .slider:disabled,
   scale.fine-tune .list-row:selected .slider:disabled,
   .list-row:selected scale.fine-tune slider:disabled,
-  scale.fine-tune .list-row:selected slider:disabled, .list-row:selected .progressbar .progressbar, .progressbar .list-row:selected .progressbar,
+  scale.fine-tune .list-row:selected slider:disabled, .list-row:selected GtkProgressBar .progressbar, GtkProgressBar .list-row:selected .progressbar,
+  .list-row:selected GtkProgressBar progress,
+  GtkProgressBar .list-row:selected progress,
+  .list-row:selected .progressbar .progressbar,
+  .progressbar .list-row:selected .progressbar,
   .list-row:selected .progressbar progress,
   .progressbar .list-row:selected progress,
   .list-row:selected progressbar .progressbar,
@@ -5539,7 +5554,11 @@ scale.fine-tune highlight {
   .list-row:selected scale.fine-tune slider,
   scale.fine-tune .list-row:selected slider {
     border-color: #262f33; }
-  row:selected .progressbar .progressbar:disabled, .progressbar row:selected .progressbar:disabled,
+  row:selected GtkProgressBar .progressbar:disabled, GtkProgressBar row:selected .progressbar:disabled,
+  row:selected GtkProgressBar progress:disabled,
+  GtkProgressBar row:selected progress:disabled,
+  row:selected .progressbar .progressbar:disabled,
+  .progressbar row:selected .progressbar:disabled,
   row:selected .progressbar progress:disabled,
   .progressbar row:selected progress:disabled,
   row:selected progressbar .progressbar:disabled,
@@ -5561,7 +5580,11 @@ scale.fine-tune highlight {
   row:selected scale.fine-tune .slider:disabled,
   scale.fine-tune row:selected .slider:disabled,
   row:selected scale.fine-tune slider:disabled,
-  scale.fine-tune row:selected slider:disabled, row:selected .progressbar .progressbar, .progressbar row:selected .progressbar,
+  scale.fine-tune row:selected slider:disabled, row:selected GtkProgressBar .progressbar, GtkProgressBar row:selected .progressbar,
+  row:selected GtkProgressBar progress,
+  GtkProgressBar row:selected progress,
+  row:selected .progressbar .progressbar,
+  .progressbar row:selected .progressbar,
   row:selected .progressbar progress,
   .progressbar row:selected progress,
   row:selected progressbar .progressbar,
@@ -5585,7 +5608,11 @@ scale.fine-tune highlight {
   row:selected scale.fine-tune slider,
   scale.fine-tune row:selected slider {
     border-color: #262f33; }
-  .osd .progressbar .progressbar, .progressbar .osd .progressbar,
+  .osd GtkProgressBar .progressbar, GtkProgressBar .osd .progressbar,
+  .osd GtkProgressBar progress,
+  GtkProgressBar .osd progress,
+  .osd .progressbar .progressbar,
+  .progressbar .osd .progressbar,
   .osd .progressbar progress,
   .progressbar .osd progress,
   .osd progressbar .progressbar,
@@ -5609,7 +5636,11 @@ scale.fine-tune highlight {
   .osd scale.fine-tune slider,
   scale.fine-tune .osd slider {
     border-color: rgba(0, 0, 0, 0.7); }
-    .osd .progressbar .progressbar:disabled, .progressbar .osd .progressbar:disabled,
+    .osd GtkProgressBar .progressbar:disabled, GtkProgressBar .osd .progressbar:disabled,
+    .osd GtkProgressBar progress:disabled,
+    GtkProgressBar .osd progress:disabled,
+    .osd .progressbar .progressbar:disabled,
+    .progressbar .osd .progressbar:disabled,
     .osd .progressbar progress:disabled,
     .progressbar .osd progress:disabled,
     .osd progressbar .progressbar:disabled,

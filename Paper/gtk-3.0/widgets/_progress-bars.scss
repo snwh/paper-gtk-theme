@@ -2,8 +2,10 @@
  * Progress bars *
  *****************/
 
+%progressbar,
 .progressbar,
 progressbar {
+
   // sizing
   &.horizontal {
     trough,
@@ -39,7 +41,7 @@ progressbar {
   progress {
     @extend %scale_highlight;
 
-    border-radius: 1.5px;
+    border-radius: 2px;
 
     &.left {
       border-top-left-radius: 2px;
@@ -83,4 +85,43 @@ progressbar {
       border-radius: 0;
     }
   }
+
+  // In-Row
+
+  row,
+  .list-row {
+    
+    &:selected {
+      border: 1px solid darken($selected_bg_color, 10%);
+      color: transparentize(black,0.5);
+      background-color: $selected_bg_color;
+    }   
+  }
+}
+
+
+GtkProgressBar {
+
+  @extend %progressbar;
+
+  &:active {
+    color: transparentize(black,0.5);
+    background-color: $selected_bg_color;
+    border-color: darken($selected_bg_color, 10%);
+
+    &:backdrop {
+      background-color: lighten($selected_bg_color, 10%);
+      border-color: lighten(darken($selected_bg_color, 10%), 10%);
+
+    }
+  }
+
+  &:backdrop {
+  }
+
+}
+
+trough,
+.trough {
+  @extend %scale_trough;
 }

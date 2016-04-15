@@ -9,14 +9,12 @@ $text_color: if($variant == 'light', $fg_color, $fg_color);
 $headerbar_bg_color: if($variant == 'light', #636E73, #3B4245);
 $headerbar_fg_color: if($variant == 'light', #ffffff, transparentize(#ffffff, 0.2));
 
-$selection_mode_headerbar_bg_color: #347D9F;
-
 $selected_fg_color: #ffffff;
-$selected_bg_color: if($variant == 'light', #9fb0b9, darken(#9fb0b9,20%));
+$selected_bg_color: if($variant == 'light', lighten(#347D9F, 10%), darken(#9fb0b9,20%));
 $selected_borders_color: if($variant== 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 30%));
 $borders_color: if($variant == 'light', darken($bg_color,20%), darken($bg_color,12%));
 $borders_edge: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.9));
-$link_color: #347D9F;
+$link_color: blue;
 $link_visited_color:transparentize($link_color,0.5);
 $top_highlight: $borders_edge;
 $bottom_highlight: if($variant == 'light', transparentize(white, 0.2), transparentize(white, 0.9));
@@ -24,6 +22,8 @@ $dark_fill: mix($borders_color, $bg_color, 35%);
 $menu_color: if($variant == 'light', $base_color, mix($bg_color, $base_color, 20%));
 $popover_bg_color: $bg_color;
 $popover_hover_color: lighten($bg_color, 5%);
+
+$selection_mode_headerbar_bg_color: #347D9F;
 
 $scrollbar_bg_color: if($variant == 'light', mix($bg_color, $fg_color, 80%), mix($base_color, $bg_color, 50%));
 $scrollbar_slider_color: mix($fg_color, $bg_color, 60%);
