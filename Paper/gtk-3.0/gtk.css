@@ -592,7 +592,7 @@ button {
 row:selected
 .button, row:selected
 button {
-  border-color: #275f79; }
+  border-color: #347d9f; }
   row:selected button.sidebar-button:not(:active):not(:checked):not(:hover):not(disabled), row:selected
   .button.flat:not(:active):not(:checked):not(:hover):not(disabled), row:selected
   button.flat:not(:active):not(:checked):not(:hover):not(disabled) {
@@ -2507,7 +2507,7 @@ radio,
   .check, row:selected
   radio, row:selected
   .radio {
-    border-color: #275f79; }
+    border-color: #347d9f; }
   .osd check, .osd
   .check, .osd
   radio, .osd
@@ -2654,7 +2654,7 @@ treeview.view check:selected:focus, treeview.view check:selected,
 treeview.view radio:selected:focus,
 treeview.view radio:selected {
   color: #666666;
-  border-color: #275f79; }
+  border-color: #347d9f; }
 treeview.view check:selected:disabled,
 treeview.view radio:selected:disabled {
   color: #afafaf; }
@@ -3777,7 +3777,7 @@ headerbar {
     border-radius: 4px 4px 0 0;
     color: #ffffff;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
-    border-color: #275f79;
+    border-color: #347d9f;
     background-color: #347D9F;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.2); }
     .selection-mode.titlebar:backdrop:not(headerbar),
@@ -4296,111 +4296,674 @@ infobar {
 /*************
  * Level Bar *
  *************/
-GtkLevelBar .fill-block,
-GtkLevelBar block,
-levelbar .fill-block,
-levelbar block {
-  min-width: 32px;
-  min-height: 1px; }
-GtkLevelBar.vertical block,
-levelbar.vertical block {
-  min-width: 1px;
-  min-height: 32px; }
-GtkLevelBar:backdrop,
-levelbar:backdrop {
-  transition: 200ms ease-out; }
-GtkLevelBar .trough,
-GtkLevelBar trough,
-levelbar .trough,
-levelbar trough {
-  border: 1px solid;
-  padding: 2px;
-  border-radius: 3px;
-  color: #666666;
-  border-color: #c4c4c4;
-  background-color: #ffffff;
-  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
-  GtkLevelBar .trough:backdrop,
-  GtkLevelBar trough:backdrop,
-  levelbar .trough:backdrop,
-  levelbar trough:backdrop {
-    color: #848484;
-    border-color: #c9c9c9;
-    background-image: linear-gradient(to bottom, #fcfcfc);
-    box-shadow: none; }
-GtkLevelBar.horizontal.indicator-discrete.fill-block,
-levelbar.horizontal.indicator-discrete.fill-block {
-  margin: 0 1px; }
-GtkLevelBar.horizontal.discrete block,
-levelbar.horizontal.discrete block {
-  margin: 0 1px; }
-GtkLevelBar.vertical.indicator-discrete.fill-block,
-levelbar.vertical.indicator-discrete.fill-block {
-  margin: 1px 0; }
-GtkLevelBar.vertical.discrete block,
-levelbar.vertical.discrete block {
-  margin: 1px 0; }
-GtkLevelBar .fill-block:not(.empty),
-GtkLevelBar block:not(.empty),
-levelbar .fill-block:not(.empty),
-levelbar block:not(.empty) {
-  border: 1px solid #347d9f;
-  background-color: #449ac2;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.1);
-  border-radius: 1px; }
-  GtkLevelBar .fill-block:not(.empty):backdrop,
-  GtkLevelBar block:not(.empty):backdrop,
-  levelbar .fill-block:not(.empty):backdrop,
-  levelbar block:not(.empty):backdrop {
-    border-color: #449ac2;
-    box-shadow: none; }
-GtkLevelBar .fill-block.low,
-GtkLevelBar block.low,
-levelbar .fill-block.low,
-levelbar block.low {
-  border-color: #d09c01;
-  background-color: #fec006; }
-  GtkLevelBar .fill-block.low:backdrop,
-  GtkLevelBar block.low:backdrop,
-  levelbar .fill-block.low:backdrop,
-  levelbar block.low:backdrop {
-    border-color: #fec006; }
-GtkLevelBar .fill-block.high,
-GtkLevelBar block.high,
-levelbar .fill-block.high,
-levelbar block.high {
-  border-color: #347d9f;
-  background-color: #449ac2; }
-  GtkLevelBar .fill-block.high:backdrop,
-  GtkLevelBar block.high:backdrop,
-  levelbar .fill-block.high:backdrop,
-  levelbar block.high:backdrop {
-    border-color: #449ac2; }
-GtkLevelBar .fill-block.full,
-GtkLevelBar block.full,
-levelbar .fill-block.full,
-levelbar block.full {
-  border-color: #c0c5c8;
-  background-color: #dbdee0; }
-  GtkLevelBar .fill-block.full:backdrop,
-  GtkLevelBar block.full:backdrop,
-  levelbar .fill-block.full:backdrop,
-  levelbar block.full:backdrop {
-    border-color: #dbdee0; }
-GtkLevelBar .fill-block.empty,
-GtkLevelBar block.empty,
-levelbar .fill-block.empty,
-levelbar block.empty {
-  border: 1px solid #347d9f;
-  border-radius: 1px;
-  background-color: transparent;
-  border-color: rgba(102, 102, 102, 0.2);
-  box-shadow: none; }
-  GtkLevelBar .fill-block.empty:backdrop,
-  GtkLevelBar block.empty:backdrop,
-  levelbar .fill-block.empty:backdrop,
-  levelbar block.empty:backdrop {
-    border-color: rgba(175, 175, 175, 0.15); }
+GtkLevelBar,
+.level-bar,
+levelbar {
+  -GtkLevelBar-min-block-width: 32;
+  -GtkLevelBar-min-block-height: 8; }
+  GtkLevelBar:backdrop,
+  .level-bar:backdrop,
+  levelbar:backdrop {
+    transition: 200ms ease-out; }
+  GtkLevelBar .trough,
+  GtkLevelBar trough,
+  .level-bar .trough,
+  .level-bar trough,
+  levelbar .trough,
+  levelbar trough {
+    margin: 0;
+    padding: 2px;
+    border-radius: 3px; }
+  GtkLevelBar.horizontal.indicator-discrete.fill-block,
+  .level-bar.horizontal.indicator-discrete.fill-block,
+  levelbar.horizontal.indicator-discrete.fill-block {
+    margin: 0 1px; }
+  GtkLevelBar.horizontal.discrete block,
+  .level-bar.horizontal.discrete block,
+  levelbar.horizontal.discrete block {
+    margin: 0 1px; }
+  GtkLevelBar.vertical.indicator-discrete.fill-block,
+  .level-bar.vertical.indicator-discrete.fill-block,
+  levelbar.vertical.indicator-discrete.fill-block {
+    margin: 1px 0; }
+  GtkLevelBar.vertical.discrete block,
+  .level-bar.vertical.discrete block,
+  levelbar.vertical.discrete block {
+    margin: 1px 0; }
+  GtkLevelBar.vertical .fill-block,
+  GtkLevelBar.vertical block,
+  GtkLevelBar .level-bar.vertical .fill-block,
+  .level-bar.vertical GtkLevelBar .fill-block,
+  GtkLevelBar .level-bar.vertical block,
+  .level-bar.vertical GtkLevelBar block,
+  GtkLevelBar levelbar.vertical .fill-block,
+  levelbar.vertical GtkLevelBar .fill-block,
+  GtkLevelBar levelbar.vertical block,
+  levelbar.vertical GtkLevelBar block,
+  GtkLevelBar .fill-block,
+  GtkLevelBar block,
+  .level-bar GtkLevelBar.vertical .fill-block,
+  GtkLevelBar.vertical .level-bar .fill-block,
+  .level-bar GtkLevelBar.vertical block,
+  GtkLevelBar.vertical .level-bar block,
+  .level-bar.vertical .fill-block,
+  .level-bar.vertical block,
+  .level-bar levelbar.vertical .fill-block,
+  levelbar.vertical .level-bar .fill-block,
+  .level-bar levelbar.vertical block,
+  levelbar.vertical .level-bar block,
+  .level-bar .fill-block,
+  .level-bar block,
+  levelbar GtkLevelBar.vertical .fill-block,
+  GtkLevelBar.vertical levelbar .fill-block,
+  levelbar GtkLevelBar.vertical block,
+  GtkLevelBar.vertical levelbar block,
+  levelbar .level-bar.vertical .fill-block,
+  .level-bar.vertical levelbar .fill-block,
+  levelbar .level-bar.vertical block,
+  .level-bar.vertical levelbar block,
+  levelbar.vertical .fill-block,
+  levelbar.vertical block,
+  levelbar .fill-block,
+  levelbar block {
+    border-radius: 2px;
+    padding: 2px;
+    min-width: 32px;
+    min-height: 8px; }
+    GtkLevelBar.vertical .low.fill-block,
+    GtkLevelBar.vertical block.low,
+    GtkLevelBar .level-bar.vertical .low.fill-block,
+    .level-bar.vertical GtkLevelBar .low.fill-block,
+    GtkLevelBar .level-bar.vertical block.low,
+    .level-bar.vertical GtkLevelBar block.low,
+    GtkLevelBar levelbar.vertical .low.fill-block,
+    levelbar.vertical GtkLevelBar .low.fill-block,
+    GtkLevelBar levelbar.vertical block.low,
+    levelbar.vertical GtkLevelBar block.low, GtkLevelBar.vertical .level-low.fill-block,
+    GtkLevelBar.vertical block.level-low,
+    GtkLevelBar .level-bar.vertical .level-low.fill-block,
+    .level-bar.vertical GtkLevelBar .level-low.fill-block,
+    GtkLevelBar .level-bar.vertical block.level-low,
+    .level-bar.vertical GtkLevelBar block.level-low,
+    GtkLevelBar levelbar.vertical .level-low.fill-block,
+    levelbar.vertical GtkLevelBar .level-low.fill-block,
+    GtkLevelBar levelbar.vertical block.level-low,
+    levelbar.vertical GtkLevelBar block.level-low,
+    GtkLevelBar .fill-block.low,
+    GtkLevelBar .fill-block.level-low,
+    GtkLevelBar block.low,
+    GtkLevelBar block.level-low,
+    .level-bar GtkLevelBar.vertical .low.fill-block,
+    GtkLevelBar.vertical .level-bar .low.fill-block,
+    .level-bar GtkLevelBar.vertical block.low,
+    GtkLevelBar.vertical .level-bar block.low,
+    .level-bar.vertical .low.fill-block,
+    .level-bar.vertical block.low,
+    .level-bar levelbar.vertical .low.fill-block,
+    levelbar.vertical .level-bar .low.fill-block,
+    .level-bar levelbar.vertical block.low,
+    levelbar.vertical .level-bar block.low,
+    .level-bar GtkLevelBar.vertical .level-low.fill-block,
+    GtkLevelBar.vertical .level-bar .level-low.fill-block,
+    .level-bar GtkLevelBar.vertical block.level-low,
+    GtkLevelBar.vertical .level-bar block.level-low,
+    .level-bar.vertical .level-low.fill-block,
+    .level-bar.vertical block.level-low,
+    .level-bar levelbar.vertical .level-low.fill-block,
+    levelbar.vertical .level-bar .level-low.fill-block,
+    .level-bar levelbar.vertical block.level-low,
+    levelbar.vertical .level-bar block.level-low,
+    .level-bar .fill-block.low,
+    .level-bar .fill-block.level-low,
+    .level-bar block.low,
+    .level-bar block.level-low,
+    levelbar GtkLevelBar.vertical .low.fill-block,
+    GtkLevelBar.vertical levelbar .low.fill-block,
+    levelbar GtkLevelBar.vertical block.low,
+    GtkLevelBar.vertical levelbar block.low,
+    levelbar .level-bar.vertical .low.fill-block,
+    .level-bar.vertical levelbar .low.fill-block,
+    levelbar .level-bar.vertical block.low,
+    .level-bar.vertical levelbar block.low,
+    levelbar.vertical .low.fill-block,
+    levelbar.vertical block.low,
+    levelbar GtkLevelBar.vertical .level-low.fill-block,
+    GtkLevelBar.vertical levelbar .level-low.fill-block,
+    levelbar GtkLevelBar.vertical block.level-low,
+    GtkLevelBar.vertical levelbar block.level-low,
+    levelbar .level-bar.vertical .level-low.fill-block,
+    .level-bar.vertical levelbar .level-low.fill-block,
+    levelbar .level-bar.vertical block.level-low,
+    .level-bar.vertical levelbar block.level-low,
+    levelbar.vertical .level-low.fill-block,
+    levelbar.vertical block.level-low,
+    levelbar .fill-block.low,
+    levelbar .fill-block.level-low,
+    levelbar block.low,
+    levelbar block.level-low {
+      border: 1px solid #d09c01;
+      background-color: #fec006; }
+      GtkLevelBar.vertical .low.fill-block:backdrop,
+      GtkLevelBar.vertical block.low:backdrop,
+      GtkLevelBar .level-bar.vertical .low.fill-block:backdrop,
+      .level-bar.vertical GtkLevelBar .low.fill-block:backdrop,
+      GtkLevelBar .level-bar.vertical block.low:backdrop,
+      .level-bar.vertical GtkLevelBar block.low:backdrop,
+      GtkLevelBar levelbar.vertical .low.fill-block:backdrop,
+      levelbar.vertical GtkLevelBar .low.fill-block:backdrop,
+      GtkLevelBar levelbar.vertical block.low:backdrop,
+      levelbar.vertical GtkLevelBar block.low:backdrop, GtkLevelBar.vertical .level-low.fill-block:backdrop,
+      GtkLevelBar.vertical block.level-low:backdrop,
+      GtkLevelBar .level-bar.vertical .level-low.fill-block:backdrop,
+      .level-bar.vertical GtkLevelBar .level-low.fill-block:backdrop,
+      GtkLevelBar .level-bar.vertical block.level-low:backdrop,
+      .level-bar.vertical GtkLevelBar block.level-low:backdrop,
+      GtkLevelBar levelbar.vertical .level-low.fill-block:backdrop,
+      levelbar.vertical GtkLevelBar .level-low.fill-block:backdrop,
+      GtkLevelBar levelbar.vertical block.level-low:backdrop,
+      levelbar.vertical GtkLevelBar block.level-low:backdrop,
+      GtkLevelBar .fill-block.low:backdrop,
+      GtkLevelBar .fill-block.level-low:backdrop,
+      GtkLevelBar block.low:backdrop,
+      GtkLevelBar block.level-low:backdrop,
+      .level-bar GtkLevelBar.vertical .low.fill-block:backdrop,
+      GtkLevelBar.vertical .level-bar .low.fill-block:backdrop,
+      .level-bar GtkLevelBar.vertical block.low:backdrop,
+      GtkLevelBar.vertical .level-bar block.low:backdrop,
+      .level-bar.vertical .low.fill-block:backdrop,
+      .level-bar.vertical block.low:backdrop,
+      .level-bar levelbar.vertical .low.fill-block:backdrop,
+      levelbar.vertical .level-bar .low.fill-block:backdrop,
+      .level-bar levelbar.vertical block.low:backdrop,
+      levelbar.vertical .level-bar block.low:backdrop,
+      .level-bar GtkLevelBar.vertical .level-low.fill-block:backdrop,
+      GtkLevelBar.vertical .level-bar .level-low.fill-block:backdrop,
+      .level-bar GtkLevelBar.vertical block.level-low:backdrop,
+      GtkLevelBar.vertical .level-bar block.level-low:backdrop,
+      .level-bar.vertical .level-low.fill-block:backdrop,
+      .level-bar.vertical block.level-low:backdrop,
+      .level-bar levelbar.vertical .level-low.fill-block:backdrop,
+      levelbar.vertical .level-bar .level-low.fill-block:backdrop,
+      .level-bar levelbar.vertical block.level-low:backdrop,
+      levelbar.vertical .level-bar block.level-low:backdrop,
+      .level-bar .fill-block.low:backdrop,
+      .level-bar .fill-block.level-low:backdrop,
+      .level-bar block.low:backdrop,
+      .level-bar block.level-low:backdrop,
+      levelbar GtkLevelBar.vertical .low.fill-block:backdrop,
+      GtkLevelBar.vertical levelbar .low.fill-block:backdrop,
+      levelbar GtkLevelBar.vertical block.low:backdrop,
+      GtkLevelBar.vertical levelbar block.low:backdrop,
+      levelbar .level-bar.vertical .low.fill-block:backdrop,
+      .level-bar.vertical levelbar .low.fill-block:backdrop,
+      levelbar .level-bar.vertical block.low:backdrop,
+      .level-bar.vertical levelbar block.low:backdrop,
+      levelbar.vertical .low.fill-block:backdrop,
+      levelbar.vertical block.low:backdrop,
+      levelbar GtkLevelBar.vertical .level-low.fill-block:backdrop,
+      GtkLevelBar.vertical levelbar .level-low.fill-block:backdrop,
+      levelbar GtkLevelBar.vertical block.level-low:backdrop,
+      GtkLevelBar.vertical levelbar block.level-low:backdrop,
+      levelbar .level-bar.vertical .level-low.fill-block:backdrop,
+      .level-bar.vertical levelbar .level-low.fill-block:backdrop,
+      levelbar .level-bar.vertical block.level-low:backdrop,
+      .level-bar.vertical levelbar block.level-low:backdrop,
+      levelbar.vertical .level-low.fill-block:backdrop,
+      levelbar.vertical block.level-low:backdrop,
+      levelbar .fill-block.low:backdrop,
+      levelbar .fill-block.level-low:backdrop,
+      levelbar block.low:backdrop,
+      levelbar block.level-low:backdrop {
+        border: 1px solid #fec006; }
+    GtkLevelBar.vertical .high.fill-block,
+    GtkLevelBar.vertical block.high,
+    GtkLevelBar .level-bar.vertical .high.fill-block,
+    .level-bar.vertical GtkLevelBar .high.fill-block,
+    GtkLevelBar .level-bar.vertical block.high,
+    .level-bar.vertical GtkLevelBar block.high,
+    GtkLevelBar levelbar.vertical .high.fill-block,
+    levelbar.vertical GtkLevelBar .high.fill-block,
+    GtkLevelBar levelbar.vertical block.high,
+    levelbar.vertical GtkLevelBar block.high, GtkLevelBar.vertical .level-high.fill-block,
+    GtkLevelBar.vertical block.level-high,
+    GtkLevelBar .level-bar.vertical .level-high.fill-block,
+    .level-bar.vertical GtkLevelBar .level-high.fill-block,
+    GtkLevelBar .level-bar.vertical block.level-high,
+    .level-bar.vertical GtkLevelBar block.level-high,
+    GtkLevelBar levelbar.vertical .level-high.fill-block,
+    levelbar.vertical GtkLevelBar .level-high.fill-block,
+    GtkLevelBar levelbar.vertical block.level-high,
+    levelbar.vertical GtkLevelBar block.level-high,
+    GtkLevelBar .fill-block.high,
+    GtkLevelBar .fill-block.level-high,
+    GtkLevelBar block.high,
+    GtkLevelBar block.level-high,
+    .level-bar GtkLevelBar.vertical .high.fill-block,
+    GtkLevelBar.vertical .level-bar .high.fill-block,
+    .level-bar GtkLevelBar.vertical block.high,
+    GtkLevelBar.vertical .level-bar block.high,
+    .level-bar.vertical .high.fill-block,
+    .level-bar.vertical block.high,
+    .level-bar levelbar.vertical .high.fill-block,
+    levelbar.vertical .level-bar .high.fill-block,
+    .level-bar levelbar.vertical block.high,
+    levelbar.vertical .level-bar block.high,
+    .level-bar GtkLevelBar.vertical .level-high.fill-block,
+    GtkLevelBar.vertical .level-bar .level-high.fill-block,
+    .level-bar GtkLevelBar.vertical block.level-high,
+    GtkLevelBar.vertical .level-bar block.level-high,
+    .level-bar.vertical .level-high.fill-block,
+    .level-bar.vertical block.level-high,
+    .level-bar levelbar.vertical .level-high.fill-block,
+    levelbar.vertical .level-bar .level-high.fill-block,
+    .level-bar levelbar.vertical block.level-high,
+    levelbar.vertical .level-bar block.level-high,
+    .level-bar .fill-block.high,
+    .level-bar .fill-block.level-high,
+    .level-bar block.high,
+    .level-bar block.level-high,
+    levelbar GtkLevelBar.vertical .high.fill-block,
+    GtkLevelBar.vertical levelbar .high.fill-block,
+    levelbar GtkLevelBar.vertical block.high,
+    GtkLevelBar.vertical levelbar block.high,
+    levelbar .level-bar.vertical .high.fill-block,
+    .level-bar.vertical levelbar .high.fill-block,
+    levelbar .level-bar.vertical block.high,
+    .level-bar.vertical levelbar block.high,
+    levelbar.vertical .high.fill-block,
+    levelbar.vertical block.high,
+    levelbar GtkLevelBar.vertical .level-high.fill-block,
+    GtkLevelBar.vertical levelbar .level-high.fill-block,
+    levelbar GtkLevelBar.vertical block.level-high,
+    GtkLevelBar.vertical levelbar block.level-high,
+    levelbar .level-bar.vertical .level-high.fill-block,
+    .level-bar.vertical levelbar .level-high.fill-block,
+    levelbar .level-bar.vertical block.level-high,
+    .level-bar.vertical levelbar block.level-high,
+    levelbar.vertical .level-high.fill-block,
+    levelbar.vertical block.level-high,
+    levelbar .fill-block.high,
+    levelbar .fill-block.level-high,
+    levelbar block.high,
+    levelbar block.level-high {
+      border: 1px solid #347d9f;
+      background-color: #449ac2; }
+      GtkLevelBar.vertical .high.fill-block:backdrop,
+      GtkLevelBar.vertical block.high:backdrop,
+      GtkLevelBar .level-bar.vertical .high.fill-block:backdrop,
+      .level-bar.vertical GtkLevelBar .high.fill-block:backdrop,
+      GtkLevelBar .level-bar.vertical block.high:backdrop,
+      .level-bar.vertical GtkLevelBar block.high:backdrop,
+      GtkLevelBar levelbar.vertical .high.fill-block:backdrop,
+      levelbar.vertical GtkLevelBar .high.fill-block:backdrop,
+      GtkLevelBar levelbar.vertical block.high:backdrop,
+      levelbar.vertical GtkLevelBar block.high:backdrop, GtkLevelBar.vertical .level-high.fill-block:backdrop,
+      GtkLevelBar.vertical block.level-high:backdrop,
+      GtkLevelBar .level-bar.vertical .level-high.fill-block:backdrop,
+      .level-bar.vertical GtkLevelBar .level-high.fill-block:backdrop,
+      GtkLevelBar .level-bar.vertical block.level-high:backdrop,
+      .level-bar.vertical GtkLevelBar block.level-high:backdrop,
+      GtkLevelBar levelbar.vertical .level-high.fill-block:backdrop,
+      levelbar.vertical GtkLevelBar .level-high.fill-block:backdrop,
+      GtkLevelBar levelbar.vertical block.level-high:backdrop,
+      levelbar.vertical GtkLevelBar block.level-high:backdrop,
+      GtkLevelBar .fill-block.high:backdrop,
+      GtkLevelBar .fill-block.level-high:backdrop,
+      GtkLevelBar block.high:backdrop,
+      GtkLevelBar block.level-high:backdrop,
+      .level-bar GtkLevelBar.vertical .high.fill-block:backdrop,
+      GtkLevelBar.vertical .level-bar .high.fill-block:backdrop,
+      .level-bar GtkLevelBar.vertical block.high:backdrop,
+      GtkLevelBar.vertical .level-bar block.high:backdrop,
+      .level-bar.vertical .high.fill-block:backdrop,
+      .level-bar.vertical block.high:backdrop,
+      .level-bar levelbar.vertical .high.fill-block:backdrop,
+      levelbar.vertical .level-bar .high.fill-block:backdrop,
+      .level-bar levelbar.vertical block.high:backdrop,
+      levelbar.vertical .level-bar block.high:backdrop,
+      .level-bar GtkLevelBar.vertical .level-high.fill-block:backdrop,
+      GtkLevelBar.vertical .level-bar .level-high.fill-block:backdrop,
+      .level-bar GtkLevelBar.vertical block.level-high:backdrop,
+      GtkLevelBar.vertical .level-bar block.level-high:backdrop,
+      .level-bar.vertical .level-high.fill-block:backdrop,
+      .level-bar.vertical block.level-high:backdrop,
+      .level-bar levelbar.vertical .level-high.fill-block:backdrop,
+      levelbar.vertical .level-bar .level-high.fill-block:backdrop,
+      .level-bar levelbar.vertical block.level-high:backdrop,
+      levelbar.vertical .level-bar block.level-high:backdrop,
+      .level-bar .fill-block.high:backdrop,
+      .level-bar .fill-block.level-high:backdrop,
+      .level-bar block.high:backdrop,
+      .level-bar block.level-high:backdrop,
+      levelbar GtkLevelBar.vertical .high.fill-block:backdrop,
+      GtkLevelBar.vertical levelbar .high.fill-block:backdrop,
+      levelbar GtkLevelBar.vertical block.high:backdrop,
+      GtkLevelBar.vertical levelbar block.high:backdrop,
+      levelbar .level-bar.vertical .high.fill-block:backdrop,
+      .level-bar.vertical levelbar .high.fill-block:backdrop,
+      levelbar .level-bar.vertical block.high:backdrop,
+      .level-bar.vertical levelbar block.high:backdrop,
+      levelbar.vertical .high.fill-block:backdrop,
+      levelbar.vertical block.high:backdrop,
+      levelbar GtkLevelBar.vertical .level-high.fill-block:backdrop,
+      GtkLevelBar.vertical levelbar .level-high.fill-block:backdrop,
+      levelbar GtkLevelBar.vertical block.level-high:backdrop,
+      GtkLevelBar.vertical levelbar block.level-high:backdrop,
+      levelbar .level-bar.vertical .level-high.fill-block:backdrop,
+      .level-bar.vertical levelbar .level-high.fill-block:backdrop,
+      levelbar .level-bar.vertical block.level-high:backdrop,
+      .level-bar.vertical levelbar block.level-high:backdrop,
+      levelbar.vertical .level-high.fill-block:backdrop,
+      levelbar.vertical block.level-high:backdrop,
+      levelbar .fill-block.high:backdrop,
+      levelbar .fill-block.level-high:backdrop,
+      levelbar block.high:backdrop,
+      levelbar block.level-high:backdrop {
+        border: 1px solid #449ac2; }
+    GtkLevelBar.vertical .full.fill-block,
+    GtkLevelBar.vertical block.full,
+    GtkLevelBar .level-bar.vertical .full.fill-block,
+    .level-bar.vertical GtkLevelBar .full.fill-block,
+    GtkLevelBar .level-bar.vertical block.full,
+    .level-bar.vertical GtkLevelBar block.full,
+    GtkLevelBar levelbar.vertical .full.fill-block,
+    levelbar.vertical GtkLevelBar .full.fill-block,
+    GtkLevelBar levelbar.vertical block.full,
+    levelbar.vertical GtkLevelBar block.full, GtkLevelBar.vertical .level-full.fill-block,
+    GtkLevelBar.vertical block.level-full,
+    GtkLevelBar .level-bar.vertical .level-full.fill-block,
+    .level-bar.vertical GtkLevelBar .level-full.fill-block,
+    GtkLevelBar .level-bar.vertical block.level-full,
+    .level-bar.vertical GtkLevelBar block.level-full,
+    GtkLevelBar levelbar.vertical .level-full.fill-block,
+    levelbar.vertical GtkLevelBar .level-full.fill-block,
+    GtkLevelBar levelbar.vertical block.level-full,
+    levelbar.vertical GtkLevelBar block.level-full,
+    GtkLevelBar .fill-block.full,
+    GtkLevelBar .fill-block.level-full,
+    GtkLevelBar block.full,
+    GtkLevelBar block.level-full,
+    .level-bar GtkLevelBar.vertical .full.fill-block,
+    GtkLevelBar.vertical .level-bar .full.fill-block,
+    .level-bar GtkLevelBar.vertical block.full,
+    GtkLevelBar.vertical .level-bar block.full,
+    .level-bar.vertical .full.fill-block,
+    .level-bar.vertical block.full,
+    .level-bar levelbar.vertical .full.fill-block,
+    levelbar.vertical .level-bar .full.fill-block,
+    .level-bar levelbar.vertical block.full,
+    levelbar.vertical .level-bar block.full,
+    .level-bar GtkLevelBar.vertical .level-full.fill-block,
+    GtkLevelBar.vertical .level-bar .level-full.fill-block,
+    .level-bar GtkLevelBar.vertical block.level-full,
+    GtkLevelBar.vertical .level-bar block.level-full,
+    .level-bar.vertical .level-full.fill-block,
+    .level-bar.vertical block.level-full,
+    .level-bar levelbar.vertical .level-full.fill-block,
+    levelbar.vertical .level-bar .level-full.fill-block,
+    .level-bar levelbar.vertical block.level-full,
+    levelbar.vertical .level-bar block.level-full,
+    .level-bar .fill-block.full,
+    .level-bar .fill-block.level-full,
+    .level-bar block.full,
+    .level-bar block.level-full,
+    levelbar GtkLevelBar.vertical .full.fill-block,
+    GtkLevelBar.vertical levelbar .full.fill-block,
+    levelbar GtkLevelBar.vertical block.full,
+    GtkLevelBar.vertical levelbar block.full,
+    levelbar .level-bar.vertical .full.fill-block,
+    .level-bar.vertical levelbar .full.fill-block,
+    levelbar .level-bar.vertical block.full,
+    .level-bar.vertical levelbar block.full,
+    levelbar.vertical .full.fill-block,
+    levelbar.vertical block.full,
+    levelbar GtkLevelBar.vertical .level-full.fill-block,
+    GtkLevelBar.vertical levelbar .level-full.fill-block,
+    levelbar GtkLevelBar.vertical block.level-full,
+    GtkLevelBar.vertical levelbar block.level-full,
+    levelbar .level-bar.vertical .level-full.fill-block,
+    .level-bar.vertical levelbar .level-full.fill-block,
+    levelbar .level-bar.vertical block.level-full,
+    .level-bar.vertical levelbar block.level-full,
+    levelbar.vertical .level-full.fill-block,
+    levelbar.vertical block.level-full,
+    levelbar .fill-block.full,
+    levelbar .fill-block.level-full,
+    levelbar block.full,
+    levelbar block.level-full {
+      border: 1px solid #c0c5c8;
+      background-color: #dbdee0; }
+      GtkLevelBar.vertical .full.fill-block:backdrop,
+      GtkLevelBar.vertical block.full:backdrop,
+      GtkLevelBar .level-bar.vertical .full.fill-block:backdrop,
+      .level-bar.vertical GtkLevelBar .full.fill-block:backdrop,
+      GtkLevelBar .level-bar.vertical block.full:backdrop,
+      .level-bar.vertical GtkLevelBar block.full:backdrop,
+      GtkLevelBar levelbar.vertical .full.fill-block:backdrop,
+      levelbar.vertical GtkLevelBar .full.fill-block:backdrop,
+      GtkLevelBar levelbar.vertical block.full:backdrop,
+      levelbar.vertical GtkLevelBar block.full:backdrop, GtkLevelBar.vertical .level-full.fill-block:backdrop,
+      GtkLevelBar.vertical block.level-full:backdrop,
+      GtkLevelBar .level-bar.vertical .level-full.fill-block:backdrop,
+      .level-bar.vertical GtkLevelBar .level-full.fill-block:backdrop,
+      GtkLevelBar .level-bar.vertical block.level-full:backdrop,
+      .level-bar.vertical GtkLevelBar block.level-full:backdrop,
+      GtkLevelBar levelbar.vertical .level-full.fill-block:backdrop,
+      levelbar.vertical GtkLevelBar .level-full.fill-block:backdrop,
+      GtkLevelBar levelbar.vertical block.level-full:backdrop,
+      levelbar.vertical GtkLevelBar block.level-full:backdrop,
+      GtkLevelBar .fill-block.full:backdrop,
+      GtkLevelBar .fill-block.level-full:backdrop,
+      GtkLevelBar block.full:backdrop,
+      GtkLevelBar block.level-full:backdrop,
+      .level-bar GtkLevelBar.vertical .full.fill-block:backdrop,
+      GtkLevelBar.vertical .level-bar .full.fill-block:backdrop,
+      .level-bar GtkLevelBar.vertical block.full:backdrop,
+      GtkLevelBar.vertical .level-bar block.full:backdrop,
+      .level-bar.vertical .full.fill-block:backdrop,
+      .level-bar.vertical block.full:backdrop,
+      .level-bar levelbar.vertical .full.fill-block:backdrop,
+      levelbar.vertical .level-bar .full.fill-block:backdrop,
+      .level-bar levelbar.vertical block.full:backdrop,
+      levelbar.vertical .level-bar block.full:backdrop,
+      .level-bar GtkLevelBar.vertical .level-full.fill-block:backdrop,
+      GtkLevelBar.vertical .level-bar .level-full.fill-block:backdrop,
+      .level-bar GtkLevelBar.vertical block.level-full:backdrop,
+      GtkLevelBar.vertical .level-bar block.level-full:backdrop,
+      .level-bar.vertical .level-full.fill-block:backdrop,
+      .level-bar.vertical block.level-full:backdrop,
+      .level-bar levelbar.vertical .level-full.fill-block:backdrop,
+      levelbar.vertical .level-bar .level-full.fill-block:backdrop,
+      .level-bar levelbar.vertical block.level-full:backdrop,
+      levelbar.vertical .level-bar block.level-full:backdrop,
+      .level-bar .fill-block.full:backdrop,
+      .level-bar .fill-block.level-full:backdrop,
+      .level-bar block.full:backdrop,
+      .level-bar block.level-full:backdrop,
+      levelbar GtkLevelBar.vertical .full.fill-block:backdrop,
+      GtkLevelBar.vertical levelbar .full.fill-block:backdrop,
+      levelbar GtkLevelBar.vertical block.full:backdrop,
+      GtkLevelBar.vertical levelbar block.full:backdrop,
+      levelbar .level-bar.vertical .full.fill-block:backdrop,
+      .level-bar.vertical levelbar .full.fill-block:backdrop,
+      levelbar .level-bar.vertical block.full:backdrop,
+      .level-bar.vertical levelbar block.full:backdrop,
+      levelbar.vertical .full.fill-block:backdrop,
+      levelbar.vertical block.full:backdrop,
+      levelbar GtkLevelBar.vertical .level-full.fill-block:backdrop,
+      GtkLevelBar.vertical levelbar .level-full.fill-block:backdrop,
+      levelbar GtkLevelBar.vertical block.level-full:backdrop,
+      GtkLevelBar.vertical levelbar block.level-full:backdrop,
+      levelbar .level-bar.vertical .level-full.fill-block:backdrop,
+      .level-bar.vertical levelbar .level-full.fill-block:backdrop,
+      levelbar .level-bar.vertical block.level-full:backdrop,
+      .level-bar.vertical levelbar block.level-full:backdrop,
+      levelbar.vertical .level-full.fill-block:backdrop,
+      levelbar.vertical block.level-full:backdrop,
+      levelbar .fill-block.full:backdrop,
+      levelbar .fill-block.level-full:backdrop,
+      levelbar block.full:backdrop,
+      levelbar block.level-full:backdrop {
+        border: 1px solid #dbdee0; }
+    GtkLevelBar.vertical .empty.fill-block,
+    GtkLevelBar.vertical block.empty,
+    GtkLevelBar .level-bar.vertical .empty.fill-block,
+    .level-bar.vertical GtkLevelBar .empty.fill-block,
+    GtkLevelBar .level-bar.vertical block.empty,
+    .level-bar.vertical GtkLevelBar block.empty,
+    GtkLevelBar levelbar.vertical .empty.fill-block,
+    levelbar.vertical GtkLevelBar .empty.fill-block,
+    GtkLevelBar levelbar.vertical block.empty,
+    levelbar.vertical GtkLevelBar block.empty, GtkLevelBar.vertical .level-empty.fill-block,
+    GtkLevelBar.vertical block.level-empty,
+    GtkLevelBar .level-bar.vertical .level-empty.fill-block,
+    .level-bar.vertical GtkLevelBar .level-empty.fill-block,
+    GtkLevelBar .level-bar.vertical block.level-empty,
+    .level-bar.vertical GtkLevelBar block.level-empty,
+    GtkLevelBar levelbar.vertical .level-empty.fill-block,
+    levelbar.vertical GtkLevelBar .level-empty.fill-block,
+    GtkLevelBar levelbar.vertical block.level-empty,
+    levelbar.vertical GtkLevelBar block.level-empty,
+    GtkLevelBar .fill-block.empty,
+    GtkLevelBar .fill-block.level-empty,
+    GtkLevelBar block.empty,
+    GtkLevelBar block.level-empty,
+    .level-bar GtkLevelBar.vertical .empty.fill-block,
+    GtkLevelBar.vertical .level-bar .empty.fill-block,
+    .level-bar GtkLevelBar.vertical block.empty,
+    GtkLevelBar.vertical .level-bar block.empty,
+    .level-bar.vertical .empty.fill-block,
+    .level-bar.vertical block.empty,
+    .level-bar levelbar.vertical .empty.fill-block,
+    levelbar.vertical .level-bar .empty.fill-block,
+    .level-bar levelbar.vertical block.empty,
+    levelbar.vertical .level-bar block.empty,
+    .level-bar GtkLevelBar.vertical .level-empty.fill-block,
+    GtkLevelBar.vertical .level-bar .level-empty.fill-block,
+    .level-bar GtkLevelBar.vertical block.level-empty,
+    GtkLevelBar.vertical .level-bar block.level-empty,
+    .level-bar.vertical .level-empty.fill-block,
+    .level-bar.vertical block.level-empty,
+    .level-bar levelbar.vertical .level-empty.fill-block,
+    levelbar.vertical .level-bar .level-empty.fill-block,
+    .level-bar levelbar.vertical block.level-empty,
+    levelbar.vertical .level-bar block.level-empty,
+    .level-bar .fill-block.empty,
+    .level-bar .fill-block.level-empty,
+    .level-bar block.empty,
+    .level-bar block.level-empty,
+    levelbar GtkLevelBar.vertical .empty.fill-block,
+    GtkLevelBar.vertical levelbar .empty.fill-block,
+    levelbar GtkLevelBar.vertical block.empty,
+    GtkLevelBar.vertical levelbar block.empty,
+    levelbar .level-bar.vertical .empty.fill-block,
+    .level-bar.vertical levelbar .empty.fill-block,
+    levelbar .level-bar.vertical block.empty,
+    .level-bar.vertical levelbar block.empty,
+    levelbar.vertical .empty.fill-block,
+    levelbar.vertical block.empty,
+    levelbar GtkLevelBar.vertical .level-empty.fill-block,
+    GtkLevelBar.vertical levelbar .level-empty.fill-block,
+    levelbar GtkLevelBar.vertical block.level-empty,
+    GtkLevelBar.vertical levelbar block.level-empty,
+    levelbar .level-bar.vertical .level-empty.fill-block,
+    .level-bar.vertical levelbar .level-empty.fill-block,
+    levelbar .level-bar.vertical block.level-empty,
+    .level-bar.vertical levelbar block.level-empty,
+    levelbar.vertical .level-empty.fill-block,
+    levelbar.vertical block.level-empty,
+    levelbar .fill-block.empty,
+    levelbar .fill-block.level-empty,
+    levelbar block.empty,
+    levelbar block.level-empty {
+      background-color: transparent;
+      border: 1px solid rgba(102, 102, 102, 0.2);
+      box-shadow: none; }
+      GtkLevelBar.vertical .empty.fill-block:backdrop,
+      GtkLevelBar.vertical block.empty:backdrop,
+      GtkLevelBar .level-bar.vertical .empty.fill-block:backdrop,
+      .level-bar.vertical GtkLevelBar .empty.fill-block:backdrop,
+      GtkLevelBar .level-bar.vertical block.empty:backdrop,
+      .level-bar.vertical GtkLevelBar block.empty:backdrop,
+      GtkLevelBar levelbar.vertical .empty.fill-block:backdrop,
+      levelbar.vertical GtkLevelBar .empty.fill-block:backdrop,
+      GtkLevelBar levelbar.vertical block.empty:backdrop,
+      levelbar.vertical GtkLevelBar block.empty:backdrop, GtkLevelBar.vertical .level-empty.fill-block:backdrop,
+      GtkLevelBar.vertical block.level-empty:backdrop,
+      GtkLevelBar .level-bar.vertical .level-empty.fill-block:backdrop,
+      .level-bar.vertical GtkLevelBar .level-empty.fill-block:backdrop,
+      GtkLevelBar .level-bar.vertical block.level-empty:backdrop,
+      .level-bar.vertical GtkLevelBar block.level-empty:backdrop,
+      GtkLevelBar levelbar.vertical .level-empty.fill-block:backdrop,
+      levelbar.vertical GtkLevelBar .level-empty.fill-block:backdrop,
+      GtkLevelBar levelbar.vertical block.level-empty:backdrop,
+      levelbar.vertical GtkLevelBar block.level-empty:backdrop,
+      GtkLevelBar .fill-block.empty:backdrop,
+      GtkLevelBar .fill-block.level-empty:backdrop,
+      GtkLevelBar block.empty:backdrop,
+      GtkLevelBar block.level-empty:backdrop,
+      .level-bar GtkLevelBar.vertical .empty.fill-block:backdrop,
+      GtkLevelBar.vertical .level-bar .empty.fill-block:backdrop,
+      .level-bar GtkLevelBar.vertical block.empty:backdrop,
+      GtkLevelBar.vertical .level-bar block.empty:backdrop,
+      .level-bar.vertical .empty.fill-block:backdrop,
+      .level-bar.vertical block.empty:backdrop,
+      .level-bar levelbar.vertical .empty.fill-block:backdrop,
+      levelbar.vertical .level-bar .empty.fill-block:backdrop,
+      .level-bar levelbar.vertical block.empty:backdrop,
+      levelbar.vertical .level-bar block.empty:backdrop,
+      .level-bar GtkLevelBar.vertical .level-empty.fill-block:backdrop,
+      GtkLevelBar.vertical .level-bar .level-empty.fill-block:backdrop,
+      .level-bar GtkLevelBar.vertical block.level-empty:backdrop,
+      GtkLevelBar.vertical .level-bar block.level-empty:backdrop,
+      .level-bar.vertical .level-empty.fill-block:backdrop,
+      .level-bar.vertical block.level-empty:backdrop,
+      .level-bar levelbar.vertical .level-empty.fill-block:backdrop,
+      levelbar.vertical .level-bar .level-empty.fill-block:backdrop,
+      .level-bar levelbar.vertical block.level-empty:backdrop,
+      levelbar.vertical .level-bar block.level-empty:backdrop,
+      .level-bar .fill-block.empty:backdrop,
+      .level-bar .fill-block.level-empty:backdrop,
+      .level-bar block.empty:backdrop,
+      .level-bar block.level-empty:backdrop,
+      levelbar GtkLevelBar.vertical .empty.fill-block:backdrop,
+      GtkLevelBar.vertical levelbar .empty.fill-block:backdrop,
+      levelbar GtkLevelBar.vertical block.empty:backdrop,
+      GtkLevelBar.vertical levelbar block.empty:backdrop,
+      levelbar .level-bar.vertical .empty.fill-block:backdrop,
+      .level-bar.vertical levelbar .empty.fill-block:backdrop,
+      levelbar .level-bar.vertical block.empty:backdrop,
+      .level-bar.vertical levelbar block.empty:backdrop,
+      levelbar.vertical .empty.fill-block:backdrop,
+      levelbar.vertical block.empty:backdrop,
+      levelbar GtkLevelBar.vertical .level-empty.fill-block:backdrop,
+      GtkLevelBar.vertical levelbar .level-empty.fill-block:backdrop,
+      levelbar GtkLevelBar.vertical block.level-empty:backdrop,
+      GtkLevelBar.vertical levelbar block.level-empty:backdrop,
+      levelbar .level-bar.vertical .level-empty.fill-block:backdrop,
+      .level-bar.vertical levelbar .level-empty.fill-block:backdrop,
+      levelbar .level-bar.vertical block.level-empty:backdrop,
+      .level-bar.vertical levelbar block.level-empty:backdrop,
+      levelbar.vertical .level-empty.fill-block:backdrop,
+      levelbar.vertical block.level-empty:backdrop,
+      levelbar .fill-block.empty:backdrop,
+      levelbar .fill-block.level-empty:backdrop,
+      levelbar block.empty:backdrop,
+      levelbar block.level-empty:backdrop {
+        border-color: rgba(175, 175, 175, 0.15); }
+  GtkLevelBar.vertical,
+  .level-bar.vertical,
+  levelbar.vertical {
+    -GtkLevelBar-min-block-width: 8;
+    -GtkLevelBar-min-block-height: 32; }
+    GtkLevelBar.vertical .fill-block,
+    GtkLevelBar.vertical block,
+    .level-bar.vertical .fill-block,
+    .level-bar.vertical block,
+    levelbar.vertical .fill-block,
+    levelbar.vertical block {
+      min-width: 8px;
+      min-height: 32px; }
 
 /*********
  * Links *
@@ -5264,10 +5827,21 @@ progressbar {
   .progressbar.vertical progress,
   progressbar.vertical progress {
     margin: -1px 0; }
+  GtkProgressBar:active,
+  .progressbar:active,
+  progressbar:active {
+    border-radius: 0px;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #449ac2;
+    border-color: #347d9f; }
+    GtkProgressBar:active:backdrop,
+    .progressbar:active:backdrop,
+    progressbar:active:backdrop {
+      background-color: #6bafce;
+      border-color: #449ac2; }
   GtkProgressBar:backdrop,
   .progressbar:backdrop,
   progressbar:backdrop {
-    box-shadow: none;
     transition: 200ms ease-out; }
   GtkProgressBar .progressbar,
   GtkProgressBar progress,
@@ -5275,39 +5849,39 @@ progressbar {
   .progressbar progress,
   progressbar .progressbar,
   progressbar progress {
-    border-radius: 2px; }
+    border-radius: 0px; }
     GtkProgressBar .progressbar.left,
     GtkProgressBar progress.left,
     .progressbar .progressbar.left,
     .progressbar progress.left,
     progressbar .progressbar.left,
     progressbar progress.left {
-      border-top-left-radius: 2px;
-      border-bottom-left-radius: 2px; }
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px; }
     GtkProgressBar .progressbar.right,
     GtkProgressBar progress.right,
     .progressbar .progressbar.right,
     .progressbar progress.right,
     progressbar .progressbar.right,
     progressbar progress.right {
-      border-top-right-radius: 2px;
-      border-bottom-right-radius: 2px; }
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px; }
     GtkProgressBar .progressbar.top,
     GtkProgressBar progress.top,
     .progressbar .progressbar.top,
     .progressbar progress.top,
     progressbar .progressbar.top,
     progressbar progress.top {
-      border-top-right-radius: 2px;
-      border-top-left-radius: 2px; }
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px; }
     GtkProgressBar .progressbar.bottom,
     GtkProgressBar progress.bottom,
     .progressbar .progressbar.bottom,
     .progressbar progress.bottom,
     progressbar .progressbar.bottom,
     progressbar progress.bottom {
-      border-bottom-right-radius: 2px;
-      border-bottom-left-radius: 2px; }
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px; }
   GtkProgressBar.osd,
   .progressbar.osd,
   progressbar.osd {
@@ -5324,11 +5898,11 @@ progressbar {
       border-radius: 0;
       background-color: transparent;
       box-shadow: none; }
-    GtkProgressBar.osd .progress,
+    GtkProgressBar.osd .progressbar,
     GtkProgressBar.osd progress,
-    .progressbar.osd .progress,
+    .progressbar.osd .progressbar,
     .progressbar.osd progress,
-    progressbar.osd .progress,
+    progressbar.osd .progressbar,
     progressbar.osd progress {
       border-style: none;
       border-radius: 0; }
@@ -5342,24 +5916,27 @@ progressbar {
     color: rgba(0, 0, 0, 0.5);
     background-color: #449ac2; }
 
-GtkProgressBar:active {
-  color: rgba(0, 0, 0, 0.5);
-  background-color: #449ac2;
-  border-color: #347d9f; }
-  GtkProgressBar:active:backdrop {
-    background-color: #6bafce;
-    border-color: #449ac2; }
-
 /************
  * GtkScale *
  ************/
-GtkProgressBar .trough,
-GtkProgressBar trough,
-.progressbar .trough,
-.progressbar trough,
-progressbar .trough,
-progressbar trough, trough,
-.trough, .scale trough,
+GtkLevelBar .trough,
+GtkLevelBar trough,
+.level-bar .trough,
+.level-bar trough,
+levelbar .trough,
+levelbar trough, GtkLevelBar.horizontal trough,
+GtkLevelBar.horizontal .trough, GtkLevelBar.vertical trough,
+GtkLevelBar.vertical .trough,
+.level-bar.horizontal trough,
+.level-bar.horizontal .trough,
+.level-bar.vertical trough,
+.level-bar.vertical .trough,
+levelbar.horizontal trough,
+levelbar.horizontal .trough,
+levelbar.vertical trough,
+levelbar.vertical .trough, GtkProgressBar,
+.progressbar,
+progressbar, .scale trough,
 .scale .trough,
 scale trough,
 scale .trough, .scale.fine-tune trough,
@@ -5367,74 +5944,180 @@ scale .trough, .scale.fine-tune trough,
 scale.fine-tune trough,
 scale.fine-tune .trough, .scale fill,
 scale fill {
-  border: 1px solid #c4c4c4;
-  background-color: #e5e5e5;
-  box-shadow: 0px 1px rgba(255, 255, 255, 0.8);
-  border-radius: 2px; }
-  trough:disabled,
-  .trough:disabled, .scale.fine-tune trough:disabled,
-  .scale.fine-tune .trough:disabled,
-  scale.fine-tune trough:disabled,
-  scale.fine-tune .trough:disabled, .scale fill:disabled,
+  border: none;
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0px 1px rgba(255, 255, 255, 0.8); }
+  GtkLevelBar .trough:insensitive,
+  GtkLevelBar trough:insensitive,
+  .level-bar .trough:insensitive,
+  .level-bar trough:insensitive,
+  levelbar .trough:insensitive,
+  levelbar trough:insensitive, GtkProgressBar:insensitive,
+  .progressbar:insensitive,
+  progressbar:insensitive, .scale trough:insensitive,
+  .scale .trough:insensitive,
+  scale trough:insensitive,
+  scale .trough:insensitive, .scale fill:insensitive,
+  scale fill:insensitive, GtkLevelBar .trough:disabled,
+  GtkLevelBar trough:disabled,
+  .level-bar .trough:disabled,
+  .level-bar trough:disabled,
+  levelbar .trough:disabled,
+  levelbar trough:disabled, GtkProgressBar:disabled,
+  .progressbar:disabled,
+  progressbar:disabled, .scale trough:disabled,
+  .scale .trough:disabled,
+  scale trough:disabled,
+  scale .trough:disabled, .scale fill:disabled,
   scale fill:disabled {
-    margin: 6px;
     background-color: #fafafa;
     box-shadow: none; }
-  GtkProgressBar trough,
-  .progressbar trough,
-  progressbar trough, GtkProgressBar:backdrop .trough,
-  .progressbar:backdrop .trough,
-  progressbar:backdrop .trough, trough:backdrop,
-  .trough:backdrop, .scale.fine-tune trough:backdrop,
-  .scale.fine-tune .trough:backdrop,
-  scale.fine-tune trough:backdrop,
-  scale.fine-tune .trough:backdrop, .scale fill:backdrop,
+  GtkLevelBar .trough:backdrop,
+  GtkLevelBar trough:backdrop,
+  .level-bar .trough:backdrop,
+  .level-bar trough:backdrop,
+  levelbar .trough:backdrop,
+  levelbar trough:backdrop, GtkProgressBar:backdrop,
+  .progressbar:backdrop,
+  progressbar:backdrop, .scale trough:backdrop,
+  .scale .trough:backdrop,
+  scale trough:backdrop,
+  scale .trough:backdrop, .scale fill:backdrop,
   scale fill:backdrop {
-    background-color: #e7e7e7;
-    border-color: #c9c9c9;
-    box-shadow: none;
+    background-color: #fcfcfc;
     transition: 200ms ease-out; }
-    GtkProgressBar trough:disabled,
-    .progressbar trough:disabled,
-    progressbar trough:disabled, GtkProgressBar:backdrop .trough:disabled,
-    .progressbar:backdrop .trough:disabled,
-    progressbar:backdrop .trough:disabled, trough:backdrop:disabled,
-    .trough:backdrop:disabled, .scale fill:backdrop:disabled,
+    GtkLevelBar .trough:backdrop:insensitive,
+    GtkLevelBar trough:backdrop:insensitive,
+    .level-bar .trough:backdrop:insensitive,
+    .level-bar trough:backdrop:insensitive,
+    levelbar .trough:backdrop:insensitive,
+    levelbar trough:backdrop:insensitive, GtkProgressBar:backdrop:insensitive,
+    .progressbar:backdrop:insensitive,
+    progressbar:backdrop:insensitive, .scale trough:backdrop:insensitive,
+    .scale .trough:backdrop:insensitive,
+    scale trough:backdrop:insensitive,
+    scale .trough:backdrop:insensitive, .scale fill:backdrop:insensitive,
+    scale fill:backdrop:insensitive, GtkLevelBar .trough:backdrop:disabled,
+    GtkLevelBar trough:backdrop:disabled,
+    .level-bar .trough:backdrop:disabled,
+    .level-bar trough:backdrop:disabled,
+    levelbar .trough:backdrop:disabled,
+    levelbar trough:backdrop:disabled, GtkProgressBar:backdrop:disabled,
+    .progressbar:backdrop:disabled,
+    progressbar:backdrop:disabled, .scale trough:backdrop:disabled,
+    .scale .trough:backdrop:disabled,
+    scale trough:backdrop:disabled,
+    scale .trough:backdrop:disabled, .scale fill:backdrop:disabled,
     scale fill:backdrop:disabled {
       background-color: #fafafa; }
-  row:selected trough,
-  row:selected .trough, row:selected .scale.fine-tune trough, .scale.fine-tune row:selected trough,
-  row:selected .scale.fine-tune .trough,
-  .scale.fine-tune row:selected .trough, row:selected .scale fill, .scale row:selected fill,
+  row:selected GtkLevelBar .trough, GtkLevelBar row:selected .trough,
+  row:selected GtkLevelBar trough,
+  GtkLevelBar row:selected trough,
+  row:selected .level-bar .trough,
+  .level-bar row:selected .trough,
+  row:selected .level-bar trough,
+  .level-bar row:selected trough,
+  row:selected levelbar .trough,
+  levelbar row:selected .trough,
+  row:selected levelbar trough,
+  levelbar row:selected trough, row:selected GtkProgressBar,
+  row:selected .progressbar,
+  row:selected progressbar, row:selected .scale trough, .scale row:selected trough,
+  row:selected .scale .trough,
+  .scale row:selected .trough,
+  row:selected scale trough,
+  scale row:selected trough,
+  row:selected scale .trough,
+  scale row:selected .trough, row:selected .scale fill, .scale row:selected fill,
   row:selected scale fill,
   scale row:selected fill {
     box-shadow: none; }
-    row:selected trough,
-    row:selected .trough, row:selected .scale.fine-tune trough, .scale.fine-tune row:selected trough,
-    row:selected .scale.fine-tune .trough,
-    .scale.fine-tune row:selected .trough, row:selected .scale fill, .scale row:selected fill,
+    row:selected GtkLevelBar .trough, GtkLevelBar row:selected .trough,
+    row:selected GtkLevelBar trough,
+    GtkLevelBar row:selected trough,
+    row:selected .level-bar .trough,
+    .level-bar row:selected .trough,
+    row:selected .level-bar trough,
+    .level-bar row:selected trough,
+    row:selected levelbar .trough,
+    levelbar row:selected .trough,
+    row:selected levelbar trough,
+    levelbar row:selected trough, row:selected GtkProgressBar,
+    row:selected .progressbar,
+    row:selected progressbar, row:selected .scale trough, .scale row:selected trough,
+    row:selected .scale .trough,
+    .scale row:selected .trough,
+    row:selected scale trough,
+    scale row:selected trough,
+    row:selected scale .trough,
+    scale row:selected .trough, row:selected .scale fill, .scale row:selected fill,
     row:selected scale fill,
-    scale row:selected fill, row:selected trough:disabled,
-    row:selected .trough:disabled, row:selected .scale fill:disabled, .scale row:selected fill:disabled,
+    scale row:selected fill, row:selected GtkLevelBar .trough:disabled, GtkLevelBar row:selected .trough:disabled,
+    row:selected GtkLevelBar trough:disabled,
+    GtkLevelBar row:selected trough:disabled,
+    row:selected .level-bar .trough:disabled,
+    .level-bar row:selected .trough:disabled,
+    row:selected .level-bar trough:disabled,
+    .level-bar row:selected trough:disabled,
+    row:selected levelbar .trough:disabled,
+    levelbar row:selected .trough:disabled,
+    row:selected levelbar trough:disabled,
+    levelbar row:selected trough:disabled, row:selected GtkProgressBar:disabled,
+    row:selected .progressbar:disabled,
+    row:selected progressbar:disabled, row:selected .scale trough:disabled, .scale row:selected trough:disabled,
+    row:selected .scale .trough:disabled,
+    .scale row:selected .trough:disabled,
+    row:selected scale trough:disabled,
+    scale row:selected trough:disabled,
+    row:selected scale .trough:disabled,
+    scale row:selected .trough:disabled, row:selected .scale fill:disabled, .scale row:selected fill:disabled,
     row:selected scale fill:disabled,
     scale row:selected fill:disabled {
-      border-color: #275f79; }
-  .osd trough,
-  .osd .trough, .osd .scale.fine-tune trough, .scale.fine-tune .osd trough,
-  .osd .scale.fine-tune .trough,
-  .scale.fine-tune .osd .trough,
-  .osd scale.fine-tune trough,
-  scale.fine-tune .osd trough,
-  .osd scale.fine-tune .trough,
-  scale.fine-tune .osd .trough, .osd .scale fill, .scale .osd fill,
+      border-color: #347d9f; }
+  .osd GtkLevelBar .trough, GtkLevelBar .osd .trough,
+  .osd GtkLevelBar trough,
+  GtkLevelBar .osd trough,
+  .osd .level-bar .trough,
+  .level-bar .osd .trough,
+  .osd .level-bar trough,
+  .level-bar .osd trough,
+  .osd levelbar .trough,
+  levelbar .osd .trough,
+  .osd levelbar trough,
+  levelbar .osd trough, .osd GtkProgressBar,
+  .osd .progressbar,
+  .osd progressbar, .osd .scale trough, .scale .osd trough,
+  .osd .scale .trough,
+  .scale .osd .trough,
+  .osd scale trough,
+  scale .osd trough,
+  .osd scale .trough,
+  scale .osd .trough, .osd .scale fill, .scale .osd fill,
   .osd scale fill,
   scale .osd fill {
     border-color: rgba(0, 0, 0, 0.7);
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: none;
     outline-color: rgba(161, 168, 171, 0.2); }
-    .osd trough:disabled,
-    .osd .trough:disabled, .osd .scale fill:disabled, .scale .osd fill:disabled,
+    .osd GtkLevelBar .trough:disabled, GtkLevelBar .osd .trough:disabled,
+    .osd GtkLevelBar trough:disabled,
+    GtkLevelBar .osd trough:disabled,
+    .osd .level-bar .trough:disabled,
+    .level-bar .osd .trough:disabled,
+    .osd .level-bar trough:disabled,
+    .level-bar .osd trough:disabled,
+    .osd levelbar .trough:disabled,
+    levelbar .osd .trough:disabled,
+    .osd levelbar trough:disabled,
+    levelbar .osd trough:disabled, .osd GtkProgressBar:disabled,
+    .osd .progressbar:disabled,
+    .osd progressbar:disabled, .osd .scale trough:disabled, .scale .osd trough:disabled,
+    .osd .scale .trough:disabled,
+    .scale .osd .trough:disabled,
+    .osd scale trough:disabled,
+    scale .osd trough:disabled,
+    .osd scale .trough:disabled,
+    scale .osd .trough:disabled, .osd .scale fill:disabled, .scale .osd fill:disabled,
     .osd scale fill:disabled,
     scale .osd fill:disabled {
       background-color: rgba(45, 50, 51, 0.5); }
@@ -5449,21 +6132,28 @@ progressbar progress, .scale fill,
 .scale highlight,
 scale fill,
 scale .highlight,
-scale highlight, .scale.fine-tune .slider,
-.scale.fine-tune slider,
-scale.fine-tune .slider,
-scale.fine-tune slider, .scale.fine-tune fill,
+scale highlight, .scale.fine-tune fill,
 .scale.fine-tune .highlight,
 .scale.fine-tune highlight,
 scale.fine-tune fill,
 scale.fine-tune .highlight,
 scale.fine-tune highlight {
-  border: 1px solid #275f79;
+  border: 1px solid #347d9f;
   background-color: #449ac2;
   box-shadow: 0px 1px rgba(255, 255, 255, 0.8);
   border-radius: 2px;
   margin: 6px 0; }
-  GtkProgressBar .progressbar:disabled,
+  GtkProgressBar .progressbar:insensitive,
+  GtkProgressBar progress:insensitive,
+  .progressbar .progressbar:insensitive,
+  .progressbar progress:insensitive,
+  progressbar .progressbar:insensitive,
+  progressbar progress:insensitive, .scale fill:insensitive,
+  .scale .highlight:insensitive,
+  .scale highlight:insensitive,
+  scale fill:insensitive,
+  scale .highlight:insensitive,
+  scale highlight:insensitive, GtkProgressBar .progressbar:disabled,
   GtkProgressBar progress:disabled,
   .progressbar .progressbar:disabled,
   .progressbar progress:disabled,
@@ -5473,10 +6163,7 @@ scale.fine-tune highlight {
   .scale highlight:disabled,
   scale fill:disabled,
   scale .highlight:disabled,
-  scale highlight:disabled, .scale.fine-tune .slider:disabled,
-  .scale.fine-tune slider:disabled,
-  scale.fine-tune .slider:disabled,
-  scale.fine-tune slider:disabled {
+  scale highlight:disabled {
     background-color: transparent;
     border-color: transparent; }
   GtkProgressBar .progressbar:backdrop,
@@ -5484,34 +6171,61 @@ scale.fine-tune highlight {
   .progressbar .progressbar:backdrop,
   .progressbar progress:backdrop,
   progressbar .progressbar:backdrop,
-  progressbar progress:backdrop, GtkProgressBar:backdrop progress,
+  progressbar progress:backdrop, GtkProgressBar:backdrop .progressbar,
+  .progressbar:backdrop .progressbar,
+  progressbar:backdrop .progressbar, GtkProgressBar:backdrop progress,
   .progressbar:backdrop progress,
   progressbar:backdrop progress, .scale fill:backdrop,
   .scale .highlight:backdrop,
   .scale highlight:backdrop,
   scale fill:backdrop,
   scale .highlight:backdrop,
-  scale highlight:backdrop, .scale.fine-tune .slider:backdrop,
-  .scale.fine-tune slider:backdrop,
-  scale.fine-tune .slider:backdrop,
-  scale.fine-tune slider:backdrop {
-    border-color: #449ac2; }
+  scale highlight:backdrop, GtkProgressBar .progressbar:active:backdrop,
+  GtkProgressBar progress:active:backdrop,
+  .progressbar .progressbar:active:backdrop,
+  .progressbar progress:active:backdrop,
+  progressbar .progressbar:active:backdrop,
+  progressbar progress:active:backdrop, GtkProgressBar:backdrop .progressbar:active,
+  .progressbar:backdrop .progressbar:active,
+  progressbar:backdrop .progressbar:active, GtkProgressBar:backdrop progress:active,
+  .progressbar:backdrop progress:active,
+  progressbar:backdrop progress:active, .scale fill:active:backdrop,
+  .scale .highlight:active:backdrop,
+  .scale highlight:active:backdrop,
+  scale fill:active:backdrop,
+  scale .highlight:active:backdrop,
+  scale highlight:active:backdrop {
+    border-color: #449ac2;
+    background-color: #6bafce; }
     GtkProgressBar .progressbar:backdrop:disabled,
     GtkProgressBar progress:backdrop:disabled,
     .progressbar .progressbar:backdrop:disabled,
     .progressbar progress:backdrop:disabled,
     progressbar .progressbar:backdrop:disabled,
-    progressbar progress:backdrop:disabled, GtkProgressBar:backdrop progress:disabled,
+    progressbar progress:backdrop:disabled, GtkProgressBar:backdrop .progressbar:disabled,
+    .progressbar:backdrop .progressbar:disabled,
+    progressbar:backdrop .progressbar:disabled, GtkProgressBar:backdrop progress:disabled,
     .progressbar:backdrop progress:disabled,
     progressbar:backdrop progress:disabled, .scale fill:backdrop:disabled,
     .scale .highlight:backdrop:disabled,
     .scale highlight:backdrop:disabled,
     scale fill:backdrop:disabled,
     scale .highlight:backdrop:disabled,
-    scale highlight:backdrop:disabled, .scale.fine-tune .slider:backdrop:disabled,
-    .scale.fine-tune slider:backdrop:disabled,
-    scale.fine-tune .slider:backdrop:disabled,
-    scale.fine-tune slider:backdrop:disabled {
+    scale highlight:backdrop:disabled, GtkProgressBar .progressbar:active:backdrop:disabled,
+    GtkProgressBar progress:active:backdrop:disabled,
+    .progressbar .progressbar:active:backdrop:disabled,
+    .progressbar progress:active:backdrop:disabled,
+    progressbar .progressbar:active:backdrop:disabled,
+    progressbar progress:active:backdrop:disabled, GtkProgressBar:backdrop .progressbar:active:disabled,
+    .progressbar:backdrop .progressbar:active:disabled,
+    progressbar:backdrop .progressbar:active:disabled, GtkProgressBar:backdrop progress:active:disabled,
+    .progressbar:backdrop progress:active:disabled,
+    progressbar:backdrop progress:active:disabled, .scale fill:active:backdrop:disabled,
+    .scale .highlight:active:backdrop:disabled,
+    .scale highlight:active:backdrop:disabled,
+    scale fill:active:backdrop:disabled,
+    scale .highlight:active:backdrop:disabled,
+    scale highlight:active:backdrop:disabled {
       background-color: transparent;
       border-color: transparent; }
   .list-row:selected GtkProgressBar .progressbar:disabled, GtkProgressBar .list-row:selected .progressbar:disabled,
@@ -5534,13 +6248,7 @@ scale.fine-tune highlight {
   .list-row:selected scale .highlight:disabled,
   scale .list-row:selected .highlight:disabled,
   .list-row:selected scale highlight:disabled,
-  scale .list-row:selected highlight:disabled, .list-row:selected .scale.fine-tune .slider:disabled, .scale.fine-tune .list-row:selected .slider:disabled,
-  .list-row:selected .scale.fine-tune slider:disabled,
-  .scale.fine-tune .list-row:selected slider:disabled,
-  .list-row:selected scale.fine-tune .slider:disabled,
-  scale.fine-tune .list-row:selected .slider:disabled,
-  .list-row:selected scale.fine-tune slider:disabled,
-  scale.fine-tune .list-row:selected slider:disabled, .list-row:selected GtkProgressBar .progressbar, GtkProgressBar .list-row:selected .progressbar,
+  scale .list-row:selected highlight:disabled, .list-row:selected GtkProgressBar .progressbar, GtkProgressBar .list-row:selected .progressbar,
   .list-row:selected GtkProgressBar progress,
   GtkProgressBar .list-row:selected progress,
   .list-row:selected .progressbar .progressbar,
@@ -5560,14 +6268,8 @@ scale.fine-tune highlight {
   .list-row:selected scale .highlight,
   scale .list-row:selected .highlight,
   .list-row:selected scale highlight,
-  scale .list-row:selected highlight, .list-row:selected .scale.fine-tune .slider, .scale.fine-tune .list-row:selected .slider,
-  .list-row:selected .scale.fine-tune slider,
-  .scale.fine-tune .list-row:selected slider,
-  .list-row:selected scale.fine-tune .slider,
-  scale.fine-tune .list-row:selected .slider,
-  .list-row:selected scale.fine-tune slider,
-  scale.fine-tune .list-row:selected slider {
-    border-color: #275f79; }
+  scale .list-row:selected highlight {
+    border-color: #347d9f; }
   row:selected GtkProgressBar .progressbar:disabled, GtkProgressBar row:selected .progressbar:disabled,
   row:selected GtkProgressBar progress:disabled,
   GtkProgressBar row:selected progress:disabled,
@@ -5588,13 +6290,7 @@ scale.fine-tune highlight {
   row:selected scale .highlight:disabled,
   scale row:selected .highlight:disabled,
   row:selected scale highlight:disabled,
-  scale row:selected highlight:disabled, row:selected .scale.fine-tune .slider:disabled, .scale.fine-tune row:selected .slider:disabled,
-  row:selected .scale.fine-tune slider:disabled,
-  .scale.fine-tune row:selected slider:disabled,
-  row:selected scale.fine-tune .slider:disabled,
-  scale.fine-tune row:selected .slider:disabled,
-  row:selected scale.fine-tune slider:disabled,
-  scale.fine-tune row:selected slider:disabled, row:selected GtkProgressBar .progressbar, GtkProgressBar row:selected .progressbar,
+  scale row:selected highlight:disabled, row:selected GtkProgressBar .progressbar, GtkProgressBar row:selected .progressbar,
   row:selected GtkProgressBar progress,
   GtkProgressBar row:selected progress,
   row:selected .progressbar .progressbar,
@@ -5614,14 +6310,8 @@ scale.fine-tune highlight {
   row:selected scale .highlight,
   scale row:selected .highlight,
   row:selected scale highlight,
-  scale row:selected highlight, row:selected .scale.fine-tune .slider, .scale.fine-tune row:selected .slider,
-  row:selected .scale.fine-tune slider,
-  .scale.fine-tune row:selected slider,
-  row:selected scale.fine-tune .slider,
-  scale.fine-tune row:selected .slider,
-  row:selected scale.fine-tune slider,
-  scale.fine-tune row:selected slider {
-    border-color: #275f79; }
+  scale row:selected highlight {
+    border-color: #347d9f; }
   .osd GtkProgressBar .progressbar, GtkProgressBar .osd .progressbar,
   .osd GtkProgressBar progress,
   GtkProgressBar .osd progress,
@@ -5642,13 +6332,7 @@ scale.fine-tune highlight {
   .osd scale .highlight,
   scale .osd .highlight,
   .osd scale highlight,
-  scale .osd highlight, .osd .scale.fine-tune .slider, .scale.fine-tune .osd .slider,
-  .osd .scale.fine-tune slider,
-  .scale.fine-tune .osd slider,
-  .osd scale.fine-tune .slider,
-  scale.fine-tune .osd .slider,
-  .osd scale.fine-tune slider,
-  scale.fine-tune .osd slider {
+  scale .osd highlight {
     border-color: rgba(0, 0, 0, 0.7); }
     .osd GtkProgressBar .progressbar:disabled, GtkProgressBar .osd .progressbar:disabled,
     .osd GtkProgressBar progress:disabled,
@@ -5670,13 +6354,7 @@ scale.fine-tune highlight {
     .osd scale .highlight:disabled,
     scale .osd .highlight:disabled,
     .osd scale highlight:disabled,
-    scale .osd highlight:disabled, .osd .scale.fine-tune .slider:disabled, .scale.fine-tune .osd .slider:disabled,
-    .osd .scale.fine-tune slider:disabled,
-    .scale.fine-tune .osd slider:disabled,
-    .osd scale.fine-tune .slider:disabled,
-    scale.fine-tune .osd .slider:disabled,
-    .osd scale.fine-tune slider:disabled,
-    scale.fine-tune .osd slider:disabled {
+    scale .osd highlight:disabled {
       border-color: transparent; }
 
 .scale,
@@ -5711,8 +6389,7 @@ scale {
     scale slider:active {
       box-shadow: 0 1px 1px 0 rgba(68, 154, 194, 0.5);
       border: 1px solid #449ac2; }
-      .scale .slider:active:insensitive,
-      .scale .slider:active:disabled,
+      .scale .slider:active:insensitive, .scale .slider:active:disabled,
       .scale slider:active:insensitive,
       .scale slider:active:disabled,
       scale .slider:active:insensitive,
@@ -5721,39 +6398,31 @@ scale {
       scale slider:active:disabled {
         box-shadow: none;
         border: 1px solid rgba(0, 0, 0, 0.2); }
-    .scale .slider:insensitive,
-    .scale .slider:disabled,
+    .scale .slider:insensitive, .scale .slider:disabled,
     .scale slider:insensitive,
     .scale slider:disabled,
     scale .slider:insensitive,
     scale .slider:disabled,
     scale slider:insensitive,
     scale slider:disabled {
-      box-shadow: none;
-      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-      border: 1px solid rgba(0, 0, 0, 0.2); }
-    .list-row:selected
-    .scale .slider, .list-row:selected
-    .scale .slider:disabled, .list-row:selected
+      box-shadow: none; }
+    .list-row:selected .scale .slider, .list-row:selected .scale .slider:disabled, .list-row:selected
     .scale slider, .list-row:selected
     .scale slider:disabled, .list-row:selected
     scale .slider, .list-row:selected
     scale .slider:disabled, .list-row:selected
     scale slider, .list-row:selected
     scale slider:disabled {
-      border-color: #275f79; }
-    row:selected
-    .scale .slider, row:selected
-    .scale .slider:disabled, row:selected
+      border-color: #347d9f; }
+    row:selected .scale .slider, row:selected .scale .slider:disabled, row:selected
     .scale slider, row:selected
     .scale slider:disabled, row:selected
     scale .slider, row:selected
     scale .slider:disabled, row:selected
     scale slider, row:selected
     scale slider:disabled {
-      border-color: #275f79; }
-    .osd
-    .scale .slider, .osd
+      border-color: #347d9f; }
+    .osd .scale .slider, .osd
     .scale slider, .osd
     scale .slider, .osd
     scale slider {
@@ -5767,8 +6436,7 @@ scale {
       outline-color: rgba(161, 168, 171, 0.3);
       border-color: rgba(0, 0, 0, 0.7);
       background-color: #202526; }
-      .osd
-      .scale .slider:hover, .osd
+      .osd .scale .slider:hover, .osd
       .scale slider:hover, .osd
       scale .slider:hover, .osd
       scale slider:hover {
@@ -5780,8 +6448,7 @@ scale {
         text-shadow: 0 1px black;
         -gtk-icon-shadow: 0 1px black;
         outline-color: rgba(161, 168, 171, 0.3); }
-      .osd
-      .scale .slider:active, .osd
+      .osd .scale .slider:active, .osd
       .scale slider:active, .osd
       scale .slider:active, .osd
       scale slider:active {
@@ -5793,8 +6460,7 @@ scale {
         text-shadow: none;
         -gtk-icon-shadow: none;
         outline-color: rgba(161, 168, 171, 0.3); }
-      .osd
-      .scale .slider:disabled, .osd
+      .osd .scale .slider:disabled, .osd
       .scale slider:disabled, .osd
       scale .slider:disabled, .osd
       scale slider:disabled {
@@ -5805,8 +6471,7 @@ scale {
         box-shadow: none;
         text-shadow: none;
         -gtk-icon-shadow: none; }
-      .osd
-      .scale .slider:backdrop, .osd
+      .osd .scale .slider:backdrop, .osd
       .scale slider:backdrop, .osd
       scale .slider:backdrop, .osd
       scale slider:backdrop {
@@ -5821,6 +6486,7 @@ scale {
   .scale .trough,
   scale trough,
   scale .trough {
+    border-radius: 2px;
     margin: 6px;
     outline-offset: 2px;
     -gtk-outline-radius: 5px; }
@@ -5840,12 +6506,11 @@ scale {
   scale.fine-tune slider {
     min-height: 16px;
     min-width: 16px;
-    margin: 2px;
     background-color: #ffffff;
     border-color: #ffffff;
-    box-shadow: none;
-    border: 1px solid #ffffff;
-    border-radius: 12px; }
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    box-shadow: none; }
   .scale.fine-tune trough,
   .scale.fine-tune .trough,
   scale.fine-tune trough,
@@ -5854,24 +6519,27 @@ scale {
     outline-offset: 2px;
     -gtk-outline-radius: 5px;
     margin: 2px; }
-  .scale fill, .scale fill:backdrop,
-  scale fill,
-  scale fill:backdrop {
-    background-color: #c4c4c4;
-    box-shadow: none; }
-  .scale fill:disabled, .scale fill:disabled:backdrop,
-  scale fill:disabled,
-  scale fill:disabled:backdrop {
-    border-color: transparent;
-    background-color: transparent; }
-  .osd .scale fill, .osd
+  .scale fill,
   scale fill {
-    background-color: rgba(62, 64, 65, 0.775); }
-    .osd .scale fill:disabled, .osd .scale fill:disabled:backdrop, .osd
-    scale fill:disabled, .osd
+    border-radius: 2px; }
+    .scale fill, .scale fill:backdrop,
+    scale fill,
+    scale fill:backdrop {
+      background-color: #c4c4c4;
+      box-shadow: none; }
+    .scale fill:disabled, .scale fill:disabled:backdrop,
+    scale fill:disabled,
     scale fill:disabled:backdrop {
       border-color: transparent;
       background-color: transparent; }
+    .osd .scale fill, .osd
+    scale fill {
+      background-color: rgba(62, 64, 65, 0.775); }
+      .osd .scale fill:disabled, .osd .scale fill:disabled:backdrop, .osd
+      scale fill:disabled, .osd
+      scale fill:disabled:backdrop {
+        border-color: transparent;
+        background-color: transparent; }
   .scale value,
   scale value {
     color: alpha(currentColor,0.4); }
@@ -7465,50 +8133,52 @@ spinner {
 /**********
  * Switch *
  **********/
+GtkSwitch {
+  -GtkSwitch-slider-width: 20;
+  -GtkSwitch-slider-height: 20; }
+
 GtkSwitch,
 switch {
   font: 1;
   font-weight: bold;
   outline-offset: -4px;
   transition: all 200ms ease-in;
-  background-color: rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 14px;
   color: transparent;
   padding: 2px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-  -GtkSwitch-slider-width: 20;
-  -GtkSwitch-slider-height: 20; }
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0px 1px rgba(255, 255, 255, 0.8); }
+  GtkSwitch:insensitive, GtkSwitch:disabled,
+  switch:insensitive,
+  switch:disabled {
+    background-color: #fafafa; }
+  GtkSwitch:backdrop,
+  switch:backdrop {
+    background-color: #f7f7f7;
+    transition: 200ms ease-out; }
+    GtkSwitch:backdrop:insensitive, GtkSwitch:backdrop:disabled,
+    switch:backdrop:insensitive,
+    switch:backdrop:disabled {
+      background-color: #fafafa; }
   GtkSwitch:active, GtkSwitch:checked,
   switch:active,
   switch:checked {
     background-color: #449ac2; }
-  GtkSwitch:insensitive, GtkSwitch:disabled,
-  switch:insensitive,
-  switch:disabled {
-    background-color: rgba(0, 0, 0, 0.2); }
-    GtkSwitch:insensitive .slider,
-    GtkSwitch:insensitive slider, GtkSwitch:disabled .slider,
-    GtkSwitch:disabled slider,
-    switch:insensitive .slider,
-    switch:insensitive slider,
-    switch:disabled .slider,
-    switch:disabled slider {
-      box-shadow: none; }
-  GtkSwitch:backdrop,
-  switch:backdrop {
-    color: #afafaf;
-    border-color: #c9c9c9;
-    background-image: linear-gradient(to bottom, #e7e7e7);
-    box-shadow: none;
-    text-shadow: none;
-    transition: 200ms ease-out; }
-    GtkSwitch:backdrop:checked,
-    switch:backdrop:checked {
-      color: #f7f7f7;
-      border-color: #449ac2;
-      background-image: linear-gradient(to bottom, #449ac2);
-      box-shadow: none; }
+    GtkSwitch:active:backdrop, GtkSwitch:checked:backdrop,
+    switch:active:backdrop,
+    switch:checked:backdrop {
+      background-color: #57a4c8; }
+      GtkSwitch:active:backdrop .slider:backdrop,
+      GtkSwitch:active:backdrop slider:backdrop, GtkSwitch:checked:backdrop .slider:backdrop,
+      GtkSwitch:checked:backdrop slider:backdrop,
+      switch:active:backdrop .slider:backdrop,
+      switch:active:backdrop slider:backdrop,
+      switch:checked:backdrop .slider:backdrop,
+      switch:checked:backdrop slider:backdrop {
+        box-shadow: none;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: none; }
   GtkSwitch .slider,
   GtkSwitch slider,
   switch .slider,
@@ -7520,6 +8190,14 @@ switch {
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     background-color: #ffffff;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2); }
+    GtkSwitch .slider:backdrop,
+    GtkSwitch slider:backdrop,
+    switch .slider:backdrop,
+    switch slider:backdrop {
+      padding: 2px;
+      box-shadow: none;
+      background-color: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.2); }
   GtkSwitch:hover .slider,
   GtkSwitch:hover slider,
   switch:hover .slider,
@@ -7527,12 +8205,7 @@ switch {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.2); }
   GtkSwitch:checked slider,
   switch:checked slider {
-    border: 1px solid #275f79; }
-  GtkSwitch:backdrop > .slider,
-  GtkSwitch:backdrop > slider,
-  switch:backdrop > .slider,
-  switch:backdrop > slider {
-    box-shadow: none; }
+    border: 1px solid #347d9f; }
   GtkSwitch:backdrop:checked slider,
   switch:backdrop:checked slider {
     border-color: #449ac2; }
@@ -7555,10 +8228,10 @@ switch {
   row:selected GtkSwitch, row:selected
   switch {
     box-shadow: none;
-    border-color: #275f79; }
+    border-color: #347d9f; }
     row:selected GtkSwitch:backdrop, row:selected
     switch:backdrop {
-      border-color: #275f79; }
+      border-color: #347d9f; }
     row:selected GtkSwitch.slider:dir(rtl), row:selected
     switch.slider:dir(rtl) {
       border-left-color: #c4c4c4; }
@@ -7568,29 +8241,23 @@ switch {
     row:selected GtkSwitch.slider:checked, row:selected GtkSwitch.slider, row:selected
     switch.slider:checked, row:selected
     switch.slider {
-      border-color: #275f79; }
-  GtkSwitch trough,
-  GtkSwitch .trough,
-  switch trough,
-  switch .trough {
-    background-color: rgba(0, 0, 0, 0.2);
-    border: none;
-    border-radius: 14px;
-    color: transparent;
-    padding: 2px; }
-    GtkSwitch trough:active,
-    GtkSwitch .trough:active,
-    switch trough:active,
-    switch .trough:active {
-      background-color: #449ac2; }
-    GtkSwitch trough:insensitive, GtkSwitch trough:disabled,
-    GtkSwitch .trough:insensitive,
-    GtkSwitch .trough:disabled,
-    switch trough:insensitive,
-    switch trough:disabled,
-    switch .trough:insensitive,
-    switch .trough:disabled {
-      background-color: rgba(0, 0, 0, 0.2); }
+      border-color: #347d9f; }
+  GtkSwitch trough:active, GtkSwitch trough:checked,
+  GtkSwitch .trough:active,
+  GtkSwitch .trough:checked,
+  switch trough:active,
+  switch trough:checked,
+  switch .trough:active,
+  switch .trough:checked {
+    background-color: #449ac2; }
+    GtkSwitch trough:active:backdrop, GtkSwitch trough:checked:backdrop,
+    GtkSwitch .trough:active:backdrop,
+    GtkSwitch .trough:checked:backdrop,
+    switch trough:active:backdrop,
+    switch trough:checked:backdrop,
+    switch .trough:active:backdrop,
+    switch .trough:checked:backdrop {
+      background-color: #57a4c8; }
 
 /************
  * Toolbars *
@@ -8118,7 +8785,7 @@ treeview.view {
   treeview.view:drop(active) {
     border-style: solid none;
     border-width: 1px;
-    border-color: #275f79; }
+    border-color: #347d9f; }
     GtkTreeView.view:drop(active).after,
     treeview.view:drop(active).after {
       border-top-style: none; }
@@ -8153,7 +8820,7 @@ treeview.view {
   GtkTreeView.view.progressbar,
   treeview.view.progressbar {
     color: #ffffff;
-    border: 1px solid #275f79;
+    border: 1px solid #347d9f;
     border-radius: 4px;
     background-color: #449ac2;
     background-image: linear-gradient(to bottom, #449ac2, #347d9f);
@@ -8169,7 +8836,7 @@ treeview.view {
       treeview.view.progressbar:selected:focus:backdrop,
       treeview.view.progressbar:selected:backdrop {
         color: #449ac2;
-        border-color: #275f79;
+        border-color: #347d9f;
         background-color: #fcfcfc; }
     GtkTreeView.view.progressbar:backdrop,
     treeview.view.progressbar:backdrop {

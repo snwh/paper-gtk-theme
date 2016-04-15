@@ -1,6 +1,11 @@
 /**********
  * Switch *
  **********/
+GtkSwitch {
+  -GtkSwitch-slider-width: 20;
+  -GtkSwitch-slider-height: 20;
+}
+
 GtkSwitch,
 switch {
   font: 1;
@@ -8,48 +13,47 @@ switch {
   outline-offset: -4px;
   transition: all 200ms ease-in;
 
-  background-color: transparentize(black, 0.8);
   border: none;
   border-radius: 14px;
   color: transparent;
   padding: 2px;
-  box-shadow: inset 0 0 0 1px transparentize(black, 0.9);
 
-  -GtkSwitch-slider-width: 20;
-  -GtkSwitch-slider-height: 20;
+  background-color: transparentize(black, 0.9);
+  box-shadow: inset 0 0 0 1px transparentize(black, 0.8), 0px 1px $bottom_highlight;
+
+  &:insensitive,
+  &:disabled {
+    background-color: $insensitive_bg_color;
+  }
+
+  &:backdrop {
+    background-color: $backdrop_bg_color;
+    transition: $backdrop_transition;
+
+    &:insensitive,
+    &:disabled { background-color: $insensitive_bg_color; }
+  }
+
 
   &:active,
   &:checked {
     background-color: $selected_bg_color;
-  }
 
-  &:insensitive,
-  &:disabled {
-    background-color: transparentize(black, 0.8);
+    &:backdrop {
+      background-color: $backdrop_selected_bg_color;
 
-    .slider,
-    slider {
-      box-shadow:none;
+      .slider,
+      slider {
+        &:backdrop {
+          box-shadow:none;
+          background-color:transparentize($base_color, 0.1);
+          border:none;
+        }
+      }
     }
   }
 
-  &:backdrop {
-    color: $backdrop_fg_color;
-    border-color: $backdrop_borders_color;
-    background-image: linear-gradient(to bottom, $backdrop_dark_fill);
-    box-shadow: none;
-    text-shadow: none;
-    transition: $backdrop_transition;
-
-    &:checked {
-      @if $variant == 'light' { color: $backdrop_bg_color; }
-      border-color: if($variant == 'light', $selected_bg_color,
-                                            $selected_borders_color);
-      background-image: linear-gradient(to bottom, $selected_bg_color);
-      box-shadow: none;
-    }
-  }
-
+  // Handle
   .slider,
   slider {
     padding:2px;
@@ -61,6 +65,13 @@ switch {
 
     box-shadow: 0 2px 2px transparentize(black, 0.8),
                 0 1px 2px transparentize(black, 0.8);
+
+    &:backdrop {
+      padding:2px;
+      box-shadow:none;
+      background-color:$base_color;
+      border:1px solid transparentize(black, 0.8);
+    }
   }
 
   &:hover {
@@ -74,13 +85,7 @@ switch {
   &:checked slider { border: 1px solid $selected_borders_color; }
 
   &:backdrop {
-    > .slider,
-    > slider {
-      box-shadow:none;
-    }
-
     &:checked slider { border-color: if($variant == 'light', $selected_bg_color, $selected_borders_color); }
-
     &:disabled slider { @include button(backdrop-insensitive); }
   }
 
@@ -101,19 +106,14 @@ switch {
   // Trough
   trough,
   .trough {
-    background-color: transparentize(black, 0.8);
-    border:none;
-    border-radius: 14px;
-    color: transparent;
-    padding: 2px;
 
-    &:active {
+    &:active,
+    &:checked {
       background-color: $selected_bg_color;
-    }
 
-    &:insensitive,
-    &:disabled {
-      background-color: transparentize(black, 0.8);
+      &:backdrop {
+        background-color: $backdrop_selected_bg_color;
+      }
     }
   }
 }
