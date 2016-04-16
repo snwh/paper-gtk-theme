@@ -9252,6 +9252,75 @@ EogScrollView,
 CheeseThumbView {
   -EogScrollView-shadow-type: none; }
 
+/************
+ * Terminal *
+ ************/
+TerminalScreen,
+VteTerminal {
+  background-color: rgba(0, 43, 54, 0.9);
+  color: #839495; }
+
+TerminalWindow .titlebar,
+TerminalWindow .header-bar {
+  background-color: #636E73; }
+  TerminalWindow .titlebar:backdrop,
+  TerminalWindow .header-bar:backdrop {
+    background-color: #4b5458; }
+
+/************
+ * Nautilus *
+ ************/
+NautilusCanvasView {
+  border: none; }
+  NautilusCanvasView:active, NautilusCanvasView:focus, NautilusCanvasView:backdrop {
+    border: none; }
+
+.nautilus-circular-button {
+  border-radius: 20px;
+  outline-radius: 20px; }
+
+.disk-space-display {
+  border: 2px solid; }
+  .disk-space-display .unknown {
+    background-color: #888a85;
+    border-color: shade(#888a85, 0.8); }
+  .disk-space-display .used {
+    background-color: #9FB0B9;
+    border-color: shade(#9FB0B9, 0.8); }
+  .disk-space-display .free {
+    background-color: #D8D8D8;
+    border-color: shade(#D8D8D8, 0.8); }
+
+.nautilus-desktop {
+  color: #666666; }
+  .nautilus-desktop .nautilus-canvas-item {
+    border-radius: 5px;
+    color: #ffffff;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.6); }
+    .nautilus-desktop .nautilus-canvas-item:active {
+      color: #666666;
+      text-shadow: none; }
+    .nautilus-desktop .nautilus-canvas-item:prelight {
+      color: #666666;
+      text-shadow: none; }
+    .nautilus-desktop .nautilus-canvas-item:selected {
+      color: #ffffff;
+      text-shadow: none; }
+    .nautilus-desktop .nautilus-canvas-item .dim-label:selected, .nautilus-desktop .nautilus-canvas-item GtkLabel.separator:selected,
+    .nautilus-desktop .nautilus-canvas-item label.separator:selected, .nautilus-desktop .nautilus-canvas-item .titlebar:not(headerbar) .subtitle:selected, .titlebar:not(headerbar) .nautilus-desktop .nautilus-canvas-item .subtitle:selected,
+    .nautilus-desktop .nautilus-canvas-item .header-bar .subtitle:selected,
+    .header-bar .nautilus-desktop .nautilus-canvas-item .subtitle:selected,
+    .nautilus-desktop .nautilus-canvas-item headerbar .subtitle:selected,
+    headerbar .nautilus-desktop .nautilus-canvas-item .subtitle:selected {
+      color: #ffffff; }
+  .nautilus-desktop .nautilus-list .dim-label:selected, .nautilus-desktop .nautilus-list GtkLabel.separator:selected,
+  .nautilus-desktop .nautilus-list label.separator:selected, .nautilus-desktop .nautilus-list .titlebar:not(headerbar) .subtitle:selected, .titlebar:not(headerbar) .nautilus-desktop .nautilus-list .subtitle:selected,
+  .nautilus-desktop .nautilus-list .header-bar .subtitle:selected,
+  .header-bar .nautilus-desktop .nautilus-list .subtitle:selected,
+  .nautilus-desktop .nautilus-list headerbar .subtitle:selected,
+  headerbar .nautilus-desktop .nautilus-list .subtitle:selected {
+    color: #ffffff; }
+
 /***********
  * Builder *
  ***********/

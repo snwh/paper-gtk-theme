@@ -50,6 +50,111 @@ CheeseThumbView /* Cheese */
 }
 
 
+/************
+ * Terminal *
+ ************/
+
+$gnome_terminal: #636E73;
+$terminal_bg_color: transparentize(#002B36, 0.1);
+$terminal_fg_color: #839495;
+
+TerminalScreen,
+VteTerminal {
+  background-color: $terminal_bg_color;
+  color: $terminal_fg_color;
+}
+
+TerminalWindow {
+  .titlebar,
+  .header-bar {
+    background-color: $gnome_terminal;
+
+    &:backdrop {
+      background-color: darken($gnome_terminal,10%);
+    }
+  }
+}
+
+/************
+ * Nautilus *
+ ************/
+
+NautilusCanvasView {
+    border: none;
+
+    &:active,
+    &:focus,
+    &:backdrop {
+      border: none;
+    }
+}
+
+.nautilus-circular-button {
+  border-radius: 20px;
+  outline-radius: 20px;
+}
+
+.disk-space-display {
+  border: 2px solid;
+
+  .unknown {
+    background-color: #888a85;
+    border-color: shade(#888a85, 0.8);
+  }
+
+  .used {
+    background-color: #9FB0B9;
+    border-color: shade(#9FB0B9, 0.8);
+  }
+
+  .free {
+    background-color: #D8D8D8;
+    border-color: shade(#D8D8D8, 0.8);
+  }
+}
+
+
+.nautilus-desktop {
+
+    color: $fg_color;
+
+  .nautilus-canvas-item {
+    border-radius: 5px;
+    color: $selected_fg_color;
+    text-shadow: 1px 1px transparentize(black, 0.4);
+
+    &:active {
+      color: $fg_color;
+      text-shadow: none;
+    }
+
+    &:prelight {
+      color: $fg_color;
+      text-shadow: none;
+    }
+
+    &:selected {
+      color: $selected_fg_color;
+      text-shadow: none;
+    }
+
+    .dim-label {
+      &:selected {
+        color: $selected_fg_color;
+      }
+    }
+  }
+
+  .nautilus-list {
+
+    .dim-label {
+      &:selected {
+        color: $selected_fg_color;
+      }
+    }
+  }
+}
+
 /***********
  * Builder *
  ***********/
