@@ -293,7 +293,8 @@ $gedit: #DC4836;
 
 GeditWindow {
   .titlebar,
-  .header-bar {
+  .header-bar,
+  .gedit-headerbar-paned {
     background-color: $gedit;
 
     &:backdrop {

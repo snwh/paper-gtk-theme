@@ -15,7 +15,7 @@ spinbutton {
       min-width: 28px;
       // reset all the other props since the spinbutton node is styled here
       margin: 0;
-      padding:2px;
+      padding: 0;
       background: none;
       background-color: transparent;
       border: none;
@@ -27,8 +27,7 @@ spinbutton {
     button {
       min-height: 16px;
       margin: 0;
-      padding-bottom: 0;
-      padding-top: 0;
+      padding: 6px;
       color: mix($fg_color, $base_color, 90%);
       background-image: none;
       border-style: none none none solid;
@@ -131,7 +130,7 @@ spinbutton {
 
     .entry,
     entry {
-      min-height: 32px;
+      min-height: 24px;
       min-width: 32px;
       padding: 0;
       border-radius: 0;
