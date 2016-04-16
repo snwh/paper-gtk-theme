@@ -233,6 +233,7 @@ headerbar {
       &:backdrop {
         background-color: transparent;
         background-image: none;
+      text-shadow: none;
         color: $backdrop_headerbar_fg_color;
       }
     }
@@ -242,38 +243,18 @@ headerbar {
       margin: 0;
     }
 
-    &.titlebutton {
-      min-height: 16px;
-      min-width: 16px;
-      padding: 1px;
-      border-radius:50%;
-      background-color:transparent;
-      box-shadow: none;
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-
-      &:hover {
-        background-color:transparent;
-        color:lighten($headerbar_fg_color, 10%);
-      }
-
-      &:backdrop {
-        background-color:transparent;
-        color:$backdrop_headerbar_fg_color;
-      }
-
-      &:active {
-        background-color:$headerbar_fg_color;
-        color:$headerbar_bg_color;
-        border-radius:50%;
-        box-shadow:none;
-      }
-    }
-
     &:hover { 
       background-image:none;
       background-color: transparentize(black, 0.85);
+      color:lighten($headerbar_fg_color, 10%);
       box-shadow:none;
+      text-shadow:none;
+    }
+
+    &:backdrop {
+      background-color: transparent;
+      background-image: none;
+      color: $backdrop_headerbar_fg_color;
     }
 
     &:active,
@@ -317,6 +298,63 @@ headerbar {
       }
     }
 
+
+    // Title Button
+    &.titlebutton {
+      min-height: 16px;
+      min-width: 16px;
+      padding: 1px;
+      border-radius:50%;
+      background-color:transparent;
+      box-shadow: none;
+      text-shadow: none;
+      -gtk-icon-shadow: none;
+
+      &:hover {
+        background-color:transparent;
+        color:lighten($headerbar_fg_color, 10%);
+      }
+
+      &:backdrop {
+        background-color:transparent;
+        color:$backdrop_headerbar_fg_color;
+      }
+
+      &:active {
+        background-color:$headerbar_fg_color;
+        color:$headerbar_bg_color;
+        border-radius:50%;
+        box-shadow:none;
+      }
+    }
+
+    // Menu Button
+    &.menu-button,
+    &.title-menu-button {
+      padding: 1px;
+      background-color:transparent;
+      box-shadow: none;
+      text-shadow: none;
+      -gtk-icon-shadow: none;
+
+      &:hover {
+        background-color: transparentize(black, 0.9);
+        color:lighten($headerbar_fg_color, 10%);
+      }
+
+      &:backdrop {
+        background-color:transparent;
+        color:$backdrop_headerbar_fg_color;
+      }
+
+      &:active {
+        background-color:darken($headerbar_bg_color,10%);
+        color:$headerbar_fg_color;
+        box-shadow:none;
+      }
+    }
+
+    // Suggested Action Butotn
     &.suggested-action {
 
       &:hover {
