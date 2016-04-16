@@ -233,7 +233,7 @@ headerbar {
       &:backdrop {
         background-color: transparent;
         background-image: none;
-      text-shadow: none;
+        text-shadow: none;
         color: $backdrop_headerbar_fg_color;
       }
     }
@@ -269,6 +269,7 @@ headerbar {
 
       background-color: transparent;
       background-image: none;
+      color: $headerbar_fg_color;
 
       &:backdrop {
         background-color: transparent;

@@ -3885,7 +3885,8 @@ headerbar {
       -gtk-icon-shadow: none;
       box-shadow: inset 0 -2px 0 0 #ffffff;
       background-color: transparent;
-      background-image: none; }
+      background-image: none;
+      color: #ffffff; }
       .titlebar:not(headerbar) .button:active:backdrop, .titlebar:not(headerbar) .button:checked:backdrop,
       .titlebar:not(headerbar) button:active:backdrop,
       .titlebar:not(headerbar) button:checked:backdrop,
@@ -8274,7 +8275,7 @@ toolbar.vertical separator {
 /*******************
  * Inline Toolbars *
  *******************/
-searchbar
+searchbar,
 .search-bar, .location-bar,
 .inline-toolbar {
   -GtkWidget-window-dragging: true;
@@ -8285,19 +8286,23 @@ searchbar
   border-radius: 0 0 5px 5px;
   box-shadow: inset 0 -1px 1px -2px rgba(0, 0, 0, 0.5);
   padding: 0px; }
-  searchbar
+  searchbar:backdrop,
   .search-bar:backdrop, .location-bar:backdrop,
   .inline-toolbar:backdrop {
     background-color: #eaeaea; }
-  searchbar
+  searchbar button,
   .search-bar button, .location-bar button,
-  searchbar .search-bar .button,
+  searchbar .button,
+  .search-bar .button,
   .location-bar .button,
-  searchbar .search-bar .flat,
+  searchbar .flat,
+  .search-bar .flat,
   .location-bar .flat,
-  searchbar .search-bar .text-button,
+  searchbar .text-button,
+  .search-bar .text-button,
   .location-bar .text-button,
-  searchbar .search-bar .image-button,
+  searchbar .image-button,
+  .search-bar .image-button,
   .location-bar .image-button,
   .inline-toolbar button,
   .inline-toolbar .button,
@@ -8312,24 +8317,32 @@ searchbar
     color: #666666;
     border-radius: 0px;
     padding: 10px; }
-    searchbar
-    .search-bar button:focus, .location-bar button:focus, searchbar
+    searchbar button:focus,
+    .search-bar button:focus, .location-bar button:focus, searchbar button:active,
     .search-bar button:active, .location-bar button:active,
-    searchbar .search-bar .button:focus,
+    searchbar .button:focus,
+    .search-bar .button:focus,
     .location-bar .button:focus,
-    searchbar .search-bar .button:active,
+    searchbar .button:active,
+    .search-bar .button:active,
     .location-bar .button:active,
-    searchbar .search-bar .flat:focus,
+    searchbar .flat:focus,
+    .search-bar .flat:focus,
     .location-bar .flat:focus,
-    searchbar .search-bar .flat:active,
+    searchbar .flat:active,
+    .search-bar .flat:active,
     .location-bar .flat:active,
-    searchbar .search-bar .text-button:focus,
+    searchbar .text-button:focus,
+    .search-bar .text-button:focus,
     .location-bar .text-button:focus,
-    searchbar .search-bar .text-button:active,
+    searchbar .text-button:active,
+    .search-bar .text-button:active,
     .location-bar .text-button:active,
-    searchbar .search-bar .image-button:focus,
+    searchbar .image-button:focus,
+    .search-bar .image-button:focus,
     .location-bar .image-button:focus,
-    searchbar .search-bar .image-button:active,
+    searchbar .image-button:active,
+    .search-bar .image-button:active,
     .location-bar .image-button:active,
     .inline-toolbar button:focus,
     .inline-toolbar button:active,
@@ -8346,24 +8359,32 @@ searchbar
       text-shadow: none;
       box-shadow: none;
       background-color: rgba(0, 0, 0, 0.05); }
-      searchbar
-      .search-bar button:focus:backdrop, .location-bar button:focus:backdrop, searchbar
+      searchbar button:focus:backdrop,
+      .search-bar button:focus:backdrop, .location-bar button:focus:backdrop, searchbar button:active:backdrop,
       .search-bar button:active:backdrop, .location-bar button:active:backdrop,
-      searchbar .search-bar .button:focus:backdrop,
+      searchbar .button:focus:backdrop,
+      .search-bar .button:focus:backdrop,
       .location-bar .button:focus:backdrop,
-      searchbar .search-bar .button:active:backdrop,
+      searchbar .button:active:backdrop,
+      .search-bar .button:active:backdrop,
       .location-bar .button:active:backdrop,
-      searchbar .search-bar .flat:focus:backdrop,
+      searchbar .flat:focus:backdrop,
+      .search-bar .flat:focus:backdrop,
       .location-bar .flat:focus:backdrop,
-      searchbar .search-bar .flat:active:backdrop,
+      searchbar .flat:active:backdrop,
+      .search-bar .flat:active:backdrop,
       .location-bar .flat:active:backdrop,
-      searchbar .search-bar .text-button:focus:backdrop,
+      searchbar .text-button:focus:backdrop,
+      .search-bar .text-button:focus:backdrop,
       .location-bar .text-button:focus:backdrop,
-      searchbar .search-bar .text-button:active:backdrop,
+      searchbar .text-button:active:backdrop,
+      .search-bar .text-button:active:backdrop,
       .location-bar .text-button:active:backdrop,
-      searchbar .search-bar .image-button:focus:backdrop,
+      searchbar .image-button:focus:backdrop,
+      .search-bar .image-button:focus:backdrop,
       .location-bar .image-button:focus:backdrop,
-      searchbar .search-bar .image-button:active:backdrop,
+      searchbar .image-button:active:backdrop,
+      .search-bar .image-button:active:backdrop,
       .location-bar .image-button:active:backdrop,
       .inline-toolbar button:focus:backdrop,
       .inline-toolbar button:active:backdrop,
@@ -8378,15 +8399,19 @@ searchbar
         border: none;
         background-color: transparent;
         color: #afafaf; }
-    searchbar
+    searchbar button:hover,
     .search-bar button:hover, .location-bar button:hover,
-    searchbar .search-bar .button:hover,
+    searchbar .button:hover,
+    .search-bar .button:hover,
     .location-bar .button:hover,
-    searchbar .search-bar .flat:hover,
+    searchbar .flat:hover,
+    .search-bar .flat:hover,
     .location-bar .flat:hover,
-    searchbar .search-bar .text-button:hover,
+    searchbar .text-button:hover,
+    .search-bar .text-button:hover,
     .location-bar .text-button:hover,
-    searchbar .search-bar .image-button:hover,
+    searchbar .image-button:hover,
+    .search-bar .image-button:hover,
     .location-bar .image-button:hover,
     .inline-toolbar button:hover,
     .inline-toolbar .button:hover,
@@ -8397,15 +8422,19 @@ searchbar
       text-shadow: none;
       color: #666666;
       box-shadow: none; }
-    searchbar
+    searchbar button:insensitive,
     .search-bar button:insensitive, .location-bar button:insensitive,
-    searchbar .search-bar .button:insensitive,
+    searchbar .button:insensitive,
+    .search-bar .button:insensitive,
     .location-bar .button:insensitive,
-    searchbar .search-bar .flat:insensitive,
+    searchbar .flat:insensitive,
+    .search-bar .flat:insensitive,
     .location-bar .flat:insensitive,
-    searchbar .search-bar .text-button:insensitive,
+    searchbar .text-button:insensitive,
+    .search-bar .text-button:insensitive,
     .location-bar .text-button:insensitive,
-    searchbar .search-bar .image-button:insensitive,
+    searchbar .image-button:insensitive,
+    .search-bar .image-button:insensitive,
     .location-bar .image-button:insensitive,
     .inline-toolbar button:insensitive,
     .inline-toolbar .button:insensitive,
@@ -8415,15 +8444,19 @@ searchbar
       background: none;
       background-color: transparent;
       color: rgba(102, 102, 102, 0.5); }
-    searchbar
+    searchbar button:backdrop,
     .search-bar button:backdrop, .location-bar button:backdrop,
-    searchbar .search-bar .button:backdrop,
+    searchbar .button:backdrop,
+    .search-bar .button:backdrop,
     .location-bar .button:backdrop,
-    searchbar .search-bar .flat:backdrop,
+    searchbar .flat:backdrop,
+    .search-bar .flat:backdrop,
     .location-bar .flat:backdrop,
-    searchbar .search-bar .text-button:backdrop,
+    searchbar .text-button:backdrop,
+    .search-bar .text-button:backdrop,
     .location-bar .text-button:backdrop,
-    searchbar .search-bar .image-button:backdrop,
+    searchbar .image-button:backdrop,
+    .search-bar .image-button:backdrop,
     .location-bar .image-button:backdrop,
     .inline-toolbar button:backdrop,
     .inline-toolbar .button:backdrop,
@@ -8434,9 +8467,10 @@ searchbar
       background: none;
       background-color: transparent;
       color: #afafaf; }
-  searchbar
+  searchbar .entry,
   .search-bar .entry, .location-bar .entry,
-  searchbar .search-bar entry,
+  searchbar entry,
+  .search-bar entry,
   .location-bar entry,
   .inline-toolbar .entry,
   .inline-toolbar entry {
@@ -8445,49 +8479,53 @@ searchbar
     border-radius: 0px;
     border: none;
     box-shadow: none; }
-    searchbar
+    searchbar .entry.image,
     .search-bar .entry.image, .location-bar .entry.image,
-    searchbar .search-bar entry.image,
+    searchbar entry.image,
+    .search-bar entry.image,
     .location-bar entry.image,
     .inline-toolbar .entry.image,
     .inline-toolbar entry.image {
       color: #666666; }
-      searchbar
+      searchbar .entry.image.left,
       .search-bar .entry.image.left, .location-bar .entry.image.left,
-      searchbar .search-bar entry.image.left,
+      searchbar entry.image.left,
+      .search-bar entry.image.left,
       .location-bar entry.image.left,
       .inline-toolbar .entry.image.left,
       .inline-toolbar entry.image.left {
         padding-right: 6px; }
-    searchbar
+    searchbar .entry:backdrop,
     .search-bar .entry:backdrop, .location-bar .entry:backdrop,
-    searchbar .search-bar entry:backdrop,
+    searchbar entry:backdrop,
+    .search-bar entry:backdrop,
     .location-bar entry:backdrop,
     .inline-toolbar .entry:backdrop,
     .inline-toolbar entry:backdrop {
       color: #afafaf; }
-    searchbar
+    searchbar .entry:selected,
     .search-bar .entry:selected, .location-bar .entry:selected,
-    searchbar .search-bar entry:selected,
+    searchbar entry:selected,
+    .search-bar entry:selected,
     .location-bar entry:selected,
     .inline-toolbar .entry:selected,
     .inline-toolbar entry:selected {
       color: #ffffff;
       background-color: #449ac2; }
 
-searchbar
+searchbar,
 .search-bar, .location-bar {
   border-style: solid;
   border-color: #c4c4c4;
   background-color: #e8e8e8; }
-  searchbar
+  searchbar:backdrop,
   .search-bar:backdrop, .location-bar:backdrop {
     border-color: #c9c9c9;
     background-color: #e7e7e7;
     box-shadow: none;
     transition: 200ms ease-out; }
 
-searchbar
+searchbar,
 .search-bar {
   padding: 3px 0px;
   border-width: 0;
