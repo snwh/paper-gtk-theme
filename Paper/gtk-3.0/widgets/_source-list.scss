@@ -2,14 +2,13 @@
 * Source List *
 ***************/
 
-.source-list,
-.source-list.view {
+.source-list {
   -GtkTreeView-horizontal-separator: 1px;
   -GtkTreeView-vertical-separator: 6px;
 
   background-color: $bg_color;
-  color: $fg_color;
   border: solid $borders_color;
+  color: $fg_color;
   border-right-width: 1px;
 
   &:backdrop {}

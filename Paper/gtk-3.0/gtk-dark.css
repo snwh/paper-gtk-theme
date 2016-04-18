@@ -7666,25 +7666,16 @@ stacksidebar row {
 /**************
 * Source List *
 ***************/
-.source-list,
-.source-list.view,
-GtkIconView.source-list,
-iconview.source-list {
+.source-list {
   -GtkTreeView-horizontal-separator: 1px;
   -GtkTreeView-vertical-separator: 6px;
   background-color: #4F585C;
-  color: #A1A8AB;
   border: solid #33393b;
+  color: #A1A8AB;
   border-right-width: 1px; }
-  .source-list .category-expander,
-  .source-list.view .category-expander,
-  GtkIconView.source-list .category-expander,
-  iconview.source-list .category-expander {
+  .source-list .category-expander {
     color: transparent; }
-  .source-list .badge,
-  .source-list.view .badge,
-  GtkIconView.source-list .badge,
-  iconview.source-list .badge {
+  .source-list .badge {
     background-image: none;
     background-color: rgba(0, 0, 0, 0.4);
     color: #4F585C;
@@ -7692,41 +7683,17 @@ iconview.source-list {
     padding: 0 6px;
     margin: 0 3px;
     border-width: 0; }
-    .source-list .badge:selected:backdrop, .source-list .badge:selected:hover:backdrop,
-    .source-list.view .badge:selected:backdrop,
-    GtkIconView.source-list .badge:selected:backdrop,
-    iconview.source-list .badge:selected:backdrop,
-    .source-list.view .badge:selected:hover:backdrop,
-    GtkIconView.source-list .badge:selected:hover:backdrop,
-    iconview.source-list .badge:selected:hover:backdrop {
+    .source-list .badge:selected:backdrop, .source-list .badge:selected:hover:backdrop {
       background-color: rgba(0, 0, 0, 0.2);
       color: shade #4F585C, 0.95; }
   .source-list row,
-  .source-list .list-row,
-  .source-list.view row,
-  GtkIconView.source-list row,
-  iconview.source-list row,
-  .source-list.view .list-row,
-  GtkIconView.source-list .list-row,
-  iconview.source-list .list-row {
+  .source-list .list-row {
     border: none;
     padding: 0; }
     .source-list row > GtkLabel,
     .source-list row > label,
     .source-list .list-row > GtkLabel,
-    .source-list .list-row > label,
-    .source-list.view row > GtkLabel,
-    GtkIconView.source-list row > GtkLabel,
-    iconview.source-list row > GtkLabel,
-    .source-list.view row > label,
-    GtkIconView.source-list row > label,
-    iconview.source-list row > label,
-    .source-list.view .list-row > GtkLabel,
-    GtkIconView.source-list .list-row > GtkLabel,
-    iconview.source-list .list-row > GtkLabel,
-    .source-list.view .list-row > label,
-    GtkIconView.source-list .list-row > label,
-    iconview.source-list .list-row > label {
+    .source-list .list-row > label {
       padding-left: 6px;
       padding-right: 6px; }
 
@@ -9179,6 +9146,41 @@ BirdieWidgetsNotebook .header {
 BirdieWidgetsNotebook tab:active {
   box-shadow: inset 0 -3px 0 0 #3998E7; }
 
+/*********
+ * Geary *
+ *********/
+.geary-titlebar-left,
+.geary-titlebar-right {
+  background-color: #F2B035; }
+  .geary-titlebar-left:backdrop,
+  .geary-titlebar-right:backdrop {
+    background-color: #e59a0f; }
+  .geary-titlebar-left .separator,
+  .geary-titlebar-right .separator {
+    opacity: 0; }
+
+ConversationListView {
+  -GtkWidget-focus-line-width: 1px;
+  -GtkTreeView-grid-line-width: 0; }
+  ConversationListView .view:active, ConversationListView GtkIconView:active,
+  ConversationListView iconview:active, ConversationListView .view:selected, ConversationListView GtkIconView:selected,
+  ConversationListView iconview:selected {
+    background-color: #667f8c;
+    color: #ffffff; }
+    ConversationListView .view:active:backdrop, ConversationListView GtkIconView:active:backdrop,
+    ConversationListView iconview:active:backdrop, ConversationListView .view:selected:backdrop, ConversationListView GtkIconView:selected:backdrop,
+    ConversationListView iconview:selected:backdrop {
+      background-color: #738c99;
+      color: rgba(255, 255, 255, 0.5); }
+  ConversationListView .view .cell, ConversationListView GtkIconView .cell,
+  ConversationListView iconview .cell {
+    border: solid rgba(0, 0, 0, 0.2);
+    border-width: 0 0 1px 0; }
+    ConversationListView .view .cell:selected, ConversationListView GtkIconView .cell:selected,
+    ConversationListView iconview .cell:selected {
+      color: #ffffff;
+      border: 0px solid #51646e; }
+
 /***************
  * font-viewer *
  ***************/
@@ -9525,6 +9527,9 @@ CcWindow .header-bar {
   CcWindow .titlebar:backdrop,
   CcWindow .header-bar:backdrop {
     background-color: #4a616c; }
+
+CcShellNavBar {
+  padding: 0px; }
 
 /************
  * Software *
