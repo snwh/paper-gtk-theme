@@ -1,13 +1,21 @@
 // When color definition differs for dark and light variant
 // it gets @if ed depending on $variant
 
-
+// Main definitions
 $base_color: if($variant == 'light', #ffffff, #636E73);
 $bg_color: if($variant == 'light', #f7f7f7, #4F585C);
 $fg_color: if($variant == 'light', #666666, #A1A8AB);
 $text_color: if($variant == 'light', $fg_color, $fg_color);
 $headerbar_bg_color: if($variant == 'light', #636E73, #3B4245);
 $headerbar_fg_color: if($variant == 'light', #ffffff, transparentize(#ffffff, 0.2));
+
+// Primary colors
+$red: #f34235;
+$orange: #fe9700;
+$yellow: #feea3a;
+$green: #1ea362;
+$blue: #2095f2;
+$purple: #9b26af;
 
 $selected_fg_color: #ffffff;
 $selected_bg_color: if($variant == 'light', lighten(#347D9F, 10%), darken(#9fb0b9,20%));
@@ -30,12 +38,9 @@ $scrollbar_slider_color: mix($fg_color, $bg_color, 60%);
 $scrollbar_slider_hover_color: mix($fg_color, $bg_color, 80%);
 $scrollbar_slider_active_color: if($variant=='light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));
 
-$warning_color: #fec006;
-$error_color: #f34235;
-$info_color: #2095f2;
-$question_color: #4ab3e4;
-$success_color: if($variant == 'light', #dbdee0, darken(#dbdee0,10%));
-$destructive_color: if($variant == 'light', #DC322F, darken(#DC322F,10%));
+$success_color: if($variant == 'light', $green, darken($green,10%));
+$destructive_color: if($variant == 'light', $red, darken($red,10%));
+$suggested_color: if($variant == 'light', $selected_bg_color, darken($selected_bg_color,10%));
 
 $osd_fg_color: #A1A8AB;
 $osd_text_color: white;
@@ -51,6 +56,18 @@ $tooltip_borders_color: transparentize(white, 0.9);
 $shadow_color: transparentize(black, 0.9);
 
 $drop_target_color: #4e9a06;
+
+// Infobar colors
+$warning_color: $yellow;
+$error_color: $red;
+$info_color: $blue;
+$question_color: $green;
+
+// Panel colors
+$panel_bg_color: darken($headerbar_bg_color, 10%);
+$backdrop_panel_color: darken($panel_bg_color,10%); 
+$panel_fg_color: $headerbar_fg_color;
+$backdrop_panel_fg_color: darken($panel_fg_color,10%);
 
 // Insensitive state colors
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);

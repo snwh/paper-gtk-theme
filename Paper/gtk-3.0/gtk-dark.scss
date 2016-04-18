@@ -19,9 +19,8 @@
 $variant: 'dark';
 
 @import 'colors';
+@import 'colors-public';
 @import 'drawing';
 @import 'common';
-@import 'colors-public';
-
-
+@import 'widgets';
 @import 'apps';
