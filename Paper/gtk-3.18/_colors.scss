@@ -28,8 +28,8 @@ $top_highlight: $borders_edge;
 $bottom_highlight: if($variant == 'light', transparentize(white, 0.7), transparentize(white, 0.9));
 $dark_fill: mix($borders_color, $bg_color, 35%);
 $menu_color: if($variant == 'light', $base_color, mix($bg_color, $base_color, 20%));
-$popover_bg_color: $bg_color;
-$popover_hover_color: lighten($bg_color, 5%);
+$popover_bg_color: $base_color;
+$popover_hover_color: lighten($popover_bg_color, 5%);
 
 $selection_mode_headerbar_bg_color: #347D9F;
 

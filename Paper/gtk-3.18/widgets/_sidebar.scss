@@ -56,7 +56,7 @@
     &:hover {
       background-color: $base_color;
       color: $fg_color;
-      box-shadow:0 2px 2px 0 transparentize(black, 0.8);
+      box-shadow:0 1px 2px 0 transparentize(black, 0.8);
 
       &:backdrop {
         box-shadow:none;

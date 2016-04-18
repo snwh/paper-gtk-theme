@@ -1,43 +1,80 @@
 /************
  * Popovers *
  ************/
-GtkPopover,
-.popover.background {
-  padding: 2px;
-  border-radius: 4px;
-  border:none;
-  background-color: $popover_bg_color;
+.popover {
 
-  .csd &, & { border: 1px solid $borders_color; }
+  .background {
+    padding: 2px;
+    border-radius: 4px;
+    border:none;
+    background-color: $popover_bg_color;
 
-  box-shadow: 0 1px 2px transparentize(black, 0.7);
+    .csd &, & { border: 1px solid transparentize(black, 0.8); }
 
-  &:backdrop {
-    background-color: $backdrop_bg_color;
-    box-shadow: none;
-  }
+    box-shadow: 0 1px 2px transparentize(black, 0.7);
 
-  > .view,
-  > .toolbar {
-    border-style: none;
-    background-color: transparent;
-  }
-
-  .csd &, & {
-    &.touch-selection,
-    &.magnifier {
-      @extend %osd;
-
-      border: 1px solid transparentize(white, 0.9);
-
-      button { @extend %osd_button };
+    &:backdrop {
+      background-color: $backdrop_bg_color;
+      box-shadow: none;
     }
 
-    &.osd { @extend %osd; }
+    > .view,
+    > .toolbar {
+      border-style: none;
+      background-color: transparent;
+    }
+
+    .csd &, & {
+      &.touch-selection,
+      &.magnifier {
+        @extend %osd;
+
+        border: 1px solid transparentize(white, 0.9);
+
+        button { @extend %osd_button };
+      }
+
+      &.osd { @extend %osd; }
+    }
   }
 
   .separator { margin: 3px; }
 
   .check,
   .radio { @extend modelbutton.flat; }
+
+  .menuitem {
+    padding: 8px;
+    text-shadow: none;
+
+    &:hover {
+      color: $selected_fg_color;
+      background-color: $selected_bg_color;
+    }
+
+    &:insensitive {
+      color: $insensitive_fg_color;
+      &:backdrop { color: $backdrop_insensitive_color; }
+    }
+
+    &:backdrop,
+    &:backdrop:hover {
+      color: $backdrop_fg_color;
+      background-color: transparent;
+    }
+
+    // submenu indicators
+    .arrow {
+
+      &:dir(ltr) {
+        -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+        margin-left: 10px;
+      }
+
+      &:dir(rtl) {
+        -gtk-icon-source:-gtk-icontheme('pan-end-symbolic-rtl');
+        margin-right: 10px;
+      }
+    }
+  }
 }

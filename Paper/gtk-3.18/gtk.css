@@ -237,13 +237,7 @@ GtkLabel:backdrop {
   text-shadow: none; }
 
 .app-notification,
-.app-notification.frame, .osd .scale-popup, .csd GtkPopover.touch-selection, .csd GtkPopover.magnifier, GtkPopover.touch-selection, GtkPopover.magnifier, .csd
-.popover.background.touch-selection, .csd
-.popover.background.magnifier,
-.popover.background.touch-selection,
-.popover.background.magnifier, .csd GtkPopover.osd, GtkPopover.osd, .csd
-.popover.background.osd,
-.popover.background.osd,
+.app-notification.frame, .osd .scale-popup, .csd .popover .background.touch-selection, .csd .popover .background.magnifier, .popover .background.touch-selection, .popover .background.magnifier, .csd .popover .background.osd, .popover .background.osd,
 .osd {
   color: #A1A8AB;
   border: none;
@@ -252,20 +246,15 @@ GtkLabel:backdrop {
   outline-color: rgba(161, 168, 171, 0.3);
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black; }
-  .app-notification:backdrop, .osd .scale-popup:backdrop, GtkPopover.touch-selection:backdrop, GtkPopover.magnifier:backdrop,
-  .popover.background.touch-selection:backdrop,
-  .popover.background.magnifier:backdrop, GtkPopover.osd:backdrop,
-  .popover.background.osd:backdrop,
+  .app-notification:backdrop, .osd .scale-popup:backdrop, .popover .background.touch-selection:backdrop, .popover .background.magnifier:backdrop, .popover .background.osd:backdrop,
   .osd:backdrop {
     text-shadow: none;
     icon-shadow: none; }
 
 .view:selected:focus, GtkIconView:selected:focus, .view:selected, GtkIconView:selected,
 GtkTextView GtkLabel:selected:focus,
-GtkTextView GtkLabel:selected, GtkTextView GtkLabel selection:focus, GtkTextView GtkLabel selection, GtkFlow flowboxchild:selected, modelbutton.flat:selected, GtkPopover .check:selected,
-GtkPopover .radio:selected,
-.popover.background .check:selected,
-.popover.background .radio:selected,
+GtkTextView GtkLabel:selected, GtkTextView GtkLabel selection:focus, GtkTextView GtkLabel selection, GtkFlow flowboxchild:selected, modelbutton.flat:selected, .popover .check:selected,
+.popover .radio:selected,
 .menuitem.button.flat:selected, GtkCalendar:selected, .spinbutton:selected:not(.vertical),
 .entry:selected:focus,
 .entry:selected, .list-row:selected, GtkTreeView.view:selected:focus, GtkTreeView.view:selected,
@@ -274,10 +263,8 @@ treeview.view:selected {
   background-color: #347D9F; }
   .list-row:selected GtkLabel, row:selected GtkLabel, GtkLabel:selected, .view:selected:focus, GtkIconView:selected:focus, .view:selected, GtkIconView:selected,
   GtkTextView GtkLabel:selected:focus,
-  GtkTextView GtkLabel:selected, GtkTextView GtkLabel selection:focus, GtkTextView GtkLabel selection, GtkFlow flowboxchild:selected, modelbutton.flat:selected, GtkPopover .check:selected,
-  GtkPopover .radio:selected,
-  .popover.background .check:selected,
-  .popover.background .radio:selected,
+  GtkTextView GtkLabel:selected, GtkTextView GtkLabel selection:focus, GtkTextView GtkLabel selection, GtkFlow flowboxchild:selected, modelbutton.flat:selected, .popover .check:selected,
+  .popover .radio:selected,
   .menuitem.button.flat:selected, GtkCalendar:selected, .spinbutton:selected:not(.vertical),
   .entry:selected:focus,
   .entry:selected, .list-row:selected, GtkTreeView.view:selected:focus, GtkTreeView.view:selected,
@@ -286,25 +273,19 @@ treeview.view:selected {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3); }
     .list-row:selected GtkLabel:insensitive, row:selected GtkLabel:insensitive, GtkLabel:insensitive:selected, GtkIconView:insensitive:selected:focus, .view:insensitive:selected, GtkIconView:insensitive:selected,
-    GtkTextView GtkLabel:insensitive:selected:focus, GtkTextView GtkLabel selection:insensitive, GtkFlow flowboxchild:insensitive:selected, GtkLabel:insensitive:selected, modelbutton.flat:insensitive:selected, GtkPopover .check:insensitive:selected,
-    GtkPopover .radio:insensitive:selected,
-    .popover.background .check:insensitive:selected,
-    .popover.background .radio:insensitive:selected,
+    GtkTextView GtkLabel:insensitive:selected:focus, GtkTextView GtkLabel selection:insensitive, GtkFlow flowboxchild:insensitive:selected, GtkLabel:insensitive:selected, modelbutton.flat:insensitive:selected, .popover .check:insensitive:selected,
+    .popover .radio:insensitive:selected,
     .menuitem.button.flat:insensitive:selected, GtkCalendar:insensitive:selected, .spinbutton:insensitive:selected:not(.vertical),
     .entry:insensitive:selected, .list-row:insensitive:selected {
       color: #9abecf; }
     .list-row:selected GtkLabel:backdrop, row:selected GtkLabel:backdrop, GtkLabel:backdrop:selected, GtkIconView:backdrop:selected:focus, .view:backdrop:selected, GtkIconView:backdrop:selected,
-    GtkTextView GtkLabel:backdrop:selected:focus, GtkTextView GtkLabel selection:backdrop, GtkFlow flowboxchild:backdrop:selected, GtkLabel:backdrop:selected, modelbutton.flat:backdrop:selected, GtkPopover .check:backdrop:selected,
-    GtkPopover .radio:backdrop:selected,
-    .popover.background .check:backdrop:selected,
-    .popover.background .radio:backdrop:selected,
+    GtkTextView GtkLabel:backdrop:selected:focus, GtkTextView GtkLabel selection:backdrop, GtkFlow flowboxchild:backdrop:selected, GtkLabel:backdrop:selected, modelbutton.flat:backdrop:selected, .popover .check:backdrop:selected,
+    .popover .radio:backdrop:selected,
     .menuitem.button.flat:backdrop:selected, GtkCalendar:backdrop:selected, .spinbutton:backdrop:selected:not(.vertical),
     .entry:backdrop:selected, .list-row:backdrop:selected {
       color: rgba(255, 255, 255, 0.5); }
-      .list-row:selected GtkLabel:backdrop:insensitive, row:selected GtkLabel:backdrop:insensitive, GtkLabel:backdrop:insensitive:selected, .view:backdrop:insensitive:selected, GtkIconView:backdrop:insensitive:selected, GtkTextView GtkLabel selection:backdrop:insensitive, GtkFlow flowboxchild:backdrop:insensitive:selected, GtkLabel:backdrop:insensitive:selected, modelbutton.flat:backdrop:insensitive:selected, GtkPopover .check:backdrop:insensitive:selected,
-      GtkPopover .radio:backdrop:insensitive:selected,
-      .popover.background .check:backdrop:insensitive:selected,
-      .popover.background .radio:backdrop:insensitive:selected,
+      .list-row:selected GtkLabel:backdrop:insensitive, row:selected GtkLabel:backdrop:insensitive, GtkLabel:backdrop:insensitive:selected, .view:backdrop:insensitive:selected, GtkIconView:backdrop:insensitive:selected, GtkTextView GtkLabel selection:backdrop:insensitive, GtkFlow flowboxchild:backdrop:insensitive:selected, GtkLabel:backdrop:insensitive:selected, modelbutton.flat:backdrop:insensitive:selected, .popover .check:backdrop:insensitive:selected,
+      .popover .radio:backdrop:insensitive:selected,
       .menuitem.button.flat:backdrop:insensitive:selected, GtkCalendar:backdrop:insensitive:selected, .spinbutton:backdrop:insensitive:selected:not(.vertical),
       .entry:backdrop:insensitive:selected, .list-row:backdrop:insensitive:selected {
         color: rgba(77, 141, 171, 0.85); }
@@ -578,11 +559,7 @@ row:selected
     border: none; }
 .app-notification .button, .app-notification button,
 .app-notification.frame .button,
-.app-notification.frame button, .csd GtkPopover.touch-selection button, .csd GtkPopover.magnifier button, GtkPopover.touch-selection button, GtkPopover.magnifier button, .csd
-.popover.background.touch-selection button, .csd
-.popover.background.magnifier button,
-.popover.background.touch-selection button,
-.popover.background.magnifier button, .osd
+.app-notification.frame button, .csd .popover .background.touch-selection button, .csd .popover .background.magnifier button, .popover .background.touch-selection button, .popover .background.magnifier button, .osd
 .button {
   color: #A1A8AB;
   border-color: rgba(0, 0, 0, 0.7);
@@ -592,9 +569,7 @@ row:selected
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black;
   outline-color: rgba(161, 168, 171, 0.3); }
-  .app-notification .button:hover, .app-notification button:hover, GtkPopover.touch-selection button:hover, GtkPopover.magnifier button:hover,
-  .popover.background.touch-selection button:hover,
-  .popover.background.magnifier button:hover, .osd
+  .app-notification .button:hover, .app-notification button:hover, .popover .background.touch-selection button:hover, .popover .background.magnifier button:hover, .osd
   .button:hover {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
@@ -604,15 +579,7 @@ row:selected
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
     outline-color: rgba(161, 168, 171, 0.3); }
-  .app-notification .button:active:backdrop, .app-notification button:active:backdrop, GtkPopover.touch-selection button:active:backdrop, GtkPopover.magnifier button:active:backdrop,
-  .popover.background.touch-selection button:active:backdrop,
-  .popover.background.magnifier button:active:backdrop, .app-notification .button:active, .app-notification button:active, GtkPopover.touch-selection button:active, GtkPopover.magnifier button:active,
-  .popover.background.touch-selection button:active,
-  .popover.background.magnifier button:active, .app-notification .button:checked:backdrop, .app-notification button:checked:backdrop, GtkPopover.touch-selection button:checked:backdrop, GtkPopover.magnifier button:checked:backdrop,
-  .popover.background.touch-selection button:checked:backdrop,
-  .popover.background.magnifier button:checked:backdrop, .app-notification .button:checked, .app-notification button:checked, GtkPopover.touch-selection button:checked, GtkPopover.magnifier button:checked,
-  .popover.background.touch-selection button:checked,
-  .popover.background.magnifier button:checked, .osd
+  .app-notification .button:active:backdrop, .app-notification button:active:backdrop, .popover .background.touch-selection button:active:backdrop, .popover .background.magnifier button:active:backdrop, .app-notification .button:active, .app-notification button:active, .popover .background.touch-selection button:active, .popover .background.magnifier button:active, .app-notification .button:checked:backdrop, .app-notification button:checked:backdrop, .popover .background.touch-selection button:checked:backdrop, .popover .background.magnifier button:checked:backdrop, .app-notification .button:checked, .app-notification button:checked, .popover .background.touch-selection button:checked, .popover .background.magnifier button:checked, .osd
   .button:active:backdrop, .osd
   .button:active, .osd
   .button:checked:backdrop, .osd
@@ -625,11 +592,7 @@ row:selected
     text-shadow: none;
     icon-shadow: none;
     outline-color: rgba(161, 168, 171, 0.3); }
-  .app-notification .button:insensitive:backdrop, .app-notification button:insensitive:backdrop, GtkPopover.touch-selection button:insensitive:backdrop, GtkPopover.magnifier button:insensitive:backdrop,
-  .popover.background.touch-selection button:insensitive:backdrop,
-  .popover.background.magnifier button:insensitive:backdrop, .app-notification .button:insensitive, .app-notification button:insensitive, GtkPopover.touch-selection button:insensitive, GtkPopover.magnifier button:insensitive,
-  .popover.background.touch-selection button:insensitive,
-  .popover.background.magnifier button:insensitive, .osd
+  .app-notification .button:insensitive:backdrop, .app-notification button:insensitive:backdrop, .popover .background.touch-selection button:insensitive:backdrop, .popover .background.magnifier button:insensitive:backdrop, .app-notification .button:insensitive, .app-notification button:insensitive, .popover .background.touch-selection button:insensitive, .popover .background.magnifier button:insensitive, .osd
   .button:insensitive:backdrop, .osd
   .button:insensitive {
     color: #616769;
@@ -639,9 +602,7 @@ row:selected
     box-shadow: none;
     text-shadow: none;
     icon-shadow: none; }
-  .app-notification .button:backdrop, .app-notification button:backdrop, GtkPopover.touch-selection button:backdrop, GtkPopover.magnifier button:backdrop,
-  .popover.background.touch-selection button:backdrop,
-  .popover.background.magnifier button:backdrop, .osd
+  .app-notification .button:backdrop, .app-notification button:backdrop, .popover .background.touch-selection button:backdrop, .popover .background.magnifier button:backdrop, .osd
   .button:backdrop {
     color: #A1A8AB;
     border-color: rgba(0, 0, 0, 0.7);
@@ -650,9 +611,7 @@ row:selected
     box-shadow: none;
     text-shadow: none;
     icon-shadow: none; }
-  .app-notification .flat.button, .app-notification button.flat, GtkPopover.touch-selection button.flat, GtkPopover.magnifier button.flat,
-  .popover.background.touch-selection button.flat,
-  .popover.background.magnifier button.flat, .osd
+  .app-notification .flat.button, .app-notification button.flat, .popover .background.touch-selection button.flat, .popover .background.magnifier button.flat, .osd
   .button.flat {
     border-color: transparent;
     background-color: transparent;
@@ -663,9 +622,7 @@ row:selected
     box-shadow: none;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black; }
-    .app-notification .flat.button:hover, .app-notification button.flat:hover, GtkPopover.touch-selection button.flat:hover, GtkPopover.magnifier button.flat:hover,
-    .popover.background.touch-selection button.flat:hover,
-    .popover.background.magnifier button.flat:hover, .osd
+    .app-notification .flat.button:hover, .app-notification button.flat:hover, .popover .background.touch-selection button.flat:hover, .popover .background.magnifier button.flat:hover, .osd
     .button.flat:hover {
       color: white;
       border-color: rgba(0, 0, 0, 0.7);
@@ -675,9 +632,7 @@ row:selected
       text-shadow: 0 1px black;
       icon-shadow: 0 1px black;
       outline-color: rgba(161, 168, 171, 0.3); }
-    .app-notification .flat.button:insensitive, .app-notification button.flat:insensitive, GtkPopover.touch-selection button.flat:insensitive, GtkPopover.magnifier button.flat:insensitive,
-    .popover.background.touch-selection button.flat:insensitive,
-    .popover.background.magnifier button.flat:insensitive, .osd
+    .app-notification .flat.button:insensitive, .app-notification button.flat:insensitive, .popover .background.touch-selection button.flat:insensitive, .popover .background.magnifier button.flat:insensitive, .osd
     .button.flat:insensitive {
       color: #616769;
       border-color: rgba(0, 0, 0, 0.7);
@@ -689,9 +644,7 @@ row:selected
       background-image: none;
       border-color: transparent;
       box-shadow: none; }
-    .app-notification .flat.button:backdrop, .app-notification button.flat:backdrop, GtkPopover.touch-selection button.flat:backdrop, GtkPopover.magnifier button.flat:backdrop,
-    .popover.background.touch-selection button.flat:backdrop,
-    .popover.background.magnifier button.flat:backdrop, .osd
+    .app-notification .flat.button:backdrop, .app-notification button.flat:backdrop, .popover .background.touch-selection button.flat:backdrop, .popover .background.magnifier button.flat:backdrop, .osd
     .button.flat:backdrop {
       border-color: transparent;
       background-color: transparent;
@@ -699,11 +652,7 @@ row:selected
       box-shadow: inset 0 1px rgba(255, 255, 255, 0);
       text-shadow: none;
       icon-shadow: none; }
-    .app-notification .flat.button:active, .app-notification button.flat:active, GtkPopover.touch-selection button.flat:active, GtkPopover.magnifier button.flat:active,
-    .popover.background.touch-selection button.flat:active,
-    .popover.background.magnifier button.flat:active, .app-notification .flat.button:checked, .app-notification button.flat:checked, GtkPopover.touch-selection button.flat:checked, GtkPopover.magnifier button.flat:checked,
-    .popover.background.touch-selection button.flat:checked,
-    .popover.background.magnifier button.flat:checked, .osd
+    .app-notification .flat.button:active, .app-notification button.flat:active, .popover .background.touch-selection button.flat:active, .popover .background.magnifier button.flat:active, .app-notification .flat.button:checked, .app-notification button.flat:checked, .popover .background.touch-selection button.flat:checked, .popover .background.magnifier button.flat:checked, .osd
     .button.flat:active, .osd
     .button.flat:checked {
       color: white;
@@ -1320,15 +1269,11 @@ toolbar.inline-toolbar toolbutton:backdrop:only-child > button.flat, .linked:not
   border-radius: 3px;
   border-style: solid; }
 
-modelbutton.flat, GtkPopover .check,
-GtkPopover .radio,
-.popover.background .check,
-.popover.background .radio,
-.menuitem.button.flat, modelbutton.flat:backdrop, GtkPopover .check:backdrop,
-GtkPopover .radio:backdrop, modelbutton.flat:backdrop:hover, GtkPopover .check:backdrop:hover,
-GtkPopover .radio:backdrop:hover,
-.popover.background .check:backdrop:hover,
-.popover.background .radio:backdrop:hover,
+modelbutton.flat, .popover .check,
+.popover .radio,
+.menuitem.button.flat, modelbutton.flat:backdrop, .popover .check:backdrop,
+.popover .radio:backdrop, modelbutton.flat:backdrop:hover, .popover .check:backdrop:hover,
+.popover .radio:backdrop:hover,
 .menuitem.button.flat:backdrop,
 .menuitem.button.flat:backdrop:hover, GtkCalendar.button, GtkCalendar.button:hover, GtkCalendar.button:backdrop, GtkCalendar.button:insensitive, .button:link,
 .button:visited, .button:link:hover, .button:link:active, .button:link:checked,
@@ -1347,65 +1292,45 @@ GtkPopover .radio:backdrop:hover,
   icon-shadow: none; }
 
 /* menu buttons */
-modelbutton.flat, GtkPopover .check,
-GtkPopover .radio,
-.popover.background .check,
-.popover.background .radio,
+modelbutton.flat, .popover .check,
+.popover .radio,
 .menuitem.button.flat {
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 3px;
   outline-offset: -2px; }
-  modelbutton.flat:hover, GtkPopover .check:hover,
-  GtkPopover .radio:hover,
-  .popover.background .check:hover,
-  .popover.background .radio:hover,
+  modelbutton.flat:hover, .popover .check:hover,
+  .popover .radio:hover,
   .menuitem.button.flat:hover {
     background-color: white; }
-  modelbutton.flat check:last-child, GtkPopover .check check:last-child,
-  GtkPopover .radio check:last-child,
-  .popover.background .check check:last-child,
-  .popover.background .radio check:last-child,
+  modelbutton.flat check:last-child, .popover .check check:last-child,
+  .popover .radio check:last-child,
   modelbutton.flat radio:last-child,
-  GtkPopover .check radio:last-child,
-  GtkPopover .radio radio:last-child,
-  .popover.background .check radio:last-child,
-  .popover.background .radio radio:last-child,
+  .popover .check radio:last-child,
+  .popover .radio radio:last-child,
   .menuitem.button.flat check:last-child,
   .menuitem.button.flat radio:last-child {
     margin-left: 8px; }
-  modelbutton.flat check:first-child, GtkPopover .check check:first-child,
-  GtkPopover .radio check:first-child,
-  .popover.background .check check:first-child,
-  .popover.background .radio check:first-child,
+  modelbutton.flat check:first-child, .popover .check check:first-child,
+  .popover .radio check:first-child,
   modelbutton.flat radio:first-child,
-  GtkPopover .check radio:first-child,
-  GtkPopover .radio radio:first-child,
-  .popover.background .check radio:first-child,
-  .popover.background .radio radio:first-child,
+  .popover .check radio:first-child,
+  .popover .radio radio:first-child,
   .menuitem.button.flat check:first-child,
   .menuitem.button.flat radio:first-child {
     margin-right: 8px; }
 
-modelbutton.flat arrow, GtkPopover .check arrow,
-GtkPopover .radio arrow,
-.popover.background .check arrow,
-.popover.background .radio arrow {
+modelbutton.flat arrow, .popover .check arrow,
+.popover .radio arrow {
   background: none; }
-  modelbutton.flat arrow:hover, GtkPopover .check arrow:hover,
-  GtkPopover .radio arrow:hover,
-  .popover.background .check arrow:hover,
-  .popover.background .radio arrow:hover {
+  modelbutton.flat arrow:hover, .popover .check arrow:hover,
+  .popover .radio arrow:hover {
     background: none; }
-  modelbutton.flat arrow.left, GtkPopover .check arrow.left,
-  GtkPopover .radio arrow.left,
-  .popover.background .check arrow.left,
-  .popover.background .radio arrow.left {
+  modelbutton.flat arrow.left, .popover .check arrow.left,
+  .popover .radio arrow.left {
     -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
-  modelbutton.flat arrow.right, GtkPopover .check arrow.right,
-  GtkPopover .radio arrow.right,
-  .popover.background .check arrow.right,
-  .popover.background .radio arrow.right {
+  modelbutton.flat arrow.right, .popover .check arrow.right,
+  .popover .radio arrow.right {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 
 button.color {
@@ -2778,9 +2703,16 @@ GraniteWidgetsWelcome {
         color: white;
         box-shadow: none;
         text-shadow: none; }
+    .titlebar:not(headerbar) .button GtkLabel,
     .titlebar:not(headerbar) .button GtkImage,
+    .header-bar .button GtkLabel,
     .header-bar .button GtkImage {
       color: #ffffff; }
+      .titlebar:not(headerbar) .button GtkLabel:backdrop,
+      .titlebar:not(headerbar) .button GtkImage:backdrop,
+      .header-bar .button GtkLabel:backdrop,
+      .header-bar .button GtkImage:backdrop {
+        color: rgba(255, 255, 255, 0.5); }
     .titlebar:not(headerbar) .button:focus, .titlebar:not(headerbar) .button:hover,
     .header-bar .button:focus,
     .header-bar .button:hover {
@@ -3275,7 +3207,8 @@ GtkLevelBar,
   border: 1px solid #d1d1d1;
   border-radius: 4px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.1); }
-  .csd .menu, .csd
+  .csd
+  .menu, .csd
   .popup {
     border: none; }
   .menu:backdrop,
@@ -3295,7 +3228,8 @@ GtkLevelBar,
       .menu .menuitem:insensitive:backdrop,
       .popup .menuitem:insensitive:backdrop {
         color: #d1d1d1; }
-    .menu .menuitem:backdrop, .menu .menuitem:backdrop:hover,
+    .menu .menuitem:backdrop,
+    .menu .menuitem:backdrop:hover,
     .popup .menuitem:backdrop,
     .popup .menuitem:backdrop:hover {
       color: #afafaf;
@@ -3544,37 +3478,44 @@ GtkAssistant {
 /************
  * Popovers *
  ************/
-GtkPopover,
-.popover.background {
+.popover .background {
   padding: 2px;
   border-radius: 4px;
   border: none;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
-  .csd GtkPopover, GtkPopover, .csd
-  .popover.background,
-  .popover.background {
-    border: 1px solid #d1d1d1; }
-  GtkPopover:backdrop,
-  .popover.background:backdrop {
+  .csd .popover .background, .popover .background {
+    border: 1px solid rgba(0, 0, 0, 0.2); }
+  .popover .background:backdrop {
     background-color: #f7f7f7;
     box-shadow: none; }
-  GtkPopover > .view, GtkPopover > GtkIconView,
-  GtkPopover > .toolbar,
-  .popover.background > .view,
-  .popover.background > GtkIconView,
-  .popover.background > .toolbar {
+  .popover .background > .view, .popover .background > GtkIconView,
+  .popover .background > .toolbar {
     border-style: none;
     background-color: transparent; }
-  .csd GtkPopover.touch-selection, .csd GtkPopover.magnifier, GtkPopover.touch-selection, GtkPopover.magnifier, .csd
-  .popover.background.touch-selection, .csd
-  .popover.background.magnifier,
-  .popover.background.touch-selection,
-  .popover.background.magnifier {
+  .csd .popover .background.touch-selection, .csd .popover .background.magnifier, .popover .background.touch-selection, .popover .background.magnifier {
     border: 1px solid rgba(255, 255, 255, 0.1); }
-  GtkPopover .separator,
-  .popover.background .separator {
-    margin: 3px; }
+.popover .separator {
+  margin: 3px; }
+.popover .menuitem {
+  padding: 8px;
+  text-shadow: none; }
+  .popover .menuitem:hover {
+    color: #ffffff;
+    background-color: #347D9F; }
+  .popover .menuitem:insensitive {
+    color: #afafaf; }
+    .popover .menuitem:insensitive:backdrop {
+      color: #d1d1d1; }
+  .popover .menuitem:backdrop, .popover .menuitem:backdrop:hover {
+    color: #afafaf;
+    background-color: transparent; }
+  .popover .menuitem .arrow:dir(ltr) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+    margin-left: 10px; }
+  .popover .menuitem .arrow:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+    margin-right: 10px; }
 
 /*****************
  * Progress bars *
@@ -4079,7 +4020,7 @@ OsScrollbar {
     .sidebar .sidebar-row:hover {
       background-color: #ffffff;
       color: #666666;
-      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
       .sidebar .sidebar-item:hover:backdrop,
       .sidebar .sidebar-row:hover:backdrop {
         box-shadow: none; }
@@ -5544,16 +5485,12 @@ YelpWindow .header-bar {
     background-color: #000; }
   .panel .translucent {
     background-color: rgba(0, 0, 0, 0.5); }
-  .panel .color-light .composited-indicator > revealer label,
-  .panel .color-light .composited-indicator > revealer image,
-  .panel .color-light .composited-indicator > GtkRevealer {
+  .panel .color-light .composited-indicator GtkRevealer {
     color: rgba(0, 0, 0, 0.35);
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.3), 0 1px 0 rgba(255, 255, 255, 0.25);
     icon-shadow: 0 0 2px rgba(255, 255, 255, 0.3), 0 1px 0 rgba(255, 255, 255, 0.25); }
 
-.composited-indicator > revealer label,
-.composited-indicator > revealer image,
-.composited-indicator > GtkRevealer {
+.composited-indicator GtkRevealer {
   color: #ffffff;
   font-weight: bold;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.6);

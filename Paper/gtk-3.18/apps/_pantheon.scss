@@ -135,9 +135,7 @@
 
     .composited-indicator {
 
-      > revealer label,
-      > revealer image,
-      > GtkRevealer {
+      GtkRevealer {
         color: transparentize(black, 0.65);
         text-shadow: 0 0 2px transparentize(white, 0.7),
                      0 1px 0 transparentize(white, 0.75);
@@ -150,9 +148,7 @@
 
 .composited-indicator {
 
-  > revealer label,
-  > revealer image,
-  > GtkRevealer {
+  GtkRevealer {
     color: $base_color;
     font-weight: bold;
     text-shadow: 0 0 2px transparentize(black, 0.7),
