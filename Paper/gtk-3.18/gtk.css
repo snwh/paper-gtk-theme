@@ -3661,8 +3661,8 @@ GtkProgressBar .progressbar,
   border-radius: 4px; }
   GtkProgressBar .progressbar:insensitive,
   .progressbar .progressbar:insensitive, .scale .highlight:insensitive {
-    border: 1px solid #ababab;
-    background-color: #c4c4c4; }
+    border: 1px solid #d1d1d1;
+    background-color: rgba(0, 0, 0, 0.1); }
   GtkProgressBar .progressbar:backdrop,
   .progressbar .progressbar:backdrop, GtkProgressBar:backdrop .progressbar,
   .progressbar:backdrop .progressbar, GtkProgressBar:backdrop progress,

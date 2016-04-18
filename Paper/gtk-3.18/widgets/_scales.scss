@@ -49,8 +49,8 @@
 
 
   &:insensitive {
-    border: 1px solid darken($borders_color, 15%);
-    background-color: darken($bg_color, 20%);
+    border: 1px solid $borders_color;
+    background-color: transparentize(black, 0.9);
   }
 
   &:backdrop,
