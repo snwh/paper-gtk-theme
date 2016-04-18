@@ -26,16 +26,16 @@
 }
 
 %menu,
+.content-view .menu,
 .menu,
 .popup {
   padding: 4px 0px;
   background-color: $menu_color;
-  border: 1px solid $borders_color; // adds borders in a non composited env
+  border: 1px solid $borders_color;
   border-radius: 4px;
-  box-shadow: 0 2px 4px 0 transparentize(black,0.9),
-              inset 0 1px 0 0 transparentize(white,0.9);
+  box-shadow: 0 2px 4px 0 transparentize(black,0.9), inset 0 1px 0 0 $top_highlight;
 
-  .csd & { border: none; }  // axes borders in a composited env
+  .csd & {border: none;}
 
   &:backdrop { background-color: $backdrop_menu_color; }
 

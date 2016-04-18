@@ -2591,7 +2591,8 @@ GraniteWidgetsWelcome {
     color: #ffffff; }
     .default-decoration.titlebar:not(headerbar) .maximized,
     .header-bar.default-decoration .maximized {
-      padding: 6px; }
+      padding: 6px;
+      border-radius: 0; }
     .default-decoration.titlebar:backdrop:not(headerbar),
     .header-bar.default-decoration:backdrop {
       background-color: #576165;
@@ -3200,48 +3201,60 @@ GtkLevelBar,
       color: #afafaf;
       box-shadow: none; }
 
+.content-view .menu,
 .menu,
 .popup {
   padding: 4px 0px;
   background-color: #ffffff;
   border: 1px solid #d1d1d1;
   border-radius: 4px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.1); }
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.2); }
   .csd
+  .content-view .menu, .csd
   .menu, .csd
   .popup {
     border: none; }
+  .content-view .menu:backdrop,
   .menu:backdrop,
   .popup:backdrop {
     background-color: #fcfcfc; }
+  .content-view .menu .menuitem,
   .menu .menuitem,
   .popup .menuitem {
     padding: 8px 4px;
     text-shadow: none; }
+    .content-view .menu .menuitem:hover,
     .menu .menuitem:hover,
     .popup .menuitem:hover {
       color: #ffffff;
       background-color: #347D9F; }
+    .content-view .menu .menuitem:insensitive,
     .menu .menuitem:insensitive,
     .popup .menuitem:insensitive {
       color: #afafaf; }
+      .content-view .menu .menuitem:insensitive:backdrop,
       .menu .menuitem:insensitive:backdrop,
       .popup .menuitem:insensitive:backdrop {
         color: #d1d1d1; }
+    .content-view .menu .menuitem:backdrop,
+    .content-view .menu .menuitem:backdrop:hover,
     .menu .menuitem:backdrop,
     .menu .menuitem:backdrop:hover,
     .popup .menuitem:backdrop,
     .popup .menuitem:backdrop:hover {
       color: #afafaf;
       background-color: transparent; }
+    .content-view .menu .menuitem .arrow:dir(ltr),
     .menu .menuitem .arrow:dir(ltr),
     .popup .menuitem .arrow:dir(ltr) {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
       margin-left: 10px; }
+    .content-view .menu .menuitem .arrow:dir(rtl),
     .menu .menuitem .arrow:dir(rtl),
     .popup .menuitem .arrow:dir(rtl) {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
       margin-right: 10px; }
+  .content-view .menu > .arrow,
   .menu > .arrow,
   .popup > .arrow {
     border-color: transparent;
@@ -3253,22 +3266,27 @@ GtkLevelBar,
     padding: 4px;
     background-color: #ffffff;
     border-radius: 0; }
+    .content-view .menu > .arrow.top,
     .menu > .arrow.top,
     .popup > .arrow.top {
       margin-top: -6px;
       border-bottom: 1px solid #f0f0f0;
       -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+    .content-view .menu > .arrow.bottom,
     .menu > .arrow.bottom,
     .popup > .arrow.bottom {
       margin-bottom: -6px;
       border-top: 1px solid #f0f0f0;
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+    .content-view .menu > .arrow:hover,
     .menu > .arrow:hover,
     .popup > .arrow:hover {
       background-color: #f0f0f0; }
+    .content-view .menu > .arrow:backdrop,
     .menu > .arrow:backdrop,
     .popup > .arrow:backdrop {
       background-color: #fcfcfc; }
+    .content-view .menu > .arrow:insensitive,
     .menu > .arrow:insensitive,
     .popup > .arrow:insensitive {
       color: transparent;
@@ -3482,10 +3500,7 @@ GtkAssistant {
   padding: 2px;
   border-radius: 4px;
   border: none;
-  background-color: #ffffff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
-  .csd .popover .background, .popover .background {
-    border: 1px solid rgba(0, 0, 0, 0.2); }
+  background-color: #ffffff; }
   .popover .background:backdrop {
     background-color: #f7f7f7;
     box-shadow: none; }
@@ -3493,8 +3508,10 @@ GtkAssistant {
   .popover .background > .toolbar {
     border-style: none;
     background-color: transparent; }
-  .csd .popover .background.touch-selection, .csd .popover .background.magnifier, .popover .background.touch-selection, .popover .background.magnifier {
-    border: 1px solid rgba(255, 255, 255, 0.1); }
+  .csd .popover .background, .popover .background {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 3px 0 rgba(0, 0, 0, 0.3); }
+    .csd .popover .background.touch-selection, .csd .popover .background.magnifier, .popover .background.touch-selection, .popover .background.magnifier {
+      border: 1px solid rgba(255, 255, 255, 0.1); }
 .popover .separator {
   margin: 3px; }
 .popover .menuitem {
