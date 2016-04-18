@@ -1,0 +1,65 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/********
+ * Apps *
+ ********/
+
+@import url("apps/appcenter.css");
+@import url("apps/archive-manager.css");
+@import url("apps/baobab.css");
+@import url("apps/bijiben.css");
+@import url("apps/birdie.css");
+@import url("apps/budgie.css");
+@import url("apps/calculator.css");
+@import url("apps/calendar.css");
+@import url("apps/cheese.css");
+@import url("apps/epiphany.css");
+@import url("apps/fallback.css");
+@import url("apps/geary.css");
+@import url("apps/gedit.css");
+@import url("apps/gnome-calendar.css");
+@import url("apps/gnome-clocks.css");
+@import url("apps/gnome-contacts.css");
+@import url("apps/gnome-disks.css");
+@import url("apps/gnome-documents.css");
+@import url("apps/gnome-music.css");
+@import url("apps/gnome-photos.css");
+@import url("apps/gnome-software.css");
+@import url("apps/gnome-system-monitor.css");
+@import url("apps/gnome-terminal.css");
+@import url("apps/gnome-tweak-tool.css");
+@import url("apps/gnome-weather.css");
+@import url("apps/gnome.css");
+@import url("apps/logs.css");
+@import url("apps/midori.css");
+@import url("apps/nautilus.css");
+@import url("apps/noise.css");
+@import url("apps/pantheon-files.css");
+@import url("apps/pantheon-terminal.css");
+@import url("apps/pantheon.css");
+@import url("apps/rhythmbox.css");
+@import url("apps/scratch-text-editor.css");
+@import url("apps/settings.css");
+@import url("apps/shotwell.css");
+@import url("apps/snap.css");
+@import url("apps/synaptic.css");
+@import url("apps/unity.css");
+@import url("apps/vocal.css");
+@import url("apps/xfce.css");
+@import url("apps/yelp.css");

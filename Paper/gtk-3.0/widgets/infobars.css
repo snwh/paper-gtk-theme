@@ -1,0 +1,100 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color infobar_background @selection;
+@define-color infobar_foreground #fff;
+
+/* Success colors */
+@define-color success #4bae4f;
+@define-color success_foreground #fff;
+@define-color success_text_shadow alpha(#fff, 0.2);
+@define-color success_background @success;
+@define-color success_border shade(@info_background, 0.9);
+
+/* Info colors */
+@define-color info #2095f2;
+@define-color info_foreground #333333;
+@define-color info_text_shadow alpha(#fff, 0.2);
+@define-color info_background @info;
+@define-color info_border shade(@info_background, 0.9);
+
+/* Warning colors */
+@define-color warning #fec006;
+@define-color warning_foreground #333333;
+@define-color warning_text_shadow alpha(#fff, 0.2);
+@define-color warning_background @warning;
+@define-color warning_border shade(@warning_background, 0.9);
+
+/* Question colors */
+@define-color question #4ab3e4;
+@define-color question_foreground #fff;
+@define-color question_text_shadow alpha(#000, 0.2);
+@define-color question_background @question;
+@define-color question_border shade(@question_background, 0.9);
+
+/* Error colors */
+@define-color error #f34235;
+@define-color error_foreground #fff;
+@define-color error_text_shadow alpha(#000, 0.5);
+@define-color error_background @error;
+@define-color error_border shade(@error_background, 0.9);
+
+/**************
+ * GtkInfoBar *
+ **************/
+
+.info,
+GtkInfoBar {
+    background-color: @background;
+    background-image: linear-gradient(to bottom, 
+                                      @background,
+                                      shade(@background, 0.98)
+                                      );
+    color: @foreground;
+    border-style: solid;
+    border-color: @border;
+    border-bottom-width: 1px;
+}
+
+.info GtkLabel,
+GtkInfoBar GtkLabel {
+    color: @foreground;
+}
+
+GtkInfoBar .entry,
+GtkInfoBar .menu {
+    color: @foreground;
+}
+
+GtkInfoBar GtkLabel:insensitive {
+    color: @insensitive_text;
+}
+
+GtkInfoBar .button,
+GtkInfoBar .button:focus,
+.dynamic-notebook GtkInfoBar .button {
+    color: @selection_foreground;
+}
+
+GtkInfoBar .button:active,
+GtkInfoBar .button:hover:active {
+    color: @selection_foreground;
+}
+
+GtkInfoBar .button:insensitive {
+}

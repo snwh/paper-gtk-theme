@@ -1,0 +1,61 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color archives #A88A67;
+
+/**********
+ * Header *
+ **********/
+
+FrWindow .header-bar,
+FrWindow .titlebar {
+    background-color: @archives;
+}
+
+FrWindow .header-bar:backdrop,titlebar
+FrWindow .titlebar:backdrop {
+    background-color: shade(@archives,0.9);
+}
+
+/* Switch */
+FrWindow .header-bar GtkSwitch.trough:active {
+    background-color: @archives;
+}
+
+FrWindow GtkSwitch.trough:active {
+    border: 1px solid shade(@archives, 0.8);
+    background-color: @archives;
+}
+
+FrWindow GtkSwitch.slider:active {
+    border: 1px solid shade(@archives, 0.8);
+} 
+
+FrWindow .header-bar GtkSwitch.slider:active:backdrop,
+FrWindow .header-bar GtkSwitch.slider:backdrop {
+    background-color: shade(@archives, 0.9);
+}
+
+
+FrWindow .toolbar.primary-toolbar {
+    background-color: @archives;
+}
+
+FrWindow .toolbar.primary-toolbar:backdrop {
+    background-color: shade(@archives,0.9);
+}

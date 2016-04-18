@@ -1,0 +1,172 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+
+@define-color gnomeMusic #fe9700;
+
+@define-color music_topbar_selection_bg_color #eb8e4d;
+
+@define-color music_selection_box_a #8e9c80;
+@define-color music_selection_box_b #4f6838;
+@define-color music_selection_box_border #3e7b05;
+
+@define-color music_selection_button_a #7fc141;
+@define-color music_selection_button_b #47850d;
+@define-color music_selection_button_c #4e9a06;
+
+@define-color music_selection_button_dark_a #3b3b3b;
+@define-color music_selection_button_dark_b #1c1c1c;
+@define-color music_selection_box_dark_border #3e7b05;
+
+
+/**********
+ * Header *
+ **********/
+
+/* Doesn't work despite the unique app name */
+
+gnomemusic+window+Window .titlebar, 
+gnomemusic+window+Window .header-bar {
+    background-color: @gnomeMusic;
+}
+
+gnomemusic+window+Window .titlebar:backdrop,
+gnomemusic+window+Window .header-bar:backdrop {
+    background-color: shade(@music,0.9);
+}
+
+/*********
+ * Music *
+ *********/
+
+.cover {
+    padding-left:24px;
+}
+
+.title {
+    padding-left:24px;
+}
+
+.artist-panel-white{
+    background-color: @background;
+}
+
+.artist-panel-white:selected {
+    background-color: @selection;
+}
+
+.artist-panel-dark {
+    background-color: #282528;
+}
+.artist-panel-dark:selected{
+    background-color: #77757A;
+}
+
+.playlist-controls-white {
+    background-color: @background;
+}
+
+.playlist-controls-white:selected {
+    background-color: @selection;
+}
+
+.playlist-controls-dark {
+    background-color: #282528;
+}
+
+.playlist-controls-dark:selected {
+    background-color: #77757A;
+}
+
+.playlists-list {
+    box-shadow: inset 0 -1px @view_separators;
+}
+
+.songs-list {
+    box-shadow: inset 0 -1px shade(@borders, 1.30);
+    box-shadow: inset 0 1px shade(@borders, 1.30);
+    background-color: @background;
+}
+
+.music-selection-mode {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@music_selection_box_a),
+                                    to(@music_selection_box_b));
+    color: @base;
+    border: solid @music_selection_box_border;
+    border-top-width: 1px;
+}
+
+.music-selection-mode .button,
+.music-selection-mode .button:focus {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@music_selection_button_a),
+                                    color-stop(0.83, @music_selection_button_b),
+                                    to(@music_selection_button_c));
+
+    border: 1px solid @music_selection_box_border;
+    color: @base;
+}
+
+.music-selection-mode .button.dark,
+.music-selection-mode .button.dark:focus {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@music_selection_button_dark_a),
+                                    to(@music_selection_button_dark_b));
+
+    border: 1px solid @music_selection_box_dark_border;
+    color: @base;
+}
+
+.music-selection-mode .button:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(shade(@music_selection_button_a, 1.20)),
+                                    color-stop(0.83, shade(@music_selection_button_b, 1.10)),
+                                    to(shade(@music_selection_button_c, 1.10)));
+}
+
+.music-selection-mode .button:active,
+.music-selection-mode .button:hover:active {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@music_selection_button_b),
+                                    to(shade(@music_selection_button_a, 0.90)));
+
+    border: 1px solid @music_selection_box_border;
+}
+
+.music-selection-mode .button *:hover {
+    color: @base;
+}
+
+.music-player, .music-topbar {
+    background-color: @background;
+}
+
+.music-albuminfo-artist {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.music-albuminfo-album {
+    font-size: 14px;
+    font-weight: bold;
+    color: mix (@foreground, @background, 0.50);    
+}
+
+.content-view { background-color: @background; }

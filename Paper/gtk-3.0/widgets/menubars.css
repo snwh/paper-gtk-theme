@@ -1,0 +1,173 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/***********
+ * Menubar *
+ ***********/
+
+.menubar {
+    background-color: @header;
+    color: @header_text;
+}
+
+.menubar:backdrop {
+    background-color: @backdrop_header;
+    color: @backdrop_header_text;
+}
+
+.menubar .menuitem {
+    background: none;
+    color: @header_text;
+
+    -gtk-icon-style: symbolic;
+}
+
+.menubar.menuitem:active,
+.menubar .menuitem:active {
+    background: none;
+    color: @selection;
+    box-shadow:inset 0 -3px 0 0 @selection;
+}
+
+.menubar .menuitem:backdrop {
+    background: none;
+    color: @backdrop_header_text;
+}
+
+.menubar .menuitem:hover {
+    background-color: @selection;
+    color: @selection_foreground;
+    box-shadow:inset 0 -3px 0 0 @selection;
+}
+
+/* Separator */
+.menubar.menuitem.separator {
+    color: @separator;
+}
+
+/* Images */
+.menubar .menuitem GtkImage {
+    color: @header_text;
+}
+
+.menubar .menuitem:active GtkImage,
+.menubar .menuitem:focus GtkImage,
+.menubar .menuitem:hover GtkImage {
+    color: @selection_foreground;
+}
+
+.menubar .menuitem:backdrop GtkImage,
+.menubar .menuitem:backdrop:hover GtkImage,
+.menubar .menuitem:active:backdrop GtkImage {
+    color: @backdrop_header_text;
+    /*-gtk-image-effect: dim;*/
+}
+
+.menubar .menuitem:insensitive GtkImage {
+    color: @insensitive_header_text;
+    /*-gtk-image-effect: dim;*/
+}
+
+.menubar .menuitem:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_header_text, @insensitive_header_text, 0.5);
+    /*-gtk-image-effect: dim;*/
+}
+
+/* Labels */
+.menubar .menuitem GtkLabel {
+    color: @header_text;
+}
+
+.menubar .menuitem:active GtkLabel,
+.menubar .menuitem:focus GtkLabel,
+.menubar .menuitem:hover GtkLabel {
+    color: @selection_foreground;
+}
+
+
+.menubar .menuitem:backdrop GtkLabel,
+.menubar .menuitem:active:backdrop GtkLabel {
+    color: @backdrop_header_text;
+}
+
+.menubar .menuitem:backdrop:hover GtkLabel {
+    color: @backdrop_text;
+    /* color: alpha (#000, 0.6); */
+}
+
+.menubar .menuitem:insensitive GtkLabel {
+    color: @insensitive_header_text;
+}
+
+.menubar .menuitem:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_header_text, @insensitive_header_text, 0.5);
+}
+
+/* Images */
+.menubar .menu .menuitem GtkImage {
+    color: @text;
+}
+
+.menubar .menu .menuitem:active GtkImage,
+.menubar .menu .menuitem:focus GtkImage,
+.menubar .menu .menuitem:hover GtkImage {
+    color: @selection_foreground;
+}
+
+.menubar .menu .menuitem:backdrop GtkImage,
+.menubar .menu .menuitem:backdrop:hover GtkImage,
+.menubar .menu .menuitem:active:backdrop GtkImage {
+    color: @backdrop_text;
+    /*-gtk-image-effect: dim;*/
+}
+
+.menubar .menu .menuitem:insensitive GtkImage {
+    color: @insensitive_text;
+    /*-gtk-image-effect: dim;*/
+}
+
+.menubar .menu .menuitem:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    /*-gtk-image-effect: dim;*/
+}
+
+/* Labels */
+.menubar .menu .menuitem GtkLabel {
+    color: @text;
+}
+
+.menubar .menu .menuitem:active GtkLabel,
+.menubar .menu .menuitem:focus GtkLabel,
+.menubar .menu .menuitem:hover GtkLabel {
+    color: @selection_foreground;
+}
+
+.menubar .menu .menuitem:backdrop GtkLabel,
+.menubar .menu .menuitem:backdrop:hover GtkLabel,
+.menubar .menu .menuitem:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.menubar .menu .menuitem:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.menubar .menu .menuitem:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}

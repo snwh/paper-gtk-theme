@@ -1,0 +1,101 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+* {
+    -GtkCheckButton-indicator-size: 16;
+    -GtkCheckMenuItem-indicator-size: 16;
+    -GtkExpander-expander-size: 11;
+    -GtkHTML-link-color: @link;
+    -GtkIMHtml-hyperlink-color: @link;
+    -GtkMenu-horizontal-padding: 0;
+    -GtkMenu-vertical-padding: 0;
+    -GtkPaned-handle-size: 0;
+    -GtkScrolledWindow-scrollbar-spacing: 0;
+    -GtkScrolledWindow-scrollbars-within-bevel: 1;
+    -GtkTextView-error-underline-color: @error;
+    -GtkToolButton-icon-spacing: 0;
+    -GtkToolItemGroup-expander-size: 11;
+    -GtkTreeView-expander-size: 11;
+    -GtkTreeView-horizontal-separator: 4;
+    -GtkWidget-focus-line-width: 1;
+    -GtkWidget-focus-padding: 0;
+    -GtkWidget-link-color: @link;
+    -GtkWidget-visited-link-color: @link;
+    -GtkWindow-resize-grip-height: 0;
+    -GtkWindow-resize-grip-width: 0;
+    -WnckTasklist-fade-overlay-rect: 0;
+
+    background-color: inherit;
+    color: inherit;
+}
+
+/* Import Widget CSS */
+@import url("widgets/action-bar.css");
+@import url("widgets/app-notifications.css");
+@import url("widgets/base-states.css");
+@import url("widgets/buttons.css");
+@import url("widgets/calendar.css");
+@import url("widgets/cell-row.css");
+@import url("widgets/check-radio.css");
+@import url("widgets/color-chooser.css");
+@import url("widgets/column-header.css");
+@import url("widgets/combobox.css");
+@import url("widgets/composited-indicator.css");
+@import url("widgets/csd.css");
+@import url("widgets/cursor-handles.css");
+@import url("widgets/destructive-action-buttons.css");
+@import url("widgets/dialogs.css");
+@import url("widgets/dynamic-notebook.css");
+@import url("widgets/entry.css");
+@import url("widgets/floating-bar.css");
+@import url("widgets/header-bar.css");
+@import url("widgets/images.css");
+@import url("widgets/infobars.css");
+@import url("widgets/inline-toolbars.css");
+@import url("widgets/labels.css");
+@import url("widgets/levelbars.css");
+@import url("widgets/linked-buttons.css");
+@import url("widgets/links.css");
+@import url("widgets/list-rows.css");
+@import url("widgets/menu-button.css");
+@import url("widgets/menubars.css");
+@import url("widgets/menus.css");
+@import url("widgets/message-dialogs.css");
+@import url("widgets/miscellaneous.css");
+@import url("widgets/notebook.css");
+@import url("widgets/osd.css");
+/*@import url("widgets/overflow.css");*/
+@import url("widgets/popovers.css");
+@import url("widgets/progressbars.css");
+@import url("widgets/scales.css");
+@import url("widgets/scrollbars.css");
+@import url("widgets/search-bars.css");
+@import url("widgets/selection-mode.css");
+@import url("widgets/separators.css");
+@import url("widgets/sidebar.css");
+@import url("widgets/spinbutton.css");
+@import url("widgets/spinner.css");
+@import url("widgets/statusbar.css");
+@import url("widgets/suggested-action-buttons.css");
+@import url("widgets/switches.css");
+@import url("widgets/tiles.css");
+@import url("widgets/titlebar.css");
+@import url("widgets/toolbars.css");
+@import url("widgets/tooltips.css");
+@import url("widgets/views.css");
+@import url("widgets/windows.css");

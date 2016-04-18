@@ -1,0 +1,157 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/************************
+* Sidebar & Source List *
+************************/
+
+.sidebar,
+.sidebar .view,
+.sidebar GtkScrolledWindow,
+.source-list,
+.source-list.view {
+    background-color: @background;
+    color: @foreground;
+}
+
+GtkDialog .sidebar,
+GtkDialog .sidebar .view,
+GtkDialog .sidebar GtkScrolledWindow {
+    background-color: shade (@background, 1.07);
+}
+
+.sidebar,
+.sidebar .view,
+.sidebar .view:selected:backdrop,
+.sidebar .view:hover:selected:backdrop,
+.source-list,
+.source-list.view,
+.source-list.view:selected:backdrop,
+.source-list.view:hover:selected:backdrop {
+}
+
+.sidebar,
+.source-list {
+    -GtkTreeView-horizontal-separator: 1px;
+    -GtkTreeView-vertical-separator: 6px;
+}
+
+.sidebar .separator,
+.source-list .separator {
+    color: @separator;
+}
+.sidebar .separator:backdrop,
+.source-list .separator:backdrop {
+    color: @backdrop_separator;
+}
+
+.sidebar:backdrop,
+.source-list:backdrop {
+    border: solid @backdrop_border;
+    border-left-width: 1px;
+}
+
+.source-list.category-expander {
+    color: transparent;
+}
+
+.sidebar .view:hover,
+.source-list.view:hover {
+    background-color: shade (@background, 1.02);
+}
+
+.sidebar .view:selected,
+.sidebar .view:hover:selected,
+.sidebar.view:selected,
+.sidebar.view:hover:selected,
+.source-list.view:selected,
+.source-list.view:hover:selected,
+.source-list.view:selected:focus,
+.source-list.category-expander:hover {
+    color: @selection_foreground;
+    background-color: @selection;
+    box-shadow: none;
+}
+
+GtkDialog .sidebar .view:selected,
+GtkDialog .sidebar .view:hover:selected {
+    color: @selection_foreground;
+    background-color: @selection;
+}
+
+.sidebar .view:selected:backdrop,
+.sidebar .view:hover:selected:backdrop,
+.source-list.view:selected:backdrop,
+.source-list.view:hover:selected:backdrop {
+    color: alpha(@selection, 0.5);
+}
+
+GtkDialog .sidebar .view:selected:backdrop,
+GtkDialog .sidebar .view:hover:selected:backdrop {
+    color: alpha(@selection, 0.5);
+}
+
+.sidebar-pane-separator,
+.sidebar-pane-separator:hover,
+.sidebar-pane-separator:selected {
+
+    border-width: 0;
+    -GtkPaned-handle-size: 1;
+    background-image: none;
+    /*background-color: shade (@background, 0.75);*/
+}
+
+.sidebar .scrollbar.trough,
+.sidebar .scrollbars-junction,
+.source-list .scrollbar.trough,
+.source-list .scrollbars-junction {
+    background-color: @background;
+}
+
+.source-list.badge,
+.source-list.badge:hover,
+.source-list.badge:selected,
+.source-list.badge:selected:focus,
+.source-list.badge:hover:selected {
+    background-image: none;
+    background-color: alpha(#000, 0.4);
+    color: @background;
+    border-radius: 10px;
+    padding: 0 6px;
+    margin: 0 3px;
+    border-width: 0;
+}
+
+.source-list.badge:selected,
+.source-list.badge:hover:selected {
+    color: @background;
+}
+
+.source-list.badge:selected:backdrop,
+.source-list.badge:selected:hover:backdrop {
+    background-image: none;
+    background-color: alpha(#000, 0.2);
+    color: shade (@background, 0.95);
+}
+
+.sidebar .separator {
+    color: @separator;
+}
+.sidebar .separator:backdrop {
+    color: @backdrop_separator;
+}

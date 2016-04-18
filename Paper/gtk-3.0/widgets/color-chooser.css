@@ -1,0 +1,116 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*****************
+ * Color chooser *
+ *****************/
+
+GtkColorSwatch,
+GtkColorSwatch:selected {
+    border-width: 1px;
+    border-style: solid;
+    border: 1px solid alpha(#000, 0.1);
+    border-radius: 1px;
+    background: none;
+    background-clip: border-box;
+}
+
+GtkColorSwatch:hover,
+GtkColorSwatch:selected:hover {
+    border: 1px solid alpha(#000, 0.3);
+}
+
+GtkColorSwatch.color-dark:hover {
+}
+
+GtkColorSwatch.color-light:hover {
+}
+
+GtkColorSwatch.color-light:selected:hover,
+GtkColorSwatch.color-dark:selected:hover {
+    background-image: none;
+}
+
+GtkColorSwatch.left,
+GtkColorSwatch:first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+GtkColorSwatch.right,
+GtkColorSwatch:last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+GtkColorSwatch:only-child {
+    border-radius: 4px;
+}
+
+GtkColorSwatch.top {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+GtkColorSwatch.bottom {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+GtkColorChooserWidget #add-color-button {
+    background-clip: padding-box;
+    border: 1px solid alpha(#000, 0.1);
+    background-color: shade(@background, 0.95);
+    color: @foreground;
+}
+
+GtkColorChooserWidget #add-color-button:hover {
+    border: 1px solid alpha(#000, 0.3);
+    background-color: shade(@background, 0.90);
+    color: @foreground;
+}
+
+.color-active-badge,
+.color-active-badge:selected {
+    border-width: 1px;
+    border-style: solid;
+    border-width: 2px;
+    background: none;
+}
+
+.color-active-badge.color-light,
+.color-active-badge.color-light:hover {
+    border: 1px solid alpha(#000, 0.3);
+    color: alpha(#000, 0.3);
+}
+
+.color-active-badge.color-dark,
+.color-active-badge.color-dark:hover {
+    border: 1px solid alpha(white, 0.3);
+    color: alpha(white, 0.3);
+}
+
+GtkColorEditor GtkColorSwatch {
+    border-radius: 4px;
+}
+
+GtkColorEditor GtkColorSwatch.color-dark:hover,
+GtkColorEditor GtkColorSwatch.color-light:hover {
+    background-image: none;
+    border: 1px solid alpha(#000, 0.3);
+}

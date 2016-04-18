@@ -1,0 +1,129 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/**********
+* Overflow *
+***********/
+
+.overshoot.top {
+    background-image: -gtk-gradient(radial, center top, 0, center top, 0.5, to(#878787), to(rgba(135, 135, 135, 0))), -gtk-gradient(radial, center top, 0, center top, 0.6, from(rgba(46, 52, 54, 0.07)), to(rgba(46, 52, 54, 0)));
+    background-size: 100% 5%, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.overshoot.top:backdrop {
+    background-image: -gtk-gradient(radial, center top, 0, center top, 0.5, to(#a8a8a8), to(rgba(168, 168, 168, 0)));
+    background-size: 100% 5%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.overshoot.bottom {
+    background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(#878787), to(rgba(135, 135, 135, 0))), -gtk-gradient(radial, center bottom, 0, center bottom, 0.6, from(rgba(46, 52, 54, 0.07)), to(rgba(46, 52, 54, 0)));
+    background-size: 100% 5%, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.overshoot.bottom:backdrop {
+    background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(#a8a8a8), to(rgba(168, 168, 168, 0)));
+    background-size: 100% 5%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.overshoot.left {
+    background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(#878787), to(rgba(135, 135, 135, 0))), -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(46, 52, 54, 0.07)), to(rgba(46, 52, 54, 0)));
+    background-size: 5% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.overshoot.left:backdrop {
+    background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(#a8a8a8), to(rgba(168, 168, 168, 0)));
+    background-size: 5% 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.overshoot.right {
+    background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(#878787), to(rgba(135, 135, 135, 0))), -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(46, 52, 54, 0.07)), to(rgba(46, 52, 54, 0)));
+    background-size: 5% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.overshoot.right:backdrop {
+    background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(#a8a8a8), to(rgba(168, 168, 168, 0)));
+    background-size: 5% 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+
+.undershoot.top {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent 3px, transparent);
+}
+
+.undershoot.bottom {
+    background-color: transparent;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) 3%, transparent, rgba(0, 0, 0, 0.02) 25%, transparent);
+}
+
+.undershoot.left {
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent 2px, transparent);
+}
+
+.undershoot.right {
+    background-color: transparent;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.3), transparent 2px, transparent);
+}
+
+.undershoot.sidebar {
+    background-color: transparent;
+}
+
+.undershoot:backdrop {
+}

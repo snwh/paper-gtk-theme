@@ -1,0 +1,149 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/*************************
+ * Selection Mode Colors *
+ *************************/
+
+@define-color selection_mode_background #347D9F;
+@define-color selection_mode_foreground @base;
+@define-color selection_mode_background_backdrop shade(@selection_mode_background, 0.8);
+@define-color selection_mode_foreground_backdrop alpha(@selection_mode_foreground, 0.5);
+
+
+/******************
+ * Selection Mode *
+ ******************/
+.selection-mode {
+    color: @selection_mode_foreground;
+    background-color: @selection_mode_background;
+    border: none;
+}
+.selection-mode.header-bar,
+.selection-mode.toolbar {
+    color: @selection_mode_foreground;
+    background-color: @selection_mode_background;
+    border: none;
+}
+
+.titlebar.selection-mode .selection-menu .arrow,
+.header-bar.selection-mode .selection-menu .arrow {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+    color: alpha(@header_text, 0.5);
+    icon-shadow: none;
+}
+
+.selection-mode.toolbar {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.selection-mode.header-bar:backdrop,
+.selection-mode.toolbar:backdrop {
+    background-color: @selection_mode_background_backdrop;
+    color: @selection_mode_foreground_backdrop;
+}
+
+/* regular button */
+.selection-mode.header-bar .button,
+.selection-mode.toolbar .button,
+.selection-mode.toolbar GtkToolButton .button {
+    padding: 13px;
+    background-image: none;
+    border: none;
+    color: @selection_mode_foreground;
+}
+
+.selection-mode.header-bar .button:hover,
+.selection-mode.toolbar .button:hover,
+.selection-mode.toolbar GtkToolButton .button:hover {
+    background-color: alpha(#000, 0.1);
+}
+
+.selection-mode.header-bar .button:active,
+.selection-mode.header-bar .button:hover:active,
+.selection-mode.toolbar .button:active,
+.selection-mode.toolbar .button:hover:active,
+.selection-mode.toolbar GtkToolButton .button:active,
+.selection-mode.toolbar GtkToolButton .button:hover:active {
+    background-color: alpha(#000, 0.1);
+    box-shadow: inset 0 -2px 0 0 @selection_mode_foreground;
+}
+
+.selection-mode.header-bar .button:active:backdrop,
+.selection-mode.header-bar .button:hover:active:backdrop,
+.selection-mode.toolbar .button:active:backdrop,
+.selection-mode.toolbar .button:hover:active:backdrop,
+.selection-mode.toolbar GtkToolButton .button:active:backdrop,
+.selection-mode.toolbar GtkToolButton .button:hover:active:backdrop {
+    background-color: alpha(#000, 0.1);
+    box-shadow: inset 0 -2px 0 0 @selection_mode_foreground_backdrop;
+    color: @selection_mode_foreground_backdrop;
+}
+
+.selection-mode.header-bar .button:backdrop,
+.selection-mode.toolbar .button:backdrop,
+.selection-mode.toolbar GtkToolButton .button:backdrop {
+    color: @selection_mode_foreground_backdrop;
+}
+
+.selection-mode.header-bar .button:active,
+.selection-mode.toolbar .button:active,
+.selection-mode.toolbar GtkToolButton .button:active {
+    background-color: alpha(#000, 0.1);
+    box-shadow: inset 0 -2px 0 0 @selection_mode_foreground;
+}
+
+/* menu button */
+.selection-mode.header-bar .selection-menu.button,
+.selection-mode.toolbar .selection-menu.button {
+    color: @selection_mode_foreground;
+}
+
+.selection-mode.toolbar .dim-label,
+.selection-mode.toolbar .selection-menu.button .dim-label {
+    color: @selection_mode_foreground;
+}
+
+.selection-mode.header-bar .selection-menu.button:hover,
+.selection-mode.toolbar .dim-label:hover,
+.selection-mode.toolbar .selection-menu.button:hover,
+.selection-mode.toolbar .selection-menu.button .dim-label:hover {
+    color: @selection_mode_foreground;
+}
+
+.selection-mode.header-bar .selection-menu.button:active,
+.selection-mode.toolbar .selection-menu.button:active {
+    background-color: alpha(#000, 0.1);
+    box-shadow: inset 0 -2px 0 0 @selection_mode_foreground;
+}
+
+.selection-mode.header-bar .selection-menu.button:active:backdrop,
+.selection-mode.toolbar .selection-menu.button:active:backdrop {
+    background-color: alpha(#000, 0.1);
+    box-shadow: inset 0 -2px 0 0 @selection_mode_foreground_backdrop;
+    color: @selection_mode_foreground_backdrop;
+}
+
+.selection-mode.header-bar .selection-menu.button:active,
+.selection-mode.toolbar .selection-menu.button:active {
+    background-color: alpha(#000, 0.1);
+    box-shadow: inset 0 -2px 0 0 @selection_mode_foreground;
+    color: @selection_mode_foreground;
+}

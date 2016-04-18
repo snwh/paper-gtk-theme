@@ -1,0 +1,135 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color scrollbar_slider shade(@foreground,1.2);
+@define-color scrollbar_slider_backdrop shade(@scrollbar_slider,0.95);
+@define-color scrollbar_slider_insensitive shade(@scrollbar_slider,1.05);
+
+@define-color scrollbar_trough transparent;
+@define-color scrollbar_trough_insensitive shade(@scrollbar_trough,0.95);
+@define-color scrollbar_trough_backdrop shade(@scrollbar_trough,0.95);
+
+/**************
+ * Scrollbars *
+ **************/
+ 
+.scrollbar {
+    background-image: none;
+    border-style: solid;
+    border: 1px solid transparent;
+    -GtkRange-trough-border: 2;
+    -GtkScrollbar-has-backward-stepper: false;
+    -GtkScrollbar-has-forward-stepper: false;
+    -GtkRange-slider-width: 6;
+    -GtkScrollbar-min-slider-length: 30;
+
+    -GtkRange-stepper-spacing: 0;
+    -GtkRange-trough-under-steppers: 1;
+}
+
+/* Slider */
+.scrollbar.slider {
+    background-color: alpha(@foreground, 0.2);
+    border-radius: 10px;
+}
+
+.scrollbar.slider:hover {
+    background-color: @selection;
+    background-image: none;
+}
+
+.scrollbar.slider:active.
+.scrollbar.slider:prelight:active {
+    background-color: shade(@selection, 1.2);
+    background-image: none;
+}
+
+.scrollbar.slider:insensitive {
+    background-color: alpha(@insensitive_foreground, 0.2);
+}
+
+.scrollbar.slider:backdrop {
+    background-color: alpha(@backdrop_foreground, 0.2);
+}
+
+.scrollbar.slider.fine-tune:prelight:active {
+      background-image: none;
+      border: 3px solid transparent;
+}
+
+
+/* Troughs */
+.scrollbars-junction, /* the small square between scrollbars!!! */
+.scrollbar.trough {
+    /*border-radius: 10px;*/
+    background-image: none;
+    background:@background;
+    border-width: 0;
+    border-image: none;
+}
+
+.scrollbar.trough:insensitive {
+    background: none;
+    border: 3px solid transparent;
+}
+
+.scrollbars-junction:backdrop,
+.scrollbar.trough:backdrop {
+    background-image: none;
+    background: none;
+    border-width: 0;
+    border-radius: 0;
+    border-image: none;
+}
+
+.scrollbar.trough:insensitive:backdrop {
+    background-image: none;
+    background: none;
+    border-width: 0;
+    border-radius: 0;
+    border-image: none;
+}
+
+/**********************
+ * Overlay Scrollbars *
+ *********************/
+OsThumb {
+    color: @selection;
+}
+
+OsThumb:selected,
+OsScrollbar:selected {
+    background-color: @selection;
+}
+
+OsThumb:active,
+OsScrollbar:active {
+    background-color: @selection;
+}
+
+OsThumb:active:backdrop,
+OsScrollbar:active:backdrop,
+OsThumb:backdrop,
+OsScrollbar:backdrop {
+    background-color: @backdrop_text;
+}
+
+OsThumb:insensitive,
+OsScrollbar:insensitive {
+    background-color: @insensitive_text;
+}

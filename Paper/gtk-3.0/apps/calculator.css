@@ -1,0 +1,164 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color calculator #07ce8e;
+
+/**************
+ * Header bar *
+ **************/
+
+PantheonCalculatorMainWindow .titlebar,
+PantheonCalculatorMainWindow .header-bar,
+MathWindow .titlebar,
+MathWindow .header-bar {
+    background-color: @calculator;
+}
+
+PantheonCalculatorMainWindow .titlebar:backdrop,
+PantheonCalculatorMainWindow .header-bar:backdrop,
+MathWindow .titlebar:backdrop,
+MathWindow .header-bar:backdrop {
+    background-color: shade(@calculator,0.9);
+}
+
+/***********
+ * Buttons *
+ ***********/
+MathButtons .button,
+MathButtons .button GtkImage,
+MathButtons .button.text-button,
+MathButtons .button.image-button {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    color: @calculator;
+    font: Bold;
+}
+
+
+MathButtons GtkComboBox,
+MathButtons GtkComboBox * {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    color: @calculator;
+    font: Bold;
+}
+
+MathButtons GtkComboBox:focus,
+MathButtons GtkComboBox *:focus,
+MathButtons .button.text-button:focus,
+MathButtons .button.image-button:focus,
+MathButtons .button:focus {
+    background-color: transparent;
+    background-image: none;
+    color: @calculator;
+    border: none;
+}
+
+MathButtons GtkComboBox:hover,
+MathButtons GtkComboBox *:hover,
+MathButtons .button.text-button:hover,
+MathButtons .button.image-button:hover,
+MathButtons .button:hover {
+    background-color: transparent;
+    background-image: none;
+    color: @calculator;
+    border: none;
+}
+
+MathButtons GtkComboBox:active,
+MathButtons GtkComboBox *:active,
+MathButtons .button.text-button:active,
+MathButtons .button.image-button:active,
+MathButtons .button:active,
+MathButtons GtkComboBox:active:hover,
+MathButtons GtkComboBox *:active:hover,
+MathButtons .button.text-button:active:hover,
+MathButtons .button.image-button:active:hover,
+MathButtons .button:active:hover {
+    background-color: transparent;
+    background-image: none;
+    color: @calculator;
+    border: none;
+}
+
+MathButtons GtkComboBox:backdrop,
+MathButtons GtkComboBox *:backdrop,
+MathButtons .button.text-button:backdrop,
+MathButtons .button.image-button:backdrop,
+MathButtons .button:backdrop {
+    background-color: transparent;
+    background-image: none;
+    color: shade(@calculator, 0.9);
+    border: none;
+}
+
+MathButtons GtkComboBox:hover,
+MathButtons GtkComboBox *:hover,
+MathButtons .button.text-button:hover,
+MathButtons .button.image-button:hover,
+MathButtons .button:hover {
+    background-color: @calculator;
+    color: @base;
+    border: none;
+}
+
+/* Images */
+MathButtons .button GtkImage {
+    color: @calculator;
+}
+
+MathButtons .button:active GtkImage,
+MathButtons .button:focus GtkImage,
+MathButtons .button:hover GtkImage {
+    color: @selection_foreground;
+}
+
+MathButtons .button:backdrop GtkImage,
+MathButtons .button:backdrop:hover GtkImage,
+MathButtons .button:active:backdrop GtkImage {
+    color: shade(@calculator, 0.9);
+    -gtk-image-effect: dim;
+}
+
+MathButtons .button:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+MathButtons .button GtkLabel {
+    color: @calculator;
+}
+
+MathButtons .button:active GtkLabel,
+MathButtons .button:focus GtkLabel,
+MathButtons .button:hover GtkLabel {
+    color: @selection_foreground;
+}
+
+MathButtons .button:backdrop GtkLabel,
+MathButtons .button:backdrop:hover GtkLabel,
+MathButtons .button:active:backdrop GtkLabel {
+    color: shade(@calculator, 0.9);
+}
+
+MathButtons .button:insensitive GtkLabel {
+    color: @insensitive_text;
+}

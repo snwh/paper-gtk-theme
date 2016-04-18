@@ -134,7 +134,7 @@ class ContentHandler(xml.sax.ContentHandler):
                 height = rect['height']
                 id = rect['id']
 
-                dir = os.path.join(MAINDIR, "gtk-3.0", self.context)
+                dir = os.path.join(MAINDIR, self.context)
                 outfile = os.path.join(dir, self.icon_name+'.png')
                 if not os.path.exists(dir):
                     os.makedirs(dir)

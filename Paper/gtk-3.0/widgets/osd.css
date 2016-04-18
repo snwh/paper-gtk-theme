@@ -1,0 +1,331 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color osd_background alpha(#000, 0.7);
+@define-color osd_background_backdrop shade(@osd_background, 0.9);
+@define-color osd_foreground @selection;
+@define-color osd_lowlight alpha(#fff, 0.2);
+@define-color osd_button_border alpha(#fff, 0);
+@define-color osd_button_inset @osd_button_border;
+
+/*******
+ * OSD *
+ *******/
+.background.osd {
+    color: @osd_foreground;
+    background-color: @osd_background;
+}
+
+.background.osd:backdrop {
+    background-color: @osd_background_backdrop;
+}
+
+GtkOverlay.osd {
+    background: none;
+}
+
+.osd.frame {
+    background-clip: border-box;
+    background-origin: border-box;
+}
+
+/* OSD Buttons */
+
+.osd .button,
+.osd.toolbar .button,
+.osd.toolbar .button.image-button,
+.osd.toolbar .text-button,
+.osd.toolbar GtkToolButton .button {
+    background-color: transparent;
+    background-image: none;
+    padding: 4px;
+    border-width: 1px 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.osd.toolbar .button:first-child {
+    padding: 4px;
+    border-radius: 2px 0 0 2px;
+    border-width: 1px 0 1px 1px;
+    box-shadow: inset -1px 0 @osd_button_inset;
+}
+
+.osd.toolbar .button:last-child {
+    padding: 4px;
+    box-shadow: none;
+    border-radius: 0 2px 2px 0;
+    border-width: 1px 1px 1px 0;
+}
+
+.osd.toolbar .button:only-child,
+.osd.toolbar .button.image-button,
+.osd.toolbar .text-button,
+.osd.toolbar GtkToolButton .button,
+.osd.toolbar GtkToolButton:only-child .button,
+.osd.toolbar GtkToolButton:last-child .button,
+.osd.toolbar GtkToolButton:first-child .button {
+    border-width: 1px;
+    border-radius: 2px;
+    border-style: solid;
+    padding: 4px;
+    box-shadow: none;
+    border: none;
+}
+
+.osd .button:hover,
+.osd .button:active:hover 
+.osd.toolbar .button:hover,
+.osd.toolbar .button:active:hover,
+.osd.toolbar .button.image-button:hover,
+.osd.toolbar .button.image-button:active:hover
+.osd.toolbar GtkToolButton .button:hover,
+.osd.toolbar GtkToolButton .button:active:hover {
+    padding: 4px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    background: alpha(#fff, 0.1);
+    color: @osd_foreground;
+}
+
+.osd .button:active,
+.osd.toolbar .button:active,
+.osd.toolbar .button.image-button:active
+.osd.toolbar GtkToolButton .button:active  {
+    padding: 4px;
+    border-radius: 2px;
+    box-shadow: none;
+    border: none;
+    background: alpha(#fff, 0.2);
+    color: @osd_foreground;
+}
+
+.osd .button:backdrop,
+.osd.toolbar .button:backdrop,
+.osd.toolbar .button.image-button:backdrop
+.osd.toolbar GtkToolButton .button:backdrop,
+.osd .button:active:backdrop,
+.osd.toolbar .button:active:backdrop,
+.osd.toolbar .button.image-button:active:backdrop
+.osd.toolbar GtkToolButton .button:active:backdrop  {
+    padding: 4px;
+    border-radius: 2px;
+    box-shadow: none;
+    border: none;
+    background: alpha(#fff, 0.1);
+    color: alpha(@osd_foreground, 0.8);
+}
+
+.osd .button:insensitive,
+.osd.toolbar .button:insensitive {
+    background-image: none;
+    background-color: @osd_button_background_insensitive;
+}
+
+.osd .button:active:insensitive {
+    background-image: none;
+    background-color: @osd_button_background_insensitive_active;
+}
+
+.osd .button:backdrop {
+    background-image: none;
+    background-color: @osd_button_background_backdrop;
+}
+
+.osd .button:backdrop:hover,
+.osd .button:backdrop:active:hover {
+    background-image: none;
+    background-color: @osd_button_background_backdrop_hover;
+}
+
+.osd .button:backdrop:active {
+    background-image: none;
+    background-color: @osd_button_background_backdrop_active;
+}
+
+.osd .button:backdrop:insensitive,
+.osd .button:backdrop:insensitive:active {
+    background-image: none;
+    background-color: @osd_button_background_backdrop_insensitive;
+}
+
+.osd .button:hover {
+    color: @osd_button_foreground_hover;
+}
+
+.osd .button:active,
+.osd .button:hover:active {
+    color: @osd_button_foreground_active;
+}
+
+.osd .button:insensitive,
+.osd .button:active *:insensitive {
+    color: @osd_button_foreground_insensitive;
+}
+
+.osd .button:backdrop,
+.osd .button:backdrop:insensitive,
+.osd .button:backdrop:active *:insensitive {
+    color: @osd_button_foreground_backdrop;
+}
+
+.osd .button:backdrop:active {
+    color: @osd_button_foreground_backdrop_active;
+}
+
+.osd .button:active,
+.osd .button:active:hover,
+.osd GtkMenuButton.button:active {
+}
+
+.osd GtkMenuButton.button:active {
+    background: none;
+    border-color: @osd_button_border;
+}
+
+.osd GtkMenuButton.button:active {
+    color: @osd_button_foreground_active;
+    text-shadow: 0 -1px @osd_button_shadow;
+}
+
+/* OSD Toolbar */
+
+.osd.toolbar {
+    color: @osd_foreground;
+    padding: 10px;
+    border-style: none;
+    border-radius: 4px;
+    background-color: @osd_background;
+
+    -GtkToolbar-button-relief: normal;
+}
+
+.osd.toolbar:backdrop {
+    background-image: none;
+    background-color: @osd_background_backdrop;
+}
+
+.osd.toolbar .separator {
+    color: shade(@osd_lowlight, 0.80);
+}
+
+/* used by gnome-settings-daemon's media-keys OSD */
+.osd.trough {
+    background-color: @osd_trough_background;
+}
+
+.osd.progressbar {
+    background-color: @osd_foreground;
+}
+
+.osd .scale.trough {
+    border-color: @osd_button_border;
+    background: none;
+}
+
+.osd .scale.trough.highlight {
+    border-color: mix(@osd_button_border, @selection_color, 0.70);
+}
+
+.osd .scale.trough:insensitive,
+.osd .scale.trough.highlight:insensitive {
+    border-color: shade(@osd_button_border, 0.60);
+    background-image: none;
+    background: none;
+}
+
+.osd GtkProgressBar,
+GtkProgressBar.osd {
+    padding: 0;
+    -GtkProgressBar-xspacing: 0;
+    -GtkProgressBar-yspacing: 3px;
+    -GtkProgressBar-min-horizontal-bar-height: 3px;
+}
+
+.osd GtkProgressBar.trough,
+GtkProgressBar.osd.trough {
+    padding: 0;
+    border-image: none;
+    border-style: none;
+    border-width: 0;
+    background-image: none;
+    background: none;
+    border-radius: 0;
+}
+
+.osd GtkProgressBar.progressbar,
+GtkProgressBar.osd.progressbar {
+    border-style: none;
+    background-color: @selection_color;
+    background-image: none;
+    border-radius: 0;
+}
+
+.osd .view,
+.osd.view {
+    background-color: @osd_view_background;
+}
+
+.osd .view:backdrop,
+.osd.view:backdrop {
+    background-color: @osd_view_background_backdrop;
+}
+
+.osd .scrollbar.trough {
+    background-color: @osd_scrollbar_trough;
+}
+
+.osd .scrollbar.trough:backdrop {
+    background-color: @osd_scrollbar_trough_backdrop;
+}
+
+.osd .scrollbar.slider {
+    background-color: @osd_scrollbar_slider;
+}
+
+.osd .scrollbar.slider:hover {
+    background-color: @osd_scrollbar_slider_prelight;
+}
+
+.osd .scrollbar.slider:active {
+    background-color: @osd_scrollbar_slider_active;
+}
+
+.osd GtkIconView.cell:selected,
+.osd GtkIconView.cell:selected:focus {
+    background: none;
+
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 3px;
+    border-color: @osd_button_foreground;
+
+    outline-color: transparent;
+}
+
+/* used by Documents */
+.osd .page-thumbnail {
+    border-style: solid;
+    border-width: 1px;
+    border-color: @osd_lowlight;
+
+    /* when there's no pixbuf yet */
+    background-color: @osd_background;
+}

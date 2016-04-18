@@ -1,0 +1,180 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/***************
+ * Action bars *
+ ***************/
+
+.action-bar {
+    background-color: shade(@background, 0.9);
+    border: solid @border;
+    border-width: 1px 0 0 0;
+    color: @text;
+    box-shadow: none;
+}
+
+.action-bar:backdrop {
+    background-color: shade(@backdrop_background, 0.9);
+    box-shadow: none;
+    -gtk-image-effect: dim;
+}
+
+.action-bar:first-child {
+    border-radius: 6px 6px 0px 0px;
+    border-width: 1px 1px 0px 1px;
+}
+
+.action-bar:last-child {
+    border-radius: 0 0 6px 6px;
+    border-width: 0px 1px 1px 1px;
+}
+
+/* Buttons */
+.action-bar .button,
+.action-bar .text-button,
+.action-bar .image-button {
+    border: none;
+    background: none;
+    color: @text;
+    border-radius: 0px;
+    padding: 7px;
+}
+
+.action-bar .button:active
+.action-bar .text-button:active,
+.action-bar .image-button:active {
+    border: none;
+    color: @text;
+    box-shadow: none;
+    padding: 7px;
+}
+
+.action-bar .button .raised
+.action-bar .text-button .raised,
+.action-bar .image-button .raised {
+    border: none;
+    color: @text;
+    box-shadow: none;
+    padding: 7px;
+}
+
+/* Hover */
+.action-bar .button:hover,
+.action-bar .button:active:hover
+.action-bar .text-button:hover,
+.action-bar .text-button:active:hover,
+.action-bar .image-button:hover,
+.action-bar .image-button:active:hover {
+    padding: 7px;
+    border: none;
+    background-color: alpha(#000, 0.1);
+    color: @text;
+    box-shadow: none;
+}
+
+/* Insensitive */
+.action-bar .button:insensitive,
+.action-bar .text-button:insensitive,
+.action-bar .image-button:insensitive {
+    color: @insensitive_header_text;
+    -gtk-image-effect: dim;
+}
+
+
+/* Backdrop */
+.action-bar .button:backdrop,
+.action-bar .button:active:backdrop
+.action-bar .text-button:backdrop,
+.action-bar .text-button:active:backdrop,
+.action-bar .image-button:backdrop,
+.action-bar .image-button:active:backdrop {
+    color: @backdrop_text;
+    border: none;
+    padding: 7px;
+}
+
+/* Insensitive:Backdrop; */
+.action-bar .button:insensitive:backdrop,
+.action-bar .text-button:insensitive:backdrop,
+.action-bar .image-button:insensitive:backdrop {
+    padding: 7px;
+    border: none;
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
+
+/* Images */
+.action-bar .button GtkImage,
+.action-bar .button .image-button GtkImage {
+    color: @text;
+}
+
+.action-bar .button:active GtkImage,
+.action-bar .button:focus GtkImage,
+.action-bar .button:hover GtkImage,
+.action-bar .button .image-button:active GtkImage,
+.action-bar .button .image-button:focus GtkImage,
+.action-bar .button .image-button:hover GtkImage {
+    color: @text;
+}
+
+.action-bar .button:backdrop GtkImage,
+.action-bar .button:backdrop:hover GtkImage,
+.action-bar .button:active:backdrop GtkImage,
+.action-bar .button .image-button:backdrop GtkImage,
+.action-bar .button .image-button:backdrop:hover GtkImage,
+.action-bar .button .image-button:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+.action-bar .button:insensitive GtkImage,
+.action-bar .button .image-button:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+.action-bar .button:insensitive:backdrop GtkImage,
+.action-bar .button .image-button:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+.action-bar .button GtkLabel {
+    color: @text;
+}
+
+.action-bar .button:active GtkLabel,
+.action-bar .button:focus GtkLabel,
+.action-bar .button:hover GtkLabel {
+    color: @text;
+}
+
+.action-bar .button:backdrop GtkLabel,
+.action-bar .button:backdrop:hover GtkLabel,
+.action-bar .button:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.action-bar .button:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.action-bar .button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}

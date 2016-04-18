@@ -1,0 +1,65 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/*********************
+* App Notifications *
+*********************/
+.app-notification,
+.app-notification.frame {
+    border: 1px solid @border;
+    border-top-width: 0px;
+    border-radius: 6px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding: 8px;
+    background-color: @background;
+    color: @text;
+}
+
+.app-notification:backdrop,
+.app-notification.frame:backdrop {
+  background-color: @backdrop_background;
+  border-color: @backdrop_border;
+}
+
+.app-notification .button, .app-notification .header-bar .button.titlebutton, .header-bar .app-notification .button.titlebutton,
+.app-notification .titlebar .button.titlebutton,
+.titlebar .app-notification .button.titlebutton,
+.app-notification.frame .button {
+}
+
+.app-notification .button:hover,
+.app-notification.frame .button:hover {
+}
+
+.app-notification .button:active, .app-notification .button:checked, .app-notification .button:backdrop:active, .app-notification .button:backdrop:checked,
+.app-notification.frame .button:active,
+.app-notification.frame .button:checked,
+.app-notification.frame .button:backdrop:active,
+.app-notification.frame .button:backdrop:checked {
+}
+
+.app-notification .button:insensitive, .app-notification .button:backdrop:insensitive,
+.app-notification.frame .button:insensitive,
+.app-notification.frame .button:backdrop:insensitive {
+}
+
+.app-notification .button:backdrop,
+.app-notification.frame .button:backdrop {
+}

@@ -1,0 +1,140 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*********
+ * Entry *
+ *********/
+
+.entry {
+    background: @base;
+    color: @text;
+    padding: 6px;
+    border-radius: 3px;
+    border: 1px solid @border;
+}
+
+.entry:active {
+    background-color: @base;
+    color: @text;
+    border: 1px solid @border;
+    box-shadow:inset 0 3px 0 1px alpha(#000, 0.05),
+               inset 0 1px 0 0 alpha(#000, 0.02);
+}
+
+.entry:focus {
+    background-color: @base;
+    color: @text;
+    border: 1px solid shade(@selection, 0.8);
+    box-shadow:inset 0 0 0 1px alpha(@selection, 0.2),
+               inset 0 0 0 2px alpha(@selection, 0.1),
+               inset 0 1px 0 0 alpha(@selection, 0.3);
+}
+
+.entry:backdrop:active,
+.entry:backdrop:focus {
+    background-color: @backdrop_base;
+    color: @backdrop_text;
+    border: 1px solid @backdrop_border;
+    box-shadow:inset 0 1px 1px 0 alpha(#000, 0.1);
+}
+
+.entry:insensitive {
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+    box-shadow:none;
+}
+
+.entry:selected,
+.entry:selected:focus {
+    color: @base;
+    background-color: @selection;
+}
+
+.entry:selected:backdrop {
+    color: @base;
+    background-color: @selection;
+}
+
+.entry:backdrop {
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+    box-shadow: none;
+}
+
+.entry:insensitive:backdrop {
+    color: @backdrop_text;
+    box-shadow: none;
+    background-color: @backdrop_insensitive_background;
+    box-shadow: none;
+}
+
+.entry.image {
+    color: @insensitive_text;
+}
+
+.entry.image.left {
+    padding-right: 6px;
+    color: @text;
+}
+
+/*********************
+ * Entry Progressbar *
+ *********************/
+
+.entry.progressbar,
+.entry.progressbar:focus {
+    margin: 0 2px 0 2px;
+    border-image: none;
+    border-style: none;
+    background: none;
+    background-image: linear-gradient(to top, 
+                                      transparent 2px,
+                                      @base 2px,
+                                      @base 3px,
+                                      shade(@selection, 0.9) 3px,
+                                      shade(@selection, 0.9) 5px,
+                                      transparent 5px);
+    background-size: auto;
+    box-shadow: none;
+}
+
+.entry.progressbar.pulse,
+.entry.progressbar.pulse:focus {
+    background-image: linear-gradient(to top, 
+                                      transparent 2px,
+                                      @base 2px,
+                                      @base 3px,
+                                      @border 3px,
+                                      @border 5px,
+                                      transparent 5px);
+}
+
+.entry.progressbar:backdrop {
+    margin: 0 2px 0 2px;
+    border-image: none;
+    border-style: none;
+    background:none;
+    background-image: linear-gradient(to top, 
+                                      transparent 2px,
+                                      @base 2px,
+                                      @base 3px,
+                                      @backdrop_selected_background 3px,
+                                      @backdrop_selected_background 5px,
+                                      transparent 5px);
+    box-shadow: none;
+}

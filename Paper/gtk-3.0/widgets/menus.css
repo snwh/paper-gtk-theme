@@ -1,0 +1,147 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/********
+ * Menu *
+ ********/
+ 
+.content-view .menu,
+.context-menu,
+.menu,
+.popup {
+    padding: 4px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 alpha(#000,0.1),
+                inset 0 1px 0 0 alpha(#fff,0.1);
+    background-color: @background;
+    color: @text;
+}
+
+/* Menu Item */
+.menuitem {
+    border:none;
+    padding: 8px 4px;
+
+    -GtkMenuItem-arrow-scaling: 0.5;
+    -gtk-icon-style: symbolic;
+}
+
+/* Active */
+.menuitem:active {
+    background-color: @selection;
+    color: @selection_foreground;
+    -gtk-icon-style: symbolic;
+}
+
+/* Hover*/
+.menuitem:hover {
+    background-color: @selection;
+    color: @selection_foreground;
+    -gtk-icon-style: symbolic;
+}
+
+.menuitem:backdrop,
+.menu .menuitem:backdrop {
+    box-shadow: none;
+    border: none;
+}
+
+.menuitem:insensitive,
+.menu .menuitem:insensitive {
+    box-shadow: none;
+    color: @insensitive_text;
+    border: none;
+}
+
+/* Arrows */
+.menu .menuitem.arrow {
+    color: @text;
+    -GtkComboBox-arrow-scaling: 0.5;
+}
+
+.menu .menuitem.arrow {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+.menu .menuitem.arrow:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+}
+
+/* Separator color */
+.menuitem.separator {
+    border: none;
+    color: @border;
+    -GtkMenuItem-horizontal-padding: 0;
+    -GtkWidget-separator-height: 1;
+}
+
+.menuitem .entry {
+    border: none;
+    background-color: @base;
+    background-image: none;
+}
+
+.menuitem .entry:active,
+.menuitem .entry:focus {
+    border: none;
+}
+
+/* Accelerators */
+.menuitem .accelerator,
+.menuitem .accelerator:insensitive {
+    background: none;
+    color: @insensitive_text;
+}
+
+.menuitem .accelerator:hover,
+.menuitem .accelerator:active {
+    background: none;
+}
+
+
+/* Menu Text */
+.menuitem GtkLabel {
+    padding-left: 2px;
+    padding-right: 2px;
+    color: @text;
+}
+
+.menuitem:hover GtkLabel {
+    color: @selection_foreground;
+}
+
+/* Menu Text */
+.menuitem GtkLabel:insensitive {
+    color: @insensitive_text;
+}
+
+.menu .menuitem GtkLabel,
+.popup .menuitem GtkLabel {
+    padding-left: 6px;
+}
+
+/* Menu Image */
+.menuitem GtkImage {
+    padding-left: 2px;
+    padding-right: 2px;
+    color: @text;
+}
+
+.menuitem:hover GtkImage,
+.menu .menuitem:hover GtkImage {
+    color: @selection_foreground;
+}

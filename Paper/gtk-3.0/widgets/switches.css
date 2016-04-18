@@ -1,0 +1,78 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color switch_trough_active #9fb0b9;
+
+@define-color switch_slider #ffffff;
+@define-color switch_slider_border @trough_border;
+@define-color backdrop_slider_border @backdrop_trough_border;
+
+
+/*************
+ * GtkSwitch *
+ *************/
+
+GtkSwitch {
+    font: 1;
+    /*min-height: 24px;
+    min-width: 24px; FIXME: Uncomment for 3.19 */
+    -GtkSwitch-slider-width: 20;
+    -GtkSwitch-slider-height: 20;
+    transition: all 200ms ease-in;
+}
+
+GtkSwitch.trough {
+    background-color: alpha (#000, 0.2);
+    border: none;
+    border-radius: 14px;
+    color: transparent;
+    padding: 2px;
+}
+
+GtkSwitch.trough:active {
+    background-color: @switch_trough_active;
+}
+
+GtkSwitch.trough:insensitive {
+    background-color: alpha (#000, 0.2);
+}
+
+GtkSwitch.trough:active:backdrop,
+GtkSwitch.trough:active:insensitive {
+    background-color: alpha (@switch_trough_active, 0.5);
+}
+
+GtkSwitch.slider {
+    background-color: @switch_slider;
+    border: none;
+    border-radius: 50%;
+
+    box-shadow: 0 2px 2px alpha (#000, 0.2),
+                0 1px 2px alpha (#000, 0.2);
+    padding: 2px;
+}
+
+GtkSwitch.slider:focus {
+    background-color: @switch_slider;
+}
+
+GtkSwitch.slider:insensitive,
+GtkSwitch.slider:backdrop {
+    background-color: @switch_slider;
+    box-shadow: none;
+}

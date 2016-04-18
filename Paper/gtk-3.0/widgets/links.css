@@ -1,0 +1,75 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+@define-color link #02f;
+@define-color backdrop_link shade(@link, 1.1);
+@define-color visited_link shade(@link, 0.9);
+
+/*********
+ * Links *
+ *********/
+*:link, .button:link, .header-bar .button.titlebutton:link,
+.titlebar .button.titlebutton:link, .button:visited, .header-bar .button.titlebutton:visited,
+.titlebar .button.titlebutton:visited {
+  color: @visited_link;
+}
+
+*:link:visited,
+.button:visited,
+.header-bar .button.titlebutton:visited,
+.titlebar .button.titlebutton:visited {
+    color: @visited_link;
+}
+
+*:selected *:link:visited,
+*:selected .button:visited {
+    color: @visited_link;
+}
+
+*:link:hover,
+.button:hover:link,
+.button:hover:visited {
+    color: @backdrop_link;
+}
+
+*:selected *:link:hover,
+*:selected .button:hover:link,
+*:selected .button:hover:visited {
+    color: shade(@link, 1.1);
+}
+
+*:link:active,
+.button:active:link,
+.button:active:visited {
+    color: @visited_link;
+}
+
+*:selected *:link:active, *:selected .button:active:link, *:selected .button:active:visited {
+    color: @selection_foreground;
+}
+
+*:link:backdrop, .button:backdrop:link, .button:backdrop:visited, *:link:backdrop:hover, .button:backdrop:hover:link, .button:backdrop:hover:visited, *:link:backdrop:hover:selected, .button:backdrop:hover:selected:link, .button:backdrop:hover:selected:visited, .titlebar.selection-mode .subtitle:backdrop:hover:link,
+.header-bar.selection-mode .subtitle:backdrop:hover:link {
+    color: @backdrop_link;
+}
+
+*:link:selected, .button:selected:link, .button:selected:visited, .titlebar.selection-mode .subtitle:link,
+.header-bar.selection-mode .subtitle:link, *:selected *:link, *:selected .button:link, *:selected .button:visited {
+    color: @selected;
+}

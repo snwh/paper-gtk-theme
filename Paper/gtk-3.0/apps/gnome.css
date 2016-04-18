@@ -1,0 +1,69 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/***************
+ * font-viewer *
+ ***************/
+SushiFontWidget {
+    padding: 6px 12px;
+}
+
+
+/**********
+ * Sudoku *
+ **********/
+SudokuView SudokuCellView {
+    border: inherit;
+    background-color: inherit;
+}
+
+SudokuView SudokuCellView:backdrop {
+    border: inherit;
+    background-color: inherit;
+}
+
+SudokuView {
+    border: none;
+}
+
+/*************
+ * gucharmap *
+ *************/
+GucharmapChartable {
+    background-color: @base;
+}
+
+GucharmapChartable:active,
+GucharmapChartable:focus,
+GucharmapChartable:selected {
+    background-color: @selected_background;
+    color: @selection_foreground;
+}
+
+
+/**************
+ * GNOME Misc *
+ *************/
+
+ApDocView, /* Abiword */
+EogScrollView, /* Eog */
+CheeseThumbView /* Cheese */
+{
+    -EogScrollView-shadow-type: none;
+}

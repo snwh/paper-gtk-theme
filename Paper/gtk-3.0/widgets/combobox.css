@@ -1,0 +1,75 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/************
+ * Combobox *
+ ************/
+
+GtkComboBox {
+    padding: 0;
+    -GtkComboBox-arrow-scaling: 0.5;
+    -GtkComboBox-shadow-type: none;
+
+}
+
+GtkComboBox .separator {
+    /* always disable separators */
+    -GtkWidget-wide-separators: true;
+    -GtkWidget-horizontal-separator: 0;
+    -GtkWidget-vertical-separator: 0;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    color: inherit;
+    -GtkComboBox-arrow-scaling: 1;
+}
+
+/******************
+ * Combobox Entry *
+ ******************/
+
+/* Button */
+.combobox-entry .button {
+    box-shadow: none;
+}
+
+.combobox-entry .button:first-child {
+    border-radius: 4px 0 0 4px;
+    border-right-width: 0;
+}
+
+.combobox-entry .button:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+/* Entry */
+.combobox-entry .entry {
+    box-shadow: none;
+}
+
+.combobox-entry .entry:first-child {
+    border-radius: 4px 0 0 4px;
+    border-right-width: 0;
+}
+
+.combobox-entry .entry:last-child {
+    border-radius: 0 4px 4px 0;
+}

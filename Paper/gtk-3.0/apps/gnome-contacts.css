@@ -1,0 +1,53 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color gnomeContacts #2095F2;
+
+/**********
+ * Header *
+ **********/
+
+ContactsWindow .titlebar,
+ContactsWindow .header-bar {
+    background-color: @gnomeContacts;
+}
+
+ContactsWindow .titlebar:backdrop,
+ContactsWindow .header-bar:backdrop {
+    background-color: shade(@gnomeContacts,0.9);
+}
+
+
+/* Switch */
+ContactsWindow .header-bar GtkSwitch.trough:active {
+    background-color: @gnomeContacts;
+}
+
+ContactsWindow GtkSwitch.trough:active {
+    border: 1px solid shade(@gnomeContacts, 0.8);
+    background-color: @gnomeContacts;
+}
+
+ContactsWindow GtkSwitch.slider:active {
+    border: 1px solid shade(@gnomeContacts, 0.8);
+} 
+
+ContactsWindow .header-bar GtkSwitch.slider:active:backdrop,
+ContactsWindow .header-bar GtkSwitch.slider:backdrop {
+    background-color: shade(@gnomeContacts, 0.9);
+}

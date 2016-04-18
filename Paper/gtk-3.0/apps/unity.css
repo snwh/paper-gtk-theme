@@ -1,0 +1,206 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/****************
+ * Unity Colors *
+ ****************/
+
+@define-color unity #636E73; /* Unity window border color */
+@define-color backdrop_unity #5A6367; /* Backdrop Unity window border color */
+@define-color unity_text #dbdee0; /* Unity window text color */
+@define-color backdrop_unity_text #909598; /* Backdrop Unity window text color */
+@define-color unity_panel shade(@unity, 0.8); /* Unity panel color #454D50 */
+@define-color backdrop_unity_panel shade(@unity_panel, 1.05); /* Backdrop Unity panel color */
+@define-color unity_panel_text #dbdee0;  /* Unity panel text color */
+@define-color backdrop_unity_panel_text shade(@unity_panel_text, 0.95);  /* Backdrop Unity panel text color */
+
+/*********************
+ * Unity Decorations *
+ *********************/
+
+UnityDecoration {
+
+    /* Border properties (top, right, bottom, left) */
+    -UnityDecoration-extents: 28px 1px 1px 1px;/* the size of the decorations  */
+    -UnityDecoration-input-extents: 10px;/* the extra size of the input areas */
+
+    /* Shadows settings */
+    -UnityDecoration-shadow-offset-x: 1px;/* Size property, the shadow x offset */
+    -UnityDecoration-shadow-offset-y: 1px;/* Size property, the shadow y offset */
+    -UnityDecoration-active-shadow-color: rgba (0, 0, 0, 0.647);/* Color property, active window shadow color */
+    -UnityDecoration-active-shadow-radius: 8px;/* Size property, active window shadow radius */
+    -UnityDecoration-inactive-shadow-color: rgba (0, 0, 0, 0.647);/* Color property, inactive windows shadow color */
+    -UnityDecoration-inactive-shadow-radius: 5px;/* Size property, inactive windows shadow radius */
+
+    /* Glow applied to the selected scaled window */
+    -UnityDecoration-glow-size: 8px;/* Size property, size of glow */
+    -UnityDecoration-glow-color: @selection;/* Color property of the glow */
+
+    /* Title settings */
+    -UnityDecoration-title-indent: 10px;/* Size property, left indent of the title */
+    -UnityDecoration-title-fade: 35px;/* Size property, space of the title that can be faded */
+    -UnityDecoration-title-alignment: 0.0;/* Float from 0.0 to 1.0, to align the title */
+    background-color: @unity;
+    color: @unity_text;
+}
+
+UnityDecoration.top {
+    padding: 0 5px 0 5px;
+    border-radius: 4px 4px 0px 0px;
+    box-shadow: none;
+    border: 1px solid @unity;
+    border-bottom-width: 0;
+    background-color: @unity;
+    color: @unity_text;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+UnityDecoration.top.menuitem {
+    color: @unity_text;
+}
+
+UnityDecoration.top.menuitem:backdrop {
+    background-color: @backdrop_unity;
+    color: @backdrop_unity_text;
+}
+
+UnityDecoration.top:backdrop {
+    /*border: 1px solid @backdrop_unity;*/
+    border-bottom-width: 0;
+    background-color: @backdrop_unity;
+    color: @backdrop_unity_text;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+UnityDecoration.left,
+UnityDecoration.right {
+    background-repeat: repeat-x;
+    background-color: shade(@unity, 0.6);
+    background-size: 1px 120px;
+    background-clip: border-box;
+    background-image: linear-gradient(to bottom, 
+                                      @unity,
+                                      shade(@unity, 0.6)
+                                      );
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     color-stop (0, @unity),
+                                     color-stop (0.5, @unity),
+                                     color-stop (1, shade(@unity, 0.6)));
+}
+
+UnityDecoration.bottom {
+    background-size: 1px;
+    background-repeat: repeat-x;
+    background-color: shade(@unity, 0.6);
+}
+
+UnityDecoration.left:backdrop,
+UnityDecoration.right:backdrop,
+UnityDecoration.bottom:backdrop {
+    background-size: 1px;
+    background-repeat: repeat-x;
+    background-color: @backdrop_unity;
+}
+
+
+/***************
+* Unity Panel *
+***************/
+
+UnityPanelWidget,
+.unity-panel {
+	background-color: @unity_panel;
+	color: @unity_panel_text;
+}
+
+
+UnityPanelWidget:backdrop,
+.unity-panel:backdrop {
+    background-color: @backdrop_unity_panel;
+    color: @backdrop_unity_panel_text;
+}
+
+.unity-panel.menuitem,
+.unity-panel .menuitem {
+    border-width: 0 1px;
+    color: @unity_panel_text;
+}
+
+.unity-panel.menubar,
+.unity-panel .menubar {
+    color: @unity_panel_text;
+}
+
+.unity-panel.menu.menubar,
+.unity-panel .menu .menubar {
+    background-color: @unity_panel;
+    color: @unity_panel_text;
+}
+
+.unity-panel.menubar:backdrop,
+.unity-panel .menubar *:backdrop {
+    color: @backdrop_foreground;
+}
+
+.unity-panel.menubar.menuitem,
+.unity-panel.menubar .menuitem {
+    padding: 3px 5px;
+    border-width: 1px;
+    border-style: solid;
+    border: none;
+    background: none;
+    color: @unity_panel_text;
+    box-shadow: none;
+}
+
+.unity-panel.menubar.menuitem:hover,
+.unity-panel.menubar .menuitem:hover {
+    border-radius: 0;
+    background-color: shade(@unity, 1.05);
+    color: @unity_panel_text;
+    box-shadow: none;
+}
+
+.unity-panel.menubar .menuitem *:hover {
+    color: white;
+    box-shadow: none;
+}
+
+.unity-panel.menubar .menuitem.separator,
+.unity-panel.menubar.menuitem.separator {
+    -GtkMenuItem-horizontal-padding: 0;
+    -GtkWidget-separator-height: 1;
+    border: none;
+    color: @separator;
+}
+
+/* Force Quit */
+SheetStyleDialog.unity-force-quit {
+     background-color: @base;
+}
+
+
+@keyframes playbackmenuitem_spinner {
+    to { -gtk-icon-transform: rotate(1turn); }
+}
+
+.menu IdoPlaybackMenuItem.menuitem:active {
+    -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
+    animation: playbackmenuitem_spinner 1s infinite linear;
+    color: @selected_background;
+}

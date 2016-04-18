@@ -1,0 +1,83 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/***************
+ * Menu Button *
+ ***************/
+
+.menu-button {
+	color: @text;
+}
+
+.menu-button .menu,
+.menu-button .menu GtkLabel,
+.menu-button.image-button .menu,
+.menu-button.image-button .menu GtkLabel {
+	color: @text;
+}
+
+.menu-button .menu:backdrop GtkLabel,
+.menu-button .menuitem:backdrop GtkLabel
+.menu-button.image-button .menu:backdrop GtkLabel,
+.menu-button.image-button .menuitem:backdrop GtkLabel {
+	color: @backdrop_text;
+}
+
+.menu-button .menu:insensitive GtkLabel,
+.menu-button .menuitem:insensitive GtkLabel,
+.menu-button.image-button .menu:insensitive GtkLabel,
+.menu-button.image-button .menuitem:insensitive GtkLabel {
+	color: @insensitive_text;
+}
+
+.menu-button .menu .accelerator,
+.menu-button .menu .accelerator:insensitive,
+.menu-button .menuitem .accelerator,
+.menu-button .menuitem .accelerator:insensitive
+.menu-button .menu .menuitem .accelerator,
+.menu-button .menu .menuitem .accelerator:insensitive,
+.menu-button.image-button .menu .accelerator,
+.menu-button.image-button .menu .accelerator:insensitive,
+.menu-button.image-button .menuitem .accelerator,
+.menu-button.image-button .menuitem .accelerator:insensitive
+.menu-button.image-button .menu .menuitem .accelerator,
+.menu-button.image-button .menu .menuitem .accelerator:insensitive {
+	color: @insensitive_text;
+}
+
+.menu-button.separator {
+	color: @separator;
+}
+
+.menu-button:hover {
+}
+
+.menu-button:insensitive {
+	color: @insensitive_text;
+}
+
+.menu-button:hover,
+.menu-button:active,
+.menu-button:active:insensitive,
+.menu-button:insensitive,
+.menu-button {
+}
+
+GtkMenuButton.button:active,
+GtkMenuButton.button.raised:active {
+}

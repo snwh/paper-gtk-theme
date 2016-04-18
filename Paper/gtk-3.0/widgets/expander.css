@@ -1,0 +1,54 @@
+/************
+ * expander *
+ ************/
+.expander {
+	border: @border;
+    color: alpha(@foreground, 0.7);
+}
+
+.expander:active,
+.expander:hover {
+	border: alpha(white, 0.7);
+    color: alpha(white, 0.7);
+}
+
+.expander:insensitive {
+	border: alpha(@insensitive_text, 0.7);
+    color: alpha(@insensitive_text, 0.7);
+}
+
+.expander:backdrop {
+	border: alpha(@backdrop_text, 0.7);
+    color: alpha(@backdrop_text, 0.7);
+}
+
+
+/* Labels */
+.expander GtkLabel {
+    color: @text;
+}
+
+.expander:focus GtkLabel {
+    /*color: shade(@text, 2.0);*/
+    color: @text;
+}
+
+.expander:active GtkLabel,
+.expander:hover GtkLabel {
+    color: alpha(#000, 0.5);
+    /*color: @text;*/
+}
+
+.expander:backdrop GtkLabel,
+.expander:backdrop:hover GtkLabel,
+.expander:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.expander:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.expander:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}

@@ -1,0 +1,61 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/**********
+ * Labels *
+ **********/
+
+.label,
+.label GtkLabel,
+GtkLabel {
+	color: inherit;
+}
+
+.dim-label,
+.dim-label GtkLabel {
+	color: @insensitive_text;
+}
+
+.label:active,
+.label:focus,
+.label:hover,
+*:active GtkLabel,
+*:focus GtkLabel,
+*:hover GtkLabel {
+    color: inherit;
+}
+
+.label:backdrop,
+.label:backdrop:hover,
+.label:active:backdrop,
+*:backdrop GtkLabel,
+*:backdrop:hover GtkLabel,
+*:active:backdrop GtkLabel {
+    color: inherit;
+}
+
+.label:insensitive,
+*:insensitive GtkLabel {
+    color: inherit;
+}
+
+.label:insensitive:backdrop,
+*:insensitive:backdrop GtkLabel {
+    color: inherit;
+}
+

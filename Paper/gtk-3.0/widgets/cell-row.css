@@ -1,0 +1,43 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/****************
+ * cell and row *
+ ****************/
+
+.cell {
+    color: @foreground;
+    border-width: 0px;
+}
+
+.cell:selected,
+.cell:selected:focus {
+    background-color: @selection;
+    color: @selection_foreground;
+}
+
+row:selected,
+row:selected:focus {
+    border: 0 solid shade(@selection, 0.9);
+    background-color: @selection;
+    background-image: none;
+    color: @selection_foreground;
+
+    -GtkWidget-focus-padding: 1;
+    -GtkWidget-focus-line-width: 0;
+}

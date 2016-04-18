@@ -1,0 +1,132 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/**********************
+ * Common Definitions *
+ **********************/
+
+/* Insensitive colors */
+@define-color insensitive_base shade(@base, 0.95);
+@define-color insensitive_background @background;
+@define-color insensitive_foreground alpha(@foreground, 0.5);
+@define-color insensitive_border shade(@border, 1.1);
+@define-color insensitive_button @insensitive_background;
+@define-color insensitive_separator shade(@separator, 1.05);
+@define-color insensitive_text shade(@background, 0.8);
+@define-color insensitive_selection shade(@selection, 1.05);
+
+/* Backdrop colors */
+@define-color backdrop_base shade(@base, 0.99);
+@define-color backdrop_background shade(@background, 0.99);
+@define-color backdrop_foreground shade(@foreground, 1.2);
+@define-color backdrop_border shade(@border, 1.02);
+@define-color backdrop_separator alpha(@separator, 0.9);
+@define-color backdrop_text shade(@text, 1.1);
+@define-color backdrop_selection shade(@selection, 0.95);
+
+/* Backdrop-insensitive colors */
+@define-color backdrop_insensitive_border mix(@backdrop_background, @backdrop_border, 0.5);
+@define-color backdrop_insensitive_foreground mix(@backdrop_background, @backdrop_foreground, 0.5);
+@define-color backdrop_insensitive_background mix(@backdrop_background, @backdrop_base, 0.5);
+@define-color backdrop_insensitive_text mix(@backdrop_text, @insensitive_text, 0.5);
+
+/* Backdrop-selected colors */
+@define-color backdrop_selected_background shade(@selection, 0.9);
+@define-color backdrop_selection @backdrop_selected_background;
+@define-color backdrop_selection_foreground shade(@selection_foreground, 0.9);
+
+/* Hover colors */
+@define-color hover_base shade(@base, 1.02);
+@define-color hover_background rgba(255,255,255,0.2);
+@define-color hover_foreground shade(@foreground, 1.02);
+@define-color hover_border shade(@border, 1.02);
+@define-color hover_text shade(@foreground, 1.02);
+@define-color hover_selection shade(@selection, 1.3);
+
+/* Active colors */
+@define-color active_text shade(@foreground, 1.3);
+
+/* Selected color */
+@define-color selected_background @selection;
+@define-color selected_border shade(@selection, 0.9);
+@define-color selection_foreground alpha(#000, 0.3);
+@define-color selected_foreground @selection_foreground;
+
+/****************
+ * Theme colors *
+  ***************/
+
+@define-color theme_base @base;
+@define-color theme_base_color @base;
+
+@define-color theme_bg_color @background;
+@define-color theme_background @background;
+@define-color bg_color @background;
+@define-color fg_color @foreground;
+@define-color theme_foreground @foreground;
+
+@define-color theme_selected_background @selected_background;
+@define-color selected_bg_color @selected_background;
+@define-color theme_selection_foreground @selection_foreground;
+
+@define-color theme_text @foreground;
+@define-color theme_text_color @foreground;
+
+
+/*****************
+ * Trough Colors *
+ *****************/
+
+@define-color trough_background shade(@background, 0.9);
+@define-color backdrop_trough_background shade(@trough_background, 0.95);
+@define-color insensitive_trough_background shade(@trough_background, 1.05);
+
+@define-color trough_border shade(@border, 1.02);
+@define-color backdrop_trough_border shade(@backdrop_border, 1.2);
+@define-color insensitive_trough_border shade(@insensitive_border, 1.2);
+
+
+/*********************
+ * Internal elements *
+ *********************/
+@define-color internal_element @base;
+@define-color internal_element_prelight @selection;
+
+@define-color inset_light alpha(white, 0.45);
+@define-color inset_dark alpha(#000, 0.07);
+
+/*****************
+ * Miscellaneous *
+ *****************/
+@define-color placeholder_text_color shade(@foreground, 2.0);
+@define-color view_symbolic shade(@internal_element, 0.50);
+
+/* GNOME Apps */
+@define-color entry_tag_background #3465a4;
+
+/***********
+ * Popover *
+ ***********/
+@define-color osd_popover_background alpha(@panel, 0.90);
+
+/***********
+ * Imports *
+ ***********/
+
+/* Import App-Specific CSS */
+@import url("apps.css");

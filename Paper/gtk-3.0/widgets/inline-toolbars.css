@@ -1,0 +1,173 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/*******************
+ * Inline Toolbars *
+ *******************/
+
+.inline-toolbar.toolbar {
+    background-color: @base;
+    border: solid @border;
+    border-width: 0 1px 1px 1px;
+    color: @text;
+    box-shadow: none;
+}
+
+.inline-toolbar.toolbar:backdrop {
+    background-color: @backdrop_base;
+    box-shadow: none;
+    -gtk-image-effect: dim;
+}
+
+.inline-toolbar.toolbar:first-child {
+    border-radius: 6px 6px 0px 0px;
+    border-width: 1px 1px 0px 1px;
+}
+
+.inline-toolbar.toolbar:last-child {
+    border-radius: 0 0 6px 6px;
+    border-width: 0px 1px 1px 1px;
+}
+
+/* Buttons */
+.inline-toolbar.toolbar .button,
+.inline-toolbar.toolbar .text-button,
+.inline-toolbar.toolbar .image-button {
+    border: none;
+    background: none;
+    color: @text;
+    border-radius: 0px;
+    padding: 13px;
+}
+
+.inline-toolbar.toolbar .button:active
+.inline-toolbar.toolbar .text-button:active,
+.inline-toolbar.toolbar .image-button:active {
+    border: none;
+    color: @text;
+    box-shadow: none;
+    padding: 13px;
+}
+
+.inline-toolbar.toolbar .button .raised
+.inline-toolbar.toolbar .text-button .raised,
+.inline-toolbar.toolbar .image-button .raised {
+    border: none;
+    color: @text;
+    box-shadow: none;
+    padding: 13px;
+}
+
+/* Hover */
+.inline-toolbar.toolbar .button:hover,
+.inline-toolbar.toolbar .button:active:hover
+.inline-toolbar.toolbar .text-button:hover,
+.inline-toolbar.toolbar .text-button:active:hover,
+.inline-toolbar.toolbar .image-button:hover,
+.inline-toolbar.toolbar .image-button:active:hover {
+    padding: 13px;
+    border: none;
+    background-color: alpha(#000, 0.1);
+    color: @text;
+    box-shadow: none;
+}
+
+/* Insensitive */
+.inline-toolbar.toolbar .button:insensitive,
+.inline-toolbar.toolbar .text-button:insensitive,
+.inline-toolbar.toolbar .image-button:insensitive {
+    color: @insensitive_header_text;
+    -gtk-image-effect: dim;
+}
+
+
+/* Backdrop */
+.inline-toolbar.toolbar .button:backdrop,
+.inline-toolbar.toolbar .button:active:backdrop
+.inline-toolbar.toolbar .text-button:backdrop,
+.inline-toolbar.toolbar .text-button:active:backdrop,
+.inline-toolbar.toolbar .image-button:backdrop,
+.inline-toolbar.toolbar .image-button:active:backdrop {
+    color: @backdrop_text;
+    border: none;
+    padding: 13px;
+}
+
+/* Insensitive:Backdrop; */
+.inline-toolbar.toolbar .button:insensitive:backdrop,
+.inline-toolbar.toolbar .text-button:insensitive:backdrop,
+.inline-toolbar.toolbar .image-button:insensitive:backdrop {
+    padding: 13px;
+    border: none;
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
+
+/* Images */
+.inline-toolbar.toolbar .button GtkImage {
+    color: @text;
+}
+
+.inline-toolbar.toolbar .button:active GtkImage,
+.inline-toolbar.toolbar .button:focus GtkImage,
+.inline-toolbar.toolbar .button:hover GtkImage {
+    color: @text;
+}
+
+.inline-toolbar.toolbar .button:backdrop GtkImage,
+.inline-toolbar.toolbar .button:backdrop:hover GtkImage,
+.inline-toolbar.toolbar .button:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+.inline-toolbar.toolbar .button:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+.inline-toolbar.toolbar .button:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+.inline-toolbar.toolbar .button GtkLabel {
+    color: @text;
+}
+
+.inline-toolbar.toolbar .button:active GtkLabel,
+.inline-toolbar.toolbar .button:focus GtkLabel,
+.inline-toolbar.toolbar .button:hover GtkLabel {
+    color: @text;
+}
+
+.inline-toolbar.toolbar .button:backdrop GtkLabel,
+.inline-toolbar.toolbar .button:backdrop:hover GtkLabel,
+.inline-toolbar.toolbar .button:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.inline-toolbar.toolbar .button:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.inline-toolbar.toolbar .button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}

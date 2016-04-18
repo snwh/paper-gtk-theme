@@ -1,0 +1,328 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/*********
+ * Frame *
+ *********/
+
+.frame {
+    background: none;
+    border: 1px solid @border;
+    color: @foreground;
+}
+
+.frame:backdrop {
+    border-color: @backdrop_border;
+    background: none;
+    color: @backdrop_text;
+}
+
+.frame:insensitive {
+    border-color: @insensitive_border;
+    background: none;
+    color: @insensitive_text;
+}
+
+.flat {
+   border:none;
+}
+
+
+/********
+ * Misc *
+ ********/
+
+GtkAlignment,
+GtkEventBox {
+    background-color: @background;
+    color: @text;
+}
+
+GtkAlignment:backdrop,
+GtkEventBox:backdrop {
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+}
+
+/********
+ * View *
+ ********/
+
+.view {
+    background-color: @base;
+    color: @foreground;
+}
+
+.view:insensitive,
+.view:insensitive:insensitive {
+    background-color: @insensitive_background;
+    border-color: @insensitive_border;
+    color: @insensitive_text;
+}
+
+.view:backdrop,
+.view:backdrop:backdrop {
+    background-color: @backdrop_background;
+    border-color:  @backdrop_border;
+    color: @backdrop_text;
+}
+
+.view:selected,
+.view:selected:focus {
+    background-color: @selection;
+    border-color:  shade(@selection, 0.8);
+    color: @selection_foreground;
+}
+
+.view:selected:backdrop,
+.view:selected:backdrop:focus {
+    background-color: @backdrop_selection;
+    border-color: @backdrop_selection;
+    color: @backdrop_selection_foreground;
+}
+
+.view.separator {
+    color: @border;
+}
+
+/* Selected */
+.view.rubberband,
+.rubberband {
+    border: 1px solid shade(@selection, 0.9);
+    border-radius: 4px;
+    background-color: alpha(@selection, 0.3);
+}
+
+
+/************
+ * Treeview *
+ ************/
+
+GtkTreeView.view.separator,
+GtkTreeView.separator,
+.separator,
+.separator:hover {
+    color: @border;
+    background-color: @border;
+}
+
+GtkTreeView {
+    -GtkTreeView-vertical-separator: 5px;
+    -GtkTreeView-horizontal-separator: 6px;
+    -GtkTreeView-expander-size: 8px;
+    -GtkTreeView-grid-line-pattern: "\000\000";
+    border: 1px solid @border;
+}
+
+GtkTreeView row:nth-child(even) {
+    background-color: @base;
+    color: @foreground;
+}
+
+GtkTreeView row:nth-child(odd) {
+    background-color: shade(@base,0.96);
+    color: @foreground;
+}
+
+GtkTreeView .entry {
+    border-radius: 0;
+}
+
+GtkTreeView.dnd {
+    border: 1px solid @selected_border;
+    border-radius: 0;
+}
+
+GtkTreeView .entry {
+    border-radius: 4px;
+    background-color: @base;
+    background-image: none;
+}
+
+/************
+ * TextView *
+ ************/
+
+GtkTextView {
+    background-color: @base;
+    color: @foreground;
+}
+
+GtkTextView:backdrop {
+    background-color: @backdrop_base;
+    color: @backdrop_text;
+}
+
+GtkTextView:insensitive {
+    background-color: @insensitive_base;
+    color: @insensitive_text;
+}
+
+/************
+ * Iconview *
+ ************/
+
+GtkIconView.view {
+    background-color: @base;
+    border: solid @selection;
+    color: @foreground;
+}
+ 
+GtkIconView.view.cell:hover {
+    border: 1px solid @selection;
+    border-radius: 6px;
+    background-color: alpha(@selection,0.4);
+    color: @selection;
+}
+ 
+GtkIconView.view.cell:selected,
+GtkIconView.view.cell:selected:focus {
+    border: 1px solid shade(@selection, 0.8);
+    border-radius: 6px;
+    background-color: @selection;
+    color: @selection_foreground;
+}
+
+GtkIconView.content-view.check {
+    background: none;
+}
+
+GtkIconView.content-view.check:active {
+    background: none;
+}
+
+GtkIconView.content-view.check:prelight,
+GtkIconView.content-view.check:insensitive,
+GtkIconView.content-view.check:selected {
+    background: none;
+}
+
+
+/****************
+ * Content View *
+ ****************/
+.content-view.view {
+    background-color: @base;
+    color: @foreground;
+}
+
+.content-view.view:hover {
+    background-color: alpha(@selection, 0.6);
+}
+
+.content-view.view:selected,
+.content-view.view:active {
+    background-color: @selection;
+    background-image: none;
+}
+
+.content-view.view:insensitive {
+    background-color: @insensitive_background;
+}
+
+.content-view.view:backdrop {
+    background-color: @background_backdrop;
+    background-image: none;
+}
+
+.content-view.view:selected:backdrop {
+    background-color: @backdrop_selected_background;
+    background-image: none;
+}
+
+.content-view.cell {
+    background: none;
+    background-image: none;
+}
+
+.content-view.view.check,
+.content-view.view.check:active {
+    background: none;
+}
+
+.content-view column-header .button {
+    border-width: 0 0 1px 1px;
+
+    background-image: none;
+    background-color:@base;
+
+    border-color: @border;
+}
+
+.content-view .title,
+.content-view .option-title {
+    color: @foreground;
+    text-shadow: 0 1px alpha(#fff, 0.3);
+}
+
+.content-view .subtitle,
+.content-view .option-description {
+    color: alpha(@foreground, 0.7);
+    text-shadow: 0 1px alpha(#fff, 0.4);
+} 
+
+/* Drawing area */
+GtkDrawingArea {
+    background-color: @base;
+    color: @foreground;
+}
+
+GtkDrawingArea:backdrop {
+    background-color: @backdrop_base;
+    color: @backdrop_text;
+}
+
+GtkDrawingArea:insensitive {
+    background-color: @insensitive_background;
+}
+
+/***********
+ * gtkhtml *
+ ***********/
+GtkHTML {
+    background-color: @base;
+    color: @foreground;
+}
+
+GtkHTML:active:backdrop,
+GtkHTML:backdrop {
+    background-color: @backdrop_base;
+    color: @backdrop_text;
+}
+
+/* needed for webkit/GtkStyle/Evolution compatibility */
+GtkHTML:active,
+GtkHTML:active:backdrop,
+.entry:active,
+.entry:active:backdrop {
+    color: @backdrop_text;
+    background-color: @backdrop_background;
+}
+
+.cursor-handle.top,
+.cursor-handle.bottom {
+    background: none;
+    box-shadow: none;
+    border-style: none;
+    border-image: none;
+    border-radius: 0px;
+    border-width: 0px;
+
+    /* background-image in assets */
+}

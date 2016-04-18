@@ -1,0 +1,273 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color button_background shade(@base, 0.98);/* Button background color */
+@define-color button_border @border;/* Button border color */
+@define-color backdrop_button_background @backdrop_background;/* Backdrop button background color */
+@define-color backdrop_button_border @backdrop_border; /* Backdrop button border color */
+
+/***********
+ * Buttons *
+ ***********/
+ 
+.button,
+.button.text-button,
+.button.image-button {
+    border-radius: 3px;
+    padding: 4px 9px;
+    border: 1px solid @button_border;
+    background-color: @button_background;
+    background-image: linear-gradient(to bottom, 
+                                      @button_background,
+                                      shade(@button_background, 0.98)
+                                      );
+    color: @text;
+}
+
+.button.flat,
+.button.flat:backdrop,
+.button.flat:backdrop:insensitive,
+.menuitem.button.flat,
+.menuitem.button.flat:backdrop,
+.menuitem.button.flat:backdrop:hover,
+.button:link,
+.button:visited,
+.button:link:hover,
+.button:link:active,
+.button:visited:hover,
+.button:visited:active,
+.button:link:backdrop,
+.button:visited:backdrop,
+.notebook tab
+.list-row.button,
+.list-row.button:backdrop:hover,
+GtkCalendar.button,
+GtkCalendar.button:hover,
+GtkCalendar.button:backdrop,
+GtkCalendar.button:backdrop:hover,
+.scale-popup .button:hover,
+.scale-popup .button:backdrop,
+.scale-popup .button:backdrop:hover,
+.scale-popup .button:backdrop:insensitive {
+    border: 1px solid transparent;
+    background: none;
+}
+
+/* Focus Button */
+.button *:focus,
+*.button:focus {
+    outline-color: alpha(#000, 0.2);
+    outline-style: dashed;
+    outline-offset: -3px;
+    outline-width: 1px;
+    outline-radius: 2px;
+}
+
+.button:focus,
+.button.default:focus,
+.button:active:focus,
+.button.text-button:focus,
+.button.image-button:focus {
+    border: 1px solid @selection;
+    background-color: shade(@selection, 1.1);
+    background-image: linear-gradient(to bottom, 
+                                      shade(@selection, 1.1),
+                                      shade(shade(@selection, 1.1), 0.98)
+                                      );
+    color: @selection_foreground;
+}
+
+/* Hover Button */
+.button:hover,
+.button.default:hover,
+.button:active:hover,
+.button.text-button:hover,
+.button.image-button:hover {
+    border: 1px solid @selection;
+    background-color: shade(@selection, 1.2);
+    background-image: linear-gradient(to bottom, 
+                                      shade(@selection, 1.2),
+                                      shade(shade(@selection, 1.2), 0.98)
+                                      );
+    color: @selection_foreground;
+}
+
+/* Active (Pressed) Button */
+.button:active,
+.button.default:active,
+.button.text-button:active,
+.button.image-button:active {
+    border: 1px solid @selection;
+    background-color: shade(@selection, 1.1);
+    background-image: linear-gradient(to top, 
+                                      shade(@selection, 1.1),
+                                      shade(shade(@selection, 1.1), 0.95)
+                                      );
+    color: @selection_foreground;
+
+}
+
+/* Insensitive Button */
+.button:insensitive,
+.button.default:insensitive,
+.button.text-button:insensitive,
+.button.image-button:insensitive {
+    border: 1px solid @insensitive_border;
+    background-color: @insensitive_background;
+    background-image: none;
+    color: @insensitive_text;
+}
+
+/* Backdrop Button */
+.button:backdrop,
+.button.default:backdrop,
+.button.text-button:backdrop,
+.button.image-button:backdrop {
+    border: 1px solid @backdrop_button_border;
+    background-color: @backdrop_button_background;
+    background-image: none;
+    color: @backdrop_text;
+}
+
+/* Backdrop Button */
+.button:backdrop:hover,
+.button.default:backdrop:hover,
+.button.text-button:backdrop:hover,
+.button.image-button:backdrop:hover {
+    background-color: shade(@backdrop_button_background, 1.1);
+    background-image: linear-gradient(to bottom, 
+                                      shade(@backdrop_button_background, 1.1),
+                                      shade(shade(@backdrop_button_background, 1.1), 0.98)
+                                      );
+    color: @backdrop_text;
+}
+
+/* Insensitive Button */
+.button:insensitive:backdrop,
+.button.default:insensitive:backdrop,
+.button.text-button:insensitive:backdrop,
+.button.image-button:insensitive:backdrop {
+    border: 1px solid @insensitive_border;
+    background-color: @insensitive_background;
+    background-image: none;
+    color: @insensitive_text;
+}
+
+
+/**************
+* Help Button *
+**************/
+.help_button {
+    border-radius: 16px;
+}
+
+
+.button .circular-button {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 2px;
+    padding-left: 2px;
+    border-radius: 12px;
+}
+
+
+/*************************** 
+* Overlay Button *
+***************************/
+
+GtkOverlay > .button,
+GtkOverlay > .button:hover,
+GtkOverlay > .button:backdrop,
+GtkOverlay > .button:focus {
+    background-image: none;
+    background: none;
+    color: #fff;
+}
+
+GtkOverlay > .button:active,
+GtkOverlay > .button:hover:active {
+    background-color: #fff;
+    color: @foreground_color;
+}
+
+GtkOverlay > .button:focus,
+GtkOverlay > .button:focus:active {
+}
+
+GtkOverlay > .button:focus:active {
+    background-color: @selection;
+}
+
+
+/******************
+ * Button No Undo *
+ ******************/
+.button.noundo,
+.content-view .button.noundo {
+    background-color: shade(@error, 1.08);
+    color: @error_foreground;
+}
+
+.button.noundo:hover,
+.content-view .button.noundo:hover {
+    background-color: @error;
+}
+
+.button.noundo:active,
+.content-view .button.noundo:active {
+    background-color: shade(@error, 0.95);
+}
+
+.button.noundo:active:hover,
+.content-view .button.noundo:active:hover {
+    background-color: shade(@error, 0.97);
+}
+
+.button.noundo GtkLabel,
+.button.noundo Gtklabel:prelight {
+    color: @error_foreground;
+}
+
+/**********************
+ * Affirmative Button *
+ **********************/
+.button.affirmative,
+.content-view .button.affirmative {
+    background-color: shade(@selected_background, 1.08);
+    color: @selection_foreground;
+}
+
+.button.affirmative:hover,
+.content-view .button.affirmative:hover {
+    background-color: @selected_background;
+}
+
+.button.affirmative:active,
+.content-view .button.affirmative:active {
+    background-color: shade(@selected_background, 0.95);
+}
+
+.button.affirmative:active:hover,
+.content-view .button.affirmative:active:hover {
+    background-color: shade(@selected_background, 0.97);
+}
+
+.button.affirmative GtkLabel,
+.button.affirmative Gtklabel:prelight {
+    color: @selection_foreground;
+}

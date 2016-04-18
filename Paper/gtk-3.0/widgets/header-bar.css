@@ -1,0 +1,378 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+@define-color backdrop_header_text alpha(@header_text, 0.7);
+@define-color insensitive_header_text alpha(@header_text, 0.5);
+@define-color backdrop_header_text_dark alpha(@header_text_dark, 0.7);
+@define-color insensitive_header_text_dark alpha(@header_text_dark, 0.5);
+
+/**************
+ * Header Bar *
+ **************/
+
+.header-bar {
+    padding:0;
+    border: none;
+    border-radius: 4px 4px 0 0;
+    background-color: @header;
+    color: @header_text;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1);
+}
+
+
+.maximized .header-bar {
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.header-bar:backdrop {
+    background-image: none;
+    background-color: @backdrop_header;
+    color: @backdrop_header_text;
+    box-shadow: none;
+}
+
+.header-bar *:insensitive {
+    color: @insensitive_header_text;
+}
+
+/* Text */
+.title,
+.header-bar .title {
+    padding: 0;
+    padding-left: 13px;
+    padding-right: 13px;
+    font: Bold;
+    color: @header_text;
+}
+
+.header-bar > GtkImage,
+.header-bar > GtkArrow {
+    color: @header_text;
+}
+
+.header-bar .button.linked .title,
+.header-bar .button.flat .title {
+    padding: 0;
+}
+
+.header-bar .title:backdrop {
+    color: @backdrop_header_text;
+}
+
+/* Subtitle */
+.header-bar .subtitle {
+    padding: 0;
+    font: 9;
+}
+
+.header-bar .subtitle,
+.header-bar .subtitle GtkLabel,
+.header-bar .subtitle GtkImage {
+    color: alpha(@header_text, 0.8);
+}
+
+.header-bar .subtitle:backdrop,
+.header-bar .subtitle:backdrop GtkLabel,
+.header-bar .subtitle:backdrop GtkImage  {
+    color: alpha(@backdrop_header_text,0.8);
+}
+
+/* Counter */
+.header-bar .label.counter-label {
+    background-color: alpha(@header_text,0.5);
+    color:@header_text;
+}
+
+/*Images*/
+
+.header-bar GtkImage,
+.header-bar *:active GtkImage,
+.header-bar *:focus GtkImage,
+.header-bar *:hover GtkImage {
+    color: @header_text;
+}
+
+.header-bar *:backdrop GtkImage,
+.header-bar *:backdrop:hover GtkImage,
+.header-bar *:active:backdrop GtkImage {
+    color: @header_text;
+    -gtk-image-effect: dim;
+}
+
+.header-bar *:insensitive GtkImage
+.header-bar *:backdrop:insensitive GtkImage,
+.header-bar *:insensitive:backdrop GtkImage {
+    color: @header_text;
+    -gtk-image-effect: dim;
+}
+
+
+/* Buttons */
+.header-bar .button,
+.header-bar .flat,
+.header-bar .button.image-button,
+.header-bar .linked,
+.header-bar .suggested-action .button,
+.header-bar .button.text-button,
+.header-bar .titlebutton {
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 10px;
+    color: @header_text;
+}
+
+
+.header-bar .button.image-linked {
+    padding: 13px;
+}
+
+/* Buttons (Hover) */
+.header-bar .button:hover,
+.header-bar .flat:hover,
+.header-bar .button.image-button:hover,
+.header-bar .linked:hover,
+.header-bar .suggested-action .button:hover,
+.header-bar .button.text-button:hover,
+.header-bar .titlebutton:hover {
+    background-image: none;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    background-color: alpha(#000,0.1);
+    color: @header_text;
+}
+
+/* Buttons (Backdrop) */
+.header-bar .button:backdrop,
+.header-bar .flat:backdrop,
+.header-bar .button.image-button:backdrop,
+.header-bar .linked:backdrop,
+.header-bar .suggested-action .button:backdrop,
+.header-bar .button.text-button:backdrop,
+.header-bar .titlebutton:backdrop {
+    background: none;
+    background-image: none;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    color: shade(@header_text, 1.1);
+}
+
+/* Buttons (Insensitive) */
+.header-bar .button:insensitive,
+.header-bar .flat:insensitive,
+.header-bar .button.image-button:insensitive,
+.header-bar .linked:insensitive,
+.header-bar .suggested-action .button:insensitive,
+.header-bar .button.text-button:insensitive,
+.header-bar .titlebutton:insensitive {
+    background: none;
+    background-image: none;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    color: alpha(@header_text, 0.5);
+}
+
+/* Buttons (Checked) */
+.header-bar .button:checked,
+.header-bar .flat:checked,
+.header-bar .button.image-button:checked,
+.header-bar .linked:checked,
+.header-bar .suggested-action .button:checked,
+.header-bar .button.text-button:checked,
+.header-bar .titlebutton:checked {
+    background-image: none;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    text-shadow: none;
+    color: @header_text;
+    box-shadow:inset 0 -2px 0 0 @header_text;
+}
+
+/* Buttons (Active/Focused) */
+.header-bar .button:focus,
+.header-bar .flat:focus,
+.header-bar .button.image-button:focus,
+.header-bar .linked:focus,
+.header-bar .suggested-action .button:focus,
+.header-bar .button.text-button:focus,
+.header-bar .titlebutton:focus,
+.header-bar .button:active,
+.header-bar .flat:active,
+.header-bar .button.image-button:active,
+.header-bar .linked:active,
+.header-bar .suggested-action .button:active,
+.header-bar .button.text-button:active,
+.header-bar .titlebutton:active {
+    background-image: none;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    text-shadow: none;
+    background-color: alpha(#000,0.1);
+    color: @header_text;
+}
+
+/* Separators */
+
+.header-bar > GtkBox > .separator.vertical {
+    -GtkWidget-wide-separators: 1;
+    -GtkWidget-separator-width: 0;
+    background-color: @separator;
+    color: @separator;
+    border:none;
+}
+
+.header-bar .separator,
+.header-bar .button .separator,
+.header-bar .button.separator {
+    background: inherit;
+    color: @separator;
+    border:none;
+} 
+
+
+/* Entries */
+
+.header-bar .entry {
+    background-color: alpha(#000, 0.2);
+    color: @header_text;
+    border-radius: 2px;
+    padding: 6px 4px;
+    border: none;
+    box-shadow: none;
+}
+
+.header-bar .entry.image {
+    color: @header_text;
+}
+
+.header-bar .entry:active,
+.header-bar .entry:focus {
+    background-color: @base;
+    color: @text;
+    box-shadow: none;
+    border: none;
+}
+
+.header-bar .entry:active.image,
+.header-bar .entry:focus.image {
+    padding-right: 6px;
+    color: @text;
+}
+
+.header-bar .entry:backdrop {
+    box-shadow: none;
+    color: alpha(@header_text, 0.5);
+    border: none;
+}
+
+.header-bar .entry.image {
+    color: alpha(@header_text, 0.5);
+}
+
+
+.header-bar .entry:active:backdrop,
+.header-bar .entry:focus:backdrop {
+    background-color: alpha(@base, 0.5);
+    color: @text;
+    box-shadow: none;
+    border: none;
+}
+
+
+/* switches */
+
+.header-bar GtkSwitch {
+    border-radius: 1em;
+    font: bold;
+}
+
+/* Trough */
+.header-bar GtkSwitch.trough {
+    background: none;
+    border: none;
+    background-color: alpha(@header_text, 0.2);
+    color: @insensitive_header_text;
+    background-image: none;
+}
+
+.header-bar GtkSwitch.trough:active {
+    background: none;
+    border: none;
+    background-color: alpha(@header_text, 0.2);
+    color: @header_text;
+    background-image: none;
+}
+
+.header-bar GtkSwitch.trough:backdrop,
+.header-bar GtkSwitch.trough:active:backdrop {
+    background: none;
+    border: none;
+    background-color: alpha(@header_text, 0.1);
+    color: @backdrop_header_text;
+    background-image: none;
+}
+
+.header-bar GtkSwitch.trough:insensitive,
+.header-bar GtkSwitch.trough:active:insensitive {
+    background: none;
+    background: none;
+    border: none;
+    color: @insensitive_header_text;
+    background-image: none;
+}
+
+/* Slider */
+.header-bar GtkSwitch.slider,
+.header-bar GtkSwitch.slider:active {
+    background: none;
+    border: none;
+    background-color: @header_text;
+    background-image: none;
+    color: @header_text;
+}
+
+.header-bar GtkSwitch.slider:active:insensitive,
+.header-bar GtkSwitch.slider:insensitive {
+    background: none;
+    border: none;
+    background-color: @insensitive_header_text;
+    background-image: none;
+    color: @insensitive_header_text;
+}
+
+.header-bar GtkSwitch.slider:active:backdrop,
+.header-bar GtkSwitch.slider:backdrop {
+    background: none;
+    border: none;
+    background-color: @backdrop_header_text;
+    background-image: none;
+    color: @backdrop_header_text;
+}

@@ -1,0 +1,124 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for morbordere details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color scale_background @progress_color;
+@define-color scale_border shade(@scale_background, 0.7);
+@define-color backdrop_scale_background shade(@scale_background, 0.95);
+@define-color insensitive_scale_background shade(@scale_background, 1.2);
+
+/**********
+ * Scales *
+ **********/
+
+.scale {
+    -GtkScale-slider-length: 16px;
+    -GtkRange-slider-width: 16px;
+    -GtkRange-trough-border: 0px;
+    border-radius: 0;
+}
+
+/* Positive fill colors */
+.scale.highlight.left,
+.scale.vertical.highlight.bottom,
+.menubar .menuitem .scale.highlight.left,
+.menubar .menuitem .scale.highlight.bottom {
+    border: 1px solid @scale_background;
+    background-color: @scale_background;
+}
+
+/* Insensitive fill colors */
+.scale.highlight.left:insensitive,
+.scale.highlight.bottom:insensitive,
+.menubar .menuitem .scale.highlight.left:insensitive,
+.menubar .menuitem .scale.highlight.bottom:insensitive {
+    border: 1px solid @insensitive_scale_background;
+    background-color: @insensitive_scale_background;
+}
+
+/* Backdrop fill colors */
+.scale.vertical.highlight.left:backdrop,
+.scale.vertical.highlight.bottom:backdrop,
+.menubar .menuitem.scale.highlight.left:backdrop,
+.menubar .menuitem.scale.highlight.bottom:backdrop {
+    border: 1px solid @backdrop_scale_background;
+    background-color: @backdrop_scale_background;
+}
+
+/***********
+ * Troughs *
+ ***********/
+
+/* Margins */
+.scale.trough {
+    border-width: 1px;
+    margin: 7px 0;
+}
+
+.scale.trough.vertical {
+    border-width: 1px;
+    margin: 0 7px;
+}
+
+/* Trough colors */
+.scale.trough,
+.scale.trough.vertical {
+    border: 1px solid @trough_background;
+    background-color: @trough_background;
+}
+
+/* Hover trough colors */
+.scale.trough:hover,
+.scale.trough.vertical:hover {
+    border: 1px solid @border;
+    background-color: @border;
+}
+
+/* Insensitive trough colors */
+.scale.trough:insensitive,
+.scale.trough.vertical:insensitive {
+    border: 1px solid @insensitive_trough_background;
+    background-color: @insensitive_trough_background;
+}
+
+/* Backdrop trough colors */
+.scale.trough:backdrop,
+.scale.trough.vertical:backdrop {
+    border: 1px solid @backdrop_trough_background;
+    background-color: @backdrop_trough_background;
+}
+
+/****************
+ * Progress Bar *
+ ****************/
+.scale.progressbar
+.scale.progressbar.vertical {
+    background-color: @scale_background;
+    border: 1px solid @scale_background;
+}
+
+.scale.progressbar:insensitive,
+.scale.progressbar.vertical:insensitive {
+    background-color: @insensitive_trough_background;
+    border: 1px solid @insensitive_trough_background;
+}
+
+.scale.progressbar:backdrop,
+.scale.progressbar.vertical:backdrop {
+    background-color: @backdrop_trough_background;
+    border: 1px solid @backdrop_trough_background;
+}

@@ -1,0 +1,192 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color suggested_action_button shade(@selection, 0.9);
+@define-color suggested_action_button_foreground #fff;
+@define-color backdrop_suggested_action_foreground alpha(#fff, 0.8);
+@define-color insensitive_suggested_action_foreground alpha(#fff, 0.5);
+@define-color suggested_action_button_border shade(@suggested_action_button, 0.9);
+
+/****************************
+ * Suggested action buttons *
+ ****************************/
+
+.suggested-action.button,
+.button.suggested-action {
+    border: 1px solid @suggested_action_button_border;
+    background-color: @suggested_action_button;
+    background-image: linear-gradient(to bottom, 
+                                      @suggested_action_button,
+                                      shade(@suggested_action_button, 0.98)
+                                      );
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.button:hover,
+.button.suggested-action:hover {
+    border: 1px solid shade(@suggested_action_button_border, 1.1);
+    background-color: shade(@suggested_action_button, 1.2);
+    background-image: linear-gradient(to bottom, 
+                                      shade(@suggested_action_button, 1.1),
+                                      shade(shade(@suggested_action_button, 1.1), 0.98)
+                                      );
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.button:active,
+.button.suggested-action:active {
+    border: 1px solid shade(@suggested_action_button, 1.1);
+    background-color: shade(@suggested_action_button, 1.1);
+    background-image: linear-gradient(to bottom, 
+                                      @suggested_action_button,
+                                      shade(@suggested_action_button, 0.98)
+                                      );
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.button:backdrop,
+.button.suggested-action:backdrop {
+    border: 1px solid @backdrop_border;
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+}
+
+.suggested-action.button:insensitive,
+.button.suggested-action:insensitive {
+    border: 1px solid @insensitive_border;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+.suggested-action.button:backdrop:insensitive,
+.button.suggested-action:backdrop:insensitive {
+    border: 1px solid mix(@insensitive_border, @backdrop_border, 0.5);
+    background-color: mix(@insensitive_background, @backdrop_background, 0.5);
+    color: mix(@insensitive_text, @backdrop_text, 0.5);
+}
+
+.suggested-action.text-button,
+.text-button.suggested-action {
+    border: 1px solid @suggested_action_button_border;
+    background-color: @suggested_action_button;
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.text-button:hover,
+.text-button.suggested-action:hover {
+    border: 1px solid shade(@suggested_action_button_border, 1.1);
+    background-color: shade(@suggested_action_button, 1.2);
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.text-button:active,
+.text-button.suggested-action:active {
+    border: 1px solid shade(@suggested_action_button_border, 1.1);
+    background-color: shade(@suggested_action_button, 1.1);
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.text-button:backdrop,
+.text-button.suggested-action:backdrop {
+    border: 1px solid @backdrop_border;
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+}
+
+.suggested-action.text-button:insensitive,
+.text-button.suggested-action:insensitive {
+    border: 1px solid @insensitive_border;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+.suggested-action.text-button:backdrop:insensitive,
+.text-button.suggested-action:backdrop:insensitive {
+    border: 1px solid mix(@insensitive_border, @backdrop_border, 0.5);
+    background-color: mix(@insensitive_background, @backdrop_background, 0.5);
+    color: mix(@insensitive_text, @backdrop_text, 0.5);
+}
+
+
+/* Images */
+.suggested-action.button GtkImage {
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.button:active GtkImage,
+.suggested-action.button:focus GtkImage,
+.suggested-action.button:hover GtkImage {
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.image-button:active GtkImage,
+.suggested-action.image-button:focus GtkImage,
+.suggested-action.image-button:hover GtkImage {
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.button:backdrop GtkImage,
+.suggested-action.button:backdrop:hover GtkImage,
+.suggested-action.button:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+.suggested-action.button:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+.suggested-action.button:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+.suggested-action.button GtkLabel {
+    color: @suggested_action_button_foreground;
+    text-shadow:0 1px alpha(#000, 0.05);
+}
+
+.suggested-action.button:active GtkLabel,
+.suggested-action.button:focus GtkLabel,
+.suggested-action.button:hover GtkLabel {
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.text-button:active GtkLabel,
+.suggested-action.text-button:focus GtkLabel,
+.suggested-action.text-button:hover GtkLabel {
+    color: @suggested_action_button_foreground;
+}
+
+.suggested-action.button:backdrop GtkLabel,
+.suggested-action.button:backdrop:hover GtkLabel,
+.suggested-action.button:focus:backdrop GtkLabel,
+.suggested-action.button:active:backdrop GtkLabel {
+    color: @backdrop_text;
+    text-shadow:none;
+}
+
+.suggested-action.button:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.suggested-action.button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}

@@ -1,0 +1,53 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color baobab #CC5E55;
+
+/**********
+ * Header *
+ **********/
+
+BaobabWindow .titlebar,
+BaobabWindow .header-bar {
+    background-color: @baobab;
+}
+
+BaobabWindow .titlebar:backdrop,
+BaobabWindow .header-bar:backdrop {
+    background-color: shade(@baobab,0.9);
+}
+
+
+/* Toolbar */
+.baobab-toolbar.toolbar {
+    border-color: shade (@background, 0.9);
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+}
+
+/* Cell */
+.cell.baobab-level-cell,
+.cell.baobab-level-cell:hover,
+.cell.baobab-level-cell:selected,
+.cell.baobab-level-cell:selected:hover {
+    border-color: alpha(#000, 0.06);
+    border-width: 1px;
+    border-style: solid;
+    background-color: @base;
+}

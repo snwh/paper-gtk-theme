@@ -1,0 +1,78 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color scratch #e74c3c;
+
+/**********
+ * Header *
+ **********/
+
+ScratchMainWindow .titlebar,
+ScratchMainWindow .header-bar {
+    background-color: @scratch;
+}
+
+ScratchMainWindow .titlebar:backdrop,
+ScratchMainWindow .header-bar:backdrop {
+    background-color: shade(@scratch,0.9);
+}
+
+/* Switch */
+ScratchMainWindow .header-bar GtkSwitch.trough:active {
+    background-color: @scratch;
+}
+
+ScratchMainWindow GtkSwitch.trough:active {
+    border: 1px solid shade(@scratch, 0.8);
+    background-color: @scratch;
+}
+
+ScratchMainWindow GtkSwitch.slider:active {
+    border: 1px solid shade(@scratch, 0.8);
+} 
+
+ScratchMainWindow .header-bar GtkSwitch.slider:active:backdrop,
+ScratchMainWindow .header-bar GtkSwitch.slider:backdrop {
+    background-color: shade(@scratch, 0.9);
+}
+
+
+/************
+ * Notebook *
+ ************/
+
+/* Active */
+ScratchMainWindow .notebook tab.top:active,
+ScratchMainWindow .dynamic-notebook tab.top:active {
+    box-shadow:inset 0 -3px 0 0 @scratch;
+}
+
+ScratchMainWindow .notebook tab.bottom:active,
+ScratchMainWindow .dynamic-notebook tab.bottom:active {
+    box-shadow:inset 0 3px 0 0 @scratch;
+}
+
+ScratchMainWindow .notebook tab.left:active,
+ScratchMainWindow .dynamic-notebook tab.left:active {
+    box-shadow:inset -3px 0 0 0 @scratch;
+}
+
+ScratchMainWindow .notebook tab.right:active,
+ScratchMainWindow .dynamic-notebook tab.right:active {
+    box-shadow:inset 3px 0 0 0 @scratch;
+}

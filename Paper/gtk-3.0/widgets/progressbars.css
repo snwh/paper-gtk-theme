@@ -1,0 +1,199 @@
+
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color progressbar_background @progress_color;
+@define-color backdrop_progressbar_background shade(@progressbar_background, 1.2);
+@define-color insensitive_progressbar_background shade(@insensitive_background, 0.85);
+
+@define-color progressbar_border shade(@progressbar_background, 0.7);
+@define-color backdrop_progressbar_border shade(@progressbar_border, 1.3);
+@define-color insensitive_progressbar_border shade(@insensitive_border, 0.85);
+
+@define-color progressbar_trough_background @base;
+@define-color backdrop_progressbar_trough_background shade(@progressbar_trough_background, 1.2);
+@define-color insensitive_progressbar_trough_background shade(@insensitive_background, 0.85);
+
+@define-color progressbar_trough_border shade(@progressbar_trough_background, 0.8);
+@define-color backdrop_progressbar_trough_border shade(@progressbar_trough_border, 1.05);
+@define-color insensitive_progressbar_trough_border shade(@insensitive_border, 0.85);
+
+
+/****************
+ * Progress bar *
+ ****************/
+
+GtkProgressBar {
+    padding: 0;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+GtkProgressBar.progressbar {
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1);
+    border-color: @progressbar_border;
+    color: @text;
+    background-color: @progressbar_background;
+}
+
+GtkProgressBar.progressbar:active {
+    border-color: @progressbar_border;
+    color: @text;
+    background-color: @progressbar_background;
+}
+
+GtkProgressBar.progressbar:backdrop,
+GtkProgressBar.progressbar:active:backdrop {
+    border-color: @backdrop_progressbar_border;
+    color: @backdrop_text;
+    background-color: @backdrop_progressbar_background;
+    box-shadow: none;
+}
+
+GtkProgressBar.trough {
+    border-color: @progressbar_trough_border;
+    background-color: @progressbar_trough_background;
+}
+
+GtkProgressBar.trough:backdrop {
+    border-color: @backdrop_progressbar_trough_border;
+    background-color: @backdrop_progressbar_trough_background;
+}
+
+GtkProgressBar.trough:insensitive {
+    border-color: @insensitive_progressbar_trough_border;
+    background-color: @insensitive_progressbar_trough_background;
+}
+
+.trough,
+.trough.vertical {
+    padding: 0;
+    border: 1px solid @progressbar_trough_border;
+    background-color: @progressbar_trough_background;
+}
+
+.trough:insensitive,
+.trough.vertical:insensitive {
+    background-image:none;
+    background-color:@insensitive_progressbar_trough_background;
+    border: 1px solid @insensitive_rough_border;
+}
+
+.trough:backdrop,
+.trough.vertical:backdrop {
+    padding: 0;
+    border: 1px solid @backdrop_progressbar_trough_border;
+    background-color: @backdrop_progressbar_trough_background;
+}
+
+
+/********************
+ * Row Progressbars *
+ ********************/
+
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focus,
+.progressbar.vertical row,
+.progressbar.vertical row:hover,
+.progressbar.vertical row:selected,
+.progressbar.vertical row:selected:focus {
+    border: 1px solid @progressbar_border;
+    border-radius: 4px;
+    padding: 0;
+    color: alpha(#000,0.5);
+    background-color: @selection;
+}
+
+.progressbar row:insensitive,
+.progressbar row:hover:insensitive,
+.progressbar row:selected:insensitive,
+.progressbar row:selected:focus:insensitive,
+.progressbar.vertical row:insensitive,
+.progressbar.vertical row:hover:insensitive,
+.progressbar.vertical row:selected:insensitive,
+.progressbar.vertical row:selected:focus:insensitive {
+    border: 1px solid @insensitive_progressbar_border;
+    border-radius: 4px;
+    padding: 0;
+    color: alpha(#000,0.5);
+    background-color: @selection;
+}
+
+.progressbar row:backdrop,
+.progressbar row:hover:backdrop,
+.progressbar row:selected:backdrop,
+.progressbar row:selected:focus:backdrop,
+.progressbar.vertical row:backdrop,
+.progressbar.vertical row:hover:backdrop,
+.progressbar.vertical row:selected:backdrop,
+.progressbar.vertical row:selected:focus:backdrop {
+    border: 1px solid @backdrop_progressbar_border;
+    border-radius: 4px;
+    padding: 0;
+    color: alpha(#000,0.5);
+    background-color: @backdrop_progressbar_background;
+    box-shadow: none;
+}
+
+.trough row,
+.trough row:hover,
+.trough row:selected,
+.trough row:selected:focus,
+.trough.vertical row,
+.trough.vertical row:hover,
+.trough.vertical row:selected,
+.trough.vertical row:selected:focus {
+    border: 1px solid alpha(#000, 0.2);
+    border-radius: 4px;
+    padding: 0;
+    color: alpha(#000,0.5);
+    background-color: @progressbar_trough_background;
+}
+
+
+.trough row:insensitive,
+.trough row:hover:insensitive,
+.trough row:selected:insensitive,
+.trough row:selected:focus:insensitive,
+.trough.vertical row:insensitive,
+.trough.vertical row:hover:insensitive,
+.trough.vertical row:selected:insensitive,
+.trough.vertical row:selected:focus:insensitive {
+    border: 1px solid alpha(#000, 0.2);
+    border-radius: 4px;
+    padding: 0;
+    color: alpha(#000,0.5);
+    background-color: @insensitive_progressbar_trough_background;
+}
+
+.trough row:backdrop,
+.trough row:hover:backdrop,
+.trough row:selected:backdrop,
+.trough row:selected:focus:backdrop,
+.trough.vertical row:backdrop,
+.trough.vertical row:hover:backdrop,
+.trough.vertical row:selected:backdrop,
+.trough.vertical row:selected:focus:backdrop {
+    border: 1px solid alpha(#000, 0.2);
+    border-radius: 4px;
+    padding: 0;
+    color: alpha(#000,0.5);
+    background-color: @backdrop_progressbar_trough_background;
+}

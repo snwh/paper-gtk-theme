@@ -1,0 +1,328 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*******************
+ * Notebook & Tabs *
+ *******************/
+
+.notebook {
+    background-color: @base;
+    box-shadow:0 0 0 1px @border;
+    background-clip: border-box;
+}
+
+.notebook.header {
+    border: none;
+    background-color: @background;
+}
+
+.notebook.header,
+.notebook.header:backdrop {
+    border-width: 0px;
+}
+
+.notebook.header.frame.top,
+.notebook.header.frame.top:backdrop {/*
+    border-top: 1px solid @border;
+    border-left: 1px solid @border;
+    border-right: 1px solid @border;*/
+    border:none;
+}
+
+.notebook.header.frame.bottom,
+.notebook.header.frame.bottom:backdrop {
+    /*border-bottom: 1px solid @border;
+    border-left: 1px solid @border;
+    border-right: 1px solid @border;*/
+    border:none;
+}
+
+.notebook.header.frame.left,
+.notebook.header.frame.left:backdrop {
+    /*border-top: 1px solid @border;
+    border-bottom: 1px solid @border;
+    border-left: 1px solid @border;*/    
+    border:none;
+}
+
+.notebook.header.frame.right,
+.notebook.header.frame.right:backdrop {
+    /*border-top: 1px solid @border;
+    border-bottom: 1px solid @border;
+    border-right: 1px solid @border;*/    
+    border:none;
+}
+
+.notebook.frame {
+   /*FIXME: Move the border down here so devs have more control*/
+    border: none;
+}
+
+.notebook GtkViewport {
+    background-color: @base;
+    border:none;
+}
+
+.notebook:insensitive,
+.notebook GtkViewport:insensitive {
+    background-color: @insensitive_background;
+    border-color: @insensitive_border;
+    color: @insensitive_text;
+}
+
+.notebook:backdrop,
+.notebook GtkViewport:backdrop {
+    background-color: @backdrop_background;
+    border-color: @backdrop_border;
+    color: @backdrop_text;
+}
+
+.notebook:insensitive:backdrop,
+.notebook GtkViewport:insensitive:backdrop {
+    background-color: @backdrop_insensitive_background;
+    border-color: @backdrop_border;
+}
+
+/* Labels */
+.notebook GtkLabel,
+.notebook:active GtkLabel,
+.notebook:focus GtkLabel,
+.notebook:hover GtkLabel {
+    color: @text;
+}
+
+.notebook:backdrop GtkLabel,
+.notebook:backdrop:hover GtkLabel,
+.notebook:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.notebook:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.notebook:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
+
+/*----- Tabs -----*/
+
+.notebook tab {
+    /*border: none;*/
+    border-radius: 0;
+    padding-top: 3px;
+    background: @background;
+    color: @foreground;
+}
+
+.notebook tab > .entry {
+    border-radius: 2px;
+    padding: 2px 5px;
+}
+
+.notebook tab:active {
+    border: none;
+    background: @background;
+    color: @foreground;
+}
+
+.notebook tab:hover {
+    color: alpha(#fff, 0.3);
+    transition: all 300ms cubic-bezier(0.3, 0.5, 0.5, 0.9);
+}
+
+.notebook tab:backdrop {
+    border: none;
+    background: @backdrop_background;
+    color: @backdrop_text;
+}
+
+.notebook tab:insensitive {
+    border: none;
+    background: @insensitive_background;
+    color: @insensitive_text;
+}
+
+/*----- Tab indicator bar -----*/
+
+/* Normal */
+.notebook tab.top {
+    box-shadow:inset 0 -1px 0 0 @border;
+}
+.notebook tab.bottom {
+    box-shadow:inset 0 1px 0 0 @border;
+}
+.notebook tab.left {
+    box-shadow:inset -1px 0 0 0 @border;
+}
+.notebook tab.right {
+    box-shadow:inset 1px 0 0 0 @border;
+}
+
+/* Hover */
+.notebook tab.top:hover,
+.notebook tab.bottom:hover,
+.notebook tab.left:hover,
+.notebook tab.right:hover {
+    box-shadow: none;
+    background: shade(@background, 0.95);
+}
+
+/* Active */
+.notebook tab.top:active {
+    box-shadow:inset 0 -2px 0 0 @text;
+}
+.notebook tab.bottom:active {
+    box-shadow:inset 0 2px 0 0 @text;
+}
+.notebook tab.left:active {
+    box-shadow:inset -2px 0 0 0 @text;
+}
+.notebook tab.right:active {
+    box-shadow:inset 2px 0 0 0 @text;
+}
+
+/* Active-Backdrop */
+.notebook tab.top:active:backdrop {
+    box-shadow:inset 0 -2px 0 0 @backdrop_border;
+}
+.notebook tab.bottom:active:backdrop {
+    box-shadow:inset 0 2px 0 0 @backdrop_border;
+}
+.notebook tab.left:active:backdrop {
+    box-shadow:inset -2px 0 0 0 @backdrop_border;
+}
+.notebook tab.right:active:backdrop {
+    box-shadow:inset 2px 0 0 0 @backdrop_border;
+}
+
+/* Backdrop */
+.notebook tab.top:backdrop {
+    box-shadow:inset 0 -1px 0 0 @backdrop_border;
+}
+.notebook tab.bottom:backdrop {
+    box-shadow:inset 0 1px 0 0 @backdrop_border;
+}
+.notebook tab.left:backdrop {
+    box-shadow:inset -1px 0 0 0 @backdrop_border;
+}
+.notebook tab.right:backdrop {
+    box-shadow:inset 1px 0 0 0 @backdrop_border;
+}
+
+/* Insensitive */
+.notebook tab.top:insensitive {
+    box-shadow:inset 0 -1px 0 0 @insensitive_border;
+}
+.notebook tab.bottom:insensitive {
+    box-shadow:inset 0 1px 0 0 @insensitive_border;
+}
+.notebook tab.left:insensitive {
+    box-shadow:inset -1px 0 0 0 @insensitive_border;
+}
+.notebook tab.right:insensitive {
+    box-shadow:inset 1px 0 0 0 @insensitive_border;
+}
+
+/*----- In-tab Padding -----*/
+
+.notebook tab.top {
+    padding: 6px 8px 8px 8px;
+}
+
+.notebook tab.bottom {
+    padding: 8px 8px 6px 8px;
+}
+
+.notebook tab.left {
+    padding: 8px;
+}
+
+.notebook tab.right {
+    padding: 8px;
+}
+
+
+/*----- Labels -----*/
+
+.notebook tab GtkLabel {
+    background: none;
+    color: @backdrop_text;
+}
+
+.notebook tab:active GtkLabel,
+.notebook .active-page,
+.notebook tab .active-page GtkLabel {
+    background: none;
+    color: @foreground;
+    font-weight: bold;
+    text-shadow: 0 1px alpha(@base,0.2);
+}
+
+.notebook tab:backdrop GtkLabel,
+.notebook tab GtkLabel:backdrop {
+    background: none;
+    color: @backdrop_text;
+}
+
+/*----- Close Button -----*/
+
+.notebook tab .button,
+.notebook tab .button:active,
+.notebook tab .button:hover {
+    color: @backdrop_text;
+    background-image: none;
+    background: none;
+    border-radius: 4px;
+    padding: 2px;
+    box-shadow: none;
+}
+
+
+.notebook tab .button GtkImage {
+    color: @backdrop_text;
+}
+
+.notebook tab .button:hover GtkImage,
+.notebook tab .button:active GtkImage {
+    color: @selection_foreground;
+}
+
+.notebook tab .button:backdrop GtkImage {
+    color: @backdrop_text;
+}
+
+.notebook tab .button:hover {
+    color: @foreground;
+    background-color: alpha(#000, 0.1);
+}
+
+.notebook tab .button:active,
+.notebook tab .button:active:hover {
+    color: @selection_foreground;
+    background-color: @selection;
+}
+
+.notebook tab .button:backdrop {
+    color: mix(@backdrop_foreground, @backdrop_base, 0.7);
+}
+
+.notebook tab .button:backdrop:hover {
+    color: @backdrop_foreground;
+}

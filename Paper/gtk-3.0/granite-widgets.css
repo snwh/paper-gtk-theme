@@ -1,0 +1,95 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/***********
+ * Popover *
+ **********/
+
+GraniteWidgetsPopOver {
+
+    -GraniteWidgetsPopOver-arrow-width: 21;
+    -GraniteWidgetsPopOver-arrow-height: 10;
+    -GraniteWidgetsPopOver-border-radius: 8px;
+    -GraniteWidgetsPopOver-border-width: 0;
+    -GraniteWidgetsPopOver-shadow-size: 12;
+    
+    border: 1px solid @base;
+    background: @base;
+    color: @text;
+    
+}
+
+GraniteWidgetsPopOver .frame,
+GraniteWidgetsStaticNotebook .frame {
+    border: none;
+}
+
+.popover_bg {
+    background-color: @base;
+    background-image: none;
+    border: 1px solid @base;
+    color: @text;
+}
+
+GraniteWidgetsPopOver .sidebar.view {
+    border: none;
+    background: none;
+}
+
+/*Button*/
+GraniteWidgetsPopOver .button {
+    background-image: none;
+    background: none;
+    border: none;
+}
+
+GraniteWidgetsPopOver .button:active {
+    border: none;
+    background: none;
+    color: @selection;
+}
+
+GraniteWidgetsPopOver .button:active:hover {
+    background: none;
+    background-color: alpha(@selection, 0.05);
+    border: none;
+    color: @selection;
+}
+
+
+/***********
+ * Welcome *
+ **********/
+
+GraniteWidgetsWelcome {
+    background-color: @base;
+}
+
+GraniteWidgetsWelcome GtkLabel {
+    color: @foreground;
+}
+
+GraniteWidgetsWelcome .h1,
+GraniteWidgetsWelcome .h3 {
+    color: alpha(@foreground, 0.8);
+}
+
+GraniteWidgetsModeButtonItem {
+    border-radius: 0;
+}

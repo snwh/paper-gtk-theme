@@ -1,0 +1,229 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/******************
+* Message Dialogs *
+*******************/
+
+.message-dialog {
+    padding: 0px;
+    padding-top: 8px;
+    /*background: @background;*/
+    -GtkDialog-button-spacing: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.window-frame.message-dialog,
+.window-frame.message-dialog:backdrop {
+    border-radius: 4px;
+}
+
+.message-dialog.csd  {
+    border-radius: 5px;
+    background: @background;
+    box-shadow: 0 3px 6px alpha (#000, 0.16),
+                0 3px 6px alpha (#000, 0.23);
+    padding-top: 8px;
+    margin: 0;
+}
+
+.message-dialog.csd.background {
+    padding: 0px;
+    margin: 0px;
+    background: @background;
+    box-shadow: none;
+}
+
+/* Buttons */
+.message-dialog.csd .dialog-action-area {
+    padding: 0;
+}
+
+.message-dialog .dialog-action-area .button {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    font: bold;
+    /*padding: 8px;*/
+}
+
+.message-dialog.csd .dialog-action-area .button {
+    border-radius: 2px;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    color: @text;
+}
+
+.message-dialog.csd .dialog-action-area .button:hover {
+    border: none;
+    background-image: none;
+    background-color: @selection;
+    color: @selection_foreground;
+}
+
+.message-dialog.csd .dialog-action-area .button:active,
+.message-dialog.csd .dialog-action-area .button:active:hover {
+    border: none;
+    border-radius: 2px;
+    background-image: none;
+    background-color: alpha(#000, 0.2);
+    color: @text;
+}
+
+.message-dialog.csd .dialog-action-area .button:insensitive {
+    border: none;
+    background-image: none;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+.message-dialog.csd .dialog-action-area .button:backdrop {
+    border: none;
+    background-image: none;
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+}
+
+.message-dialog.csd .dialog-action-area .button:backdrop:insensitive {
+    border: none;
+    background-image: none;
+    background-color: mix(@insensitive_background, @backdrop_background, 0.5);
+    color: mix(@insensitive_text, @backdrop_text, 0.5);
+}
+
+/* Suggested Action Button */
+.message-dialog.csd .dialog-action-area .button.suggested-action {
+    background-image: none;
+    border: 0px solid @suggested_action_button;
+    background-color: @suggested_action_button;
+    color: @suggested_action_button_foreground;
+}
+
+.message-dialog.csd .dialog-action-area .button.suggested-action:hover {
+    background-image: none;
+    border: 0px solid shade(@suggested_action_button, 1.2);
+    background-color: shade(@suggested_action_button, 1.2);
+    color: @suggested_action_button_foreground;
+}
+
+.message-dialog.csd .dialog-action-area .button.suggested-action:active {
+    background-image: none;
+    border: 0px solid shade(@suggested_action_button, 1.1);
+    background-color: shade(@suggested_action_button, 1.1);
+    color: @suggested_action_button_foreground;
+}
+
+.message-dialog.csd .dialog-action-area .button.suggested-action:backdrop {
+    background-image: none;
+    border: 0px solid @backdrop_border;
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+}
+
+.message-dialog.csd .dialog-action-area .button.suggested-action:insensitive {
+    background-image: none;
+    border: 0px solid @insensitive_border;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+.message-dialog.csd .dialog-action-area .button.suggested-action:backdrop:insensitive {
+    background-image: none;
+    border: 0px solid mix(@insensitive_border, @backdrop_border, 0.5);
+    background-color: mix(@insensitive_background, @backdrop_background, 0.5);
+    color: mix(@insensitive_text, @backdrop_text, 0.5);
+}
+
+
+/* Destructive Action Button */
+.message-dialog.csd .dialog-action-area .button.destructive-action {
+    background-image: none;
+    border: 0px solid @destructive_action_button_border;
+    background-color: @destructive_action_button;
+    color: @destructive_action_button_foreground;
+}
+
+.message-dialog.csd .dialog-action-area .button.destructive-action:hover {
+    background-image: none;
+    border: 0px solid shade(@destructive_action_button_border, 1.1);
+    background-color: shade(@destructive_action_button, 1.1);
+    color: @destructive_action_button_foreground;
+}
+
+.message-dialog.csd .dialog-action-area .button.destructive-action:active {
+    background-image: none;
+    border: 0px solid @destructive_action_button_border;
+    background-color: @destructive_action_button;
+    color: @destructive_action_button_foreground;
+}
+
+.message-dialog.csd .dialog-action-area .button.destructive-action:backdrop {
+    background-image: none;
+    border: 0px solid @backdrop_border;
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+}
+
+.message-dialog.csd .dialog-action-area .button.destructive-action:insensitive {
+    background-image: none;
+    border: 0px solid @insensitive_border;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+.message-dialog.csd .dialog-action-area .button.destructive-action:backdrop:insensitive {
+    background-image: none;
+    border: 0px solid mix(@insensitive_border, @backdrop_border, 0.5);
+    background-color: mix(@insensitive_background, @backdrop_background, 0.5);
+    color: mix(@insensitive_text, @backdrop_text, 0.5);
+}
+
+.message-dialog.csd .dialog-action-area .button,
+.message-dialog.csd .dialog-action-area .button:hover,
+.message-dialog.csd .dialog-action-area .button:active,
+.message-dialog.csd .dialog-action-area .button:insensitive,
+.message-dialog.csd .dialog-action-area .button:backdrop,
+.message-dialog.csd .dialog-action-area .button:backdrop:insensitive,
+.message-dialog.csd .dialog-action-area .button.suggested-action,
+.message-dialog.csd .dialog-action-area .button.suggested-action:hover,
+.message-dialog.csd .dialog-action-area .button.suggested-action:active,
+.message-dialog.csd .dialog-action-area .button.suggested-action:backdrop,
+.message-dialog.csd .dialog-action-area .button.suggested-action:backdrop:insensitive,
+.message-dialog.csd .dialog-action-area .button.suggested-action:insensitive,
+.message-dialog.csd .dialog-action-area .button.destructive-action,
+.message-dialog.csd .dialog-action-area .button.destructive-action:hover,
+.message-dialog.csd .dialog-action-area .button.destructive-action:active,
+.message-dialog.csd .dialog-action-area .button.destructive-action:backdrop,
+.message-dialog.csd .dialog-action-area .button.destructive-action:backdrop:insensitive,
+.message-dialog.csd .dialog-action-area .button.destructive-action:insensitive {
+    background-image: none;
+    border-left-style: solid;
+    border-right-style: none;
+    border-bottom-style: none;
+}
+
+.message-dialog.csd .dialog-action-area .button:last-child {
+    /*border-bottom-right-radius: 7px;*/
+}
+
+.message-dialog.csd .dialog-action-area .button:first-child {
+    border-left-style: none;
+    /*border-bottom-left-radius: 7px;*/
+}

@@ -1,0 +1,131 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color settings #5F7C8A;
+
+/**********
+ * Header *
+ **********/
+
+CcWindow .titlebar,
+CcWindow .header-bar {
+    background-color: @settings;
+}
+
+CcWindow .titlebar:backdrop,
+CcWindow .header-bar:backdrop {
+    background-color: shade(@settings,0.9);
+}
+
+/*******
+ * Nav *
+ *******/
+
+CcShellNavBar {
+    padding:0px;
+}
+
+/************
+ * ItemView *
+ ************/
+
+CcShellItemView {
+    background: none;
+    border:none;
+}
+
+CcShellItemView .button {
+    border:none;
+}
+
+/************
+ * Iconview *
+ ************/
+ 
+CcWindow GtkIconView.view.cell {
+    border: none;
+}
+ 
+CcWindow GtkIconView.view.cell:hover {
+    border: 1px solid @settings;
+    background-color: alpha(@settings,0.4);
+    color: @settings;
+}
+ 
+CcWindow GtkIconView.view.cell:selected,
+CcWindow GtkIconView.view.cell:selected:focus {
+    border: 1px solid @settings;
+    background-color: @settings;
+}
+
+
+/************
+ * Notebook *
+ ************/
+
+/* Active */
+CcWindow .notebook tab.top:active,
+CcWindow .dynamic-notebook tab.top:active {
+    box-shadow:inset 0 -3px 0 0 @settings;
+}
+
+CcWindow .notebook tab.bottom:active,
+CcWindow .dynamic-notebook tab.bottom:active {
+    box-shadow:inset 0 3px 0 0 @settings;
+}
+
+CcWindow .notebook tab.left:active,
+CcWindow .dynamic-notebook tab.left:active {
+    box-shadow:inset -3px 0 0 0 @settings;
+}
+
+CcWindow .notebook tab.right:active,
+CcWindow .dynamic-notebook tab.right:active {
+    box-shadow:inset 3px 0 0 0 @settings;
+}
+
+
+/* List Row Button */
+CcWindow .button.list-row {
+}
+
+CcWindow .button.list-row:hover  {
+    background-color: alpha(@settings, 0.2);
+    color: @settings;
+}
+
+CcWindow .button.list-row:active,
+CcWindow .button.list-row:selected {
+    background-color: alpha(@settings, 0.4);
+    color: @settings;
+}
+
+CcWindow .button.list-row:active:selected,
+CcWindow .button.list-row:active:selected:hover {
+    background-color: alpha(@settings, 0.2);
+    color: @settings;
+}
+
+CcWindow .button.list-row:hover:selected {
+    background-color: alpha(@settings, 0.2);
+    color: @settings;
+}
+
+CcNetworkPanel GtkNotebook > .frame {
+    border: none;
+}

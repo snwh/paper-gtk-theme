@@ -1,0 +1,150 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/******************************
+ * Destructive action buttons *
+ ******************************/
+@define-color destructive_action_button #DC322F;
+@define-color destructive_action_button_border shade(@destructive_action_button, 0.9);
+@define-color destructive_action_button_foreground #fff;
+
+/******************************
+ * Destructive action buttons *
+ ******************************/
+
+.destructive-action.button,
+.button.destructive-action {
+    border: 1px solid @destructive_action_button_border;
+    background-color: @destructive_action_button;
+    background-image: linear-gradient(to bottom, 
+                                      @destructive_action_button,
+                                      shade(@destructive_action_button, 0.98)
+                                      );
+    color: @destructive_action_button_foreground;
+}
+
+.destructive-action.button:hover,
+.button.destructive-action:hover {
+    border: 1px solid shade(@destructive_action_button_border, 1.1);
+    background-color: shade(@destructive_action_button, 1.1);
+    background-image: linear-gradient(to bottom, 
+                                      shade(@destructive_action_button, 1.1),
+                                      shade(shade(@destructive_action_button, 1.1), 0.98)
+                                      );
+    color: @destructive_action_button_foreground;
+}
+
+.destructive-action.button:active,
+.button.destructive-action:active {
+    border: 1px solid @destructive_action_button_border;
+    background-color: @destructive_action_button;
+    background-image: linear-gradient(to bottom, 
+                                      @destructive_action_button,
+                                      shade(@destructive_action_button, 0.98)
+                                      );
+    color: @destructive_action_button_foreground;
+}
+
+.destructive-action.button:backdrop,
+.button.destructive-action:backdrop {
+    border: 1px solid @backdrop_border;
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+}
+
+.destructive-action.button:insensitive,
+.button.destructive-action:insensitive {
+    border: 1px solid @insensitive_border;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+.destructive-action.button:backdrop:insensitive,
+.button.destructive-action:backdrop:insensitive {
+    border: 1px solid mix(@insensitive_border, @backdrop_border, 0.5);
+    background-color: mix(@insensitive_background, @backdrop_background, 0.5);
+    color: mix(@insensitive_text, @backdrop_text, 0.5);
+}
+
+/* Images */
+.destructive-action.button GtkImage {
+    color: @destructive_action_button_foreground;
+}
+
+.destructive-action.button:active GtkImage,
+.destructive-action.button:focus GtkImage,
+.destructive-action.button:hover GtkImage {
+    color: @suggested_action_button_foreground;
+}
+
+.destructive-action.image-button:active GtkImage,
+.destructive-action.image-button:focus GtkImage,
+.destructive-action.image-button:hover GtkImage {
+    color: @suggested_action_button_foreground;
+}
+
+.destructive-action.button:backdrop GtkImage,
+.destructive-action.button:backdrop:hover GtkImage,
+.destructive-action.button:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+.destructive-action.button:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+.destructive-action.button:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+.destructive-action.button GtkLabel {
+    color: @destructive_action_button_foreground;
+    text-shadow:0 1px alpha(#000, 0.05);
+}
+
+.destructive-action.button:active GtkLabel,
+.destructive-action.button:focus GtkLabel,
+.destructive-action.button:hover GtkLabel {
+    color: @destructive_action_button_foreground;
+}
+
+.destructive-action.text-button:active GtkLabel,
+.destructive-action.text-button:focus GtkLabel,
+.destructive-action.text-button:hover GtkLabel {
+    color: @destructive_action_button_foreground;
+}
+
+.destructive-action.button:backdrop GtkLabel,
+.destructive-action.button:backdrop:hover GtkLabel,
+.destructive-action.button:focus:backdrop GtkLabel,
+.destructive-action.button:active:backdrop GtkLabel {
+    color: @backdrop_text;
+    text-shadow:none;
+}
+
+.destructive-action.button:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.destructive-action.button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}

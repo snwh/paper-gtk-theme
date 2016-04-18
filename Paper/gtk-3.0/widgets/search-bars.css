@@ -1,0 +1,231 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color searchbar shade(@base, 0.95);
+
+/***************
+ * Search bars *
+ ***************/
+
+.search-bar.toolbar,
+.search-bar {
+    padding: 4px 0;
+    background-color: @searchbar;
+    box-shadow: inset 0 -1px 1px -2px alpha(#000, 0.5);
+    color: @foreground;
+    border-bottom: 1px solid @border;
+}
+
+
+.search-bar.toolbar .entry GtkImage {
+    color: @foreground;
+}
+
+.search-bar.toolbar .entry:backdrop GtkImage {
+    color: @backdrop_foreground;
+}
+
+.search-bar.toolbar:focus,
+.search-bar:focus {
+    background-color: @searchbar;
+    box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.5);
+    color: @foreground;
+}
+
+.search-bar.toolbar:backdrop,
+.search-bar:backdrop {
+    background-color: shade(@searchbar, 0.99);
+    box-shadow: inset 0 -3px 3px -4px alpha(#000, 0.1);
+    color: @backdrop_text;
+}
+
+/***********
+ * Buttons *
+ ***********/
+
+.search-bar.toolbar .button,
+.search-bar.toolbar .text-button,
+.search-bar.toolbar .image-button {
+    border: none;
+    background: none;
+    color: @foreground;
+    border-radius: 0px;
+    padding: 13px;
+}
+
+.search-bar.toolbar .button:active
+.search-bar.toolbar .text-button:active,
+.search-bar.toolbar .image-button:active {
+    border: none;
+    color: @foreground;
+    box-shadow: inset 0 -2px 0 0 @foreground;
+    padding: 13px;
+}
+
+/* Hover */
+.search-bar.toolbar .button:hover,
+.search-bar.toolbar .button:active:hover
+.search-bar.toolbar .text-button:hover,
+.search-bar.toolbar .text-button:active:hover,
+.search-bar.toolbar .image-button:hover,
+.search-bar.toolbar .image-button:active:hover {
+    padding: 13px;
+    border: none;
+    background-color: alpha(#000, 0.1);
+    color: @foreground;
+    box-shadow: none;
+}
+
+/* Insensitive */
+.search-bar.toolbar .button:insensitive,
+.search-bar.toolbar .text-button:insensitive,
+.search-bar.toolbar .image-button:insensitive {
+    background: none;
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+/* Backdrop */
+.search-bar.toolbar .button:backdrop,
+.search-bar.toolbar .button:active:backdrop
+.search-bar.toolbar .text-button:backdrop,
+.search-bar.toolbar .text-button:active:backdrop,
+.search-bar.toolbar .image-button:backdrop,
+.search-bar.toolbar .image-button:active:backdrop {
+    background: none;
+    color: @backdrop_text;
+    border: none;
+    padding: 13px;
+}
+
+/* Insensitive:Backdrop; */
+.search-bar.toolbar .button:insensitive:backdrop,
+.search-bar.toolbar .text-button:insensitive:backdrop,
+.search-bar.toolbar .image-button:insensitive:backdrop {
+    padding: 13px;
+    border: none;
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
+
+/* Images */
+.search-bar.toolbar GtkImage,
+.search-bar.toolbar .button GtkImage {
+    color: @foreground;
+}
+
+.search-bar.toolbar .button:active GtkImage,
+.search-bar.toolbar .button:focus GtkImage,
+.search-bar.toolbar .button:hover GtkImage {
+    color: @foreground;
+}
+
+.search-bar.toolbar:backdrop GtkImage,
+.search-bar.toolbar .button:backdrop GtkImage,
+.search-bar.toolbar .button:backdrop:hover GtkImage,
+.search-bar.toolbar .button:active:backdrop GtkImage {
+    color: @backdrop_text;
+    -gtk-image-effect: dim;
+}
+
+.search-bar.toolbar:insensitive GtkImage,
+.search-bar.toolbar .button:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+.search-bar.toolbar .button:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/* Labels */
+.search-bar.toolbar .button GtkLabel {
+    color: @foreground;
+}
+
+.search-bar.toolbar .button:active GtkLabel,
+.search-bar.toolbar .button:focus GtkLabel,
+.search-bar.toolbar .button:hover GtkLabel {
+    color: @foreground;
+}
+
+.search-bar.toolbar .button:backdrop GtkLabel,
+.search-bar.toolbar .button:backdrop:hover GtkLabel,
+.search-bar.toolbar .button:active:backdrop GtkLabel {
+    color: @backdrop_text;
+}
+
+.search-bar.toolbar .button:insensitive GtkLabel {
+    color: @insensitive_text;
+}
+
+.search-bar.toolbar .button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
+/********************
+ * Search bar entry *
+ ********************/
+
+.search-bar .entry,
+.search-bar.toolbar .entry {
+    background: none;
+    color: @foreground;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+}
+
+.search-bar .entry:selected,
+.search-bar.toolbar .entry:selected
+.search-bar .entry:selected:focus,
+.search-bar.toolbar .entry:selected:focus {
+    color: @base;
+    background-color: @selection;
+    box-shadow: none;
+}
+
+.search-bar .entry:active,
+.search-bar .entry:focus,
+.search-bar.toolbar .entry:active,
+.search-bar.toolbar .entry:focus {
+    background: none;
+    color: @foreground;
+    border: none;
+    box-shadow: none;
+}
+
+.search-bar .entry:backdrop,
+.search-bar.toolbar .entry:backdrop {
+    background: none;
+    color: @backdrop_text;
+    border: none;
+    box-shadow: none;
+}
+
+.search-bar .entry.image,
+.search-bar.toolbar .entry.image {
+    color: @foreground;
+}
+
+.search-bar .entry.image.left,
+.search-bar.toolbar .entry.image.left {
+    padding-right: 6px;
+    color: @foreground;
+}

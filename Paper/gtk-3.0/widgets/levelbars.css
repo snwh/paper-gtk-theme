@@ -1,0 +1,95 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*************
+ * Level Bar *
+ *************/
+
+GtkLevelBar {
+    -GtkLevelBar-min-block-width: 34;
+    -GtkLevelBar-min-block-height: 3;
+    border-radius: 2px;
+}
+
+GtkLevelBar.vertical {
+    -GtkLevelBar-min-block-width: 3;
+    -GtkLevelBar-min-block-height: 34;
+    border-radius: 2px;
+}
+
+.level-bar.trough,
+.level-bar.trough:backdrop {
+    border: 1px solid @border;
+    background: @base;
+    border-radius: 0px;
+    padding:1px;
+}
+
+.level-bar.fill-block {
+    border: 1px solid @selected_border;
+    background-color: @selection;
+}
+
+.level-bar.fill-block:backdrop {
+    background-color: shade(@backdrop_background, 0.95);
+    border: 1px solid @backdrop_border;
+}
+
+.level-bar.indicator-continuous.fill-block {
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.level-bar.fill-block:backdrop,
+.level-bar.fill-block.level-high:backdrop,
+.level-bar.fill-block.level-low:backdrop {
+    background-color: @backdrop_border;
+    border-color: @backdrop_border;
+    background-image: none;
+}
+
+.level-bar.indicator-discrete.fill-block.horizontal {
+    border-radius: 4px;
+    margin: 0 1px;
+}
+
+.level-bar.indicator-discrete.fill-block.vertical {
+    border-radius: 4px;
+    margin: 1px 0;
+}
+
+.level-bar.fill-block.level-high {
+    border-color: shade(@success, 0.9);
+    background-color: @success;
+}
+
+.level-bar.fill-block.level-low {
+    border-color: shade(@warning, 0.9);
+    background-color: @warning;
+}
+
+.level-bar.fill-block.empty-fill-block {
+    background: none;
+    background-image: none;
+    border-color: alpha(@foreground, 0.1);
+}
+
+.level-bar.fill-block.empty-fill-block:backdrop {
+    border-color: transparent;
+    background: none;
+}

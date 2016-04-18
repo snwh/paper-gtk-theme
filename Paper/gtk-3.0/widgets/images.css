@@ -1,0 +1,80 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*********
+ * Images *
+ **********/
+ 
+*:active GtkImage,
+*:focus GtkImage,
+*:hover GtkImage {
+    color: @selection_foreground;
+}
+
+*:backdrop GtkImage,
+*:backdrop:hover GtkImage,
+*:active:backdrop GtkImage {
+    color: @backdrop_text;
+    /*-gtk-image-effect: dim;*/
+}
+
+*:insensitive GtkImage {
+    color: @insensitive_text;
+    -gtk-image-effect: dim;
+}
+
+*:insensitive:backdrop GtkImage {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    -gtk-image-effect: dim;
+}
+
+/*******************
+ * Symbolic Images *
+ *******************/
+
+.image {
+    color: @internal_element;
+}
+
+.image:hover {
+    color: @internal_element_prelight;
+}
+
+.image:selected,
+.image:selected:hover {
+    color: @selection_foreground;
+}
+
+.view.image:backdrop,
+.image:backdrop {
+    color: @backdrop_text;
+}
+.view.image:insensitive,
+.image:insensitive {
+    color: @insenstive_text;
+}
+
+.view.image,
+.view.image:hover {
+    color: @view_symbolic;
+}
+
+.view.image:selected,
+.view.image:selected:hover {
+    color: @selection_foreground;
+}

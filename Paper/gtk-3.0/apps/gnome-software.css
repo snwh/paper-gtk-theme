@@ -1,0 +1,49 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color star #E6E663;/* star color */
+@define-color gnome-software #1A77C2;
+@define-color tag #1A77C2;
+@define-color kudo @selection;
+
+
+#window_software .titlebar,
+#window_software .header-bar {
+    background-color: @gnome-software;
+}
+
+#window_software .titlebar:backdrop,
+#window_software .header-bar:backdrop {
+    background-color: shade(@gnome-software,0.9);
+}
+
+
+.app-row-tag.label {
+    border-radius: 2px;
+    background-color: @tag;
+    background: @tag;
+    border:none;
+    color: shade(@tag, 0.8);
+}
+
+.kudo-label.label {
+    border-radius: 4px;
+    background-color: @kudo;
+    border:1px solid shade(@kudo, 0.8);
+    color:shade(@kudo, 0.8);;
+}

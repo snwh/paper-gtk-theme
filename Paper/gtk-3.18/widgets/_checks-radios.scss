@@ -1,0 +1,184 @@
+/*************************
+ * Check and Radio Items *
+ *************************/
+// draw regular check and radio items using our PNG assets
+// all assets are rendered from assets.svg. never add pngs directly
+
+
+// unchecked
+@each $s,$un in ('','-unchecked'),
+                  (':hover', '-unchecked-hover'),
+                  (':active', '-unchecked-active'),
+                  (':backdrop', '-unchecked-backdrop'),
+                  (':insensitive', '-unchecked-insensitive'),
+                  (':insensitive:backdrop', '-unchecked-insensitive-backdrop') {
+  .check#{$s}{
+    -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/checkbox#{$un}.png"),url("../assets/checkbox#{$un}@2.png")), -gtk-scaled(url("../assets/checkbox#{$un}-dark.png"),url("../assets/checkbox#{$un}-dark@2.png")));
+    icon-shadow: none;
+  }
+  .radio#{$s}{
+    -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/radio#{$un}.png"),url("../assets/radio#{$un}@2.png")), -gtk-scaled(url("../assets/radio#{$un}-dark.png"),url("../assets/radio#{$un}-dark@2.png")));
+    icon-shadow: none;
+  }
+}
+
+// checked
+@each $s,$ch in (':checked', '-checked'),
+                  (':checked:hover', '-checked-hover'),
+                  (':checked:active', '-checked-active'),
+                  (':checked:backdrop', '-checked-backdrop'),
+                  (':checked:insensitive', '-checked-insensitive'),
+                  (':checked:insensitive:backdrop', '-checked-insensitive-backdrop') {
+  .check#{$s}{
+    -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/checkbox#{$ch}.png"),url("../assets/checkbox#{$ch}@2.png")), -gtk-scaled(url("../assets/checkbox#{$ch}-dark.png"),url("../assets/checkbox#{$ch}-dark@2.png")));
+    icon-shadow: none;
+  }
+  .radio#{$s}{
+    -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/radio#{$ch}.png"),url("../assets/radio#{$ch}@2.png")), -gtk-scaled(url("../assets/radio#{$ch}-dark.png"),url("../assets/radio#{$ch}-dark@2.png")));
+    icon-shadow: none;
+  }
+}
+
+// mixed
+@each $s,$mx in (':inconsistent', '-mixed'),
+                  (':inconsistent:hover', '-mixed-hover'),
+                  (':inconsistent:active', '-mixed-active'),
+                  (':inconsistent:backdrop', '-mixed-backdrop'),
+                  (':inconsistent:insensitive', '-mixed-insensitive'),
+                  (':inconsistent:insensitive:backdrop', '-mixed-insensitive-backdrop') {
+  .check#{$s}{
+    -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/checkbox#{$mx}.png"),url("../assets/checkbox#{$mx}@2.png")), -gtk-scaled(url("../assets/checkbox#{$mx}-dark.png"),url("../assets/checkbox#{$mx}-dark@2.png")));
+    icon-shadow: none;
+  }
+  .radio#{$s}{
+    -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/radio#{$mx}.png"),url("../assets/radio#{$mx}@2.png")), -gtk-scaled(url("../assets/radio#{$mx}-dark.png"),url("../assets/radio#{$mx}-dark@2.png")));
+    icon-shadow: none;
+  }
+}
+
+// unchecked:selected
+@each $s,$un in (':selected','-unchecked'),
+                  (':hover:selected', '-unchecked-hover'),
+                  (':active:selected', '-unchecked-active'),
+                  (':backdrop:selected', '-unchecked-backdrop'),
+                  (':insensitive:selected', '-unchecked-insensitive'),
+                  (':insensitive:backdrop:selected', '-unchecked-insensitive-backdrop') {
+  .check#{$s}{
+    -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/selected-checkbox#{$un}.png"),url("../assets/selected-checkbox#{$un}@2.png")), -gtk-scaled(url("../assets/selected-checkbox#{$un}-dark.png"),url("../assets/selected-checkbox#{$un}-dark@2.png")));
+    icon-shadow: none;
+  }
+  .radio#{$s}{
+    -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/selected-radio#{$un}.png"),url("../assets/selected-radio#{$un}@2.png")), -gtk-scaled(url("../assets/selected-radio#{$un}-dark.png"),url("../assets/selected-radio#{$un}-dark@2.png")));
+    icon-shadow: none;
+  }
+}
+
+// checked:selected
+@each $s,$ch in (':checked:selected', '-checked'),
+                  (':checked:hover:selected', '-checked-hover'),
+                  (':checked:active:selected', '-checked-active'),
+                  (':checked:backdrop:selected', '-checked-backdrop'),
+                  (':checked:insensitive:selected', '-checked-insensitive'),
+                  (':checked:insensitive:backdrop:selected', '-checked-insensitive-backdrop') {
+  .check#{$s}{
+    -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/selected-checkbox#{$ch}.png"),url("../assets/selected-checkbox#{$ch}@2.png")), -gtk-scaled(url("../assets/selected-checkbox#{$ch}-dark.png"),url("../assets/selected-checkbox#{$ch}-dark@2.png")));
+    icon-shadow: none;
+  }
+  .radio#{$s}{
+    -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/selected-radio#{$ch}.png"),url("../assets/selected-radio#{$ch}@2.png")), -gtk-scaled(url("../assets/selected-radio#{$ch}-dark.png"),url("../assets/selected-radio#{$ch}-dark@2.png")));
+    icon-shadow: none;
+  }
+}
+
+
+// mixed:selected
+@each $s,$mx in (':inconsistent:selected', '-mixed'),
+                  (':inconsistent:hover:selected', '-mixed-hover'),
+                  (':inconsistent:active:selected', '-mixed-active'),
+                  (':inconsistent:backdrop:selected', '-mixed-backdrop'),
+                  (':inconsistent:insensitive:selected', '-mixed-insensitive'),
+                  (':inconsistent:insensitive:backdrop:selected', '-mixed-insensitive-backdrop') {
+  .check#{$s}{
+    -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/selected-checkbox#{$mx}.png"),url("../assets/selected-checkbox#{$mx}@2.png")), -gtk-scaled(url("../assets/selected-checkbox#{$mx}-dark.png"),url("../assets/selected-checkbox#{$mx}-dark@2.png")));
+    icon-shadow: none;
+  }
+  .radio#{$s}{
+    -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/selected-radio#{$mx}.png"),url("../assets/selected-radio#{$mx}@2.png")), -gtk-scaled(url("../assets/selected-radio#{$mx}-dark.png"),url("../assets/selected-radio#{$mx}-dark@2.png")));
+    icon-shadow: none;
+  }
+}
+
+
+// selection-mode unchecked
+@each $s,$un in ('','-unchecked'),
+                  (':hover', '-unchecked-hover'),
+                  (':active', '-unchecked-active'),
+                  (':backdrop', '-unchecked-backdrop'),
+                  (':insensitive', '-unchecked-insensitive'),
+                  (':insensitive:backdrop', '-unchecked-insensitive-backdrop') {
+  .view.content-view.check#{$s}{
+    -gtk-icon-source: -gtk-scaled(url("../assets/selection-mode-checkbox#{$un}.png"),url("../assets/checkbox#{$un}@2.png"));
+    icon-shadow: none;
+  }
+  .view.content-view.radio#{$s}{
+    -gtk-icon-source: -gtk-scaled(url("../assets/selection-mode-radio#{$un}.png"),url("../assets/radio#{$un}@2.png"));
+    icon-shadow: none;
+  }
+}
+
+// selection-mode checked
+@each $s,$ch in ('','-checked'),
+                  (':hover', '-checked-hover'),
+                  (':active', '-checked-active'),
+                  (':backdrop', '-checked-backdrop'),
+                  (':insensitive', '-checked-insensitive'),
+                  (':insensitive:backdrop', '-checked-insensitive-backdrop') {
+  .view.content-view.check#{$s}{
+    -gtk-icon-source: -gtk-scaled(url("../assets/selection-mode-checkbox#{$ch}.png"),url("../assets/checkbox#{$ch}@2.png"));
+    icon-shadow: none;
+  }
+  .view.content-view.radio#{$s}{
+    -gtk-icon-source: -gtk-scaled(url("../assets/selection-mode-radio#{$ch}.png"),url("../assets/radio#{$ch}@2.png"));
+    icon-shadow: none;
+  }
+}
+
+// Style
+.check.text-button, .radio.text-button {
+  // this is for a nice focus on check and radios text
+  padding: 2px 0;
+  outline-offset: 0;
+
+  label:not(:only-child) {
+    &:first-child { margin-left: 4px; }
+    &:last-child { margin-right: 4px; }
+  }
+}
+
+.check,
+.radio {
+  margin: 0 4px;
+
+  .menu .menuitem & {
+    margin: 0; // this is a workaround for a menu check/radio size allocation issue
+  }
+}
+
+GtkTreeView.view check,
+GtkTreeView.view radio {
+  &:selected {
+    &:focus, & {
+      color: $fg_color;
+
+      @if $variant == 'light' { border-color: $selected_borders_color; }
+    }
+
+    &:insensitive {
+      color: $insensitive_fg_color;
+
+      &:backdrop { color: $backdrop_insensitive_color; }
+    }
+  }
+
+  &:backdrop { &:selected, & { color: $backdrop_fg_color; }}
+}

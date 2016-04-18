@@ -1,0 +1,103 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*********
+* Linked *
+*********/
+
+/* Middle button */
+.linked entry,
+.linked button,
+.linked .entry,
+.linked .button {
+    border-left-width: 0;
+    border-radius: 0;
+}
+
+/* Leftmost button */
+.linked entry:first-child,
+.linked button:first-child,
+.linked .entry:first-child,
+.linked .button:first-child,
+.linked > GtkComboBox:first-child > .button {
+    border-width: 1px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2.5px;
+    border-top-left-radius: 2.5px;
+}
+
+/* Rightmost button */
+.linked entry:last-child,
+.linked button:last-child,
+.linked .entry:last-child,
+.linked .button:last-child,
+.linked > GtkComboBox:last-child > .button {
+    border-left-width: 0;
+    border-bottom-right-radius: 2.5px;
+    border-top-right-radius: 2.5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+/* Linked single button */
+.linked entry:only-child,
+.linked button:only-child,
+.linked .entry:only-child,
+.linked .button:only-child {
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-radius: 2.5px;
+}
+
+/* Middle button (vertical) */
+.linked.vertical entry,
+.linked.vertical button,
+.linked.vertical .entry,
+.linked.vertical .button {
+    border-left-width: 1px;
+    border-bottom-width: 0;
+    border-radius: 0;
+}
+
+/* Top button (vertical) */
+.linked.vertical entry:first-child,
+.linked.vertical button:first-child,
+.linked.vertical .entry:first-child,
+.linked.vertical .button:first-child {
+    border-radius: 2.5px 2.5px 0 0;
+}
+
+/* Bottom button (vertical) */
+.linked.vertical entry:last-child,
+.linked.vertical button:last-child,
+.linked.vertical .entry:last-child,
+.linked.vertical .button:last-child {
+    border-bottom-width: 1px;
+    border-radius: 0 0 2.5px 2.5px;
+}
+
+/* Linked single button (vertical) */
+.linked.vertical entry:only-child,
+.linked.vertical button:only-child,
+.linked.vertical .entry:only-child,
+.linked.vertical .button:only-child {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-radius: 2.5px;
+}

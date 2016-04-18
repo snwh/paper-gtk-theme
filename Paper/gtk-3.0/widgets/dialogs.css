@@ -1,0 +1,101 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color dialog_header @header;
+@define-color dialog_header_text @header_text;
+
+@define-color backdrop_dialog_header shade(@dialog_header, 0.9);
+@define-color backdrop_dialog_header_text alpha(@dialog_header, 0.5);
+@define-color insensitive_dialog_header_text alpha(@dialog_header_text, 0.7);
+
+/***********
+ * Dialogs *
+ ***********/
+
+.prompt,
+GtkMessageDialog {
+    -GtkDialog-button-spacing: 0;
+    -GtkDialog-content-area-border: 12px;
+}
+
+/* Buttons */
+GtkMessageDialog .button {
+    border: 1px solid @selection;
+}
+
+GtkMessageDialog .button:focus {
+    border: 1px solid @selection;
+}
+
+/* Titlebar */
+GtkDialog .titlebar,
+GtkMessageDialog .titlebar {
+    border: none;
+    background-color: @dialog_header;
+    color: @dialog_header_text;
+}
+
+GtkDialog .titlebar:backdrop,
+GtkMessageDialog .titlebar:backdrop {
+    background-color: @backdrop_dialog_header;
+    color: @backdrop_dialog_header_text;
+}
+
+GtkDialog,
+GtkAboutDialog,
+GtkMessageDialog {
+    background: @background;
+    color: @text;
+    box-shadow: none;
+}
+
+
+GtkDialog:backdrop,
+GtkAboutDialog:backdrop,
+GtkMessageDialog:backdrop {
+    background: @backdrop_background;
+    color: @backdrop_text;
+    box-shadow: none;
+}
+
+GtkDialog GtkLabel,
+GtkAboutDialog GtkLabel,
+GtkMessageDialog GtkLabel {
+    color: @text;
+}
+
+GtkDialog .toolbar {
+    background-image: none;
+    background-color: @background;
+}
+
+GtkFileChooserDialog .search-bar {
+  background-color: @base;
+  border-color: @background;
+  box-shadow: none; }
+  GtkFileChooserDialog .search-bar:backdrop {
+    background-color: white;
+    border-color: @background; }
+GtkFileChooserDialog .dialog-action-box {
+  border-top: 1px solid @border; }
+  GtkFileChooserDialog .dialog-action-box:backdrop {
+    border-top-color: @backdrop_border; }
+
+GtkFileChooserDialog .sidebar.view.cell {
+  padding: 0;
+}

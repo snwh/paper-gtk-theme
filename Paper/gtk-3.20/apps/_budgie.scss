@@ -1,0 +1,102 @@
+/**********
+* Budgie *
+**********/
+
+.budgie-panel {
+  background-color: transparentize(black, 0.2);
+  transition: 100ms ease-in;
+  font:bold;
+  color: white;
+
+  .top {
+    border-bottom: 1px solid transparentize(white, 0.8);
+  }
+
+  .bottom {
+    border-top: 1px solid transparentize(white, 0.8);
+  }
+
+  .left {
+    border-right: 1px solid transparentize(white, 0.8);
+  }
+
+  .right {
+    border-left: 1px solid transparentize(white, 0.8);
+  }
+}
+
+.max-budgie-panel  {
+  background-color: transparentize(black, 0.0);
+  transition: 100ms ease-in;
+  font:bold;
+  color: white;
+
+  .top {
+    border-bottom: 1px solid transparentize(white, 0.8);
+  }
+
+  .bottom {
+    border-top: 1px solid transparentize(white, 0.8);
+  }
+
+  .left {
+    border-right: 1px solid transparentize(white, 0.8);
+  }
+
+  .right {
+    border-left: 1px solid transparentize(white, 0.8);
+  }
+}
+
+
+.budgie-panel .message-area {
+}
+
+.budgie-panel .max-message-area {
+}
+
+.budgie-panel .launcher,
+PanelToplevel .launcher {
+}
+.budgie-panel .launcher:hover,
+PanelToplevel .launcher:hover {
+}
+.budgie-panel .launcher:active,
+PanelToplevel .launcher:active {
+}
+
+/* Top launchers */
+.top .launcher:hover {
+}
+.top .launcher:active {
+}
+
+/* Left hand side launchers */
+.left .launcher:hover {
+}
+.left .launcher:active {
+}
+
+/* Right hand side launchers */
+.right .launcher:hover {
+}
+.right .launcher:active {
+}
+
+.panel-applet {
+}
+
+.budgie-panel .menu-icon,
+.budgie-panel .menu-icon:active,
+.budgie-panel .menu-icon:hover {
+}
+
+.notification .priority.low {
+  background-color: $info_color;
+}
+.notification .priority.high {
+  background-color: $warning_color;
+}
+.notification .priority.critical {
+  background-color: $error_color;
+}

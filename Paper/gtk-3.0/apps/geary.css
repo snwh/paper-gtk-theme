@@ -1,0 +1,65 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@define-color geary #F2B035;
+
+/**********
+ * Header *
+ **********/
+
+.geary-titlebar-left, .geary-titlebar-right {
+    background-color: @geary;
+}
+
+.geary-titlebar-left .separator { opacity: 0; }
+
+.geary-titlebar-left:backdrop, .geary-titlebar-right:backdrop {
+    background-color: shade(@geary, 0.9);
+}
+
+/*********************
+ * Conversation View *
+ *********************/
+
+ConversationListView .view:active,
+ConversationListView .view:selected {
+	background-color: @selection;
+	color: @selection_foreground;
+}
+ConversationListView .view:active:backdrop,
+ConversationListView .view:selected:backdrop {
+	background-color: @backdrop_selection;
+	color: @backdrop_selection_foreground;
+}
+
+
+ConversationListView {
+    -GtkWidget-focus-line-width: 1px;
+    -GtkTreeView-grid-line-width: 0;
+}
+ 
+ConversationListView.view.cell {
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: alpha(#000, 0.2);
+}
+ 
+ConversationListView.view.cell:selected {
+    color: @base;
+    border: 0px solid shade(@selection, 0.8);
+}

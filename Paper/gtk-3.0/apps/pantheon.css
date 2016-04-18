@@ -1,0 +1,214 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/********
+ * Gala *
+ *******/
+
+.gala-workspaces-background {
+    border-top: 1px solid alpha(#fff, 0.15);
+    background-color: #444;
+    
+    background-image: linear-gradient(to bottom,
+                                  alpha(#000, 0.30),
+                                  transparent 6px
+                                  );
+}
+
+.gala-workspace-selected {
+
+    border: 1px solid alpha(#000, 0.15);
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_background, 1.25),
+                                  shade (@selected_background, 0.98)
+                                  );
+}
+
+.gala-notification {
+    border-width: 0;
+    border-radius: 2px;
+    color: white;
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+.gala-notification .title, .gala-notification .label {
+    color: @text;
+}
+
+.gala-button {
+    padding: 3px;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    background-image: linear-gradient(to bottom,
+                                  #7e7e7e,
+                                  #3e3e3e
+                                  );
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.02),
+                inset 0 1px 0 0 alpha (#fff, 0.07),
+                inset 0 -1px 0 0 alpha (#fff, 0.01),
+                0 0 0 1px alpha (#000, 0.40),
+                0 3px 6px alpha (#000, 0.16),
+                0 3px 6px alpha (#000, 0.23);
+    text-shadow: 0 1px 1px alpha (#000, 0.6);
+}
+
+/**********
+ * Notify *
+ *********/
+
+.notify {
+    /*-notify-shadow: 0px 2px 18px alpha(#000, 0.60);*/
+
+    border-radius: 5px;
+    border: 1px solid alpha(#000, 0.30);
+
+    background-color: alpha(#f8f8f8, 0.95);
+}
+
+.notify .low {
+}
+
+.notify .critical {
+}
+
+
+/***************
+ * SwitchBoard *
+ ***************/
+
+.category-label {
+    font-weight: bold;
+    font-size: 1.04em;
+    color: @foreground;
+}
+
+/**********
+ * Notify *
+ *********/
+
+.notify {
+    /*-notify-shadow: 0px 2px 18px alpha(#000, 0.60);*/
+
+    border-radius: 5px;
+    border: 1px solid alpha(#000, 0.30);
+
+    background-color: alpha(#f7f7f7, 0.95);
+}
+
+.notify .low {
+}
+
+.notify .critical {
+}
+
+
+/*************
+ * Slingshot *
+ ************/
+
+.button.app {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background-image: none;
+}
+
+.app:hover {
+    border-radius: 8px;
+    border: none;
+    background-color: alpha(@selection, 0.7);
+    color: white;
+}
+
+.app:focus {
+    /*background-color: alpha(#000, 0.20);*/
+}
+ 
+.search-item {
+    border-radius: 0;
+    border: none;
+    color: @foreground;
+    background: none;
+}
+
+.search-item:hover,
+.search-item:focus {
+    border-radius: 0;
+    background-color: alpha(@selection, 0.7);
+    color: @selection_foreground;
+}
+  
+
+.search-entry-large,
+.search-entry-large:focus {
+    border: none;
+    font: 18;
+    font-weight: 300;
+    background-image: none;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+ 
+.search-category-header {
+    font-weight: bold;
+    color: @foreground;
+}
+
+
+/*********
+ * Panel *
+ ********/
+
+.panel {
+    background-color: transparent;
+    transition: all 100ms ease-in-out;
+}
+
+.panel.maximized {
+    background-color: #000;
+}
+
+.panel.translucent {
+    background-color: alpha(#000, 0.5);
+}
+
+.composited-indicator > revealer label,
+.composited-indicator > revealer image,
+.composited-indicator > GtkRevealer {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 2px alpha (#000, 0.3),
+                 0 1px 2px alpha (#000, 0.6);
+    icon-shadow: 0 0 2px alpha (#000, 0.3),
+                 0 1px 2px alpha (#000, 0.6);
+}
+
+.panel.color-light .composited-indicator > revealer label,
+.panel.color-light .composited-indicator > revealer image,
+.panel.color-light .composited-indicator > GtkRevealer {
+    color: alpha (#000, 0.65);
+    text-shadow: 0 0 2px alpha (#fff, 0.3),
+                 0 1px 0 alpha (#fff, 0.25);
+    icon-shadow: 0 0 2px alpha (#fff, 0.3),
+                 0 1px 0 alpha (#fff, 0.25);
+}

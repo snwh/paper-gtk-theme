@@ -1,0 +1,47 @@
+/* Copyright 2016 Sam Hewitt.
+*
+* This file is part of the Paper GTK theme.
+*
+* The Paper GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Paper GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/***********
+ * Spinner *
+ ***********/
+
+.menu.spinner,
+.primary-toolbar .spinner {
+    color: @selection;
+}
+
+/*********************
+ * Spinner Animation *
+ *********************/
+
+@keyframes spin { to { -gtk-icon-transform: rotate(1turn); } }
+
+.spinner {
+  background-image: none;
+  background: none;
+  opacity: 0;
+  -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
+}
+
+.spinner:active {
+    opacity: 1;
+    animation: spin 1s linear infinite;
+}
+.spinner:active:insensitive {
+    opacity: 0.5;
+}

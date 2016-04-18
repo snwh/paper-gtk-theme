@@ -1,0 +1,79 @@
+/**********
+ * Switch *
+ **********/
+GtkSwitch {
+  -GtkSwitch-slider-width: 24px;
+  -GtkSwitch-slider-height: 24px;
+
+  font: 1;
+  font-weight: bold;
+  outline-offset: -4px;
+  transition: all 200ms ease-in;
+
+  border: none;
+  border-radius: 14px;
+  color: transparent;
+
+  background-color: transparentize(black, 0.9);
+  box-shadow: inset 0 0 0 1px transparentize(black, 0.95), 0px 1px $bottom_highlight;
+
+  &:insensitive {
+    background-color: $insensitive_bg_color;
+  }
+
+  &:backdrop {
+    background-color: $backdrop_bg_color;
+    transition: $backdrop_transition;
+
+    &:insensitive { background-color: $insensitive_bg_color; }
+  }
+
+
+  &:active,
+  &:checked {
+    background-color: $selected_bg_color;
+
+    &:backdrop {
+      background-color: $backdrop_selected_bg_color;
+
+      .slider,
+      slider {
+        &:backdrop {
+          box-shadow:none;
+          background-color:transparentize($base_color, 0.1);
+          border:none;
+        }
+      }
+    }
+  }
+
+  // Handle
+  .slider {
+    padding:2px;
+    border-radius: 50%;
+    transition: $button_transition;
+    background-color: $base_color;
+
+    box-shadow: 0 2px 2px transparentize(black, 0.8),
+                0 1px 2px transparentize(black, 0.8);
+
+    &:backdrop {
+      padding:2px;
+      box-shadow:none;
+      background-color:$base_color;
+    }
+  }
+
+  // Trough
+  .trough {
+
+    &:active,
+    &:checked {
+      background-color: $selected_bg_color;
+
+      &:backdrop {
+        background-color: $backdrop_selected_bg_color;
+      }
+    }
+  }
+}

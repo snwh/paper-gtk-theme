@@ -1,0 +1,29 @@
+
+/* Floating status bar */
+.floating-bar {
+  padding: 2px;
+  background-color: @background;
+  border-width: 1px;
+  border-style: solid solid none;
+  border-color: @border;
+  border-radius: 3px 3px 0 0;
+}
+
+.floating-bar.bottom.left { /* axes left border and border radius */
+  border-left-style: none;
+  border-top-left-radius: 0;
+}
+
+.floating-bar.bottom.right { /* axes right border and border radius */
+  border-right-style: none;
+  border-top-right-radius: 0;
+}
+
+.floating-bar:backdrop {
+  background-color: @backdrop_background;
+  border-color: @backdrop_border;
+}
+
+.floating-bar .button {
+    padding: 4px;
+}

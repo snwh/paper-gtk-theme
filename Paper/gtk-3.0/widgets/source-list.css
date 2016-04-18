@@ -1,0 +1,36 @@
+/**************
+* Source List *
+***************/
+
+.source-list,
+.source-list.view {
+  -GtkTreeView-horizontal-separator: 1px;
+  -GtkTreeView-vertical-separator: 6px;
+
+  background-color: $bg_color;
+  color: $fg_color;
+  border-left-width: 1px;
+
+  &:backdrop
+
+  .category-expander {
+    color: transparent;
+  }
+
+  .badge {
+    background-image: none;
+    background-color: alpha(#000, 0.4);
+    color: $bg_color;
+    border-radius: 10px;
+    padding: 0 6px;
+    margin: 0 3px;
+    border-width: 0;
+
+    &:selected:backdrop,
+    &:selected:hover:backdrop {
+      background-color: alpha(#000, 0.2);
+      color: shade ($bg_color, 0.95);
+    }
+  }
+
+}

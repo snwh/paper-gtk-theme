@@ -1,0 +1,29 @@
+/*********
+ * Lists *
+ *********/
+.list {
+  color: $text_color;
+  background-color: $base_color;
+  border-color: $borders_color;
+
+  &:backdrop {
+    background-color: $backdrop_base_color;
+    border-color: $backdrop_borders_color;
+  }
+
+}
+
+.list-row {
+  border-radius:0;
+  transition: all 150ms $ease-out-quad;
+
+  GtkImage {
+    padding-right: 6px;
+  }
+
+  &:hover { transition: none; }
+
+  &:backdrop { transition: $backdrop_transition; }
+
+  &:selected { @extend %selected_items; }
+}
