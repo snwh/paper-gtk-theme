@@ -2,7 +2,7 @@
  * Header Bars *
  ***************/
 
-%titlebar,
+%headerbar,
 .header-bar {
   padding:0 8px;
   border: none;
@@ -320,6 +320,50 @@
       }
     }
 
+    // Suggested Button
+    &.suggested-action {
+      font-weight: bold;
+      padding:0;
+      padding: 5px 10px;
+      border-radius: 2px;
+
+      background-color: $headerbar_fg_color;
+      color: $selected_bg_color;
+      box-shadow: 0 1px 0 0 transparentize(black, 0.8);
+
+      GtkLabel { color: $selected_bg_color;}
+
+      &:hover {
+        background-color: $headerbar_fg_color;
+        box-shadow: 0 1px 2px 0 transparentize(black, 0.6);
+        GtkLabel {color: $selected_bg_color;}
+
+        &:backdrop {
+          background-color: transparentize($headerbar_fg_color, 0.2);
+          box-shadow:none;
+          GtkLabel { color:transparentize($selected_bg_color, 0.2);}
+        }
+      }
+
+      &:insensitive {
+        background-color: transparentize(black, 0.9);
+        box-shadow:none;
+        GtkLabel { color:transparentize($headerbar_fg_color, 0.5);}
+
+        &:backdrop {
+          background-color: transparentize(black, 0.9);
+          box-shadow:none;
+          GtkLabel { color:transparentize($headerbar_fg_color, 0.5);}
+        }
+      }
+
+      &:backdrop {
+        background-color: transparentize($headerbar_fg_color, 0.9);
+        box-shadow: none;
+        GtkLabel {color:transparentize($selected_bg_color, 0.8);}
+      }
+    }
+
     // Linked button
     &.linked {
       &:first-child,
@@ -367,5 +411,5 @@
     }
   }
 
-  @extend %titlebar;
+  @extend %headerbar;
 }

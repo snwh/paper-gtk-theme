@@ -171,8 +171,8 @@
     icon-shadow: 0 1px $_shadow;
   }
   @else {
-    text-shadow: 0 1px $_shadow;
-    icon-shadow: 0 -1px $_shadow;
+    text-shadow: 0 1px transparentize(black, 0.8);
+    icon-shadow: 0 1px transparentize(black, 0.8);
   }
 }
 
@@ -259,7 +259,6 @@
     $_bg: if($c!=$bg_color, mix($c, $base_color, 85%), $insensitive_bg_color);
 
     GtkLabel, & { color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $insensitive_fg_color); }
-    label, & { color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $insensitive_fg_color); }
 
     border-color: if($c!=$bg_color, _border_color($c), $insensitive_borders_color);
     background-image: none;
@@ -276,7 +275,6 @@
     $_bc: if($c!=$bg_color, _border_color($c), $insensitive_borders_color);
 
     GtkLabel, & { color: if($c!=$bg_color, mix($tc, $_bg, 60%), $insensitive_fg_color); }
-    label, & { color: if($c!=$bg_color, mix($tc, $_bg, 60%), $insensitive_fg_color); }
 
     border-color: $_bc;
     background-image: none;
@@ -298,7 +296,6 @@
     $_bc: if($variant=='light',$c,_border_color($c));
 
     GtkLabel, & { color: if($tc!=$fg_color,mix($tc, $_bg, 80%), $backdrop_fg_color); }
-    label, & { color: if($tc!=$fg_color,mix($tc, $_bg, 80%), $backdrop_fg_color); }
 
     border-color: if($c!=$bg_color, $_bc, $backdrop_borders_color);
     background-image: linear-gradient(to bottom, $_bg);
@@ -334,7 +331,6 @@
     $_bc: if($variant=='light', $_bg,_border_color($c));
 
     GtkLabel, & { color: if($c!=$bg_color, mix($tc, $_bg, 35%), $backdrop_insensitive_color); }
-    label, & { color: if($c!=$bg_color, mix($tc, $_bg, 35%), $backdrop_insensitive_color); }
 
     border-color: if($c!=$bg_color, $_bc, $backdrop_borders_color);
     background-image: none;
@@ -353,7 +349,7 @@
                             darken($insensitive_bg_color, 5%));
     $_bc: if($variant=='light', $_bg,_border_color($c));
 
-    label { color: if($c!=$bg_color, mix($tc, $_bg, 35%), $backdrop_insensitive_color); }
+    GtkLabel { color: if($c!=$bg_color, mix($tc, $_bg, 35%), $backdrop_insensitive_color); }
 
     border-color: if($c!=$bg_color, $_bc, $backdrop_borders_color);
     background-image: none;
@@ -369,8 +365,7 @@
 
   // OSD Button
   @else if $t==osd {
-    $_bg: if($c!=$bg_color, transparentize($c, 0.5),
-                            $osd_bg_color);
+    $_bg: if($c!=$bg_color, transparentize($c, 0.5), $osd_bg_color);
 
     color: $osd_fg_color;
     border-color: $osd_borders_color;
@@ -384,8 +379,7 @@
 
   // Hover OSD Button
   @else if $t==osd-hover {
-    $_bg: if($c!=$bg_color, transparentize($c, 0.3),
-                            lighten($osd_bg_color, 12%));
+    $_bg: if($c!=$bg_color, transparentize($c, 0.3), lighten($osd_bg_color, 12%));
 
     color: white;
     border-color: $osd_borders_color;

@@ -191,8 +191,6 @@ $_dot_color: if($variant=='light', $selected_bg_color,
       @include button(undecorated);
 
       box-shadow: none; //FIXME respect no edge on the button mixin
-      text-shadow: 0 1px black;
-      icon-shadow: 0 1px black;
 
       &:hover { @include button(osd-hover); }
 
@@ -279,12 +277,12 @@ $_dot_color: if($variant=='light', $selected_bg_color,
 
     outline-offset: -3px; // needs to be set or it gets overriden by GtkRadioButton outline-offset
 
-    > label {
+    > GtkLabel {
       padding-left: 6px;  // label padding
       padding-right: 6px; //
     }
 
-    > image {
+    > GtkImage {
       padding-left: 6px;   // image padding
       padding-right: 6px;  //
       padding-top: 3px;    //
