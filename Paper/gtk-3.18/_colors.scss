@@ -13,12 +13,12 @@ $headerbar_fg_color: if($variant == 'light', #ffffff, transparentize(#ffffff, 0.
 $red: #f34235;
 $orange: #fe9700;
 $yellow: #feea3a;
-$green: #1ea362;
+$green: #4bae4f;
 $blue: #2095f2;
 $purple: #9b26af;
 
 $selected_fg_color: #ffffff;
-$selected_bg_color: if($variant == 'light', #347D9F, mix(#347D9F, $bg_color, 50%));
+$selected_bg_color: if($variant == 'light', #347D9F, lighten(#347D9F,10%));
 $selected_borders_color: darken($selected_bg_color, 10%);
 $borders_color: if($variant == 'light', darken($bg_color,15%), darken($bg_color,10%));
 $borders_edge: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.9));
@@ -53,7 +53,7 @@ $sidebar_bg_color: mix($bg_color, $base_color, 50%);
 $base_hover_color: transparentize($fg_color, 0.95);
 
 $tooltip_borders_color: transparentize(white, 0.9);
-$shadow_color: transparentize(black, 0.9);
+$shadow_color: transparentize(black, 0.8);
 
 $drop_target_color: #4e9a06;
 
@@ -64,10 +64,9 @@ $info_color: $blue;
 $question_color: $green;
 
 // Panel colors
-$panel_bg_color: darken($headerbar_bg_color, 10%);
-$backdrop_panel_color: darken($panel_bg_color,10%); 
-$panel_fg_color: $headerbar_fg_color;
-$backdrop_panel_fg_color: darken($panel_fg_color,10%);
+$panel_bg_color: transparentize(black, 0.3);
+$panel_fg_color: white;
+$panel_borders_color: transparentize(black, 0.8);
 
 // Insensitive state colors
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);

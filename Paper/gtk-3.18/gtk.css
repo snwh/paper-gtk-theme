@@ -55,7 +55,7 @@
 /* these are pretty self explicative */
 @define-color warning_color #feea3a;
 @define-color error_color #f34235;
-@define-color success_color #1ea362;
+@define-color success_color #4bae4f;
 /* these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
 @define-color wm_title shade(#666666, 1.8);
@@ -1954,7 +1954,7 @@ GtkFileChooserDialog {
 /****************
  * Text Entries *
  ****************/
-.spinbutton:not(.vertical),
+.spinbutton:not(.vertical), GeditWindow > .entry,
 .entry {
   padding: 4px 6px;
   border: 1px solid;
@@ -1964,27 +1964,27 @@ GtkFileChooserDialog {
   border-color: #d1d1d1;
   background-color: #ffffff;
   box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
-  .spinbutton:not(.vertical) GtkImage,
+  .spinbutton:not(.vertical) GtkImage, GeditWindow > .entry GtkImage,
   .entry GtkImage {
     color: #858585; }
-    .spinbutton:not(.vertical) GtkImage:hover,
+    .spinbutton:not(.vertical) GtkImage:hover, GeditWindow > .entry GtkImage:hover,
     .entry GtkImage:hover {
       color: #666666; }
-    .spinbutton:not(.vertical) GtkImage:active,
+    .spinbutton:not(.vertical) GtkImage:active, GeditWindow > .entry GtkImage:active,
     .entry GtkImage:active {
       color: #347D9F; }
-    .spinbutton:not(.vertical) GtkImage:backdrop,
+    .spinbutton:not(.vertical) GtkImage:backdrop, GeditWindow > .entry GtkImage:backdrop,
     .entry GtkImage:backdrop {
       color: #bebebe; }
-    .spinbutton:not(.vertical) GtkImage.left,
+    .spinbutton:not(.vertical) GtkImage.left, GeditWindow > .entry GtkImage.left,
     .entry GtkImage.left {
       padding-left: 0;
       padding-right: 6px; }
-    .spinbutton:not(.vertical) GtkImage.right,
+    .spinbutton:not(.vertical) GtkImage.right, GeditWindow > .entry GtkImage.right,
     .entry GtkImage.right {
       padding-left: 6px;
       padding-right: 0; }
-  .spinbutton:not(.vertical) .undershoot.left,
+  .spinbutton:not(.vertical) .undershoot.left, GeditWindow > .entry .undershoot.left,
   .entry .undershoot.left {
     background-color: transparent;
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%);
@@ -1995,7 +1995,7 @@ GtkFileChooserDialog {
     background-position: left center;
     border: none;
     box-shadow: none; }
-  .spinbutton:not(.vertical) .undershoot.right,
+  .spinbutton:not(.vertical) .undershoot.right, GeditWindow > .entry .undershoot.right,
   .entry .undershoot.right {
     background-color: transparent;
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%);
@@ -2006,67 +2006,67 @@ GtkFileChooserDialog {
     background-position: right center;
     border: none;
     box-shadow: none; }
-  .flat.spinbutton:focus:not(.vertical), .flat.spinbutton:not(.vertical),
+  .flat.spinbutton:focus:not(.vertical), GeditWindow > .flat.entry:focus, .flat.spinbutton:not(.vertical), GeditWindow > .flat.entry,
   .entry.flat:focus,
   .entry.flat {
     padding: 2px;
     background-image: none;
     border-color: transparent;
     border-radius: 0; }
-  .spinbutton:focus:not(.vertical),
+  .spinbutton:focus:not(.vertical), GeditWindow > .entry:focus,
   .entry:focus {
     box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
     border-color: #347D9F; }
-  .spinbutton:insensitive:not(.vertical),
+  .spinbutton:insensitive:not(.vertical), GeditWindow > .entry:insensitive,
   .entry:insensitive {
     color: #afafaf;
     border-color: #d1d1d1;
     background-image: linear-gradient(to bottom, #fafafa);
     box-shadow: none; }
-  .spinbutton:backdrop:not(.vertical),
+  .spinbutton:backdrop:not(.vertical), GeditWindow > .entry:backdrop,
   .entry:backdrop {
     color: #848484;
     border-color: #d5d5d5;
     background-image: linear-gradient(to bottom, #fcfcfc);
     box-shadow: none;
     transition: 200ms ease-out; }
-  .spinbutton:backdrop:insensitive:not(.vertical),
+  .spinbutton:backdrop:insensitive:not(.vertical), GeditWindow > .entry:backdrop:insensitive,
   .entry:backdrop:insensitive {
     color: #d1d1d1;
     border-color: #d5d5d5;
     background-image: linear-gradient(to bottom, #fafafa);
     box-shadow: none; }
-  .spinbutton:backdrop:insensitive:not(.vertical),
+  .spinbutton:backdrop:insensitive:not(.vertical), GeditWindow > .entry:backdrop:insensitive,
   .entry:backdrop:insensitive {
     color: #d1d1d1;
     border-color: #d5d5d5;
     background-image: linear-gradient(to bottom, #fafafa);
     box-shadow: none; }
-  .error.spinbutton:not(.vertical),
+  .error.spinbutton:not(.vertical), GeditWindow > .error.entry,
   .entry.error {
     color: #f34235;
     border-color: #f34235; }
-    .error.spinbutton:focus:not(.vertical),
+    .error.spinbutton:focus:not(.vertical), GeditWindow > .error.entry:focus,
     .entry.error:focus {
       box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
       border-color: #f34235; }
-    .error.spinbutton:selected:focus:not(.vertical), .error.spinbutton:selected:not(.vertical),
+    .error.spinbutton:selected:focus:not(.vertical), GeditWindow > .error.entry:selected:focus, .error.spinbutton:selected:not(.vertical), GeditWindow > .error.entry:selected,
     .entry.error:selected:focus,
     .entry.error:selected {
       background-color: #f34235; }
-  .warning.spinbutton:not(.vertical),
+  .warning.spinbutton:not(.vertical), GeditWindow > .warning.entry,
   .entry.warning {
     color: #feea3a;
     border-color: #feea3a; }
-    .warning.spinbutton:focus:not(.vertical),
+    .warning.spinbutton:focus:not(.vertical), GeditWindow > .warning.entry:focus,
     .entry.warning:focus {
       box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
       border-color: #feea3a; }
-    .warning.spinbutton:selected:focus:not(.vertical), .warning.spinbutton:selected:not(.vertical),
+    .warning.spinbutton:selected:focus:not(.vertical), GeditWindow > .warning.entry:selected:focus, .warning.spinbutton:selected:not(.vertical), GeditWindow > .warning.entry:selected,
     .entry.warning:selected:focus,
     .entry.warning:selected {
       background-color: #feea3a; }
-.spinbutton:not(.vertical) .progressbar,
+.spinbutton:not(.vertical) .progressbar, GeditWindow > .entry .progressbar,
 .entry .progressbar {
   margin: 2px -6px;
   background-color: transparent;
@@ -2076,38 +2076,42 @@ GtkFileChooserDialog {
   border-color: #347D9F;
   border-style: solid;
   box-shadow: none; }
-  .spinbutton:not(.vertical) .progressbar:backdrop,
+  .spinbutton:not(.vertical) .progressbar:backdrop, GeditWindow > .entry .progressbar:backdrop,
   .entry .progressbar:backdrop {
     background-color: transparent; }
-.linked:not(.vertical) > .spinbutton:focus:not(.vertical) + .spinbutton:not(.vertical), .linked:not(.vertical) > .spinbutton:focus:not(.vertical) + button, .linked:not(.vertical) > .spinbutton:focus:not(.vertical) + combobox > box > button.combo, .linked:not(.vertical) >
-.entry:focus + .spinbutton:not(.vertical), .linked:not(.vertical) >
+.linked:not(.vertical) > .spinbutton:focus:not(.vertical) + .spinbutton:not(.vertical), GeditWindow.linked:not(.vertical) > .entry:focus + .spinbutton:not(.vertical), GeditWindow.linked:not(.vertical) > .spinbutton:focus:not(.vertical) + .entry, GeditWindow.linked:not(.vertical) > .entry:focus + .entry, .linked:not(.vertical) > .spinbutton:focus:not(.vertical) + button, GeditWindow.linked:not(.vertical) > .entry:focus + button, .linked:not(.vertical) > .spinbutton:focus:not(.vertical) + combobox > box > button.combo, GeditWindow.linked:not(.vertical) > .entry:focus + combobox > box > button.combo, .linked:not(.vertical) >
+.entry:focus + .spinbutton:not(.vertical), GeditWindow.linked:not(.vertical) > .entry:focus + .entry, .linked:not(.vertical) >
 .entry:focus + button, .linked:not(.vertical) >
 .entry:focus + combobox > box > button.combo, .linked:not(.vertical) > .spinbutton:focus:not(.vertical) +
+.entry, GeditWindow.linked:not(.vertical) > .entry:focus +
 .entry, .linked:not(.vertical) >
 .entry:focus +
 .entry {
   border-left-color: #347D9F; }
-.linked.vertical > .spinbutton:not(:insensitive):not(.vertical) + entry:not(:insensitive), .linked.vertical > .spinbutton:not(:insensitive):not(.vertical) + .spinbutton:not(:insensitive):not(.vertical), .linked.vertical >
+.linked.vertical > .spinbutton:not(:insensitive):not(.vertical) + entry:not(:insensitive), GeditWindow.linked.vertical > .entry:not(:insensitive) + entry:not(:insensitive), .linked.vertical > .spinbutton:not(:insensitive):not(.vertical) + .spinbutton:not(:insensitive):not(.vertical), GeditWindow.linked.vertical > .entry:not(:insensitive) + .spinbutton:not(:insensitive):not(.vertical), GeditWindow.linked.vertical > .spinbutton:not(:insensitive):not(.vertical) + .entry:not(:insensitive), GeditWindow.linked.vertical > .entry:not(:insensitive) + .entry:not(:insensitive), .linked.vertical >
 .entry:not(:insensitive) + entry:not(:insensitive), .linked.vertical >
-.entry:not(:insensitive) + .spinbutton:not(:insensitive):not(.vertical) {
+.entry:not(:insensitive) + .spinbutton:not(:insensitive):not(.vertical), GeditWindow.linked.vertical > .entry:not(:insensitive) + .entry:not(:insensitive) {
   border-top-color: #f1f1f1;
   background-image: linear-gradient(to bottom, #ffffff); }
-  .linked.vertical > .spinbutton:not(:insensitive):not(.vertical) + entry:not(:insensitive):backdrop, .linked.vertical > .spinbutton:not(:insensitive):not(.vertical) + .spinbutton:not(:insensitive):backdrop:not(.vertical), .linked.vertical >
+  .linked.vertical > .spinbutton:not(:insensitive):not(.vertical) + entry:not(:insensitive):backdrop, GeditWindow.linked.vertical > .entry:not(:insensitive) + entry:not(:insensitive):backdrop, .linked.vertical > .spinbutton:not(:insensitive):not(.vertical) + .spinbutton:not(:insensitive):backdrop:not(.vertical), GeditWindow.linked.vertical > .entry:not(:insensitive) + .spinbutton:not(:insensitive):backdrop:not(.vertical), GeditWindow.linked.vertical > .spinbutton:not(:insensitive):not(.vertical) + .entry:not(:insensitive):backdrop, GeditWindow.linked.vertical > .entry:not(:insensitive) + .entry:not(:insensitive):backdrop, .linked.vertical >
   .entry:not(:insensitive) + entry:not(:insensitive):backdrop, .linked.vertical >
-  .entry:not(:insensitive) + .spinbutton:not(:insensitive):backdrop:not(.vertical) {
+  .entry:not(:insensitive) + .spinbutton:not(:insensitive):backdrop:not(.vertical), GeditWindow.linked.vertical > .entry:not(:insensitive) + .entry:not(:insensitive):backdrop {
     border-top-color: #f0f0f0;
     background-image: linear-gradient(to bottom, #fcfcfc); }
-.linked.vertical > .spinbutton:insensitive:not(.vertical) + .spinbutton:insensitive:not(.vertical), .linked.vertical >
-.entry:insensitive + .spinbutton:insensitive:not(.vertical) {
+.linked.vertical > .spinbutton:insensitive:not(.vertical) + .spinbutton:insensitive:not(.vertical), GeditWindow.linked.vertical > .entry:insensitive + .spinbutton:insensitive:not(.vertical), GeditWindow.linked.vertical > .spinbutton:insensitive:not(.vertical) + .entry:insensitive, GeditWindow.linked.vertical > .entry:insensitive + .entry:insensitive, .linked.vertical >
+.entry:insensitive + .spinbutton:insensitive:not(.vertical), GeditWindow.linked.vertical > .entry:insensitive + .entry:insensitive {
   border-top-color: #f1f1f1; }
-.linked.vertical > .spinbutton:not(.vertical) + .spinbutton:focus:not(:only-child):not(.vertical), .linked.vertical >
-.entry + .spinbutton:focus:not(:only-child):not(.vertical) {
+.linked.vertical > .spinbutton:not(.vertical) + .spinbutton:focus:not(:only-child):not(.vertical), GeditWindow.linked.vertical > .entry + .spinbutton:focus:not(:only-child):not(.vertical), GeditWindow.linked.vertical > .spinbutton:not(.vertical) + .entry:focus:not(:only-child), GeditWindow.linked.vertical > .entry + .entry:focus:not(:only-child), .linked.vertical >
+.entry + .spinbutton:focus:not(:only-child):not(.vertical), GeditWindow.linked.vertical > .entry + .entry:focus:not(:only-child) {
   border-top-color: #347D9F; }
-.linked.vertical > .spinbutton:focus:not(:only-child):not(.vertical) + .spinbutton:not(.vertical),
+.linked.vertical > .spinbutton:focus:not(:only-child):not(.vertical) + .spinbutton:not(.vertical), GeditWindow.linked.vertical > .entry:focus:not(:only-child) + .spinbutton:not(.vertical), GeditWindow.linked.vertical > .spinbutton:focus:not(:only-child):not(.vertical) + .entry, GeditWindow.linked.vertical > .entry:focus:not(:only-child) + .entry,
 .linked.vertical > .spinbutton:focus:not(:only-child):not(.vertical) + .entry,
+GeditWindow.linked.vertical > .entry:focus:not(:only-child) + .entry,
 .linked.vertical > .spinbutton:focus:not(:only-child):not(.vertical) + .button,
-.linked.vertical > .spinbutton:focus:not(:only-child):not(.vertical) + GtkComboBox > box > .button.combo, .linked.vertical >
-.entry:focus:not(:only-child) + .spinbutton:not(.vertical),
+GeditWindow.linked.vertical > .entry:focus:not(:only-child) + .button,
+.linked.vertical > .spinbutton:focus:not(:only-child):not(.vertical) + GtkComboBox > box > .button.combo,
+GeditWindow.linked.vertical > .entry:focus:not(:only-child) + GtkComboBox > box > .button.combo, .linked.vertical >
+.entry:focus:not(:only-child) + .spinbutton:not(.vertical), GeditWindow.linked.vertical > .entry:focus:not(:only-child) + .entry,
 .linked.vertical >
 .entry:focus:not(:only-child) + .entry,
 .linked.vertical >
@@ -2902,9 +2906,9 @@ infobar {
     color: rgba(255, 255, 255, 0.5); }
 
 .question {
-  background-color: #1ea362; }
+  background-color: #4bae4f; }
   .question:backdrop {
-    background-color: #26ce7c;
+    background-color: #6cc070;
     color: rgba(255, 255, 255, 0.5); }
 
 .error {
@@ -3030,8 +3034,8 @@ GtkLevelBar,
     .level-bar.vertical .level-full.fill-block,
     .level-bar .fill-block.full,
     .level-bar .fill-block.level-full {
-      border: 1px solid #167848;
-      background-color: #1ea362; }
+      border: 1px solid #3c8a3f;
+      background-color: #4bae4f; }
       GtkLevelBar.vertical .full.fill-block:backdrop,
       GtkLevelBar .level-bar.vertical .full.fill-block:backdrop,
       .level-bar.vertical GtkLevelBar .full.fill-block:backdrop, GtkLevelBar.vertical .level-full.fill-block:backdrop,
@@ -3047,7 +3051,7 @@ GtkLevelBar,
       .level-bar.vertical .level-full.fill-block:backdrop,
       .level-bar .fill-block.full:backdrop,
       .level-bar .fill-block.level-full:backdrop {
-        border: 1px solid #1ea362; }
+        border: 1px solid #4bae4f; }
     GtkLevelBar.vertical .empty.fill-block,
     GtkLevelBar .level-bar.vertical .empty.fill-block,
     .level-bar.vertical GtkLevelBar .empty.fill-block, GtkLevelBar.vertical .level-empty.fill-block,
@@ -3585,7 +3589,8 @@ GtkLevelBar .trough,
 .progressbar, .scale .trough, .scale.fine-tune .trough, .scale fill {
   border: none;
   background-color: #ffffff;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0px 1px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 1px rgba(255, 255, 255, 0.3);
+  border: 1px solid #d1d1d1;
   padding: 0;
   margin: 0; }
   GtkLevelBar .trough:insensitive,
@@ -3632,7 +3637,7 @@ GtkProgressBar .progressbar,
 .progressbar .progressbar, .scale .highlight, .scale.fine-tune .highlight {
   border: 1px solid #275f79;
   background-color: #347D9F;
-  box-shadow: 0px 1px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 1px rgba(255, 255, 255, 0.2);
   border-radius: 4px; }
   GtkProgressBar .progressbar:insensitive,
   .progressbar .progressbar:insensitive, .scale .highlight:insensitive {
@@ -3645,7 +3650,7 @@ GtkProgressBar .progressbar,
   .progressbar .progressbar:active:backdrop, GtkProgressBar:backdrop .progressbar:active,
   .progressbar:backdrop .progressbar:active, GtkProgressBar:backdrop progress:active,
   .progressbar:backdrop progress:active, .scale .highlight:active:backdrop {
-    border-color: #347D9F;
+    border-color: #449ac2;
     background-color: #449ac2; }
     GtkProgressBar .progressbar:backdrop:insensitive,
     .progressbar .progressbar:backdrop:insensitive, GtkProgressBar:backdrop .progressbar:insensitive,
@@ -3685,15 +3690,15 @@ GtkProgressBar .progressbar,
   .scale .highlight {
     margin: -1px; }
   .scale .slider {
-    margin: 2px;
+    margin: 1px;
     background-color: #ffffff;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    border: 1px solid #d1d1d1;
     border-radius: 12px;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition-property: background, border, box-shadow; }
     .scale .slider:active {
-      box-shadow: 0 1px 1px 0 rgba(52, 125, 159, 0.5);
+      box-shadow: 0 1px 2px 0 rgba(52, 125, 159, 0.5);
       border: 1px solid #347D9F; }
       .scale .slider:active:insensitive {
         box-shadow: none;
@@ -4936,48 +4941,203 @@ treeview.view header button:active {
 /**********************
  * DE-Specific Styles *
  **********************/
-/**********
+/*********
 * Budgie *
 **********/
+.budgie-panel .unpinned .launcher:hover, .budgie-panel .pinned .launcher.running:hover {
+  background-color: rgba(0, 0, 0, 0.1); }
+.budgie-panel .unpinned .launcher:active, .budgie-panel .pinned .launcher.running:active, .budgie-panel .unpinned .launcher:checked, .budgie-panel .pinned .launcher.running:checked {
+  background-color: rgba(0, 0, 0, 0.2); }
+.top .budgie-panel .unpinned .launcher, .budgie-panel .unpinned .top .launcher, .top .budgie-panel .pinned .launcher.running, .budgie-panel .pinned .top .launcher.running {
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent; }
+  .top .budgie-panel .unpinned .launcher,
+  .top .budgie-panel .pinned .launcher.running {
+    border-top: 2px solid rgba(52, 125, 159, 0.5); }
+  .top .budgie-panel .unpinned .launcher:hover, .budgie-panel .unpinned .top .launcher:hover, .top .budgie-panel .pinned .launcher.running:hover, .budgie-panel .pinned .top .launcher.running:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-top: 2px solid rgba(52, 125, 159, 0.5); }
+  .top .budgie-panel .unpinned .launcher:active, .budgie-panel .unpinned .top .launcher:active, .top .budgie-panel .pinned .launcher.running:active, .budgie-panel .pinned .top .launcher.running:active, .top .budgie-panel .unpinned .launcher:checked, .budgie-panel .unpinned .top .launcher:checked, .top .budgie-panel .pinned .launcher.running:checked, .budgie-panel .pinned .top .launcher.running:checked {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    border-top: 2px solid #347D9F; }
+.bottom .budgie-panel .unpinned .launcher, .budgie-panel .unpinned .bottom .launcher, .bottom .budgie-panel .pinned .launcher.running, .budgie-panel .pinned .bottom .launcher.running {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent; }
+  .bottom .budgie-panel .unpinned .launcher,
+  .bottom .budgie-panel .pinned .launcher.running {
+    border-bottom: 2px solid rgba(52, 125, 159, 0.5); }
+  .bottom .budgie-panel .unpinned .launcher:hover, .budgie-panel .unpinned .bottom .launcher:hover, .bottom .budgie-panel .pinned .launcher.running:hover, .budgie-panel .pinned .bottom .launcher.running:hover {
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(52, 125, 159, 0.5); }
+  .bottom .budgie-panel .unpinned .launcher:active, .budgie-panel .unpinned .bottom .launcher:active, .bottom .budgie-panel .pinned .launcher.running:active, .budgie-panel .pinned .bottom .launcher.running:active, .bottom .budgie-panel .unpinned .launcher:checked, .budgie-panel .unpinned .bottom .launcher:checked, .bottom .budgie-panel .pinned .launcher.running:checked, .budgie-panel .pinned .bottom .launcher.running:checked {
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #347D9F; }
+.left .budgie-panel .unpinned .launcher, .budgie-panel .unpinned .left .launcher, .left .budgie-panel .pinned .launcher.running, .budgie-panel .pinned .left .launcher.running {
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent; }
+  .left .budgie-panel .unpinned .launcher,
+  .left .budgie-panel .pinned .launcher.running {
+    border-left: 2px solid rgba(52, 125, 159, 0.5); }
+  .left .budgie-panel .unpinned .launcher:hover, .budgie-panel .unpinned .left .launcher:hover, .left .budgie-panel .pinned .launcher.running:hover, .budgie-panel .pinned .left .launcher.running:hover {
+    border-right: 2px solid rgba(0, 0, 0, 0.1);
+    border-left: 2px solid rgba(52, 125, 159, 0.5); }
+  .left .budgie-panel .unpinned .launcher:active, .budgie-panel .unpinned .left .launcher:active, .left .budgie-panel .pinned .launcher.running:active, .budgie-panel .pinned .left .launcher.running:active, .left .budgie-panel .unpinned .launcher:checked, .budgie-panel .unpinned .left .launcher:checked, .left .budgie-panel .pinned .launcher.running:checked, .budgie-panel .pinned .left .launcher.running:checked {
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    border-left: 2px solid #347D9F; }
+.right .budgie-panel .unpinned .launcher, .budgie-panel .unpinned .right .launcher, .right .budgie-panel .pinned .launcher.running, .budgie-panel .pinned .right .launcher.running {
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent; }
+  .right .budgie-panel .unpinned .launcher,
+  .right .budgie-panel .pinned .launcher.running {
+    border-right: 2px solid rgba(52, 125, 159, 0.5); }
+  .right .budgie-panel .unpinned .launcher:hover, .budgie-panel .unpinned .right .launcher:hover, .right .budgie-panel .pinned .launcher.running:hover, .budgie-panel .pinned .right .launcher.running:hover {
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+    border-right: 2px solid rgba(52, 125, 159, 0.5); }
+  .right .budgie-panel .unpinned .launcher:active, .budgie-panel .unpinned .right .launcher:active, .right .budgie-panel .pinned .launcher.running:active, .budgie-panel .pinned .right .launcher.running:active, .right .budgie-panel .unpinned .launcher:checked, .budgie-panel .unpinned .right .launcher:checked, .right .budgie-panel .pinned .launcher.running:checked, .budgie-panel .pinned .right .launcher.running:checked {
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
+    border-right: 2px solid #347D9F; }
+
+.budgie-menu GtkSearchEntry.entry:not(:selected) {
+  border: none;
+  box-shadow: none;
+  background: none;
+  font-size: 120%; }
+  .budgie-menu GtkSearchEntry.entry:not(:selected).image {
+    padding-left: 0px;
+    padding-right: 6px; }
+.budgie-menu .list-row.activatable:selected,
+.budgie-menu .list-row.activatable:selected .button {
+  color: inherit; }
+
 .budgie-panel {
-  background-color: rgba(0, 0, 0, 0.8);
-  transition: 100ms ease-in;
   font: bold;
-  color: white; }
-  .budgie-panel .top {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
-  .budgie-panel .bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.2); }
-  .budgie-panel .left {
-    border-right: 1px solid rgba(255, 255, 255, 0.2); }
-  .budgie-panel .right {
-    border-left: 1px solid rgba(255, 255, 255, 0.2); }
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7); }
+  .budgie-panel:backdrop {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); }
+  .budgie-panel WnckTasklist .button,
+  .budgie-panel WnckTasklist .button:backdrop {
+    border-radius: 0; }
+  .budgie-panel .launcher {
+    transition: all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding-left: 2px;
+    padding-right: 2px;
+    border-color: transparent; }
+    .budgie-panel .launcher:hover {
+      -gtk-image-effect: highlight; }
 
-.max-budgie-panel {
-  background-color: black;
-  transition: 100ms ease-in;
-  font: bold;
-  color: white; }
-  .max-budgie-panel .top {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
-  .max-budgie-panel .bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.2); }
-  .max-budgie-panel .left {
-    border-right: 1px solid rgba(255, 255, 255, 0.2); }
-  .max-budgie-panel .right {
-    border-left: 1px solid rgba(255, 255, 255, 0.2); }
+.top .budgie-panel {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
 
-/* Top launchers */
-/* Left hand side launchers */
-/* Right hand side launchers */
-.notification .priority.low {
-  background-color: #2095f2; }
+.top .raven-frame {
+  padding: 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
 
-.notification .priority.high {
-  background-color: #feea3a; }
+.top .shadow-block {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent); }
 
-.notification .priority.critical {
-  background-color: #f34235; }
+.bottom .budgie-panel {
+  border-top: 1px solid rgba(0, 0, 0, 0.2); }
+
+.bottom .raven-frame {
+  padding: 0;
+  background: none;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.2); }
+
+.bottom .shadow-block {
+  background-color: transparent;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent); }
+
+.left .budgie-panel {
+  border-right: 1px solid rgba(0, 0, 0, 0.2); }
+
+.left .raven-frame {
+  padding: 0;
+  background: none;
+  border: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.2); }
+
+.left .shadow-block {
+  background-color: transparent;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent); }
+
+.right .budgie-panel {
+  border-left: 1px solid rgba(0, 0, 0, 0.2); }
+
+.right .raven-frame {
+  padding: 0;
+  background: none;
+  border: none;
+  border-left: 1px solid rgba(0, 0, 0, 0.2); }
+
+.right .shadow-block {
+  background-color: transparent;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent); }
+
+.raven {
+  color: white;
+  background-color: transparent;
+  transition: 170ms ease-out; }
+  .raven .raven-header {
+    color: white;
+    border-width: 1px 0; }
+    .raven .raven-header.top {
+      border-top-style: none; }
+    .raven .raven-header.bottom {
+      border-bottom-style: none; }
+  .raven .raven-background {
+    color: white;
+    background-color: transparent;
+    border-bottom: 1px solid transparent; }
+    .raven .raven-background.middle {
+      border-bottom-style: none; }
+  .raven .powerstrip .button {
+    padding: 10px; }
+  .raven .option-subtitle {
+    font-size: smaller; }
+
+.raven-mpris {
+  border-width: 1px 0; }
+  .raven-mpris .button.image-button {
+    padding: 8px; }
+
+.budgie-notification-window {
+  background: none;
+  border-radius: 1px; }
+
+.budgie-notification.background {
+  background-color: white;
+  border-radius: 4px; }
+.budgie-notification .notification-title {
+  font-size: 110%;
+  color: #666666; }
+.budgie-notification .notification-body {
+  color: rgba(255, 255, 255, 0.7); }
+
+.drop-shadow, .budgie-session-dialog.background, .background.budgie-polkit-dialog {
+  background-color: transparent;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.2);
+  border-radius: 1px; }
+
+.budgie-session-dialog .linked.horizontal > .button, .budgie-polkit-dialog .linked.horizontal > .button {
+  border-bottom: none;
+  border-radius: 0; }
+  .budgie-session-dialog .linked.horizontal > .button:first-child, .budgie-polkit-dialog .linked.horizontal > .button:first-child {
+    border-left: none;
+    border-radius: 0; }
+  .budgie-session-dialog .linked.horizontal > .button:last-child, .budgie-polkit-dialog .linked.horizontal > .button:last-child {
+    border-right: none;
+    border-radius: 0; }
+
+.budgie-polkit-dialog .message {
+  color: rgba(255, 255, 255, 0.7); }
+.budgie-polkit-dialog .failure {
+  color: #f34235; }
 
 /***************
  * font-viewer *
@@ -5238,12 +5398,10 @@ EphyWindow .header-bar {
  * Gedit *
  *********/
 GeditWindow .titlebar,
-GeditWindow .header-bar,
-GeditWindow .gedit-headerbar-paned {
+GeditWindow .header-bar {
   background-color: #DC4836; }
   GeditWindow .titlebar:backdrop,
-  GeditWindow .header-bar:backdrop,
-  GeditWindow .gedit-headerbar-paned:backdrop {
+  GeditWindow .header-bar:backdrop {
     background-color: #be3221; }
 
 /**************
@@ -5480,9 +5638,9 @@ PantheonCalculatorMainWindow {
  * Maya *
  ********/
 MayaViewMayaToolbar.titlebar, MayaViewMayaToolbar.header-bar {
-  background-color: #8CD33F; }
+  background-color: #4bae4f; }
   MayaViewMayaToolbar.titlebar:backdrop, MayaViewMayaToolbar.header-bar:backdrop {
-    background-color: #72b52a; }
+    background-color: #3c8a3f; }
 
 /*********
  * Cards *
@@ -5798,16 +5956,16 @@ ConversationListView {
  * LightDm *
  ***********/
 #panel_window {
-  background-color: #4b5458;
-  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
   font: bold;
-  box-shadow: inset 0 -1px #3b4144; }
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.7); }
   #panel_window .menubar,
   #panel_window .menubar > .menuitem
   menubar,
   #panel_window menubar > menuitem {
     background-color: transparent;
-    color: #ffffff;
+    color: white;
     font: bold; }
   #panel_window .menubar .menuitem:insensitive,
   #panel_window menubar menuitem:insensitive {

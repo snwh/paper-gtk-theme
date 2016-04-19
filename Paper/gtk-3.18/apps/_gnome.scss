@@ -398,13 +398,16 @@ $gedit: #DC4836;
 
 GeditWindow {
   .titlebar,
-  .header-bar,
-  .gedit-headerbar-paned {
+  .header-bar {
     background-color: $gedit;
 
     &:backdrop {
       background-color: darken($gedit,10%);
     }
+  }
+
+  > .entry {
+    @extend %entry;
   }
 }
 
