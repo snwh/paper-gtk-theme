@@ -557,6 +557,23 @@ $gnome_system_monitor: #6fbe72;
 
 
 /********
+ * ToDo *
+ ********/
+
+$gnome_todo: #3262A1;
+
+GtdWindow {
+  .titlebar,
+  .header-bar {
+    background-color: $gnome_todo;
+
+    &:backdrop {
+      background-color: darken($gnome_todo,10%);
+    }
+  }
+}
+
+/********
  * Yelp *
  ********/
 

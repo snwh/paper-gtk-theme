@@ -5502,6 +5502,16 @@ CcShellNavBar {
     background-color: #4eac51; }
 
 /********
+ * ToDo *
+ ********/
+GtdWindow .titlebar,
+GtdWindow .header-bar {
+  background-color: #3262A1; }
+  GtdWindow .titlebar:backdrop,
+  GtdWindow .header-bar:backdrop {
+    background-color: #264a7a; }
+
+/********
  * Yelp *
  ********/
 YelpWindow .titlebar,
