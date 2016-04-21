@@ -1,0 +1,73 @@
+/***********
+ * Sidebar *
+ ***********/
+.sidebar {
+  padding:0;
+  border-style: solid;
+  background-color: $bg_color;
+
+  &.left {
+    border-right: 1px solid $borders_color;
+    border-left-style: none;
+  }
+
+  &.right {
+    border-left: 1px solid $borders_color;
+    border-right-style: none;
+  }
+
+  &:backdrop {
+    background-color: $backdrop_sidebar_bg_color;
+    border-color: $backdrop_borders_color;
+    transition: $backdrop_transition;
+  }
+
+  .frame {
+    border-width:0;
+    border-left-width:1px;
+    border-right-width:1px;
+  }
+
+  .sidebar-item,
+  .sidebar-row {
+    padding: 5px 8px;
+
+    GtkImage {
+      padding-right: 6px;
+      padding-left: 6px;
+    }
+
+    &:selected,
+    &:active {
+      background-color: $selected_bg_color;
+      color: $selected_fg_color;
+
+      &:hover {
+        background-color: $selected_bg_color;
+        color: $selected_fg_color;
+        box-shadow:none;
+      }
+
+      &:backdrop {
+        background-color: lighten($selected_bg_color, 20%);
+      }
+    }
+
+    &:hover {
+      background-color: $base_color;
+      color: $fg_color;
+      box-shadow:0 1px 2px 0 transparentize(black, 0.8);
+
+      &:backdrop {
+        box-shadow:none;
+      }
+    }
+  }
+
+  .separator {
+    color: $borders_color;
+  }
+
+  .paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
+
+}

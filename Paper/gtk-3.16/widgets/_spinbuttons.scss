@@ -1,0 +1,172 @@
+/*****************
+ * GtkSpinButton *
+ *****************/
+
+.spinbutton {
+  &:not(.vertical) {
+
+    @extend %entry;
+
+    .entry {
+      padding: 0;
+      background: none;
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .button {
+      margin: 0;
+      padding: 6px;
+      color: mix($fg_color, $base_color, 90%);
+      background-image: none;
+      border-style: none none none solid;
+      border-color: transparentize($borders_color, 0.7);
+      border-radius: 0;
+      box-shadow: none;
+
+      &:dir(rtl) { border-style: none solid none none; }
+
+      &:hover {
+        color: $fg_color;
+        background-color: $base_hover_color;
+      }
+
+      &:insensitive { color: transparentize($insensitive_fg_color, 0.7); }
+
+      &:active {
+        background-color: transparentize(black, 0.9);
+        box-shadow: inset 0 2px 3px -1px transparentize(black, 0.8);
+      }
+
+      &:backdrop {
+        color: mix($backdrop_fg_color, $backdrop_base_color, 90%);
+        background-color: transparent;
+        border-color: transparentize($backdrop_borders_color, 0.7);
+        transition: $backdrop_transition;
+      }
+
+      &:backdrop:insensitive {
+        color: transparentize($backdrop_insensitive_color,0.7);
+        background-image: none;
+        border-style: none none none solid; // It is needed or it gets overridden
+
+        &:dir(rtl) { border-style: none solid none none; }
+      }
+    }
+  }
+
+  // OSD horizontal
+  .osd &:not(.vertical) {
+    .button {
+      @include button(undecorated);
+
+      color: $osd_fg_color;
+      border-style: none none none solid;
+      border-color: transparentize($osd_borders_color, 0.3);
+      border-radius: 0;
+      box-shadow: none;
+
+      &:dir(rtl) { border-style: none solid none none; }
+
+      &:hover {
+        @include button(undecorated);
+
+        color: $osd_fg_color;
+        border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
+        background-color: transparentize($osd_fg_color, 0.9);
+        box-shadow: none;
+      }
+
+      &:backdrop {
+        @include button(undecorated);
+
+        color: $osd_fg_color;
+        border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
+        box-shadow: none;
+      }
+
+      &:insensitive {
+        @include button(undecorated);
+
+        color: $osd_insensitive_fg_color;
+        border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
+        box-shadow: none;
+      }
+
+      &:last-child { border-radius: 0 3px 3px 0; }
+
+      &:dir(rtl):first-child { border-radius: 3px 0 0 3px; }
+    }
+  }
+
+  // Vertical
+  &.vertical {
+
+    &:insensitive { color: $insensitive_fg_color; }
+    &:backdrop:insensitive { color: $backdrop_insensitive_color; }
+
+    .entry {
+      padding: 0;
+      border-radius: 0;
+    }
+
+    .button {
+      padding: 0;
+      border: none;
+      background: none;
+      box-shadow: none;
+      color: $fg_color;
+
+      &:hover {
+        background-color:$selected_bg_color;
+        color: $selected_fg_color;
+        icon-shadow:none;
+      }
+
+      &:active {
+        background-color:transparent;
+        color: $fg_color;
+      }
+
+      &.up { @extend %top_button; }
+
+      &.down { @extend %bottom_button; }
+    }
+
+    %top_button {
+      border-radius: 3px 3px 0 0;
+      border-style: solid solid none solid;
+    }
+
+    %bottom_button {
+      border-radius: 0 0 3px 3px;
+      border-style: none solid solid solid;
+    }
+  }
+
+  // OSD vertical
+  .osd &.vertical button:first-child {
+    @include button(osd);
+
+    &:hover { @include button(osd-hover);}
+
+    &:active { @include button(osd-active); }
+
+    &:insensitive { @include button(osd-insensitive); }
+
+    &:backdrop { @include button(osd-backdrop); }
+  }
+
+  // Misc
+
+  GtkTreeView &:not(.vertical) {
+    border-style: none;
+    border-radius: 0;
+
+    .entry {
+      padding: 1px 2px;
+    }
+  }
+}

@@ -1,0 +1,228 @@
+/*********
+* Budgie *
+**********/
+
+@function gtkalpha($c,$a) {
+  @return unquote("alpha(#{$c},#{$a})");
+}
+
+$pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
+$asset_suffix: if($variant == 'default', '', '-hc');
+
+%underscores {
+  &:hover { background-color: transparentize(black, 0.9); }
+  &:active, &:checked { background-color: transparentize(black, 0.8); }
+
+  @each $pos, $b_pos in $pos_list {
+    .#{$pos} & {
+      border-#{$b_pos}: 2px solid transparentize($panel_bg_color,1);
+      border-#{$pos}: 2px solid transparentize($panel_bg_color,1);
+
+      @at-root {
+        .#{$pos} .budgie-panel .unpinned .launcher,
+        .#{$pos} .budgie-panel .pinned .launcher.running { border-#{$pos}: 2px solid transparentize($selected_bg_color, 0.5); }
+      }
+      &:hover {
+        border-#{$b_pos}: 2px solid transparentize(black, 0.9);
+        border-#{$pos}: 2px solid transparentize($selected_bg_color, 0.5);
+      }
+      &:active, &:checked {
+        border-#{$b_pos}: 2px solid transparentize(black, 0.8);
+        border-#{$pos}: 2px solid $selected_bg_color;
+      }
+    }
+  }
+}
+
+// Budgie Menu
+.budgie-menu {
+  GtkSearchEntry.entry:not(:selected) {
+    border: none;
+    box-shadow: none;
+    background: none;
+    font-size: 120%;
+
+    &.image { padding-left: 0px; padding-right: 6px; }
+  }
+  .list-row.activatable:selected,
+  .list-row.activatable:selected .button { color: inherit; }
+}
+
+// Panel
+.budgie-panel {
+  font: bold;
+  color: $panel_fg_color;
+  background-color: $panel_bg_color;
+
+  &:backdrop {
+    color: $panel_fg_color;
+    background-color: $panel_bg_color;
+  }
+
+  // End Section needs to be fancy
+  @if $variant == 'default' {
+    .end-region {
+      background-color: rgba(0,0,0,0.3);
+      border-radius: 2px;
+
+      .separator {
+        color: transparentize($panel_fg_color, 0.85)
+      }
+    }
+  }
+
+  // Tasklist
+  WnckTasklist {
+    .button,
+    .button:backdrop {
+
+      border-radius: 0;
+
+      @if $variant == 'default' {
+        &:not(:hover):not(:active):not(:checked) { color: gtkalpha(currentColor, 0.5); }
+        background: none;
+        background-clip: padding-box;
+        border: none;
+
+        @extend %underscores;
+      }
+    }
+  }
+
+  // Icon Tasklist
+  .launcher {
+    transition: all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding-left: 2px;
+    padding-right: 2px;
+    border-color: transparentize($panel_bg_color,1); // fixes the transition
+
+    &:hover { -gtk-image-effect: highlight; }
+  }
+
+  .unpinned {
+    .launcher {
+      @extend %underscores;
+    }
+  }
+
+  .pinned {
+    .launcher.running {
+      @extend %underscores;
+    }
+   }
+}
+
+
+
+@each $pos, $b_pos in $pos_list {
+
+  // Panel borders
+  .#{$pos} .budgie-panel { border-#{$b_pos}: 1px solid $panel_borders_color; }
+
+  // Raven borders
+  .#{$pos} .raven-frame {
+    padding: 0;
+    background: none;
+    border: none;
+    border-#{$b_pos}: 1px solid transparentize(black, 0.8);
+  }
+
+  // Shadows
+  .#{$pos} .shadow-block {
+    background-color: transparent;
+    background-image: linear-gradient(to $b_pos,
+                      $shadow_color,
+                      transparent);
+  }
+}
+
+// Raven
+.raven {
+  color: $panel_fg_color;
+  background-color: transparentize($panel_bg_color, 0.8);
+  transition: 170ms ease-out;
+
+  .raven-header {
+    color: $panel_fg_color;
+    border-width: 1px 0;
+
+    &.top { border-top-style: none; }
+    &.bottom { border-bottom-style: none; }
+  }
+
+  @if $variant=='default' {
+    .expander-button { color: gtkalpha(currentColor, 0.5); }
+  }
+
+  .raven-background {
+    color: $panel_fg_color;
+    background-color: transparentize($panel_bg_color, 0.8);
+    border-bottom: 1px solid transparentize($panel_borders_color, 0.8);
+
+    &.middle { border-bottom-style: none; }  // applet background between two headers
+  }
+
+  .powerstrip .button {
+    padding: 10px;
+  }
+
+  .option-subtitle {
+    font-size: smaller;
+  }
+}
+
+// MPRIS Applet
+.raven-mpris {
+  // color: $mpris_overlay_fg;
+  // background-color: $mpris_overlay_bg;
+  // border: solid $mpris_overlay_border;
+  border-width: 1px 0;
+
+  .button.image-button { padding: 8px; }
+}
+
+// Notifications
+.budgie-notification-window {
+  background: none;
+  border-radius: 1px;
+}
+
+.budgie-notification {
+  &.background {
+    background-color: white;
+    border-radius: 4px;
+  }
+
+  .notification-title {
+    font-size: 110%;
+    color: $fg_color;
+  }
+
+  .notification-body { color: transparentize($panel_fg_color, 0.3); }
+}
+
+.drop-shadow {
+  background-color: transparent;
+  box-shadow: 0 2px 4px 0 $shadow_color, 0 0 0 1px $panel_borders_color;
+  border-radius: 1px;
+}
+
+// Session Dialog
+.budgie-session-dialog {
+  &.background { @extend .drop-shadow; }
+
+  .linked.horizontal > .button {
+    border-bottom: none;
+    border-radius: 0;
+    &:first-child { border-left: none; border-radius: 0; }
+    &:last-child { border-right: none; border-radius: 0; }
+  }
+}
+
+// PolKit Dialog
+.budgie-polkit-dialog {
+  @extend .budgie-session-dialog;
+
+  .message { color: transparentize($panel_fg_color, 0.3); }
+  .failure { color: $red; }
+}

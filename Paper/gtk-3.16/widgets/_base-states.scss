@@ -1,0 +1,206 @@
+/***************
+ * Base States *
+ ***************/
+.background {
+  color: $fg_color;
+  background-color: $bg_color;
+
+  &:backdrop {
+    color: $backdrop_fg_color;
+    background-color: $backdrop_bg_color;
+    text-shadow: none;
+    icon-shadow: none;
+  }
+}
+
+/*
+   These wildcard seems unavoidable, need to investigate.
+   Wildcards are bad and troublesome, use them with care,
+   or better, just don't.
+   Everytime a wildcard is used a kitten dies, painfully.
+*/
+
+*:insensitive { -gtk-image-effect: dim; }
+
+.gtkstyle-fallback {
+  color: $fg_color;
+  background-color: $bg_color;
+
+  &:hover {
+    color: $fg_color;
+    background-color: lighten($bg_color, 10%);
+  }
+
+  &:active {
+    color: $fg_color;
+    background-color: darken($bg_color, 10%);
+  }
+
+  &:insensitive {
+    color: $insensitive_fg_color;
+    background-color: $insensitive_bg_color;
+  }
+
+  &:selected {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+  }
+}
+
+.view,
+%view {
+  color: $text_color;
+  background-color: $base_color;
+
+  &:backdrop {
+    color: $backdrop_text_color;
+    background-color: $backdrop_base_color;
+  }
+
+  &:selected {
+    &:focus, & {
+      @extend %selected_items;
+
+      border-radius: 3px;
+    }
+  }
+}
+
+GtkTextView {
+  GtkLabel {
+    @extend %view;
+
+    selection { &:focus, & { @extend %selected_items; }}
+  }
+}
+
+GtkTextView{
+  background-color: mix($bg_color, $base_color, 50%);
+
+  &:backdrop { background-color: mix($backdrop_bg_color, $backdrop_base_color, 50%); }
+
+  &.bottom {
+    background-size: 100% 1px;
+    background-position: top;
+  }
+
+  &.top {
+    background-size: 100% 1px;
+    background-position: bottom;
+  }
+
+  &.left {
+    background-size: 1px 100%;
+    background-position: right;
+  }
+
+  &.right {
+    background-size: 1px 100%;
+    background-position: left;
+  }
+}
+
+GtkIconView {
+  @extend .view;
+  background-color:transparent;
+
+  &:backdrop{
+    background-color:transparent;
+  }
+}
+
+.rubberband,
+%rubberband {
+  border: 1px solid darken($selected_bg_color, 10%);
+  background-color: transparentize(darken($selected_bg_color, 10%), 0.8);
+}
+
+
+GtkFlow {
+  rubberband { @extend %rubberband; }
+
+  flowboxchild {
+    padding: 3px;
+    border-radius: 3px;
+
+    &:selected {
+      @extend %selected_items;
+
+      outline-offset: -2px;
+    }
+  }
+}
+
+GtkLabel {
+  &.separator {
+    @extend .dim-label;
+
+    color: $fg_color;
+
+    &:backdrop { color: $backdrop_fg_color; }
+  }
+
+  .list-row:selected &,
+  row:selected &,
+  &:selected { @extend %nobg_selected_items; }
+
+  &:selected {
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
+  }
+
+  &:insensitive {
+    color: $insensitive_fg_color;
+
+    &:selected { @extend %selected_items:insensitive; }
+
+    &:backdrop { color: $backdrop_insensitive_color; }
+  }
+
+  &:backdrop {
+    color: $backdrop_fg_color;
+
+    &:selected { @extend %selected_items:backdrop; }
+  }
+}
+
+.dim-label {
+  opacity: 0.55;
+  text-shadow: none;
+}
+
+%osd,
+.osd {
+  color: $osd_fg_color;
+  border: none;
+  background-color: $osd_bg_color;
+  background-clip: padding-box;
+  outline-color: transparentize($osd_fg_color, 0.7);
+  text-shadow: 0 1px black;
+  icon-shadow: 0 1px black;
+
+  &:backdrop {
+    text-shadow: none;
+    icon-shadow: none;
+  }
+}
+
+%selected_items {
+  background-color: $selected_bg_color;
+
+  @at-root %nobg_selected_items, & {
+    color: $selected_fg_color;
+
+    @if $variant == 'light' { outline-color: transparentize($selected_fg_color, 0.7); }
+
+    &:insensitive { color: mix($selected_fg_color, $selected_bg_color, 50%); }
+
+    &:backdrop {
+      color: $backdrop_selected_fg_color;
+
+      &:insensitive { color: mix($backdrop_selected_fg_color, $selected_bg_color, 30%); }
+    }
+  }
+}
+
+.monospace { font: Monospace; }

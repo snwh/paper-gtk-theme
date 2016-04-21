@@ -1,0 +1,16 @@
+/*********
+ * Vocal *
+ *********/
+
+$vocal: #9C69C6;
+
+.titlebar,
+.header-bar {
+	&.vocal-headerbar {
+		background-color: $vocal;
+
+		&:backdrop {
+		  background-color: darken($vocal,10%);
+		}
+	}
+}

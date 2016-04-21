@@ -1,0 +1,29 @@
+/************
+ * Tooltips *
+ ************/
+.tooltip,
+.overlay-bar {
+
+  margin: 4px;
+  border: none;
+  border-radius: 3px;
+  background-color: $base_color;
+  color: $fg_color;
+
+  &.background {
+    background-color: $base_color;
+    border: none;
+    box-shadow: 0 1px 2px 0 transparentize(black, 0.7);
+  }
+
+  * { // Yeah this is ugly
+    padding: 2px;
+    background-color: transparent;
+    color: $fg_color;
+  }
+  
+  .csd {
+    border-radius: 5px;
+    box-shadow: none;
+  }
+}

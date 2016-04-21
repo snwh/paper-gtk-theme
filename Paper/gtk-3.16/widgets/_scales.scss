@@ -1,0 +1,269 @@
+/**********
+ * Scales *
+ **********/
+
+%scale_trough {
+  border:none;
+  background-color: $base_color;
+  box-shadow: 0px 1px $bottom_highlight;
+  border:1px solid $borders_color;
+
+  padding:0;
+  margin: 0;
+
+  &:insensitive {
+    background-color: $insensitive_bg_color;
+  }
+
+  &:backdrop {
+    background-color: $backdrop_base_color;
+    transition: $backdrop_transition;
+
+    &:insensitive { background-color: $insensitive_bg_color; }
+  }
+
+  // on selected list rows
+  row:selected & {
+    box-shadow: none;
+
+    &, &:insensitive { border-color: $selected_borders_color; }
+  }
+
+  // OSD
+  .osd & {
+    border-color: $osd_borders_color;
+    background-color: transparentize($osd_borders_color, 0.2);
+    box-shadow: none;
+    outline-color: transparentize($osd_fg_color, 0.8);
+
+    &:insensitive { background-color: $osd_insensitive_bg_color; }
+  }
+}
+
+%scale_highlight {
+
+  border: 1px solid $selected_borders_color;
+  background-color: $selected_bg_color;
+  box-shadow: inset 0px 1px $top_highlight;
+  
+  border-radius: 4px;
+
+
+  &:insensitive {
+    border: 1px solid $borders_color;
+    background-color: transparentize(black, 0.9);
+  }
+
+  &:backdrop,
+  &:active:backdrop {
+    border-color: lighten($selected_bg_color, 10%);
+    background-color: lighten($selected_bg_color, 10%);
+    &:insensitive {
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  // on selected list rows
+  .list-row:selected & { &:insensitive, & { border-color: $selected_borders_color; } }
+  row:selected & { &:insensitive, & { border-color: $selected_borders_color; } }
+
+  // OSD
+  .osd & {
+    border-color: $osd_borders_color;
+
+    &:insensitive { border-color: transparent; }
+  }
+}
+
+
+// Scale
+.scale {
+  // sizing
+
+  $_marks_length: 6px;
+  $_marks_distance: 6px;
+
+
+  -GtkScale-slider-length: 16px;
+  -GtkRange-slider-width: 16px;
+  -GtkRange-trough-border: 0px;
+
+  padding: 8px;
+
+  // those are inside the trough node, I need them to show their own border over the trough one, so negative margin
+  .highlight { margin: -1px; }
+
+  // Slider, the scale handle
+  .slider {
+    margin: 1px;
+
+    background-color:$base_color;
+    box-shadow:0 1px 2px 0 transparentize(black, 0.7);
+    border: 1px solid $borders_color;
+    border-radius: 12px;
+
+    transition: $button_transition;
+    transition-property: background, border, box-shadow;
+
+    &:hover {}
+    &:active {
+      box-shadow:0 1px 2px 0 transparentize($selected_bg_color, 0.5);
+      border: 1px solid $selected_bg_color;
+
+      &:insensitive {
+        box-shadow:none;
+        border: 1px solid transparentize(black, 0.8);
+      }
+    }
+
+    &:insensitive {
+      box-shadow:none;
+    }
+
+    &:backdrop {}
+
+    .list-row:selected & { &, &:insensitive { border-color: $selected_borders_color; } }
+    row:selected & { &, &:insensitive { border-color: $selected_borders_color; } }
+
+    // OSD
+    .osd & {
+      @include button(osd);
+      border-color: darken($osd_borders_color, 3%);
+      background-color: opacify($osd_bg_color, 1); // solid background needed here
+
+      &:hover { @include button(osd-hover); }
+
+      &:active { @include button(osd-active); }
+
+      &:insensitive { @include button(osd-insensitive); }
+
+      &:backdrop {
+        @include button(osd-backdrop);
+
+        &:insensitive { @include button(osd-backdrop-insensitive); }
+      }
+    }
+  }
+
+  // Trough
+  .trough {
+    @extend %scale_trough;
+    border-radius: 2px;
+    margin: 6px;
+
+    outline-offset: 2px;
+    outline-radius: 5px;
+
+    &.horizontal {
+    }
+
+    &.vertical {
+    }
+  }
+
+
+  // The coloured part of the Trough
+  .highlight{
+    @extend %scale_highlight;
+  }
+
+  // Fine-tune mode
+  // when you click-and-hold the slider
+  &.fine-tune {
+
+    &.horizontal {
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+
+    &.vertical {
+      padding-left: 9px;
+      padding-right: 9px;
+    }
+
+    // to make the trough grow in fine-tune mode
+    .slider {
+
+      background-color:$base_color;
+      border-color:$base_color;
+      border: 1px solid transparentize(black, 0.7);
+      border-radius: 12px;
+      box-shadow:none;
+    }
+
+    .trough {
+      @extend %scale_trough;
+
+      border-radius:6px;
+
+      outline-offset: 2px;
+      outline-radius: 5px;
+      
+      margin: 2px;
+    }
+
+    .highlight {
+      @extend %scale_highlight;
+    }
+  }
+
+  // this is another differently styled part of the backing bit, the most relevant use case is for example
+  // in media player to indicate how much video stream as been cached
+  fill {
+    @extend %scale_trough;
+    border-radius: 2px;
+
+    &, &:backdrop {
+      background-color: $borders_color;
+      box-shadow: none;
+    }
+
+    &:insensitive {
+      &, &:backdrop {
+        border-color: transparent;
+        background-color: transparent;
+      }
+    }
+
+    // OSD
+    .osd & {
+      background-color: mix($osd_fg_color, $osd_borders_color, 25%);
+
+      &:insensitive {
+        &, &:backdrop {
+          border-color: transparent;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  value { color: gtkalpha(currentColor, 0.4); }
+
+  marks {
+    color: gtkalpha(currentColor, 0.4);
+
+    @each $marks_class, $marks_pos, $marks_margin in (top, top, bottom),
+                                                     (bottom, bottom, top),
+                                                     (top, left, right),
+                                                     (bottom, right, left) {
+      &.#{$marks_class} {
+        margin-#{$marks_margin}: $_marks_distance;
+        margin-#{$marks_pos}: -($_marks_distance + $_marks_length);
+      }
+    }
+  }
+
+  &.fine-tune marks {
+    @each $marks_class, $marks_pos, $marks_margin in (top, top, bottom),
+                                                     (bottom, bottom, top),
+                                                     (top, left, right),
+                                                     (bottom, right, left) {
+      &.#{$marks_class} {
+        margin-#{$marks_margin}: $_marks_distance;
+        margin-#{$marks_pos}: -($_marks_distance + $_marks_length - 3px);
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+/****************
+ * Text Entries *
+ ****************/
+
+%entry,
+.entry {
+  %entry_basic, & {
+    padding: 4px 6px;
+    border: 1px solid;
+    border-radius: 3px;
+    transition: all 200ms $ease-out-quad;
+
+    @include entry(normal);
+    
+    // icons inside the entry
+    GtkImage {
+      color: mix($fg_color, $base_color, 80%);
+
+      &:hover { color: $fg_color; }
+
+      &:active { color: $selected_bg_color; }
+
+      &:backdrop { color: mix($backdrop_fg_color, $backdrop_base_color, 80%); }
+
+      &.left { padding-left: 0; padding-right: 6px; }
+      &.right { padding-left: 6px; padding-right: 0; }
+    }
+
+    .undershoot {
+      &.left { @include undershoot(left); }
+      &.right { @include undershoot(right); }
+    }
+
+    &.flat {
+      &:focus, & {
+        padding: 2px;
+        background-image: none;
+        border-color: transparent;
+        border-radius: 0;
+      }
+    }
+
+    &:focus { @include entry(focus); }
+
+    &:insensitive { @include entry(insensitive); }
+
+    &:backdrop {
+      @include entry(backdrop);
+
+      transition: $backdrop_transition;
+    }
+
+    &:backdrop:insensitive { @include entry(backdrop-insensitive); }
+    &:backdrop:insensitive { @include entry(backdrop-insensitive); }
+
+    &:selected { &:focus, & { @extend %selected_items; }}
+
+    // entry error and warning style
+    @each $e_type, $e_color in (error, $error_color),
+                               (warning, $warning_color) {
+      &.#{$e_type} {
+        color: $e_color;
+        border-color: entry_focus_border($e_color);
+
+        &:focus { @include entry(focus, $e_color); }
+
+        &:selected { &:focus, & { background-color: $e_color; }}
+      }
+    }
+
+  }
+
+  .progressbar {
+    margin: 2px -6px;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0;
+    border-width: 0 0 2px;
+    border-color: $selected_bg_color;
+    border-style: solid;
+    box-shadow: none;
+
+    &:backdrop { background-color: transparent; }
+  }
+
+   // linked entries
+  .linked:not(.vertical) > & { @extend %linked; }
+  .linked:not(.vertical) > &:focus + &,
+  .linked:not(.vertical) > &:focus + button,
+  .linked:not(.vertical) > &:focus + combobox > box > button.combo { border-left-color: entry_focus_border(); }
+
+  // Vertically linked entries
+  // FIXME: take care of "colored" entries
+  .linked.vertical > & {
+    @extend %linked_vertical;
+
+    // brighter border between linked entries
+    &:not(:insensitive) + entry:not(:insensitive),
+    &:not(:insensitive) + %entry:not(:insensitive) {
+      border-top-color: mix($borders_color, $base_color, 30%);
+      background-image: linear-gradient(to bottom, $base_color);
+
+      &:backdrop {
+        border-top-color: mix($backdrop_borders_color, $backdrop_base_color, 30%);
+        background-image: linear-gradient(to bottom, $backdrop_base_color);
+      }
+    }
+
+    // brighter border between linked insensitive entries
+    &:insensitive + %entry:insensitive { border-top-color: mix($borders_color, $base_color, 30%); }
+
+    // color back the top border of a linked focused entry following another entry and add back the focus shadow.
+    // :not(:only-child) is a specificity bump hack.
+    + %entry:focus:not(:only-child) { border-top-color: entry_focus_border(); }
+
+    // this takes care of coloring the top border of the focused entry subsequent widget.
+    // :not(:only-child) is a specificity bump hack.
+    &:focus:not(:only-child) {
+      + %entry,
+      + .entry,
+      + .button,
+      + GtkComboBox > box > .button.combo { border-top-color: entry_focus_border(); }
+    }
+  }
+}
+
+GtkTreeView .acceleditor > GtkLabel {
+    background-color: $selected_bg_color;
+}
+
+GtkTreeView .entry {
+  &.flat, & {
+    border-radius: 0;
+    background-image: none;
+    background-color: $base_color;
+
+    &:focus { border-color: $selected_bg_color; }
+  }
+}

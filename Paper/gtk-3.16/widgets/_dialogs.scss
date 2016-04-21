@@ -1,0 +1,123 @@
+/***********
+ * Dialogs *
+ ***********/
+
+GtkMessageDialog,
+.message-dialog {
+  .header-bar,
+  .titlebar {
+    background-image: none;
+    background-color: $bg_color;
+    border-style: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: inset 0 1px $top_highlight;
+
+    &:backdrop {
+      background-color: $backdrop_bg_color;
+    }
+
+    &.default-decoration {
+      padding: 6px;
+      background-color: $bg_color;
+      color: $fg_color;
+
+      &:backdrop {
+        background-color: $backdrop_bg_color;
+        color: $backdrop_fg_color;
+      }
+
+      .button {
+        &.titlebutton {
+          padding: 1px;
+          border-radius:50%;
+          background-color:transparent;
+          box-shadow: none;
+          text-shadow: none;
+          icon-shadow: none;
+
+          GtkImage {
+            color: $fg_color;
+          }
+
+          &:hover {
+            background-color:darken($bg_color, 10%);;
+            color:lighten($fg_color, 10%);
+
+            GtkImage {
+              color: lighten($fg_color, 10%);
+            }
+          }
+
+          &:backdrop {
+            background-color:transparent;
+            color:$backdrop_fg_color;
+            
+            GtkImage {
+              color: lighten($backdrop_fg_color, 10%);
+            }
+          }
+
+          &:active {
+            background-color:$fg_color;
+            color:$bg_color;
+            border-radius:50%;
+            box-shadow:none;
+            
+            GtkImage {
+              color: lighten($bg_color, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.csd { // rounded bottom border styling for csd version
+    border:none;
+    box-shadow: 0 1px 4px 0 transparentize(black, 0.8);
+
+    &.background {
+      // bigger radius for better antialiasing
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
+    .dialog-action-area .button {
+      padding: 10px 14px; // labels are not vertically centered on message dialog, this is a workaround
+      border-radius: 0;
+      background-image:none;
+      border-left-style: solid;
+      border-right-style: none;
+      border-bottom-style: none;
+
+      &:first-child {
+        border-left-style: none;
+        border-bottom-left-radius: 4px;
+        // -gtk-outline-bottom-left-radius: 4px;
+      }
+
+      &:last-child {
+        border-bottom-right-radius: 4px;
+        // -gtk-outline-bottom-right-radius: 4px;
+      }
+    }
+  }
+}
+
+GtkFileChooserDialog {
+
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  
+  .dialog-action-box {
+    border-top: 1px solid $borders_color;
+
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    &:backdrop { border-top-color: $backdrop_borders_color; }
+  }
+
+  #pathbarbox { border-bottom: 1px solid $bg_color; }
+}

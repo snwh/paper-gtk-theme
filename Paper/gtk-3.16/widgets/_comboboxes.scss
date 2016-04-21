@@ -1,0 +1,71 @@
+/**************
+ * ComboBoxes *
+ **************/
+
+GtkComboBox {
+  .arrow {
+    -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+  }
+
+  &.linked {
+    .button:nth-child(2) {
+      &:dir(ltr) { @extend %linked:last-child; }
+      &:dir(rtl) { @extend %linked:first-child; }
+    }
+  }
+}
+
+.linked > GtkComboBox > box > button.combo {
+  // the combo is a composite widget so the way we do button linking doesn't
+  // work, special case needed. See
+  // https://bugzilla.gnome.org/show_bug.cgi?id=733979
+
+  &:dir(ltr),
+  &:dir(rtl) { @extend %linked_middle; } // specificity bump
+}
+
+.linked:not(.vertical) > GtkComboBox:first-child > box > button.combo { @extend %linked:first-child; }
+.linked:not(.vertical) > GtkComboBox:last-child > box > button.combo { @extend %linked:last-child; }
+.linked:not(.vertical) > GtkComboBox:only-child > box > button.combo { @extend %linked:only-child; }
+
+.linked.vertical > GtkComboBox > box > button.combo { @extend %linked_vertical_middle; }
+.linked.vertical > GtkComboBox:first-child > box > button.combo { @extend %linked_vertical:first-child;}
+.linked.vertical > GtkComboBox:last-child > box > button.combo { @extend %linked_vertical:last-child; }
+.linked.vertical > GtkComboBox:only-child > box > button.combo { @extend %linked_vertical:only-child; }
+
+/******************
+ * Combobox Entry *
+ ******************/
+
+.combobox-entry {
+
+  // Button
+  .button {
+    box-shadow: none;
+
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+      border-right-width: 0;
+    }
+
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  // Entry
+  .entry {
+    box-shadow: none;
+
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+      border-right-width: 0;
+    }
+
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+  }
+}
