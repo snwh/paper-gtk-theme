@@ -2646,6 +2646,11 @@ GraniteWidgetsWelcome {
       .header-bar .button GtkLabel:backdrop,
       .header-bar .button GtkImage:backdrop {
         color: rgba(255, 255, 255, 0.5); }
+      .titlebar:not(headerbar) .button GtkLabel:insensitive,
+      .titlebar:not(headerbar) .button GtkImage:insensitive,
+      .header-bar .button GtkLabel:insensitive,
+      .header-bar .button GtkImage:insensitive {
+        -gtk-image-effect: dim; }
     .titlebar:not(headerbar) .button:focus, .titlebar:not(headerbar) .button:hover,
     .header-bar .button:focus,
     .header-bar .button:hover {
@@ -2694,12 +2699,8 @@ GraniteWidgetsWelcome {
       color: rgba(255, 255, 255, 0.5);
       background-color: transparent;
       background-image: none; }
-      .titlebar:not(headerbar) .button:insensitive image,
-      .titlebar:not(headerbar) .button:insensitive GtkImage, .titlebar:not(headerbar) .button:insensitive:backdrop image,
-      .titlebar:not(headerbar) .button:insensitive:backdrop GtkImage,
-      .header-bar .button:insensitive image,
+      .titlebar:not(headerbar) .button:insensitive GtkImage, .titlebar:not(headerbar) .button:insensitive:backdrop GtkImage,
       .header-bar .button:insensitive GtkImage,
-      .header-bar .button:insensitive:backdrop image,
       .header-bar .button:insensitive:backdrop GtkImage {
         -gtk-image-effect: dim; }
     .titlebar:not(headerbar) .button.titlebutton,
@@ -2731,6 +2732,18 @@ GraniteWidgetsWelcome {
         .titlebar:not(headerbar) .button.titlebutton:active GtkImage,
         .header-bar .button.titlebutton:active GtkImage {
           color: #636E73; }
+    .titlebar:not(headerbar) .button.menu-button .menu .menuitem GtkLabel,
+    .header-bar .button.menu-button .menu .menuitem GtkLabel {
+      color: #666666; }
+      .titlebar:not(headerbar) .button.menu-button .menu .menuitem GtkLabel:insensitive,
+      .header-bar .button.menu-button .menu .menuitem GtkLabel:insensitive {
+        color: #afafaf; }
+    .titlebar:not(headerbar) .button.menu-button .menu .menuitem .separator,
+    .header-bar .button.menu-button .menu .menuitem .separator {
+      color: #d1d1d1; }
+    .titlebar:not(headerbar) .button.menu-button .menu .menuitem:hover GtkLabel,
+    .header-bar .button.menu-button .menu .menuitem:hover GtkLabel {
+      color: #ffffff; }
     .titlebar:not(headerbar) .button.suggested-action,
     .header-bar .button.suggested-action {
       font-weight: bold;
