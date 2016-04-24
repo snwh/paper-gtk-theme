@@ -33,6 +33,7 @@
 
     &.suggested-action,
     &.text-button,
+    &.menu-button,
     &.image-button,
     &.linked,
     &.flat {
@@ -61,14 +62,21 @@
         box-shadow:none;
         text-shadow:none;
       }
+
+      &:insensitive {
+        color: $backdrop_headerbar_fg_color;
+        -gtk-image-effect: dim;
+      }
     }
 
     GtkLabel,
     GtkImage {
       color: $headerbar_fg_color;
 
+      &:insensitive,
       &:backdrop {
         color: $backdrop_headerbar_fg_color;
+        -gtk-image-effect: dim;
       }
     }
 
@@ -130,6 +138,21 @@
       image,
       GtkImage {
         -gtk-image-effect: dim;
+      }
+    }
+
+
+    // Menu Button
+    &.menu-button {
+      .menu {
+        .menuitem {
+          GtkLabel {
+            color: $fg_color;
+            &:insensitive { color: $insensitive_fg_color; }
+          }
+          .separator { color: $borders_color;}
+          &:hover { GtkLabel {color: $selected_fg_color;}}
+        }
       }
     }
   }
