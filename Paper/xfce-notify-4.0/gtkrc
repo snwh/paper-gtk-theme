@@ -1,0 +1,57 @@
+# Copyright 2015 Benjamin Sientzoff.
+#
+# This file is part of the Paper GTK theme.
+#
+# The Paper GTK theme is free software: you can redistribute it
+# and/or modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# The Paper GTK theme is distributed in the hope that it will be
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+# Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
+
+
+# Paper xfce4 notify theme
+
+style "notify-window"
+{
+    bg[NORMAL] = "#ffffff"
+    XfceNotifyWindow::border-color = "#ffffff"
+    XfceNotifyWindow::border-color-hover = "#ffffff"
+    XfceNotifyWindow::border-radius = 2.0
+    XfceNotifyWindow::border-width = 2.0
+    XfceNotifyWindow::border-width-hover = 2.0
+    XfceNotifyWindow::summary-bold = 1
+}
+class "XfceNotifyWindow" style "notify-window"
+
+style "notify-button"
+{
+    bg[NORMAL] = "#fff"
+    bg[PRELIGHT] = "#f7f7f7"
+    bg[ACTIVE] = "#dbdee0"
+    fg[NORMAL] = "#777"
+    fg[PRELIGHT] = "#738c99"
+    fg[ACTIVE] = "#738c99"
+}
+widget_class "XfceNotifyWindow.*.GtkButton*" style "notify-button"
+
+style "notify-text"
+{
+    fg[NORMAL]          = "#555"
+    fg[PRELIGHT]        = "#777"
+    GtkWidget::link-color = "#9fb0b9"
+    GtkWidget::visited-link-color = "#9fb0b9"
+}
+widget_class "XfceNotifyWindow.*.<GtkLabel>" style "notify-text"
+
+style "notify-summary"
+{
+    font_name = "Bold"
+}
+widget "XfceNotifyWindow.*.summary" style "notify-summary"
