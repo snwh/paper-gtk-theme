@@ -115,6 +115,7 @@
 }
 
 
+
 /*********
  * Panel *
  ********/
@@ -136,25 +137,23 @@
 .composited-indicator {
 
   > GtkRevealer,
-  > GtkImage,
-  > GtkLabel  {
+  > GtkRevealer GtkImage,
+  > GtkRevealer GtkLabel  {
     color: white;
     font-weight: bold;
-    text-shadow: 0 1px transparentize(black, 0.2);
-    icon-shadow: 0 1px transparentize(black, 0.2);
+    text-shadow: 0 1px 2px transparentize(black, 0.8), 0 1px 2px transparentize(black, 0.9);
+    icon-shadow: 0 1px 2px transparentize(black, 0.8), 0 1px 2px transparentize(black, 0.9);
   }
 }
 
 .panel.color-light .composited-indicator {
 
   > GtkRevealer,
-  > GtkImage,
-  > GtkLabel {
-    color: transparentize(black, 0.65);
-    text-shadow: 0 0 2px transparentize(white, 0.7),
-                 0 1px 0 transparentize(white, 0.75);
-    icon-shadow: 0 0 2px transparentize(white, 0.7),
-                 0 1px 0 transparentize(white, 0.75);
+  > GtkRevealer GtkImage,
+  > GtkRevealer GtkLabel {
+    color: transparentize(black, 0.4);
+    text-shadow: 0 1px transparentize(white, 0.9);
+    icon-shadow: 0 1px transparentize(white, 0.9);
   }
 }
 

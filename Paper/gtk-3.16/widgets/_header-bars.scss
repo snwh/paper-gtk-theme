@@ -219,8 +219,10 @@
     GtkImage {
       color: $headerbar_fg_color;
 
-      &:backdrop {
+      &:backdrop,
+      &:insensitive {
         color: $backdrop_headerbar_fg_color;
+        -gtk-image-effect: dim;
       }
     }
 
@@ -279,7 +281,6 @@
       background-color: transparent;
       background-image: none;
 
-      image,
       GtkImage {
         -gtk-image-effect: dim;
       }
@@ -316,6 +317,20 @@
 
         GtkImage {
           color:$headerbar_bg_color;
+        }
+      }
+    }
+
+    // Menu Button
+    &.menu-button {
+      .menu {
+        .menuitem {
+          GtkLabel {
+            color: $fg_color;
+            &:insensitive { color: $insensitive_fg_color; }
+          }
+          .separator { color: $borders_color;}
+          &:hover { GtkLabel {color: $selected_fg_color;}}
         }
       }
     }
