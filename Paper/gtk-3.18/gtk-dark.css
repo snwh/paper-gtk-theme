@@ -5614,21 +5614,27 @@ YelpWindow .header-bar {
  ********/
 .panel {
   background-color: transparent;
-  transition: all 100ms ease-in-out; }
-  .panel .maximized {
+  transition: all 100ms ease-in-out;
+  color: white; }
+  .panel.maximized {
     background-color: #000; }
-  .panel .translucent {
+  .panel.translucent {
     background-color: rgba(0, 0, 0, 0.5); }
-  .panel .color-light .composited-indicator GtkRevealer {
-    color: rgba(0, 0, 0, 0.35);
-    text-shadow: 0 0 2px rgba(255, 255, 255, 0.3), 0 1px 0 rgba(255, 255, 255, 0.25);
-    icon-shadow: 0 0 2px rgba(255, 255, 255, 0.3), 0 1px 0 rgba(255, 255, 255, 0.25); }
 
-.composited-indicator GtkRevealer {
-  color: #636E73;
+.composited-indicator > GtkRevealer,
+.composited-indicator > GtkRevealer GtkImage,
+.composited-indicator > GtkRevealer GtkLabel {
+  color: white;
   font-weight: bold;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.6);
-  icon-shadow: 0 0 2px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.6); }
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+  icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+.panel.color-light .composited-indicator > GtkRevealer,
+.panel.color-light .composited-indicator > GtkRevealer GtkImage,
+.panel.color-light .composited-indicator > GtkRevealer GtkLabel {
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.1);
+  icon-shadow: 0 1px rgba(255, 255, 255, 0.1); }
 
 /*************
  * AppCenter *

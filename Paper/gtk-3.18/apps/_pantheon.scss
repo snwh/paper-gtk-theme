@@ -115,6 +115,7 @@
 }
 
 
+
 /*********
  * Panel *
  ********/
@@ -122,39 +123,37 @@
 .panel {
   background-color: transparent;
   transition: all 100ms ease-in-out;
+  color: white;
 
-  .maximized {
+  &.maximized {
     background-color: #000;
   }
 
-  .translucent {
+  &.translucent {
     background-color: transparentize(black, 0.5);
-  }
-
-  .color-light {
-
-    .composited-indicator {
-
-      GtkRevealer {
-        color: transparentize(black, 0.65);
-        text-shadow: 0 0 2px transparentize(white, 0.7),
-                     0 1px 0 transparentize(white, 0.75);
-        icon-shadow: 0 0 2px transparentize(white, 0.7),
-                     0 1px 0 transparentize(white, 0.75);
-      }
-    }
   }
 }
 
 .composited-indicator {
 
-  GtkRevealer {
-    color: $base_color;
+  > GtkRevealer,
+  > GtkRevealer GtkImage,
+  > GtkRevealer GtkLabel  {
+    color: white;
     font-weight: bold;
-    text-shadow: 0 0 2px transparentize(black, 0.7),
-                 0 1px 2px transparentize(black, 0.4);
-    icon-shadow: 0 0 2px transparentize(black, 0.7),
-                 0 1px 2px transparentize(black, 0.4);
+    text-shadow: 0 1px 2px transparentize(black, 0.8), 0 1px 2px transparentize(black, 0.9);
+    icon-shadow: 0 1px 2px transparentize(black, 0.8), 0 1px 2px transparentize(black, 0.9);
+  }
+}
+
+.panel.color-light .composited-indicator {
+
+  > GtkRevealer,
+  > GtkRevealer GtkImage,
+  > GtkRevealer GtkLabel {
+    color: transparentize(black, 0.4);
+    text-shadow: 0 1px transparentize(white, 0.9);
+    icon-shadow: 0 1px transparentize(white, 0.9);
   }
 }
 

@@ -4,7 +4,7 @@
 // Main definitions
 $base_color: if($variant == 'light', #ffffff, #636E73);
 $bg_color: if($variant == 'light', #f7f7f7, #4F585C);
-$fg_color: if($variant == 'light', #333, #A1A8AB);
+$fg_color: if($variant == 'light', #444, #A1A8AB);
 $text_color: if($variant == 'light', $fg_color, $fg_color);
 $headerbar_bg_color: if($variant == 'light', #636E73, #3B4245);
 $headerbar_fg_color: if($variant == 'light', #ffffff, transparentize(#ffffff, 0.2));
