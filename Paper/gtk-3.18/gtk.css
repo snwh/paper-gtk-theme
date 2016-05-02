@@ -1456,43 +1456,43 @@ GtkCalendar {
   icon-shadow: none; }
 
 .check:hover:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-unchecked-hover.png"), url("../assets/selected-checkbox-unchecked-hover@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-unchecked.png"), url("../assets/selected-checkbox-unchecked@2.png"));
   icon-shadow: none; }
 
 .radio:hover:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-unchecked-hover.png"), url("../assets/selected-radio-unchecked-hover@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-unchecked.png"), url("../assets/selected-radio-unchecked@2.png"));
   icon-shadow: none; }
 
 .check:active:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-unchecked-active.png"), url("../assets/selected-checkbox-unchecked-active@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-unchecked.png"), url("../assets/selected-checkbox-unchecked@2.png"));
   icon-shadow: none; }
 
 .radio:active:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-unchecked-active.png"), url("../assets/selected-radio-unchecked-active@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-unchecked.png"), url("../assets/selected-radio-unchecked@2.png"));
   icon-shadow: none; }
 
 .check:backdrop:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-unchecked-backdrop.png"), url("../assets/selected-checkbox-unchecked-backdrop@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-unchecked.png"), url("../assets/selected-checkbox-unchecked@2.png"));
   icon-shadow: none; }
 
 .radio:backdrop:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-unchecked-backdrop.png"), url("../assets/selected-radio-unchecked-backdrop@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-unchecked.png"), url("../assets/selected-radio-unchecked@2.png"));
   icon-shadow: none; }
 
 .check:insensitive:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-unchecked-insensitive.png"), url("../assets/selected-checkbox-unchecked-insensitive@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-unchecked.png"), url("../assets/selected-checkbox-unchecked@2.png"));
   icon-shadow: none; }
 
 .radio:insensitive:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-unchecked-insensitive.png"), url("../assets/selected-radio-unchecked-insensitive@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-unchecked.png"), url("../assets/selected-radio-unchecked@2.png"));
   icon-shadow: none; }
 
 .check:insensitive:backdrop:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-unchecked-insensitive-backdrop.png"), url("../assets/selected-checkbox-unchecked-insensitive-backdrop@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-unchecked.png"), url("../assets/selected-checkbox-unchecked@2.png"));
   icon-shadow: none; }
 
 .radio:insensitive:backdrop:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-unchecked-insensitive-backdrop.png"), url("../assets/selected-radio-unchecked-insensitive-backdrop@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-unchecked.png"), url("../assets/selected-radio-unchecked@2.png"));
   icon-shadow: none; }
 
 .check:checked:selected {
@@ -1504,43 +1504,43 @@ GtkCalendar {
   icon-shadow: none; }
 
 .check:checked:hover:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-checked-hover.png"), url("../assets/selected-checkbox-checked-hover@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-checked.png"), url("../assets/selected-checkbox-checked@2.png"));
   icon-shadow: none; }
 
 .radio:checked:hover:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-checked-hover.png"), url("../assets/selected-radio-checked-hover@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-checked.png"), url("../assets/selected-radio-checked@2.png"));
   icon-shadow: none; }
 
 .check:checked:active:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-checked-active.png"), url("../assets/selected-checkbox-checked-active@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-checked.png"), url("../assets/selected-checkbox-checked@2.png"));
   icon-shadow: none; }
 
 .radio:checked:active:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-checked-active.png"), url("../assets/selected-radio-checked-active@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-checked.png"), url("../assets/selected-radio-checked@2.png"));
   icon-shadow: none; }
 
 .check:checked:backdrop:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-checked-backdrop.png"), url("../assets/selected-checkbox-checked-backdrop@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-checked.png"), url("../assets/selected-checkbox-checked@2.png"));
   icon-shadow: none; }
 
 .radio:checked:backdrop:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-checked-backdrop.png"), url("../assets/selected-radio-checked-backdrop@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-checked.png"), url("../assets/selected-radio-checked@2.png"));
   icon-shadow: none; }
 
 .check:checked:insensitive:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-checked-insensitive.png"), url("../assets/selected-checkbox-checked-insensitive@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-checked.png"), url("../assets/selected-checkbox-checked@2.png"));
   icon-shadow: none; }
 
 .radio:checked:insensitive:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-checked-insensitive.png"), url("../assets/selected-radio-checked-insensitive@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-checked.png"), url("../assets/selected-radio-checked@2.png"));
   icon-shadow: none; }
 
 .check:checked:insensitive:backdrop:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-checked-insensitive-backdrop.png"), url("../assets/selected-checkbox-checked-insensitive-backdrop@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-checked.png"), url("../assets/selected-checkbox-checked@2.png"));
   icon-shadow: none; }
 
 .radio:checked:insensitive:backdrop:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-checked-insensitive-backdrop.png"), url("../assets/selected-radio-checked-insensitive-backdrop@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-checked.png"), url("../assets/selected-radio-checked@2.png"));
   icon-shadow: none; }
 
 .check:inconsistent:selected {
@@ -1552,43 +1552,43 @@ GtkCalendar {
   icon-shadow: none; }
 
 .check:inconsistent:hover:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-mixed-hover.png"), url("../assets/selected-checkbox-mixed-hover@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-mixed.png"), url("../assets/selected-checkbox-mixed@2.png"));
   icon-shadow: none; }
 
 .radio:inconsistent:hover:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-mixed-hover.png"), url("../assets/selected-radio-mixed-hover@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-mixed.png"), url("../assets/selected-radio-mixed@2.png"));
   icon-shadow: none; }
 
 .check:inconsistent:active:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-mixed-active.png"), url("../assets/selected-checkbox-mixed-active@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-mixed.png"), url("../assets/selected-checkbox-mixed@2.png"));
   icon-shadow: none; }
 
 .radio:inconsistent:active:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-mixed-active.png"), url("../assets/selected-radio-mixed-active@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-mixed.png"), url("../assets/selected-radio-mixed@2.png"));
   icon-shadow: none; }
 
 .check:inconsistent:backdrop:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-mixed-backdrop.png"), url("../assets/selected-checkbox-mixed-backdrop@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-mixed.png"), url("../assets/selected-checkbox-mixed@2.png"));
   icon-shadow: none; }
 
 .radio:inconsistent:backdrop:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-mixed-backdrop.png"), url("../assets/selected-radio-mixed-backdrop@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-mixed.png"), url("../assets/selected-radio-mixed@2.png"));
   icon-shadow: none; }
 
 .check:inconsistent:insensitive:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-mixed-insensitive.png"), url("../assets/selected-checkbox-mixed-insensitive@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-mixed.png"), url("../assets/selected-checkbox-mixed@2.png"));
   icon-shadow: none; }
 
 .radio:inconsistent:insensitive:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-mixed-insensitive.png"), url("../assets/selected-radio-mixed-insensitive@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-mixed.png"), url("../assets/selected-radio-mixed@2.png"));
   icon-shadow: none; }
 
 .check:inconsistent:insensitive:backdrop:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-mixed-insensitive-backdrop.png"), url("../assets/selected-checkbox-mixed-insensitive-backdrop@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-checkbox-mixed.png"), url("../assets/selected-checkbox-mixed@2.png"));
   icon-shadow: none; }
 
 .radio:inconsistent:insensitive:backdrop:selected {
-  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-mixed-insensitive-backdrop.png"), url("../assets/selected-radio-mixed-insensitive-backdrop@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/selected-radio-mixed.png"), url("../assets/selected-radio-mixed@2.png"));
   icon-shadow: none; }
 
 .view.content-view.check, GtkIconView.content-view.check {
@@ -4418,183 +4418,100 @@ searchbar,
   .search-bar:backdrop, .location-bar:backdrop,
   .inline-toolbar:backdrop {
     background-color: #eaeaea; }
-  searchbar button,
-  .search-bar button, .location-bar button,
   searchbar .button,
-  .search-bar .button,
-  .location-bar .button,
-  searchbar .flat,
-  .search-bar .flat,
-  .location-bar .flat,
-  searchbar .text-button,
-  .search-bar .text-button,
-  .location-bar .text-button,
-  searchbar .image-button,
-  .search-bar .image-button,
-  .location-bar .image-button,
-  .inline-toolbar button,
-  .inline-toolbar .button,
-  .inline-toolbar .flat,
-  .inline-toolbar .text-button,
-  .inline-toolbar .image-button {
-    border: none;
-    background: none;
-    text-shadow: none;
-    box-shadow: none;
+  .search-bar .button, .location-bar .button,
+  .inline-toolbar .button {
     background-color: transparent;
-    color: #444;
+    background-image: none;
     border-radius: 0px;
-    padding: 10px; }
-    searchbar button:focus,
-    .search-bar button:focus, .location-bar button:focus, searchbar button:active,
-    .search-bar button:active, .location-bar button:active,
+    border: none;
+    box-shadow: none;
+    icon-shadow: none;
+    margin: 0;
+    padding: 10px;
+    text-shadow: none; }
+    searchbar .button.suggested-action,
+    .search-bar .button.suggested-action, .location-bar .button.suggested-action, searchbar .button.text-button,
+    .search-bar .button.text-button, .location-bar .button.text-button, searchbar .button.menu-button,
+    .search-bar .button.menu-button, .location-bar .button.menu-button, searchbar .button.image-button,
+    .search-bar .button.image-button, .location-bar .button.image-button, searchbar .button.linked,
+    .search-bar .button.linked, .location-bar .button.linked, searchbar .button.flat,
+    .search-bar .button.flat, .location-bar .button.flat,
+    .inline-toolbar .button.suggested-action,
+    .inline-toolbar .button.text-button,
+    .inline-toolbar .button.menu-button,
+    .inline-toolbar .button.image-button,
+    .inline-toolbar .button.linked,
+    .inline-toolbar .button.flat {
+      border: none;
+      background: none;
+      text-shadow: none;
+      box-shadow: none;
+      background-color: transparent;
+      color: #444;
+      border-radius: 0px;
+      padding: 10px; }
     searchbar .button:focus,
-    .search-bar .button:focus,
-    .location-bar .button:focus,
-    searchbar .button:active,
-    .search-bar .button:active,
-    .location-bar .button:active,
-    searchbar .flat:focus,
-    .search-bar .flat:focus,
-    .location-bar .flat:focus,
-    searchbar .flat:active,
-    .search-bar .flat:active,
-    .location-bar .flat:active,
-    searchbar .text-button:focus,
-    .search-bar .text-button:focus,
-    .location-bar .text-button:focus,
-    searchbar .text-button:active,
-    .search-bar .text-button:active,
-    .location-bar .text-button:active,
-    searchbar .image-button:focus,
-    .search-bar .image-button:focus,
-    .location-bar .image-button:focus,
-    searchbar .image-button:active,
-    .search-bar .image-button:active,
-    .location-bar .image-button:active,
-    .inline-toolbar button:focus,
-    .inline-toolbar button:active,
+    .search-bar .button:focus, .location-bar .button:focus, searchbar .button:active,
+    .search-bar .button:active, .location-bar .button:active,
     .inline-toolbar .button:focus,
-    .inline-toolbar .button:active,
-    .inline-toolbar .flat:focus,
-    .inline-toolbar .flat:active,
-    .inline-toolbar .text-button:focus,
-    .inline-toolbar .text-button:active,
-    .inline-toolbar .image-button:focus,
-    .inline-toolbar .image-button:active {
+    .inline-toolbar .button:active {
       font: bold;
       color: #444;
       text-shadow: none;
       box-shadow: none;
       background-color: rgba(0, 0, 0, 0.05); }
-      searchbar button:focus:backdrop,
-      .search-bar button:focus:backdrop, .location-bar button:focus:backdrop, searchbar button:active:backdrop,
-      .search-bar button:active:backdrop, .location-bar button:active:backdrop,
       searchbar .button:focus:backdrop,
-      .search-bar .button:focus:backdrop,
-      .location-bar .button:focus:backdrop,
-      searchbar .button:active:backdrop,
-      .search-bar .button:active:backdrop,
-      .location-bar .button:active:backdrop,
-      searchbar .flat:focus:backdrop,
-      .search-bar .flat:focus:backdrop,
-      .location-bar .flat:focus:backdrop,
-      searchbar .flat:active:backdrop,
-      .search-bar .flat:active:backdrop,
-      .location-bar .flat:active:backdrop,
-      searchbar .text-button:focus:backdrop,
-      .search-bar .text-button:focus:backdrop,
-      .location-bar .text-button:focus:backdrop,
-      searchbar .text-button:active:backdrop,
-      .search-bar .text-button:active:backdrop,
-      .location-bar .text-button:active:backdrop,
-      searchbar .image-button:focus:backdrop,
-      .search-bar .image-button:focus:backdrop,
-      .location-bar .image-button:focus:backdrop,
-      searchbar .image-button:active:backdrop,
-      .search-bar .image-button:active:backdrop,
-      .location-bar .image-button:active:backdrop,
-      .inline-toolbar button:focus:backdrop,
-      .inline-toolbar button:active:backdrop,
+      .search-bar .button:focus:backdrop, .location-bar .button:focus:backdrop, searchbar .button:active:backdrop,
+      .search-bar .button:active:backdrop, .location-bar .button:active:backdrop,
       .inline-toolbar .button:focus:backdrop,
-      .inline-toolbar .button:active:backdrop,
-      .inline-toolbar .flat:focus:backdrop,
-      .inline-toolbar .flat:active:backdrop,
-      .inline-toolbar .text-button:focus:backdrop,
-      .inline-toolbar .text-button:active:backdrop,
-      .inline-toolbar .image-button:focus:backdrop,
-      .inline-toolbar .image-button:active:backdrop {
+      .inline-toolbar .button:active:backdrop {
         border: none;
         background-color: transparent;
         color: #9e9e9e; }
-    searchbar button:hover,
-    .search-bar button:hover, .location-bar button:hover,
     searchbar .button:hover,
-    .search-bar .button:hover,
-    .location-bar .button:hover,
-    searchbar .flat:hover,
-    .search-bar .flat:hover,
-    .location-bar .flat:hover,
-    searchbar .text-button:hover,
-    .search-bar .text-button:hover,
-    .location-bar .text-button:hover,
-    searchbar .image-button:hover,
-    .search-bar .image-button:hover,
-    .location-bar .image-button:hover,
-    .inline-toolbar button:hover,
-    .inline-toolbar .button:hover,
-    .inline-toolbar .flat:hover,
-    .inline-toolbar .text-button:hover,
-    .inline-toolbar .image-button:hover {
+    .search-bar .button:hover, .location-bar .button:hover,
+    .inline-toolbar .button:hover {
       background-color: rgba(0, 0, 0, 0.05);
       text-shadow: none;
       color: #444;
       box-shadow: none; }
-    searchbar button:insensitive,
-    .search-bar button:insensitive, .location-bar button:insensitive,
     searchbar .button:insensitive,
-    .search-bar .button:insensitive,
-    .location-bar .button:insensitive,
-    searchbar .flat:insensitive,
-    .search-bar .flat:insensitive,
-    .location-bar .flat:insensitive,
-    searchbar .text-button:insensitive,
-    .search-bar .text-button:insensitive,
-    .location-bar .text-button:insensitive,
-    searchbar .image-button:insensitive,
-    .search-bar .image-button:insensitive,
-    .location-bar .image-button:insensitive,
-    .inline-toolbar button:insensitive,
-    .inline-toolbar .button:insensitive,
-    .inline-toolbar .flat:insensitive,
-    .inline-toolbar .text-button:insensitive,
-    .inline-toolbar .image-button:insensitive {
+    .search-bar .button:insensitive, .location-bar .button:insensitive,
+    .inline-toolbar .button:insensitive {
       background: none;
       background-color: transparent;
       color: rgba(68, 68, 68, 0.5); }
-    searchbar button:backdrop,
-    .search-bar button:backdrop, .location-bar button:backdrop,
     searchbar .button:backdrop,
-    .search-bar .button:backdrop,
-    .location-bar .button:backdrop,
-    searchbar .flat:backdrop,
-    .search-bar .flat:backdrop,
-    .location-bar .flat:backdrop,
-    searchbar .text-button:backdrop,
-    .search-bar .text-button:backdrop,
-    .location-bar .text-button:backdrop,
-    searchbar .image-button:backdrop,
-    .search-bar .image-button:backdrop,
-    .location-bar .image-button:backdrop,
-    .inline-toolbar button:backdrop,
-    .inline-toolbar .button:backdrop,
-    .inline-toolbar .flat:backdrop,
-    .inline-toolbar .text-button:backdrop,
-    .inline-toolbar .image-button:backdrop {
+    .search-bar .button:backdrop, .location-bar .button:backdrop,
+    .inline-toolbar .button:backdrop {
       border: none;
       background: none;
       background-color: transparent;
       color: #9e9e9e; }
+    searchbar .button GtkLabel,
+    .search-bar .button GtkLabel, .location-bar .button GtkLabel,
+    searchbar .button GtkImage,
+    .search-bar .button GtkImage,
+    .location-bar .button GtkImage,
+    .inline-toolbar .button GtkLabel,
+    .inline-toolbar .button GtkImage {
+      color: #444; }
+      searchbar .button GtkLabel:insensitive,
+      .search-bar .button GtkLabel:insensitive, .location-bar .button GtkLabel:insensitive, searchbar .button GtkLabel:backdrop,
+      .search-bar .button GtkLabel:backdrop, .location-bar .button GtkLabel:backdrop,
+      searchbar .button GtkImage:insensitive,
+      .search-bar .button GtkImage:insensitive,
+      .location-bar .button GtkImage:insensitive,
+      searchbar .button GtkImage:backdrop,
+      .search-bar .button GtkImage:backdrop,
+      .location-bar .button GtkImage:backdrop,
+      .inline-toolbar .button GtkLabel:insensitive,
+      .inline-toolbar .button GtkLabel:backdrop,
+      .inline-toolbar .button GtkImage:insensitive,
+      .inline-toolbar .button GtkImage:backdrop {
+        color: #9e9e9e;
+        -gtk-image-effect: dim; }
   searchbar .entry,
   .search-bar .entry, .location-bar .entry,
   searchbar entry,

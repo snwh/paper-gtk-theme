@@ -58,11 +58,11 @@
 
 // unchecked:selected
 @each $s,$un in (':selected','-unchecked'),
-                  (':hover:selected', '-unchecked-hover'),
-                  (':active:selected', '-unchecked-active'),
-                  (':backdrop:selected', '-unchecked-backdrop'),
-                  (':insensitive:selected', '-unchecked-insensitive'),
-                  (':insensitive:backdrop:selected', '-unchecked-insensitive-backdrop') {
+                  (':hover:selected', '-unchecked'),
+                  (':active:selected', '-unchecked'),
+                  (':backdrop:selected', '-unchecked'),
+                  (':insensitive:selected', '-unchecked'),
+                  (':insensitive:backdrop:selected', '-unchecked') {
   .check#{$s}{
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/selected-checkbox#{$un}.png"),url("../assets/selected-checkbox#{$un}@2.png")), -gtk-scaled(url("../assets/selected-checkbox#{$un}-dark.png"),url("../assets/selected-checkbox#{$un}-dark@2.png")));
     icon-shadow: none;
@@ -75,11 +75,11 @@
 
 // checked:selected
 @each $s,$ch in (':checked:selected', '-checked'),
-                  (':checked:hover:selected', '-checked-hover'),
-                  (':checked:active:selected', '-checked-active'),
-                  (':checked:backdrop:selected', '-checked-backdrop'),
-                  (':checked:insensitive:selected', '-checked-insensitive'),
-                  (':checked:insensitive:backdrop:selected', '-checked-insensitive-backdrop') {
+                  (':checked:hover:selected', '-checked'),
+                  (':checked:active:selected', '-checked'),
+                  (':checked:backdrop:selected', '-checked'),
+                  (':checked:insensitive:selected', '-checked'),
+                  (':checked:insensitive:backdrop:selected', '-checked') {
   .check#{$s}{
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/selected-checkbox#{$ch}.png"),url("../assets/selected-checkbox#{$ch}@2.png")), -gtk-scaled(url("../assets/selected-checkbox#{$ch}-dark.png"),url("../assets/selected-checkbox#{$ch}-dark@2.png")));
     icon-shadow: none;
@@ -93,11 +93,11 @@
 
 // mixed:selected
 @each $s,$mx in (':inconsistent:selected', '-mixed'),
-                  (':inconsistent:hover:selected', '-mixed-hover'),
-                  (':inconsistent:active:selected', '-mixed-active'),
-                  (':inconsistent:backdrop:selected', '-mixed-backdrop'),
-                  (':inconsistent:insensitive:selected', '-mixed-insensitive'),
-                  (':inconsistent:insensitive:backdrop:selected', '-mixed-insensitive-backdrop') {
+                  (':inconsistent:hover:selected', '-mixed'),
+                  (':inconsistent:active:selected', '-mixed'),
+                  (':inconsistent:backdrop:selected', '-mixed'),
+                  (':inconsistent:insensitive:selected', '-mixed'),
+                  (':inconsistent:insensitive:backdrop:selected', '-mixed') {
   .check#{$s}{
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/selected-checkbox#{$mx}.png"),url("../assets/selected-checkbox#{$mx}@2.png")), -gtk-scaled(url("../assets/selected-checkbox#{$mx}-dark.png"),url("../assets/selected-checkbox#{$mx}-dark@2.png")));
     icon-shadow: none;

@@ -206,19 +206,32 @@
   }
 
   // buttons
-  button,
-  .button,
-  .flat,
-  .text-button,
-  .image-button {
-    border: none;
-    background: none;
-    text-shadow: none;
-    box-shadow: none;
+  .button {
     background-color: transparent;
-    color: $fg_color;
+    background-image: none;
     border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    icon-shadow: none;
+    margin: 0;
     padding: 10px;
+    text-shadow: none; 
+
+    &.suggested-action,
+    &.text-button,
+    &.menu-button,
+    &.image-button,
+    &.linked,
+    &.flat  {
+      border: none;
+      background: none;
+      text-shadow: none;
+      box-shadow: none;
+      background-color: transparent;
+      color: $fg_color;
+      border-radius: 0px;
+      padding: 10px;
+    }
 
     &:focus,
     &:active {
@@ -253,6 +266,17 @@
       background:none;
       background-color: transparent;
       color: $backdrop_fg_color;
+    }  
+
+    GtkLabel,
+    GtkImage {
+      color: $fg_color;
+
+      &:insensitive,
+      &:backdrop {
+        color: $backdrop_fg_color;
+        -gtk-image-effect: dim;
+      }
     }
   }
 
