@@ -4,7 +4,7 @@
 // Main definitions
 $base_color: if($variant == 'light', #ffffff, #636E73);
 $bg_color: if($variant == 'light', #f7f7f7, #4F585C);
-$fg_color: if($variant == 'light', #444, #A1A8AB);
+$fg_color: if($variant == 'light', #444, #e4e6e7);
 $text_color: if($variant == 'light', $fg_color, $fg_color);
 $headerbar_bg_color: if($variant == 'light', #636E73, #3B4245);
 $headerbar_fg_color: if($variant == 'light', #ffffff, transparentize(#ffffff, 0.2));
@@ -42,7 +42,7 @@ $success_color: if($variant == 'light', $green, darken($green,10%));
 $destructive_color: if($variant == 'light', $red, darken($red,10%));
 $suggested_color: if($variant == 'light', $selected_bg_color, darken($selected_bg_color,10%));
 
-$osd_fg_color: #A1A8AB;
+$osd_fg_color: #e4e6e7;
 $osd_text_color: white;
 $osd_bg_color: transparentize(#202526, 0.2);
 $osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);

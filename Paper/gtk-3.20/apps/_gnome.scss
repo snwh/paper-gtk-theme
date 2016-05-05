@@ -55,14 +55,6 @@ CheeseThumbView /* Cheese */
  ************/
 
 $gnome_terminal: #636E73;
-$terminal_bg_color: transparentize(#002B36, 0.1);
-$terminal_fg_color: #839495;
-
-TerminalScreen,
-VteTerminal {
-  background-color: $terminal_bg_color;
-  color: $terminal_fg_color;
-}
 
 TerminalWindow {
   .titlebar,

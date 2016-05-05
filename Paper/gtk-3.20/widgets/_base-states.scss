@@ -191,3 +191,23 @@ label {
     -gtk-icon-shadow: none;
   }
 }
+
+%selected_items {
+  background-color: $selected_bg_color;
+
+  @at-root %nobg_selected_items, & {
+    color: $selected_fg_color;
+
+    @if $variant == 'light' { outline-color: transparentize($selected_fg_color, 0.7); }
+
+    &:disabled { color: mix($selected_fg_color, $selected_bg_color, 50%); }
+
+    &:backdrop {
+      color: $backdrop_selected_fg_color;
+
+      &:disabled { color: mix($backdrop_selected_fg_color, $selected_bg_color, 30%); }
+    }
+  }
+}
+
+.monospace { font: Monospace; }

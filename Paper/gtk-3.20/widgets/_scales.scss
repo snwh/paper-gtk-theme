@@ -1,17 +1,18 @@
 /************
  * GtkScale *
  ************/
-
 %scale_trough {
   border:none;
   background-color: $base_color;
-  box-shadow: inset 0 0 0 1px transparentize(black, 0.8), 0px 1px $bottom_highlight;
+  box-shadow: 0px 1px $bottom_highlight;
+  border:1px solid $borders_color;
 
   padding:0;
   margin: 0;
 
   &:disabled {
     background-color: $insensitive_bg_color;
+    box-shadow: none;
   }
 
   &:backdrop {
@@ -21,7 +22,7 @@
     &:disabled { background-color: $insensitive_bg_color; }
   }
 
-  // on selected list rows
+  // ...on selected list rows
   row:selected & {
     box-shadow: none;
 
@@ -43,20 +44,19 @@
 
   border: 1px solid $selected_borders_color;
   background-color: $selected_bg_color;
-  box-shadow: 0px 1px $bottom_highlight;
+  box-shadow: inset 0px 1px $top_highlight;
   
   border-radius: 4px;
 
-  min-height: 8px;
-
   &:disabled {
-    border: 1px solid darken($borders_color, 15%);
-    background-color: darken($bg_color, 20%);
+    border: 1px solid $borders_color;
+    background-color: transparentize(black, 0.9);
   }
 
   &:backdrop,
   &:active:backdrop {
-    border-color: if($variant=='light', $selected_bg_color, $selected_borders_color);
+
+    border-color: lighten($selected_bg_color, 10%);
     background-color: lighten($selected_bg_color, 10%);
     &:disabled {
       background-color: transparent;
@@ -64,8 +64,7 @@
     }
   }
 
-  // on selected list rows
-  .list-row:selected & { &:disabled, & { border-color: $selected_borders_color; } }
+  // ...on selected list rows
   row:selected & { &:disabled, & { border-color: $selected_borders_color; } }
 
   // OSD
@@ -76,12 +75,10 @@
   }
 }
 
-
-// Scale
 scale {
   // sizing
 
-  $_marks_length: 6px;
+  $_marks_lenght: 6px;
   $_marks_distance: 6px;
 
   min-height: 10px;
@@ -92,15 +89,19 @@ scale {
   fill,
   highlight { margin: -1px; }
 
-  // Slider, the scale handle
+  // the slider is inside the trough, so to have make it bigger there's a negative margin
   slider {
-    min-height: 16px;
-    min-width: 16px;
-    margin: 2px;
+    min-height: 18px;
+    min-width: 18px;
+    margin: -9px 0;
+
+    &.horizontal {
+      margin: 0 -9px;
+    }
 
     background-color:$base_color;
-    box-shadow:0 1px 1px 0 transparentize(black, 0.8);
-    border: 1px solid transparentize(black, 0.7);
+    box-shadow:0 1px 2px 0 transparentize(black, 0.7);
+    border: 1px solid $borders_color;
     border-radius: 12px;
 
     transition: $button_transition;
@@ -108,7 +109,7 @@ scale {
 
     &:hover {}
     &:active {
-      box-shadow:0 1px 1px 0 transparentize($selected_bg_color, 0.5);
+      box-shadow:0 1px 2px 0 transparentize($selected_bg_color, 0.5);
       border: 1px solid $selected_bg_color;
 
       &:disabled {
@@ -116,63 +117,10 @@ scale {
         border: 1px solid transparentize(black, 0.8);
       }
     }
-
-    &:disabled {
-      box-shadow:none;
-    }
-
-    &:backdrop {}
-
-    .list-row:selected & { &, &:disabled { border-color: $selected_borders_color; } }
-    row:selected & { &, &:disabled { border-color: $selected_borders_color; } }
-
-    // OSD
-    .osd & {
-      @include button(osd);
-      border-color: darken($osd_borders_color, 3%);
-      background-color: opacify($osd_bg_color, 1); // solid background needed here
-
-      &:hover { @include button(osd-hover); }
-
-      &:active { @include button(osd-active); }
-
-      &:disabled { @include button(osd-insensitive); }
-
-      &:backdrop {
-        @include button(osd-backdrop);
-
-        &:disabled { @include button(osd-backdrop-insensitive); }
-      }
-    }
   }
 
-  // Trough
-  trough {
-    @extend %scale_trough;
-    border-radius: 2px;
-    margin: 6px;
-
-    outline-offset: 2px;
-    -gtk-outline-radius: 5px;
-
-    &.horizontal {
-    }
-
-    &.vertical {
-    }
-  }
-
-
-  // The coloured part of the Trough
-  fill,
-  highlight {
-    @extend %scale_highlight;
-  }
-
-  // Fine-tune mode
-  // when you click-and-hold the slider
+  // click-and-hold the slider to activate
   &.fine-tune {
-
     &.horizontal {
       padding-top: 9px;
       padding-bottom: 9px;
@@ -186,39 +134,31 @@ scale {
     }
 
     // to make the trough grow in fine-tune mode
-    slider {
-      min-height: 16px;
-      min-width: 16px;
-
-      background-color:$base_color;
-      border-color:$base_color;
-      border: 1px solid transparentize(black, 0.7);
-      border-radius: 12px;
-      box-shadow:none;
-    }
-
-    trough {
-      @extend %scale_trough;
-
-      border-radius:6px;
-
-      outline-offset: 2px;
-      -gtk-outline-radius: 5px;
-      
-      margin: 2px;
-    }
+    slider { margin: -6px; }
 
     fill,
-    highlight {
-      @extend %scale_highlight;
+    highlight,
+    trough {
+      border-radius: 5px;
+      -gtk-outline-radius: 7px;
     }
   }
+
+  // the backing bit
+  trough {
+    @extend %scale_trough;
+
+    outline-offset: 2px;
+    -gtk-outline-radius: 5px;
+  }
+
+  // the colored part of the backing bit
+  highlight { @extend %scale_highlight; }
 
   // this is another differently styled part of the backing bit, the most relevant use case is for example
   // in media player to indicate how much video stream as been cached
   fill {
     @extend %scale_trough;
-    border-radius: 2px;
 
     &, &:backdrop {
       background-color: $borders_color;
@@ -245,6 +185,51 @@ scale {
     }
   }
 
+  slider {
+    @include button(normal-alt, $edge: $shadow_color);
+
+    border: 1px solid darken($borders_color, 3%);
+    border-radius: 100%;
+    transition: $button_transition;
+    transition-property: background, border, box-shadow;
+
+    &:hover { @include button(hover-alt, $edge: $shadow_color); }
+
+    &:active { border-color: $selected_borders_color; }
+
+    &:disabled { @include button (insensitive); }
+
+    &:backdrop {
+      transition: $backdrop_transition;
+
+      @include button(backdrop);
+
+      &:disabled { @include button(backdrop-insensitive); }
+    }
+
+    // ...on selected list rows
+    row:selected & { &, &:disabled { border-color: $selected_borders_color; } }
+
+    // OSD
+    .osd & {
+      @include button(osd);
+      border-color: darken($osd_borders_color, 3%);
+      background-color: opacify($osd_bg_color, 1); // solid background needed here
+
+      &:hover { @include button(osd-hover); }
+
+      &:active { @include button(osd-active); }
+
+      &:disabled { @include button(osd-insensitive); }
+
+      &:backdrop {
+        @include button(osd-backdrop);
+
+        &:disabled { @include button(osd-backdrop-insensitive); }
+      }
+    }
+  }
+
   value { color: gtkalpha(currentColor, 0.4); }
 
   marks {
@@ -256,7 +241,7 @@ scale {
                                                      (bottom, right, left) {
       &.#{$marks_class} {
         margin-#{$marks_margin}: $_marks_distance;
-        margin-#{$marks_pos}: -($_marks_distance + $_marks_length);
+        margin-#{$marks_pos}: -($_marks_distance + $_marks_lenght);
       }
     }
   }
@@ -268,25 +253,25 @@ scale {
                                                      (bottom, right, left) {
       &.#{$marks_class} {
         margin-#{$marks_margin}: $_marks_distance;
-        margin-#{$marks_pos}: -($_marks_distance + $_marks_length - 3px);
+        margin-#{$marks_pos}: -($_marks_distance + $_marks_lenght - 3px);
       }
     }
   }
   &.horizontal {
     indicator {
-      min-height: $_marks_length;
+      min-height: $_marks_lenght;
       min-width: 1px;
     }
 
-    &.fine-tune indicator { min-height: ($_marks_length - 3px); }
+    &.fine-tune indicator { min-height: ($_marks_lenght - 3px); }
   }
   &.vertical {
     indicator {
       min-height: 1px;
-      min-width: $_marks_length;
+      min-width: $_marks_lenght;
     }
 
-    &.fine-tune indicator { min-width: ($_marks_length - 3px); }
+    &.fine-tune indicator { min-width: ($_marks_lenght - 3px); }
   }
   // *WARNING* scale with marks madness following
 
@@ -379,7 +364,6 @@ scale {
     min-height: 0;
     min-width: 0;
 
-    .trough,
     trough {
       background-image: linear-gradient(to top, $borders_color);
       background-repeat: no-repeat;
@@ -388,7 +372,6 @@ scale {
     &.horizontal {
       padding: 0 0 15px 0;
 
-      .trough,
       trough {
         padding-bottom: 4px;
         background-position: 0 -3px;
@@ -396,7 +379,6 @@ scale {
         border-top-right-radius: 0;
       }
 
-      .slider,
       slider {
         &:hover, &:backdrop, &:disabled, &:backdrop:disabled, & {
           @extend %scale-has-marks-above-horz;
@@ -411,7 +393,6 @@ scale {
       &:dir(ltr) {
         padding: 0 0 0 15px;
 
-        .trough,
         trough {
           padding-left: 4px;
           background-position: 3px 0;
@@ -419,7 +400,6 @@ scale {
           border-top-right-radius: 0;
         }
 
-        .slider,
         slider {
           &:hover, &:backdrop, &:disabled, &:backdrop:disabled, & {
             @extend %scale-has-marks-below-vert;
@@ -433,7 +413,6 @@ scale {
       &:dir(rtl) {
         padding: 0 15px 0 0;
 
-        .trough,
         trough {
           padding-right: 4px;
           background-position: -3px 0;
@@ -441,7 +420,6 @@ scale {
           border-top-left-radius: 0;
         }
 
-        .slider,
         slider {
           &:hover, &:backdrop, &:disabled, &:backdrop:disabled, & {
             @extend %scale-has-marks-above-vert;
@@ -457,13 +435,11 @@ scale {
       &.horizontal {
         padding: 0 0 12px 0;
 
-        .trough,
         trough {
           padding-bottom: 7px;
           background-position: 0 -6px;
         }
 
-        .slider,
         slider {
           @extend %scale-has-marks-above-horz-fine-tune;
 
@@ -476,13 +452,11 @@ scale {
         &:dir(ltr) {
           padding: 0 0 0 12px;
 
-          .trough,
           trough {
             padding-left: 7px;
             background-position: 6px 0;
           }
 
-          .slider,
           slider {
             @extend %scale-has-marks-below-vert-fine-tune;
 
@@ -494,13 +468,11 @@ scale {
         &:dir(rtl) {
           padding: 0 12px 0 0;
 
-          .trough,
           trough {
             padding-right: 7px;
             background-position: -6px 0;
           }
 
-          .slider,
           slider {
             @extend %scale-has-marks-above-vert-fine-tune;
 

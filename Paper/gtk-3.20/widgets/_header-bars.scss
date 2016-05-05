@@ -2,9 +2,8 @@
  * Header Bars *
  ***************/
 
-%titlebar,
+%headerbar,
 headerbar {
-  min-height: 40px;
   padding:0 8px;
   border: none;
   border-radius: 4px 4px 0 0;
@@ -44,7 +43,6 @@ headerbar {
   }
 
   // selection mode
-
   &.selection-mode {
 
     border-radius: 4px 4px 0 0;
@@ -89,49 +87,17 @@ headerbar {
 
   &.default-decoration {
     padding: 6px;
-    min-height: 28px;
     background-color: $headerbar_bg_color;
     color: $headerbar_fg_color;
 
     .maximized {
-      padding: 6px;      
+      padding: 6px;
+      border-radius:0;  
     }
 
     &:backdrop {
       background-color: $backdrop_headerbar_bg_color;
       color: $backdrop_headerbar_fg_color;
-    }
-
-    .button,
-    button {
-
-      &.titlebutton {
-        min-height: 16px;
-        min-width: 16px;
-        padding: 1px;
-        border-radius:50%;
-        background-color:transparent;
-        box-shadow: none;
-        text-shadow: none;
-        -gtk-icon-shadow: none;
-
-        &:hover {
-          background-color:transparent;
-          color:lighten($headerbar_fg_color, 10%);
-        }
-
-        &:backdrop {
-          background-color:transparent;
-          color:$backdrop_headerbar_fg_color;
-        }
-
-        &:active {
-          background-color:$headerbar_fg_color;
-          color:$headerbar_bg_color;
-          border-radius:50%;
-          box-shadow:none;
-        }
-      }
     }
   }
 
@@ -140,7 +106,6 @@ headerbar {
   entry {
 
     margin:6px 0;
-    min-height: 16px;
     border-radius: 2px;
     padding: 4px;
 
@@ -211,20 +176,27 @@ headerbar {
     border-radius: 0px;
     border: none;
     box-shadow: none;
-    text-shadow: none;
     -gtk-icon-shadow: none;
-    padding: 10px;
     margin: 0;
-    color: $headerbar_fg_color;
+    padding: 10px;
+    text-shadow: none;
 
+    &.back-button,
+    &.suggested-action,
+    &.menu-button,
     &.text-button,
     &.image-button,
+    &.linked,
     &.flat {
-      box-shadow: none;
-      text-shadow: none;
-      -gtk-icon-shadow: none;
       background-color: transparent;
       background-image: none;
+      border-radius: 0px;
+      border: none;
+      box-shadow: none;
+      -gtk-icon-shadow: none;
+      margin: 0;
+      padding: 10px;
+      text-shadow: none;
       color: $headerbar_fg_color;
 
       &:backdrop {
@@ -233,13 +205,28 @@ headerbar {
         text-shadow: none;
         color: $backdrop_headerbar_fg_color;
       }
+
+      &:hover { 
+        background-image:none;
+        background-color: transparentize(black, 0.85);
+        color:lighten($headerbar_fg_color, 10%);
+        box-shadow:none;
+        text-shadow:none;
+      }
     }
 
-    &.linked { 
-      border-radius: 0px;
-      margin: 0;
+    label,
+    image {
+      color: $headerbar_fg_color;
+
+      &:backdrop,
+      &:disabled {
+        color: $backdrop_headerbar_fg_color;
+        -gtk-icon-effect: dim;
+      }
     }
 
+    &:focus,
     &:hover { 
       background-image:none;
       background-color: transparentize(black, 0.85);
@@ -252,11 +239,14 @@ headerbar {
       background-color: transparent;
       background-image: none;
       color: $backdrop_headerbar_fg_color;
+
+      image {
+        color: $backdrop_headerbar_fg_color;
+      }
     }
 
     &:active,
     &:checked {
-      font:bold;
       border-radius: 0px;
 
       text-shadow: none;
@@ -275,38 +265,42 @@ headerbar {
 
         box-shadow: inset 0 -2px 0 0 $backdrop_headerbar_fg_color;
       }
+
+      &:focus,
+      &:hover { 
+        background-image:none;
+        background-color: transparentize(black, 0.85);
+        color:lighten($headerbar_fg_color, 10%);
+        box-shadow: inset 0 -2px 0 0 $headerbar_fg_color;
+      }
     }
 
-    &:disabled {
+    &:disabled,
+    &:disabled:backdrop {
       color: $backdrop_headerbar_fg_color;
       background-color: transparent;
       background-image: none;
 
-      &:backdrop {
-        color: $backdrop_headerbar_fg_color;
-        background-color: transparent;
-        background-image: none;
-
-        image {
-          -gtk-icon-effect: dim;
-        }
+      image {
+        -gtk-icon-effect: dim;
       }
     }
 
-
     // Title Button
     &.titlebutton {
-      min-height: 16px;
-      min-width: 16px;
-      padding: 1px;
-      border-radius:50%;
       background-color:transparent;
+      background-image: none;
+      border-radius:50%;
+      border: none;
       box-shadow: none;
-      text-shadow: none;
       -gtk-icon-shadow: none;
+      margin: 0;
+      padding: 1px;
+      text-shadow: none;
+      color:$headerbar_fg_color;
 
       &:hover {
-        background-color:transparent;
+        background-color:transparentize($headerbar_fg_color, 0.9);
         color:lighten($headerbar_fg_color, 10%);
       }
 
@@ -320,57 +314,81 @@ headerbar {
         color:$headerbar_bg_color;
         border-radius:50%;
         box-shadow:none;
+
+        image {
+          color:$headerbar_bg_color;
+        }
       }
     }
 
     // Menu Button
-    &.menu-button,
-    &.title-menu-button {
-      padding: 1px;
-      background-color:transparent;
-      box-shadow: none;
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-
-      &:hover {
-        background-color: transparentize(black, 0.9);
-        color:lighten($headerbar_fg_color, 10%);
-      }
-
-      &:backdrop {
-        background-color:transparent;
-        color:$backdrop_headerbar_fg_color;
-      }
-
-      &:active {
-        background-color:darken($headerbar_bg_color,10%);
-        color:$headerbar_fg_color;
-        box-shadow:none;
+    &.menu-button {
+      .menu {
+        .menuitem {
+          label {
+            color: $fg_color;
+            &:disabled { color: $insensitive_fg_color; }
+          }
+          .separator { color: $borders_color;}
+          &:hover { label {color: $selected_fg_color;}}
+        }
       }
     }
 
-    // Suggested Action Butotn
+    // Suggested Button
     &.suggested-action {
+      font-weight: bold;
+      padding:0;
+      padding: 5px 10px;
+      border-radius: 2px;
+
+      background-color: $headerbar_fg_color;
+      color: $selected_bg_color;
+      box-shadow: 0 1px 0 0 transparentize(black, 0.8);
+
+      label { color: $selected_bg_color;}
 
       &:hover {
-      }
+        background-color: $headerbar_fg_color;
+        box-shadow: 0 1px 2px 0 transparentize(black, 0.6);
+        label {color: $selected_bg_color;}
 
-      &:active {
+        &:backdrop {
+          background-color: transparentize($headerbar_fg_color, 0.2);
+          box-shadow:none;
+          label { color:transparentize($selected_bg_color, 0.2);}
+        }
       }
 
       &:disabled {
+        background-color: transparentize(black, 0.9);
+        box-shadow:none;
+        label { color:transparentize($headerbar_fg_color, 0.5);}
+
+        &:backdrop {
+          background-color: transparentize(black, 0.9);
+          box-shadow:none;
+          label { color:transparentize($headerbar_fg_color, 0.5);}
+        }
       }
 
       &:backdrop {
+        background-color: transparentize($headerbar_fg_color, 0.9);
+        box-shadow: none;
+        label {color:transparentize($selected_bg_color, 0.8);}
       }
+    }
 
-      &:backdrop:disabled {
+    // Linked button
+    &.linked {
+      &:first-child,
+      &:last-child {
+        border-radius:0;
       }
     }
   }
 
   // Separator
-
   .separator {
     color: transparent;
     background-color: transparent;
@@ -378,7 +396,6 @@ headerbar {
 }
 
 .titlebar {
-
   &, &:backdrop {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -386,6 +403,7 @@ headerbar {
 }
 
 headerbar {
+  .separator:first-child + &,
   separator:first-child + &, // tackles the paned container case
   &:first-child { &, &:backdrop { border-top-left-radius: 4px; }}
 
@@ -407,5 +425,5 @@ headerbar {
     }
   }
 
-  @extend %titlebar;
+  @extend %headerbar;
 }
