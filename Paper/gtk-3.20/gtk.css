@@ -2985,12 +2985,13 @@ headerbar {
     margin: 0;
     padding: 10px;
     text-shadow: none; }
-    .titlebar:not(headerbar) button.back-button, .titlebar:not(headerbar) button.suggested-action, .titlebar:not(headerbar) button.menu-button, .titlebar:not(headerbar) button.text-button, .titlebar:not(headerbar) button.image-button, .titlebar:not(headerbar) button.linked, .titlebar:not(headerbar) button.flat,
+    .titlebar:not(headerbar) button.back-button, .titlebar:not(headerbar) button.suggested-action, .titlebar:not(headerbar) button.menu-button, .titlebar:not(headerbar) button.text-button, .titlebar:not(headerbar) button.image-button, .titlebar:not(headerbar) button.titlebutton, .titlebar:not(headerbar) button.linked, .titlebar:not(headerbar) button.flat,
     headerbar button.back-button,
     headerbar button.suggested-action,
     headerbar button.menu-button,
     headerbar button.text-button,
     headerbar button.image-button,
+    headerbar button.titlebutton,
     headerbar button.linked,
     headerbar button.flat {
       background-color: transparent;
@@ -3003,24 +3004,44 @@ headerbar {
       padding: 10px;
       text-shadow: none;
       color: #ffffff; }
-      .titlebar:not(headerbar) button.back-button:backdrop, .titlebar:not(headerbar) button.suggested-action:backdrop, .titlebar:not(headerbar) button.menu-button:backdrop, .titlebar:not(headerbar) button.text-button:backdrop, .titlebar:not(headerbar) button.image-button:backdrop, .titlebar:not(headerbar) button.linked:backdrop, .titlebar:not(headerbar) button.flat:backdrop,
+      .titlebar:not(headerbar) button.back-button:active, .titlebar:not(headerbar) button.back-button:checked, .titlebar:not(headerbar) button.suggested-action:active, .titlebar:not(headerbar) button.suggested-action:checked, .titlebar:not(headerbar) button.menu-button:active, .titlebar:not(headerbar) button.menu-button:checked, .titlebar:not(headerbar) button.text-button:active, .titlebar:not(headerbar) button.text-button:checked, .titlebar:not(headerbar) button.image-button:active, .titlebar:not(headerbar) button.image-button:checked, .titlebar:not(headerbar) button.titlebutton:active, .titlebar:not(headerbar) button.titlebutton:checked, .titlebar:not(headerbar) button.linked:active, .titlebar:not(headerbar) button.linked:checked, .titlebar:not(headerbar) button.flat:active, .titlebar:not(headerbar) button.flat:checked,
+      headerbar button.back-button:active,
+      headerbar button.back-button:checked,
+      headerbar button.suggested-action:active,
+      headerbar button.suggested-action:checked,
+      headerbar button.menu-button:active,
+      headerbar button.menu-button:checked,
+      headerbar button.text-button:active,
+      headerbar button.text-button:checked,
+      headerbar button.image-button:active,
+      headerbar button.image-button:checked,
+      headerbar button.titlebutton:active,
+      headerbar button.titlebutton:checked,
+      headerbar button.linked:active,
+      headerbar button.linked:checked,
+      headerbar button.flat:active,
+      headerbar button.flat:checked {
+        border-radius: 0px; }
+      .titlebar:not(headerbar) button.back-button:backdrop, .titlebar:not(headerbar) button.suggested-action:backdrop, .titlebar:not(headerbar) button.menu-button:backdrop, .titlebar:not(headerbar) button.text-button:backdrop, .titlebar:not(headerbar) button.image-button:backdrop, .titlebar:not(headerbar) button.titlebutton:backdrop, .titlebar:not(headerbar) button.linked:backdrop, .titlebar:not(headerbar) button.flat:backdrop,
       headerbar button.back-button:backdrop,
       headerbar button.suggested-action:backdrop,
       headerbar button.menu-button:backdrop,
       headerbar button.text-button:backdrop,
       headerbar button.image-button:backdrop,
+      headerbar button.titlebutton:backdrop,
       headerbar button.linked:backdrop,
       headerbar button.flat:backdrop {
         background-color: transparent;
         background-image: none;
         text-shadow: none;
         color: rgba(255, 255, 255, 0.5); }
-      .titlebar:not(headerbar) button.back-button:hover, .titlebar:not(headerbar) button.suggested-action:hover, .titlebar:not(headerbar) button.menu-button:hover, .titlebar:not(headerbar) button.text-button:hover, .titlebar:not(headerbar) button.image-button:hover, .titlebar:not(headerbar) button.linked:hover, .titlebar:not(headerbar) button.flat:hover,
+      .titlebar:not(headerbar) button.back-button:hover, .titlebar:not(headerbar) button.suggested-action:hover, .titlebar:not(headerbar) button.menu-button:hover, .titlebar:not(headerbar) button.text-button:hover, .titlebar:not(headerbar) button.image-button:hover, .titlebar:not(headerbar) button.titlebutton:hover, .titlebar:not(headerbar) button.linked:hover, .titlebar:not(headerbar) button.flat:hover,
       headerbar button.back-button:hover,
       headerbar button.suggested-action:hover,
       headerbar button.menu-button:hover,
       headerbar button.text-button:hover,
       headerbar button.image-button:hover,
+      headerbar button.titlebutton:hover,
       headerbar button.linked:hover,
       headerbar button.flat:hover {
         background-image: none;
@@ -3028,6 +3049,24 @@ headerbar {
         color: white;
         box-shadow: none;
         text-shadow: none; }
+      .titlebar:not(headerbar) button.back-button.radio.text-button, .titlebar:not(headerbar) button.back-button.check.text-button, .titlebar:not(headerbar) button.suggested-action.radio.text-button, .titlebar:not(headerbar) button.suggested-action.check.text-button, .titlebar:not(headerbar) button.menu-button.radio.text-button, .titlebar:not(headerbar) button.menu-button.check.text-button, .titlebar:not(headerbar) button.text-button.radio.text-button, .titlebar:not(headerbar) button.text-button.check.text-button, .titlebar:not(headerbar) button.image-button.radio.text-button, .titlebar:not(headerbar) button.image-button.check.text-button, .titlebar:not(headerbar) button.titlebutton.radio.text-button, .titlebar:not(headerbar) button.titlebutton.check.text-button, .titlebar:not(headerbar) button.linked.radio.text-button, .titlebar:not(headerbar) button.linked.check.text-button, .titlebar:not(headerbar) button.flat.radio.text-button, .titlebar:not(headerbar) button.flat.check.text-button,
+      headerbar button.back-button.radio.text-button,
+      headerbar button.back-button.check.text-button,
+      headerbar button.suggested-action.radio.text-button,
+      headerbar button.suggested-action.check.text-button,
+      headerbar button.menu-button.radio.text-button,
+      headerbar button.menu-button.check.text-button,
+      headerbar button.text-button.radio.text-button,
+      headerbar button.text-button.check.text-button,
+      headerbar button.image-button.radio.text-button,
+      headerbar button.image-button.check.text-button,
+      headerbar button.titlebutton.radio.text-button,
+      headerbar button.titlebutton.check.text-button,
+      headerbar button.linked.radio.text-button,
+      headerbar button.linked.check.text-button,
+      headerbar button.flat.radio.text-button,
+      headerbar button.flat.check.text-button {
+        padding: 10px; }
     .titlebar:not(headerbar) button label,
     .titlebar:not(headerbar) button image,
     headerbar button label,
@@ -3094,35 +3133,6 @@ headerbar {
       headerbar button:disabled image,
       headerbar button:disabled:backdrop image {
         -gtk-icon-effect: dim; }
-    .titlebar:not(headerbar) button.titlebutton,
-    headerbar button.titlebutton {
-      background-color: transparent;
-      background-image: none;
-      border-radius: 50%;
-      border: none;
-      box-shadow: none;
-      -gtk-icon-shadow: none;
-      margin: 0;
-      padding: 1px;
-      text-shadow: none;
-      color: #ffffff; }
-      .titlebar:not(headerbar) button.titlebutton:hover,
-      headerbar button.titlebutton:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: white; }
-      .titlebar:not(headerbar) button.titlebutton:backdrop,
-      headerbar button.titlebutton:backdrop {
-        background-color: transparent;
-        color: rgba(255, 255, 255, 0.5); }
-      .titlebar:not(headerbar) button.titlebutton:active,
-      headerbar button.titlebutton:active {
-        background-color: #ffffff;
-        color: #636E73;
-        border-radius: 50%;
-        box-shadow: none; }
-        .titlebar:not(headerbar) button.titlebutton:active image,
-        headerbar button.titlebutton:active image {
-          color: #636E73; }
     .titlebar:not(headerbar) button.menu-button .menu .menuitem label,
     headerbar button.menu-button .menu .menuitem label {
       color: #444; }
@@ -5466,7 +5476,7 @@ toolbar button {
   border-radius: 0px;
   border: none;
   box-shadow: none;
-  icon-shadow: none;
+  -gtk-icon-shadow: none;
   margin: 0;
   padding: 10px;
   text-shadow: none; }
@@ -5476,7 +5486,7 @@ toolbar button {
     border-radius: 0px;
     border: none;
     box-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
     margin: 0;
     padding: 10px;
     text-shadow: none;
@@ -5494,7 +5504,7 @@ toolbar button {
       text-shadow: none; }
     toolbar button.suggested-action:disabled, toolbar button.text-button:disabled, toolbar button.menu-button:disabled, toolbar button.image-button:disabled, toolbar button.linked:disabled, toolbar button.flat:disabled {
       color: rgba(255, 255, 255, 0.5);
-      -gtk-image-effect: dim; }
+      -gtk-icon-effect: dim; }
   toolbar button label,
   toolbar button image {
     color: #ffffff; }
@@ -5502,7 +5512,7 @@ toolbar button {
     toolbar button image:disabled,
     toolbar button image:backdrop {
       color: rgba(255, 255, 255, 0.5);
-      -gtk-image-effect: dim; }
+      -gtk-icon-effect: dim; }
   toolbar button:focus, toolbar button:hover {
     background-image: none;
     background-color: rgba(0, 0, 0, 0.15);
@@ -5518,7 +5528,7 @@ toolbar button {
   toolbar button:active, toolbar button:checked {
     border-radius: 0px;
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
     box-shadow: inset 0 -2px 0 0 #ffffff;
     background-color: transparent;
     background-image: none;
@@ -5540,7 +5550,7 @@ toolbar button {
     toolbar button:disabled image,
     toolbar button:disabled image, toolbar button:disabled:backdrop image,
     toolbar button:disabled:backdrop image {
-      -gtk-image-effect: dim; }
+      -gtk-icon-effect: dim; }
   toolbar button.menu-button .menu .menuitem label {
     color: #444; }
     toolbar button.menu-button .menu .menuitem label:disabled {
@@ -5590,7 +5600,7 @@ searchbar,
     border-radius: 0px;
     border: none;
     box-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
     margin: 0;
     padding: 10px;
     text-shadow: none; }
@@ -5675,7 +5685,7 @@ searchbar,
       .inline-toolbar button image:disabled,
       .inline-toolbar button image:backdrop {
         color: #9e9e9e;
-        -gtk-image-effect: dim; }
+        -gtk-icon-effect: dim; }
   searchbar .entry,
   .search-bar .entry, .location-bar .entry,
   searchbar entry,

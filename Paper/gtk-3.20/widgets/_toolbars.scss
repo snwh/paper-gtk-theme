@@ -25,7 +25,7 @@ toolbar {
     border-radius: 0px;
     border: none;
     box-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
     margin: 0;
     padding: 10px;
     text-shadow: none;
@@ -41,7 +41,7 @@ toolbar {
       border-radius: 0px;
       border: none;
       box-shadow: none;
-      icon-shadow: none;
+      -gtk-icon-shadow: none;
       margin: 0;
       padding: 10px;
       text-shadow: none;
@@ -64,7 +64,7 @@ toolbar {
 
       &:disabled {
         color: $backdrop_headerbar_fg_color;
-        -gtk-image-effect: dim;
+        -gtk-icon-effect: dim;
       }
     }
 
@@ -75,7 +75,7 @@ toolbar {
       &:disabled,
       &:backdrop {
         color: $backdrop_headerbar_fg_color;
-        -gtk-image-effect: dim;
+        -gtk-icon-effect: dim;
       }
     }
 
@@ -103,7 +103,7 @@ toolbar {
       border-radius: 0px;
 
       text-shadow: none;
-      icon-shadow: none;
+      -gtk-icon-shadow: none;
       
       box-shadow: inset 0 -2px 0 0 $headerbar_fg_color;
 
@@ -136,7 +136,7 @@ toolbar {
 
       image,
       image {
-        -gtk-image-effect: dim;
+        -gtk-icon-effect: dim;
       }
     }
 
@@ -211,7 +211,7 @@ toolbar {
     border-radius: 0px;
     border: none;
     box-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
     margin: 0;
     padding: 10px;
     text-shadow: none; 
@@ -274,7 +274,7 @@ toolbar {
       &:disabled,
       &:backdrop {
         color: $backdrop_fg_color;
-        -gtk-image-effect: dim;
+        -gtk-icon-effect: dim;
       }
     }
   }

@@ -17,7 +17,7 @@ headerbar {
     background-color: $headerbar_bg_color;
     color: $backdrop_headerbar_fg_color;
 
-    box-shadow: inset 0 1px transparentize($top_highlight, 0.4);
+    box-shadow: inset 0 1px transparentize($top_highlight, 0.8);
 
     transition: $backdrop_transition;
   }
@@ -57,7 +57,7 @@ headerbar {
     &:backdrop {
       background-color: darken($selection_mode_headerbar_bg_color, 10%);
       background-image: none;
-      box-shadow: inset 0 1px transparentize($top_highlight, 0.4);
+      box-shadow: inset 0 1px transparentize($top_highlight, 0.8);
     }
 
     .subtitle:link { @extend *:link:selected; }
@@ -181,11 +181,13 @@ headerbar {
     padding: 10px;
     text-shadow: none;
 
+
     &.back-button,
     &.suggested-action,
     &.menu-button,
     &.text-button,
     &.image-button,
+    &.titlebutton,
     &.linked,
     &.flat {
       background-color: transparent;
@@ -198,6 +200,11 @@ headerbar {
       padding: 10px;
       text-shadow: none;
       color: $headerbar_fg_color;
+
+      &:active,
+      &:checked {
+        border-radius: 0px;
+      }
 
       &:backdrop {
         background-color: transparent;
@@ -212,6 +219,13 @@ headerbar {
         color:lighten($headerbar_fg_color, 10%);
         box-shadow:none;
         text-shadow:none;
+      }
+
+      &.radio,
+      &.check {
+        &.text-button {
+          padding: 10px;
+        }
       }
     }
 
@@ -283,41 +297,6 @@ headerbar {
 
       image {
         -gtk-icon-effect: dim;
-      }
-    }
-
-    // Title Button
-    &.titlebutton {
-      background-color:transparent;
-      background-image: none;
-      border-radius:50%;
-      border: none;
-      box-shadow: none;
-      -gtk-icon-shadow: none;
-      margin: 0;
-      padding: 1px;
-      text-shadow: none;
-      color:$headerbar_fg_color;
-
-      &:hover {
-        background-color:transparentize($headerbar_fg_color, 0.9);
-        color:lighten($headerbar_fg_color, 10%);
-      }
-
-      &:backdrop {
-        background-color:transparent;
-        color:$backdrop_headerbar_fg_color;
-      }
-
-      &:active {
-        background-color:$headerbar_fg_color;
-        color:$headerbar_bg_color;
-        border-radius:50%;
-        box-shadow:none;
-
-        image {
-          color:$headerbar_bg_color;
-        }
       }
     }
 
