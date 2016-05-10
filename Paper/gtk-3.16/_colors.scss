@@ -2,12 +2,12 @@
 // it gets @if ed depending on $variant
 
 // Main definitions
-$base_color: if($variant == 'light', #ffffff, #636E73);
+$base_color: if($variant == 'light', #ffffff, #6a7981);
 $bg_color: if($variant == 'light', #f7f7f7, #4F585C);
 $fg_color: if($variant == 'light', #444, lighten(#e4e6e7, 10%));
 $text_color: if($variant == 'light', $fg_color, $fg_color);
-$headerbar_bg_color: if($variant == 'light', #636E73, #3B4245);
-$headerbar_fg_color: if($variant == 'light', #ffffff, transparentize(#ffffff, 0.5));
+$headerbar_bg_color: if($variant == 'light', #546e7a, #3B4245);
+$headerbar_fg_color: if($variant == 'light', #ffffff, transparentize(#ffffff, 0.2));
 
 // Primary colors
 $red: #f34235;
@@ -21,7 +21,7 @@ $selected_fg_color: #ffffff;
 $selected_bg_color: if($variant == 'light', #347D9F, lighten(#347D9F,10%));
 $selected_borders_color: darken($selected_bg_color, 10%);
 $borders_color: if($variant == 'light', darken($bg_color,15%), darken($bg_color,10%));
-$borders_edge: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.9));
+$borders_edge: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.7));
 $link_color: blue;
 $link_visited_color:transparentize($link_color,0.5);
 $top_highlight: $borders_edge;

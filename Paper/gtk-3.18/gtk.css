@@ -2454,12 +2454,12 @@ GraniteWidgetsWelcome {
   padding: 0 8px;
   border: none;
   border-radius: 4px 4px 0 0;
-  background-color: #636E73;
+  background-color: #546e7a;
   color: #ffffff;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.2); }
   .titlebar:backdrop:not(headerbar),
   .header-bar:backdrop {
-    background-color: #636E73;
+    background-color: #546e7a;
     color: rgba(255, 255, 255, 0.5);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0);
     transition: 200ms ease-out; }
@@ -2519,7 +2519,7 @@ GraniteWidgetsWelcome {
   .default-decoration.titlebar:not(headerbar),
   .header-bar.default-decoration {
     padding: 6px;
-    background-color: #636E73;
+    background-color: #546e7a;
     color: #ffffff; }
     .default-decoration.titlebar:not(headerbar) .maximized,
     .header-bar.default-decoration .maximized {
@@ -2527,7 +2527,7 @@ GraniteWidgetsWelcome {
       border-radius: 0; }
     .default-decoration.titlebar:backdrop:not(headerbar),
     .header-bar.default-decoration:backdrop {
-      background-color: #576165;
+      background-color: #4a606b;
       color: rgba(255, 255, 255, 0.5); }
   .titlebar:not(headerbar) .entry,
   .header-bar .entry {
@@ -2725,12 +2725,12 @@ GraniteWidgetsWelcome {
       .titlebar:not(headerbar) .button.titlebutton:active,
       .header-bar .button.titlebutton:active {
         background-color: #ffffff;
-        color: #636E73;
+        color: #546e7a;
         border-radius: 50%;
         box-shadow: none; }
         .titlebar:not(headerbar) .button.titlebutton:active GtkImage,
         .header-bar .button.titlebutton:active GtkImage {
-          color: #636E73; }
+          color: #546e7a; }
     .titlebar:not(headerbar) .button.menu-button .menu .menuitem GtkLabel,
     .header-bar .button.menu-button .menu .menuitem GtkLabel {
       color: #444; }
@@ -2810,13 +2810,13 @@ GraniteWidgetsWelcome {
 
 window.csd > .titlebar:not(headerbar) {
   padding: 0;
-  background-color: #636E73;
+  background-color: #546e7a;
   background-image: none;
   border-style: none;
   border-color: transparent;
   box-shadow: none; }
   window.csd > .titlebar:not(headerbar):backdrop {
-    background-color: #576165; }
+    background-color: #4a606b; }
 
 /**************
  * GtkInfoBar *
@@ -3179,10 +3179,10 @@ GtkLevelBar,
   -GtkWidget-window-dragging: true;
   padding: 0px;
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.1);
-  background-color: #636E73;
+  background-color: #546e7a;
   color: #ffffff; }
   .menubar:backdrop {
-    background-color: #576165; }
+    background-color: #4a606b; }
   .menubar > .menuitem {
     padding: 4px 8px; }
     .menubar > .menuitem:hover {
@@ -4287,10 +4287,10 @@ GtkSwitch {
 .toolbar {
   -GtkWidget-window-dragging: true;
   padding: 0px;
-  background-color: #636E73;
+  background-color: #546e7a;
   color: #ffffff; }
   .toolbar:backdrop {
-    background-color: #576165;
+    background-color: #4a606b;
     color: rgba(255, 255, 255, 0.5); }
 
 .osd .toolbar {
@@ -5129,10 +5129,10 @@ VteTerminal {
 
 TerminalWindow .titlebar,
 TerminalWindow .header-bar {
-  background-color: #636E73; }
+  background-color: #546e7a; }
   TerminalWindow .titlebar:backdrop,
   TerminalWindow .header-bar:backdrop {
-    background-color: #4b5458; }
+    background-color: #3f535c; }
 
 /************
  * Nautilus *
@@ -5723,59 +5723,59 @@ UnityDecoration {
   /* Size property, space of the title that can be faded */
   -UnityDecoration-title-alignment: 0.0;
   /* Float from 0.0 to 1.0, to align the title */
-  background-color: #636E73;
+  background-color: #546e7a;
   color: #dbdee0; }
   UnityDecoration .top {
     padding: 0 5px 0 5px;
     border-radius: 4px 4px 0px 0px;
     box-shadow: none;
-    border: 1px solid #636E73;
+    border: 1px solid #546e7a;
     border-bottom-width: 0;
-    background-color: #636E73;
+    background-color: #546e7a;
     color: #dbdee0;
     border-top: 1px solid rgba(255, 255, 255, 0.1); }
     UnityDecoration .top:backdrop {
       border-bottom-width: 0;
-      background-color: #4b5458;
+      background-color: #3f535c;
       color: #c0c5c8;
       border-top: 1px solid rgba(255, 255, 255, 0.1); }
     UnityDecoration .top .menuitem {
       color: #dbdee0; }
       UnityDecoration .top .menuitem:backdrop {
-        background-color: #4b5458;
+        background-color: #3f535c;
         color: #c0c5c8; }
 
 UnityDecoration.left,
 UnityDecoration.right {
   background-repeat: repeat-x;
-  background-color: #626c71;
+  background-color: #536c78;
   background-size: 1px 120px;
   background-clip: border-box;
-  background-image: linear-gradient(to bottom, #636E73, #626c71); }
+  background-image: linear-gradient(to bottom, #546e7a, #536c78); }
 
 UnityDecoration.bottom {
   background-size: 1px;
   background-repeat: repeat-x;
-  background-color: #626c71; }
+  background-color: #536c78; }
 
 UnityDecoration.left:backdrop,
 UnityDecoration.right:backdrop,
 UnityDecoration.bottom:backdrop {
   background-size: 1px;
   background-repeat: repeat-x;
-  background-color: #4b5458; }
+  background-color: #3f535c; }
 
 /**************
 * Unity Panel *
 ***************/
 UnityPanelWidget,
 .unity-panel {
-  background-color: #343a3c;
+  background-color: #2a383e;
   color: #dbdee0; }
 
 UnityPanelWidget:backdrop,
 .unity-panel:backdrop {
-  background-color: #1c1f21;
+  background-color: #161c1f;
   color: #c0c5c8; }
 
 .unity-panel.menuitem,
@@ -5789,7 +5789,7 @@ UnityPanelWidget:backdrop,
 
 .unity-panel.menu.menubar,
 .unity-panel .menu .menubar {
-  background-color: #343a3c;
+  background-color: #2a383e;
   color: #dbdee0; }
 
 .unity-panel.menubar:backdrop,
@@ -5809,7 +5809,7 @@ UnityPanelWidget:backdrop,
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem:hover {
   border-radius: 0;
-  background-color: #616b70;
+  background-color: #526b77;
   color: #dbdee0;
   box-shadow: none; }
 

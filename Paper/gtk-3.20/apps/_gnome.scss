@@ -54,11 +54,19 @@ CheeseThumbView /* Cheese */
  * Terminal *
  ************/
 
-$gnome_terminal: #636E73;
+$gnome_terminal: #546e7a;
+$terminal_bg_color: transparentize(#002B36, 0.1);
+$terminal_fg_color: #839495;
+
+TerminalScreen,
+VteTerminal {
+  background-color: $terminal_bg_color;
+  color: $terminal_fg_color;
+}
 
 TerminalWindow {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_terminal;
 
     &:backdrop {
@@ -83,7 +91,7 @@ NautilusCanvasView {
 
 .nautilus-circular-button {
   border-radius: 20px;
-  -gtk-outline-radius: 20px;
+  outline-radius: 20px;
 }
 
 .disk-space-display {
@@ -108,7 +116,7 @@ NautilusCanvasView {
 
 .nautilus-desktop {
 
-    color: $fg_color;
+  color: $fg_color;
 
   .nautilus-canvas-item {
     border-radius: 5px;
@@ -120,7 +128,7 @@ NautilusCanvasView {
       text-shadow: none;
     }
 
-    &:hover {
+    &:prelight {
       color: $fg_color;
       text-shadow: none;
     }
@@ -156,7 +164,7 @@ $gnome_builder: #CBBB2E;
 GbGreeterWindow,
 GbWorkbench {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_builder;
 
     &:backdrop {
@@ -177,7 +185,7 @@ MathWindow {
   border-radius: 0 0 4px 4px;
 
   .titlebar,
-  .header-bar,
+  headerbar,
   .toolbar  {
     background-color: $gnome_calculator;
 
@@ -238,7 +246,7 @@ $gnome_calendar: #75A3F6;
 
 GcalWindow {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_calendar;
 
     &:backdrop {
@@ -255,7 +263,7 @@ $cheese: #ad7fa8;
 
 CheeseWindow {
   .titlebar,
-  .header-bar,
+  headerbar,
   .toolbar  {
     background-color: $cheese;
 
@@ -273,7 +281,7 @@ $gnome_contacts: #2095F2;
 
 ContactsWindow {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_contacts;
 
     &:backdrop {
@@ -291,7 +299,7 @@ $gnome_clocks: #4BAE4F;
 
 ClocksWindow {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_clocks;
 
     &:backdrop {
@@ -309,7 +317,7 @@ $gnome_disks: #8561C5;
 
 GduWindow {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_disks;
 
     &:backdrop {
@@ -327,7 +335,7 @@ $gnome_baobab: #CC5E55;
 
 BaobabWindow {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_baobab;
 
     &:backdrop {
@@ -344,7 +352,7 @@ $gnome_documents: #C2352A;
 
 #Documents {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_documents;
 
     &:backdrop {
@@ -361,7 +369,7 @@ $gnome_epiphany: #6573C3;
 
 EphyWindow {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_epiphany;
 
     &:backdrop {
@@ -390,13 +398,16 @@ $gedit: #DC4836;
 
 GeditWindow {
   .titlebar,
-  .header-bar,
-  .gedit-headerbar-paned {
+  headerbar {
     background-color: $gedit;
 
     &:backdrop {
       background-color: darken($gedit,10%);
     }
+  }
+
+  > .entry {
+    @extend %entry;
   }
 }
 
@@ -409,7 +420,7 @@ $gnome_logs: #009587;
 GlWindow,
 LogviewWindow {
   .titlebar,
-  .header-bar,
+  headerbar,
   .toolbar {
     background-color: $gnome_logs;
 
@@ -427,7 +438,7 @@ $gnome_music: #fe9700;
 
 gnomemusic+window+Window {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_music;
 
     &:backdrop {
@@ -446,7 +457,7 @@ $bijiben: #ebdd4d;
 BjbMainToolbar,
 BjbWindowBase {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $bijiben;
 
     &:backdrop {
@@ -463,7 +474,7 @@ $gnome_photos: #D30101;
 
 PhotosMainWindow {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_photos;
 
     &:backdrop {
@@ -478,7 +489,7 @@ PhotosMainWindow {
 $polari: #4BAE4F;
 
 .titlebar,
-.header-bar {
+headerbar {
   &.polari-titlebar-left,
   &.polari-titlebar-right {
     background-color: $polari;
@@ -497,7 +508,7 @@ $gnome_settings: #5F7C8A;
 
 CcWindow {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_settings;
 
     &:backdrop {
@@ -518,7 +529,7 @@ $gnome_software: #1A77C2;
 
 #window_software {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_software;
 
     &:backdrop {
@@ -535,7 +546,7 @@ $gnome_system_monitor: #6fbe72;
 
 #gnome-system-monitor {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $gnome_system_monitor;
 
     &:backdrop {
@@ -546,6 +557,23 @@ $gnome_system_monitor: #6fbe72;
 
 
 /********
+ * ToDo *
+ ********/
+
+$gnome_todo: #3262A1;
+
+GtdWindow {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_todo;
+
+    &:backdrop {
+      background-color: darken($gnome_todo,10%);
+    }
+  }
+}
+
+/********
  * Yelp *
  ********/
 
@@ -553,7 +581,7 @@ $yelp: #435ece;
 
 YelpWindow {
   .titlebar,
-  .header-bar {
+  headerbar {
     background-color: $yelp;
 
     &:backdrop {

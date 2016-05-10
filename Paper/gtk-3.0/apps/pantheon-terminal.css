@@ -20,7 +20,7 @@
 @define-color pantheonTerminal #3B4245;
 @define-color terminal_background alpha(#002B36, 0.9);
 @define-color terminal_text #839495;
-@define-color terminal_window #636E73;
+@define-color terminal_window #546e7a;
 @define-color terminal_window_text #dbdee0;
 @define-color backdrop_terminal_window_text  shade(@terminal_window_text, 0.8);
 @define-color insensitive_terminal_window_text  shade(@terminal_window_text, 0.95);
