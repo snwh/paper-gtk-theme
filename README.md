@@ -25,6 +25,6 @@ This procedure requires ```autotools``` on your system.
 
 Alternatively you may install Paper with the provided installation script:
 
-    ./install-gtk-theme.sh
+    ./install.sh
 
 -----------
