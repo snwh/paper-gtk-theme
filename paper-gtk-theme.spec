@@ -1,6 +1,7 @@
+#
 # Spec file for package paper-gtk-theme
 #
-# Copyright (c) 2016 Sam Hewitt <sam@snwh.org>
+# Copyright (c) 2016 Sam Hewitt
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -12,35 +13,37 @@
 # published by the Open Source Initiative.
 #
 
-
-# GitHub Stuff
-%global commit0 40-CHARACTER-HASH-VALUE
-
-name:       paper-gtk-theme
-version:    2.0
-release:    0
-
-Summary:    Paper GTK Theme
-Group:      System/GUI/Other
-License:    GPL-3.0+
-Url:        http://snwh.org/paper/
-Source0:    https://github.com/snwh/%{name}/archive/%{commit0}.tar.gz
-Requires:   gtk2-engines
-BuildArch:  noarch
-
+Name:           paper-gtk-theme
+Version:        2.0
+Release:        0
+License:        GPL-3.0+
+Summary:        Paper GTK theme
+Url:            https://snwh.org/paper
+Group:          System/GUI/Other
+Source:         %{name}-%{version}.tar.xz
+BuildRequires:  automake
+BuildRoot:      %{_tmppath}/%{name}-%{version}-build
+BuildArch:      noarch
+Requires:       gtk2-engines
 
 %description
-Paper GTK Theme
+Paper is a modern desktop theme suite. Its design is mostly flat with a minimal use of shadows for depth.
 
 %prep
-%setup -qn %{name}-%{commit0}
+%setup -q
+find -L . -type l -print -delete
+chmod a-x AUTHORS README.md
 
 %build
+./autogen.sh
+make %{?_smp_mflags}
 
 %install
-install -dpm 0755 $RPM_BUILD_ROOT%{_datadir}/themes/
-cp -a Paper/ $RPM_BUILD_ROOT%{_datadir}/themes/
+make install DESTDIR=%{buildroot} %{?_smp_mflags}
+rm -f %{buildroot}%{_datadir}/theme/Paper/AUTHORS
+%fdupes %{buildroot}%{_datadir}/theme/Paper
 
 %files
-%doc AUTHORS LICENSE
-%{_datadir}/themes/Paper/
+%defattr(-,root,root)
+%doc AUTHORS LICENSE_* README.md
+%{_datadir}/theme/Paper
