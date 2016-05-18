@@ -31,7 +31,7 @@ Paper is a modern desktop theme suite. Its design is mostly flat with a minimal 
 
 %prep
 %setup -q
-find -L . -type l -print -delete
+chmod +x autogen.sh
 chmod a-x AUTHORS README.md
 
 %build
@@ -40,10 +40,9 @@ make %{?_smp_mflags}
 
 %install
 make install DESTDIR=%{buildroot} %{?_smp_mflags}
-rm -f %{buildroot}%{_datadir}/theme/Paper/AUTHORS
-%fdupes %{buildroot}%{_datadir}/theme/Paper
+rm -f %{buildroot}%{_datadir}/themes/Paper/AUTHORS
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS LICENSE_* README.md
-%{_datadir}/theme/Paper
+%doc AUTHORS LICENSE README.md
+%{_datadir}/themes/Paper
