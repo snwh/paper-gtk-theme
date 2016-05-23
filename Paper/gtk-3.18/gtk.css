@@ -4934,6 +4934,54 @@ treeview.view header button:active {
     border-left: 2px solid rgba(0, 0, 0, 0.2);
     border-right: 2px solid #347D9F; }
 
+.top .budgie-panel {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1); }
+
+.top .raven-frame {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
+
+.top .shadow-block {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent, transparent); }
+
+.bottom .budgie-panel {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1); }
+
+.bottom .raven-frame {
+  border-top: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
+
+.bottom .shadow-block {
+  background-color: transparent;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent, transparent); }
+
+.left .budgie-panel {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1); }
+
+.left .raven-frame {
+  border-right: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
+
+.left .shadow-block {
+  background-color: transparent;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent, transparent); }
+
+.right .budgie-panel {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1); }
+
+.right .raven-frame {
+  border-left: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
+
+.right .shadow-block {
+  background-color: transparent;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent, transparent); }
+
 .budgie-container {
   background-image: none;
   background-color: transparent; }
@@ -4954,72 +5002,35 @@ treeview.view header button:active {
   color: inherit; }
 
 .budgie-panel {
-  font: bold;
-  font-size: 100%;
   color: #cfd8dc;
   background-color: #263238; }
   .budgie-panel:backdrop {
     color: #cfd8dc;
     background-color: #263238; }
+  .budgie-panel BudgieMenuApplet {
+    font: bold; }
+    .budgie-panel BudgieMenuApplet .label {
+      color: #cfd8dc;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.2); }
+  .budgie-panel ClockApplet {
+    font: monospace bold;
+    font-size: 90%; }
+    .budgie-panel ClockApplet .label {
+      color: #cfd8dc;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.2); }
   .budgie-panel WnckTasklist .button,
   .budgie-panel WnckTasklist .button:backdrop {
     border-radius: 0; }
   .budgie-panel .launcher {
+    transition: all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     padding-left: 2px;
     padding-right: 2px;
     border-color: rgba(38, 50, 56, 0); }
     .budgie-panel .launcher:hover {
       -gtk-image-effect: highlight; }
 
-.top .budgie-panel {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: none; }
-
-.top .raven-frame {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
-
-.top .shadow-block {
-  background-color: transparent;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent); }
-
-.bottom .budgie-panel {
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: none; }
-
-.bottom .raven-frame {
-  border-top: 1px solid rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
-
-.bottom .shadow-block {
-  background-color: transparent;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent); }
-
-.left .budgie-panel {
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: none; }
-
-.left .raven-frame {
-  border-right: 1px solid rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
-
-.left .shadow-block {
-  background-color: transparent;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent); }
-
-.right .budgie-panel {
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: none; }
-
-.right .raven-frame {
-  border-left: 1px solid rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
-
-.right .shadow-block {
-  background-color: transparent;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent); }
-
 .raven {
+  border: none;
   color: #444;
   background-color: rgba(247, 247, 247, 0.98); }
   .raven .raven-header {
