@@ -2,20 +2,21 @@
 // it gets @if ed depending on $variant
 
 // Main definitions
-$base_color: if($variant == 'light', #ffffff, #6a7981);
-$bg_color: if($variant == 'light', #f7f7f7, #4F585C);
-$fg_color: if($variant == 'light', #444, lighten(#e4e6e7, 10%));
+$base_color: if($variant == 'light', #ffffff, #455a64);
+$bg_color: if($variant == 'light', #f7f7f7, #37474f);
+$fg_color: if($variant == 'light', #444, #cfd8dc);
 $text_color: if($variant == 'light', $fg_color, $fg_color);
-$headerbar_bg_color: if($variant == 'light', #546e7a, #3B4245);
+$headerbar_bg_color: if($variant == 'light', #546e7a, #303e45);
 $headerbar_fg_color: if($variant == 'light', #ffffff, transparentize(#ffffff, 0.2));
 
 // Primary colors
-$red: #f34235;
-$orange: #fe9700;
-$yellow: #fec006;
-$green: #4bae4f;
-$blue: #2095f2;
-$purple: #9b26af;
+$red: #F44336;
+$orange: #ff5722;
+$yellow: #f9ce1d;
+$green: #4caf50;
+$blue: #2196f3;
+$purple: #9c27b0;
+
 
 $selected_fg_color: #ffffff;
 $selected_bg_color: if($variant == 'light', #347D9F, lighten(#347D9F,10%));
@@ -42,7 +43,7 @@ $success_color: if($variant == 'light', $green, darken($green,10%));
 $destructive_color: if($variant == 'light', $red, darken($red,10%));
 $suggested_color: if($variant == 'light', $selected_bg_color, darken($selected_bg_color,10%));
 
-$osd_fg_color: #e4e6e7;
+$osd_fg_color: #cfd8dc;
 $osd_text_color: white;
 $osd_bg_color: transparentize(#202526, 0.2);
 $osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
