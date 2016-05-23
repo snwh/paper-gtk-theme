@@ -43,8 +43,9 @@ $asset_suffix: if($variant == 'default', '', '-hc');
 .budgie-container {
   border: none;
   box-shadow: none;
-  background: none;
+  background: transparent;
   font-size: 100%;
+  transition: 170ms ease-out;
 }
 
 // Budgie Menu
@@ -147,14 +148,20 @@ $asset_suffix: if($variant == 'default', '', '-hc');
   transition: 170ms ease-out;
 
   .raven-header {
+    font: bold;
+    text-shadow: 0 1px $shadow_color;
     background-color: $bg_color;
     color: $fg_color;
     border-top: 1px solid $borders_color;
     border-bottom: 1px solid $borders_color;
-    box-shadow:inset 0 1px 0 0 transparentize(white,0.9), 0 1px 1px 0 transparentize(black,0.9);
+    box-shadow:inset 0 1px 0 0 transparentize(white,0.9),inset 0 -1px 0 0 transparentize(white,0.95), 0 1px 1px 0 transparentize(black,0.9);
 
     &.top { border-top-style: none; }
     &.bottom { border-bottom-style: none; }
+
+    >.button {
+      font:normal;
+    }
   }
 
   @if $variant=='default' {
@@ -198,9 +205,9 @@ $asset_suffix: if($variant == 'default', '', '-hc');
 
 // MPRIS Applet
 .raven-mpris {
-  // color: $mpris_overlay_fg;
-  // background-color: $mpris_overlay_bg;
-  // border: solid $mpris_overlay_border;
+  color: $budgie_panel_fg_color;
+  background-color: transparentize($budgie_panel_bg_color, 0.2);
+  border: solid transparentize(black, 0.8);
   border-width: 1px 0;
 
   .button.image-button { padding: 8px; }
