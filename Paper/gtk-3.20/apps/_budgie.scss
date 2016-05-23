@@ -169,7 +169,7 @@ $asset_suffix: if($variant == 'default', '', '-hc');
   }
 
   .raven-background {
-    background-color: $base_color;
+    background-color: transparentize($bg_color, 0.02);
     border-bottom: 1px solid $borders_color;
     box-shadow:inset 0 1px 0 0 transparentize(white,0.9), 0 1px 1px 0 transparentize(black,0.9);
 
