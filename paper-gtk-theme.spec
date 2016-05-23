@@ -15,7 +15,7 @@
 
 Name:           paper-gtk-theme
 Version:        2.0
-Release:        0
+Release:        1
 License:        GPL-3.0+
 Summary:        Paper GTK theme
 Url:            https://snwh.org/paper
