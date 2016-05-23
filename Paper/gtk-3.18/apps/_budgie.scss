@@ -41,11 +41,13 @@ $asset_suffix: if($variant == 'default', '', '-hc');
 
 // Budgie
 .budgie-container {
-  border: none;
-  box-shadow: none;
-  background: transparent;
-  font-size: 100%;
-  transition: 170ms ease-out;
+  background-image: none;
+  background-color: transparent;
+
+  &:backdrop {
+    background-image: none;
+    background-color: transparent;
+  }
 }
 
 // Budgie Menu
@@ -145,7 +147,6 @@ $asset_suffix: if($variant == 'default', '', '-hc');
 .raven {
   color: $fg_color;
   background-color: transparentize($bg_color, 0.02);
-  transition: 170ms ease-out;
 
   .raven-header {
     font: bold;
@@ -160,9 +161,6 @@ $asset_suffix: if($variant == 'default', '', '-hc');
     &.top { border-top-style: none; }
     &.bottom { border-bottom-style: none; }
 
-    >.button {
-      font:normal;
-    }
   }
 
   @if $variant=='default' {
@@ -170,12 +168,20 @@ $asset_suffix: if($variant == 'default', '', '-hc');
   }
 
   .raven-background {
-    background:transparent;
+    background-color: $base_color;
     border-bottom: 1px solid $borders_color;
     box-shadow:inset 0 1px 0 0 transparentize(white,0.9), 0 1px 1px 0 transparentize(black,0.9);
 
     &.middle { border-bottom-style: none; }  // applet background between two headers
+
   }
+
+  .raven-calendar {
+    border:none;
+    padding: 2px;
+    border-bottom:1px solid $borders_color;
+  }
+
 
   .powerstrip {
     background-color: transparent;
@@ -192,9 +198,12 @@ $asset_suffix: if($variant == 'default', '', '-hc');
     font-size: 100%;
 
     &:hover {
-      background: transparentize(black,0.9);
-      border: 1px solid transparentize(black,0.8);
       box-shadow: inset 0 1px transparentize(white,0.9), 1px 1px transparentize(black,0.8);
+      transition: 170ms ease all;
+    }
+
+    &:active {
+      box-shadow: 0 1px transparentize(white,0.9);
       transition: 170ms ease all;
     }
   }
@@ -219,13 +228,16 @@ $asset_suffix: if($variant == 'default', '', '-hc');
 
 // Notifications
 .budgie-notification-window {
-  border-radius: 1px;
+  border:none;
+  border-top: 1px solid transparentize(white,0.9);
+  border-radius: 4px;
+  background-color: $bg_color;
+  box-shadow: 0 2px 2px 0 $shadow_color;
 }
 
 .budgie-notification {
+
   &.background {
-    background-color: white;
-    border-radius: 4px;
   }
 
   .notification-title {
@@ -233,7 +245,10 @@ $asset_suffix: if($variant == 'default', '', '-hc');
     color: $fg_color;
   }
 
-  .notification-body { color: transparentize($budgie_panel_fg_color, 0.3); }
+  .notification-body {
+    border:none;
+    color: transparentize($budgie_panel_fg_color, 0.3);
+  }
 }
 
 .drop-shadow {

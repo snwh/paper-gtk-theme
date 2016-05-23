@@ -4245,36 +4245,33 @@ GtkSwitch {
   outline-offset: -4px;
   transition: all 200ms ease-in;
   border: none;
-  border-radius: 14px;
+  border-radius: 16px;
   color: transparent;
   background-color: rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0px 1px rgba(255, 255, 255, 0.3); }
   GtkSwitch:insensitive {
-    background-color: rgba(0, 0, 0, 0.1); }
-  GtkSwitch:backdrop {
-    background-color: #f7f7f7;
-    transition: 200ms ease-out; }
-    GtkSwitch:backdrop:insensitive {
-      background-color: #fafafa; }
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1); }
   GtkSwitch:active, GtkSwitch:checked {
     background-color: #347D9F; }
     GtkSwitch:active:backdrop, GtkSwitch:checked:backdrop {
       background-color: #3a8cb2; }
-      GtkSwitch:active:backdrop .slider:backdrop,
-      GtkSwitch:active:backdrop slider:backdrop, GtkSwitch:checked:backdrop .slider:backdrop,
-      GtkSwitch:checked:backdrop slider:backdrop {
-        box-shadow: none;
-        background-color: rgba(247, 247, 247, 0.9);
-        border: none; }
   GtkSwitch .slider {
-    padding: 2px;
-    border-radius: 50%;
+    border: none;
+    padding: 3px;
+    border-radius: 12px;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    background-color: #f7f7f7;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2); }
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+    GtkSwitch .slider:active {
+      background-color: white;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
     GtkSwitch .slider:backdrop {
-      box-shadow: none; }
+      background-color: #fcfcfc;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
     GtkSwitch .slider:insensitive {
+      background-color: #f2f2f2;
+      border: 1px solid rgba(0, 0, 0, 0.2);
       box-shadow: none; }
   GtkSwitch .trough:active, GtkSwitch .trough:checked {
     background-color: #347D9F; }
@@ -4938,11 +4935,11 @@ treeview.view header button:active {
     border-right: 2px solid #347D9F; }
 
 .budgie-container {
-  border: none;
-  box-shadow: none;
-  background: transparent;
-  font-size: 100%;
-  transition: 170ms ease-out; }
+  background-image: none;
+  background-color: transparent; }
+  .budgie-container:backdrop {
+    background-image: none;
+    background-color: transparent; }
 
 .budgie-menu GtkSearchEntry.entry:not(:selected) {
   border: none;
@@ -5024,8 +5021,7 @@ treeview.view header button:active {
 
 .raven {
   color: #444;
-  background-color: rgba(247, 247, 247, 0.98);
-  transition: 170ms ease-out; }
+  background-color: rgba(247, 247, 247, 0.98); }
   .raven .raven-header {
     font: bold;
     text-shadow: 0 1px rgba(0, 0, 0, 0.2);
@@ -5039,14 +5035,16 @@ treeview.view header button:active {
       border-top-style: none; }
     .raven .raven-header.bottom {
       border-bottom-style: none; }
-    .raven .raven-header > .button {
-      font: normal; }
   .raven .raven-background {
-    background: transparent;
+    background-color: #ffffff;
     border-bottom: 1px solid #d1d1d1;
     box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
     .raven .raven-background.middle {
       border-bottom-style: none; }
+  .raven .raven-calendar {
+    border: none;
+    padding: 2px;
+    border-bottom: 1px solid #d1d1d1; }
   .raven .powerstrip {
     background-color: transparent;
     border: none;
@@ -5059,9 +5057,10 @@ treeview.view header button:active {
     box-shadow: 0 1px rgba(255, 255, 255, 0.1);
     font-size: 100%; }
     .raven .powerstrip .button:hover {
-      background: rgba(0, 0, 0, 0.1);
-      border: 1px solid rgba(0, 0, 0, 0.2);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 1px 1px rgba(0, 0, 0, 0.2);
+      transition: 170ms ease all; }
+    .raven .powerstrip .button:active {
+      box-shadow: 0 1px rgba(255, 255, 255, 0.1);
       transition: 170ms ease all; }
   .raven .option-subtitle {
     font-size: smaller; }
@@ -5078,15 +5077,17 @@ treeview.view header button:active {
     padding: 8px; }
 
 .budgie-notification-window {
-  border-radius: 1px; }
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
 
-.budgie-notification.background {
-  background-color: white;
-  border-radius: 4px; }
 .budgie-notification .notification-title {
   font-size: 110%;
   color: #444; }
 .budgie-notification .notification-body {
+  border: none;
   color: rgba(207, 216, 220, 0.7); }
 
 .drop-shadow, .budgie-session-dialog.background, .background.budgie-polkit-dialog {
