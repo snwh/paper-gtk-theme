@@ -183,7 +183,7 @@ $asset_suffix: if($variant == 'default', '', '-hc');
     GtkSwitch {
       -GtkSwitch-slider-width: 16px;
       -GtkSwitch-slider-height: 16px;
-      border-radius: 10px;
+      border-radius: 12px;
 
       .slider {
         border-radius: 8px;
