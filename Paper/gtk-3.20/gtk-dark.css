@@ -2148,7 +2148,7 @@ messagedialog .titlebar {
   border-style: none;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
   messagedialog .titlebar:backdrop {
     background-color: #37474f; }
 messagedialog.csd {
@@ -2242,7 +2242,7 @@ entry {
   spinbutton:focus:not(.vertical), GeditWindow > .entry:focus,
   entry:focus {
     box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-    border-color: #347d9f; }
+    border-color: #222c31; }
   spinbutton:disabled:not(.vertical), GeditWindow > .entry:disabled,
   entry:disabled {
     color: #839096;
@@ -2360,7 +2360,7 @@ entry, GeditWindow.linked:not(.vertical) > .entry:focus +
 entry, .linked:not(.vertical) >
 entry:focus +
 entry {
-  border-left-color: #347d9f; }
+  border-left-color: #222c31; }
 .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + spinbutton:not(.vertical), GeditWindow.linked:not(.vertical) > .entry:drop(active) + spinbutton:not(.vertical), GeditWindow.linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + .entry, GeditWindow.linked:not(.vertical) > .entry:drop(active) + .entry, .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + button, GeditWindow.linked:not(.vertical) > .entry:drop(active) + button, .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + combobox > box > button.combo, GeditWindow.linked:not(.vertical) > .entry:drop(active) + combobox > box > button.combo, .linked:not(.vertical) >
 entry:drop(active) + spinbutton:not(.vertical), GeditWindow.linked:not(.vertical) > entry:drop(active) + .entry, .linked:not(.vertical) >
 entry:drop(active) + button, .linked:not(.vertical) >
@@ -2390,7 +2390,7 @@ GeditWindow.linked.vertical > .entry + entry:focus:not(:only-child), .linked.ver
 entry + spinbutton:focus:not(:only-child):not(.vertical), GeditWindow.linked.vertical > entry + .entry:focus:not(:only-child),
 .linked.vertical >
 entry + entry:focus:not(:only-child) {
-  border-top-color: #347d9f; }
+  border-top-color: #222c31; }
 .linked.vertical > spinbutton:not(.vertical) + spinbutton:drop(active):not(:only-child):not(.vertical), GeditWindow.linked.vertical > .entry + spinbutton:drop(active):not(:only-child):not(.vertical), GeditWindow.linked.vertical > spinbutton:not(.vertical) + .entry:drop(active):not(:only-child), GeditWindow.linked.vertical > .entry + .entry:drop(active):not(:only-child),
 .linked.vertical > spinbutton:not(.vertical) + entry:drop(active):not(:only-child),
 GeditWindow.linked.vertical > .entry + entry:drop(active):not(:only-child), .linked.vertical >
@@ -2420,7 +2420,7 @@ entry:focus:not(:only-child) + button,
 entry:focus:not(:only-child) + .button,
 .linked.vertical >
 entry:focus:not(:only-child) + combobox > box > button.combo {
-  border-top-color: #347d9f; }
+  border-top-color: #222c31; }
 .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + spinbutton:not(.vertical), GeditWindow.linked.vertical > .entry:drop(active):not(:only-child) + spinbutton:not(.vertical), GeditWindow.linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + .entry, GeditWindow.linked.vertical > .entry:drop(active):not(:only-child) + .entry,
 .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + entry,
 GeditWindow.linked.vertical > .entry:drop(active):not(:only-child) + entry,
@@ -2551,7 +2551,7 @@ placesview > actionbar > revealer > box > label {
   border-style: solid solid none;
   border-color: #222c31;
   border-radius: 3px 3px 0 0;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
   .floating-bar.bottom.left {
     border-left-style: none;
     border-top-left-radius: 0; }
@@ -2834,11 +2834,11 @@ GraniteWidgetsWelcome {
   .storage-bar .fill-block.app {
     background-color: #2196f3; }
   .storage-bar .fill-block.audio {
-    background-color: #ff5722; }
+    background-color: #ff9800; }
   .storage-bar .fill-block.photo {
     background-color: #F44336; }
   .storage-bar .fill-block.video {
-    background-color: #9c27b0; }
+    background-color: #673ab7; }
   .storage-bar .fill-block .legend {
     padding: 12px;
     border-radius: 4px; }
@@ -2851,12 +2851,12 @@ headerbar {
   padding: 0 8px;
   border: none;
   border-radius: 4px 4px 0 0;
-  background-color: #303e45;
+  background-color: #303f46;
   color: rgba(255, 255, 255, 0.8);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
   .titlebar:backdrop:not(headerbar),
   headerbar:backdrop {
-    background-color: #303e45;
+    background-color: #303f46;
     color: rgba(255, 255, 255, 0.6);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0);
     transition: 200ms ease-out; }
@@ -2880,9 +2880,9 @@ headerbar {
     border-radius: 4px 4px 0 0;
     color: #ffffff;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
-    border-color: #347d9f;
+    border-color: #222c31;
     background-color: #347D9F;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
     .selection-mode.titlebar:backdrop:not(headerbar),
     headerbar.selection-mode:backdrop {
       background-color: #275f79;
@@ -2916,7 +2916,7 @@ headerbar {
   .default-decoration.titlebar:not(headerbar),
   headerbar.default-decoration {
     padding: 6px;
-    background-color: #303e45;
+    background-color: #303f46;
     color: rgba(255, 255, 255, 0.8); }
     .default-decoration.titlebar:not(headerbar) .maximized,
     headerbar.default-decoration .maximized {
@@ -2924,7 +2924,7 @@ headerbar {
       border-radius: 0; }
     .default-decoration.titlebar:backdrop:not(headerbar),
     headerbar.default-decoration:backdrop {
-      background-color: #263036;
+      background-color: #263137;
       color: rgba(255, 255, 255, 0.6); }
   .titlebar:not(headerbar) entry,
   headerbar entry {
@@ -3217,12 +3217,12 @@ headerbar {
       .titlebar:not(headerbar) button.titlebutton:active,
       headerbar button.titlebutton:active {
         background-color: rgba(255, 255, 255, 0.8);
-        color: #303e45;
+        color: #303f46;
         border-radius: 50%;
         box-shadow: none; }
         .titlebar:not(headerbar) button.titlebutton:active GtkImage,
         headerbar button.titlebutton:active GtkImage {
-          color: #303e45; }
+          color: #303f46; }
   .titlebar:not(headerbar) .separator,
   headerbar .separator {
     color: transparent;
@@ -3239,13 +3239,13 @@ headerbar:last-child, headerbar:last-child:backdrop {
 
 window.csd > .titlebar:not(headerbar) {
   padding: 0;
-  background-color: #303e45;
+  background-color: #303f46;
   background-image: none;
   border-style: none;
   border-color: transparent;
   box-shadow: none; }
   window.csd > .titlebar:not(headerbar):backdrop {
-    background-color: #263036; }
+    background-color: #263137; }
 
 /**************
  * GtkInfoBar *
@@ -3499,10 +3499,10 @@ menubar {
   -GtkWidget-window-dragging: true;
   padding: 0px;
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.1);
-  background-color: #303e45;
+  background-color: #303f46;
   color: rgba(255, 255, 255, 0.8); }
   menubar:backdrop {
-    background-color: #263036; }
+    background-color: #263137; }
   menubar > menuitem {
     min-height: 16px;
     padding: 4px 8px; }
@@ -4219,7 +4219,7 @@ progressbar, scale trough, scale fill {
     levelbar.vertical row:selected .trough:disabled, row:selected GtkProgressBar:disabled,
     row:selected .progressbar:disabled,
     row:selected progressbar:disabled, row:selected scale trough:disabled, scale row:selected trough:disabled, row:selected scale fill:disabled, scale row:selected fill:disabled {
-      border-color: #347d9f; }
+      border-color: #222c31; }
   .osd levelbar trough, levelbar .osd trough,
   .osd levelbar.horizontal .trough,
   levelbar.horizontal .osd .trough,
@@ -4246,9 +4246,9 @@ GtkProgressBar progress,
 .progressbar progress,
 progressbar .progressbar,
 progressbar progress, scale highlight {
-  border: 1px solid #347d9f;
+  border: 1px solid #222c31;
   background-color: #449ac2;
-  box-shadow: inset 0px 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0px 1px rgba(255, 255, 255, 0.3);
   border-radius: 4px; }
   GtkProgressBar .progressbar:disabled,
   GtkProgressBar progress:disabled,
@@ -4321,7 +4321,7 @@ progressbar progress, scale highlight {
   progressbar row:selected .progressbar,
   row:selected progressbar progress,
   progressbar row:selected progress, row:selected scale highlight, scale row:selected highlight {
-    border-color: #347d9f; }
+    border-color: #222c31; }
   .osd GtkProgressBar .progressbar, GtkProgressBar .osd .progressbar,
   .osd GtkProgressBar progress,
   GtkProgressBar .osd progress,
@@ -4407,7 +4407,7 @@ scale {
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition-property: background, border, box-shadow; }
     scale slider:active {
-      border-color: #347d9f; }
+      border-color: #222c31; }
     scale slider:disabled {
       border-color: #222c31;
       background-image: none;
@@ -4442,7 +4442,7 @@ scale {
         scale slider:backdrop:disabled label, scale slider:backdrop:disabled {
           color: #56707c; }
     row:selected scale slider, row:selected scale slider:disabled {
-      border-color: #347d9f; }
+      border-color: #222c31; }
     .osd scale slider {
       color: #cfd8dc;
       border-color: rgba(0, 0, 0, 0.7);
@@ -5477,10 +5477,10 @@ switch {
  ************/
 toolbar {
   padding: 0px;
-  background-color: #303e45;
+  background-color: #303f46;
   color: rgba(255, 255, 255, 0.8); }
   toolbar:backdrop {
-    background-color: #263036;
+    background-color: #263137;
     color: rgba(255, 255, 255, 0.6); }
 
 .osd toolbar {
@@ -5923,7 +5923,7 @@ treeview.view {
   treeview.view:drop(active) {
     border-style: solid none;
     border-width: 1px;
-    border-color: #347d9f; }
+    border-color: #222c31; }
     GtkTreeView.view:drop(active).after,
     treeview.view:drop(active).after {
       border-top-style: none; }
@@ -5957,7 +5957,7 @@ treeview.view {
       color: #718188; }
   GtkTreeView.view.progressbar,
   treeview.view.progressbar {
-    border: 1px solid #347d9f;
+    border: 1px solid #222c31;
     border-radius: 4px;
     background-color: #449ac2;
     background-image: linear-gradient(to bottom, #449ac2, #347d9f);
@@ -7327,7 +7327,7 @@ ConversationListView {
   padding-top: 20px;
   padding-bottom: 0px;
   border-style: none;
-  background-color: #303e45;
+  background-color: #303f46;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border: solid rgba(0, 0, 0, 0.1);

@@ -6,26 +6,25 @@ $base_color: if($variant == 'light', #ffffff, #455a64);
 $bg_color: if($variant == 'light', #f7f7f7, #37474f);
 $fg_color: if($variant == 'light', #444, #cfd8dc);
 $text_color: if($variant == 'light', $fg_color, $fg_color);
-$headerbar_bg_color: if($variant == 'light', #546e7a, #303e45);
+$headerbar_bg_color: if($variant == 'light', #546e7a, darken($base_color, 10%));
 $headerbar_fg_color: if($variant == 'light', #ffffff, transparentize(#ffffff, 0.2));
 
 // Primary colors
 $red: #F44336;
-$orange: #ff5722;
+$orange: #ff9800;
 $yellow: #f9ce1d;
 $green: #4caf50;
 $blue: #2196f3;
-$purple: #9c27b0;
+$purple: #673ab7;
 
-
+$borders_color: if($variant == 'light', darken($bg_color,20%), darken($bg_color,10%));
+$borders_edge: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.9));
 $selected_fg_color: #ffffff;
 $selected_bg_color: if($variant == 'light', #347D9F, lighten(#347D9F,10%));
-$selected_borders_color: darken($selected_bg_color, 10%);
-$borders_color: if($variant == 'light', darken($bg_color,15%), darken($bg_color,10%));
-$borders_edge: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.9));
+$selected_borders_color: if($variant == 'light', darken($selected_bg_color, 10%), $borders_color);
 $link_color: blue;
 $link_visited_color:transparentize($link_color,0.5);
-$top_highlight: $borders_edge;
+$top_highlight: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.7));
 $bottom_highlight: if($variant == 'light', transparentize(white, 0.7), transparentize(white, 0.9));
 $dark_fill: mix($borders_color, $bg_color, 35%);
 $menu_color: if($variant == 'light', $base_color, mix($bg_color, $base_color, 20%));

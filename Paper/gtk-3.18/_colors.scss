@@ -11,11 +11,11 @@ $headerbar_fg_color: if($variant == 'light', #ffffff, transparentize(#ffffff, 0.
 
 // Primary colors
 $red: #F44336;
-$orange: #ff5722;
+$orange: #ff9800;
 $yellow: #f9ce1d;
 $green: #4caf50;
 $blue: #2196f3;
-$purple: #9c27b0;
+$purple: #673ab7;
 
 $borders_color: if($variant == 'light', darken($bg_color,20%), darken($bg_color,10%));
 $borders_edge: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.9));
