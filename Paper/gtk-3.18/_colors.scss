@@ -15,12 +15,13 @@ $orange: #ff9800;
 $yellow: #f9ce1d;
 $green: #4caf50;
 $blue: #2196f3;
+$cyan: #26c6da;
 $purple: #673ab7;
 
 $borders_color: if($variant == 'light', darken($bg_color,20%), darken($bg_color,10%));
 $borders_edge: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.9));
 $selected_fg_color: #ffffff;
-$selected_bg_color: if($variant == 'light', #347D9F, lighten(#347D9F,10%));
+$selected_bg_color: if($variant == 'light', $blue, lighten($blue,10%));
 $selected_borders_color: if($variant == 'light', darken($selected_bg_color, 10%), $borders_color);
 $link_color: blue;
 $link_visited_color:transparentize($link_color,0.5);
@@ -33,7 +34,7 @@ $popover_hover_color: lighten($popover_bg_color, 5%);
 
 $selection_mode_headerbar_bg_color: #347D9F;
 
-$scrollbar_bg_color: if($variant == 'light', mix($bg_color, $fg_color, 80%), mix($base_color, $bg_color, 50%));
+$scrollbar_bg_color: transparent;
 $scrollbar_slider_color: mix($fg_color, $bg_color, 60%);
 $scrollbar_slider_hover_color: mix($fg_color, $bg_color, 80%);
 $scrollbar_slider_active_color: if($variant=='light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));

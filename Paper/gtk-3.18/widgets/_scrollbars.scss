@@ -14,11 +14,14 @@
   background-color: $scrollbar_bg_color;
   transition: 300ms $ease-out-quad;
 
+
   // scrollbar border
-  &.top { border-bottom: 1px solid $borders_color; }
-  &.bottom { border-top: 1px solid $borders_color; }
-  &.left { border-right: 1px solid $borders_color; }
-  &.right { border-left: 1px solid $borders_color; }
+  $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
+  @each $pos, $b_pos in $pos_list {
+    &.#{$pos} & {
+      border-#{$b_pos}: 1px solid $borders_color;
+    }
+  }
 
   &:backdrop {
     background-color: $backdrop_scrollbar_bg_color;
@@ -58,7 +61,7 @@
       background-color: transparent;
 
       .slider {
-        margin: 0;
+        margin: -1px;
         background-color: $fg_color;
         border: 1px solid if($variant == 'light', white, black);
       }
