@@ -5047,11 +5047,11 @@ treeview.view header button:active {
     .raven .raven-header.bottom {
       border-bottom-style: none; }
     .raven .raven-header GtkSwitch {
-      -GtkSwitch-slider-width: 20px;
-      -GtkSwitch-slider-height: 20px;
-      border-radius: 14px; }
+      -GtkSwitch-slider-width: 16px;
+      -GtkSwitch-slider-height: 16px;
+      border-radius: 10px; }
       .raven .raven-header GtkSwitch .slider {
-        border-radius: 10px; }
+        border-radius: 8px; }
   .raven .raven-background {
     background-color: #ffffff;
     border-bottom: 1px solid #d1d1d1;

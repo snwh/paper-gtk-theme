@@ -181,12 +181,12 @@ $asset_suffix: if($variant == 'default', '', '-hc');
     &.bottom { border-bottom-style: none; }
 
     GtkSwitch {
-      -GtkSwitch-slider-width: 20px;
-      -GtkSwitch-slider-height: 20px;
-      border-radius: 14px;
+      -GtkSwitch-slider-width: 16px;
+      -GtkSwitch-slider-height: 16px;
+      border-radius: 10px;
 
       .slider {
-        border-radius: 10px;
+        border-radius: 8px;
       }
     }
 
