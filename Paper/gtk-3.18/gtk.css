@@ -2044,7 +2044,8 @@ GtkFileChooserDialog {
     box-shadow: none; }
   .error.spinbutton:not(.vertical), GeditWindow > .error.entry,
   .entry.error {
-    color: #d32f2f;
+    color: white;
+    background-color: #d32f2f;
     border-color: #d32f2f; }
     .error.spinbutton:focus:not(.vertical), GeditWindow > .error.entry:focus,
     .entry.error:focus {
@@ -2053,10 +2054,12 @@ GtkFileChooserDialog {
     .error.spinbutton:selected:focus:not(.vertical), GeditWindow > .error.entry:selected:focus, .error.spinbutton:selected:not(.vertical), GeditWindow > .error.entry:selected,
     .entry.error:selected:focus,
     .entry.error:selected {
-      background-color: #d32f2f; }
+      background-color: white;
+      color: #d32f2f; }
   .warning.spinbutton:not(.vertical), GeditWindow > .warning.entry,
   .entry.warning {
-    color: #f9ce1d;
+    color: white;
+    background-color: #f9ce1d;
     border-color: #f9ce1d; }
     .warning.spinbutton:focus:not(.vertical), GeditWindow > .warning.entry:focus,
     .entry.warning:focus {
@@ -2065,7 +2068,8 @@ GtkFileChooserDialog {
     .warning.spinbutton:selected:focus:not(.vertical), GeditWindow > .warning.entry:selected:focus, .warning.spinbutton:selected:not(.vertical), GeditWindow > .warning.entry:selected,
     .entry.warning:selected:focus,
     .entry.warning:selected {
-      background-color: #f9ce1d; }
+      background-color: white;
+      color: #f9ce1d; }
 .spinbutton:not(.vertical) .progressbar, GeditWindow > .entry .progressbar,
 .entry .progressbar {
   margin: 2px -6px;
@@ -2958,15 +2962,14 @@ infobar {
 
 GtkLevelBar {
   -GtkLevelBar-min-block-width: 32px;
-  -GtkLevelBar-min-block-height: 6px;
-  border-radius: 2px; }
+  -GtkLevelBar-min-block-height: 6px; }
 
 GtkLevelBar.vertical {
   -GtkLevelBar-min-block-width: 6px;
-  -GtkLevelBar-min-block-height: 32px;
-  border-radius: 2px; }
+  -GtkLevelBar-min-block-height: 32px; }
 
 .level-bar {
+  border-radius: 2px;
   padding: 2px; }
   .level-bar.trough {
     background-color: transparent;

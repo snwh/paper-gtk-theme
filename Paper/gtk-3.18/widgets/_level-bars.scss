@@ -43,17 +43,15 @@
 GtkLevelBar {
   -GtkLevelBar-min-block-width: 32px;
   -GtkLevelBar-min-block-height: 6px;
-  border-radius: 2px;
 }
 
 GtkLevelBar.vertical {
   -GtkLevelBar-min-block-width: 6px;
   -GtkLevelBar-min-block-height: 32px;
-  border-radius: 2px;
 }
 
 .level-bar {
-
+  border-radius: 2px;
   padding: 2px;
 
   // Trough - has no style

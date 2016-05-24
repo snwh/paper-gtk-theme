@@ -46,25 +46,28 @@
 
     &:backdrop {
       @include entry(backdrop);
-
       transition: $backdrop_transition;
     }
 
     &:backdrop:insensitive { @include entry(backdrop-insensitive); }
-    &:backdrop:insensitive { @include entry(backdrop-insensitive); }
 
     &:selected { &:focus, & { @extend %selected_items; }}
 
-    // entry error and warning style
-    @each $e_type, $e_color in (error, $error_color),
-                               (warning, $warning_color) {
+    // Error styles
+    @each $e_type, $e_color in (error, $error_color), (warning, $warning_color) {
       &.#{$e_type} {
-        color: $e_color;
+        color: white;
+        background-color: $e_color;
         border-color: entry_focus_border($e_color);
 
         &:focus { @include entry(focus, $e_color); }
 
-        &:selected { &:focus, & { background-color: $e_color; }}
+        &:selected {
+          &:focus, & { 
+            background-color:white;
+            color: $e_color;
+          }
+        }
       }
     }
 
