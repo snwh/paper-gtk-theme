@@ -36,6 +36,7 @@ GtkSwitch {
   .slider {
     border:none;
     padding:2px;
+    outline-radius: 12px;
     border-radius: 12px;
     transition: $button_transition;
     background-color: $base_color;

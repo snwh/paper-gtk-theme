@@ -87,7 +87,12 @@ read if you used those and something break with a version upgrade you're on your
   -GtkWidget-text-handle-height: 24;
   -GtkDialog-button-spacing: 4;
   -GtkDialog-action-area-border: 0;
-  -GtkPaned-handle-size: 1; }
+  -GtkPaned-handle-size: 1;
+  outline-color: rgba(207, 216, 220, 0.3);
+  outline-style: dashed;
+  outline-offset: -3px;
+  outline-width: 1px;
+  outline-radius: 2px; }
 
 /***********
  * Widgets *
@@ -2021,12 +2026,6 @@ GtkFileChooserDialog {
     background-image: linear-gradient(to bottom, #475d67);
     box-shadow: none;
     transition: 200ms ease-out; }
-  .spinbutton:backdrop:insensitive:not(.vertical), GeditWindow > .entry:backdrop:insensitive,
-  .entry:backdrop:insensitive {
-    color: #56707c;
-    border-color: #242f34;
-    background-image: linear-gradient(to bottom, #3d4f57);
-    box-shadow: none; }
   .spinbutton:backdrop:insensitive:not(.vertical), GeditWindow > .entry:backdrop:insensitive,
   .entry:backdrop:insensitive {
     color: #56707c;
@@ -4116,6 +4115,7 @@ GtkSwitch {
   GtkSwitch .slider {
     border: none;
     padding: 2px;
+    outline-radius: 12px;
     border-radius: 12px;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     background-color: #455a64;

@@ -41,11 +41,11 @@ $button_transition: all 200ms $ease-out-quad;
   // to the adwaita engine: using real CSS properties is faster,
   // and we don't use any outlines for now.
 
-  // outline-color: transparentize($fg_color, 0.7);
-  // outline-style: dashed;
-  // outline-offset: -3px;
-  // outline-width: 1px;
-  // -gtk-outline-radius: 2px;
+  outline-color: transparentize($fg_color, 0.7);
+  outline-style: dashed;
+  outline-offset: -3px;
+  outline-width: 1px;
+  -gtk-outline-radius: 2px;
 
   -gtk-secondary-caret-color: $selected_bg_color
 }

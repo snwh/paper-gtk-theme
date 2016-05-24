@@ -88,6 +88,11 @@ read if you used those and something break with a version upgrade you're on your
   -GtkDialog-button-spacing: 4;
   -GtkDialog-action-area-border: 0;
   -GtkPaned-handle-size: 1;
+  outline-color: rgba(68, 68, 68, 0.3);
+  outline-style: dashed;
+  outline-offset: -3px;
+  outline-width: 1px;
+  -gtk-outline-radius: 2px;
   -gtk-secondary-caret-color: #347D9F; }
 
 /***********

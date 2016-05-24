@@ -127,8 +127,9 @@
   }
 }
 
+
 GtkTreeView .acceleditor > GtkLabel {
-    background-color: $selected_bg_color;
+  background-color: $selected_bg_color;
 }
 
 GtkTreeView .entry {
