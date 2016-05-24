@@ -6328,6 +6328,12 @@ decoration {
       border-top-style: none; }
     .raven .raven-header.bottom {
       border-bottom-style: none; }
+    .raven .raven-header > GtkSwitch {
+      -GtkSwitch-slider-width: 20px;
+      -GtkSwitch-slider-height: 20px;
+      border-radius: 14px; }
+      .raven .raven-header > GtkSwitch .slider {
+        border-radius: 10px; }
   .raven .raven-background {
     background-color: #455a64;
     border-bottom: 1px solid #222c31;
