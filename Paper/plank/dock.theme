@@ -20,7 +20,6 @@
 # Paper Plank Theme #
 #-------------------#
 
-
 [PlankDrawingTheme]
 #The roundness of the top corners.
 TopRoundness=3
@@ -28,20 +27,20 @@ TopRoundness=3
 BottomRoundness=0
 #The thickness (in pixels) of lines drawn.
 LineWidth=1
-#The color (RGBA) of the outer stroke.
-OuterStrokeColor=211;;212;;213;;214
 #The starting color (RGBA) of the fill gradient.
 FillStartColor=211;;212;;213;;214
 #The ending color (RGBA) of the fill gradient.
 FillEndColor=211;;212;;213;;214
 #The color (RGBA) of the inner stroke.
-InnerStrokeColor=211;;212;;213;;0
+InnerStrokeColor=211;;212;;213;;214
+#The color (RGBA) of the outer stroke.
+OuterStrokeColor=255;;255;;255;;180
 
 [PlankDrawingDockTheme]
 #The padding on the left/right dock edges, in tenths of a percent of IconSize.
 HorizPadding=0.2
 #The padding on the top dock edge, in tenths of a percent of IconSize.
-TopPadding=-10.5
+TopPadding=-5
 #The padding on the bottom dock edge, in tenths of a percent of IconSize.
 BottomPadding=2
 #The padding between items on the dock, in tenths of a percent of IconSize.
