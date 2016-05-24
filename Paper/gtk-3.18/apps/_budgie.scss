@@ -2,8 +2,10 @@
 * Budgie *
 **********/
 
-$budgie_panel_bg_color: #263238;
-$budgie_panel_fg_color: #cfd8dc;
+$budgie_panel_bg_color: if($variant == 'light', $bg_color, #263238);
+$budgie_panel_fg_color: if($variant == 'light', $fg_color, #cfd8dc);;
+
+
 
 @function gtkalpha($c,$a) {
   @return unquote("alpha(#{$c},#{$a})");
@@ -105,7 +107,8 @@ $asset_suffix: if($variant == 'default', '', '-hc');
     font: bold;
     .label {
       color: $budgie_panel_fg_color;
-      text-shadow: 0 1px $shadow_color;
+      icon-shadow: 0 1px $icon_shadow_color;
+      text-shadow: 0 1px $text_shadow_color;
     }
   }
 
@@ -115,7 +118,8 @@ $asset_suffix: if($variant == 'default', '', '-hc');
     font-size: 90%;
     .label {
       color: $budgie_panel_fg_color;
-      text-shadow: 0 1px $shadow_color;
+      icon-shadow: 0 1px $icon_shadow_color;
+      text-shadow: 0 1px $text_shadow_color;
     }
   }
 
@@ -166,8 +170,8 @@ $asset_suffix: if($variant == 'default', '', '-hc');
   .raven-header {
     padding: 4px;
     font: bold;
-    text-shadow: 0 1px $shadow_color;
-    icon-shadow: 0 1px $shadow_color;
+    text-shadow: 0 1px $text_shadow_color;
+    icon-shadow: 0 1px $icon_shadow_color;
     background-color: $bg_color;
     background-image: linear-gradient(to bottom,
                       lighten($bg_color, 5%),
@@ -247,8 +251,8 @@ $asset_suffix: if($variant == 'default', '', '-hc');
 
 // MPRIS Applet
 .raven-mpris {
-  text-shadow: 0 1px $shadow_color;
-  icon-shadow: 0 1px $shadow_color;
+  text-shadow: 0 1px $text-shadow_color;
+  icon-shadow: 0 1px $icon_shadow_color;
   color: $budgie_panel_fg_color;
   background-color: transparentize($budgie_panel_bg_color, 0.2);
   border: solid transparentize(black, 0.8);

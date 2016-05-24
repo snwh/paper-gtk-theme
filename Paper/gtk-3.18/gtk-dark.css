@@ -4109,7 +4109,8 @@ GtkSwitch {
     background-color: #3b4c55;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2); }
   GtkSwitch:active, GtkSwitch:checked {
-    background-color: #449ac2; }
+    background-color: #449ac2;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2); }
     GtkSwitch:active:backdrop, GtkSwitch:active:insensitive, GtkSwitch:checked:backdrop, GtkSwitch:checked:insensitive {
       background-color: #57a4c8; }
   GtkSwitch .slider {
@@ -4894,12 +4895,14 @@ treeview.view header button:active {
     font: bold; }
     .budgie-panel BudgieMenuApplet .label {
       color: #cfd8dc;
+      icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
       text-shadow: 0 1px rgba(0, 0, 0, 0.2); }
   .budgie-panel ClockApplet {
     font: monospace bold;
     font-size: 90%; }
     .budgie-panel ClockApplet .label {
       color: #cfd8dc;
+      icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
       text-shadow: 0 1px rgba(0, 0, 0, 0.2); }
   .budgie-panel WnckTasklist .button,
   .budgie-panel WnckTasklist .button:backdrop {

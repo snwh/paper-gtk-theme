@@ -4118,7 +4118,8 @@ GtkSwitch {
     background-color: #f2f2f2;
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1); }
   GtkSwitch:active, GtkSwitch:checked {
-    background-color: #347D9F; }
+    background-color: #347D9F;
+    box-shadow: inset 0 0 0 1px #275f79; }
     GtkSwitch:active:backdrop, GtkSwitch:active:insensitive, GtkSwitch:checked:backdrop, GtkSwitch:checked:insensitive {
       background-color: #3a8cb2; }
   GtkSwitch .slider {
@@ -4754,8 +4755,8 @@ treeview.view header button:active {
 .top .budgie-panel .pinned .launcher, .budgie-panel .pinned .top .launcher,
 .top .budgie-panel .unpinned .launcher,
 .budgie-panel .unpinned .top .launcher {
-  border-bottom: 2px solid rgba(38, 50, 56, 0);
-  border-top: 2px solid rgba(38, 50, 56, 0); }
+  border-bottom: 2px solid rgba(247, 247, 247, 0);
+  border-top: 2px solid rgba(247, 247, 247, 0); }
   .top .budgie-panel .unpinned .launcher,
   .top .budgie-panel .pinned .launcher.running {
     border-top: 2px solid rgba(52, 125, 159, 0.5); }
@@ -4774,8 +4775,8 @@ treeview.view header button:active {
 .bottom .budgie-panel .pinned .launcher, .budgie-panel .pinned .bottom .launcher,
 .bottom .budgie-panel .unpinned .launcher,
 .budgie-panel .unpinned .bottom .launcher {
-  border-top: 2px solid rgba(38, 50, 56, 0);
-  border-bottom: 2px solid rgba(38, 50, 56, 0); }
+  border-top: 2px solid rgba(247, 247, 247, 0);
+  border-bottom: 2px solid rgba(247, 247, 247, 0); }
   .bottom .budgie-panel .unpinned .launcher,
   .bottom .budgie-panel .pinned .launcher.running {
     border-bottom: 2px solid rgba(52, 125, 159, 0.5); }
@@ -4794,8 +4795,8 @@ treeview.view header button:active {
 .left .budgie-panel .pinned .launcher, .budgie-panel .pinned .left .launcher,
 .left .budgie-panel .unpinned .launcher,
 .budgie-panel .unpinned .left .launcher {
-  border-right: 2px solid rgba(38, 50, 56, 0);
-  border-left: 2px solid rgba(38, 50, 56, 0); }
+  border-right: 2px solid rgba(247, 247, 247, 0);
+  border-left: 2px solid rgba(247, 247, 247, 0); }
   .left .budgie-panel .unpinned .launcher,
   .left .budgie-panel .pinned .launcher.running {
     border-left: 2px solid rgba(52, 125, 159, 0.5); }
@@ -4814,8 +4815,8 @@ treeview.view header button:active {
 .right .budgie-panel .pinned .launcher, .budgie-panel .pinned .right .launcher,
 .right .budgie-panel .unpinned .launcher,
 .budgie-panel .unpinned .right .launcher {
-  border-left: 2px solid rgba(38, 50, 56, 0);
-  border-right: 2px solid rgba(38, 50, 56, 0); }
+  border-left: 2px solid rgba(247, 247, 247, 0);
+  border-right: 2px solid rgba(247, 247, 247, 0); }
   .right .budgie-panel .unpinned .launcher,
   .right .budgie-panel .pinned .launcher.running {
     border-right: 2px solid rgba(52, 125, 159, 0.5); }
@@ -4900,22 +4901,24 @@ treeview.view header button:active {
   color: inherit; }
 
 .budgie-panel {
-  color: #cfd8dc;
-  background-color: #263238; }
+  color: #444;
+  background-color: #f7f7f7; }
   .budgie-panel:backdrop {
-    color: #cfd8dc;
-    background-color: #263238; }
+    color: #444;
+    background-color: #f7f7f7; }
   .budgie-panel BudgieMenuApplet {
     font: bold; }
     .budgie-panel BudgieMenuApplet .label {
-      color: #cfd8dc;
-      text-shadow: 0 1px rgba(0, 0, 0, 0.2); }
+      color: #444;
+      icon-shadow: 0 1px rgba(255, 255, 255, 0.1);
+      text-shadow: 0 1px rgba(255, 255, 255, 0.1); }
   .budgie-panel ClockApplet {
     font: monospace bold;
     font-size: 90%; }
     .budgie-panel ClockApplet .label {
-      color: #cfd8dc;
-      text-shadow: 0 1px rgba(0, 0, 0, 0.2); }
+      color: #444;
+      icon-shadow: 0 1px rgba(255, 255, 255, 0.1);
+      text-shadow: 0 1px rgba(255, 255, 255, 0.1); }
   .budgie-panel WnckTasklist .button,
   .budgie-panel WnckTasklist .button:backdrop {
     border-radius: 0; }
@@ -4923,7 +4926,7 @@ treeview.view header button:active {
     transition: all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     padding-left: 2px;
     padding-right: 2px;
-    border-color: rgba(38, 50, 56, 0); }
+    border-color: rgba(247, 247, 247, 0); }
     .budgie-panel .launcher:hover {
       -gtk-image-effect: highlight; }
 
@@ -4934,8 +4937,8 @@ treeview.view header button:active {
   .raven .raven-header {
     padding: 4px;
     font: bold;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
-    icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: 0 1px rgba(255, 255, 255, 0.1);
     background-color: #f7f7f7;
     background-image: linear-gradient(to bottom, white, #f7f7f7);
     color: #444;
@@ -4984,10 +4987,10 @@ treeview.view header button:active {
     font-size: smaller; }
 
 .raven-mpris {
-  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
-  icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
-  color: #cfd8dc;
-  background-color: rgba(38, 50, 56, 0.8);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.1);
+  icon-shadow: 0 1px rgba(255, 255, 255, 0.1);
+  color: #444;
+  background-color: rgba(247, 247, 247, 0.8);
   border: solid rgba(0, 0, 0, 0.2);
   border-width: 1px 0;
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 0 rgba(255, 255, 255, 0.05), 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
@@ -5009,7 +5012,7 @@ treeview.view header button:active {
   color: #444; }
 .budgie-notification .notification-body {
   border: none;
-  color: rgba(207, 216, 220, 0.7); }
+  color: rgba(68, 68, 68, 0.7); }
 
 .budgie-session-dialog, .budgie-polkit-dialog {
   border-radius: 4px;
@@ -5029,7 +5032,7 @@ treeview.view header button:active {
       border-radius: 0 0 4px 0; }
 
 .budgie-polkit-dialog .message {
-  color: rgba(207, 216, 220, 0.7); }
+  color: rgba(68, 68, 68, 0.7); }
 .budgie-polkit-dialog .failure {
   color: #d32f2f; }
 

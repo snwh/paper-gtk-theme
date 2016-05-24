@@ -25,6 +25,7 @@ GtkSwitch {
   &:active,
   &:checked {
     background-color: $selected_bg_color;
+    box-shadow: if($variant == 'light', inset 0 0 0 1px $selected_borders_color, 0 0 0 1px transparentize(black, 0.8));
 
     &:backdrop,
     &:insensitive {

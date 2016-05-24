@@ -54,6 +54,8 @@ $base_hover_color: transparentize($fg_color, 0.95);
 
 $tooltip_borders_color: transparentize(white, 0.9);
 $shadow_color: transparentize(black, 0.8);
+$text_shadow_color: if($variant == 'dark', $shadow_color, transparentize(white, 0.9));
+$icon_shadow_color: $text_shadow_color;
 
 $drop_target_color: #4e9a06;
 
