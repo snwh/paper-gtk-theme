@@ -1837,7 +1837,7 @@ GtkMessageDialog .titlebar,
   border-style: none;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
   GtkMessageDialog .header-bar:backdrop,
   GtkMessageDialog .titlebar:backdrop,
   .message-dialog .header-bar:backdrop,
@@ -2007,7 +2007,7 @@ GtkFileChooserDialog {
   .spinbutton:focus:not(.vertical), GeditWindow > .entry:focus,
   .entry:focus {
     box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-    border-color: #347d9f; }
+    border-color: #222c31; }
   .spinbutton:insensitive:not(.vertical), GeditWindow > .entry:insensitive,
   .entry:insensitive {
     color: #839096;
@@ -2078,7 +2078,7 @@ GtkFileChooserDialog {
 .entry, .linked:not(.vertical) >
 .entry:focus +
 .entry {
-  border-left-color: #347d9f; }
+  border-left-color: #222c31; }
 .linked.vertical > .spinbutton:not(:insensitive):not(.vertical) + entry:not(:insensitive), GeditWindow.linked.vertical > .entry:not(:insensitive) + entry:not(:insensitive), .linked.vertical > .spinbutton:not(:insensitive):not(.vertical) + .spinbutton:not(:insensitive):not(.vertical), GeditWindow.linked.vertical > .entry:not(:insensitive) + .spinbutton:not(:insensitive):not(.vertical), GeditWindow.linked.vertical > .spinbutton:not(:insensitive):not(.vertical) + .entry:not(:insensitive), GeditWindow.linked.vertical > .entry:not(:insensitive) + .entry:not(:insensitive), .linked.vertical >
 .entry:not(:insensitive) + entry:not(:insensitive), .linked.vertical >
 .entry:not(:insensitive) + .spinbutton:not(:insensitive):not(.vertical), GeditWindow.linked.vertical > .entry:not(:insensitive) + .entry:not(:insensitive) {
@@ -2094,7 +2094,7 @@ GtkFileChooserDialog {
   border-top-color: #3b4c55; }
 .linked.vertical > .spinbutton:not(.vertical) + .spinbutton:focus:not(:only-child):not(.vertical), GeditWindow.linked.vertical > .entry + .spinbutton:focus:not(:only-child):not(.vertical), GeditWindow.linked.vertical > .spinbutton:not(.vertical) + .entry:focus:not(:only-child), GeditWindow.linked.vertical > .entry + .entry:focus:not(:only-child), .linked.vertical >
 .entry + .spinbutton:focus:not(:only-child):not(.vertical), GeditWindow.linked.vertical > .entry + .entry:focus:not(:only-child) {
-  border-top-color: #347d9f; }
+  border-top-color: #222c31; }
 .linked.vertical > .spinbutton:focus:not(:only-child):not(.vertical) + .spinbutton:not(.vertical), GeditWindow.linked.vertical > .entry:focus:not(:only-child) + .spinbutton:not(.vertical), GeditWindow.linked.vertical > .spinbutton:focus:not(:only-child):not(.vertical) + .entry, GeditWindow.linked.vertical > .entry:focus:not(:only-child) + .entry,
 .linked.vertical > .spinbutton:focus:not(:only-child):not(.vertical) + .entry,
 GeditWindow.linked.vertical > .entry:focus:not(:only-child) + .entry,
@@ -2109,7 +2109,7 @@ GeditWindow.linked.vertical > .entry:focus:not(:only-child) + GtkComboBox > box 
 .entry:focus:not(:only-child) + .button,
 .linked.vertical >
 .entry:focus:not(:only-child) + GtkComboBox > box > .button.combo {
-  border-top-color: #347d9f; }
+  border-top-color: #222c31; }
 
 GtkTreeView .acceleditor > GtkLabel {
   background-color: #449ac2; }
@@ -2143,7 +2143,7 @@ expander .arrow {
   border-style: solid solid none;
   border-color: #222c31;
   border-radius: 3px 3px 0 0;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
   .floating-bar.bottom.left {
     border-left-style: none;
     border-top-left-radius: 0;
@@ -2447,7 +2447,7 @@ GraniteWidgetsWelcome {
   border-radius: 4px 4px 0 0;
   background-color: #303f46;
   color: rgba(255, 255, 255, 0.8);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
   .titlebar:backdrop:not(headerbar),
   .header-bar:backdrop {
     background-color: #303f46;
@@ -2474,9 +2474,9 @@ GraniteWidgetsWelcome {
     border-radius: 4px 4px 0 0;
     color: #ffffff;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
-    border-color: #347d9f;
+    border-color: #222c31;
     background-color: #347D9F;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
     .selection-mode.titlebar:backdrop:not(headerbar),
     .header-bar.selection-mode:backdrop {
       background-color: #275f79;
@@ -2925,16 +2925,9 @@ infobar {
  *************/
 GtkLevelBar,
 .level-bar {
-  -GtkLevelBar-min-block-width: 32;
-  -GtkLevelBar-min-block-height: 8; }
-  GtkLevelBar:backdrop,
-  .level-bar:backdrop {
-    transition: 200ms ease-out; }
-  GtkLevelBar .trough,
-  .level-bar .trough {
-    margin: 0;
-    padding: 2px;
-    border-radius: 3px; }
+  -GtkLevelBar-min-block-width: 32px;
+  -GtkLevelBar-min-block-height: 6px;
+  padding: 2px; }
   GtkLevelBar.horizontal.indicator-discrete.fill-block,
   .level-bar.horizontal.indicator-discrete.fill-block {
     margin: 0 1px; }
@@ -2955,7 +2948,12 @@ GtkLevelBar,
   GtkLevelBar.vertical .level-bar .fill-block,
   .level-bar.vertical .fill-block,
   .level-bar .fill-block {
-    border-radius: 2px; }
+    border-radius: 3px;
+    margin: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid;
+    border-color: #222c31;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1); }
     GtkLevelBar.vertical .low.fill-block,
     GtkLevelBar .level-bar.vertical .low.fill-block,
     .level-bar.vertical GtkLevelBar .low.fill-block, GtkLevelBar.vertical .level-low.fill-block,
@@ -2971,24 +2969,10 @@ GtkLevelBar,
     .level-bar.vertical .level-low.fill-block,
     .level-bar .fill-block.low,
     .level-bar .fill-block.level-low {
-      border: 1px solid #ddb306;
-      background-color: #f9ce1d; }
-      GtkLevelBar.vertical .low.fill-block:backdrop,
-      GtkLevelBar .level-bar.vertical .low.fill-block:backdrop,
-      .level-bar.vertical GtkLevelBar .low.fill-block:backdrop, GtkLevelBar.vertical .level-low.fill-block:backdrop,
-      GtkLevelBar .level-bar.vertical .level-low.fill-block:backdrop,
-      .level-bar.vertical GtkLevelBar .level-low.fill-block:backdrop,
-      GtkLevelBar .fill-block.low:backdrop,
-      GtkLevelBar .fill-block.level-low:backdrop,
-      .level-bar GtkLevelBar.vertical .low.fill-block:backdrop,
-      GtkLevelBar.vertical .level-bar .low.fill-block:backdrop,
-      .level-bar.vertical .low.fill-block:backdrop,
-      .level-bar GtkLevelBar.vertical .level-low.fill-block:backdrop,
-      GtkLevelBar.vertical .level-bar .level-low.fill-block:backdrop,
-      .level-bar.vertical .level-low.fill-block:backdrop,
-      .level-bar .fill-block.low:backdrop,
-      .level-bar .fill-block.level-low:backdrop {
-        border: 1px solid #f9ce1d; }
+      background-color: #F44336;
+      border: 1px solid;
+      border-color: #222c31;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3); }
     GtkLevelBar.vertical .high.fill-block,
     GtkLevelBar .level-bar.vertical .high.fill-block,
     .level-bar.vertical GtkLevelBar .high.fill-block, GtkLevelBar.vertical .level-high.fill-block,
@@ -3004,24 +2988,10 @@ GtkLevelBar,
     .level-bar.vertical .level-high.fill-block,
     .level-bar .fill-block.high,
     .level-bar .fill-block.level-high {
-      border: 1px solid #347d9f;
-      background-color: #449ac2; }
-      GtkLevelBar.vertical .high.fill-block:backdrop,
-      GtkLevelBar .level-bar.vertical .high.fill-block:backdrop,
-      .level-bar.vertical GtkLevelBar .high.fill-block:backdrop, GtkLevelBar.vertical .level-high.fill-block:backdrop,
-      GtkLevelBar .level-bar.vertical .level-high.fill-block:backdrop,
-      .level-bar.vertical GtkLevelBar .level-high.fill-block:backdrop,
-      GtkLevelBar .fill-block.high:backdrop,
-      GtkLevelBar .fill-block.level-high:backdrop,
-      .level-bar GtkLevelBar.vertical .high.fill-block:backdrop,
-      GtkLevelBar.vertical .level-bar .high.fill-block:backdrop,
-      .level-bar.vertical .high.fill-block:backdrop,
-      .level-bar GtkLevelBar.vertical .level-high.fill-block:backdrop,
-      GtkLevelBar.vertical .level-bar .level-high.fill-block:backdrop,
-      .level-bar.vertical .level-high.fill-block:backdrop,
-      .level-bar .fill-block.high:backdrop,
-      .level-bar .fill-block.level-high:backdrop {
-        border: 1px solid #449ac2; }
+      background-color: #4caf50;
+      border: 1px solid;
+      border-color: #222c31;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3); }
     GtkLevelBar.vertical .full.fill-block,
     GtkLevelBar .level-bar.vertical .full.fill-block,
     .level-bar.vertical GtkLevelBar .full.fill-block, GtkLevelBar.vertical .level-full.fill-block,
@@ -3037,24 +3007,10 @@ GtkLevelBar,
     .level-bar.vertical .level-full.fill-block,
     .level-bar .fill-block.full,
     .level-bar .fill-block.level-full {
-      border: 1px solid #2d682f;
-      background-color: #3d8b40; }
-      GtkLevelBar.vertical .full.fill-block:backdrop,
-      GtkLevelBar .level-bar.vertical .full.fill-block:backdrop,
-      .level-bar.vertical GtkLevelBar .full.fill-block:backdrop, GtkLevelBar.vertical .level-full.fill-block:backdrop,
-      GtkLevelBar .level-bar.vertical .level-full.fill-block:backdrop,
-      .level-bar.vertical GtkLevelBar .level-full.fill-block:backdrop,
-      GtkLevelBar .fill-block.full:backdrop,
-      GtkLevelBar .fill-block.level-full:backdrop,
-      .level-bar GtkLevelBar.vertical .full.fill-block:backdrop,
-      GtkLevelBar.vertical .level-bar .full.fill-block:backdrop,
-      .level-bar.vertical .full.fill-block:backdrop,
-      .level-bar GtkLevelBar.vertical .level-full.fill-block:backdrop,
-      GtkLevelBar.vertical .level-bar .level-full.fill-block:backdrop,
-      .level-bar.vertical .level-full.fill-block:backdrop,
-      .level-bar .fill-block.full:backdrop,
-      .level-bar .fill-block.level-full:backdrop {
-        border: 1px solid #3d8b40; }
+      background-color: #449ac2;
+      border: 1px solid;
+      border-color: #222c31;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3); }
     GtkLevelBar.vertical .empty.fill-block,
     GtkLevelBar .level-bar.vertical .empty.fill-block,
     .level-bar.vertical GtkLevelBar .empty.fill-block, GtkLevelBar.vertical .level-empty.fill-block,
@@ -3070,29 +3026,20 @@ GtkLevelBar,
     .level-bar.vertical .level-empty.fill-block,
     .level-bar .fill-block.empty,
     .level-bar .fill-block.level-empty {
-      background-color: transparent;
-      border: 1px solid rgba(207, 216, 220, 0.1);
-      box-shadow: none; }
-      GtkLevelBar.vertical .empty.fill-block:backdrop,
-      GtkLevelBar .level-bar.vertical .empty.fill-block:backdrop,
-      .level-bar.vertical GtkLevelBar .empty.fill-block:backdrop, GtkLevelBar.vertical .level-empty.fill-block:backdrop,
-      GtkLevelBar .level-bar.vertical .level-empty.fill-block:backdrop,
-      .level-bar.vertical GtkLevelBar .level-empty.fill-block:backdrop,
-      GtkLevelBar .fill-block.empty:backdrop,
-      GtkLevelBar .fill-block.level-empty:backdrop,
-      .level-bar GtkLevelBar.vertical .empty.fill-block:backdrop,
-      GtkLevelBar.vertical .level-bar .empty.fill-block:backdrop,
-      .level-bar.vertical .empty.fill-block:backdrop,
-      .level-bar GtkLevelBar.vertical .level-empty.fill-block:backdrop,
-      GtkLevelBar.vertical .level-bar .level-empty.fill-block:backdrop,
-      .level-bar.vertical .level-empty.fill-block:backdrop,
-      .level-bar .fill-block.empty:backdrop,
-      .level-bar .fill-block.level-empty:backdrop {
-        border-color: rgba(131, 144, 150, 0.15); }
+      background-color: rgba(0, 0, 0, 0.1);
+      border: 1px solid;
+      border-color: #222c31;
+      box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1); }
+  GtkLevelBar.horizontal .trough, GtkLevelBar.vertical .trough,
+  .level-bar.horizontal .trough,
+  .level-bar.vertical .trough {
+    border: none;
+    background-color: transparent;
+    margin: 2px; }
   GtkLevelBar.vertical,
   .level-bar.vertical {
-    -GtkLevelBar-min-block-width: 8;
-    -GtkLevelBar-min-block-height: 32; }
+    -GtkLevelBar-min-block-width: 6px;
+    -GtkLevelBar-min-block-height: 32px; }
 
 /*********
  * Links *
@@ -3190,7 +3137,7 @@ GtkLevelBar,
   background-color: #425660;
   border: 1px solid #222c31;
   border-radius: 4px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.1); }
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.3); }
   .csd
   .content-view .menu, .csd
   .menu, .csd
@@ -3585,10 +3532,7 @@ GtkProgressBar,
 /**********
  * Scales *
  **********/
-GtkLevelBar .trough,
-.level-bar .trough, GtkLevelBar.horizontal .trough, GtkLevelBar.vertical .trough,
-.level-bar.horizontal .trough,
-.level-bar.vertical .trough, GtkProgressBar,
+GtkProgressBar,
 .progressbar, .scale .trough, .scale.fine-tune .trough, .scale fill {
   border: none;
   background-color: #455a64;
@@ -3596,51 +3540,38 @@ GtkLevelBar .trough,
   border: 1px solid #222c31;
   padding: 0;
   margin: 0; }
-  GtkLevelBar .trough:insensitive,
-  .level-bar .trough:insensitive, GtkProgressBar:insensitive,
+  GtkProgressBar:insensitive,
   .progressbar:insensitive, .scale .trough:insensitive, .scale fill:insensitive {
     background-color: #3d4f57; }
-  GtkLevelBar .trough:backdrop,
-  .level-bar .trough:backdrop, GtkProgressBar:backdrop,
+  GtkProgressBar:backdrop,
   .progressbar:backdrop, .scale .trough:backdrop, .scale fill:backdrop {
     background-color: #475d67;
     transition: 200ms ease-out; }
-    GtkLevelBar .trough:backdrop:insensitive,
-    .level-bar .trough:backdrop:insensitive, GtkProgressBar:backdrop:insensitive,
+    GtkProgressBar:backdrop:insensitive,
     .progressbar:backdrop:insensitive, .scale .trough:backdrop:insensitive, .scale fill:backdrop:insensitive {
       background-color: #3d4f57; }
-  row:selected GtkLevelBar .trough, GtkLevelBar row:selected .trough,
-  row:selected .level-bar .trough,
-  .level-bar row:selected .trough, row:selected GtkProgressBar,
+  row:selected GtkProgressBar,
   row:selected .progressbar, row:selected .scale .trough, .scale row:selected .trough, row:selected .scale fill, .scale row:selected fill {
     box-shadow: none; }
-    row:selected GtkLevelBar .trough, GtkLevelBar row:selected .trough,
-    row:selected .level-bar .trough,
-    .level-bar row:selected .trough, row:selected GtkProgressBar,
-    row:selected .progressbar, row:selected .scale .trough, .scale row:selected .trough, row:selected .scale fill, .scale row:selected fill, row:selected GtkLevelBar .trough:insensitive, GtkLevelBar row:selected .trough:insensitive,
-    row:selected .level-bar .trough:insensitive,
-    .level-bar row:selected .trough:insensitive, row:selected GtkProgressBar:insensitive,
+    row:selected GtkProgressBar,
+    row:selected .progressbar, row:selected .scale .trough, .scale row:selected .trough, row:selected .scale fill, .scale row:selected fill, row:selected GtkProgressBar:insensitive,
     row:selected .progressbar:insensitive, row:selected .scale .trough:insensitive, .scale row:selected .trough:insensitive, row:selected .scale fill:insensitive, .scale row:selected fill:insensitive {
-      border-color: #347d9f; }
-  .osd GtkLevelBar .trough, GtkLevelBar .osd .trough,
-  .osd .level-bar .trough,
-  .level-bar .osd .trough, .osd GtkProgressBar,
+      border-color: #222c31; }
+  .osd GtkProgressBar,
   .osd .progressbar, .osd .scale .trough, .scale .osd .trough, .osd .scale fill, .scale .osd fill {
     border-color: rgba(0, 0, 0, 0.7);
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: none;
     outline-color: rgba(207, 216, 220, 0.2); }
-    .osd GtkLevelBar .trough:insensitive, GtkLevelBar .osd .trough:insensitive,
-    .osd .level-bar .trough:insensitive,
-    .level-bar .osd .trough:insensitive, .osd GtkProgressBar:insensitive,
+    .osd GtkProgressBar:insensitive,
     .osd .progressbar:insensitive, .osd .scale .trough:insensitive, .scale .osd .trough:insensitive, .osd .scale fill:insensitive, .scale .osd fill:insensitive {
       background-color: rgba(50, 55, 56, 0.5); }
 
 GtkProgressBar .progressbar,
 .progressbar .progressbar, .scale .highlight, .scale.fine-tune .highlight {
-  border: 1px solid #347d9f;
+  border: 1px solid #222c31;
   background-color: #449ac2;
-  box-shadow: inset 0px 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0px 1px rgba(255, 255, 255, 0.3);
   border-radius: 4px; }
   GtkProgressBar .progressbar:insensitive,
   .progressbar .progressbar:insensitive, .scale .highlight:insensitive {
@@ -3669,13 +3600,13 @@ GtkProgressBar .progressbar,
   .progressbar .list-row:selected .progressbar:insensitive, .list-row:selected .scale .highlight:insensitive, .scale .list-row:selected .highlight:insensitive, .list-row:selected GtkProgressBar .progressbar, GtkProgressBar .list-row:selected .progressbar,
   .list-row:selected .progressbar .progressbar,
   .progressbar .list-row:selected .progressbar, .list-row:selected .scale .highlight, .scale .list-row:selected .highlight {
-    border-color: #347d9f; }
+    border-color: #222c31; }
   row:selected GtkProgressBar .progressbar:insensitive, GtkProgressBar row:selected .progressbar:insensitive,
   row:selected .progressbar .progressbar:insensitive,
   .progressbar row:selected .progressbar:insensitive, row:selected .scale .highlight:insensitive, .scale row:selected .highlight:insensitive, row:selected GtkProgressBar .progressbar, GtkProgressBar row:selected .progressbar,
   row:selected .progressbar .progressbar,
   .progressbar row:selected .progressbar, row:selected .scale .highlight, .scale row:selected .highlight {
-    border-color: #347d9f; }
+    border-color: #222c31; }
   .osd GtkProgressBar .progressbar, GtkProgressBar .osd .progressbar,
   .osd .progressbar .progressbar,
   .progressbar .osd .progressbar, .osd .scale .highlight, .scale .osd .highlight {
@@ -3693,25 +3624,26 @@ GtkProgressBar .progressbar,
   .scale .highlight {
     margin: -1px; }
   .scale .slider {
-    margin: 1px;
+    margin: 2px;
     background-color: #455a64;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     border: 1px solid #222c31;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.3);
     border-radius: 12px;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition-property: background, border, box-shadow; }
     .scale .slider:active {
-      box-shadow: 0 1px 2px 0 rgba(68, 154, 194, 0.5);
-      border: 1px solid #449ac2; }
+      background-color: #449ac2;
+      border: 1px solid #222c31;
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
       .scale .slider:active:insensitive {
         box-shadow: none;
         border: 1px solid rgba(0, 0, 0, 0.2); }
     .scale .slider:insensitive {
       box-shadow: none; }
     .list-row:selected .scale .slider, .list-row:selected .scale .slider:insensitive {
-      border-color: #347d9f; }
+      border-color: #222c31; }
     row:selected .scale .slider, row:selected .scale .slider:insensitive {
-      border-color: #347d9f; }
+      border-color: #222c31; }
     .osd .scale .slider {
       color: #cfd8dc;
       border-color: rgba(0, 0, 0, 0.7);
@@ -4238,31 +4170,28 @@ GtkSwitch {
   border: none;
   border-radius: 16px;
   color: transparent;
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); }
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0px 1px rgba(255, 255, 255, 0.1); }
   GtkSwitch:insensitive {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #3b4c55;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2); }
   GtkSwitch:active, GtkSwitch:checked {
     background-color: #449ac2; }
-    GtkSwitch:active:backdrop, GtkSwitch:checked:backdrop {
+    GtkSwitch:active:backdrop, GtkSwitch:active:insensitive, GtkSwitch:checked:backdrop, GtkSwitch:checked:insensitive {
       background-color: #57a4c8; }
   GtkSwitch .slider {
     border: none;
-    padding: 3px;
+    padding: 2px;
     border-radius: 12px;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     background-color: #455a64;
     box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
     GtkSwitch .slider:active {
-      background-color: white;
-      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+      background-color: white; }
     GtkSwitch .slider:backdrop {
       background-color: #475d67;
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
     GtkSwitch .slider:insensitive {
-      background-color: #3b4c55;
-      border: 1px solid rgba(0, 0, 0, 0.2);
       box-shadow: none; }
   GtkSwitch .trough:active, GtkSwitch .trough:checked {
     background-color: #449ac2; }
@@ -4662,7 +4591,7 @@ treeview.view {
       color: #718188; }
   GtkTreeView.view.progressbar,
   treeview.view.progressbar {
-    border: 1px solid #347d9f;
+    border: 1px solid #222c31;
     border-radius: 4px;
     background-color: #449ac2;
     background-image: linear-gradient(to bottom, #449ac2, #347d9f);
