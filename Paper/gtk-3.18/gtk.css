@@ -54,7 +54,7 @@
 @define-color unfocused_borders #c9c9c9;
 /* these are pretty self explicative */
 @define-color warning_color #f9ce1d;
-@define-color error_color #F44336;
+@define-color error_color #d32f2f;
 @define-color success_color #4caf50;
 /* these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
@@ -78,7 +78,7 @@ read if you used those and something break with a version upgrade you're on your
 * {
   padding: 0;
   -GtkToolButton-icon-spacing: 4;
-  -GtkTextView-error-underline-color: #F44336;
+  -GtkTextView-error-underline-color: #d32f2f;
   -GtkScrolledWindow-scrollbar-spacing: 0;
   -GtkToolItemGroup-expander-size: 11;
   -GtkTreeView-expander-size: 11;
@@ -822,8 +822,8 @@ row:selected
 .button.destructive-action {
   color: white;
   outline-color: rgba(255, 255, 255, 0.3);
-  border-color: #a21309;
-  background-image: linear-gradient(to bottom, #F44336, #f32c1e);
+  border-color: #6c1717;
+  background-image: linear-gradient(to bottom, #d32f2f, #c02929);
   text-shadow: 0 1px rgba(0, 0, 0, 0.2);
   icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
@@ -835,12 +835,12 @@ row:selected
     box-shadow: inset 0 1px rgba(255, 255, 255, 0);
     text-shadow: none;
     icon-shadow: none;
-    color: #F44336; }
+    color: #d32f2f; }
   .button.destructive-action:hover {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #a21309;
-    background-image: linear-gradient(to bottom, #f65e53, #F44336 60%, #f33123);
+    border-color: #6c1717;
+    background-image: linear-gradient(to bottom, #d84848, #d32f2f 60%, #c42929);
     text-shadow: 0 1px rgba(0, 0, 0, 0.2);
     icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.4); }
@@ -848,16 +848,16 @@ row:selected
   .button.destructive-action:checked {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #a21309;
-    background-image: linear-gradient(to bottom, #f22314, #f33a2c);
+    border-color: #6c1717;
+    background-image: linear-gradient(to bottom, #b72727, #cd2b2b);
     text-shadow: 0 1px rgba(0, 0, 0, 0.2);
     icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 2px 1px -2px rgba(0, 0, 0, 0.6);
     box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.8); }
   .button.destructive-action:backdrop,
   .button.destructive-action.flat:backdrop {
-    border-color: #F44336;
-    background-image: linear-gradient(to bottom, #F44336);
+    border-color: #d32f2f;
+    background-image: linear-gradient(to bottom, #d32f2f);
     text-shadow: none;
     icon-shadow: none;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
@@ -865,12 +865,12 @@ row:selected
     .button.destructive-action:backdrop,
     .button.destructive-action.flat:backdrop GtkLabel,
     .button.destructive-action.flat:backdrop {
-      color: #fdd9d7; }
+      color: #f6d5d5; }
     .button.destructive-action:backdrop:active,
     .button.destructive-action:backdrop:checked,
     .button.destructive-action.flat:backdrop:active,
     .button.destructive-action.flat:backdrop:checked {
-      border-color: #ea1c0d;
+      border-color: #ab2424;
       background-image: none;
       box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.8); }
       .button.destructive-action:backdrop:active GtkLabel,
@@ -881,7 +881,7 @@ row:selected
       .button.destructive-action.flat:backdrop:active,
       .button.destructive-action.flat:backdrop:checked GtkLabel,
       .button.destructive-action.flat:backdrop:checked {
-        color: #fbd2cf; }
+        color: #eed3d3; }
       .button.destructive-action:backdrop:active label,
       .button.destructive-action:backdrop:active,
       .button.destructive-action:backdrop:checked label,
@@ -890,7 +890,7 @@ row:selected
       .button.destructive-action.flat:backdrop:active,
       .button.destructive-action.flat:backdrop:checked label,
       .button.destructive-action.flat:backdrop:checked {
-        color: #fbd2cf; }
+        color: #eed3d3; }
     .button.destructive-action:backdrop:insensitive,
     .button.destructive-action.flat:backdrop:insensitive {
       border-color: #c9c9c9;
@@ -908,15 +908,15 @@ row:selected
       .button.destructive-action:backdrop:insensitive:checked,
       .button.destructive-action.flat:backdrop:insensitive:active,
       .button.destructive-action.flat:backdrop:insensitive:checked {
-        border-color: #f5483c;
+        border-color: #d63939;
         background-image: none;
-        background-color: #f5483c;
+        background-color: #d63939;
         box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.8); }
         .button.destructive-action:backdrop:insensitive:active GtkLabel,
         .button.destructive-action:backdrop:insensitive:checked GtkLabel,
         .button.destructive-action.flat:backdrop:insensitive:active GtkLabel,
         .button.destructive-action.flat:backdrop:insensitive:checked GtkLabel {
-          color: #f98880; }
+          color: #e47e7e; }
   .button.destructive-action.flat:backdrop,
   .button.destructive-action.flat:insensitive,
   .button.destructive-action.flat:backdrop:insensitive {
@@ -926,7 +926,7 @@ row:selected
     box-shadow: inset 0 1px rgba(255, 255, 255, 0);
     text-shadow: none;
     icon-shadow: none;
-    color: rgba(244, 67, 54, 0.8); }
+    color: rgba(211, 47, 47, 0.8); }
   .button.destructive-action:insensitive {
     border-color: #c4c4c4;
     background-image: none;
@@ -939,21 +939,21 @@ row:selected
       color: #9e9e9e; }
     .button.destructive-action:insensitive:active,
     .button.destructive-action:insensitive:checked {
-      border-color: #a21309;
+      border-color: #6c1717;
       background-image: none;
-      background-color: #f5483c;
+      background-color: #d63939;
       text-shadow: none;
       box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.8); }
       .button.destructive-action:insensitive:active GtkLabel,
       .button.destructive-action:insensitive:active,
       .button.destructive-action:insensitive:checked GtkLabel,
       .button.destructive-action:insensitive:checked {
-        color: #fbb6b1; }
+        color: #efb0b0; }
   .osd
   .button.destructive-action {
     color: #cfd8dc;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(244, 67, 54, 0.5));
+    background-image: linear-gradient(to bottom, rgba(211, 47, 47, 0.5));
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: 0 1px black;
@@ -963,7 +963,7 @@ row:selected
     .button.destructive-action:hover {
       color: white;
       border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(244, 67, 54, 0.7));
+      background-image: linear-gradient(to bottom, rgba(211, 47, 47, 0.7));
       background-clip: padding-box;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
       text-shadow: 0 1px black;
@@ -976,7 +976,7 @@ row:selected
     .button.destructive-action:checked {
       color: white;
       border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, #F44336);
+      background-image: linear-gradient(to bottom, #d32f2f);
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
@@ -996,7 +996,7 @@ row:selected
     .button.destructive-action:backdrop {
       color: #cfd8dc;
       border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(244, 67, 54, 0.5));
+      background-image: linear-gradient(to bottom, rgba(211, 47, 47, 0.5));
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
@@ -2044,16 +2044,16 @@ GtkFileChooserDialog {
     box-shadow: none; }
   .error.spinbutton:not(.vertical), GeditWindow > .error.entry,
   .entry.error {
-    color: #F44336;
-    border-color: #F44336; }
+    color: #d32f2f;
+    border-color: #d32f2f; }
     .error.spinbutton:focus:not(.vertical), GeditWindow > .error.entry:focus,
     .entry.error:focus {
       box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-      border-color: #F44336; }
+      border-color: #d32f2f; }
     .error.spinbutton:selected:focus:not(.vertical), GeditWindow > .error.entry:selected:focus, .error.spinbutton:selected:not(.vertical), GeditWindow > .error.entry:selected,
     .entry.error:selected:focus,
     .entry.error:selected {
-      background-color: #F44336; }
+      background-color: #d32f2f; }
   .warning.spinbutton:not(.vertical), GeditWindow > .warning.entry,
   .entry.warning {
     color: #f9ce1d;
@@ -2439,7 +2439,7 @@ GraniteWidgetsWelcome {
   .storage-bar .fill-block.audio {
     background-color: #ff9800; }
   .storage-bar .fill-block.photo {
-    background-color: #F44336; }
+    background-color: #d32f2f; }
   .storage-bar .fill-block.video {
     background-color: #673ab7; }
   .storage-bar .fill-block .legend {
@@ -2924,131 +2924,62 @@ infobar {
     color: rgba(255, 255, 255, 0.5); }
 
 .error {
-  background-color: #F44336; }
+  background-color: #d32f2f; }
   .error:backdrop {
-    background-color: #f77066;
+    background-color: #dc5959;
     color: rgba(255, 255, 255, 0.5); }
 
 /*************
  * Level Bar *
  *************/
-GtkLevelBar,
-.level-bar {
-  -GtkLevelBar-min-block-width: 32px;
-  -GtkLevelBar-min-block-height: 6px;
-  padding: 2px; }
-  GtkLevelBar.horizontal.indicator-discrete.fill-block,
-  .level-bar.horizontal.indicator-discrete.fill-block {
-    margin: 0 1px; }
-  GtkLevelBar.horizontal.discrete block,
-  .level-bar.horizontal.discrete block {
-    margin: 0 1px; }
-  GtkLevelBar.vertical.indicator-discrete.fill-block,
-  .level-bar.vertical.indicator-discrete.fill-block {
-    margin: 1px 0; }
-  GtkLevelBar.vertical.discrete block,
-  .level-bar.vertical.discrete block {
-    margin: 1px 0; }
-  GtkLevelBar.vertical .fill-block,
-  GtkLevelBar .level-bar.vertical .fill-block,
-  .level-bar.vertical GtkLevelBar .fill-block,
-  GtkLevelBar .fill-block,
-  .level-bar GtkLevelBar.vertical .fill-block,
-  GtkLevelBar.vertical .level-bar .fill-block,
-  .level-bar.vertical .fill-block,
-  .level-bar .fill-block {
-    border-radius: 3px;
-    margin: 2px;
+.level-bar.fill-block, .level-bar .indicator-continuous.fill-block {
+  border-radius: 3px;
+  margin: 2px;
+  background-color: #347D9F;
+  border: 1px solid;
+  border-color: #275f79;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2); }
+  .low.level-bar.fill-block, .level-bar .low.indicator-continuous.fill-block, .level-low.level-bar.fill-block, .level-bar .level-low.indicator-continuous.fill-block {
+    background-color: #d32f2f;
+    border-color: #ab2424;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2); }
+  .high.level-bar.fill-block, .level-bar .high.indicator-continuous.fill-block, .level-high.level-bar.fill-block, .level-bar .level-high.indicator-continuous.fill-block {
+    background-color: #4caf50;
+    border-color: #3d8b40;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2); }
+  .full.level-bar.fill-block, .level-bar .full.indicator-continuous.fill-block, .level-full.level-bar.fill-block, .level-bar .level-full.indicator-continuous.fill-block {
+    background-color: #347D9F;
+    border-color: #275f79;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2); }
+  .empty.level-bar.fill-block, .level-bar .empty.indicator-continuous.fill-block, .empty-fill-block.level-bar.fill-block, .level-bar .empty-fill-block.indicator-continuous.fill-block, .level-empty.level-bar.fill-block, .level-bar .level-empty.indicator-continuous.fill-block {
     background-color: rgba(0, 0, 0, 0.1);
-    border: 1px solid;
     border-color: #c4c4c4;
     box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3); }
-    GtkLevelBar.vertical .low.fill-block,
-    GtkLevelBar .level-bar.vertical .low.fill-block,
-    .level-bar.vertical GtkLevelBar .low.fill-block, GtkLevelBar.vertical .level-low.fill-block,
-    GtkLevelBar .level-bar.vertical .level-low.fill-block,
-    .level-bar.vertical GtkLevelBar .level-low.fill-block,
-    GtkLevelBar .fill-block.low,
-    GtkLevelBar .fill-block.level-low,
-    .level-bar GtkLevelBar.vertical .low.fill-block,
-    GtkLevelBar.vertical .level-bar .low.fill-block,
-    .level-bar.vertical .low.fill-block,
-    .level-bar GtkLevelBar.vertical .level-low.fill-block,
-    GtkLevelBar.vertical .level-bar .level-low.fill-block,
-    .level-bar.vertical .level-low.fill-block,
-    .level-bar .fill-block.low,
-    .level-bar .fill-block.level-low {
-      background-color: #F44336;
-      border: 1px solid;
-      border-color: #ea1c0d;
-      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2); }
-    GtkLevelBar.vertical .high.fill-block,
-    GtkLevelBar .level-bar.vertical .high.fill-block,
-    .level-bar.vertical GtkLevelBar .high.fill-block, GtkLevelBar.vertical .level-high.fill-block,
-    GtkLevelBar .level-bar.vertical .level-high.fill-block,
-    .level-bar.vertical GtkLevelBar .level-high.fill-block,
-    GtkLevelBar .fill-block.high,
-    GtkLevelBar .fill-block.level-high,
-    .level-bar GtkLevelBar.vertical .high.fill-block,
-    GtkLevelBar.vertical .level-bar .high.fill-block,
-    .level-bar.vertical .high.fill-block,
-    .level-bar GtkLevelBar.vertical .level-high.fill-block,
-    GtkLevelBar.vertical .level-bar .level-high.fill-block,
-    .level-bar.vertical .level-high.fill-block,
-    .level-bar .fill-block.high,
-    .level-bar .fill-block.level-high {
-      background-color: #4caf50;
-      border: 1px solid;
-      border-color: #3d8b40;
-      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2); }
-    GtkLevelBar.vertical .full.fill-block,
-    GtkLevelBar .level-bar.vertical .full.fill-block,
-    .level-bar.vertical GtkLevelBar .full.fill-block, GtkLevelBar.vertical .level-full.fill-block,
-    GtkLevelBar .level-bar.vertical .level-full.fill-block,
-    .level-bar.vertical GtkLevelBar .level-full.fill-block,
-    GtkLevelBar .fill-block.full,
-    GtkLevelBar .fill-block.level-full,
-    .level-bar GtkLevelBar.vertical .full.fill-block,
-    GtkLevelBar.vertical .level-bar .full.fill-block,
-    .level-bar.vertical .full.fill-block,
-    .level-bar GtkLevelBar.vertical .level-full.fill-block,
-    GtkLevelBar.vertical .level-bar .level-full.fill-block,
-    .level-bar.vertical .level-full.fill-block,
-    .level-bar .fill-block.full,
-    .level-bar .fill-block.level-full {
-      background-color: #347D9F;
-      border: 1px solid;
-      border-color: #275f79;
-      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2); }
-    GtkLevelBar.vertical .empty.fill-block,
-    GtkLevelBar .level-bar.vertical .empty.fill-block,
-    .level-bar.vertical GtkLevelBar .empty.fill-block, GtkLevelBar.vertical .level-empty.fill-block,
-    GtkLevelBar .level-bar.vertical .level-empty.fill-block,
-    .level-bar.vertical GtkLevelBar .level-empty.fill-block,
-    GtkLevelBar .fill-block.empty,
-    GtkLevelBar .fill-block.level-empty,
-    .level-bar GtkLevelBar.vertical .empty.fill-block,
-    GtkLevelBar.vertical .level-bar .empty.fill-block,
-    .level-bar.vertical .empty.fill-block,
-    .level-bar GtkLevelBar.vertical .level-empty.fill-block,
-    GtkLevelBar.vertical .level-bar .level-empty.fill-block,
-    .level-bar.vertical .level-empty.fill-block,
-    .level-bar .fill-block.empty,
-    .level-bar .fill-block.level-empty {
-      background-color: rgba(0, 0, 0, 0.1);
-      border: 1px solid;
-      border-color: #c4c4c4;
-      box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3); }
-  GtkLevelBar.horizontal .trough, GtkLevelBar.vertical .trough,
-  .level-bar.horizontal .trough,
-  .level-bar.vertical .trough {
-    border: none;
+
+GtkLevelBar {
+  -GtkLevelBar-min-block-width: 32px;
+  -GtkLevelBar-min-block-height: 6px;
+  border-radius: 2px; }
+
+GtkLevelBar.vertical {
+  -GtkLevelBar-min-block-width: 6px;
+  -GtkLevelBar-min-block-height: 32px;
+  border-radius: 2px; }
+
+.level-bar {
+  padding: 2px; }
+  .level-bar.trough {
     background-color: transparent;
+    border: none;
     margin: 2px; }
-  GtkLevelBar.vertical,
-  .level-bar.vertical {
-    -GtkLevelBar-min-block-width: 6px;
-    -GtkLevelBar-min-block-height: 32px; }
+  .level-bar.horizontal.indicator-discrete.fill-block {
+    margin: 0 1px; }
+  .level-bar.horizontal.discrete block {
+    margin: 0 1px; }
+  .level-bar.vertical.indicator-discrete.fill-block {
+    margin: 1px 0; }
+  .level-bar.vertical.discrete block {
+    margin: 1px 0; }
 
 /*********
  * Links *
@@ -5097,7 +5028,7 @@ treeview.view header button:active {
 .budgie-polkit-dialog .message {
   color: rgba(207, 216, 220, 0.7); }
 .budgie-polkit-dialog .failure {
-  color: #F44336; }
+  color: #d32f2f; }
 
 /***************
  * font-viewer *

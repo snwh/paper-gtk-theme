@@ -1,82 +1,84 @@
 /*************
  * Level Bar *
  *************/
-GtkLevelBar,
-.level-bar {
 
+%fill-block {
+  border-radius:3px;
+  margin: 2px;
+  background-color: $selected_bg_color;
+  border:1px solid;
+  border-color: if($variant == 'light', $selected_borders_color, $borders_color);
+  box-shadow:inset 0 1px 0 0 $top_highlight;
+
+  &.low,
+  &.level-low {
+    background-color: $red;
+    border-color: if($variant == 'light', darken($red, 10%), $borders_color);
+    box-shadow:inset 0 1px 0 0 $top_highlight;
+  }
+
+  &.high,
+  &.level-high {
+    background-color: $green;
+    border-color: if($variant == 'light', darken($green, 10%), $borders_color);
+    box-shadow:inset 0 1px 0 0 $top_highlight;
+  }
+
+  &.full,
+  &.level-full {
+    background-color: $selected_bg_color;
+    border-color: if($variant == 'light', $selected_borders_color, $borders_color);
+    box-shadow:inset 0 1px 0 0 $top_highlight;
+  }
+
+  &.empty,
+  &.empty-fill-block,
+  &.level-empty {
+    background-color: transparentize(black, 0.9);
+    border-color: $borders_color;
+    box-shadow: 0 1px 0 0 $bottom_highlight;
+  }
+}
+
+GtkLevelBar {
   -GtkLevelBar-min-block-width: 32px;
   -GtkLevelBar-min-block-height: 6px;
+  border-radius: 2px;
+}
+
+GtkLevelBar.vertical {
+  -GtkLevelBar-min-block-width: 6px;
+  -GtkLevelBar-min-block-height: 32px;
+  border-radius: 2px;
+}
+
+.level-bar {
+
   padding: 2px;
 
+  // Trough - has no style
+  &.trough {
+    background-color: transparent;
+    border:none;
+    margin: 2px;
+  }
+
+  // Fill block
+  &.fill-block { 
+    @extend %fill-block;
+  }
+
+  // Continuous
+  .indicator-continuous {
+    &.fill-block {
+      @extend %fill-block;
+    }
+  }
+
+  // Discrete  
   &.horizontal.indicator-discrete.fill-block { margin: 0 1px; }
   &.horizontal.discrete block { margin: 0 1px; }
 
   &.vertical.indicator-discrete.fill-block { margin: 1px 0; }
   &.vertical.discrete block { margin: 1px 0; }
-
-  %fill-block,
-  .fill-block {
-
-    border-radius:3px;
-    margin: 2px;
-    background-color: transparentize(black, 0.9);
-    border:1px solid;
-    border-color: $borders_color;
-    box-shadow: 0 1px 0 0 $bottom_highlight;
-
-    &.low,
-    &.level-low {
-      background-color: $red;
-      border:1px solid;
-      border-color: if($variant == 'light', darken($red, 10%), $borders_color);
-      box-shadow:inset 0 1px 0 0 $top_highlight;
-    }
-
-    &.high,
-    &.level-high {
-      background-color: $green;
-      border:1px solid;
-      border-color: if($variant == 'light', darken($green, 10%), $borders_color);
-      box-shadow:inset 0 1px 0 0 $top_highlight;
-    }
-
-    &.full,
-    &.level-full {
-      background-color: $selected_bg_color;
-      border:1px solid;
-      border-color: if($variant == 'light', $selected_borders_color, $borders_color);
-      box-shadow:inset 0 1px 0 0 $top_highlight;
-    }
-
-    &.empty,
-    &.level-empty {
-      background-color: transparentize(black, 0.9);
-      border:1px solid;
-      border-color: $borders_color;
-      box-shadow: 0 1px 0 0 $bottom_highlight;
-    }
-  }
-
-  // Trough
-  &.horizontal,
-  &.vertical {
-    .trough {
-      border:none;
-      background-color:transparent;
-      margin: 2px;
-    }
-  }
-
-
-  // Vertical
-  &.vertical {
-    -GtkLevelBar-min-block-width: 6px;
-    -GtkLevelBar-min-block-height: 32px;
-
-    .fill-block {
-
-      @extend %fill-block;
-
-    }
-  }
 }

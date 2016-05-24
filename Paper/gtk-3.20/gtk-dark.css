@@ -54,7 +54,7 @@
 @define-color unfocused_borders #242f34;
 /* these are pretty self explicative */
 @define-color warning_color #f9ce1d;
-@define-color error_color #F44336;
+@define-color error_color #d32f2f;
 @define-color success_color #3d8b40;
 /* these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
@@ -78,7 +78,7 @@ read if you used those and something break with a version upgrade you're on your
 * {
   padding: 0;
   -GtkToolButton-icon-spacing: 4;
-  -GtkTextView-error-underline-color: #F44336;
+  -GtkTextView-error-underline-color: #d32f2f;
   -GtkScrolledWindow-scrollbar-spacing: 0;
   -GtkToolItemGroup-expander-size: 11;
   -GtkTreeView-expander-size: 11;
@@ -972,10 +972,10 @@ button.suggested-action {
 button.destructive-action {
   color: white;
   outline-color: rgba(255, 255, 255, 0.3);
-  border-color: #710e06;
-  background-image: linear-gradient(to bottom, #ea1c0d, #d2190b);
-  text-shadow: 0 1px rgba(0, 0, 0, 0.61255);
-  -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.61255);
+  border-color: #420e0e;
+  background-image: linear-gradient(to bottom, #ab2424, #962020);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.67529);
+  -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.67529);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05); }
   button.destructive-action.flat {
@@ -985,29 +985,29 @@ button.destructive-action {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0);
     text-shadow: none;
     -gtk-icon-shadow: none;
-    color: #ea1c0d; }
+    color: #ab2424; }
   button.destructive-action:hover {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #710e06;
-    background-image: linear-gradient(to bottom, #ef1d0d, #e11b0c 60%, #d71a0c);
-    text-shadow: 0 1px rgba(0, 0, 0, 0.56455);
-    -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.56455);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2); }
+    border-color: #420e0e;
+    background-image: linear-gradient(to bottom, #af2525, #a22222 60%, #9a2121);
+    text-shadow: 0 1px rgba(0, 0, 0, 0.62729);
+    -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.62729);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05); }
   button.destructive-action:active,
   button.destructive-action:checked {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #710e06;
-    background-image: linear-gradient(to bottom, #c8180b, #e11b0c);
-    text-shadow: 0 1px rgba(0, 0, 0, 0.69255);
-    -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.69255);
+    border-color: #420e0e;
+    background-image: linear-gradient(to bottom, #8d1e1e, #a22222);
+    text-shadow: 0 1px rgba(0, 0, 0, 0.75529);
+    -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.75529);
     box-shadow: inset 0 2px 1px -2px rgba(0, 0, 0, 0.6);
     box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.05); }
   button.destructive-action:backdrop,
   button.destructive-action.flat:backdrop {
-    border-color: #710e06;
-    background-image: linear-gradient(to bottom, #ea1c0d);
+    border-color: #420e0e;
+    background-image: linear-gradient(to bottom, #ab2424);
     text-shadow: none;
     -gtk-icon-shadow: none;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
@@ -1015,17 +1015,17 @@ button.destructive-action {
     button.destructive-action:backdrop,
     button.destructive-action.flat:backdrop GtkLabel,
     button.destructive-action.flat:backdrop {
-      color: #fbd2cf; }
+      color: #eed3d3; }
     button.destructive-action:backdrop label,
     button.destructive-action:backdrop,
     button.destructive-action.flat:backdrop label,
     button.destructive-action.flat:backdrop {
-      color: #fbd2cf; }
+      color: #eed3d3; }
     button.destructive-action:backdrop:active,
     button.destructive-action:backdrop:checked,
     button.destructive-action.flat:backdrop:active,
     button.destructive-action.flat:backdrop:checked {
-      border-color: #710e06;
+      border-color: #420e0e;
       background-image: none;
       box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.05); }
       button.destructive-action:backdrop:active GtkLabel,
@@ -1036,7 +1036,7 @@ button.destructive-action {
       button.destructive-action.flat:backdrop:active,
       button.destructive-action.flat:backdrop:checked GtkLabel,
       button.destructive-action.flat:backdrop:checked {
-        color: #f1d0ce; }
+        color: #e6d1d1; }
       button.destructive-action:backdrop:active label,
       button.destructive-action:backdrop:active,
       button.destructive-action:backdrop:checked label,
@@ -1045,7 +1045,7 @@ button.destructive-action {
       button.destructive-action.flat:backdrop:active,
       button.destructive-action.flat:backdrop:checked label,
       button.destructive-action.flat:backdrop:checked {
-        color: #f1d0ce; }
+        color: #e6d1d1; }
     button.destructive-action:backdrop:disabled,
     button.destructive-action.flat:backdrop:disabled {
       border-color: #242f34;
@@ -1068,15 +1068,15 @@ button.destructive-action {
       button.destructive-action:backdrop:disabled:checked,
       button.destructive-action.flat:backdrop:disabled:active,
       button.destructive-action.flat:backdrop:disabled:checked {
-        border-color: #710e06;
+        border-color: #420e0e;
         background-image: none;
-        background-color: #ba2117;
+        background-color: #882628;
         box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.05); }
         button.destructive-action:backdrop:disabled:active label,
         button.destructive-action:backdrop:disabled:checked label,
         button.destructive-action.flat:backdrop:disabled:active label,
         button.destructive-action.flat:backdrop:disabled:checked label {
-          color: #d26f68; }
+          color: #b27273; }
   button.destructive-action.flat:backdrop,
   button.destructive-action.flat:disabled,
   button.destructive-action.flat:backdrop:disabled {
@@ -1086,7 +1086,7 @@ button.destructive-action {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0);
     text-shadow: none;
     -gtk-icon-shadow: none;
-    color: rgba(234, 28, 13, 0.8); }
+    color: rgba(171, 36, 36, 0.8); }
   button.destructive-action:disabled {
     border-color: #222c31;
     background-image: none;
@@ -1102,26 +1102,26 @@ button.destructive-action {
       color: #839096; }
     button.destructive-action:disabled:active,
     button.destructive-action:disabled:checked {
-      border-color: #710e06;
+      border-color: #420e0e;
       background-image: none;
-      background-color: #ba2117;
+      background-color: #882628;
       text-shadow: none;
       box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.05); }
       button.destructive-action:disabled:active GtkLabel,
       button.destructive-action:disabled:active,
       button.destructive-action:disabled:checked GtkLabel,
       button.destructive-action:disabled:checked {
-        color: #e3a6a2; }
+        color: #cfa8a9; }
       button.destructive-action:disabled:active label,
       button.destructive-action:disabled:active,
       button.destructive-action:disabled:checked label,
       button.destructive-action:disabled:checked {
-        color: #e3a6a2; }
+        color: #cfa8a9; }
   .osd
   button.destructive-action {
     color: #cfd8dc;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(234, 28, 13, 0.5));
+    background-image: linear-gradient(to bottom, rgba(171, 36, 36, 0.5));
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: 0 1px black;
@@ -1131,7 +1131,7 @@ button.destructive-action {
     button.destructive-action:hover {
       color: white;
       border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(234, 28, 13, 0.7));
+      background-image: linear-gradient(to bottom, rgba(171, 36, 36, 0.7));
       background-clip: padding-box;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
       text-shadow: 0 1px black;
@@ -1144,7 +1144,7 @@ button.destructive-action {
     button.destructive-action:checked {
       color: white;
       border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, #ea1c0d);
+      background-image: linear-gradient(to bottom, #ab2424);
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
@@ -1164,7 +1164,7 @@ button.destructive-action {
     button.destructive-action:backdrop {
       color: #cfd8dc;
       border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(234, 28, 13, 0.5));
+      background-image: linear-gradient(to bottom, rgba(171, 36, 36, 0.5));
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
@@ -2264,16 +2264,16 @@ entry {
     box-shadow: none; }
   spinbutton.error:not(.vertical), GeditWindow > .error.entry,
   entry.error {
-    color: #F44336;
-    border-color: #710e06; }
+    color: #d32f2f;
+    border-color: #420e0e; }
     spinbutton.error:focus:not(.vertical), GeditWindow > .error.entry:focus,
     entry.error:focus {
       box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-      border-color: #710e06; }
+      border-color: #420e0e; }
     spinbutton.error:selected:focus:not(.vertical), GeditWindow > .error.entry:selected:focus, spinbutton.error:selected:not(.vertical), GeditWindow > .error.entry:selected,
     entry.error:selected:focus,
     entry.error:selected {
-      background-color: #F44336; }
+      background-color: #d32f2f; }
   spinbutton.warning:not(.vertical), GeditWindow > .warning.entry,
   entry.warning {
     color: #f9ce1d;
@@ -2836,7 +2836,7 @@ GraniteWidgetsWelcome {
   .storage-bar .fill-block.audio {
     background-color: #ff9800; }
   .storage-bar .fill-block.photo {
-    background-color: #F44336; }
+    background-color: #d32f2f; }
   .storage-bar .fill-block.video {
     background-color: #673ab7; }
   .storage-bar .fill-block .legend {
@@ -3316,9 +3316,9 @@ infobar {
     color: rgba(255, 255, 255, 0.5); }
 
 .error {
-  background-color: #F44336; }
+  background-color: #d32f2f; }
   .error:backdrop {
-    background-color: #f77066;
+    background-color: #dc5959;
     color: rgba(255, 255, 255, 0.5); }
 
 /*************
@@ -6450,7 +6450,7 @@ decoration {
 .budgie-polkit-dialog .message {
   color: rgba(207, 216, 220, 0.7); }
 .budgie-polkit-dialog .failure {
-  color: #F44336; }
+  color: #d32f2f; }
 
 /***************
  * font-viewer *

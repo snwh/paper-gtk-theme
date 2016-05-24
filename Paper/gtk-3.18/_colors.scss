@@ -10,7 +10,7 @@ $headerbar_bg_color: if($variant == 'light', #546e7a, darken($base_color, 10%));
 $headerbar_fg_color: if($variant == 'light', #ffffff, transparentize(#ffffff, 0.2));
 
 // Primary colors
-$red: #F44336;
+$red: #d32f2f;
 $orange: #ff9800;
 $yellow: #f9ce1d;
 $green: #4caf50;
