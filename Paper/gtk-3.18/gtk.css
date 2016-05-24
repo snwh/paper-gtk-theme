@@ -4238,8 +4238,8 @@ spinner {
  * Switch *
  **********/
 GtkSwitch {
-  -GtkSwitch-slider-width: 24px;
-  -GtkSwitch-slider-height: 24px;
+  -GtkSwitch-slider-width: 20px;
+  -GtkSwitch-slider-height: 20px;
   font: 1;
   font-weight: bold;
   outline-offset: -4px;
@@ -4881,56 +4881,91 @@ treeview.view header button:active {
 /*********
 * Budgie *
 **********/
-.budgie-panel .unpinned .launcher:hover, .budgie-panel .pinned .launcher.running:hover {
+.budgie-panel .pinned .launcher:hover,
+.budgie-panel .unpinned .launcher:hover {
   background-color: rgba(0, 0, 0, 0.1); }
-.budgie-panel .unpinned .launcher:active, .budgie-panel .pinned .launcher.running:active, .budgie-panel .unpinned .launcher:checked, .budgie-panel .pinned .launcher.running:checked {
+.budgie-panel .pinned .launcher:active,
+.budgie-panel .unpinned .launcher:active, .budgie-panel .pinned .launcher:checked,
+.budgie-panel .unpinned .launcher:checked {
   background-color: rgba(0, 0, 0, 0.2); }
-.top .budgie-panel .unpinned .launcher, .budgie-panel .unpinned .top .launcher, .top .budgie-panel .pinned .launcher.running, .budgie-panel .pinned .top .launcher.running {
+.top .budgie-panel .pinned .launcher, .budgie-panel .pinned .top .launcher,
+.top .budgie-panel .unpinned .launcher,
+.budgie-panel .unpinned .top .launcher {
   border-bottom: 2px solid rgba(38, 50, 56, 0);
   border-top: 2px solid rgba(38, 50, 56, 0); }
   .top .budgie-panel .unpinned .launcher,
   .top .budgie-panel .pinned .launcher.running {
     border-top: 2px solid rgba(52, 125, 159, 0.5); }
-  .top .budgie-panel .unpinned .launcher:hover, .budgie-panel .unpinned .top .launcher:hover, .top .budgie-panel .pinned .launcher.running:hover, .budgie-panel .pinned .top .launcher.running:hover {
+  .top .budgie-panel .pinned .launcher:hover, .budgie-panel .pinned .top .launcher:hover,
+  .top .budgie-panel .unpinned .launcher:hover,
+  .budgie-panel .unpinned .top .launcher:hover {
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     border-top: 2px solid rgba(52, 125, 159, 0.5); }
-  .top .budgie-panel .unpinned .launcher:active, .budgie-panel .unpinned .top .launcher:active, .top .budgie-panel .pinned .launcher.running:active, .budgie-panel .pinned .top .launcher.running:active, .top .budgie-panel .unpinned .launcher:checked, .budgie-panel .unpinned .top .launcher:checked, .top .budgie-panel .pinned .launcher.running:checked, .budgie-panel .pinned .top .launcher.running:checked {
+  .top .budgie-panel .pinned .launcher:active, .budgie-panel .pinned .top .launcher:active,
+  .top .budgie-panel .unpinned .launcher:active,
+  .budgie-panel .unpinned .top .launcher:active, .top .budgie-panel .pinned .launcher:checked, .budgie-panel .pinned .top .launcher:checked,
+  .top .budgie-panel .unpinned .launcher:checked,
+  .budgie-panel .unpinned .top .launcher:checked {
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
     border-top: 2px solid #347D9F; }
-.bottom .budgie-panel .unpinned .launcher, .budgie-panel .unpinned .bottom .launcher, .bottom .budgie-panel .pinned .launcher.running, .budgie-panel .pinned .bottom .launcher.running {
+.bottom .budgie-panel .pinned .launcher, .budgie-panel .pinned .bottom .launcher,
+.bottom .budgie-panel .unpinned .launcher,
+.budgie-panel .unpinned .bottom .launcher {
   border-top: 2px solid rgba(38, 50, 56, 0);
   border-bottom: 2px solid rgba(38, 50, 56, 0); }
   .bottom .budgie-panel .unpinned .launcher,
   .bottom .budgie-panel .pinned .launcher.running {
     border-bottom: 2px solid rgba(52, 125, 159, 0.5); }
-  .bottom .budgie-panel .unpinned .launcher:hover, .budgie-panel .unpinned .bottom .launcher:hover, .bottom .budgie-panel .pinned .launcher.running:hover, .budgie-panel .pinned .bottom .launcher.running:hover {
+  .bottom .budgie-panel .pinned .launcher:hover, .budgie-panel .pinned .bottom .launcher:hover,
+  .bottom .budgie-panel .unpinned .launcher:hover,
+  .budgie-panel .unpinned .bottom .launcher:hover {
     border-top: 2px solid rgba(0, 0, 0, 0.1);
     border-bottom: 2px solid rgba(52, 125, 159, 0.5); }
-  .bottom .budgie-panel .unpinned .launcher:active, .budgie-panel .unpinned .bottom .launcher:active, .bottom .budgie-panel .pinned .launcher.running:active, .budgie-panel .pinned .bottom .launcher.running:active, .bottom .budgie-panel .unpinned .launcher:checked, .budgie-panel .unpinned .bottom .launcher:checked, .bottom .budgie-panel .pinned .launcher.running:checked, .budgie-panel .pinned .bottom .launcher.running:checked {
+  .bottom .budgie-panel .pinned .launcher:active, .budgie-panel .pinned .bottom .launcher:active,
+  .bottom .budgie-panel .unpinned .launcher:active,
+  .budgie-panel .unpinned .bottom .launcher:active, .bottom .budgie-panel .pinned .launcher:checked, .budgie-panel .pinned .bottom .launcher:checked,
+  .bottom .budgie-panel .unpinned .launcher:checked,
+  .budgie-panel .unpinned .bottom .launcher:checked {
     border-top: 2px solid rgba(0, 0, 0, 0.2);
     border-bottom: 2px solid #347D9F; }
-.left .budgie-panel .unpinned .launcher, .budgie-panel .unpinned .left .launcher, .left .budgie-panel .pinned .launcher.running, .budgie-panel .pinned .left .launcher.running {
+.left .budgie-panel .pinned .launcher, .budgie-panel .pinned .left .launcher,
+.left .budgie-panel .unpinned .launcher,
+.budgie-panel .unpinned .left .launcher {
   border-right: 2px solid rgba(38, 50, 56, 0);
   border-left: 2px solid rgba(38, 50, 56, 0); }
   .left .budgie-panel .unpinned .launcher,
   .left .budgie-panel .pinned .launcher.running {
     border-left: 2px solid rgba(52, 125, 159, 0.5); }
-  .left .budgie-panel .unpinned .launcher:hover, .budgie-panel .unpinned .left .launcher:hover, .left .budgie-panel .pinned .launcher.running:hover, .budgie-panel .pinned .left .launcher.running:hover {
+  .left .budgie-panel .pinned .launcher:hover, .budgie-panel .pinned .left .launcher:hover,
+  .left .budgie-panel .unpinned .launcher:hover,
+  .budgie-panel .unpinned .left .launcher:hover {
     border-right: 2px solid rgba(0, 0, 0, 0.1);
     border-left: 2px solid rgba(52, 125, 159, 0.5); }
-  .left .budgie-panel .unpinned .launcher:active, .budgie-panel .unpinned .left .launcher:active, .left .budgie-panel .pinned .launcher.running:active, .budgie-panel .pinned .left .launcher.running:active, .left .budgie-panel .unpinned .launcher:checked, .budgie-panel .unpinned .left .launcher:checked, .left .budgie-panel .pinned .launcher.running:checked, .budgie-panel .pinned .left .launcher.running:checked {
+  .left .budgie-panel .pinned .launcher:active, .budgie-panel .pinned .left .launcher:active,
+  .left .budgie-panel .unpinned .launcher:active,
+  .budgie-panel .unpinned .left .launcher:active, .left .budgie-panel .pinned .launcher:checked, .budgie-panel .pinned .left .launcher:checked,
+  .left .budgie-panel .unpinned .launcher:checked,
+  .budgie-panel .unpinned .left .launcher:checked {
     border-right: 2px solid rgba(0, 0, 0, 0.2);
     border-left: 2px solid #347D9F; }
-.right .budgie-panel .unpinned .launcher, .budgie-panel .unpinned .right .launcher, .right .budgie-panel .pinned .launcher.running, .budgie-panel .pinned .right .launcher.running {
+.right .budgie-panel .pinned .launcher, .budgie-panel .pinned .right .launcher,
+.right .budgie-panel .unpinned .launcher,
+.budgie-panel .unpinned .right .launcher {
   border-left: 2px solid rgba(38, 50, 56, 0);
   border-right: 2px solid rgba(38, 50, 56, 0); }
   .right .budgie-panel .unpinned .launcher,
   .right .budgie-panel .pinned .launcher.running {
     border-right: 2px solid rgba(52, 125, 159, 0.5); }
-  .right .budgie-panel .unpinned .launcher:hover, .budgie-panel .unpinned .right .launcher:hover, .right .budgie-panel .pinned .launcher.running:hover, .budgie-panel .pinned .right .launcher.running:hover {
+  .right .budgie-panel .pinned .launcher:hover, .budgie-panel .pinned .right .launcher:hover,
+  .right .budgie-panel .unpinned .launcher:hover,
+  .budgie-panel .unpinned .right .launcher:hover {
     border-left: 2px solid rgba(0, 0, 0, 0.1);
     border-right: 2px solid rgba(52, 125, 159, 0.5); }
-  .right .budgie-panel .unpinned .launcher:active, .budgie-panel .unpinned .right .launcher:active, .right .budgie-panel .pinned .launcher.running:active, .budgie-panel .pinned .right .launcher.running:active, .right .budgie-panel .unpinned .launcher:checked, .budgie-panel .unpinned .right .launcher:checked, .right .budgie-panel .pinned .launcher.running:checked, .budgie-panel .pinned .right .launcher.running:checked {
+  .right .budgie-panel .pinned .launcher:active, .budgie-panel .pinned .right .launcher:active,
+  .right .budgie-panel .unpinned .launcher:active,
+  .budgie-panel .unpinned .right .launcher:active, .right .budgie-panel .pinned .launcher:checked, .budgie-panel .pinned .right .launcher:checked,
+  .right .budgie-panel .unpinned .launcher:checked,
+  .budgie-panel .unpinned .right .launcher:checked {
     border-left: 2px solid rgba(0, 0, 0, 0.2);
     border-right: 2px solid #347D9F; }
 
@@ -5030,18 +5065,20 @@ treeview.view header button:active {
       -gtk-image-effect: highlight; }
 
 .raven {
-  border: none;
   color: #444;
-  background-color: rgba(247, 247, 247, 0.98); }
+  background-color: rgba(247, 247, 247, 0.98);
+  transition: 170ms ease-out; }
   .raven .raven-header {
+    padding: 4px;
     font: bold;
     text-shadow: 0 1px rgba(0, 0, 0, 0.2);
     icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
     background-color: #f7f7f7;
+    background-image: linear-gradient(to bottom, white, #f7f7f7);
     color: #444;
     border: solid #d1d1d1;
     border-width: 1px 0 1px 0;
-    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 0 rgba(255, 255, 255, 0.05), 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 0 rgba(255, 255, 255, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
     .raven .raven-header.top {
       border-top-style: none; }
     .raven .raven-header.bottom {
@@ -5055,7 +5092,7 @@ treeview.view header button:active {
   .raven .raven-background {
     background-color: #ffffff;
     border-bottom: 1px solid #d1d1d1;
-    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
+    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.2); }
     .raven .raven-background.middle {
       border-bottom-style: none; }
   .raven .raven-calendar {
@@ -5064,12 +5101,13 @@ treeview.view header button:active {
     border-bottom: 1px solid #d1d1d1; }
   .raven .powerstrip {
     background-color: transparent;
+    background-image: none;
     border: none;
     box-shadow: none; }
   .raven .powerstrip .button {
     border-radius: 50%;
     padding: 12px;
-    background: rgba(0, 0, 0, 0.1);
+    background: #f2f2f2;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px rgba(255, 255, 255, 0.1);
     font-size: 100%; }
@@ -5094,12 +5132,15 @@ treeview.view header button:active {
     padding: 8px; }
 
 .budgie-notification-window {
+  border-radius: 4px;
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
   background-color: #f7f7f7;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.2); }
 
+.budgie-notification.background {
+  border-radius: 4px;
+  padding: 4px; }
 .budgie-notification .notification-title {
   font-size: 110%;
   color: #444; }
@@ -5107,14 +5148,13 @@ treeview.view header button:active {
   border: none;
   color: rgba(207, 216, 220, 0.7); }
 
-.drop-shadow, .budgie-session-dialog.background, .background.budgie-polkit-dialog {
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2); }
-
 .budgie-session-dialog, .budgie-polkit-dialog {
-  padding: 12px;
   border-radius: 4px;
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  .budgie-session-dialog.background, .background.budgie-polkit-dialog {
+    padding: 12px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.2); }
   .budgie-session-dialog .linked.horizontal > .button, .budgie-polkit-dialog .linked.horizontal > .button {
     border-bottom: none;
     border-radius: 0; }

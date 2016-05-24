@@ -147,38 +147,50 @@ $asset_suffix: if($variant == 'default', '', '-hc');
     &:hover { -gtk-image-effect: highlight; }
   }
 
+  .pinned,
   .unpinned {
-    .launcher {
-      @extend %underscores;
-    }
-  }
-
-  .pinned {
+    .launcher,
     .launcher.running {
       @extend %underscores;
     }
-   }
+  }
 }
 
 // Raven
 
 .raven {
-  border:none;
   color: $fg_color;
   background-color: transparentize($bg_color, 0.02);
+  transition: 170ms ease-out;
 
   .raven-header {
+    padding: 4px;
     font: bold;
     text-shadow: 0 1px $shadow_color;
     icon-shadow: 0 1px $shadow_color;
     background-color: $bg_color;
+    background-image: linear-gradient(to bottom,
+                      lighten($bg_color, 5%),
+                      $bg_color);
     color: $fg_color;
     border: solid $borders_color;
     border-width: 1px 0 1px 0;
-    box-shadow:inset 0 1px 0 0 transparentize(white,0.9),inset 0 -1px 0 0 transparentize(white,0.95), 0 1px 1px 0 transparentize(black,0.9);
+    box-shadow:inset 0 1px 0 0 transparentize(white,0.9),
+              inset 0 -1px 0 0 transparentize(white,0.95),
+              0 1px 2px 0 $shadow_color;
 
     &.top { border-top-style: none; }
     &.bottom { border-bottom-style: none; }
+
+    switch {
+      -GtkSwitch-slider-width: 16px;
+      -GtkSwitch-slider-height: 16px;
+      border-radius: 12px;
+
+      .slider {
+        border-radius: 8px;
+      }
+    }
 
   }
 
@@ -189,8 +201,7 @@ $asset_suffix: if($variant == 'default', '', '-hc');
   .raven-background {
     background-color: $base_color;
     border-bottom: 1px solid $borders_color;
-    box-shadow:inset 0 1px 0 0 transparentize(white,0.9), 0 1px 1px 0 transparentize(black,0.9);
-
+    box-shadow:inset 0 1px 1px 0 $shadow_color;
     &.middle { border-bottom-style: none; }  // applet background between two headers
 
   }
@@ -205,6 +216,7 @@ $asset_suffix: if($variant == 'default', '', '-hc');
   // Session Buttons
   .powerstrip {
     background-color: transparent;
+    background-image:none;
     border: none;
     box-shadow:none;
   }
@@ -212,7 +224,7 @@ $asset_suffix: if($variant == 'default', '', '-hc');
   .powerstrip .button {
     border-radius:50%;
     padding: 12px;
-    background: transparentize(black,0.9);
+    background: darken($bg_color,2%);
     border: 1px solid transparentize(black,0.8);
     box-shadow: 0 1px transparentize(white,0.9);
     font-size: 100%;
@@ -241,23 +253,27 @@ $asset_suffix: if($variant == 'default', '', '-hc');
   background-color: transparentize($budgie_panel_bg_color, 0.2);
   border: solid transparentize(black, 0.8);
   border-width: 1px 0;
-  box-shadow:inset 0 1px 0 0 transparentize(white,0.9),inset 0 -1px 0 0 transparentize(white,0.95), 0 1px 1px 0 transparentize(black,0.9);
+  box-shadow:inset 0 1px 0 0 transparentize(white,0.9),
+            inset 0 -1px 0 0 transparentize(white,0.95),
+            0 1px 1px 0 transparentize(black,0.9);
 
   .button.image-button { padding: 8px; }
 }
 
 // Notifications
 .budgie-notification-window {
+  border-radius: 4px;
   border:none;
   border-top: 1px solid transparentize(white,0.9);
-  border-radius: 4px;
   background-color: $bg_color;
-  box-shadow: 0 2px 2px 0 $shadow_color;
+  box-shadow: 0 2px 2px 0 $shadow_color, 0 0 0 1px $shadow_color;
 }
 
 .budgie-notification {
 
   &.background {
+    border-radius: 4px;
+    padding: 4px;
   }
 
   .notification-title {
@@ -271,17 +287,16 @@ $asset_suffix: if($variant == 'default', '', '-hc');
   }
 }
 
-.drop-shadow {
-  box-shadow: 0 1px 1px 0 $shadow_color;
-}
-
 // Session Dialog
 .budgie-session-dialog {
-  padding:12px;
   border-radius: 4px;
   border:none;
   border-top: 1px solid transparentize(white,0.9);
-  &.background { @extend .drop-shadow; }
+
+  &.background {
+    padding:12px;
+    box-shadow: 0 1px 1px 0 $shadow_color, 0 0 0 1px $shadow_color;
+  }
 
   .linked.horizontal > .button {
     border-bottom: none;
