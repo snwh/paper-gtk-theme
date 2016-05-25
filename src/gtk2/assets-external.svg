@@ -34,8 +34,8 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="80.951537"
-     inkscape:cy="96.708289"
+     inkscape:cx="33.529731"
+     inkscape:cy="108.48054"
      inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:grid-bbox="true"
@@ -598,23 +598,12 @@
            rx="1.5" />
       </g>
     </g>
-    <path
-       sodipodi:nodetypes="ccccscccccc"
-       inkscape:connector-curvature="0"
-       id="path6707"
-       d="m 50.84375,190.03125 c -0.21888,0.0473 -0.42059,0.17053 -0.5625,0.34375 L 44,197.5625 l -2.25,-2.25 c -0.37633,-0.37638 -1.06119,-0.3764 -1.43755,-5e-5 -0.37635,0.37636 -0.37633,1.06122 5e-5,1.43755 l 3,3 0.78125,0.75 0.6875,-0.8125 7,-8 c 0.56742,-0.61773 -0.11583,-1.8248 -0.9375,-1.65625 z"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:Sans;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#333333;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate" />
-    <path
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;enable-background:new"
-       d="m 60,195 8,0 0,2 -8,0 z"
-       id="path6715"
-       inkscape:connector-curvature="0" />
     <g
-       id="g6751"
-       transform="translate(-1,21)">
+       id="checkbox-checked-active"
+       transform="translate(-1,21)"
+       inkscape:label="#g6751">
       <rect
          style="opacity:1;fill:none;fill-opacity:1;stroke:none"
-         id="checkbox-checked-active"
          width="16"
          height="16"
          x="37"
