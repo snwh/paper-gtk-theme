@@ -3,63 +3,66 @@
 **********/
 
 $budgie_panel_bg_color: if($variant == 'light', $bg_color, #263238);
-$budgie_panel_fg_color: if($variant == 'light', $fg_color, #cfd8dc);;
+$budgie_panel_fg_color: if($variant == 'light', $fg_color, #fff);
 
-
+$pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
 @function gtkalpha($c,$a) {
   @return unquote("alpha(#{$c},#{$a})");
 }
 
-$pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
-$asset_suffix: if($variant == 'default', '', '-hc');
+%app_indicators {
 
-%underscores {
-  &:hover { background-color: transparentize(black, 0.9); }
-  &:active, &:checked { background-color: transparentize(black, 0.8); }
+  &:hover {
+    background-color: transparentize(black, 0.9);
+  }
 
-  @each $pos, $b_pos in $pos_list {
+  &:active,
+  &:checked {
+    // background-color: transparentize(black, 0.8);
+  }
+
+  @each $pos, $alt_pos in $pos_list {
     .#{$pos} & {
-      border-#{$b_pos}: 2px solid transparentize($budgie_panel_bg_color, 1.0);
-      border-#{$pos}: 2px solid transparentize($budgie_panel_bg_color, 1.0);
 
       @at-root {
         .#{$pos} .budgie-panel .unpinned .launcher,
-        .#{$pos} .budgie-panel .pinned .launcher.running { border-#{$pos}: 2px solid transparentize($selected_bg_color, 0.5); }
+        .#{$pos} .budgie-panel .pinned .launcher.running {
+          border-#{$pos}: 2px solid transparentize($budgie_panel_fg_color, 0.8);
+        }
       }
 
       &:hover {
-        border-#{$b_pos}: 2px solid transparentize(black, 0.9);
-        border-#{$pos}: 2px solid transparentize($selected_bg_color, 0.5);
+        border-#{$pos}: 3px solid transparentize($budgie_panel_fg_color, 0.5);
       }
 
-      &:active, &:checked {
-        border-#{$b_pos}: 2px solid transparentize(black, 0.8);
-        border-#{$pos}: 2px solid $selected_bg_color;
+      &:active,
+      &:checked {
+        border-#{$pos}: 3px solid $budgie_panel_fg_color;
       }
     }
   }
 }
 
 // Positional Styles
-@each $pos, $b_pos in $pos_list {
+@each $pos, $alt_pos in $pos_list {
 
   // Panel borders
   .#{$pos} .budgie-panel {
-    border-#{$b_pos}: 1px solid transparentize(black,0.8);
+    border-#{$alt_pos}: 1px solid transparentize(black,0.8);
     box-shadow:inset 0 1px 0 0 transparentize(white,0.9);
   }
 
   // Raven borders
   .#{$pos} .raven-frame {
-    border-#{$b_pos}: 1px solid transparentize(black, 0.2);
+    border-#{$alt_pos}: 1px solid transparentize(black, 0.2);
     box-shadow:inset 0 0 0 1px transparentize(white, 0.7);
   }
 
   // Shadows
   .#{$pos} .shadow-block {
     background-color: transparent;
-    background-image: linear-gradient(to $b_pos,
+    background-image: linear-gradient(to $alt_pos,
                       $shadow_color,
                       transparent,
                       transparent);
@@ -79,6 +82,7 @@ $asset_suffix: if($variant == 'default', '', '-hc');
 
 // Budgie Menu
 .budgie-menu {
+
   GtkSearchEntry.entry:not(:selected) {
     border: none;
     box-shadow: none;
@@ -136,7 +140,7 @@ $asset_suffix: if($variant == 'default', '', '-hc');
         background-clip: padding-box;
         border: none;
 
-        @extend %underscores;
+        @extend %app_indicators;
       }
     }
   }
@@ -155,9 +159,17 @@ $asset_suffix: if($variant == 'default', '', '-hc');
   .unpinned {
     .launcher,
     .launcher.running {
-      @extend %underscores;
+      @extend %app_indicators;
+      padding: 2px 6px;
     }
   }
+}
+
+// Panel borders
+.bottom .budgie-panel {
+  border: none;
+  box-shadow:none;
+  background:none;
 }
 
 // Raven

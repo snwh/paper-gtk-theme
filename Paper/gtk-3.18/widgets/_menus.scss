@@ -25,17 +25,10 @@
   }
 }
 
-%menu,
-.content-view .menu,
-.menu,
-.popup {
+%menu {
   padding: 4px 0px;
   background-color: $menu_color;
   border: 1px solid $borders_color;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px 0 transparentize(black,0.9), inset 0 1px 0 0 $top_highlight;
-
-  .csd & {border: none;}
 
   &:backdrop { background-color: $backdrop_menu_color; }
 
@@ -72,8 +65,13 @@
         margin-right: 10px;
       }
     }
-  }
 
+    // separator
+    &.separator {
+      color: transparentize(black, 0.8);
+    }
+
+  }
   // overflow arrows
   > .arrow {
     @include button(undecorated);
@@ -106,13 +104,29 @@
   }
 }
 
+
 .menuitem {
-  .accelerator { color: gtkalpha(currentColor,0.55); }
+  &.accelerator { color: gtkalpha(currentColor,0.55);}
 
-  .check,
-  .radio {
+  &.check,
+  &.radio {
+    padding:4px;
 
-    &:dir(ltr) { margin-right: 7px; }
+    &:dir(ltr) { margin-right: 7px;}
     &:dir(rtl) { margin-left: 7px; }
   }
+}
+
+.menu {
+  @extend %menu;
+  box-shadow: inset 0 1px 0 0 $top_highlight;
+
+  .csd & {border: none;}
+}
+
+.content-view .menu,
+.popup,
+.context-menu {
+  @extend %menu;
+  box-shadow: 0 2px 4px 0 transparentize(black,0.9), inset 0 1px 0 0 $top_highlight;
 }
