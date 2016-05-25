@@ -1,0 +1,2217 @@
+style "dark" {
+
+  xthickness = 1
+  ythickness = 1
+
+  ####################
+  # Style Properties #
+  ####################
+
+  GtkWidget::focus-line-width = 1
+  GtkWidget::focus-line-pattern = "\2\1"
+
+  GtkToolbar::internal-padding = 4
+  GtkToolButton::icon-spacing  = 4
+
+  GtkWidget::tooltip-radius    = 3
+  GtkWidget::tooltip-alpha     = 235
+  GtkWidget::new-tooltip-style = 1 #for compatibility
+
+  GtkWidget::link-color              = shade(0.9, @selected_bg_color)
+  GtkWidget::visited-link-color      = shade(0.8, @selected_bg_color)
+  GnomeHRef::link_color              = shade(0.9, @selected_bg_color)
+  GtkHTML::link-color                = shade(0.9, @selected_bg_color)
+  GtkHTML::vlink-color               = shade(0.8, @selected_bg_color)
+  GtkIMHtml::hyperlink-color         = shade(0.9, @selected_bg_color)
+  GtkIMHtml::hyperlink-visited-color = shade(0.8, @selected_bg_color)
+
+  GtkSeparatorMenuItem::horizontal-padding = 0
+  GtkSeparatorMenuItem::wide-separators    = 1
+  GtkSeparatorMenuItem::separator-height   = 1
+
+  GtkButton::child-displacement-y = 0
+
+  GtkButton::default-border         = {0, 0, 0, 0}
+  GtkButton::default-outside-border = {0, 0, 0, 0}
+  GtkButton::inner-border           = {4, 4, 4, 4}
+
+  GtkEntry::state-hint = 1
+  GtkEntry::inner-border = {7, 7, 4, 5}
+
+  GtkPaned::handle-size = 9
+  GtkHPaned::handle-size = 9
+  GtkVPaned::handle-size = 9
+
+  GtkScrollbar::trough-border = 0
+  GtkRange::trough-border     = 0
+  GtkRange::slider-width      = 13
+  GtkRange::stepper-size      = 0
+  GtkRange::activate-slider   = 1
+
+  GtkScrollbar::activate-slider              = 1
+  GtkScrollbar::stepper-size                 = 0
+  GtkScrollbar::has-backward-stepper         = 0
+  GtkScrollbar::has-forward-stepper          = 0
+  GtkScrollbar::min-slider-length            = 48 # 42 + 2*3 (margins)
+  GtkScrolledWindow::scrollbar-spacing       = 0
+  GtkScrolledWindow::scrollbars-within-bevel = 1
+
+  GtkScale::slider_length       = 26
+  GtkScale::slider_width        = 26
+  GtkScale::trough-side-details = 1
+
+  GtkProgressBar::min-horizontal-bar-height = 6
+  GtkProgressBar::min-vertical-bar-width    = 6
+  # Making this bigger than the min[height,width]-2*[y,x]spacing makes the
+  # whole progressbar thicker, so by setting it to the exact above value
+  # we get the maximum spacing between the text and the edges without
+  # doing so.
+  GtkProgressBar::xspacing = 4
+  GtkProgressBar::yspacing = 4
+
+  GtkStatusbar::shadow_type    = GTK_SHADOW_NONE
+  GtkSpinButton::shadow_type   = GTK_SHADOW_NONE
+  GtkMenuBar::shadow-type      = GTK_SHADOW_NONE
+  GtkToolbar::shadow-type      = GTK_SHADOW_NONE
+  # TODO: find out what this comment means:
+  # ( every window is misaligned for the sake of menus ):
+  GtkMenuBar::internal-padding = 0
+  GtkMenu::horizontal-padding  = 0
+  GtkMenu::vertical-padding    = 2
+  GtkMenu::double-arrows       = 0
+  GtkMenuItem::arrow-scaling   = 1
+  GtkMenuItem::toggle-spacing  = 10
+
+  GtkCheckButton::indicator_spacing = 3
+  GtkOptionMenu::indicator_spacing  = {13, 13, 5, 8}
+
+  GtkTreeView::expander-size        = 16
+  GtkTreeView::vertical-separator   = 0
+  GtkTreeView::horizontal-separator = 4
+  GtkTreeView::allow-rules          = 0
+  # Set this because some apps read it
+  GtkTreeView::odd-row-color        = @dark_base_color
+  GtkTreeView::even-row-color       = @dark_base_color
+
+  GtkExpander::expander-size = 16
+
+  GtkNotebook::tab-overlap = 4
+
+  ##########
+  # Colors #
+  ##########
+
+  bg[NORMAL]      = @dark_bg_color
+  bg[PRELIGHT]    = @dark_bg_color
+  bg[SELECTED]    = @selected_bg_color
+  bg[INSENSITIVE] = mix (0.6, @dark_bg_color, @dark_base_color)
+  bg[ACTIVE]      = @dark_bg_color
+
+  fg[NORMAL]      = @dark_fg_color
+  fg[PRELIGHT]    = @dark_fg_color
+  fg[SELECTED]    = @selected_fg_color
+  fg[INSENSITIVE] = mix (0.5, @dark_fg_color, @dark_bg_color)
+  fg[ACTIVE]      = @dark_fg_color
+
+  text[NORMAL]      = @dark_text_color
+  text[PRELIGHT]    = @dark_text_color
+  text[SELECTED]    = @selected_fg_color
+  text[INSENSITIVE] = darker (@dark_bg_color)
+  text[ACTIVE]      = @selected_fg_color
+
+  base[NORMAL]      = @dark_base_color
+  base[PRELIGHT]    = shade (0.95, @dark_bg_color)
+  base[SELECTED]    = @selected_bg_color
+  base[INSENSITIVE] = mix (0.5, @dark_fg_color, @dark_bg_color)
+  base[ACTIVE]      = @selected_bg_color
+
+  # For succinctness, all reasonable pixmap options remain here
+
+  # Draw frame around menu in a non-compositied environment
+  # This needs to go before pixmap because we need to override some stuff
+  engine "adwaita" {}
+
+  engine "pixmap" {
+
+    ##########
+    # Arrows #
+    ##########
+
+    # Overrides
+
+    # Disable arrows in spinbuttons
+    image {
+      function = ARROW
+      detail = "spinbutton"
+    }
+
+    # Disable arrows for qt in scrollbars
+    image {
+      function = ARROW
+      detail   = "vscrollbar"
+    }
+    image {
+      function = ARROW
+      detail   = "hscrollbar"
+    }
+
+    # Menu arrows
+
+    image {
+      function        = ARROW
+      state           = NORMAL
+      detail          = "menuitem"
+      overlay_file    = "assets-dark/menu-pan-left-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = LEFT
+    }
+
+    image {
+      function        = ARROW
+      state           = PRELIGHT
+      detail          = "menuitem"
+      overlay_file    = "assets-dark/menu-pan-left-hover-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = LEFT
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      detail          = "menuitem"
+      overlay_file    = "assets-dark/menu-pan-left-insensitive-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = LEFT
+    }
+
+    image {
+      function        = ARROW
+      state           = NORMAL
+      detail          = "menuitem"
+      overlay_file    = "assets-dark/menu-pan-right-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = RIGHT
+    }
+
+    image {
+      function        = ARROW
+      state           = PRELIGHT
+      detail          = "menuitem"
+      overlay_file    = "assets-dark/menu-pan-right-hover-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = RIGHT
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      detail          = "menuitem"
+      overlay_file    = "assets-dark/menu-pan-right-insensitive-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = RIGHT
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      detail          = "menu_scroll_arrow_up"
+      overlay_file    = "assets-dark/menu-pan-up-insensitive-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = ARROW
+      detail          = "menu_scroll_arrow_up"
+      overlay_file    = "assets-dark/menu-pan-up-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      detail          = "menu_scroll_arrow_down"
+      overlay_file    = "assets-dark/menu-pan-down-insensitive-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = ARROW
+      detail          = "menu_scroll_arrow_down"
+      overlay_file    = "assets-dark/menu-pan-down-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    # Regular arrows
+
+    image {
+      function        = ARROW
+      state           = NORMAL
+      overlay_file    = "assets-dark/pan-up-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = UP
+    }
+
+    image {
+      function        = ARROW
+      state           = PRELIGHT
+      overlay_file    = "assets-dark/pan-up-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = UP
+    }
+
+    image {
+      function        = ARROW
+      state           = ACTIVE
+      overlay_file    = "assets-dark/pan-up-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = UP
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      overlay_file    = "assets-dark/pan-up-insensitive-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = UP
+    }
+
+    image {
+      function        = ARROW
+      state           = NORMAL
+      overlay_file    = "assets-dark/pan-down-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
+    }
+
+    image {
+      function        = ARROW
+      state           = PRELIGHT
+      overlay_file    = "assets-dark/pan-down-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
+    }
+
+    image {
+      function        = ARROW
+      state           = ACTIVE
+      overlay_file    = "assets-dark/pan-down-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      overlay_file    = "assets-dark/pan-down-insensitive-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
+    }
+
+    image {
+      function        = ARROW
+      state           = NORMAL
+      overlay_file    = "assets-dark/pan-left-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = LEFT
+    }
+
+    image {
+      function        = ARROW
+      state           = PRELIGHT
+      overlay_file    = "assets-dark/pan-left-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = LEFT
+    }
+
+    image {
+      function        = ARROW
+      state           = ACTIVE
+      overlay_file    = "assets-dark/pan-left-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = LEFT
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      overlay_file    = "assets-dark/pan-left-insensitive-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = LEFT
+    }
+
+    image {
+      function        = ARROW
+      state           = NORMAL
+      overlay_file    = "assets-dark/pan-right-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = RIGHT
+    }
+
+    image {
+      function        = ARROW
+      state           = PRELIGHT
+      overlay_file    = "assets-dark/pan-right-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = RIGHT
+    }
+
+    image {
+      function        = ARROW
+      state           = ACTIVE
+      overlay_file    = "assets-dark/pan-right-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = RIGHT
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      overlay_file    = "assets-dark/pan-right-insensitive-dark.png"
+      overlay_stretch = FALSE
+      arrow_direction = RIGHT
+    }
+
+    ######################
+    # Option Menu Arrows #
+    ######################
+
+    image {
+      function        = TAB
+      state           = NORMAL
+      overlay_file    = "assets-dark/pan-down-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = TAB
+      state           = PRELIGHT
+      overlay_file    = "assets-dark/pan-down-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = TAB
+      state           = ACTIVE
+      overlay_file    = "assets-dark/pan-down-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = TAB
+      state           = INSENSITIVE
+      overlay_file    = "assets-dark/pan-down-insensitive-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    #########
+    # Lines #
+    #########
+
+    image {
+      function = VLINE
+      file     = "assets-dark/line-dark.png"
+      border   = {1, 0, 0, 0}
+    }
+
+    image {
+      function = HLINE
+      file     = "assets-dark/line-dark.png"
+      border   = {0, 0, 1, 0}
+    }
+
+    #########
+    # Focus #
+    #########
+
+    image {
+      function = FOCUS
+      file     = "assets-dark/focus-dark.png"
+      border   = {1, 1, 1, 1}
+      stretch  = TRUE
+    }
+
+    ###########
+    # Handles #
+    ###########
+
+    image {
+      function        = HANDLE
+      detail          = "handlebox"
+      overlay_file    = "assets-dark/handle-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function    = HANDLE
+      file        = "assets-dark/handle-horz-dark.png"
+      border      = {0, 0, 4, 4}
+      orientation = HORIZONTAL
+    }
+
+    image {
+      function    = HANDLE
+      file        = "assets-dark/handle-vert-dark.png"
+      border      = {4, 4, 0, 0}
+      orientation = VERTICAL
+    }
+
+    image {
+      function = RESIZE_GRIP
+    }
+
+    #############
+    # Expanders #
+    #############
+
+    image {
+      function       = EXPANDER
+      expander_style = EXPANDED
+      file           = "assets-dark/pan-down-dark.png"
+    }
+
+    # LTR
+
+    image {
+      function       = EXPANDER
+      expander_style = COLLAPSED
+      file           = "assets-dark/pan-right-dark.png"
+      direction      = LTR
+    }
+
+    image {
+      function       = EXPANDER
+      expander_style = SEMI_COLLAPSED
+      file           = "assets-dark/pan-right-semi-dark.png"
+      direction      = LTR
+    }
+
+    image {
+      function       = EXPANDER
+      expander_style = SEMI_EXPANDED
+      file           = "assets-dark/pan-right-semi-dark.png"
+      direction      = LTR
+    }
+
+    # RTL
+
+    image {
+      function       = EXPANDER
+      expander_style = COLLAPSED
+      file           = "assets-dark/pan-left-dark.png"
+      direction      = RTL
+    }
+
+    image {
+      function       = EXPANDER
+      expander_style = SEMI_COLLAPSED
+      file           = "assets-dark/pan-left-semi-dark.png"
+      direction      = RTL
+    }
+
+    image {
+      function       = EXPANDER
+      expander_style = SEMI_EXPANDED
+      file           = "assets-dark/pan-left-semi-dark.png"
+      direction      = RTL
+    }
+
+    #############
+    # Notebooks #
+    #############
+
+    # Left
+
+    image {
+      function = EXTENSION
+      state    = NORMAL
+      file     = "assets-dark/tab-left-active-dark.png"
+      border   = { 3,3,3,3 }
+      stretch  = TRUE
+      gap_side = RIGHT
+    }
+
+    image {
+      function = EXTENSION
+      file     = "assets-dark/tab-left-dark.png"
+      border   = {  3,3,3,3 }
+      stretch  = TRUE
+      gap_side = RIGHT
+    }
+
+    # Right
+
+    image {
+      function = EXTENSION
+      state    = NORMAL
+      file     = "assets-dark/tab-right-active-dark.png"
+      border   = { 3,3,3,3 }
+      stretch  = TRUE
+      gap_side = LEFT
+    }
+
+    image {
+      function = EXTENSION
+      file     = "assets-dark/tab-right-dark.png"
+      border   = {  3,3,3,3 }
+      stretch  = TRUE
+      gap_side = LEFT
+    }  
+
+    # Up 
+
+    image {
+      function = EXTENSION
+      state    = NORMAL
+      file     = "assets-dark/tab-up-active-dark.png"
+      border   = { 3,3,5,3 }
+      stretch  = TRUE
+      gap_side = BOTTOM
+    }
+
+    image {
+      function = EXTENSION
+      file     = "assets-dark/tab-up-dark.png"
+      border   = { 3,3,3,3 }
+      stretch  = TRUE
+      gap_side = BOTTOM
+    }
+
+    # Down
+
+    image {
+      function = EXTENSION
+      state    = NORMAL
+      file     = "assets-dark/tab-down-active-dark.png"
+      border   = { 3,3,3,5 }
+      stretch  = TRUE
+      gap_side = TOP
+    }
+
+    image {
+      function = EXTENSION
+      file     = "assets-dark/tab-down-dark.png"
+      border   = { 3,3,3,3 }
+      stretch  = TRUE
+      gap_side = TOP
+    }
+
+    # Inner frame
+
+    image {
+      function   = BOX_GAP
+      detail     = "notebook"
+      file       = "assets-dark/frame-notebook-dark.png"
+      border     = {1, 1, 1, 1}
+      stretch    = TRUE
+      gap_file   = "assets-dark/tab-vert-gap-dark.png"
+      gap_border = {1, 0, 1, 1}
+      gap_side   = LEFT
+    }
+
+    image {
+      function   = BOX_GAP
+      detail     = "notebook"
+      file       = "assets-dark/frame-notebook-dark.png"
+      border     = {1, 1, 1, 1}
+      stretch    = TRUE
+      gap_file   = "assets-dark/tab-vert-gap-dark.png"
+      gap_border = {0, 1, 1, 1}
+      gap_side   = RIGHT
+    }
+
+    image {
+      function   = BOX_GAP
+      detail     = "notebook"
+      file       = "assets-dark/frame-notebook-dark.png"
+      border     = {1, 1, 1, 1}
+      stretch    = TRUE
+      gap_file   = "assets-dark/tab-horz-gap-dark.png"
+      gap_border = {1, 1, 1, 0}
+      gap_side   = TOP
+    }
+
+    image {
+      function   = BOX_GAP
+      detail     = "notebook"
+      file       = "assets-dark/frame-notebook-dark.png"
+      border     = {1, 1, 1, 1}
+      stretch    = TRUE
+      gap_file   = "assets-dark/tab-horz-gap-dark.png"
+      gap_border = {1, 1, 0, 1}
+      gap_side   = BOTTOM
+    }
+
+    # Standalone frame
+    image {
+      function = BOX
+      detail   = "notebook"
+      file     = "assets-dark/frame-notebook-dark.png"
+      border   = {1, 1, 1, 1}
+      stretch  = TRUE
+    }
+
+    ##############
+    # Scrollbars #
+    ##############
+
+    image {
+      function    = BOX
+      detail      = "trough"
+      file        = "assets-dark/scrollbar-horz-trough-dark.png"
+      border      = {0, 0, 1, 0}
+      orientation = HORIZONTAL
+    }
+
+    image {
+      function    = BOX
+      detail      = "trough"
+      file        = "assets-dark/scrollbar-vert-trough-dark.png"
+      border      = {1, 0, 0, 0}
+      orientation = VERTICAL
+      direction   = LTR
+    }
+
+    image {
+      function    = BOX
+      detail      = "trough"
+      file        = "assets-dark/scrollbar-vert-trough-rtl-dark.png"
+      border      = {0, 1, 0, 0}
+      orientation = VERTICAL
+      direction   = RTL
+    }
+
+
+    # Disable insensitive sliders
+
+    image {
+      function = SLIDER
+      state    = INSENSITIVE
+      detail   = "slider"
+    }
+
+    # Horizontal sliders
+
+    image {
+      function    = SLIDER
+      state       = NORMAL
+      detail      = "slider"
+      file        = "assets-dark/scrollbar-horz-slider-dark.png"
+      border      = {6, 6, 7, 6 }
+      stretch     = TRUE
+      orientation = HORIZONTAL
+    }
+
+    image {
+      function    = SLIDER
+      state       = PRELIGHT
+      detail      = "slider"
+      file        = "assets-dark/scrollbar-horz-slider-hover-dark.png"
+      border      = {6, 6, 7, 6 }
+      stretch     = TRUE
+      orientation = HORIZONTAL
+    }
+
+    image {
+      function    = SLIDER
+      state       = ACTIVE
+      detail      = "slider"
+      file        = "assets-dark/scrollbar-horz-slider-active-dark.png"
+      border      = {6, 6, 7, 6 }
+      stretch     = TRUE
+      orientation = HORIZONTAL
+    }
+
+    # Vertical sliders
+
+    image {
+      function    = SLIDER
+      state       = NORMAL
+      detail      = "slider"
+      file        = "assets-dark/scrollbar-vert-slider-dark.png"
+      border      = {7, 6, 6, 6}
+      stretch     = TRUE
+      orientation = VERTICAL
+      direction   = LTR
+    }
+
+    image {
+      function    = SLIDER
+      state       = PRELIGHT
+      detail      = "slider"
+      file        = "assets-dark/scrollbar-vert-slider-hover-dark.png"
+      border      = {7, 6, 6, 6}
+      stretch     = TRUE
+      orientation = VERTICAL
+      direction   = LTR
+    }
+
+    image {
+      function    = SLIDER
+      state       = ACTIVE
+      detail      = "slider"
+      file        = "assets-dark/scrollbar-vert-slider-active-dark.png"
+      border      = {7, 6, 6, 6}
+      stretch     = TRUE
+      orientation = VERTICAL
+      direction   = LTR
+    }
+
+    # RTL
+
+    image {
+      function    = SLIDER
+      state       = NORMAL
+      detail      = "slider"
+      file        = "assets-dark/scrollbar-vert-slider-rtl-dark.png"
+      border      = {6, 7, 6, 6}
+      stretch     = TRUE
+      orientation = VERTICAL
+      direction   = RTL
+    }
+
+    image {
+      function    = SLIDER
+      state       = PRELIGHT
+      detail      = "slider"
+      file        = "assets-dark/scrollbar-vert-slider-hover-rtl-dark.png"
+      border      = {6, 7, 6, 6}
+      stretch     = TRUE
+      orientation = VERTICAL
+      direction   = RTL
+    }
+
+    image {
+      function    = SLIDER
+      state       = ACTIVE
+      detail      = "slider"
+      file        = "assets-dark/scrollbar-vert-slider-active-rtl-dark.png"
+      border      = {6, 7, 6, 6}
+      stretch     = TRUE
+      orientation = VERTICAL
+      direction   = RTL
+    }
+
+    ##########
+    # Scales #
+    ##########
+
+    # Troughs
+    # They are overrided later on
+    # We set them here too because some widgets don't specify their orientation
+
+    image {
+      function    = BOX
+      detail      = "trough-upper"
+      file        = "assets-dark/scale-horz-trough-dark.png"
+      border      = {10, 10, 0, 0}
+      stretch     = TRUE
+      orientation = HORIZONTAL
+    }
+
+    image {
+      function    = BOX
+      detail      = "trough-lower"
+      file        = "assets-dark/scale-horz-trough-active-dark.png"
+      border      = {10, 10, 0, 0}
+      stretch     = TRUE
+      orientation = HORIZONTAL
+    }
+
+    image {
+      function    = BOX
+      detail      = "trough-upper"
+      file        = "assets-dark/scale-vert-trough-dark.png"
+      border      = {0, 0, 10, 10}
+      stretch     = TRUE
+      orientation = VERTICAL
+    }
+
+    image {
+      function    = BOX
+      detail      = "trough-lower"
+      file        = "assets-dark/scale-vert-trough-active-dark.png"
+      border      = {0, 0, 10, 10}
+      stretch     = TRUE
+      orientation = VERTICAL
+    }
+
+    # Sliders
+
+    image {
+      function = SLIDER
+      state    = NORMAL
+      detail   = "hscale"
+      file     = "assets-dark/scale-slider-dark.png"
+    }
+
+    image {
+      function = SLIDER
+      state    = PRELIGHT
+      detail   = "hscale"
+      file     = "assets-dark/scale-slider-hover-dark.png"
+    }
+
+    image {
+      function = SLIDER
+      state    = ACTIVE
+      detail   = "hscale"
+      file     = "assets-dark/scale-slider-active-dark.png"
+    }
+
+    image {
+      function = SLIDER
+      state    = INSENSITIVE
+      detail   = "hscale"
+      file     = "assets-dark/scale-slider-insensitive-dark.png"
+    }
+    image {
+      function = SLIDER
+      state    = NORMAL
+      detail   = "vscale"
+      file     = "assets-dark/scale-slider-dark.png"
+    }
+
+    image {
+      function = SLIDER
+      state    = PRELIGHT
+      detail   = "vscale"
+      file     = "assets-dark/scale-slider-hover-dark.png"
+    }
+
+    image {
+      function = SLIDER
+      state    = ACTIVE
+      detail   = "vscale"
+      file     = "assets-dark/scale-slider-active-dark.png"
+    }
+
+    image {
+      function = SLIDER
+      state    = INSENSITIVE
+      detail   = "vscale"
+      file     = "assets-dark/scale-slider-insensitive-dark.png"
+    }
+
+    ###########
+    # Menubar #
+    ###########
+
+    image {
+      function = BOX
+      detail   = "menubar"
+      file     = "assets-dark/line-dark.png"
+      border   = {0, 0, 0, 1}
+    }
+
+    #########
+    # Menus #
+    #########
+
+    image {
+      function = BOX
+      state    = PRELIGHT
+      detail   = "menu_scroll_arrow_up"
+      file     = "assets-dark/line-dark.png"
+    }
+
+    image {
+      function = BOX
+      detail   = "menu_scroll_arrow_up"
+      file     = "assets-dark/line-dark.png"
+      border   = {0, 0, 0, 1}
+    }
+
+    image {
+      function = BOX
+      state    = PRELIGHT
+      detail   = "menu_scroll_arrow_down"
+      file     = "assets-dark/line-dark.png"
+    }
+
+    image {
+      function = BOX
+      detail   = "menu_scroll_arrow_down"
+      file     = "assets-dark/line-dark.png"
+      border   = {0, 0, 1, 0}
+    }
+
+    ###########
+    # Entries #
+    ###########
+
+
+    image {
+      function = SHADOW
+      state    = ACTIVE
+      detail   = "entry"
+      file     = "assets-dark/entry-active-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = SHADOW
+      state    = INSENSITIVE
+      detail   = "entry"
+      file     = "assets-dark/entry-insensitive-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = SHADOW
+      detail   = "entry"
+      file     = "assets-dark/entry-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = FLAT_BOX
+      state    = ACTIVE
+      detail   = "entry_bg"
+      file     = "assets-dark/entry-background-dark.png"
+    }
+
+    image {
+      function = FLAT_BOX
+      state    = INSENSITIVE
+      detail   = "entry_bg"
+      file     = "assets-dark/entry-background-insensitive-dark.png"
+    }
+
+    image {
+      function = FLAT_BOX
+      detail   = "entry_bg"
+      file     = "assets-dark/entry-background-dark.png"
+    }
+    #########
+    # Spins #
+    #########
+
+    # Spin-Up LTR
+
+    image {
+      function        = BOX
+      state           = NORMAL
+      detail          = "spinbutton_up"
+      file            = "assets-dark/spin-ltr-up-dark.png"
+      border          = {1, 4, 4, 0}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-up-dark.png"
+      overlay_stretch = FALSE
+      direction       = LTR
+    }
+
+    image {
+      function        = BOX
+      state           = PRELIGHT
+      detail          = "spinbutton_up"
+      file            = "assets-dark/spin-ltr-up-hover-dark.png"
+      border          = {1, 4, 4, 0}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-up-dark.png"
+      overlay_stretch = FALSE
+      direction       = LTR
+    }
+
+    image {
+      function        = BOX
+      state           = ACTIVE
+      detail          = "spinbutton_up"
+      file            = "assets-dark/spin-ltr-up-active-dark.png"
+      border          = {1, 4, 4, 0}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-up-dark.png"
+      overlay_stretch = FALSE
+      direction       = LTR
+    }
+
+    image {
+      function        = BOX
+      state           = INSENSITIVE
+      detail          = "spinbutton_up"
+      file            = "assets-dark/spin-ltr-up-insensitive-dark.png"
+      border          = {1, 4, 4, 0}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-up-insensitive-dark.png"
+      overlay_stretch = FALSE
+      direction       = LTR
+    }
+
+    # Spin-Up RTL
+
+    image {
+      function        = BOX
+      state           = NORMAL
+      detail          = "spinbutton_up"
+      file            = "assets-dark/spin-rtl-up-dark.png"
+      border          = {4, 1, 4, 0}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-up-dark.png"
+      overlay_stretch = FALSE
+      direction       = RTL
+    }
+
+    image {
+      function        = BOX
+      state           = PRELIGHT
+      detail          = "spinbutton_up"
+      file            = "assets-dark/spin-rtl-up-hover-dark.png"
+      border          = {4, 1, 4, 0}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-up-dark.png"
+      overlay_stretch = FALSE
+      direction       = RTL
+    }
+
+    image {
+      function        = BOX
+      state           = ACTIVE
+      detail          = "spinbutton_up"
+      file            = "assets-dark/spin-rtl-up-hover-dark.png"
+      border          = {4, 1, 4, 0}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-up-dark.png"
+      overlay_stretch = FALSE
+      direction       = RTL
+    }
+
+    image {
+      function        = BOX
+      state           = INSENSITIVE
+      detail          = "spinbutton_up"
+      file            = "assets-dark/spin-rtl-up-insensitive-dark.png"
+      border          = {4, 1, 4, 0}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-up-insensitive-dark.png"
+      overlay_stretch = FALSE
+      direction       = RTL
+    }
+
+    # Spin-Down LTR
+
+    image {
+      function        = BOX
+      state           = NORMAL
+      detail          = "spinbutton_down"
+      file            = "assets-dark/spin-ltr-down-dark.png"
+      border          = {1, 4, 1, 4}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-down-dark.png"
+      overlay_stretch = FALSE
+      direction       = LTR
+    }
+
+    image {
+      function        = BOX
+      state           = PRELIGHT
+      detail          = "spinbutton_down"
+      file            = "assets-dark/spin-ltr-down-hover-dark.png"
+      border          = {1, 4, 1, 4}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-down-dark.png"
+      overlay_stretch = FALSE
+      direction       = LTR
+    }
+
+    image {
+      function        = BOX
+      state           = ACTIVE
+      detail          = "spinbutton_down"
+      file            = "assets-dark/spin-ltr-down-active-dark.png"
+      border          = {1, 4, 1, 4}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-down-dark.png"
+      overlay_stretch = FALSE
+      direction       = LTR
+    }
+
+    image {
+      function        = BOX
+      state           = INSENSITIVE
+      detail          = "spinbutton_down"
+      file            = "assets-dark/spin-ltr-down-insensitive-dark.png"
+      border          = {1, 4, 1, 4}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-down-insensitive-dark.png"
+      overlay_stretch = FALSE
+      direction       = LTR
+    }
+
+    # Spin-Down RTL
+
+    image {
+      function        = BOX
+      state           = NORMAL
+      detail          = "spinbutton_down"
+      file            = "assets-dark/spin-rtl-down-dark.png"
+      border          = {4, 1, 1, 4}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-down-dark.png"
+      overlay_stretch = FALSE
+      direction       = RTL
+    }
+
+    image {
+      function        = BOX
+      state           = PRELIGHT
+      detail          = "spinbutton_down"
+      file            = "assets-dark/spin-rtl-down-hover-dark.png"
+      border          = {4, 1, 1, 4}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-down-dark.png"
+      overlay_stretch = FALSE
+      direction       = RTL
+    }
+
+    image {
+      function        = BOX
+      state           = ACTIVE
+      detail          = "spinbutton_down"
+      file            = "assets-dark/spin-rtl-down-active-dark.png"
+      border          = {4, 1, 1, 4}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-down-dark.png"
+      overlay_stretch = FALSE
+      direction       = RTL
+    }
+
+    image {
+      function        = BOX
+      state           = INSENSITIVE
+      detail          = "spinbutton_down"
+      file            = "assets-dark/spin-rtl-down-insensitive-dark.png"
+      border          = {4, 1, 1, 4}
+      stretch         = TRUE
+      overlay_file    = "assets-dark/spin-down-insensitive-dark.png"
+      overlay_stretch = FALSE
+      direction       = RTL
+    }
+
+    ##############
+    # Scrollbars #
+    ##############
+
+    image {
+      function    = BOX
+      detail      = "bar"
+      file        = "assets-dark/progressbar-horz-dark.png"
+      stretch     = TRUE
+      border      = {2, 2, 1, 1}
+      orientation = HORIZONTAL
+    }
+
+    image {
+      function    = BOX
+      detail      = "bar"
+      file        = "assets-dark/progressbar-vert-dark.png"
+      stretch     = TRUE
+      border      = {1, 1, 2, 2}
+      orientation = VERTICAL
+    }
+
+    #############
+    # Treeviews #
+    #############
+
+    # Disable active the column highlight
+    # We need to match specific cells or we break stuff
+    # Looking at you deadbeef
+
+    image {
+      function = FLAT_BOX
+      detail   = "cell_even_sorted"
+      state    = NORMAL
+    }
+
+    image {
+      function = FLAT_BOX
+      detail   = "cell_odd_sorted"
+      state    = NORMAL
+    }
+
+    # Disable all the other shadows
+    # This prevents the Raleigh effect
+    image {
+      function = SHADOW
+    }
+
+  }
+
+}
+
+style "dark_menubar" {
+
+  # Needed to fix Firefox's menubar text
+  bg[SELECTED] = @selected_fg_color
+  fg[SELECTED] = shade(0.9, @selected_bg_color)
+
+}
+
+style "dark_menubar_item" {
+
+  xthickness = 3
+  ythickness = 4
+
+  fg[PRELIGHT] = shade(0.9, @selected_bg_color)
+
+  engine "pixmap" {
+    image {
+      function    = BOX
+      state       = PRELIGHT
+      file        = "assets-dark/menubar-item-active-dark.png"
+      border      = {0, 0, 0, 3}
+    }
+  }
+
+}
+
+style "dark_menu" {
+
+  xthickness = 0
+  ythickness = 0
+
+  bg[NORMAL]      = @dark_base_color
+  bg[INSENSITIVE] = @dark_base_color
+  bg[PRELIGHT]    = @dark_base_color
+  bg[SELECTED]    = @selected_bg_color
+
+}
+
+style "dark_menu_item" {
+
+  xthickness = 3
+  ythickness = 4
+
+  bg[PRELIGHT]   = @selected_bg_color
+  # Chromium uses this setting
+  bg[SELECTED]   = @selected_bg_color
+
+  fg[PRELIGHT]   = @selected_fg_color
+  # Some widgets use text, we need to handle that
+  text[NORMAL]   = @dark_fg_color
+  text[PRELIGHT] = @selected_fg_color
+
+  # Unfortunately we can't tell regular and menu checks/radios apart
+  # Without the heirarchy
+  engine "pixmap" {
+
+    #################
+    # Check Buttons #
+    #################
+
+    image {
+      function        = CHECK
+      state           = NORMAL
+      shadow          = OUT
+      overlay_file    = "assets-dark/menu-checkbox-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = PRELIGHT
+      shadow          = OUT
+      overlay_file    = "assets-dark/menu-checkbox-hover-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = ACTIVE
+      shadow          = OUT
+      overlay_file    = "assets-dark/menu-checkbox-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = INSENSITIVE
+      shadow          = OUT
+      overlay_file    = "assets-dark/menu-checkbox-insensitive-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = NORMAL
+      shadow          = IN
+      overlay_file    = "assets-dark/menu-checkbox-checked-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = PRELIGHT
+      shadow          = IN
+      overlay_file    = "assets-dark/menu-checkbox-checked-hover-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = ACTIVE
+      shadow          = IN
+      overlay_file    = "assets-dark/menu-checkbox-checked-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = INSENSITIVE
+      shadow          = IN
+      overlay_file    = "assets-dark/menu-checkbox-checked-insensitive-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = NORMAL
+      shadow          = ETCHED_IN
+      overlay_file    = "assets-dark/menu-checkbox-mixed-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = PRELIGHT
+      shadow          = ETCHED_IN
+      overlay_file    = "assets-dark/menu-checkbox-mixed-hover-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = ACTIVE
+      shadow          = ETCHED_IN
+      overlay_file    = "assets-dark/menu-checkbox-mixed-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = INSENSITIVE
+      shadow          = ETCHED_IN
+      overlay_file    = "assets-dark/menu-checkbox-mixed-insensitive-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    #################
+    # Radio Buttons #
+    #################
+
+    image {
+      function        = OPTION
+      state           = NORMAL
+      shadow          = OUT
+      overlay_file    = "assets-dark/menu-radio-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = PRELIGHT
+      shadow          = OUT
+      overlay_file    = "assets-dark/menu-radio-hover-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = ACTIVE
+      shadow          = OUT
+      overlay_file    = "assets-dark/menu-radio-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = INSENSITIVE
+      shadow          = OUT
+      overlay_file    = "assets-dark/menu-radio-insensitive-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = NORMAL
+      shadow          = IN
+      overlay_file    = "assets-dark/menu-radio-checked-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = PRELIGHT
+      shadow          = IN
+      overlay_file    = "assets-dark/menu-radio-checked-hover-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = ACTIVE
+      shadow          = IN
+      overlay_file    = "assets-dark/menu-radio-checked-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = INSENSITIVE
+      shadow          = IN
+      overlay_file    = "assets-dark/menu-radio-checked-insensitive-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = NORMAL
+      shadow          = ETCHED_IN
+      overlay_file    = "assets-dark/menu-radio-mixed-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = PRELIGHT
+      shadow          = ETCHED_IN
+      overlay_file    = "assets-dark/menu-radio-mixed-hover-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = ACTIVE
+      shadow          = ETCHED_IN
+      overlay_file    = "assets-dark/menu-radio-mixed-dark.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = INSENSITIVE
+      shadow          = ETCHED_IN
+      overlay_file    = "assets-dark/menu-radio-mixed-insensitive-dark.png"
+      overlay_stretch = FALSE
+    }
+
+
+
+  }
+
+}
+
+style "dark_separator_menu_item" {
+
+  xthickness = 0
+  ythickness = 0
+
+  engine "pixmap" {
+    image {
+      function = BOX
+      file     = "assets-dark/line-dark.png"
+    }
+  }
+
+}
+
+style "dark_button" {
+
+  xthickness = 2
+  ythickness = 2
+
+  # For the sake of sanity style buttons this way
+  engine "pixmap" {
+
+    ###########
+    # Buttons #
+    ###########
+
+    image {
+      function = BOX
+      state    = NORMAL
+      file     = "assets-dark/button-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = BOX
+      state    = PRELIGHT
+      shadow   = OUT
+      file     = "assets-dark/button-hover-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    # Don't add hover effect on pressed buttons
+    image {
+      function = BOX
+      state    = PRELIGHT
+      shadow   = IN
+      file     = "assets-dark/button-active-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = BOX
+      state    = ACTIVE
+      file     = "assets-dark/button-active-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = BOX
+      state    = INSENSITIVE
+      file     = "assets-dark/button-insensitive-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+  }
+}
+
+style "dark_link_button" {
+
+  # Disable the button effect, leave just the link
+  engine "pixmap" {
+    image {
+      function = BOX
+    }
+  }
+
+}
+
+style "dark_entry" {
+
+  # We set this same as the border of the border of the entry
+  # This way there's no overlap
+  xthickness = 4
+  ythickness = 4
+
+}
+
+style "dark_combobox" {
+
+  xthickness = 6
+  ythickness = 4
+
+  # This affects only the button beside an entry
+  GtkButton::inner-border = {0, 0, 0, 0}
+
+}
+
+style "dark_combobox_cellview" {
+  text[NORMAL]   = @dark_fg_color
+  text[PRELIGHT] = @dark_fg_color
+}
+
+style "dark_combobox_entry" {
+
+  # Since one side of the button is missing, we need to shift the arrow a little to the right
+  GtkButton::inner-border = {0, 1, 0, 0}
+
+  engine "pixmap" {
+
+    #############
+    # LTR entry #
+    #############
+
+    image {
+      function  = SHADOW
+      state     = NORMAL
+      detail    = "entry"
+      file      = "assets-dark/combo-entry-ltr-entry-dark.png"
+      border    = {4, 4, 4, 4}
+      stretch   = TRUE
+      direction = LTR
+    }
+
+    image {
+      function  = SHADOW
+      state     = ACTIVE
+      detail    = "entry"
+      file      = "assets-dark/combo-entry-ltr-entry-active-dark.png"
+      border    = {4, 4, 4, 4}
+      stretch   = TRUE
+      direction = LTR
+    }
+
+    image {
+      function  = SHADOW
+      state     = INSENSITIVE
+      detail    = "entry"
+      file      = "assets-dark/combo-entry-ltr-entry-insensitive-dark.png"
+      border    = {4, 4, 4, 4}
+      stretch   = TRUE
+      direction = LTR
+    }
+
+    #############
+    # RTL entry #
+    #############
+
+    image {
+      function  = SHADOW
+      state     = NORMAL
+      detail    = "entry"
+      file      = "assets-dark/combo-entry-rtl-entry-dark.png"
+      border    = {4, 4, 4, 4}
+      stretch   = TRUE
+      direction = RTL
+    }
+
+    image {
+      function  = SHADOW
+      state     = ACTIVE
+      detail    = "entry"
+      file      = "assets-dark/combo-entry-rtl-entry-active-dark.png"
+      border    = {4, 4, 4, 4}
+      stretch   = TRUE
+      direction = RTL
+    }
+
+    image {
+      function  = SHADOW
+      state     = INSENSITIVE
+      detail    = "entry"
+      file      = "assets-dark/combo-entry-rtl-entry-insensitive-dark.png"
+      border    = {4, 4, 4, 4}
+      stretch   = TRUE
+      direction = RTL
+    }
+
+    ##############
+    # LTR button #
+    ##############
+
+    image {
+      function  = BOX
+      state     = NORMAL
+      detail    = "button"
+      file      = "assets-dark/combo-entry-ltr-button-dark.png"
+      border    = {0, 4, 4, 4}
+      stretch   = TRUE
+      direction = LTR
+    }
+
+    image {
+      function  = BOX
+      state     = PRELIGHT
+      detail    = "button"
+      file      = "assets-dark/combo-entry-ltr-button-hover-dark.png"
+      border    = {0, 4, 4, 4}
+      stretch   = TRUE
+      direction = LTR
+    }
+
+    image {
+      function  = BOX
+      state     = ACTIVE
+      detail    = "button"
+      file      = "assets-dark/combo-entry-ltr-button-active-dark.png"
+      border    = {0, 4, 4, 4}
+      stretch   = TRUE
+      direction = LTR
+    }
+
+    image {
+      function  = BOX
+      state     = INSENSITIVE
+      detail    = "button"
+      file      = "assets-dark/combo-entry-ltr-button-insensitive-dark.png"
+      border    = {0, 4, 4, 4}
+      stretch   = TRUE
+      direction = LTR
+    }
+
+    ##############
+    # RTL button #
+    ##############
+
+    image {
+      function  = BOX
+      state     = NORMAL
+      detail    = "button"
+      file      = "assets-dark/combo-entry-rtl-button-dark.png"
+      border    = {4, 0, 4, 4}
+      stretch   = TRUE
+      direction = RTL
+    }
+
+    image {
+      function  = BOX
+      state     = PRELIGHT
+      detail    = "button"
+      file      = "assets-dark/combo-entry-rtl-button-hover-dark.png"
+      border    = {4, 0, 4, 4}
+      stretch   = TRUE
+      direction = RTL
+    }
+
+    image {
+      function  = BOX
+      state     = ACTIVE
+      detail    = "button"
+      file      = "assets-dark/combo-entry-rtl-button-active-dark.png"
+      border    = {4, 0, 4, 4}
+      stretch   = TRUE
+      direction = RTL
+    }
+
+    image {
+      function  = BOX
+      state     = INSENSITIVE
+      detail    = "button"
+      file      = "assets-dark/combo-entry-rtl-button-insensitive-dark.png"
+      border    = {4, 0, 4, 4}
+      stretch   = TRUE
+      direction = RTL
+    }
+
+  }
+
+}
+
+style "dark_combo_button_padding" {
+
+  # Since one side of the button is missing, we need to shift the arrow a little to the right
+  # This is the same thing we've done above but the combo, unlike the combobox,
+  # uses padding the same way as a button
+  GtkButton::inner-border = {6, 8, 4, 4}
+
+}
+
+style "dark_notebook" {
+
+  xthickness = 5
+  ythickness = 2
+
+}
+
+style "dark_notebook_viewport" {
+  bg[NORMAL] = @dark_base_color
+}
+
+style "dark_notebook_bg" {
+  bg[NORMAL]      = @dark_base_color
+  bg[PRELIGHT]    = @dark_base_color
+  bg[INSENSITIVE] = @dark_base_color
+}
+
+style "dark_notebook_entry" {
+
+  engine "pixmap" {
+
+    image {
+      function = SHADOW
+      state    = ACTIVE
+      detail   = "entry"
+      file     = "assets-dark/notebook-entry-active-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = SHADOW
+      state    = INSENSITIVE
+      detail   = "entry"
+      file     = "assets-dark/notebook-entry-insensitive-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = SHADOW
+      detail   = "entry"
+      file     = "assets-dark/notebook-entry-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+  }
+}
+
+style "dark_normal_bg" {
+  bg[NORMAL]      = @dark_bg_color
+  bg[PRELIGHT]    = @dark_bg_color
+  bg[INSENSITIVE] = mix (0.6, @dark_bg_color, @dark_base_color)
+}
+
+style "dark_normal_entry" {
+
+  engine "pixmap" {
+
+    image {
+      function = SHADOW
+      state    = ACTIVE
+      detail   = "entry"
+      file     = "assets-dark/entry-active-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = SHADOW
+      state    = INSENSITIVE
+      detail   = "entry"
+      file     = "assets-dark/entry-insensitive-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = SHADOW
+      detail   = "entry"
+      file     = "assets-dark/entry-dark.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+  }
+}
+
+style "dark_notebook_combo" {
+
+  engine "pixmap" {
+
+    #############
+    # LTR entry #
+    #############
+
+    image {
+      function  = SHADOW
+      state     = NORMAL
+      detail    = "entry"
+      file      = "assets-dark/notebook-combo-entry-ltr-entry-dark.png"
+      border    = {4, 4, 4, 4}
+      stretch   = TRUE
+      direction = LTR
+    }
+
+    image {
+      function  = SHADOW
+      state     = ACTIVE
+      detail    = "entry"
+      file      = "assets-dark/notebook-combo-entry-ltr-entry-active-dark.png"
+      border    = {4, 4, 4, 4}
+      stretch   = TRUE
+      direction = LTR
+    }
+
+    image {
+      function  = SHADOW
+      state     = INSENSITIVE
+      detail    = "entry"
+      file      = "assets-dark/notebook-combo-entry-ltr-entry-insensitive-dark.png"
+      border    = {4, 4, 4, 4}
+      stretch   = TRUE
+      direction = LTR
+    }
+
+    #############
+    # RTL entry #
+    #############
+
+    image {
+      function  = SHADOW
+      state     = NORMAL
+      detail    = "entry"
+      file      = "assets-dark/notebook-combo-entry-rtl-entry-dark.png"
+      border    = {4, 4, 4, 4}
+      stretch   = TRUE
+      direction = RTL
+    }
+
+    image {
+      function  = SHADOW
+      state     = ACTIVE
+      detail    = "entry"
+      file      = "assets-dark/notebook-combo-entry-rtl-entry-active-dark.png"
+      border    = {4, 4, 4, 4}
+      stretch   = TRUE
+      direction = RTL
+    }
+
+    image {
+      function  = SHADOW
+      state     = INSENSITIVE
+      detail    = "entry"
+      file      = "assets-dark/notebook-combo-entry-rtl-entry-insensitive-dark.png"
+      border    = {4, 4, 4, 4}
+      stretch   = TRUE
+      direction = RTL
+    }
+
+  }
+
+}
+
+style "dark_textview" {
+  bg[NORMAL] = @dark_base_color
+}
+
+style "dark_scale_horz" {
+
+  engine "pixmap" {
+
+    image {
+      function    = BOX
+      detail      = "trough-upper"
+      file        = "assets-dark/scale-horz-trough-dark.png"
+      border      = {10, 10, 0, 0}
+      stretch     = TRUE
+    }
+
+    image {
+      function    = BOX
+      detail      = "trough-lower"
+      file        = "assets-dark/scale-horz-trough-active-dark.png"
+      border      = {10, 10, 0, 0}
+      stretch     = TRUE
+    }
+
+  }
+
+}
+
+style "dark_scale_vert" {
+
+  engine "pixmap" {
+
+    image {
+      function    = BOX
+      detail      = "trough-upper"
+      file        = "assets-dark/scale-vert-trough-dark.png"
+      border      = {0, 0, 10, 10}
+      stretch     = TRUE
+    }
+
+    image {
+      function    = BOX
+      detail      = "trough-lower"
+      file        = "assets-dark/scale-vert-trough-active-dark.png"
+      border      = {0, 0, 10, 10}
+      stretch     = TRUE
+    }
+
+  }
+
+}
+
+style "dark_progressbar" {
+
+  xthickness = 1
+  ythickness = 1
+
+  fg[PRELIGHT] = @selected_fg_color
+
+  engine "pixmap" {
+
+    image {
+      function    = BOX
+      detail      = "trough"
+      file        = "assets-dark/progressbar-horz-trough-dark.png"
+      border      = {3, 3, 2, 2}
+      stretch     = TRUE
+      orientation = HORIZONTAL
+    }
+
+    image {
+      function    = BOX
+      detail      = "trough"
+      file        = "assets-dark/progressbar-vert-trough-dark.png"
+      border      = {2, 2, 3, 3}
+      stretch     = TRUE
+      orientation = VERTICAL
+    }
+
+  }
+
+}
+
+style "dark_scrolled_window" {
+
+  engine "pixmap" {
+    image {
+      function = SHADOW
+      file     = "assets-dark/frame-dark.png"
+      border   = {1, 1, 1, 1}
+      stretch  = TRUE
+    }
+  }
+
+}
+
+style "dark_frame" {
+
+  engine "pixmap" {
+
+    image {
+      function = SHADOW
+      file     = "assets-dark/frame-dark.png"
+      border   = {1, 1, 1, 1}
+      stretch  = TRUE
+    }
+
+    image {
+      function       = SHADOW_GAP
+      file           = "assets-dark/frame-dark.png"
+      border         = {1, 1, 1, 1}
+      stretch        = TRUE
+      gap_start_file = "assets-dark/border-dark.png"
+      gap_end_file   = "assets-dark/border-dark.png"
+    }
+
+  }
+
+}
+
+style "dark_toolbar_button" {
+
+  xthickness = 2
+  ythickness = 2
+
+  GtkButton::inner-border = {2, 2, 2, 2}
+
+}
+
+style "dark_toolbar_separator" {
+
+  GtkWidget::wide-separators  = 1
+  GtkWidget::separator-width  = 1
+  GtkWidget::separator-height = 1
+
+  engine "pixmap" {
+    image {
+      function = BOX
+      file     = "assets-dark/line-dark.png"
+    }
+  }
+
+}
+
+style "dark_inline_toolbar" {
+
+  GtkToolbar::button-relief = GTK_RELIEF_NORMAL
+
+  engine "pixmap" {
+    image {
+      function = SHADOW
+      file     = "assets-dark/frame-inline-dark.png"
+      border   = {1, 1, 0, 1}
+      stretch  = TRUE
+    }
+  }
+
+}
+
+style "dark_tooltip" {
+
+  xthickness = 13
+  ythickness = 13
+
+  bg[NORMAL]   = @tooltip_bg_color
+  fg[NORMAL]   = @tooltip_fg_color
+  bg[SELECTED] = @tooltip_bg_color
+
+}
+
+
+style "dark_disable_shadow" {
+
+  engine "pixmap" {
+    image {
+      function = SHADOW
+    }
+  }
+
+}
+
+style "dark_disable_separator" {
+
+  xthickness = 0
+  ythickness = 0
+
+  GtkWidget::wide-separators = 1
+
+}
+
+# Default style, containing most of the stuff
+class "GtkWidget"            style "dark_default"
+
+# Override padding,          style and colour
+class "GtkButton"            style "dark_button"
+class "GtkLinkButton"        style "dark_link_button"
+class "GtkEntry"             style "dark_entry"
+class "GtkOldEditable"       style "dark_entry"
+class "GtkNotebook"          style "dark_notebook"
+class "GtkHScale"            style "dark_scale_horz"
+class "GtkVScale"            style "dark_scale_vert"
+class "GtkProgressBar"       style "dark_progressbar"
+class "GtkScrolledWindow"    style "dark_scrolled_window"
+class "GtkFrame"             style "dark_frame"
+class "GtkSeparatorToolItem" style "dark_toolbar_separator"
+class "GtkMenuBar"           style "dark_menubar"
+class "GtkMenu"              style "dark_menu"
+class "GtkTextView"          style "dark_textview"
+
+# Menu and menubar items
+widget_class "*<GtkMenuItem>*"              style "dark_menu_item"
+widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "dark_menubar_item"
+widget_class "*<GtkSeparatorMenuItem>*"     style "dark_separator_menu_item"
+
+# Frames in statusbars look ugly, let's disable them
+widget_class "*<GtkStatusbar>*<GtkFrame>" style "dark_disable_shadow"
+# Disable the frame around poor Wilbert too
+widget_class "*<GimpToolbox>*<GtkFrame>"  style "dark_disable_shadow"
+
+# Treeview buttons
+widget_class "*<GtkTreeView>*<GtkButton>*" style "dark_treeview_header"
+
+# Give the file chooser toolbar a border
+widget_class "*<GtkFileChooserDefault>*<GtkToolbar>" style "dark_inline_toolbar"
+
+# Fix padding on regular comboboxes
+widget_class "*<GtkComboBox>.<GtkButton>" style "dark_combobox"
+# And disable separators on them
+widget_class "*<GtkComboBox>.<GtkButton>*<GtkSeparator>" style "dark_disable_separator"
+
+# Join together the ComboBoxEntry entry and button
+widget_class "*<GtkComboBoxEntry>*"  style "dark_combobox_entry"
+
+# Join the Combo entry and button
+widget_class "*<GtkCombo>*"  style "dark_combobox_entry"
+# Tweak the padding on the button a little bit because it uses it a bit differently
+widget_class "*<GtkCombo>.<GtkButton>" style "dark_combo_button_padding"
+
+# Alas we cannot do the same for ComboBoxText because there isn't a way to apply the style to only
+# the comboboxes that have an entry inside
+
+# Toolbar buttons have different paddings
+widget_class "*<GtkToolbar>*<GtkButton>" style "dark_toolbar_button"
+
+# Notebooks are white, act accordingly
+widget_class "*<GtkNotebook>*<GtkEntry>"                        style "dark_notebook_entry"
+widget_class "*<GtkNotebook>*<GtkProgressBar>"                  style "dark_notebook_bg"
+widget_class "*<GtkNotebook>*<GtkSpinButton>"                   style "dark_notebook_bg"
+widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>" style "dark_notebook_bg"
+widget_class "*<GtkNotebook>*<GimpRuler>"                       style "dark_notebook_bg"
+widget_class "*<GtkNotebook>.<GimpDisplayShell>*<GtkEventBox>"  style "dark_notebook_bg"
+widget_class "*<GtkNotebook>*<GtkComboBoxEntry>*"               style "dark_notebook_combo"
+widget_class "*<GtkNotebook>*<GtkCombo>*"                       style "dark_notebook_combo"
+
+# However, stuff inside eventboxes inside notebooks is grey again, react
+widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkEntry>"             style "dark_normal_entry"
+widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkProgressBar>"       style "dark_normal_bg"
+widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkSpinButton>"        style "dark_normal_bg"
+widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkComboBoxEntry>*"    style "dark_combobox_entry"
+widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkCombo>*"            style "dark_combobox_entry"
+widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkCombo>.<GtkButton>" style "dark_combo_button_padding"
+
+# ComboBoxes tend to draw the button label with text[] instead of fg[], we need to fix that
+widget_class "*<GtkComboBox>*<GtkCellView>" style "dark_combobox_cellview"
+
+# GTK tooltips
+widget "gtk-tooltip*" style "dark_tooltip"

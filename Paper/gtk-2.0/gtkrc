@@ -15,32 +15,37 @@
 # You should have received a copy of the GNU General Public License along
 # with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 
-# Paper GTK2 Theme
+# ==============================================================================
+# PAPER GTK2 THEME
+# ==============================================================================
 
 # Text/base colors
 gtk-color-scheme = "text_color:#333333\nbase_color:white"
 # Foreground/background colors
 gtk-color-scheme = "fg_color:#4d4d4d\nbg_color:#ececec"
-# Selected foreground/background colors
+# Selection colors
 gtk-color-scheme = "selected_fg_color:#ffffff\nselected_bg_color:#607d8b"
 # Tooltip colors
 gtk-color-scheme = "tooltip_fg_color:#4d4d4d\ntooltip_bg_color:#ffffff"
 # Window colors
 gtk-color-scheme = "wm_color:#546e7a\nunfocused_wm_color:#5A6367"
+# Panel colors
+gtk-color-scheme = "panel_bg_color:#263238\npanel_fg_color:#ffffff"
+# Dark Theme - Text/base colors
+gtk-color-scheme = "dark_text_color:#ffffff\ndark_base_color:#455a64"
+# Dark Theme - Foreground/background colors
+gtk-color-scheme = "dark_fg_color:#cfd8dc\ndark_bg_color:#37474f"
 
-gtk-auto-mnemonics              = 1
+gtk-auto-mnemonics = 1
 gtk-primary-button-warps-slider = 1
 
 include "main.rc"
+include "dark.rc"
 
 # App stylings
 include "apps/chrome.rc"
-include "apps/eclipse.rc"
-include "apps/firefox.rc"
 include "apps/gimp.rc"
 include "apps/libreoffice.rc"
-include "apps/panel.rc"
 include "apps/terminal.rc"
 include "apps/thunar.rc"
-include "apps/xchat.rc"
 include "apps/xfce.rc"
