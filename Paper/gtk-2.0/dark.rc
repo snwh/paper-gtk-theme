@@ -129,7 +129,6 @@ style "dark" {
 
   # Draw frame around menu in a non-compositied environment
   # This needs to go before pixmap because we need to override some stuff
-  engine "adwaita" {}
 
   engine "pixmap" {
 

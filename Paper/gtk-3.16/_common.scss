@@ -37,10 +37,6 @@ $button_transition: all 200ms $ease-out-quad;
 
   -GtkPaned-handle-size: 1;
 
-  // We use the outline properties to signal the focus properties
-  // to the adwaita engine: using real CSS properties is faster,
-  // and we don't use any outlines for now.
-
   // outline-color: transparentize($fg_color, 0.7);
   // outline-style: dashed;
   // outline-offset: -3px;
