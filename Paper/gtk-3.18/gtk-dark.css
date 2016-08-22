@@ -2447,10 +2447,8 @@ GraniteWidgetsWelcome {
 .header-bar {
   padding: 0 8px;
   border: none;
-  border-radius: 4px 4px 0 0;
   background-color: #303f46;
-  color: rgba(255, 255, 255, 0.8);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+  color: rgba(255, 255, 255, 0.8); }
   .titlebar:backdrop:not(headerbar),
   .header-bar:backdrop {
     background-color: #303f46;
@@ -2793,9 +2791,9 @@ GraniteWidgetsWelcome {
     color: transparent;
     background-color: transparent; }
 
-.titlebar, .titlebar:backdrop {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px; }
+.titlebar {
+  border-radius: 4px 4px 0 0;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
 
 .separator:first-child + .header-bar, .separator:first-child + .header-bar:backdrop, separator:first-child + .header-bar, separator:first-child + .header-bar:backdrop, .header-bar:first-child, .header-bar:first-child:backdrop {
   border-top-left-radius: 4px; }
