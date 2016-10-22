@@ -1,0 +1,591 @@
+/***************
+ * font-viewer *
+ ***************/
+SushiFontWidget {
+    padding: 6px 12px;
+}
+
+
+/**********
+ * Sudoku *
+ **********/
+SudokuView SudokuCellView {
+    border: inherit;
+    background-color: inherit;
+}
+
+SudokuView SudokuCellView:backdrop {
+    border: inherit;
+    background-color: inherit;
+}
+
+SudokuView {
+    border: none;
+}
+
+/*****************
+ * Character Map *
+ *****************/
+GucharmapChartable {
+    background-color: $base_color;
+}
+
+GucharmapChartable:active,
+GucharmapChartable:focus,
+GucharmapChartable:selected {
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
+}
+
+
+/********
+ * Misc *
+ *******/
+
+ApDocView, /* Abiword */
+EogScrollView, /* Eog */
+CheeseThumbView /* Cheese */
+{
+    -EogScrollView-shadow-type: none;
+}
+
+
+/************
+ * Terminal *
+ ************/
+
+$gnome_terminal: #546e7a;
+$terminal_bg_color: transparentize(#002B36, 0.1);
+$terminal_fg_color: #839495;
+
+TerminalScreen,
+VteTerminal {
+  background-color: $terminal_bg_color;
+  color: $terminal_fg_color;
+}
+
+TerminalWindow {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_terminal;
+
+    &:backdrop {
+      background-color: darken($gnome_terminal,10%);
+    }
+  }
+}
+
+/************
+ * Nautilus *
+ ************/
+
+NautilusCanvasView {
+    border: none;
+
+    &:active,
+    &:focus,
+    &:backdrop {
+      border: none;
+    }
+}
+
+.nautilus-circular-button {
+  border-radius: 20px;
+  -gtk-outline-radius: 20px;
+}
+
+.disk-space-display {
+  border: 2px solid;
+
+  .unknown {
+    background-color: #888a85;
+    border-color: darken(#888a85, 20%);
+  }
+
+  .used {
+    background-color: #9FB0B9;
+    border-color: darken(#9FB0B9, 20%);
+  }
+
+  .free {
+    background-color: #D8D8D8;
+    border-color: darken(#D8D8D8, 20%);
+  }
+}
+
+
+.nautilus-desktop {
+
+  color: $fg_color;
+
+  .nautilus-canvas-item {
+    border-radius: 5px;
+    color: $selected_fg_color;
+    text-shadow: 1px 1px transparentize(black, 0.4);
+
+    &:active {
+      color: $fg_color;
+      text-shadow: none;
+    }
+
+    &:hover {
+      color: $fg_color;
+      text-shadow: none;
+    }
+
+    &:selected {
+      color: $selected_fg_color;
+      text-shadow: none;
+    }
+
+    .dim-label {
+      &:selected {
+        color: $selected_fg_color;
+      }
+    }
+  }
+
+  .nautilus-list {
+
+    .dim-label {
+      &:selected {
+        color: $selected_fg_color;
+      }
+    }
+  }
+}
+
+/***********
+ * Builder *
+ ***********/
+
+$gnome_builder: #CBBB2E;
+
+GbGreeterWindow,
+GbWorkbench {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_builder;
+
+    &:backdrop {
+      background-color: darken($gnome_builder,10%);
+    }
+  }
+}
+
+/**************
+ * Calculator *
+ **************/
+
+$gnome_calculator: #07ce8e;
+
+MathWindow {
+
+  background-color: $base_color;
+  border-radius: 0 0 4px 4px;
+
+  .titlebar,
+  headerbar,
+  .toolbar  {
+    background-color: $gnome_calculator;
+
+    &:backdrop {
+      background-color: darken($gnome_calculator,10%);
+    }
+  }
+
+  MathButtons {
+    GtkComboBox,
+    .button {
+      background-color: transparent;
+      background-image: none;
+      box-shadow:none;
+      border: none;
+      text-shadow: none;
+      color: $gnome_calculator;
+      font-weight: bold;
+
+      &:hover {
+        background-image: none;
+        background-color:$base_color;
+        color: $gnome_calculator;
+      }
+
+      &:backdrop {
+        color: darken($gnome_calculator,10%);
+      }
+
+      &.text-button.suggested-action {
+        background-image: none;
+        box-shadow:none;
+        text-shadow: none;
+        background-color: $gnome_calculator;
+        color: $base_color;
+
+        &:backdrop {
+          background-color: darken($gnome_calculator,10%);
+          color: transparentize($base_color, 0.5);
+        }
+      }
+    }
+  }
+
+  MathDisplay {
+    padding: 4px;
+    background-color:$base_color;
+    border: 1px solid $borders_color;
+  }
+}
+
+
+/************
+ * Calendar *
+ ************/
+
+$gnome_calendar: #75A3F6;
+
+GcalWindow {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_calendar;
+
+    &:backdrop {
+      background-color: darken($gnome_calendar,10%);
+    }
+  }
+}
+
+/**********
+ * Cheese *
+ **********/
+
+$cheese: #ad7fa8;
+
+CheeseWindow {
+  .titlebar,
+  headerbar,
+  .toolbar  {
+    background-color: $cheese;
+
+    &:backdrop {
+      background-color: darken($cheese,10%);
+    }
+  }
+}
+
+/************
+ * Contacts *
+ ************/
+
+$gnome_contacts: #2095F2;
+
+ContactsWindow {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_contacts;
+
+    &:backdrop {
+      background-color: darken($gnome_contacts,10%);
+    }
+  }
+}
+
+
+/**********
+ * Clocks *
+ **********/
+
+$gnome_clocks: #4BAE4F;
+
+ClocksWindow {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_clocks;
+
+    &:backdrop {
+      background-color: darken($gnome_clocks,10%);
+    }
+  }
+}
+
+
+/*********
+ * Disks *
+ *********/
+
+$gnome_disks: #8561C5;
+
+GduWindow {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_disks;
+
+    &:backdrop {
+      background-color: darken($gnome_disks,10%);
+    }
+  }
+}
+
+
+/**************
+ * Disk Usage *
+ **************/
+
+$gnome_baobab: #CC5E55;
+
+BaobabWindow {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_baobab;
+
+    &:backdrop {
+      background-color: darken($gnome_baobab,10%);
+    }
+  }
+}
+
+/*************
+ * Documents *
+ *************/
+
+$gnome_documents: #C2352A;
+
+#Documents {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_documents;
+
+    &:backdrop {
+      background-color: darken($gnome_documents,10%);
+    }
+  }
+}
+
+/************
+ * Epiphany *
+ ************/
+
+$gnome_epiphany: #6573C3;
+
+EphyWindow {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_epiphany;
+
+    &:backdrop {
+      background-color: darken($gnome_epiphany,10%);
+    }
+
+    .incognito-mode {
+      background-color: darken($gnome_epiphany,15%);
+
+      .button {
+        background-image:none;
+      }
+
+      &:backdrop {
+        background-color: darken($gnome_epiphany,25%);
+      }
+    }
+  }
+}
+
+/*********
+ * Gedit *
+ *********/
+
+$gedit: #DC4836;
+
+GeditWindow {
+  .titlebar,
+  headerbar {
+    background-color: $gedit;
+
+    &:backdrop {
+      background-color: darken($gedit,10%);
+    }
+  }
+
+  > .entry {
+    @extend %entry;
+  }
+}
+
+/**************
+ * Log Viewer *
+ **************/
+
+$gnome_logs: #009587;
+
+GlWindow,
+LogviewWindow {
+  .titlebar,
+  headerbar,
+  .toolbar {
+    background-color: $gnome_logs;
+
+    &:backdrop {
+      background-color: darken($gnome_logs,10%);
+    }
+  }
+}
+
+/*********
+ * Music *
+ *********/
+
+$gnome_music: #fe9700;
+
+gnomemusic+window+Window {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_music;
+
+    &:backdrop {
+      background-color: darken($gnome_music,10%);
+    }
+  }
+}
+
+
+/*****************
+ * Notes/Bijiben *
+ *****************/
+
+$bijiben: #ebdd4d;
+
+BjbMainToolbar,
+BjbWindowBase {
+  .titlebar,
+  headerbar {
+    background-color: $bijiben;
+
+    &:backdrop {
+      background-color: darken($bijiben,10%);
+    }
+  }
+}
+
+/**********
+ * Photos *
+ **********/
+
+$gnome_photos: #D30101;
+
+PhotosMainWindow {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_photos;
+
+    &:backdrop {
+      background-color: darken($gnome_photos,10%);
+    }
+  }
+}
+/**********
+ * Polari *
+ **********/
+
+$polari: #4BAE4F;
+
+.titlebar,
+headerbar {
+  &.polari-titlebar-left,
+  &.polari-titlebar-right {
+    background-color: $polari;
+
+    &:backdrop {
+      background-color: darken($polari,10%);
+    }
+  }
+}
+
+/*******************
+ * System Settings *
+ ******************/
+
+$gnome_settings: #5F7C8A;
+
+CcWindow {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_settings;
+
+    &:backdrop {
+      background-color: darken($gnome_settings,10%);
+    }
+  }
+}
+
+CcShellNavBar {
+  padding:0px;
+}
+
+/************
+ * Software *
+ ************/
+
+$gnome_software: #1A77C2;
+
+#window_software {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_software;
+
+    &:backdrop {
+      background-color: darken($gnome_software,10%);
+    }
+  }
+}
+
+/******************
+ * System Monitor *
+ ******************/
+
+$gnome_system_monitor: #6fbe72;
+
+#gnome-system-monitor {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_system_monitor;
+
+    &:backdrop {
+      background-color: darken($gnome_system_monitor,10%);
+    }
+  }
+}
+
+
+/********
+ * ToDo *
+ ********/
+
+$gnome_todo: #3262A1;
+
+GtdWindow {
+  .titlebar,
+  headerbar {
+    background-color: $gnome_todo;
+
+    &:backdrop {
+      background-color: darken($gnome_todo,10%);
+    }
+  }
+}
+
+/********
+ * Yelp *
+ ********/
+
+$yelp: #435ece;
+
+YelpWindow {
+  .titlebar,
+  headerbar {
+    background-color: $yelp;
+
+    &:backdrop {
+      background-color: darken($yelp,10%);
+    }
+  }
+}
