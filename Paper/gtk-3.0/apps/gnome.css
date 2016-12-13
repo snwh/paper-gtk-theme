@@ -56,6 +56,13 @@ GucharmapChartable:selected {
     color: @selection_foreground;
 }
 
+/*********
+ * Totem *
+ *********/
+/* removes the 1px line at the top of the screen when in fullscreen mode */
+GtkApplicationWindow > GtkVBox > GtkStack > GtkVBox > GtkOverlay > GtkRevealer {
+    background-color: black;
+}
 
 /**************
  * GNOME Misc *
