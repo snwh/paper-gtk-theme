@@ -3930,8 +3930,7 @@ notebook,
  *********/
 .paned,
 paned {
-  border: solid #c4c4c4;
-  border-left-width: 1px; }
+  border: solid #c4c4c4; }
   .paned > separator,
   paned > separator {
     min-width: 1px;

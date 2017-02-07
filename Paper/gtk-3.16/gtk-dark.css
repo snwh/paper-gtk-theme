@@ -3418,8 +3418,7 @@ GtkAssistant {
  * Paned *
  *********/
 .paned {
-  border: solid #373e41;
-  border-left-width: 1px; }
+  border: solid #373e41; }
   .paned > .separator {
     -gtk-icon-source: none;
     border-style: none;
