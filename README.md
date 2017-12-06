@@ -7,11 +7,11 @@ Paper has been developed primarily with modern GTK3 (GNOME-based) desktop enviro
 
 Paper is distributed under the terms the GNU General Public License (GNU GPL v.3).
 
-###Getting Paper
+### Getting Paper
 
 You can download the Paper [here](http://snwh.org/paper) or it clone from the [git repository](https://github.com/snwh/paper-gtk-theme).
 
-###Building Paper
+### Building Paper
 
 You can build and install the Paper GTK theme from source:
 
@@ -21,7 +21,7 @@ You can build and install the Paper GTK theme from source:
 
 This procedure requires ```autotools``` on your system.
 
-###Installing Paper
+### Installing Paper
 
 Alternatively you may install Paper with the provided installation script:
 
