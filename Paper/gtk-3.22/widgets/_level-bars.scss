@@ -1,0 +1,90 @@
+/*************
+ * Level Bar *
+ *************/
+levelbar {
+
+  -GtkLevelBar-min-block-width: 32;
+  -GtkLevelBar-min-block-height: 8;
+
+  &:backdrop { transition: $backdrop_transition; }
+
+  trough {
+    @extend %scale_trough;
+    margin: 0;
+    padding:2px;
+    border-radius:3px;
+  }
+
+  &.horizontal.indicator-discrete.fill-block { margin: 0 1px; }
+  &.horizontal.discrete block { margin: 0 1px; }
+
+  &.vertical.indicator-discrete.fill-block { margin: 1px 0; }
+  &.vertical.discrete block { margin: 1px 0; }
+
+  %fill-block,
+  block {
+
+    border-radius:2px;
+    min-width: 32px;
+    min-height: 2px;
+
+    &.low,
+    &.level-low {
+      border:1px solid darken($warning_color,10%);
+      background-color: $warning_color;
+
+      &:backdrop { border:1px solid $warning_color; };
+    }
+
+    &.high,
+    &.level-high {
+      border:1px solid darken($selected_bg_color,10%);
+      background-color: $selected_bg_color;
+
+      &:backdrop { border:1px solid $selected_bg_color; }
+    }
+
+    &.full,
+    &.level-full {
+      border:1px solid darken($success_color,10%);
+      background-color: $success_color;
+
+      &:backdrop { border:1px solid $success_color; };
+    }
+
+    &.empty,
+    &.level-empty {
+      background-color: transparent;
+      border:1px solid if($variant=='light', transparentize($fg_color,0.8),
+                                          transparentize($fg_color,0.9));
+      box-shadow: none;
+
+      &:backdrop { border-color: transparentize($backdrop_fg_color,0.85); }
+    }
+  }
+
+  // Trough
+  &.horizontal,
+  &.vertical {
+    trough,
+    .trough {
+      @extend %scale_trough;
+    }
+  }
+
+
+  // Vertical
+  &.vertical {
+    -GtkLevelBar-min-block-width: 8;
+    -GtkLevelBar-min-block-height: 32;
+
+    .fill-block,
+    block {
+
+      @extend %fill-block;
+
+      min-width: 8px;
+      min-height: 32px;
+    }
+  }
+}

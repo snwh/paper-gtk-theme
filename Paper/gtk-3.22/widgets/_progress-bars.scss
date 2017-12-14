@@ -1,0 +1,110 @@
+/*****************
+ * Progress bars *
+ *****************/
+
+GtkProgressBar,
+.progressbar,
+progressbar {
+  
+  @extend %scale_trough;
+
+  // sizing
+  &.horizontal {
+    trough,
+    .trough,
+    progress { min-height: 4px; }
+  }
+
+  &.vertical {
+    trough,
+    .trough,
+    progress { min-width: 4px; }
+  }
+
+  &.horizontal progress { margin: 0 -1px; } // the progress node is positioned after the trough border
+  &.vertical progress { margin: -1px 0; }   // this moves it over it.
+
+
+  // FIXME: insensitive state missing and some other state should be set probably
+  font-size: smaller;
+  color: transparentize($fg_color, 0.6);
+
+  &:active {
+    border-radius:0px;
+    color: transparentize(black,0.5);
+    background-color: $selected_bg_color;
+    border-color: darken($selected_bg_color, 10%);
+
+    &:backdrop {
+      background-color: lighten($selected_bg_color, 10%);
+      border-color: lighten(darken($selected_bg_color, 10%), 10%);
+    }
+  }
+
+  &:backdrop {
+    transition: $backdrop_transition;
+  }
+
+  .progressbar,
+  progress {
+    @extend %scale_highlight;
+
+    border-radius: 0px;
+
+    // default 2px
+    &.left {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+
+    &.right {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    &.top {
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+    }
+
+    &.bottom {
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+
+  &:backdrop .progressbar { @extend %scale_highlight:backdrop; } // states not passed here as well
+  &:backdrop progress { @extend %scale_highlight:backdrop; } // states not passed here as well
+
+  &.osd { // progressbar.osd used for epiphany page loading progress
+    min-width: 3px;
+    min-height: 3px;
+    background-color: transparent;
+
+    .trough,
+    trough {
+      border-style: none;
+      border-radius: 0;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    .progressbar,
+    progress {
+      border-style: none;
+      border-radius: 0;
+    }
+  }
+
+  // In-Row
+
+  row,
+  .list-row {
+
+    &:selected {
+      border: 1px solid darken($selected_bg_color, 10%);
+      color: transparentize(black,0.5);
+      background-color: $selected_bg_color;
+    }   
+  }
+}
