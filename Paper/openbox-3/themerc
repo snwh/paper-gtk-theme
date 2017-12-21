@@ -1,0 +1,82 @@
+!! Tissues by Bojan Tomic (bojan@tuta.io). This is a modification of:
+!! Minimal by Philip Andersen (renegadevi@codeofmagi.net)
+
+
+!!
+!! Geometry
+!!
+menu.separator.padding.height:      10
+window.client.padding.width:        0
+window.handle.width:                0
+padding.width:                      3
+
+
+!!
+!! Border colors
+!!
+window.active.border.color:             #546e7a
+window.active.title.separator.color:    #546e7a
+window.inactive.border.color:           #546e7a
+window.active.client.color:             #546e7a
+window.inactive.client.color:           #546e7a
+
+!!
+!! Titlebar colors
+!!
+window.active.label.text.color:             #ffffff
+window.inactive.label.text.color:           #bbbbbb
+window.active.button.unpressed.image.color: #ffffff
+
+!!
+!! Active Windows
+!!
+window.active.title.bg:             flat solid
+window.active.title.bg.color:       #546e7a
+window.active.*.bg.border.color:    #546e7a
+window.active.label.bg:             parentrelative
+window.active.button.*.bg:          parentrelative
+
+!!
+!! Inactive Windows
+!!
+window.inactive.title.bg:           flat solid
+window.inactive.title.bg.color:     #546e7a
+window.inactive.*.border.color:     #546e7a
+window.inactive.label.bg:           parentrelative
+window.inactive.button.*.bg:        parentrelative
+
+!!
+!! Menu
+!!
+menu.title.bg:                      flat solid
+menu.title.bg.color:                #546e7a
+menu.title.text.color:              #ffffff
+
+menu.border.width:                  0
+
+menu.separator.padding.width:       0
+menu.separator.padding.height:      5
+menu.separator.color:               #d4d4d4
+
+menu.items.bg:                      flat solid
+menu.items.bg.color:                #f5f5f5
+menu.items.text.color:              #757575
+!!menu.items.font:                    shadow=y
+menu.items.active.bg:               flat solid
+menu.items.active.bg.color:         #dbdee0
+menu.items.active.bg.colorTo:       #dbdee0
+menu.items.active.text.color:       #545454
+
+!!
+!! OSD
+!!
+osd.bg:                             flat solid
+osd.bg.color:                       #546e7a
+osd.border.color:                   #546e7a
+osd.hilight.bg:                     flat solid
+osd.hilight.bg.color:               #d9dcde
+osd.label.bg:                       flat solid
+osd.label.bg.color:                 #546e7a
+osd.label.text.color:               #ffffff
+osd.unhilight.bg:                   flat solid
+osd.unhilight.bg.color:             #888888
