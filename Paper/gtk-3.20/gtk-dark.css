@@ -3921,8 +3921,7 @@ notebook,
  *********/
 .paned,
 paned {
-  border: solid #222c31;
-  border-left-width: 1px; }
+  border: solid #222c31; }
   .paned > separator,
   paned > separator {
     min-width: 1px;
