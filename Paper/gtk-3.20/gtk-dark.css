@@ -2269,7 +2269,7 @@ entry {
     box-shadow: none; }
   spinbutton.error:not(.vertical), GeditWindow > .error.entry,
   entry.error {
-    color: #d32f2f;
+    color: #ffffff;
     border-color: #420e0e; }
     spinbutton.error:focus:not(.vertical), GeditWindow > .error.entry:focus,
     entry.error:focus {
@@ -2281,7 +2281,7 @@ entry {
       background-color: #d32f2f; }
   spinbutton.warning:not(.vertical), GeditWindow > .warning.entry,
   entry.warning {
-    color: #f9ce1d;
+    color: #ffffff;
     border-color: #614e03; }
     spinbutton.warning:focus:not(.vertical), GeditWindow > .warning.entry:focus,
     entry.warning:focus {
