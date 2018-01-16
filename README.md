@@ -11,7 +11,7 @@ Paper is distributed under the terms the GNU General Public License (GNU GPL v.3
 
 ### Getting Paper
 
-You can download the Paper [here](http://snwh.org/paper) or it clone from the [git repository](https://github.com/snwh/paper-gtk-theme).
+You can download the Paper [here](http://snwh.org/paper) or clone it from the [git repository](https://github.com/snwh/paper-gtk-theme).
 
 ### Building Paper
 
