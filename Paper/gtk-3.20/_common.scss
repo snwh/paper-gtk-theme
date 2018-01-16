@@ -35,7 +35,7 @@ $button_transition: all 200ms $ease-out-quad;
   -GtkDialog-action-area-border: 0;
 
 
-  -GtkPaned-handle-size: 1;
+  //-GtkPaned-handle-size: 1; // deprecated
 
   // We use the outline properties to signal the focus properties
   // to the adwaita engine: using real CSS properties is faster,

@@ -144,7 +144,7 @@ $asset_suffix: if($variant == 'default', '', '-hc');
     padding-right: 2px;
     border-color: transparentize($budgie_panel_bg_color, 1.0); // fixes the transition
 
-    &:hover { -gtk-image-effect: highlight; }
+    &:hover { -gtk-icon-effect: highlight; }
   }
 
   .pinned,
@@ -167,7 +167,7 @@ $asset_suffix: if($variant == 'default', '', '-hc');
     padding: 4px;
     font: bold;
     text-shadow: 0 1px $shadow_color;
-    icon-shadow: 0 1px $shadow_color;
+    -gtk-icon-shadow: 0 1px $shadow_color;
     background-color: $bg_color;
     background-image: linear-gradient(to bottom,
                       lighten($bg_color, 5%),
@@ -248,7 +248,7 @@ $asset_suffix: if($variant == 'default', '', '-hc');
 // MPRIS Applet
 .raven-mpris {
   text-shadow: 0 1px $shadow_color;
-  icon-shadow: 0 1px $shadow_color;
+  -gtk-icon-shadow: 0 1px $shadow_color;
   color: $budgie_panel_fg_color;
   background-color: transparentize($budgie_panel_bg_color, 0.2);
   border: solid transparentize(black, 0.8);

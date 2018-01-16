@@ -91,7 +91,7 @@ NautilusCanvasView {
 
 .nautilus-circular-button {
   border-radius: 20px;
-  outline-radius: 20px;
+  -gtk-outline-radius: 20px;
 }
 
 .disk-space-display {
@@ -128,7 +128,7 @@ NautilusCanvasView {
       text-shadow: none;
     }
 
-    &:prelight {
+    &:hover {
       color: $fg_color;
       text-shadow: none;
     }
@@ -224,7 +224,7 @@ MathWindow {
 
         &:backdrop {
           background-color: darken($gnome_calculator,10%);
-          color: transparentize($base_color, 0.5);  
+          color: transparentize($base_color, 0.5);
         }
       }
     }
